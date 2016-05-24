@@ -1,0 +1,147 @@
+3SET
+VERSION 1067869798
+TYPE ESP
+AUTHOR A1
+DESCRIPTION
+    Изменяет скрипт на драгоценностях в даэдрических святилищах, чтобы вместо заскриптованных версий ингредиентов в инвентарь игрока попадали обычные. Вспомогательный плагин для A1_Alchemy_V4_Apparatus.esp
+Morrowind.esm 79764287
+Tribunal.esm 6616539
+Bloodmoon.esm 11799703
+
+SCPT
+SCHD QTFfRGFlZHJTdW1tX2RpYW1vbmQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJAAAAAAAAAA==
+SCDT BgEDCSBYGBAgPT0gMeYQDERyZW1vcmFfbG9yZAEAAAAAQwEADAEGcGxheWVy1BARaW5ncmVkX2RpYW1vbmRfMDEBANsQCQEBAQ==
+SCTX
+    begin A1_DaedrSumm_diamond
+    
+    if ( OnActivate == 1 )
+    	PlaceAtPC "Dremora_lord" 1 128 1
+    	;1 of them, 256 units away, in back (1) of the player
+    	player->AddItem ingred_diamond_01, 1
+    	Disable
+    endif
+    
+    End
+
+SCPT
+SCHD QTFfRGFlZHJTdW1tX2Vib255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABLAAAAAAAAAA==
+SCDT BgEDCSBYGBAgPT0gMeYQDERyZW1vcmFfbG9yZAEAAAAAQwEADAEGcGxheWVy1BATaW5ncmVkX3Jhd19lYm9ueV8wMQEA2xAJAQEB
+SCTX
+    begin A1_DaedrSumm_ebony
+    
+    if ( OnActivate == 1 )
+    	PlaceAtPC "Dremora_lord" 1 128 1
+    	;1 of them, 256 units away, in back (1) of the player
+    	player->AddItem ingred_raw_ebony_01, 1
+    	Disable
+    endif
+    
+    End
+
+SCPT
+SCHD QTFfRGFlZHJTdW1tX2VtZXJhbGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJAAAAAAAAAA==
+SCDT BgEDCSBYGBAgPT0gMeYQDERyZW1vcmFfbG9yZAEAAAAAQwEADAEGcGxheWVy1BARaW5ncmVkX2VtZXJhbGRfMDEBANsQCQEBAQ==
+SCTX
+    begin A1_DaedrSumm_emerald
+    
+    if ( OnActivate == 1 )
+    	PlaceAtPC "Dremora_lord" 1 128 1
+    	;1 of them, 256 units away, in back (1) of the player
+    	player->AddItem ingred_emerald_01, 1
+    	Disable
+    endif
+    
+    End
+
+SCPT
+SCHD QTFfRGFlZHJTdW1tX2hlYXJ0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABPAAAAAAAAAA==
+SCDT BgEDCSBYGBAgPT0gMeYQDERyZW1vcmFfbG9yZAEAAAAAQwEADAEGcGxheWVy1BAXaW5ncmVkX2RhZWRyYXNfaGVhcnRfMDEBANsQCQEBAQ==
+SCTX
+    begin A1_DaedrSumm_heart
+    
+    if ( OnActivate == 1 )
+    	PlaceAtPC "Dremora_lord" 1 128 1
+    	;1 of them, 256 units away, in back (1) of the player
+    	player->AddItem ingred_daedras_heart_01, 1
+    	Disable
+    endif
+    
+    End
+
+SCPT
+SCHD QTFfRGFlZHJTdW1tX3BlYXJsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHAAAAAAAAAA==
+SCDT BgEDCSBYGBAgPT0gMeYQDERyZW1vcmFfbG9yZAEAAAAAQwEADAEGcGxheWVy1BAPaW5ncmVkX3BlYXJsXzAxAQDbEAkBAQE=
+SCTX
+    begin A1_DaedrSumm_pearl
+    
+    if ( OnActivate == 1 )
+    	PlaceAtPC "Dremora_lord" 1 128 1
+    	;1 of them, 256 units away, in back (1) of the player
+    	player->AddItem ingred_pearl_01, 1
+    	Disable
+    endif
+    
+    End
+
+SCPT
+SCHD QTFfRGFlZHJTdW1tX3J1YnkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGAAAAAAAAAA==
+SCDT BgEDCSBYGBAgPT0gMeYQDERyZW1vcmFfbG9yZAEAAAAAQwEADAEGcGxheWVy1BAOaW5ncmVkX3J1YnlfMDEBANsQCQEBAQ==
+SCTX
+    begin A1_DaedrSumm_ruby
+    
+    if ( OnActivate == 1 )
+    	PlaceAtPC "Dremora_lord" 1 128 1
+    	;1 of them, 256 units away, in back (1) of the player
+    	player->AddItem ingred_ruby_01, 1
+    	Disable
+    endif
+    
+    End
+
+INGR
+NAME ingred_Dae_cursed_emerald_01
+MODL n\\Ingred_emerald_01.NIF
+FNAM Изумруд
+IRDT zcxMPpYAAABRAAAASwAAABEAAAARAAAA//////////8AAAAAAAAAAP//////////AwAAAAUAAAA=
+SCRI A1_DaedrSumm_emerald
+ITEX n\\Tx_emerald.tga
+
+INGR
+NAME ingred_Dae_cursed_pearl_01
+MODL n\\Ingred_pearl_01.NIF
+FNAM Жемчужина
+IRDT zcxMPmQAAAARAAAAOQAAAAAAAABeAAAAAAAAAP///////////////wMAAAD///////////////8=
+SCRI A1_DaedrSumm_pearl
+ITEX n\\Tx_pearl.tga
+
+INGR
+NAME ingred_cursed_daedras_heart_01
+MODL n\\Ingred_Daedra_heart_01.NIF
+FNAM Сердце даэдры
+IRDT AACAP8gAAABMAAAATwAAABEAAAArAAAA/////wAAAAAAAAAA//////////8FAAAAAwAAAP////8=
+SCRI A1_DaedrSumm_heart
+ITEX n\\Tx_daedra_heart_01.tga
+
+INGR
+NAME ingred_Dae_cursed_diamond_01
+MODL n\\Ingred_diamond_01.NIF
+FNAM Бриллиант
+IRDT zcxMPvoAAAARAAAAJwAAAEQAAABCAAAAAAAAAP///////////////wMAAAD///////////////8=
+SCRI A1_DaedrSumm_diamond
+ITEX n\\Tx_diamond.tga
+
+INGR
+NAME ingred_Dae_cursed_ruby_01
+MODL n\\Ingred_ruby_01.NIF
+FNAM Рубин
+IRDT zcxMPsgAAAASAAAACAAAAEoAAAARAAAA//////////8AAAAAAAAAAP//////////AQAAAAMAAAA=
+SCRI A1_DaedrSumm_ruby
+ITEX n\\Tx_ruby.tga
+
+INGR
+NAME ingred_Dae_cursed_raw_ebony_01
+MODL n\\Ingred_RawEbony_01.NIF
+FNAM Эбонит-сырец
+IRDT AAAgQcgAAAARAAAASAAAAAYAAABKAAAAAAAAAP//////////AAAAAAMAAAD//////////wQAAAA=
+SCRI A1_DaedrSumm_ebony
+ITEX n\\Tx_RawEbony.tga
