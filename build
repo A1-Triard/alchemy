@@ -7,3 +7,4 @@ cd ..
 cp "$root_path/bin/espa" .
 ./espa -v A1_Alchemy_Potions
 ./espa -v A1_Alchemy_V4_Containers
+./espa -v A1_Alchemy_V4_Apparatus
