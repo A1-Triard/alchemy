@@ -11,6 +11,8 @@ cp "$root_path/bin/espa" .
 ./espa -v A1_Alchemy_V4_Containers || exit 1
 ./espa -v A1_Alchemy_V4_Apparatus || exit 1
 ./espa -v A1_Alchemy_DaeCursed || exit 1
+iconv -f UTF-8 -t CP1251 README | perl -p -e 's/\n/\r\n/' > Readme.txt
+iconv -f UTF-8 -t CP1251 VERSIONS | perl -p -e 's/\n/\r\n/' > Versions.txt
 rm -rf A1_Alchemy_${VERSION}
 rm A1_Alchemy_${VERSION}.zip
 mkdir A1_Alchemy_${VERSION}
