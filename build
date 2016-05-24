@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd esp-assembler
+stack build
+root_path="$(stack path --local-install-root)"
+cd ..
+cp "$root_path/bin/espa" .
+./espa -v A1_Alchemy_Potions
