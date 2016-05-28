@@ -13,7 +13,7 @@ Bloodmoon.esm 11799703
 ALCH
 NAME p_restore_personality_s
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM Станд. восст. привлекательности
 ALDT AABAPyMAAAAAAAAA
 ENAM SgD/BgAAAAAAAAAAAAAAAAoAAAAKAAAA
@@ -21,7 +21,7 @@ ENAM SgD/BgAAAAAAAAAAAAAAAAoAAAAKAAAA
 ALCH
 NAME p_detect_creatures_s
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM Станд. зелье обнаруж. существ
 ALDT AABAPyMAAAAAAAAA
 ENAM QAD//wAAAAAAAAAADwAAAAoAAAAKAAAA
@@ -29,7 +29,7 @@ ENAM QAD//wAAAAAAAAAADwAAAAoAAAAKAAAA
 ALCH
 NAME p_cure_blight_s
 MODL m\\misc_potion_fresh_01.nif
-TEXT bVx0eF9wb3Rpb25fZnJlc2hfMDEuZGRzAA==
+TEXT m\\tx_potion_fresh_01.dds
 FNAM Зелье лечения моровых болезней
 ALDT AAAAP4IAAAAAAAAA
 ENAM RgD//wAAAAAAAAAAAQAAAAEAAAABAAAA
@@ -37,7 +37,7 @@ ENAM RgD//wAAAAAAAAAAAQAAAAEAAAABAAAA
 ALCH
 NAME p_detect_key_s
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM Стандартное зелье обнар. ключа
 ALDT AABAPyMAAAAAAAAA
 ENAM QgD//wAAAAAAAAAADwAAAAoAAAAKAAAA
@@ -45,7 +45,7 @@ ENAM QgD//wAAAAAAAAAADwAAAAoAAAAKAAAA
 ALCH
 NAME p_dispel_s
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM Стандартное зелье развеивания
 ALDT AACAPyMAAAAAAAAA
 ENAM OQD//wAAAAAAAAAAAQAAAAoAAAAKAAAA
@@ -53,7 +53,7 @@ ENAM OQD//wAAAAAAAAAAAQAAAAoAAAAKAAAA
 ALCH
 NAME p_telekinesis_s
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM Стандартное зелье телекинеза
 ALDT AABAPyMAAAAAAAAA
 ENAM OwD//wAAAAAAAAAADwAAAAoAAAAKAAAA
@@ -61,7 +61,7 @@ ENAM OwD//wAAAAAAAAAADwAAAAoAAAAKAAAA
 ALCH
 NAME p_water_breathing_s
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM Стандарт. зелье водного дыхания
 ALDT AABAPyMAAAAAAAAA
 ENAM AAD//wAAAAAAAAAADwAAAAEAAAABAAAA
@@ -69,7 +69,7 @@ ENAM AAD//wAAAAAAAAAADwAAAAEAAAABAAAA
 ALCH
 NAME p_water_walking_s
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM Станд. зелье хождения по воде
 ALDT AABAPyMAAAAAAAAA
 ENAM AgD//wAAAAAAAAAADwAAAAEAAAABAAAA
@@ -77,7 +77,7 @@ ENAM AgD//wAAAAAAAAAADwAAAAEAAAABAAAA
 ALCH
 NAME p_detect_enchantment_s
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM Стандартное зелье обнаруж. чар
 ALDT AABAPyMAAAAAAAAA
 ENAM QQD//wAAAAAAAAAADwAAAAoAAAAKAAAA
@@ -85,7 +85,7 @@ ENAM QQD//wAAAAAAAAAADwAAAAoAAAAKAAAA
 ALCH
 NAME p_chameleon_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное зелье тени
 ALDT j8J1PgUAAAAAAAAA
 ENAM KAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -93,7 +93,7 @@ ENAM KAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_chameleon_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое зелье тени
 ALDT 7FE4PgAAAAAAAAAA
 ENAM KAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -101,7 +101,7 @@ ENAM KAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_chameleon_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Эксклюзивное зелье тени
 ALDT 7FG4PQAAAAAAAAAA
 ENAM KAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -109,7 +109,7 @@ ENAM KAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_chameleon_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качественное зелье тени
 ALDT j8L1PQAAAAAAAAAA
 ENAM KAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -117,7 +117,7 @@ ENAM KAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_chameleon_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Стандартное зелье тени
 ALDT mpkZPgAAAAAAAAAA
 ENAM KAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -125,35 +125,35 @@ ENAM KAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_cure_blight_s_A1_16
 MODL m\\misc_potion_fresh_01.nif
-TEXT bVx0eF9wb3Rpb25fZnJlc2hfMDEuZGRzAA==
+TEXT m\\tx_potion_fresh_01.dds
 FNAM 1/16 Зелье леч. мор. болезней
 ALDT j8J1PQAAAAAAAAAA
 
 ALCH
 NAME p_cure_common_s_A1_16
 MODL m\\Misc_Potion_Fresh_01.nif
-TEXT bVxUeF9wb3Rpb25fZnJlc2hfMDEudGdhAA==
+TEXT m\\Tx_potion_fresh_01.tga
 FNAM 1/16 Зелье леч. обычных недугов
 ALDT j8J1PQAAAAAAAAAA
 
 ALCH
 NAME p_cure_paralyzation_s_A1_16
 MODL m\\Misc_Potion_Fresh_01.nif
-TEXT bVxUeF9wb3Rpb25fZnJlc2hfMDEudGdhAA==
+TEXT m\\Tx_potion_fresh_01.tga
 FNAM 1/16 Зелье лечения парализации
 ALDT 7FG4PQAAAAAAAAAA
 
 ALCH
 NAME p_cure_poison_s_A1_16
 MODL m\\Misc_Potion_Fresh_01.nif
-TEXT bVxUeF9wb3Rpb25fZnJlc2hfMDEudGdhAA==
+TEXT m\\Tx_potion_fresh_01.tga
 FNAM 1/16 Зелье лечения отравлений
 ALDT 7FG4PQAAAAAAAAAA
 
 ALCH
 NAME p_detect_creatures_b_A1
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM Уцененн. зелье обнаруж. существ
 ALDT AADAPwUAAAAAAAAA
 ENAM QAD//wAAAAAAAAAACAAAAAUAAAAFAAAA
@@ -161,7 +161,7 @@ ENAM QAD//wAAAAAAAAAACAAAAAUAAAAFAAAA
 ALCH
 NAME p_detect_creatures_c_A1
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM Дешевое зелье обнаруж. существ
 ALDT AACAPw8AAAAAAAAA
 ENAM QAD//wAAAAAAAAAACgAAAAgAAAAIAAAA
@@ -169,7 +169,7 @@ ENAM QAD//wAAAAAAAAAACgAAAAgAAAAIAAAA
 ALCH
 NAME p_detect_creatures_e_A1
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM Эксклюз. зелье обнаруж. существ
 ALDT AACAPq8AAAAAAAAA
 ENAM QAD//wAAAAAAAAAALQAAABQAAAAUAAAA
@@ -177,7 +177,7 @@ ENAM QAD//wAAAAAAAAAALQAAABQAAAAUAAAA
 ALCH
 NAME p_detect_creatures_q_A1
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM Качеств. зелье обнаруж. существ
 ALDT AAAAP1AAAAAAAAAA
 ENAM QAD//wAAAAAAAAAAHgAAAA8AAAAPAAAA
@@ -185,7 +185,7 @@ ENAM QAD//wAAAAAAAAAAHgAAAA8AAAAPAAAA
 ALCH
 NAME p_detect_enchantment_b_A1
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM Уцененное зелье обнаружения чар
 ALDT AADAPwUAAAAAAAAA
 ENAM QQD//wAAAAAAAAAACAAAAAUAAAAFAAAA
@@ -193,7 +193,7 @@ ENAM QQD//wAAAAAAAAAACAAAAAUAAAAFAAAA
 ALCH
 NAME p_detect_enchantment_c_A1
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM Дешевое зелье обнаружения чар
 ALDT AACAPw8AAAAAAAAA
 ENAM QQD//wAAAAAAAAAACgAAAAgAAAAIAAAA
@@ -201,7 +201,7 @@ ENAM QQD//wAAAAAAAAAACgAAAAgAAAAIAAAA
 ALCH
 NAME p_detect_enchantment_e_A1
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM Эксклюзивное зелье обнаруж. чар
 ALDT AACAPq8AAAAAAAAA
 ENAM QQD//wAAAAAAAAAALQAAABQAAAAUAAAA
@@ -209,7 +209,7 @@ ENAM QQD//wAAAAAAAAAALQAAABQAAAAUAAAA
 ALCH
 NAME p_detect_enchantment_q_A1
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM Качественное зелье обнаруж. чар
 ALDT AAAAP1AAAAAAAAAA
 ENAM QQD//wAAAAAAAAAAHgAAAA8AAAAPAAAA
@@ -217,7 +217,7 @@ ENAM QQD//wAAAAAAAAAAHgAAAA8AAAAPAAAA
 ALCH
 NAME p_detect_key_b_A1
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM Уцененное зелье обнаруж. ключа
 ALDT AADAPwUAAAAAAAAA
 ENAM QgD//wAAAAAAAAAACAAAAAUAAAAFAAAA
@@ -225,7 +225,7 @@ ENAM QgD//wAAAAAAAAAACAAAAAUAAAAFAAAA
 ALCH
 NAME p_detect_key_c_A1
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM Дешевое зелье обнаружения ключа
 ALDT AACAPw8AAAAAAAAA
 ENAM QgD//wAAAAAAAAAACgAAAAgAAAAIAAAA
@@ -233,7 +233,7 @@ ENAM QgD//wAAAAAAAAAACgAAAAgAAAAIAAAA
 ALCH
 NAME p_detect_key_e_A1
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM Эксклюзивное зелье обнар. ключа
 ALDT AACAPq8AAAAAAAAA
 ENAM QgD//wAAAAAAAAAALQAAABQAAAAUAAAA
@@ -241,7 +241,7 @@ ENAM QgD//wAAAAAAAAAALQAAABQAAAAUAAAA
 ALCH
 NAME p_detect_key_q_A1
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM Качественное зелье обнар. ключа
 ALDT AAAAP1AAAAAAAAAA
 ENAM QgD//wAAAAAAAAAAHgAAAA8AAAAPAAAA
@@ -249,7 +249,7 @@ ENAM QgD//wAAAAAAAAAAHgAAAA8AAAAPAAAA
 ALCH
 NAME p_dispel_q_A1
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM Качественное зелье развеивания
 ALDT AABAP1AAAAAAAAAA
 ENAM OQD//wAAAAAAAAAAAQAAAA8AAAAPAAAA
@@ -257,7 +257,7 @@ ENAM OQD//wAAAAAAAAAAAQAAAA8AAAAPAAAA
 ALCH
 NAME p_dispel_e_A1
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM Эксклюзивное зелье развеивания
 ALDT AAAAP68AAAAAAAAA
 ENAM OQD//wAAAAAAAAAAAQAAABQAAAAUAAAA
@@ -265,7 +265,7 @@ ENAM OQD//wAAAAAAAAAAAQAAABQAAAAUAAAA
 ALCH
 NAME p_dispel_c_A1
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM Дешевое зелье развеивания
 ALDT AADAPw8AAAAAAAAA
 ENAM OQD//wAAAAAAAAAAAQAAAAgAAAAIAAAA
@@ -273,7 +273,7 @@ ENAM OQD//wAAAAAAAAAAAQAAAAgAAAAIAAAA
 ALCH
 NAME p_dispel_b_A1
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM Уцененное зелье развеивания
 ALDT AAAAQAUAAAAAAAAA
 ENAM OQD//wAAAAAAAAAAAQAAAAUAAAAFAAAA
@@ -281,7 +281,7 @@ ENAM OQD//wAAAAAAAAAAAQAAAAUAAAAFAAAA
 ALCH
 NAME p_detect_creatures_b_A1_8
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM 1/8 Уцен. зелье обнар. существ
 ALDT j8J1PgAAAAAAAAAA
 ENAM QAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -289,7 +289,7 @@ ENAM QAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_creatures_c_A1_8
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM 1/8 Деш. зелье обнар. существ
 ALDT 7FE4PgAAAAAAAAAA
 ENAM QAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -297,7 +297,7 @@ ENAM QAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_creatures_e_A1_8
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM 1/8 Экскл. зелье обнар. существ
 ALDT 7FG4PQAAAAAAAAAA
 ENAM QAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -305,7 +305,7 @@ ENAM QAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_creatures_q_A1_8
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM 1/8 Кач. зелье обнар. существ
 ALDT j8L1PQAAAAAAAAAA
 ENAM QAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -313,7 +313,7 @@ ENAM QAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_creatures_s_A1_8
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM 1/8 Станд. зелье обнар. существ
 ALDT mpkZPgAAAAAAAAAA
 ENAM QAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -321,7 +321,7 @@ ENAM QAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_enchantment_b_A1_8
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM 1/8 Уценен. зелье обнаруж. чар
 ALDT j8J1PgAAAAAAAAAA
 ENAM QQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -329,7 +329,7 @@ ENAM QQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_enchantment_c_A1_8
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM 1/8 Дешевое зелье обнаруж. чар
 ALDT 7FE4PgAAAAAAAAAA
 ENAM QQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -337,7 +337,7 @@ ENAM QQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_enchantment_e_A1_8
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM 1/8 Эксклюз. зелье обнаруж. чар
 ALDT 7FG4PQAAAAAAAAAA
 ENAM QQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -345,7 +345,7 @@ ENAM QQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_enchantment_q_A1_8
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM 1/8 Качеств. зелье обнаруж. чар
 ALDT j8L1PQAAAAAAAAAA
 ENAM QQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -353,7 +353,7 @@ ENAM QQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_enchantment_s_A1_8
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM 1/8 Станд. зелье обнаруж. чар
 ALDT mpkZPgAAAAAAAAAA
 ENAM QQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -361,7 +361,7 @@ ENAM QQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_key_b_A1_8
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM 1/8 Уценен. зелье обнар. ключа
 ALDT j8J1PgAAAAAAAAAA
 ENAM QgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -369,7 +369,7 @@ ENAM QgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_key_c_A1_8
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM 1/8 Дешевое зелье обнар. ключа
 ALDT 7FE4PgAAAAAAAAAA
 ENAM QgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -377,7 +377,7 @@ ENAM QgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_key_e_A1_8
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM 1/8 Эксклюз. зелье обнар. ключа
 ALDT 7FG4PQAAAAAAAAAA
 ENAM QgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -385,7 +385,7 @@ ENAM QgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_key_q_A1_8
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM 1/8 Качеств. зелье обнар. ключа
 ALDT j8L1PQAAAAAAAAAA
 ENAM QgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -393,7 +393,7 @@ ENAM QgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_detect_key_s_A1_8
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM 1/8 Станд. зелье обнар. ключа
 ALDT mpkZPgAAAAAAAAAA
 ENAM QgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -401,7 +401,7 @@ ENAM QgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_dispel_b_A1_8
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM 1/8 Уцененное зелье развеивания
 ALDT mpmZPgAAAAAAAAAA
 ENAM OQD//wAAAAAAAAAAAQAAAAAAAAAAAAAA
@@ -409,7 +409,7 @@ ENAM OQD//wAAAAAAAAAAAQAAAAAAAAAAAAAA
 ALCH
 NAME p_dispel_c_A1_8
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM 1/8 Дешевое зелье развеивания
 ALDT j8J1PgAAAAAAAAAA
 ENAM OQD//wAAAAAAAAAAAQAAAAAAAAAAAAAA
@@ -417,7 +417,7 @@ ENAM OQD//wAAAAAAAAAAAQAAAAAAAAAAAAAA
 ALCH
 NAME p_dispel_e_A1_8
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM 1/8 Эксклюз. зелье развеивания
 ALDT j8L1PQAAAAAAAAAA
 ENAM OQD//wAAAAAAAAAAAQAAAAAAAAAAAAAA
@@ -425,7 +425,7 @@ ENAM OQD//wAAAAAAAAAAAQAAAAAAAAAAAAAA
 ALCH
 NAME p_dispel_q_A1_8
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM 1/8 Качеств. зелье развеивания
 ALDT mpkZPgAAAAAAAAAA
 ENAM OQD//wAAAAAAAAAAAQAAAAAAAAAAAAAA
@@ -433,7 +433,7 @@ ENAM OQD//wAAAAAAAAAAAQAAAAAAAAAAAAAA
 ALCH
 NAME p_dispel_s_A1_8
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM 1/8 Стандарт. зелье развеивания
 ALDT 7FE4PgAAAAAAAAAA
 ENAM OQD//wAAAAAAAAAAAQAAAAAAAAAAAAAA
@@ -441,7 +441,7 @@ ENAM OQD//wAAAAAAAAAAAQAAAAAAAAAAAAAA
 ALCH
 NAME p_feather_s_A1
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM Стандартное зелье пера
 ALDT AABAPyMAAAAAAAAA
 ENAM CAD//wAAAAAAAAAAHgAAAAoAAAAKAAAA
@@ -449,7 +449,7 @@ ENAM CAD//wAAAAAAAAAAHgAAAAoAAAAKAAAA
 ALCH
 NAME p_feather_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное зелье пера
 ALDT j8J1PgAAAAAAAAAA
 ENAM CAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -457,7 +457,7 @@ ENAM CAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_feather_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое зелье пера
 ALDT 7FE4PgAAAAAAAAAA
 ENAM CAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -465,7 +465,7 @@ ENAM CAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_feather_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Эксклюзивное зелье пера
 ALDT 7FG4PQAAAAAAAAAA
 ENAM CAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -473,7 +473,7 @@ ENAM CAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_feather_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качественное зелье пера
 ALDT j8L1PQAAAAAAAAAA
 ENAM CAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -481,7 +481,7 @@ ENAM CAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_feather_s_A1_8
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM 1/8 Стандартное зелье пера
 ALDT mpkZPgAAAAAAAAAA
 ENAM CAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -489,7 +489,7 @@ ENAM CAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fire resistance_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. сопротивление огню
 ALDT mpkZPgAAAAAAAAAA
 ENAM WgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -497,7 +497,7 @@ ENAM WgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fire_resistance_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное сопр. огню
 ALDT j8J1PgAAAAAAAAAA
 ENAM WgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -505,7 +505,7 @@ ENAM WgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fire_resistance_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое сопротивление огню
 ALDT 7FE4PgAAAAAAAAAA
 ENAM WgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -513,7 +513,7 @@ ENAM WgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fire_resistance_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Эксклюзивное сопр. огню
 ALDT 7FG4PQAAAAAAAAAA
 ENAM WgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -521,7 +521,7 @@ ENAM WgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fire_resistance_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качественное сопр. огню
 ALDT j8L1PQAAAAAAAAAA
 ENAM WgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -529,7 +529,7 @@ ENAM WgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fire_shield_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное зелье огнен. щита
 ALDT j8J1PgAAAAAAAAAA
 ENAM BAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -537,7 +537,7 @@ ENAM BAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fire_shield_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое зелье огнен. щита
 ALDT 7FE4PgAAAAAAAAAA
 ENAM BAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -545,7 +545,7 @@ ENAM BAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fire_shield_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. зелье огненного щита
 ALDT 7FG4PQAAAAAAAAAA
 ENAM BAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -553,7 +553,7 @@ ENAM BAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fire_shield_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. зелье огнен. щита
 ALDT j8L1PQAAAAAAAAAA
 ENAM BAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -561,7 +561,7 @@ ENAM BAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fire_shield_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. зелье огненного щита
 ALDT mpkZPgAAAAAAAAAA
 ENAM BAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -569,7 +569,7 @@ ENAM BAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_agility_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. улучшение ловкости
 ALDT j8J1PgAAAAAAAAAA
 ENAM TwD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -577,7 +577,7 @@ ENAM TwD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_agility_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое улучшение ловкости
 ALDT 7FE4PgAAAAAAAAAA
 ENAM TwD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -585,7 +585,7 @@ ENAM TwD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_agility_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. улучшение ловкости
 ALDT 7FG4PQAAAAAAAAAA
 ENAM TwD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -593,7 +593,7 @@ ENAM TwD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_agility_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. улучшение ловкости
 ALDT j8L1PQAAAAAAAAAA
 ENAM TwD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -601,7 +601,7 @@ ENAM TwD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_agility_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. зелье улуч. ловкости
 ALDT mpkZPgAAAAAAAAAA
 ENAM TwD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -609,7 +609,7 @@ ENAM TwD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_attack_b_A1
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM Уцененное улучшение атаки
 ALDT AADAPwUAAAAAAAAA
 ENAM dQD//wAAAAAAAAAACAAAAAUAAAAFAAAA
@@ -617,7 +617,7 @@ ENAM dQD//wAAAAAAAAAACAAAAAUAAAAFAAAA
 ALCH
 NAME p_fortify_attack_c_A1
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM Дешевое улучшение атаки
 ALDT AACAPw8AAAAAAAAA
 ENAM dQD//wAAAAAAAAAADwAAAAgAAAAIAAAA
@@ -625,7 +625,7 @@ ENAM dQD//wAAAAAAAAAADwAAAAgAAAAIAAAA
 ALCH
 NAME p_fortify_attack_s_A1
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM Стандартное улучшение атаки
 ALDT AABAPyMAAAAAAAAA
 ENAM dQD//wAAAAAAAAAAHgAAAAoAAAAKAAAA
@@ -633,7 +633,7 @@ ENAM dQD//wAAAAAAAAAAHgAAAAoAAAAKAAAA
 ALCH
 NAME p_fortify_attack_q_A1
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM Качественное улучшение атаки
 ALDT AAAAP1AAAAAAAAAA
 ENAM dQD//wAAAAAAAAAALQAAAA8AAAAPAAAA
@@ -641,7 +641,7 @@ ENAM dQD//wAAAAAAAAAALQAAAA8AAAAPAAAA
 ALCH
 NAME p_fortify_attack_b_A1_8
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM 1/8 Уцененное улучшение атаки
 ALDT j8J1PgAAAAAAAAAA
 ENAM dQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -649,7 +649,7 @@ ENAM dQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_attack_c_A1_8
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM 1/8 Дешевое улучшение атаки
 ALDT 7FE4PgAAAAAAAAAA
 ENAM dQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -657,7 +657,7 @@ ENAM dQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_attack_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. улучшение атаки
 ALDT 7FG4PQAAAAAAAAAA
 ENAM dQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -665,7 +665,7 @@ ENAM dQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_attack_q_A1_8
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM 1/8 Качеств. улучшение атаки
 ALDT j8L1PQAAAAAAAAAA
 ENAM dQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -673,7 +673,7 @@ ENAM dQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_attack_s_A1_8
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM 1/8 Стандартное улучшение атаки
 ALDT mpkZPgAAAAAAAAAA
 ENAM dQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -681,7 +681,7 @@ ENAM dQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_endurance_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. улучш. выносливости
 ALDT j8J1PgAAAAAAAAAA
 ENAM TwD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -689,7 +689,7 @@ ENAM TwD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_endurance_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое улучш. выносливости
 ALDT 7FE4PgAAAAAAAAAA
 ENAM TwD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -697,7 +697,7 @@ ENAM TwD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_endurance_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. улучш. выносливости
 ALDT 7FG4PQAAAAAAAAAA
 ENAM TwD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -705,7 +705,7 @@ ENAM TwD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_endurance_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качест. улучш. выносливости
 ALDT j8L1PQAAAAAAAAAA
 ENAM TwD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -713,7 +713,7 @@ ENAM TwD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_endurance_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. улучш. выносливости
 ALDT mpkZPgAAAAAAAAAA
 ENAM TwD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -721,7 +721,7 @@ ENAM TwD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_fatigue_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. улучшение усталости
 ALDT j8J1PgAAAAAAAAAA
 ENAM UgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -729,7 +729,7 @@ ENAM UgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_fatigue_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое улучшение усталости
 ALDT 7FE4PgAAAAAAAAAA
 ENAM UgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -737,7 +737,7 @@ ENAM UgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_fatigue_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. улучшение усталости
 ALDT 7FG4PQAAAAAAAAAA
 ENAM UgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -745,7 +745,7 @@ ENAM UgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_fatigue_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качест. улучшение усталости
 ALDT j8L1PQAAAAAAAAAA
 ENAM UgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -753,7 +753,7 @@ ENAM UgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_fatigue_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. з. улучш. усталости
 ALDT mpkZPgAAAAAAAAAA
 ENAM UgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -761,7 +761,7 @@ ENAM UgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_health_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Деш. зелье укрепл. здоровья
 ALDT 7FE4PgAAAAAAAAAA
 ENAM UAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -769,7 +769,7 @@ ENAM UAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_health_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. зелье укреп. здоровья
 ALDT j8J1PgAAAAAAAAAA
 ENAM UAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -777,7 +777,7 @@ ENAM UAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_health_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. укрепление здоровья
 ALDT 7FG4PQAAAAAAAAAA
 ENAM UAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -785,7 +785,7 @@ ENAM UAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_health_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качест. укрепление здоровья
 ALDT j8L1PQAAAAAAAAAA
 ENAM UAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -793,7 +793,7 @@ ENAM UAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_health_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. з. укрепл. здоровья
 ALDT mpkZPgAAAAAAAAAA
 ENAM UAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -801,7 +801,7 @@ ENAM UAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_intelligence_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. улучшение интеллекта
 ALDT j8J1PgAAAAAAAAAA
 ENAM TwD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -809,7 +809,7 @@ ENAM TwD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_intelligence_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое улучш. интеллекта
 ALDT 7FE4PgAAAAAAAAAA
 ENAM TwD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -817,7 +817,7 @@ ENAM TwD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_intelligence_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. улучшение интеллекта
 ALDT 7FG4PQAAAAAAAAAA
 ENAM TwD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -825,7 +825,7 @@ ENAM TwD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_intelligence_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. улучш. интеллекта
 ALDT j8L1PQAAAAAAAAAA
 ENAM TwD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -833,7 +833,7 @@ ENAM TwD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_intelligence_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. улучшение интеллекта
 ALDT mpkZPgAAAAAAAAAA
 ENAM TwD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -841,7 +841,7 @@ ENAM TwD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_luck_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. зелье улучшения удачи
 ALDT j8J1PgAAAAAAAAAA
 ENAM TwD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -849,7 +849,7 @@ ENAM TwD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_luck_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое зелье улучш. удачи
 ALDT 7FE4PgAAAAAAAAAA
 ENAM TwD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -857,7 +857,7 @@ ENAM TwD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_luck_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. зелье улучш. удачи
 ALDT j8L1PQAAAAAAAAAA
 ENAM TwD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -865,7 +865,7 @@ ENAM TwD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_luck_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. улучшение удачи
 ALDT 7FG4PQAAAAAAAAAA
 ENAM TwD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -873,7 +873,7 @@ ENAM TwD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_luck_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. зелье улучш. удачи
 ALDT mpkZPgAAAAAAAAAA
 ENAM TwD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -881,7 +881,7 @@ ENAM TwD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_magicka_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное улучшение магии
 ALDT j8J1PgAAAAAAAAAA
 ENAM UQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -889,7 +889,7 @@ ENAM UQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_magicka_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое зелье улучш. магии
 ALDT 7FE4PgAAAAAAAAAA
 ENAM UQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -897,7 +897,7 @@ ENAM UQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_magicka_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Эксклюзивное улучш. магии
 ALDT 7FG4PQAAAAAAAAAA
 ENAM UQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -905,7 +905,7 @@ ENAM UQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_magicka_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качественное улучш. магии
 ALDT j8L1PQAAAAAAAAAA
 ENAM UQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -913,7 +913,7 @@ ENAM UQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_magicka_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. зелье улучш. магии
 ALDT mpkZPgAAAAAAAAAA
 ENAM UQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -921,7 +921,7 @@ ENAM UQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_personality_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. улучш. привлекат.
 ALDT j8J1PgAAAAAAAAAA
 ENAM TwD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -929,7 +929,7 @@ ENAM TwD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_personality_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Деш. улучш. привлекат.
 ALDT 7FE4PgAAAAAAAAAA
 ENAM TwD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -937,7 +937,7 @@ ENAM TwD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_personality_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. улучш. привлекат.
 ALDT 7FG4PQAAAAAAAAAA
 ENAM TwD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -945,7 +945,7 @@ ENAM TwD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_personality_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Кач. улучш. привлекат.
 ALDT j8L1PQAAAAAAAAAA
 ENAM TwD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -953,7 +953,7 @@ ENAM TwD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_personality_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. улучш. индивидуальн.
 ALDT mpkZPgAAAAAAAAAA
 ENAM TwD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -961,7 +961,7 @@ ENAM TwD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_speed_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. зелье улучш. скорости
 ALDT j8J1PgAAAAAAAAAA
 ENAM TwD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -969,7 +969,7 @@ ENAM TwD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_speed_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Деш. зелье улучш. скорости
 ALDT 7FE4PgAAAAAAAAAA
 ENAM TwD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -977,7 +977,7 @@ ENAM TwD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_speed_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. улучшение скорости
 ALDT 7FG4PQAAAAAAAAAA
 ENAM TwD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -985,7 +985,7 @@ ENAM TwD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_speed_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Кач. зелье улучш. скорости
 ALDT j8L1PQAAAAAAAAAA
 ENAM TwD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -993,7 +993,7 @@ ENAM TwD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_speed_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. улучш. скорости
 ALDT mpkZPgAAAAAAAAAA
 ENAM TwD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1001,7 +1001,7 @@ ENAM TwD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_strength_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное улучшение силы
 ALDT j8J1PgAAAAAAAAAA
 ENAM TwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1009,7 +1009,7 @@ ENAM TwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_strength_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое улучшение силы
 ALDT 7FE4PgAAAAAAAAAA
 ENAM TwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1017,7 +1017,7 @@ ENAM TwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_strength_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Эксклюзивное улучшение силы
 ALDT 7FG4PQAAAAAAAAAA
 ENAM TwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1025,7 +1025,7 @@ ENAM TwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_strength_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качественное улучшение силы
 ALDT j8L1PQAAAAAAAAAA
 ENAM TwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1033,7 +1033,7 @@ ENAM TwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_strength_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. укрепление силы
 ALDT mpkZPgAAAAAAAAAA
 ENAM TwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1041,7 +1041,7 @@ ENAM TwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_willpower_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/9 Уцененное улучш. силы воли
 ALDT j8J1PgAAAAAAAAAA
 ENAM TwD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1049,7 +1049,7 @@ ENAM TwD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_willpower_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое улучшение силы воли
 ALDT 7FE4PgAAAAAAAAAA
 ENAM TwD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1057,7 +1057,7 @@ ENAM TwD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_willpower_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. улучшение силы воли
 ALDT 7FG4PQAAAAAAAAAA
 ENAM TwD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1065,7 +1065,7 @@ ENAM TwD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_willpower_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качест. улучшение силы воли
 ALDT j8L1PQAAAAAAAAAA
 ENAM TwD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1073,7 +1073,7 @@ ENAM TwD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_fortify_willpower_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. улучшение силы воли
 ALDT mpkZPgAAAAAAAAAA
 ENAM TwD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1081,7 +1081,7 @@ ENAM TwD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_frost_resistance_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное сопрот. холоду
 ALDT j8J1PgAAAAAAAAAA
 ENAM WwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1089,7 +1089,7 @@ ENAM WwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_frost_resistance_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое сопрот. холоду
 ALDT 7FE4PgAAAAAAAAAA
 ENAM WwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1097,7 +1097,7 @@ ENAM WwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_frost_resistance_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. сопротивление холоду
 ALDT 7FG4PQAAAAAAAAAA
 ENAM WwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1105,7 +1105,7 @@ ENAM WwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_frost_resistance_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. сопрот. холоду
 ALDT j8L1PQAAAAAAAAAA
 ENAM WwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1113,7 +1113,7 @@ ENAM WwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_frost_resistance_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. зелье сопр. холоду
 ALDT mpkZPgAAAAAAAAAA
 ENAM WwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1121,7 +1121,7 @@ ENAM WwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_frost_shield_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. зелье ледяного щита
 ALDT j8J1PgAAAAAAAAAA
 ENAM BgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1129,7 +1129,7 @@ ENAM BgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_frost_shield_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое зелье ледяного щита
 ALDT 7FE4PgAAAAAAAAAA
 ENAM BgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1137,7 +1137,7 @@ ENAM BgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_frost_shield_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. зелье ледяного щита
 ALDT 7FG4PQAAAAAAAAAA
 ENAM BgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1145,7 +1145,7 @@ ENAM BgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_frost_shield_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качест. зелье ледяного щита
 ALDT j8L1PQAAAAAAAAAA
 ENAM BgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1153,7 +1153,7 @@ ENAM BgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_frost_shield_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. зелье ледяного щита
 ALDT mpkZPgAAAAAAAAAA
 ENAM BgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1161,7 +1161,7 @@ ENAM BgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_invisibility_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное зелье невидимости
 ALDT j8J1PgAAAAAAAAAA
 ENAM JwD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -1169,7 +1169,7 @@ ENAM JwD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_invisibility_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое зелье невидимости
 ALDT 7FE4PgAAAAAAAAAA
 ENAM JwD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -1177,7 +1177,7 @@ ENAM JwD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_invisibility_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. зелье невидимости
 ALDT 7FG4PQAAAAAAAAAA
 ENAM JwD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -1185,7 +1185,7 @@ ENAM JwD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_invisibility_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. зелье невидимости
 ALDT j8L1PQAAAAAAAAAA
 ENAM JwD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -1193,7 +1193,7 @@ ENAM JwD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_invisibility_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. зелье невидимости
 ALDT mpkZPgAAAAAAAAAA
 ENAM JwD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -1201,7 +1201,7 @@ ENAM JwD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_levitation_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное зелье левитации
 ALDT j8J1PgAAAAAAAAAA
 ENAM CgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1209,7 +1209,7 @@ ENAM CgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_levitation_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое зелье левитации
 ALDT 7FE4PgAAAAAAAAAA
 ENAM CgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1217,7 +1217,7 @@ ENAM CgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_levitation_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. зелье левитации
 ALDT 7FG4PQAAAAAAAAAA
 ENAM CgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1225,7 +1225,7 @@ ENAM CgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME P_Levitation_Q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. зелье левитации
 ALDT j8L1PQAAAAAAAAAA
 ENAM CgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1233,7 +1233,7 @@ ENAM CgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_levitation_s_A1_8
 MODL m\\Misc_Potion_Standard_01.NIF
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. зелье левитации
 ALDT mpkZPgAAAAAAAAAA
 ENAM CgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1241,7 +1241,7 @@ ENAM CgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_lightning shield_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененный щит молний
 ALDT j8J1PgAAAAAAAAAA
 ENAM BQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1249,7 +1249,7 @@ ENAM BQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_lightning shield_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевый щит молний
 ALDT 7FE4PgAAAAAAAAAA
 ENAM BQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1257,7 +1257,7 @@ ENAM BQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_lightning shield_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Эксклюзивный щит молний
 ALDT 7FG4PQAAAAAAAAAA
 ENAM BQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1265,7 +1265,7 @@ ENAM BQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_lightning shield_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качественный щит молний
 ALDT j8L1PQAAAAAAAAAA
 ENAM BQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1273,7 +1273,7 @@ ENAM BQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_lightning shield_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Стандартный щит молний
 ALDT mpkZPgAAAAAAAAAA
 ENAM BQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1281,7 +1281,7 @@ ENAM BQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_magicka_resistance_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное сопротив. магии
 ALDT j8J1PgAAAAAAAAAA
 ENAM XQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1289,7 +1289,7 @@ ENAM XQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_magicka_resistance_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое сопротивление магии
 ALDT 7FE4PgAAAAAAAAAA
 ENAM XQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1297,7 +1297,7 @@ ENAM XQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_magicka_resistance_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. сопротивление магии
 ALDT 7FG4PQAAAAAAAAAA
 ENAM XQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1305,7 +1305,7 @@ ENAM XQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_magicka_resistance_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. сопротив. магии
 ALDT j8L1PQAAAAAAAAAA
 ENAM XQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1313,7 +1313,7 @@ ENAM XQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_magicka_resistance_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. сопротивление магии
 ALDT mpkZPgAAAAAAAAAA
 ENAM XQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1321,7 +1321,7 @@ ENAM XQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_night-eye_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. зелье ночного видения
 ALDT j8J1PgAAAAAAAAAA
 ENAM KwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1329,7 +1329,7 @@ ENAM KwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_night-eye_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Деш. зелье ночного видения
 ALDT 7FE4PgAAAAAAAAAA
 ENAM KwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1337,7 +1337,7 @@ ENAM KwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_night-eye_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. з. ночного видения
 ALDT 7FG4PQAAAAAAAAAA
 ENAM KwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1345,7 +1345,7 @@ ENAM KwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_night-eye_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Кач. зелье ночного видения
 ALDT j8L1PQAAAAAAAAAA
 ENAM KwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1353,7 +1353,7 @@ ENAM KwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_night-eye_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Стан. зелье ночного видения
 ALDT mpkZPgAAAAAAAAAA
 ENAM KwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1361,7 +1361,7 @@ ENAM KwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_poison_resistance_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное сопротивл. ядам
 ALDT j8J1PgAAAAAAAAAA
 ENAM YQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1369,7 +1369,7 @@ ENAM YQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_poison_resistance_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое сопротивление ядам
 ALDT 7FE4PgAAAAAAAAAA
 ENAM YQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1377,7 +1377,7 @@ ENAM YQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_poison_resistance_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. сопротивление ядам
 ALDT 7FG4PQAAAAAAAAAA
 ENAM YQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1385,7 +1385,7 @@ ENAM YQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_poison_resistance_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. сопротивление ядам
 ALDT j8L1PQAAAAAAAAAA
 ENAM YQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1393,7 +1393,7 @@ ENAM YQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_poison_resistance_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. сопротивление ядам
 ALDT mpkZPgAAAAAAAAAA
 ENAM YQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1401,7 +1401,7 @@ ENAM YQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_reflection_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное зелье отражения
 ALDT j8J1PgAAAAAAAAAA
 ENAM RAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1409,7 +1409,7 @@ ENAM RAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_reflection_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое зелье отражения
 ALDT 7FE4PgAAAAAAAAAA
 ENAM RAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1417,7 +1417,7 @@ ENAM RAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_reflection_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. зелье отражения
 ALDT 7FG4PQAAAAAAAAAA
 ENAM RAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1425,7 +1425,7 @@ ENAM RAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_reflection_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. зелье отражения
 ALDT j8L1PQAAAAAAAAAA
 ENAM RAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1433,7 +1433,7 @@ ENAM RAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_reflection_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. зелье отражения
 ALDT mpkZPgAAAAAAAAAA
 ENAM RAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1441,7 +1441,7 @@ ENAM RAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_agility_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. восст. ловкости
 ALDT j8J1PgAAAAAAAAAA
 ENAM SgD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1449,7 +1449,7 @@ ENAM SgD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_agility_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Деш. восст. ловкости
 ALDT 7FE4PgAAAAAAAAAA
 ENAM SgD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1457,7 +1457,7 @@ ENAM SgD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_agility_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. восст. ловкости
 ALDT 7FG4PQAAAAAAAAAA
 ENAM SgD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1465,7 +1465,7 @@ ENAM SgD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_agility_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. восст. ловкости
 ALDT j8L1PQAAAAAAAAAA
 ENAM SgD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1473,7 +1473,7 @@ ENAM SgD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_agility_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. восст. ловкости
 ALDT mpkZPgAAAAAAAAAA
 ENAM SgD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1481,7 +1481,7 @@ ENAM SgD/AwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_endurance_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. восст. выносливости
 ALDT j8J1PgAAAAAAAAAA
 ENAM SgD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1489,7 +1489,7 @@ ENAM SgD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_endurance_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое восст. выносливости
 ALDT 7FE4PgAAAAAAAAAA
 ENAM SgD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1497,7 +1497,7 @@ ENAM SgD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_endurance_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. восст. выносливости
 ALDT 7FG4PQAAAAAAAAAA
 ENAM SgD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1505,7 +1505,7 @@ ENAM SgD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_endurance_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качест. восст. выносливости
 ALDT j8L1PQAAAAAAAAAA
 ENAM SgD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1513,7 +1513,7 @@ ENAM SgD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_endurance_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. восст. выносливости
 ALDT mpkZPgAAAAAAAAAA
 ENAM SgD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1521,7 +1521,7 @@ ENAM SgD/BQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_fatigue_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. восст. усталости
 ALDT j8J1PgAAAAAAAAAA
 ENAM TQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1529,7 +1529,7 @@ ENAM TQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_fatigue_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Деш. восст. усталости
 ALDT 7FE4PgAAAAAAAAAA
 ENAM TQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1537,7 +1537,7 @@ ENAM TQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_fatigue_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. восст. усталости
 ALDT 7FG4PQAAAAAAAAAA
 ENAM TQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1545,7 +1545,7 @@ ENAM TQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_fatigue_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. восст. усталости
 ALDT j8L1PQAAAAAAAAAA
 ENAM TQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1553,7 +1553,7 @@ ENAM TQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_fatigue_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. восст. усталости
 ALDT mpkZPgAAAAAAAAAA
 ENAM TQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1561,7 +1561,7 @@ ENAM TQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_health_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. восст. здоровья
 ALDT j8J1PgAAAAAAAAAA
 ENAM SwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1569,7 +1569,7 @@ ENAM SwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_health_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое восст. здоровья
 ALDT 7FE4PgAAAAAAAAAA
 ENAM SwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1577,7 +1577,7 @@ ENAM SwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_health_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. восст. здоровья
 ALDT 7FG4PQAAAAAAAAAA
 ENAM SwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1585,7 +1585,7 @@ ENAM SwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_health_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. восст. здоровья
 ALDT j8L1PQAAAAAAAAAA
 ENAM SwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1593,7 +1593,7 @@ ENAM SwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_health_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. з. восст. здоровья
 ALDT mpkZPgAAAAAAAAAA
 ENAM SwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1601,7 +1601,7 @@ ENAM SwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_intelligence_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное восст. интеллекта
 ALDT j8J1PgAAAAAAAAAA
 ENAM SgD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1609,7 +1609,7 @@ ENAM SgD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_intelligence_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Деш. восст. интеллекта
 ALDT 7FE4PgAAAAAAAAAA
 ENAM SgD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1617,7 +1617,7 @@ ENAM SgD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_intelligence_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. восст. интеллекта
 ALDT j8L1PQAAAAAAAAAA
 ENAM SgD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1625,7 +1625,7 @@ ENAM SgD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_intelligence_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. восст. интеллекта
 ALDT 7FG4PQAAAAAAAAAA
 ENAM SgD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1633,7 +1633,7 @@ ENAM SgD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_intelligence_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. восст. интеллекта
 ALDT mpkZPgAAAAAAAAAA
 ENAM SgD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1641,7 +1641,7 @@ ENAM SgD/AQAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_luck_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное восст. удачи
 ALDT j8J1PgAAAAAAAAAA
 ENAM SgD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1649,7 +1649,7 @@ ENAM SgD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_luck_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое восст. удачи
 ALDT 7FE4PgAAAAAAAAAA
 ENAM SgD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1657,7 +1657,7 @@ ENAM SgD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_luck_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Эксклюзивное восст. удачи
 ALDT 7FG4PQAAAAAAAAAA
 ENAM SgD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1665,7 +1665,7 @@ ENAM SgD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_luck_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качественное восст. удачи
 ALDT j8L1PQAAAAAAAAAA
 ENAM SgD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1673,7 +1673,7 @@ ENAM SgD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_luck_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. зелье восст. удачи
 ALDT mpkZPgAAAAAAAAAA
 ENAM SgD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1681,7 +1681,7 @@ ENAM SgD/BwAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_magicka_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное восст. магии
 ALDT j8J1PgAAAAAAAAAA
 ENAM TAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1689,7 +1689,7 @@ ENAM TAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_magicka_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое восст. магии
 ALDT 7FE4PgAAAAAAAAAA
 ENAM TAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1697,7 +1697,7 @@ ENAM TAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_magicka_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Эксклюзивное восст. магии
 ALDT 7FG4PQAAAAAAAAAA
 ENAM TAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1705,7 +1705,7 @@ ENAM TAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_magicka_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. зелье восст. магии
 ALDT mpkZPgAAAAAAAAAA
 ENAM TAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1713,7 +1713,7 @@ ENAM TAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_magicka_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качественное восст. магии
 ALDT j8L1PQAAAAAAAAAA
 ENAM TAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1721,7 +1721,7 @@ ENAM TAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_personality_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. восст. привлекат.
 ALDT j8J1PgAAAAAAAAAA
 ENAM SgD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1729,7 +1729,7 @@ ENAM SgD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_personality_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Деш. восст. привлекат.
 ALDT 7FE4PgAAAAAAAAAA
 ENAM SgD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1737,7 +1737,7 @@ ENAM SgD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_personality_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. восст. привлекат.
 ALDT 7FG4PQAAAAAAAAAA
 ENAM SgD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1745,7 +1745,7 @@ ENAM SgD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_personality_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. восст. привл.
 ALDT j8L1PQAAAAAAAAAA
 ENAM SgD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1753,7 +1753,7 @@ ENAM SgD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_personality_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. восст. привлекат.
 ALDT mpkZPgAAAAAAAAAA
 ENAM SgD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1761,7 +1761,7 @@ ENAM SgD/BgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_speed_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное восст. скорости
 ALDT j8J1PgAAAAAAAAAA
 ENAM SgD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1769,7 +1769,7 @@ ENAM SgD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_speed_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое восст. скорости
 ALDT 7FE4PgAAAAAAAAAA
 ENAM SgD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1777,7 +1777,7 @@ ENAM SgD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_speed_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. восст. скорости
 ALDT 7FG4PQAAAAAAAAAA
 ENAM SgD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1785,7 +1785,7 @@ ENAM SgD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_speed_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. восст. скорости
 ALDT j8L1PQAAAAAAAAAA
 ENAM SgD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1793,7 +1793,7 @@ ENAM SgD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_speed_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. восст. скорости
 ALDT mpkZPgAAAAAAAAAA
 ENAM SgD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1801,7 +1801,7 @@ ENAM SgD/BAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_strength_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное восст. силы
 ALDT j8J1PgAAAAAAAAAA
 ENAM SgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1809,7 +1809,7 @@ ENAM SgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_strength_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое восстановление силы
 ALDT 7FE4PgAAAAAAAAAA
 ENAM SgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1817,7 +1817,7 @@ ENAM SgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_strength_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Эксклюзивное восст. силы
 ALDT 7FG4PQAAAAAAAAAA
 ENAM SgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1825,7 +1825,7 @@ ENAM SgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_strength_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качественное восст. силы
 ALDT j8L1PQAAAAAAAAAA
 ENAM SgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1833,7 +1833,7 @@ ENAM SgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_strength_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. восстановление силы
 ALDT mpkZPgAAAAAAAAAA
 ENAM SgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1841,7 +1841,7 @@ ENAM SgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_willpower_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцененное восст. силы воли
 ALDT j8J1PgAAAAAAAAAA
 ENAM SgD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1849,7 +1849,7 @@ ENAM SgD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_willpower_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешевое восст. силы воли
 ALDT 7FE4PgAAAAAAAAAA
 ENAM SgD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1857,7 +1857,7 @@ ENAM SgD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_willpower_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. восст. силы воли
 ALDT 7FG4PQAAAAAAAAAA
 ENAM SgD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1865,7 +1865,7 @@ ENAM SgD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_willpower_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. восст. силы воли
 ALDT j8L1PQAAAAAAAAAA
 ENAM SgD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1873,7 +1873,7 @@ ENAM SgD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_restore_willpower_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. восст. силы воли
 ALDT mpkZPgAAAAAAAAAA
 ENAM SgD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1881,7 +1881,7 @@ ENAM SgD/AgAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_shock_resistance_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. сопр. электричеству
 ALDT j8J1PgAAAAAAAAAA
 ENAM XAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1889,7 +1889,7 @@ ENAM XAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_shock_resistance_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Деш. сопр. электричеству
 ALDT 7FE4PgAAAAAAAAAA
 ENAM XAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1897,7 +1897,7 @@ ENAM XAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_shock_resistance_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. сопр. электричеству
 ALDT 7FG4PQAAAAAAAAAA
 ENAM XAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1905,7 +1905,7 @@ ENAM XAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_shock_resistance_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Кач. сопр. электричеству
 ALDT j8L1PQAAAAAAAAAA
 ENAM XAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1913,7 +1913,7 @@ ENAM XAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_shock_resistance_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. сопр. электричеству
 ALDT mpkZPgAAAAAAAAAA
 ENAM XAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1921,7 +1921,7 @@ ENAM XAD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_spell_absorption_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. поглощение заклинаний
 ALDT j8J1PgAAAAAAAAAA
 ENAM QwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1929,7 +1929,7 @@ ENAM QwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_spell_absorption_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Деш. поглощение заклинаний
 ALDT 7FE4PgAAAAAAAAAA
 ENAM QwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1937,7 +1937,7 @@ ENAM QwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_spell_absorption_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. поглощ. заклинаний
 ALDT 7FG4PQAAAAAAAAAA
 ENAM QwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1945,7 +1945,7 @@ ENAM QwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_spell_absorption_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Качеств. поглощ. заклинаний
 ALDT j8L1PQAAAAAAAAAA
 ENAM QwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1953,7 +1953,7 @@ ENAM QwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_spell_absorption_s_A1_8
 MODL m\\Misc_Potion_Standard_01.nif
-TEXT bVxUeF9wb3Rpb25fc3RhbmRhcmRfMDEudGdhAA==
+TEXT m\\Tx_potion_standard_01.tga
 FNAM 1/8 Станд. поглощение заклятий
 ALDT mpkZPgAAAAAAAAAA
 ENAM QwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1961,7 +1961,7 @@ ENAM QwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_swift_swim_b_A1_8
 MODL m\\Misc_Potion_Bargain_01.nif
-TEXT bVxUeF9wb3Rpb25fYmFyZ2Fpbl8wMS50Z2EA
+TEXT m\\Tx_potion_bargain_01.tga
 FNAM 1/8 Уцен. зелье быстроплавания
 ALDT j8J1PgAAAAAAAAAA
 ENAM AQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1969,7 +1969,7 @@ ENAM AQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_swift_swim_c_A1_8
 MODL m\\Misc_Potion_Cheap_01.nif
-TEXT bVxUeF9wb3Rpb25fY2hlYXBfMDEudGdhAA==
+TEXT m\\Tx_potion_cheap_01.tga
 FNAM 1/8 Дешев. зелье быстроплавания
 ALDT 7FE4PgAAAAAAAAAA
 ENAM AQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1977,7 +1977,7 @@ ENAM AQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_swift_swim_e_A1_8
 MODL m\\Misc_Potion_Exclusive_01.nif
-TEXT bVxUeF9wb3Rpb25fZXhjbHVzaXZlXzAxLnRnYQA=
+TEXT m\\Tx_potion_exclusive_01.tga
 FNAM 1/8 Экскл. зелье быстроплавания
 ALDT 7FG4PQAAAAAAAAAA
 ENAM AQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1985,7 +1985,7 @@ ENAM AQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_swift_swim_q_A1_8
 MODL m\\Misc_Potion_Quality_01.nif
-TEXT bVxUeF9wb3Rpb25fcXVhbGl0eV8wMS50Z2EA
+TEXT m\\Tx_potion_quality_01.tga
 FNAM 1/8 Кач. зелье быстроплавания
 ALDT j8L1PQAAAAAAAAAA
 ENAM AQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1993,7 +1993,7 @@ ENAM AQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_swift_swim_s_A1
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM Стандарт. зелье быстроплавания
 ALDT AABAPyMAAAAAAAAA
 ENAM AQD//wAAAAAAAAAAHgAAAAoAAAAKAAAA
@@ -2001,7 +2001,7 @@ ENAM AQD//wAAAAAAAAAAHgAAAAoAAAAKAAAA
 ALCH
 NAME p_swift_swim_s_A1_8
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM 1/8 Станд. зелье быстроплавания
 ALDT mpkZPgAAAAAAAAAA
 ENAM AQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2009,7 +2009,7 @@ ENAM AQD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_telekinesis_c_A1
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM Дешевое зелье телекинеза
 ALDT AACAPw8AAAAAAAAA
 ENAM OwD//wAAAAAAAAAACgAAAAgAAAAIAAAA
@@ -2017,7 +2017,7 @@ ENAM OwD//wAAAAAAAAAACgAAAAgAAAAIAAAA
 ALCH
 NAME p_telekinesis_b_A1
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM Уцененное зелье телекинеза
 ALDT AADAPwUAAAAAAAAA
 ENAM OwD//wAAAAAAAAAACAAAAAUAAAAFAAAA
@@ -2025,7 +2025,7 @@ ENAM OwD//wAAAAAAAAAACAAAAAUAAAAFAAAA
 ALCH
 NAME p_telekinesis_q_A1
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM Качественное зелье телекинеза
 ALDT AAAAP1AAAAAAAAAA
 ENAM OwD//wAAAAAAAAAAHgAAAA8AAAAPAAAA
@@ -2033,7 +2033,7 @@ ENAM OwD//wAAAAAAAAAAHgAAAA8AAAAPAAAA
 ALCH
 NAME p_telekinesis_e_A1
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM Эксклюзивное зелье телекинеза
 ALDT AACAPq8AAAAAAAAA
 ENAM OwD//wAAAAAAAAAALQAAABQAAAAUAAAA
@@ -2041,7 +2041,7 @@ ENAM OwD//wAAAAAAAAAALQAAABQAAAAUAAAA
 ALCH
 NAME p_water_breathing_q_A1
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM Качеств. зелье водного дыхания
 ALDT AAAAP1AAAAAAAAAA
 ENAM AAD//wAAAAAAAAAAHgAAAAEAAAABAAAA
@@ -2049,7 +2049,7 @@ ENAM AAD//wAAAAAAAAAAHgAAAAEAAAABAAAA
 ALCH
 NAME p_water_breathing_e_A1
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM Экскл. зелье водного дыхания
 ALDT AACAPq8AAAAAAAAA
 ENAM AAD//wAAAAAAAAAALQAAAAEAAAABAAAA
@@ -2057,7 +2057,7 @@ ENAM AAD//wAAAAAAAAAALQAAAAEAAAABAAAA
 ALCH
 NAME p_water_breathing_c_A1
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM Дешевое зелье водного дыхания
 ALDT AACAPw8AAAAAAAAA
 ENAM AAD//wAAAAAAAAAACAAAAAEAAAABAAAA
@@ -2065,7 +2065,7 @@ ENAM AAD//wAAAAAAAAAACAAAAAEAAAABAAAA
 ALCH
 NAME p_water_breathing_b_A1
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM Уцененное зелье водного дыхания
 ALDT AADAPwUAAAAAAAAA
 ENAM AAD//wAAAAAAAAAABQAAAAEAAAABAAAA
@@ -2073,7 +2073,7 @@ ENAM AAD//wAAAAAAAAAABQAAAAEAAAABAAAA
 ALCH
 NAME p_water_walking_b_A1
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM Уцен. зелье хождения по воде
 ALDT AADAPwUAAAAAAAAA
 ENAM AgD//wAAAAAAAAAABQAAAAEAAAABAAAA
@@ -2081,7 +2081,7 @@ ENAM AgD//wAAAAAAAAAABQAAAAEAAAABAAAA
 ALCH
 NAME p_water_walking_c_A1
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM Дешевое зелье хождения по воде
 ALDT AACAPw8AAAAAAAAA
 ENAM AgD//wAAAAAAAAAACAAAAAEAAAABAAAA
@@ -2089,7 +2089,7 @@ ENAM AgD//wAAAAAAAAAACAAAAAEAAAABAAAA
 ALCH
 NAME p_water_walking_e_A1
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM Экскл. зелье хождения по воде
 ALDT AACAPq8AAAAAAAAA
 ENAM AgD//wAAAAAAAAAALQAAAAEAAAABAAAA
@@ -2097,7 +2097,7 @@ ENAM AgD//wAAAAAAAAAALQAAAAEAAAABAAAA
 ALCH
 NAME p_water_walking_q_A1
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM Качеств. зелье хождения по воде
 ALDT AAAAP1AAAAAAAAAA
 ENAM AgD//wAAAAAAAAAAHgAAAAEAAAABAAAA
@@ -2105,7 +2105,7 @@ ENAM AgD//wAAAAAAAAAAHgAAAAEAAAABAAAA
 ALCH
 NAME p_telekinesis_b_A1_8
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM 1/8 Уцененное зелье телекинеза
 ALDT j8J1PgAAAAAAAAAA
 ENAM OwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2113,7 +2113,7 @@ ENAM OwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_telekinesis_c_A1_8
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM 1/8 Дешевое зелье телекинеза
 ALDT 7FE4PgAAAAAAAAAA
 ENAM OwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2121,7 +2121,7 @@ ENAM OwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_telekinesis_e_A1_8
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM 1/8 Экскл. зелье телекинеза
 ALDT 7FG4PQAAAAAAAAAA
 ENAM OwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2129,7 +2129,7 @@ ENAM OwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_telekinesis_q_A1_8
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM 1/8 Качеств. зелье телекинеза
 ALDT j8L1PQAAAAAAAAAA
 ENAM OwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2137,7 +2137,7 @@ ENAM OwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_telekinesis_s_A1_8
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM 1/8 Стандарт. зелье телекинеза
 ALDT mpkZPgAAAAAAAAAA
 ENAM OwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2145,7 +2145,7 @@ ENAM OwD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
 ALCH
 NAME p_water_breathing_b_A1_8
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM 1/8 Уцен. зелье водного дыхания
 ALDT j8J1PgAAAAAAAAAA
 ENAM AAD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -2153,7 +2153,7 @@ ENAM AAD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_water_breathing_c_A1_8
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM 1/8 Дешевое з. водного дыхания
 ALDT 7FE4PgAAAAAAAAAA
 ENAM AAD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -2161,7 +2161,7 @@ ENAM AAD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_water_breathing_e_A1_8
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM 1/8 Экскл. з. водного дыхания
 ALDT 7FG4PQAAAAAAAAAA
 ENAM AAD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -2169,7 +2169,7 @@ ENAM AAD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_water_breathing_q_A1_8
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM 1/8 Качеств. з. водного дыхания
 ALDT j8L1PQAAAAAAAAAA
 ENAM AAD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -2177,7 +2177,7 @@ ENAM AAD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_water_breathing_s_A1_8
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM 1/8 Станд. з. водного дыхания
 ALDT mpkZPgAAAAAAAAAA
 ENAM AAD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -2185,7 +2185,7 @@ ENAM AAD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_water_walking_b_A1_8
 MODL m\\misc_potion_bargain_01.nif
-TEXT bVx0eF9wb3Rpb25fYmFyZ2Fpbl8wMS5kZHMA
+TEXT m\\tx_potion_bargain_01.dds
 FNAM 1/8 Уцен. з. хождения по воде
 ALDT j8J1PgAAAAAAAAAA
 ENAM AgD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -2193,7 +2193,7 @@ ENAM AgD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_water_walking_c_A1_8
 MODL m\\misc_potion_cheap_01.nif
-TEXT bVx0eF9wb3Rpb25fY2hlYXBfMDEuZGRzAA==
+TEXT m\\tx_potion_cheap_01.dds
 FNAM 1/8 Дешевое з. хождения по воде
 ALDT 7FE4PgAAAAAAAAAA
 ENAM AgD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -2201,7 +2201,7 @@ ENAM AgD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_water_walking_e_A1_8
 MODL m\\misc_potion_exclusive_01.nif
-TEXT bVx0eF9wb3Rpb25fZXhjbHVzaXZlXzAxLmRkcwA=
+TEXT m\\tx_potion_exclusive_01.dds
 FNAM 1/8 Экскл. з. хождения по воде
 ALDT 7FG4PQAAAAAAAAAA
 ENAM AgD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -2209,7 +2209,7 @@ ENAM AgD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_water_walking_q_A1_8
 MODL m\\misc_potion_quality_01.nif
-TEXT bVx0eF9wb3Rpb25fcXVhbGl0eV8wMS5kZHMA
+TEXT m\\tx_potion_quality_01.dds
 FNAM 1/8 Качест. з. хождения по воде
 ALDT j8L1PQAAAAAAAAAA
 ENAM AgD//wAAAAAAAAAAAAAAAAEAAAABAAAA
@@ -2217,7 +2217,7 @@ ENAM AgD//wAAAAAAAAAAAAAAAAEAAAABAAAA
 ALCH
 NAME p_water_walking_s_A1_8
 MODL m\\misc_potion_standard_01.nif
-TEXT bVx0eF9wb3Rpb25fc3RhbmRhcmRfMDEuZGRzAA==
+TEXT m\\tx_potion_standard_01.dds
 FNAM 1/8 Станд. з. хождения по воде
 ALDT mpkZPgAAAAAAAAAA
 ENAM AgD//wAAAAAAAAAAAAAAAAEAAAABAAAA

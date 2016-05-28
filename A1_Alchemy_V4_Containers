@@ -15,22 +15,22 @@ Bloodmoon.esm 11799703
 GLOB
 NAME A1V4_RoadBagX
 FNAM f%
-FLTV AAAAAA==
+FLTV 0.0
 
 GLOB
 NAME A1V4_RoadBagY
 FNAM f%
-FLTV AAAAAA==
+FLTV 0.0
 
 GLOB
 NAME A1V4_RoadBagZ
 FNAM f%
-FLTV AAAAAA==
+FLTV 0.0
 
 GLOB
 NAME A1V4_RoadBagAngle
 FNAM f%
-FLTV AAAAAA==
+FLTV 0.0
 
 SCPT
 SCHD QTFWNF9Sb2FkQmFnQWxjaENvbnRfMV9zYwAAAAAAAAAHAAAACAAAAAUAAAAVBQAAmAAAAA==
@@ -3363,7 +3363,11 @@ INGR
 NAME A1V4_RoadBagFakeIngred
 MODL n\\ingred_bittergreen_01.nif
 FNAM ERROR
-IRDT zczMPRQAAAApAAAA//////////////////////////////////////////////////////////8=
+IRDT
+    0.1 20
+    41 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
 ITEX n\\tx_bittergreen_petal_01.dds
 
 CONT
@@ -3371,7 +3375,7 @@ NAME A1V4_RoadBagIngrCont_1
 MODL o\\Contain_Com_Sack_02.NIF
 FNAM Мешок с ингредиентами (1)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagIngrCont_1_sc
 
 CONT
@@ -3379,7 +3383,7 @@ NAME A1V4_RoadBagIngrCont_2
 MODL o\\Contain_Com_Sack_02.NIF
 FNAM Мешок с ингредиентами (2)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagIngrCont_2_sc
 
 CONT
@@ -3387,7 +3391,7 @@ NAME A1V4_RoadBagIngrCont_3
 MODL o\\Contain_Com_Sack_02.NIF
 FNAM Мешок с ингредиентами (3)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagIngrCont_3_sc
 
 CONT
@@ -3395,7 +3399,7 @@ NAME A1V4_RoadBagMiscCont_1
 MODL o\\Contain_Com_Sack_02.NIF
 FNAM Походный мешок (1)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagMiscCont_1_sc
 
 CONT
@@ -3403,7 +3407,7 @@ NAME A1V4_RoadBagMiscCont_2
 MODL o\\Contain_Com_Sack_02.NIF
 FNAM Походный мешок (2)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagMiscCont_2_sc
 
 CONT
@@ -3411,7 +3415,7 @@ NAME A1V4_RoadBagMiscCont_3
 MODL o\\Contain_Com_Sack_02.NIF
 FNAM Походный мешок (3)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagMiscCont_3_sc
 
 MISC
@@ -3467,7 +3471,7 @@ NAME A1V4_RoadBagIncpCont_1
 MODL o\\contain_chest10.nif
 FNAM Сундук с неполными зельями (1)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagIncpCont_1_sc
 
 MISC
@@ -3483,7 +3487,7 @@ NAME A1V4_RoadBagAlchCont_1
 MODL o\\contain_chest10.nif
 FNAM Сундук с зельями (1)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagAlchCont_1_sc
 
 MISC
@@ -3499,7 +3503,7 @@ NAME A1V4_RoadBagAlchCont_2
 MODL o\\contain_chest10.nif
 FNAM Сундук с зельями (2)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagAlchCont_2_sc
 
 CONT
@@ -3507,7 +3511,7 @@ NAME A1V4_RoadBagAlchCont_3
 MODL o\\contain_chest10.nif
 FNAM Сундук с зельями (3)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagAlchCont_3_sc
 
 MISC
@@ -3531,7 +3535,7 @@ NAME A1V4_RoadBagIncpCont_2
 MODL o\\contain_chest10.nif
 FNAM Сундук с неполными зельями (2)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagIncpCont_2_sc
 
 CONT
@@ -3539,7 +3543,7 @@ NAME A1V4_RoadBagIncpCont_3
 MODL o\\contain_chest10.nif
 FNAM Сундук с неполными зельями (3)
 CNDT AEAcRg==
-FLAG CAAAAA==
+FLAG 8
 SCRI A1V4_RoadBagIncpCont_3_sc
 
 MISC

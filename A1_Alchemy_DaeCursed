@@ -102,7 +102,11 @@ INGR
 NAME ingred_Dae_cursed_emerald_01
 MODL n\\Ingred_emerald_01.NIF
 FNAM Изумруд
-IRDT zcxMPpYAAABRAAAASwAAABEAAAARAAAA//////////8AAAAAAAAAAP//////////AwAAAAUAAAA=
+IRDT
+    0.2 150
+    81 75 17 17
+    -1 -1 0 0
+    -1 -1 3 5
 SCRI A1_DaedrSumm_emerald
 ITEX n\\Tx_emerald.tga
 
@@ -110,7 +114,11 @@ INGR
 NAME ingred_Dae_cursed_pearl_01
 MODL n\\Ingred_pearl_01.NIF
 FNAM Жемчужина
-IRDT zcxMPmQAAAARAAAAOQAAAAAAAABeAAAAAAAAAP///////////////wMAAAD///////////////8=
+IRDT
+    0.2 100
+    17 57 0 94
+    0 -1 -1 -1
+    3 -1 -1 -1
 SCRI A1_DaedrSumm_pearl
 ITEX n\\Tx_pearl.tga
 
@@ -118,7 +126,11 @@ INGR
 NAME ingred_cursed_daedras_heart_01
 MODL n\\Ingred_Daedra_heart_01.NIF
 FNAM Сердце даэдры
-IRDT AACAP8gAAABMAAAATwAAABEAAAArAAAA/////wAAAAAAAAAA//////////8FAAAAAwAAAP////8=
+IRDT
+    1.0 200
+    76 79 17 43
+    -1 0 0 -1
+    -1 5 3 -1
 SCRI A1_DaedrSumm_heart
 ITEX n\\Tx_daedra_heart_01.tga
 
@@ -126,7 +138,11 @@ INGR
 NAME ingred_Dae_cursed_diamond_01
 MODL n\\Ingred_diamond_01.NIF
 FNAM Бриллиант
-IRDT zcxMPvoAAAARAAAAJwAAAEQAAABCAAAAAAAAAP///////////////wMAAAD///////////////8=
+IRDT
+    0.2 250
+    17 39 68 66
+    0 -1 -1 -1
+    3 -1 -1 -1
 SCRI A1_DaedrSumm_diamond
 ITEX n\\Tx_diamond.tga
 
@@ -134,7 +150,11 @@ INGR
 NAME ingred_Dae_cursed_ruby_01
 MODL n\\Ingred_ruby_01.NIF
 FNAM Рубин
-IRDT zcxMPsgAAAASAAAACAAAAEoAAAARAAAA//////////8AAAAAAAAAAP//////////AQAAAAMAAAA=
+IRDT
+    0.2 200
+    18 8 74 17
+    -1 -1 0 0
+    -1 -1 1 3
 SCRI A1_DaedrSumm_ruby
 ITEX n\\Tx_ruby.tga
 
@@ -142,6 +162,10 @@ INGR
 NAME ingred_Dae_cursed_raw_ebony_01
 MODL n\\Ingred_RawEbony_01.NIF
 FNAM Эбонит-сырец
-IRDT AAAgQcgAAAARAAAASAAAAAYAAABKAAAAAAAAAP//////////AAAAAAMAAAD//////////wQAAAA=
+IRDT
+    10.0 200
+    17 72 6 74
+    0 -1 -1 0
+    3 -1 -1 4
 SCRI A1_DaedrSumm_ebony
 ITEX n\\Tx_RawEbony.tga
