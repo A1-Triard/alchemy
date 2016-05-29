@@ -1,0 +1,210 @@
+SCPT
+SCTX
+    Begin A1V4_ACheck33_FrostResist_sc
+    
+    short AddPotion
+    short in1
+    short in2
+    short in3
+    short in4
+    short in5
+    short in6
+    short in7
+    short in8
+    short sum15
+    short sum30
+    short sum45
+    short temp
+    short bad
+    
+    if ( AddPotion == 1 )
+    	if ( A1V4_PotionB == 1 )
+    		player->AddItem p_frost_resistance_b_A1_8, 1
+    	elseif ( A1V4_PotionB == 2 )
+    		player->AddItem p_frost_resistance_b_A1_8, 2
+    	elseif ( A1V4_PotionB == 3 )
+    		player->AddItem p_frost_resistance_b_A1_8, 3
+    	elseif ( A1V4_PotionB == 4 )
+    		player->AddItem p_frost_resistance_b_A1_8, 4
+    	elseif ( A1V4_PotionB == 5 )
+    		player->AddItem p_frost_resistance_b_A1_8, 5
+    	elseif ( A1V4_PotionB == 6 )
+    		player->AddItem p_frost_resistance_b_A1_8, 6
+    	elseif ( A1V4_PotionB == 7 )
+    		player->AddItem p_frost_resistance_b_A1_8, 7
+    	elseif ( A1V4_PotionB == 8 )
+    		player->AddItem p_frost_resistance_b_A1_8, 8
+    	endif
+    	if ( A1V4_PotionC == 1 )
+    		player->AddItem p_frost_resistance_c_A1_8, 1
+    	elseif ( A1V4_PotionC == 2 )
+    		player->AddItem p_frost_resistance_c_A1_8, 2
+    	elseif ( A1V4_PotionC == 3 )
+    		player->AddItem p_frost_resistance_c_A1_8, 3
+    	elseif ( A1V4_PotionC == 4 )
+    		player->AddItem p_frost_resistance_c_A1_8, 4
+    	elseif ( A1V4_PotionC == 5 )
+    		player->AddItem p_frost_resistance_c_A1_8, 5
+    	elseif ( A1V4_PotionC == 6 )
+    		player->AddItem p_frost_resistance_c_A1_8, 6
+    	elseif ( A1V4_PotionC == 7 )
+    		player->AddItem p_frost_resistance_c_A1_8, 7
+    	elseif ( A1V4_PotionC == 8 )
+    		player->AddItem p_frost_resistance_c_A1_8, 8
+    	endif
+    	if ( A1V4_PotionS == 1 )
+    		player->AddItem p_frost_resistance_s_A1_8, 1
+    	elseif ( A1V4_PotionS == 2 )
+    		player->AddItem p_frost_resistance_s_A1_8, 2
+    	elseif ( A1V4_PotionS == 3 )
+    		player->AddItem p_frost_resistance_s_A1_8, 3
+    	elseif ( A1V4_PotionS == 4 )
+    		player->AddItem p_frost_resistance_s_A1_8, 4
+    	elseif ( A1V4_PotionS == 5 )
+    		player->AddItem p_frost_resistance_s_A1_8, 5
+    	elseif ( A1V4_PotionS == 6 )
+    		player->AddItem p_frost_resistance_s_A1_8, 6
+    	elseif ( A1V4_PotionS == 7 )
+    		player->AddItem p_frost_resistance_s_A1_8, 7
+    	elseif ( A1V4_PotionS == 8 )
+    		player->AddItem p_frost_resistance_s_A1_8, 8
+    	endif
+    	if ( A1V4_PotionQ == 1 )
+    		player->AddItem p_frost_resistance_q_A1_8, 1
+    	elseif ( A1V4_PotionQ == 2 )
+    		player->AddItem p_frost_resistance_q_A1_8, 2
+    	elseif ( A1V4_PotionQ == 3 )
+    		player->AddItem p_frost_resistance_q_A1_8, 3
+    	elseif ( A1V4_PotionQ == 4 )
+    		player->AddItem p_frost_resistance_q_A1_8, 4
+    	elseif ( A1V4_PotionQ == 5 )
+    		player->AddItem p_frost_resistance_q_A1_8, 5
+    	elseif ( A1V4_PotionQ == 6 )
+    		player->AddItem p_frost_resistance_q_A1_8, 6
+    	elseif ( A1V4_PotionQ == 7 )
+    		player->AddItem p_frost_resistance_q_A1_8, 7
+    	elseif ( A1V4_PotionQ == 8 )
+    		player->AddItem p_frost_resistance_q_A1_8, 8
+    	endif
+    	if ( A1V4_PotionE == 1 )
+    		player->AddItem p_frost_resistance_e_A1_8, 1
+    	elseif ( A1V4_PotionE == 2 )
+    		player->AddItem p_frost_resistance_e_A1_8, 2
+    	elseif ( A1V4_PotionE == 3 )
+    		player->AddItem p_frost_resistance_e_A1_8, 3
+    	elseif ( A1V4_PotionE == 4 )
+    		player->AddItem p_frost_resistance_e_A1_8, 4
+    	elseif ( A1V4_PotionE == 5 )
+    		player->AddItem p_frost_resistance_e_A1_8, 5
+    	elseif ( A1V4_PotionE == 6 )
+    		player->AddItem p_frost_resistance_e_A1_8, 6
+    	elseif ( A1V4_PotionE == 7 )
+    		player->AddItem p_frost_resistance_e_A1_8, 7
+    	elseif ( A1V4_PotionE == 8 )
+    		player->AddItem p_frost_resistance_e_A1_8, 8
+    	endif
+    endif
+    
+    set AddPotion to 0
+    
+    if ( player->GetItemCount p_frost_resistance_b_A1_8 >= 8 )
+    	player->AddItem p_frost_resistance_b, 1
+    	player->RemoveItem p_frost_resistance_b_A1_8, 8
+    endif
+    if ( player->GetItemCount p_frost_resistance_c_A1_8 >= 8 )
+    	player->AddItem p_frost_resistance_c, 1
+    	player->RemoveItem p_frost_resistance_c_A1_8, 8
+    endif
+    if ( player->GetItemCount p_frost_resistance_s_A1_8 >= 8 )
+    	player->AddItem p_frost_resistance_s, 1
+    	player->RemoveItem p_frost_resistance_s_A1_8, 8
+    endif
+    if ( player->GetItemCount p_frost_resistance_q_A1_8 >= 8 )
+    	player->AddItem p_frost_resistance_q, 1
+    	player->RemoveItem p_frost_resistance_q_A1_8, 8
+    endif
+    if ( player->GetItemCount p_frost_resistance_e_A1_8 >= 8 )
+    	player->AddItem p_frost_resistance_e, 1
+    	player->RemoveItem p_frost_resistance_e_A1_8, 8
+    endif
+    
+    set in1 to 0
+    set in2 to 0
+    set in3 to 0
+    set in4 to 0
+    set in5 to 0
+    set in6 to 0
+    set in7 to 0
+    set in8 to 0
+    
+    if ( player->GetItemCount ingred_eyeball > 0 )
+    	set in1 to 1
+    endif
+    if ( player->GetItemCount ingred_gravetar_01 > 0 )
+    	set in2 to 1
+    endif
+    if ( player->GetItemCount ingred_fire_salts_01 > 0 )
+    	set in3 to 1
+    endif
+    if ( player->GetItemCount ingred_eyeball_unique > 0 )
+    	set in4 to 1
+    endif
+    if ( player->GetItemCount ingred_raw_Stalhrim_01 > 0 )
+    	set in5 to 1
+    endif
+    if ( player->GetItemCount ingred_black_lichen_01 > 0 )
+    	set in6 to 1
+    endif
+    if ( player->GetItemCount ingred_boar_leather > 0 )
+    	set in7 to 1
+    endif
+    if ( player->GetItemCount ingred_holly_01 > 0 )
+    	set in8 to 1
+    endif
+    
+    set sum15 to ( in1 + in2 + in4 )
+    set sum15 to ( sum15 + in5 + in8 )
+    set sum30 to ( sum15 + in6 )
+    set sum45 to ( sum30 + in3 + in7 )
+    set bad to 0
+    set temp to ( in1 + in4 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in2 + in3 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in5 + in7 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in5 + in8 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in7 + in8 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    if ( player->GetItemCount A1V4_L15_frost_resistance == 1 )
+    	player->RemoveItem A1V4_L15_frost_resistance, 1
+    elseif ( player->GetItemCount A1V4_L30_frost_resistance == 1 )
+    	player->RemoveItem A1V4_L30_frost_resistance, 1
+    elseif ( player->GetItemCount A1V4_L45_frost_resistance == 1 )
+    	player->RemoveItem A1V4_L45_frost_resistance, 1
+    endif
+    if ( bad == 0 )
+    	if ( sum15 > 1 )
+    		player->AddItem A1V4_L15_frost_resistance, 1
+    	elseif ( sum30 > 1 )
+    		player->AddItem A1V4_L30_frost_resistance, 1
+    	elseif ( sum45 > 1 )
+    		player->AddItem A1V4_L45_frost_resistance, 1
+    	endif
+    endif
+    
+    StopScript A1V4_ACheck33_FrostResist_sc
+    StartScript A1V4_ACheck34_FrostSh_sc
+    
+    End

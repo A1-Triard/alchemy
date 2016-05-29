@@ -1,0 +1,14 @@
+SCPT
+SCTX
+    Begin A1V4_ADel12_Feather_sc
+    
+    if ( player->GetItemCount A1V4_L30_feather == 1 )
+    	player->RemoveItem A1V4_L30_feather, 1
+    elseif ( player->GetItemCount A1V4_L45_feather == 1 )
+    	player->RemoveItem A1V4_L45_feather, 1
+    endif
+    
+    StopScript A1V4_ADel12_Feather_sc
+    StartScript A1V4_ADel13_FireResist_sc
+    
+    End

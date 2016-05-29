@@ -1,0 +1,14 @@
+SCPT
+SCTX
+    Begin A1V4_ADel24_FortEndur_sc
+    
+    if ( player->GetItemCount A1V4_L15_fortify_endurance == 1 )
+    	player->RemoveItem A1V4_L15_fortify_endurance, 1
+    elseif ( player->GetItemCount A1V4_L30_fortify_endurance == 1 )
+    	player->RemoveItem A1V4_L30_fortify_endurance, 1
+    endif
+    
+    StopScript A1V4_ADel24_FortEndur_sc
+    StartScript A1V4_ADel25_FortFatig_sc
+    
+    End

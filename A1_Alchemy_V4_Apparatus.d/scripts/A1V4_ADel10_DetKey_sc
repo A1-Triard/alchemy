@@ -1,0 +1,16 @@
+SCPT
+SCTX
+    Begin A1V4_ADel10_DetKey_sc
+    
+    if ( player->GetItemCount A1V4_L30_detect_key == 1 )
+    	player->RemoveItem A1V4_L30_detect_key, 1
+    elseif ( player->GetItemCount A1V4_L45_detect_key == 1 )
+    	player->RemoveItem A1V4_L45_detect_key, 1
+    elseif ( player->GetItemCount A1V4_L60_detect_key == 1 )
+    	player->RemoveItem A1V4_L60_detect_key, 1
+    endif
+    
+    StopScript A1V4_ADel10_DetKey_sc
+    StartScript A1V4_ADel11_Poison_sc
+    
+    End

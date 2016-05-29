@@ -1,0 +1,167 @@
+SCPT
+SCTX
+    Begin A1V4_ACheck19_DetEnch_sc
+    
+    short AddPotion
+    short in1
+    short in2
+    short in3
+    short in4
+    short sum30
+    short sum60
+    short temp
+    short bad
+    
+    if ( AddPotion == 1 )
+    	if ( A1V4_PotionB == 1 )
+    		player->AddItem p_detect_enchantment_b_A1_8, 1
+    	elseif ( A1V4_PotionB == 2 )
+    		player->AddItem p_detect_enchantment_b_A1_8, 2
+    	elseif ( A1V4_PotionB == 3 )
+    		player->AddItem p_detect_enchantment_b_A1_8, 3
+    	elseif ( A1V4_PotionB == 4 )
+    		player->AddItem p_detect_enchantment_b_A1_8, 4
+    	elseif ( A1V4_PotionB == 5 )
+    		player->AddItem p_detect_enchantment_b_A1_8, 5
+    	elseif ( A1V4_PotionB == 6 )
+    		player->AddItem p_detect_enchantment_b_A1_8, 6
+    	elseif ( A1V4_PotionB == 7 )
+    		player->AddItem p_detect_enchantment_b_A1_8, 7
+    	elseif ( A1V4_PotionB == 8 )
+    		player->AddItem p_detect_enchantment_b_A1_8, 8
+    	endif
+    	if ( A1V4_PotionC == 1 )
+    		player->AddItem p_detect_enchantment_c_A1_8, 1
+    	elseif ( A1V4_PotionC == 2 )
+    		player->AddItem p_detect_enchantment_c_A1_8, 2
+    	elseif ( A1V4_PotionC == 3 )
+    		player->AddItem p_detect_enchantment_c_A1_8, 3
+    	elseif ( A1V4_PotionC == 4 )
+    		player->AddItem p_detect_enchantment_c_A1_8, 4
+    	elseif ( A1V4_PotionC == 5 )
+    		player->AddItem p_detect_enchantment_c_A1_8, 5
+    	elseif ( A1V4_PotionC == 6 )
+    		player->AddItem p_detect_enchantment_c_A1_8, 6
+    	elseif ( A1V4_PotionC == 7 )
+    		player->AddItem p_detect_enchantment_c_A1_8, 7
+    	elseif ( A1V4_PotionC == 8 )
+    		player->AddItem p_detect_enchantment_c_A1_8, 8
+    	endif
+    	if ( A1V4_PotionS == 1 )
+    		player->AddItem p_detect_enchantment_s_A1_8, 1
+    	elseif ( A1V4_PotionS == 2 )
+    		player->AddItem p_detect_enchantment_s_A1_8, 2
+    	elseif ( A1V4_PotionS == 3 )
+    		player->AddItem p_detect_enchantment_s_A1_8, 3
+    	elseif ( A1V4_PotionS == 4 )
+    		player->AddItem p_detect_enchantment_s_A1_8, 4
+    	elseif ( A1V4_PotionS == 5 )
+    		player->AddItem p_detect_enchantment_s_A1_8, 5
+    	elseif ( A1V4_PotionS == 6 )
+    		player->AddItem p_detect_enchantment_s_A1_8, 6
+    	elseif ( A1V4_PotionS == 7 )
+    		player->AddItem p_detect_enchantment_s_A1_8, 7
+    	elseif ( A1V4_PotionS == 8 )
+    		player->AddItem p_detect_enchantment_s_A1_8, 8
+    	endif
+    	if ( A1V4_PotionQ == 1 )
+    		player->AddItem p_detect_enchantment_q_A1_8, 1
+    	elseif ( A1V4_PotionQ == 2 )
+    		player->AddItem p_detect_enchantment_q_A1_8, 2
+    	elseif ( A1V4_PotionQ == 3 )
+    		player->AddItem p_detect_enchantment_q_A1_8, 3
+    	elseif ( A1V4_PotionQ == 4 )
+    		player->AddItem p_detect_enchantment_q_A1_8, 4
+    	elseif ( A1V4_PotionQ == 5 )
+    		player->AddItem p_detect_enchantment_q_A1_8, 5
+    	elseif ( A1V4_PotionQ == 6 )
+    		player->AddItem p_detect_enchantment_q_A1_8, 6
+    	elseif ( A1V4_PotionQ == 7 )
+    		player->AddItem p_detect_enchantment_q_A1_8, 7
+    	elseif ( A1V4_PotionQ == 8 )
+    		player->AddItem p_detect_enchantment_q_A1_8, 8
+    	endif
+    	if ( A1V4_PotionE == 1 )
+    		player->AddItem p_detect_enchantment_e_A1_8, 1
+    	elseif ( A1V4_PotionE == 2 )
+    		player->AddItem p_detect_enchantment_e_A1_8, 2
+    	elseif ( A1V4_PotionE == 3 )
+    		player->AddItem p_detect_enchantment_e_A1_8, 3
+    	elseif ( A1V4_PotionE == 4 )
+    		player->AddItem p_detect_enchantment_e_A1_8, 4
+    	elseif ( A1V4_PotionE == 5 )
+    		player->AddItem p_detect_enchantment_e_A1_8, 5
+    	elseif ( A1V4_PotionE == 6 )
+    		player->AddItem p_detect_enchantment_e_A1_8, 6
+    	elseif ( A1V4_PotionE == 7 )
+    		player->AddItem p_detect_enchantment_e_A1_8, 7
+    	elseif ( A1V4_PotionE == 8 )
+    		player->AddItem p_detect_enchantment_e_A1_8, 8
+    	endif
+    endif
+    
+    set AddPotion to 0
+    
+    if ( player->GetItemCount p_detect_enchantment_b_A1_8 >= 8 )
+    	player->AddItem p_detect_enchantment_b_A1, 1
+    	player->RemoveItem p_detect_enchantment_b_A1_8, 8
+    endif
+    if ( player->GetItemCount p_detect_enchantment_c_A1_8 >= 8 )
+    	player->AddItem p_detect_enchantment_c_A1, 1
+    	player->RemoveItem p_detect_enchantment_c_A1_8, 8
+    endif
+    if ( player->GetItemCount p_detect_enchantment_s_A1_8 >= 8 )
+    	player->AddItem p_detect_enchantment_s, 1
+    	player->RemoveItem p_detect_enchantment_s_A1_8, 8
+    endif
+    if ( player->GetItemCount p_detect_enchantment_q_A1_8 >= 8 )
+    	player->AddItem p_detect_enchantment_q_A1, 1
+    	player->RemoveItem p_detect_enchantment_q_A1_8, 8
+    endif
+    if ( player->GetItemCount p_detect_enchantment_e_A1_8 >= 8 )
+    	player->AddItem p_detect_enchantment_e_A1, 1
+    	player->RemoveItem p_detect_enchantment_e_A1_8, 8
+    endif
+    
+    set in1 to 0
+    set in2 to 0
+    set in3 to 0
+    set in4 to 0
+    
+    if ( player->GetItemCount ingred_marshmerrow_01 > 0 )
+    	set in1 to 1
+    endif
+    if ( player->GetItemCount ingred_bc_hypha_facia > 0 )
+    	set in2 to 1
+    endif
+    if ( player->GetItemCount ingred_hound_meat_01 > 0 )
+    	set in3 to 1
+    endif
+    if ( player->GetItemCount Ingred_lloramor_spines_01 > 0 )
+    	set in4 to 1
+    endif
+    
+    set sum30 to ( in1 )
+    set sum60 to ( sum30 + in2 + in3 + in4 )
+    set bad to 0
+    set temp to ( in1 + in2 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    if ( player->GetItemCount A1V4_L30_detect_enchantment == 1 )
+    	player->RemoveItem A1V4_L30_detect_enchantment, 1
+    elseif ( player->GetItemCount A1V4_L60_detect_enchantment == 1 )
+    	player->RemoveItem A1V4_L60_detect_enchantment, 1
+    endif
+    if ( bad == 0 )
+    	if ( sum30 > 1 )
+    		player->AddItem A1V4_L30_detect_enchantment, 1
+    	elseif ( sum60 > 1 )
+    		player->AddItem A1V4_L60_detect_enchantment, 1
+    	endif
+    endif
+    
+    StopScript A1V4_ACheck19_DetEnch_sc
+    StartScript A1V4_ACheck20_Dispel_sc
+    
+    End

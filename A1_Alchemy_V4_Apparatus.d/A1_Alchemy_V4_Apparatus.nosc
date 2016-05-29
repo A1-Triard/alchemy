@@ -1,0 +1,2075 @@
+3SET
+VERSION 1067869798
+TYPE ESP
+AUTHOR A1
+DESCRIPTION
+    Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах).
+    Для получения алхимической установки используйте команду
+    player->AddItem A1V4_ApparatusItem_#, 1
+    Здесь # - номер установки (1, 2, 3).
+Morrowind.esm 79764287
+Tribunal.esm 6616539
+Bloodmoon.esm 11799703
+
+GLOB
+NAME A1V4_AlchemyRes
+FNAM s%
+FLTV 0.0
+
+GLOB
+NAME A1V4_PotionB
+FNAM s%
+FLTV 0.0
+
+GLOB
+NAME A1V4_PotionC
+FNAM s%
+FLTV 0.0
+
+GLOB
+NAME A1V4_PotionS
+FNAM s%
+FLTV 0.0
+
+GLOB
+NAME A1V4_PotionQ
+FNAM s%
+FLTV 0.0
+
+GLOB
+NAME A1V4_PotionE
+FNAM s%
+FLTV 0.0
+
+GLOB
+NAME A1V4_AlchemyExp
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_CalcAlchemy5
+FNAM s%
+FLTV 0.0
+
+GLOB
+NAME A1V4_ApparatusX
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_ApparatusY
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_ApparatusZ
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_MortarX
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_MortarY
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_RetortX
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_RetortY
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_AlembicX
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_AlembicY
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_CalcinatorX
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_CalcinatorY
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_ApparatusAngle
+FNAM f%
+FLTV 0.0
+
+GLOB
+NAME A1V4_ApparatusDisable_3
+FNAM s%
+FLTV 0.0
+
+GLOB
+NAME A1V4_ApparatusDisable_2
+FNAM s%
+FLTV 0.0
+
+GLOB
+NAME A1V4_ApparatusDisable_1
+FNAM s%
+FLTV 0.0
+
+GLOB
+NAME A1V4_CalcAlchemy2
+FNAM s%
+FLTV 0.0
+
+INGR
+NAME A1V4_AlchemyActivator
+MODL m\\misc_com_plate_03.nif
+FNAM _Проверить
+IRDT
+    0.0 0
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AlchemyActivator_sc
+ITEX l\\light_de_lantern_01.dds
+
+APPA
+NAME A1V4_apparatus_a_alembic_e3
+MODL m\\Apparatus_A_Alembic_01.NIF
+FNAM Перегонный куб ученика
+SCRI A1V4_Alembic_3_sc
+AADT AQAAAAAAAD8AACBBMgAAAA==
+ITEX m\\Tx_alembic_01.tga
+
+APPA
+NAME A1V4_apparatus_a_calcinator_e3
+MODL m\\Apparatus_A_Calcinator_01.NIF
+FNAM Кальцинатор ученика
+SCRI A1V4_Calcinator_3_sc
+AADT AgAAAAAAAD8AAMhBCgAAAA==
+ITEX m\\Tx_calcinator_01.tga
+
+APPA
+NAME A1V4_apparatus_a_mortar_e3
+MODL m\\Misc_mortarpestle_01.NIF
+FNAM Ступка и пестик ученика
+SCRI A1V4_Mortar_3_sc
+AADT AAAAAAAAAD8AAKBAZAAAAA==
+ITEX m\\Tx_mortarpestle_01.tga
+
+APPA
+NAME A1V4_apparatus_a_retort_e3
+MODL m\\Apparatus_A_Retort_01.NIF
+FNAM Реторта ученика
+SCRI A1V4_Retort_3_sc
+AADT AwAAAAAAAD8AAABBFAAAAA==
+ITEX m\\Tx_retort_01.tga
+
+APPA
+NAME A1V4_apparatus_a_spipe_e3
+MODL m\\Apparatus_A_Spipe_01.nif
+FNAM Хорошая трубка скуума
+SCRI A1V4_Alembic_3_sc
+AADT AQAAAJqZGT4AAABAMgAAAA==
+ITEX m\\Tx_Spipe_01.tga
+
+APPA
+NAME A1V4_apparatus_a_spipe_tsiya_e3
+MODL m\\Apparatus_A_Spipe_01.nif
+FNAM Трубка скуума Ции
+SCRI A1V4_Alembic_3_sc
+AADT AQAAAJqZGT4AAABAHgAAAA==
+ITEX m\\Tx_Spipe_01.tga
+
+APPA
+NAME A1V4_apparatus_g_alembic_e3
+MODL m\\Apparatus_G_Alembic_01.nif
+FNAM Перегонный куб грандмастера
+SCRI A1V4_Alembic_3_sc
+AADT AQAAAAAAwD8AAEBAoA8AAA==
+ITEX m\\Tx_alembic_04.tga
+
+APPA
+NAME A1V4_apparatus_g_calcinator_e3
+MODL m\\App_G_Calcinator_01.nif
+FNAM Кальцинатор грандмастера
+SCRI A1V4_Calcinator_3_sc
+AADT AgAAAAAAwD8AAABBoA8AAA==
+ITEX m\\Tx_calcinator_04.tga
+
+APPA
+NAME A1V4_apparatus_g_mortar_e3
+MODL m\\Misc_mortarpestle_G_01.nif
+FNAM Ступка и пестик грандмастера
+SCRI A1V4_Mortar_3_sc
+AADT AAAAAAAAwD8AAABAoA8AAA==
+ITEX m\\Tx_mortarpestle_G_01.tga
+
+APPA
+NAME A1V4_apparatus_g_retort_e3
+MODL m\\Apparatus_G_Retort_01.nif
+FNAM Реторта грандмастера
+SCRI A1V4_Retort_3_sc
+AADT AwAAAAAAwD8AAEBAQAYAAA==
+ITEX m\\Tx_retort_04.tga
+
+APPA
+NAME A1V4_apparatus_j_alembic_e3
+MODL m\\Apparatus_J_Alembic_01.nif
+FNAM Перегонный куб подмастерья
+SCRI A1V4_Alembic_3_sc
+AADT AQAAAAAAgD8AAOBAyAAAAA==
+ITEX m\\Tx_alembic_02.tga
+
+APPA
+NAME A1V4_apparatus_j_calcinator_e3
+MODL m\\Apparatus_A_Calcinator_01.NIF
+FNAM Кальцинатор подмастерья
+SCRI A1V4_Calcinator_3_sc
+AADT AgAAAAAAgD8AAJBBKAAAAA==
+ITEX m\\Tx_calcinator_01.tga
+
+APPA
+NAME A1V4_apparatus_j_mortar_e3
+MODL m\\Misc_mortarpestle_01.NIF
+FNAM Ступка и пестик подмастерья
+SCRI A1V4_Mortar_3_sc
+AADT AAAAAAAAgD8AAIBAkAEAAA==
+ITEX m\\Tx_mortarpestle_01.tga
+
+APPA
+NAME A1V4_apparatus_j_retort_e3
+MODL m\\Apparatus_J_Retort_01.nif
+FNAM Реторта подмастерья
+SCRI A1V4_Retort_3_sc
+AADT AwAAAAAAgD8AAMBAUAAAAA==
+ITEX m\\Tx_retort_02.tga
+
+APPA
+NAME A1V4_apparatus_m_alembic_e3
+MODL m\\Apparatus_M_Alembic_01.nif
+FNAM Перегонный куб мастера
+SCRI A1V4_Alembic_3_sc
+AADT AQAAAJqZmT8AAKBAsAQAAA==
+ITEX m\\Tx_alembic_03.tga
+
+APPA
+NAME A1V4_apparatus_m_calcinator_e3
+MODL m\\App_M_Calcinator_01.nif
+FNAM Кальцинатор мастера
+SCRI A1V4_Calcinator_3_sc
+AADT AgAAAJqZmT8AAFBB8AAAAA==
+ITEX m\\Tx_calcinator_03.tga
+
+APPA
+NAME A1V4_apparatus_m_mortar_e3
+MODL m\\Misc_mortarpestle_M_01.nif
+FNAM Ступка и пестик мастера
+SCRI A1V4_Mortar_3_sc
+AADT AAAAAJqZmT8AAEBAYAkAAA==
+ITEX m\\Tx_mortarpestle_M_01.tga
+
+APPA
+NAME A1V4_apparatus_m_retort_e3
+MODL m\\Apparatus_M_Retort_01.nif
+FNAM Реторта мастера
+SCRI A1V4_Retort_3_sc
+AADT AwAAAJqZmT8AAIBA4AEAAA==
+ITEX m\\Tx_retort_03.tga
+
+MISC
+NAME A1V4_ApparatusItem_3
+MODL m\\misc_potion_fresh_01.nif
+FNAM Алхимическая установка (3)
+MCDT AAAAAAAAAAAAAAAA
+SCRI A1V4_ApparatusItem_3_sc
+ITEX m\\misc_com_bottle_05.dds
+
+CONT
+NAME A1V4_ApparatusCont_3
+MODL m\\misc_potion_fresh_01.nif
+FNAM Алхимическая установка (3)
+CNDT AEAcRg==
+FLAG 8
+SCRI A1V4_ApparatusCont_3_sc
+
+INGR
+NAME A1V4_ApparatusFakeIngred
+MODL n\\ingred_bittergreen_01.nif
+FNAM ERROR
+IRDT
+    0.1 20
+    41 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX n\\tx_bittergreen_petal_01.dds
+
+INGR
+NAME A1V4_L30_restore_health
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 75 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd1_RestoreHealth_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_restore_health
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    75 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd1_RestoreHealth_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_restore_health
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 75
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd1_RestoreHealth_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_water_breathing
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    0 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd5_WaterBrf_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_restore_fatigue
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    77 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd2_RestoreFatig_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_restore_magicka
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    76 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd3_RestoreMagic_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_restore_intelligence
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    74 -1 -1 -1
+    0 -1 -1 -1
+    1 -1 -1 -1
+SCRI A1V4_AAdd42_RestoreIntel_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_restore_agility
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    74 -1 -1 -1
+    0 -1 -1 -1
+    3 -1 -1 -1
+SCRI A1V4_AAdd40_RestoreAgility_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_restore_personality
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    74 -1 -1 -1
+    0 -1 -1 -1
+    6 -1 -1 -1
+SCRI A1V4_AAdd14_RestPers_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_restore_strength
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    74 -1 -1 -1
+    0 -1 -1 -1
+    0 -1 -1 -1
+SCRI A1V4_AAdd45_RestoreStr_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_restore_willpower
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    74 -1 -1 -1
+    0 -1 -1 -1
+    2 -1 -1 -1
+SCRI A1V4_AAdd46_RestoreWill_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_restore_luck
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    74 -1 -1 -1
+    0 -1 -1 -1
+    7 -1 -1 -1
+SCRI A1V4_AAdd43_RestoreLuck_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_cure_common
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    69 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd9_Cure_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_cure_paralyzation
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    73 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd18_Para_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_spell_absorption
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    67 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd47_SpellAbs_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_dispel
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    57 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd20_Dispel_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_magicka_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    93 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd37_MagicResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_fire_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    90 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd13_FireResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_frost_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    91 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd33_FrostResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_poison_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    97 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd38_PoisonResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_fortify_fatigue
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    82 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd25_FortFatig_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_fortify_health
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    80 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd26_FortHealth_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_fortify_magicka
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    81 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd15_FortMagic_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_fortify_endurance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    79 -1 -1 -1
+    0 -1 -1 -1
+    5 -1 -1 -1
+SCRI A1V4_AAdd24_FortEndur_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_fortify_intelligence
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    79 -1 -1 -1
+    0 -1 -1 -1
+    1 -1 -1 -1
+SCRI A1V4_AAdd27_FortIntel_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_fortify_agility
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    79 -1 -1 -1
+    0 -1 -1 -1
+    3 -1 -1 -1
+SCRI A1V4_AAdd22_FortAgil_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_fortify_personality
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    79 -1 -1 -1
+    0 -1 -1 -1
+    6 -1 -1 -1
+SCRI A1V4_AAdd29_FortPers_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_fortify_strength
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    79 -1 -1 -1
+    0 -1 -1 -1
+    0 -1 -1 -1
+SCRI A1V4_AAdd31_FortStr_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_fortify_willpower
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    79 -1 -1 -1
+    0 -1 -1 -1
+    2 -1 -1 -1
+SCRI A1V4_AAdd32_FortWill_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_fortify_speed
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    79 -1 -1 -1
+    0 -1 -1 -1
+    4 -1 -1 -1
+SCRI A1V4_AAdd30_FortSpeed_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_water_walking
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    2 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd4_WaterWalk_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_restore_fatigue
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 77 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd2_RestoreFatig_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_cure_common
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 69 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd9_Cure_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_cure_poison
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 72 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd11_Poison_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_detect_creatures
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 64 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd17_DetCreature_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_detect_key
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 66 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd10_DetKey_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_feather
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 8 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd12_Feather_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fire_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 90 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd13_FireResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fortify_magicka
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 81 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd15_FortMagic_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_levitation
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 10 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd6_Levitate_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_night-eye
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 43 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd16_NightEye_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_restore_magicka
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 76 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd3_RestoreMagic_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_telekinesis
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 59 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd7_Tele_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_water_walking
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 2 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd4_WaterWalk_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_cure_blight
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 70 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd8_Blight_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_cure_common
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 69 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd9_Cure_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_cure_poison
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 72 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd11_Poison_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_detect_creatures
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 64 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd17_DetCreature_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_detect_key
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 66 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd10_DetKey_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_feather
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 8 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd12_Feather_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_fortify_magicka
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 81 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd15_FortMagic_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_restore_personality
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 74 -1
+    -1 -1 0 -1
+    -1 -1 6 -1
+SCRI A1V4_AAdd14_RestPers_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_telekinesis
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 59 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd7_Tele_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_water_breathing
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 0 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd5_WaterBrf_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_water_walking
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 2 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd4_WaterWalk_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_cure_common
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 69
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd9_Cure_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_cure_poison
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 72
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd11_Poison_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_detect_creatures
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 64
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd17_DetCreature_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_detect_key
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 66
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd10_DetKey_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_fire_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 90
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd13_FireResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_night-eye
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 43
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd16_NightEye_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_telekinesis
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 59
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd7_Tele_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_water_breathing
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 0
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd5_WaterBrf_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_cure_paralyzation
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 73 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd18_Para_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_cure_paralyzation
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 73
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd18_Para_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_detect_enchantment
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 65 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd19_DetEnch_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_detect_enchantment
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 65
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd19_DetEnch_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_dispel
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 57 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd20_Dispel_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_dispel
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 57 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd20_Dispel_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_fire_shield
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 4 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd21_FireSh_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_fire_shield
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 4
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd21_FireSh_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fortify_agility
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 79 -1 -1
+    -1 0 -1 -1
+    -1 3 -1 -1
+SCRI A1V4_AAdd22_FortAgil_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_fortify_agility
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 79
+    -1 -1 -1 0
+    -1 -1 -1 3
+SCRI A1V4_AAdd22_FortAgil_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_fortify_attack
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 117 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd23_FortAttack_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fortify_endurance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 17 -1 -1
+    -1 0 -1 -1
+    -1 5 -1 -1
+SCRI A1V4_AAdd24_FortEndur_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fortify_fatigue
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 82 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd25_FortFatig_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_fortify_fatigue
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 82 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd25_FortFatig_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fortify_health
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 80 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd26_FortHealth_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_fortify_health
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 80
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd26_FortHealth_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fortify_intelligence
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 79 -1 -1
+    -1 0 -1 -1
+    -1 1 -1 -1
+SCRI A1V4_AAdd27_FortIntel_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fortify_luck
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 79 -1 -1
+    -1 0 -1 -1
+    -1 7 -1 -1
+SCRI A1V4_AAdd28_FortLuck_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_fortify_luck
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 79
+    -1 -1 -1 0
+    -1 -1 -1 7
+SCRI A1V4_AAdd28_FortLuck_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fortify_personality
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 79 -1 -1
+    -1 0 -1 -1
+    -1 6 -1 -1
+SCRI A1V4_AAdd29_FortPers_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_fortify_personality
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 79
+    -1 -1 -1 0
+    -1 -1 -1 6
+SCRI A1V4_AAdd29_FortPers_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fortify_speed
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 79 -1 -1
+    -1 0 -1 -1
+    -1 4 -1 -1
+SCRI A1V4_AAdd30_FortSpeed_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_fortify_speed
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 79
+    -1 -1 -1 0
+    -1 -1 -1 4
+SCRI A1V4_AAdd30_FortSpeed_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fortify_strength
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 79 -1 -1
+    -1 0 -1 -1
+    -1 0 -1 -1
+SCRI A1V4_AAdd31_FortStr_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_fortify_strength
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 79
+    -1 -1 -1 0
+    -1 -1 -1 0
+SCRI A1V4_AAdd31_FortStr_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fortify_willpower
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 79 -1 -1
+    -1 0 -1 -1
+    -1 2 -1 -1
+SCRI A1V4_AAdd32_FortWill_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_fortify_willpower
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 79 -1
+    -1 -1 0 -1
+    -1 -1 2 -1
+SCRI A1V4_AAdd32_FortWill_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_frost_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 91 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd33_FrostResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_frost_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 91 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd33_FrostResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_frost_shield
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 6 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd34_FrostSh_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_frost_shield
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 6 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd34_FrostSh_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_invisibility
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 39 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd35_Invis_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_invisibility
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 39
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd35_Invis_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_lightning_shield
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 5 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd36_LightSh_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_lightning_shield
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 5 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd36_LightSh_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_magicka_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 93 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd37_MagicResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_poison_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 97 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd38_PoisonResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_poison_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 97
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd38_PoisonResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_reflection
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 68 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd39_Reflect_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_reflection
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 68
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd39_Reflect_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_restore_agility
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 74 -1 -1
+    -1 0 -1 -1
+    -1 3 -1 -1
+SCRI A1V4_AAdd40_RestoreAgility_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_restore_agility
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 74 -1
+    -1 -1 0 -1
+    -1 -1 3 -1
+SCRI A1V4_AAdd40_RestoreAgility_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_restore_agility
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 74
+    -1 -1 -1 0
+    -1 -1 -1 3
+SCRI A1V4_AAdd40_RestoreAgility_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_restore_endurance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 74 -1
+    -1 -1 0 -1
+    -1 -1 5 -1
+SCRI A1V4_AAdd41_RestoreEndur_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_restore_endurance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 74
+    -1 -1 -1 0
+    -1 -1 -1 5
+SCRI A1V4_AAdd41_RestoreEndur_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_restore_intelligence
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 74 -1
+    -1 -1 0 -1
+    -1 -1 1 -1
+SCRI A1V4_AAdd42_RestoreIntel_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_restore_intelligence
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 74
+    -1 -1 -1 0
+    -1 -1 -1 1
+SCRI A1V4_AAdd42_RestoreIntel_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_restore_speed
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 74 -1 -1
+    -1 0 -1 -1
+    -1 4 -1 -1
+SCRI A1V4_AAdd44_RestoreSpeed_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_restore_speed
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 74 -1
+    -1 -1 0 -1
+    -1 -1 4 -1
+SCRI A1V4_AAdd44_RestoreSpeed_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_restore_speed
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 74
+    -1 -1 -1 0
+    -1 -1 -1 4
+SCRI A1V4_AAdd44_RestoreSpeed_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_restore_strength
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 74 -1 -1
+    -1 0 -1 -1
+    -1 0 -1 -1
+SCRI A1V4_AAdd45_RestoreStr_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_restore_strength
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 74 -1
+    -1 -1 0 -1
+    -1 -1 0 -1
+SCRI A1V4_AAdd45_RestoreStr_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_restore_strength
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 74
+    -1 -1 -1 0
+    -1 -1 -1 0
+SCRI A1V4_AAdd45_RestoreStr_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_restore_willpower
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 74
+    -1 -1 -1 0
+    -1 -1 -1 2
+SCRI A1V4_AAdd46_RestoreWill_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_spell_absorption
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 67 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd47_SpellAbs_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_spell_absorption
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 67 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd47_SpellAbs_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_swift_swim
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd48_SwitfSwim_sc
+ITEX m\\misc_com_bottle_05.dds
+
+APPA
+NAME A1V4_apparatus_a_alembic_e2
+MODL m\\Apparatus_A_Alembic_01.NIF
+FNAM Перегонный куб ученика
+SCRI A1V4_Alembic_2_sc
+AADT AQAAAAAAAD8AACBBMgAAAA==
+ITEX m\\Tx_alembic_01.tga
+
+APPA
+NAME A1V4_apparatus_a_alembic_e1
+MODL m\\Apparatus_A_Alembic_01.NIF
+FNAM Перегонный куб ученика
+SCRI A1V4_Alembic_1_sc
+AADT AQAAAAAAAD8AACBBMgAAAA==
+ITEX m\\Tx_alembic_01.tga
+
+APPA
+NAME A1V4_apparatus_a_calcinator_e2
+MODL m\\Apparatus_A_Calcinator_01.NIF
+FNAM Кальцинатор ученика
+SCRI A1V4_Calcinator_2_sc
+AADT AgAAAAAAAD8AAMhBCgAAAA==
+ITEX m\\Tx_calcinator_01.tga
+
+APPA
+NAME A1V4_apparatus_a_calcinator_e1
+MODL m\\Apparatus_A_Calcinator_01.NIF
+FNAM Кальцинатор ученика
+SCRI A1V4_Calcinator_1_sc
+AADT AgAAAAAAAD8AAMhBCgAAAA==
+ITEX m\\Tx_calcinator_01.tga
+
+APPA
+NAME A1V4_apparatus_a_retort_e2
+MODL m\\Apparatus_A_Retort_01.NIF
+FNAM Реторта ученика
+SCRI A1V4_Retort_2_sc
+AADT AwAAAAAAAD8AAABBFAAAAA==
+ITEX m\\Tx_retort_01.tga
+
+APPA
+NAME A1V4_apparatus_a_retort_e1
+MODL m\\Apparatus_A_Retort_01.NIF
+FNAM Реторта ученика
+SCRI A1V4_Retort_1_sc
+AADT AwAAAAAAAD8AAABBFAAAAA==
+ITEX m\\Tx_retort_01.tga
+
+APPA
+NAME A1V4_apparatus_a_mortar_e2
+MODL m\\Misc_mortarpestle_01.NIF
+FNAM Ступка и пестик ученика
+SCRI A1V4_Mortar_2_sc
+AADT AAAAAAAAAD8AAKBAZAAAAA==
+ITEX m\\Tx_mortarpestle_01.tga
+
+APPA
+NAME A1V4_apparatus_a_mortar_e1
+MODL m\\Misc_mortarpestle_01.NIF
+FNAM Ступка и пестик ученика
+SCRI A1V4_Mortar_1_sc
+AADT AAAAAAAAAD8AAKBAZAAAAA==
+ITEX m\\Tx_mortarpestle_01.tga
+
+APPA
+NAME A1V4_apparatus_a_spipe_e2
+MODL m\\Apparatus_A_Spipe_01.nif
+FNAM Хорошая трубка скуума
+SCRI A1V4_Alembic_2_sc
+AADT AQAAAJqZGT4AAABAMgAAAA==
+ITEX m\\Tx_Spipe_01.tga
+
+APPA
+NAME A1V4_apparatus_a_spipe_e1
+MODL m\\Apparatus_A_Spipe_01.nif
+FNAM Хорошая трубка скуума
+SCRI A1V4_Alembic_1_sc
+AADT AQAAAJqZGT4AAABAMgAAAA==
+ITEX m\\Tx_Spipe_01.tga
+
+APPA
+NAME A1V4_apparatus_a_spipe_tsiya_e2
+MODL m\\Apparatus_A_Spipe_01.nif
+FNAM Трубка скуума Ции
+SCRI A1V4_Alembic_2_sc
+AADT AQAAAJqZGT4AAABAHgAAAA==
+ITEX m\\Tx_Spipe_01.tga
+
+APPA
+NAME A1V4_apparatus_a_spipe_tsiya_e1
+MODL m\\Apparatus_A_Spipe_01.nif
+FNAM Трубка скуума Ции
+SCRI A1V4_Alembic_1_sc
+AADT AQAAAJqZGT4AAABAHgAAAA==
+ITEX m\\Tx_Spipe_01.tga
+
+APPA
+NAME A1V4_apparatus_g_alembic_e2
+MODL m\\Apparatus_G_Alembic_01.nif
+FNAM Перегонный куб грандмастера
+SCRI A1V4_Alembic_2_sc
+AADT AQAAAAAAwD8AAEBAoA8AAA==
+ITEX m\\Tx_alembic_04.tga
+
+APPA
+NAME A1V4_apparatus_g_alembic_e1
+MODL m\\Apparatus_G_Alembic_01.nif
+FNAM Перегонный куб грандмастера
+SCRI A1V4_Alembic_1_sc
+AADT AQAAAAAAwD8AAEBAoA8AAA==
+ITEX m\\Tx_alembic_04.tga
+
+APPA
+NAME A1V4_apparatus_g_calcinator_e2
+MODL m\\App_G_Calcinator_01.nif
+FNAM Кальцинатор грандмастера
+SCRI A1V4_Calcinator_2_sc
+AADT AgAAAAAAwD8AAABBoA8AAA==
+ITEX m\\Tx_calcinator_04.tga
+
+APPA
+NAME A1V4_apparatus_g_calcinator_e1
+MODL m\\App_G_Calcinator_01.nif
+FNAM Кальцинатор грандмастера
+SCRI A1V4_Calcinator_1_sc
+AADT AgAAAAAAwD8AAABBoA8AAA==
+ITEX m\\Tx_calcinator_04.tga
+
+APPA
+NAME A1V4_apparatus_g_mortar_e2
+MODL m\\Misc_mortarpestle_G_01.nif
+FNAM Ступка и пестик грандмастера
+SCRI A1V4_Mortar_2_sc
+AADT AAAAAAAAwD8AAABAoA8AAA==
+ITEX m\\Tx_mortarpestle_G_01.tga
+
+APPA
+NAME A1V4_apparatus_g_mortar_e1
+MODL m\\Misc_mortarpestle_G_01.nif
+FNAM Ступка и пестик грандмастера
+SCRI A1V4_Mortar_1_sc
+AADT AAAAAAAAwD8AAABAoA8AAA==
+ITEX m\\Tx_mortarpestle_G_01.tga
+
+APPA
+NAME A1V4_apparatus_g_retort_e2
+MODL m\\Apparatus_G_Retort_01.nif
+FNAM Реторта грандмастера
+SCRI A1V4_Retort_2_sc
+AADT AwAAAAAAwD8AAEBAQAYAAA==
+ITEX m\\Tx_retort_04.tga
+
+APPA
+NAME A1V4_apparatus_g_retort_e1
+MODL m\\Apparatus_G_Retort_01.nif
+FNAM Реторта грандмастера
+SCRI A1V4_Retort_1_sc
+AADT AwAAAAAAwD8AAEBAQAYAAA==
+ITEX m\\Tx_retort_04.tga
+
+APPA
+NAME A1V4_apparatus_j_alembic_e2
+MODL m\\Apparatus_J_Alembic_01.nif
+FNAM Перегонный куб подмастерья
+SCRI A1V4_Alembic_2_sc
+AADT AQAAAAAAgD8AAOBAyAAAAA==
+ITEX m\\Tx_alembic_02.tga
+
+APPA
+NAME A1V4_apparatus_j_alembic_e1
+MODL m\\Apparatus_J_Alembic_01.nif
+FNAM Перегонный куб подмастерья
+SCRI A1V4_Alembic_1_sc
+AADT AQAAAAAAgD8AAOBAyAAAAA==
+ITEX m\\Tx_alembic_02.tga
+
+APPA
+NAME A1V4_apparatus_j_calcinator_e2
+MODL m\\Apparatus_A_Calcinator_01.NIF
+FNAM Кальцинатор подмастерья
+SCRI A1V4_Calcinator_2_sc
+AADT AgAAAAAAgD8AAJBBKAAAAA==
+ITEX m\\Tx_calcinator_01.tga
+
+APPA
+NAME A1V4_apparatus_j_calcinator_e1
+MODL m\\Apparatus_A_Calcinator_01.NIF
+FNAM Кальцинатор подмастерья
+SCRI A1V4_Calcinator_1_sc
+AADT AgAAAAAAgD8AAJBBKAAAAA==
+ITEX m\\Tx_calcinator_01.tga
+
+APPA
+NAME A1V4_apparatus_j_mortar_e2
+MODL m\\Misc_mortarpestle_01.NIF
+FNAM Ступка и пестик подмастерья
+SCRI A1V4_Mortar_2_sc
+AADT AAAAAAAAgD8AAIBAkAEAAA==
+ITEX m\\Tx_mortarpestle_01.tga
+
+APPA
+NAME A1V4_apparatus_j_mortar_e1
+MODL m\\Misc_mortarpestle_01.NIF
+FNAM Ступка и пестик подмастерья
+SCRI A1V4_Mortar_1_sc
+AADT AAAAAAAAgD8AAIBAkAEAAA==
+ITEX m\\Tx_mortarpestle_01.tga
+
+APPA
+NAME A1V4_apparatus_j_retort_e2
+MODL m\\Apparatus_J_Retort_01.nif
+FNAM Реторта подмастерья
+SCRI A1V4_Retort_2_sc
+AADT AwAAAAAAgD8AAMBAUAAAAA==
+ITEX m\\Tx_retort_02.tga
+
+APPA
+NAME A1V4_apparatus_j_retort_e1
+MODL m\\Apparatus_J_Retort_01.nif
+FNAM Реторта подмастерья
+SCRI A1V4_Retort_1_sc
+AADT AwAAAAAAgD8AAMBAUAAAAA==
+ITEX m\\Tx_retort_02.tga
+
+APPA
+NAME A1V4_apparatus_m_alembic_e2
+MODL m\\Apparatus_M_Alembic_01.nif
+FNAM Перегонный куб мастера
+SCRI A1V4_Alembic_2_sc
+AADT AQAAAJqZmT8AAKBAsAQAAA==
+ITEX m\\Tx_alembic_03.tga
+
+APPA
+NAME A1V4_apparatus_m_alembic_e1
+MODL m\\Apparatus_M_Alembic_01.nif
+FNAM Перегонный куб мастера
+SCRI A1V4_Alembic_1_sc
+AADT AQAAAJqZmT8AAKBAsAQAAA==
+ITEX m\\Tx_alembic_03.tga
+
+APPA
+NAME A1V4_apparatus_m_calcinator_e2
+MODL m\\App_M_Calcinator_01.nif
+FNAM Кальцинатор мастера
+SCRI A1V4_Calcinator_2_sc
+AADT AgAAAJqZmT8AAFBB8AAAAA==
+ITEX m\\Tx_calcinator_03.tga
+
+APPA
+NAME A1V4_apparatus_m_calcinator_e1
+MODL m\\App_M_Calcinator_01.nif
+FNAM Кальцинатор мастера
+SCRI A1V4_Calcinator_1_sc
+AADT AgAAAJqZmT8AAFBB8AAAAA==
+ITEX m\\Tx_calcinator_03.tga
+
+APPA
+NAME A1V4_apparatus_m_mortar_e2
+MODL m\\Misc_mortarpestle_M_01.nif
+FNAM Ступка и пестик мастера
+SCRI A1V4_Mortar_2_sc
+AADT AAAAAJqZmT8AAEBAYAkAAA==
+ITEX m\\Tx_mortarpestle_M_01.tga
+
+APPA
+NAME A1V4_apparatus_m_mortar_e1
+MODL m\\Misc_mortarpestle_M_01.nif
+FNAM Ступка и пестик мастера
+SCRI A1V4_Mortar_1_sc
+AADT AAAAAJqZmT8AAEBAYAkAAA==
+ITEX m\\Tx_mortarpestle_M_01.tga
+
+APPA
+NAME A1V4_apparatus_m_retort_e2
+MODL m\\Apparatus_M_Retort_01.nif
+FNAM Реторта мастера
+SCRI A1V4_Retort_2_sc
+AADT AwAAAJqZmT8AAIBA4AEAAA==
+ITEX m\\Tx_retort_03.tga
+
+APPA
+NAME A1V4_apparatus_m_retort_e1
+MODL m\\Apparatus_M_Retort_01.nif
+FNAM Реторта мастера
+SCRI A1V4_Retort_1_sc
+AADT AwAAAJqZmT8AAIBA4AEAAA==
+ITEX m\\Tx_retort_03.tga
+
+CONT
+NAME A1V4_ApparatusCont_2
+MODL m\\misc_potion_fresh_01.nif
+FNAM Алхимическая установка (2)
+CNDT AEAcRg==
+FLAG 8
+SCRI A1V4_ApparatusCont_2_sc
+
+CONT
+NAME A1V4_ApparatusCont_1
+MODL m\\misc_potion_fresh_01.nif
+FNAM Алхимическая установка (1)
+CNDT AEAcRg==
+FLAG 8
+SCRI A1V4_ApparatusCont_1_sc
+
+MISC
+NAME A1V4_ApparatusItem_2
+MODL m\\misc_potion_fresh_01.nif
+FNAM Алхимическая установка (2)
+MCDT AAAAAAAAAAAAAAAA
+SCRI A1V4_ApparatusItem_2_sc
+ITEX m\\misc_com_bottle_05.dds
+
+MISC
+NAME A1V4_ApparatusItem_1
+MODL m\\misc_potion_fresh_01.nif
+FNAM Алхимическая установка (1)
+MCDT AAAAAAAAAAAAAAAA
+SCRI A1V4_ApparatusItem_1_sc
+ITEX m\\misc_com_bottle_05.dds

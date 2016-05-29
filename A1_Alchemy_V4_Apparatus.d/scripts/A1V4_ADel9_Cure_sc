@@ -1,0 +1,16 @@
+SCPT
+SCTX
+    Begin A1V4_ADel9_Cure_sc
+    
+    if ( player->GetItemCount A1V4_L30_cure_common == 1 )
+    	player->RemoveItem A1V4_L30_cure_common, 1
+    elseif ( player->GetItemCount A1V4_L45_cure_common == 1 )
+    	player->RemoveItem A1V4_L45_cure_common, 1
+    elseif ( player->GetItemCount A1V4_L60_cure_common == 1 )
+    	player->RemoveItem A1V4_L60_cure_common, 1
+    endif
+    
+    StopScript A1V4_ADel9_Cure_sc
+    StartScript A1V4_ADel10_DetKey_sc
+    
+    End

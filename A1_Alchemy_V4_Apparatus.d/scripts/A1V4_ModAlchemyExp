@@ -1,0 +1,28 @@
+SCPT
+SCTX
+    Begin A1V4_ModAlchemyExp
+    
+    float Value
+    float alch1
+    float alch2
+    float tempf1
+    float tempf2
+    
+    set tempf1 to ( 1.5 * Value )
+    set tempf2 to A1V4_AlchemyExp
+    set tempf1 to ( tempf1 + tempf2 )
+    set A1V4_AlchemyExp to tempf1
+    if ( A1V4_AlchemyExp >= 100 )
+    	set A1V4_AlchemyExp to 0
+    	set alch1 to ( player->GetAlchemy )
+    	player->ModAlchemy 1
+    	set alch2 to ( player->GetAlchemy )
+    	if ( alch2 > alch1 )
+    		PlaySound skillraise
+    		MessageBox "Ваш навык алхимии вырос до %.0f", alch2
+    	endif
+    endif
+    
+    StopScript A1V4_ModAlchemyExp
+    
+    End

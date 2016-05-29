@@ -1,0 +1,16 @@
+SCPT
+SCTX
+    Begin A1V4_ADel47_SpellAbs_sc
+    
+    if ( player->GetItemCount A1V4_L15_spell_absorption == 1 )
+    	player->RemoveItem A1V4_L15_spell_absorption, 1
+    elseif ( player->GetItemCount A1V4_L30_spell_absorption == 1 )
+    	player->RemoveItem A1V4_L30_spell_absorption, 1
+    elseif ( player->GetItemCount A1V4_L45_spell_absorption == 1 )
+    	player->RemoveItem A1V4_L45_spell_absorption, 1
+    endif
+    
+    StopScript A1V4_ADel47_SpellAbs_sc
+    StartScript A1V4_ADel48_SwitfSwim_sc
+    
+    End

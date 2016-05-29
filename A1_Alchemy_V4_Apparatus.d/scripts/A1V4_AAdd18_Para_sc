@@ -1,0 +1,83 @@
+SCPT
+SCTX
+    Begin A1V4_AAdd18_Para_sc
+    
+    short in1
+    short in2
+    short in3
+    short in4
+    short sum
+    short temp
+    short state
+    
+    short PCSkipEquip
+    short OnPCEquip
+    
+    set PCSkipEquip to 1
+    
+    if ( state == 2 )
+    	set A1V4_ACheck18_Para_sc.AddPotion to 1
+    	StartScript A1V4_AlchemyCheck_sc
+    	set state to 0
+    	return
+    endif
+    
+    if ( state == 1 )
+    	if ( ScriptRunning A1V4_CalcAlchemy2_sc == 0 )
+    		set state to 2
+    	endif
+    	return
+    endif
+    
+    if ( OnPCEquip == 1 )
+    set OnPCEquip to 0
+    
+    set in1 to 0
+    set in2 to 0
+    set in3 to 0
+    set in4 to 0
+    
+    if ( player->GetItemCount ingred_willow_anther_01 > 0 )
+    	set in1 to 1
+    endif
+    if ( player->GetItemCount ingred_netch_leather_01 > 0 )
+    	set in2 to 1
+    endif
+    if ( player->GetItemCount ingred_scamp_skin_01 > 0 )
+    	set in3 to 1
+    endif
+    if ( player->GetItemCount ingred_corkbulb_root_01 > 0 )
+    	set in4 to 1
+    endif
+    
+    set sum to ( in4 )
+    set sum to ( sum + in3 )
+    set sum to ( sum + in1 + in2 )
+    set temp to ( in1 + in2 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    if ( sum > 1 )
+    	if ( in1 > 0 )
+    		player->RemoveItem ingred_willow_anther_01, 1
+    	endif
+    	if ( in2 > 0 )
+    		player->RemoveItem ingred_netch_leather_01, 1
+    	endif
+    	if ( in3 > 0 )
+    		player->RemoveItem ingred_scamp_skin_01, 1
+    	endif
+    	if ( in4 > 0 )
+    		player->RemoveItem ingred_corkbulb_root_01, 1
+    	endif
+    	set state to 1
+    	set A1V4_CalcAlchemy2_sc.pin to 40
+    	set A1V4_CalcAlchemy2_sc.in to sum
+    	set A1V4_CalcAlchemy2 to 1
+    else
+    	StartScript A1V4_AlchemyCheck_sc
+    endif
+    
+    endif
+    
+    End

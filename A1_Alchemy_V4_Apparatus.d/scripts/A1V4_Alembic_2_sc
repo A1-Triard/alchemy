@@ -1,0 +1,38 @@
+SCPT
+SCTX
+    Begin A1V4_Alembic_2_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_2 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_AlembicX
+    	set cy to A1V4_AlembicY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End

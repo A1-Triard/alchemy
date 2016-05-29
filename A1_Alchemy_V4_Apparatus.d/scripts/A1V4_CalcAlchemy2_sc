@@ -1,0 +1,184 @@
+SCPT
+SCTX
+    Begin A1V4_CalcAlchemy2_sc
+    
+    short bbb
+    short bbb2
+    short sss
+    short sss2
+    long alchemy
+    long luck
+    short random25
+    short rrandom100
+    short in
+    short pin
+    long lk
+    long p_success
+    short temp
+    float tempf
+    long tempi
+    short state
+    short alembic_up
+    short alembic_down
+    short mortar
+    short retort
+    short calcinator
+    float exp
+    
+    if ( state == 5 )
+    	if ( ScriptRunning A1V4_ModAlchemyExp == 0 )
+    		set state to 0
+    		StopScript A1V4_CalcAlchemy2_sc
+    	endif
+    endif
+    
+    if ( state == 4 )
+    	set bbb2 to 0
+    	set sss2 to 0
+    	set bbb to 0
+    	set sss to 0
+    	set temp to 2
+    	if ( in > 0 )
+    		set in to ( in - pin )
+    		if ( in > 0 )
+    			set bbb2 to alembic_down
+    			set sss2 to alembic_up
+    			set temp to 1
+    		else
+    			set in to ( in + 100 )
+    		endif
+    	endif
+    	set rrandom100 to ( Random 100 )
+    	if ( rrandom100 < in )
+    		set bbb to alembic_down
+    		set sss to alembic_up
+    		set temp to 1
+    	endif
+    	set A1V4_AlchemyRes to temp
+    	if ( temp == 1 )
+    		set A1V4_ModAlchemyExp.Value to exp
+    		StartScript A1V4_ModAlchemyExp
+    	endif
+    	set A1V4_PotionB to bbb
+    	set A1V4_PotionC to bbb2
+    	set A1V4_PotionS to sss
+    	set A1V4_PotionQ to sss2
+    	set A1V4_PotionE to 0
+    	set state to 5
+    	return
+    endif
+    
+    if ( state == 3 )
+    	set tempf to ( player->GetAlchemy )
+    	set alchemy to tempf
+    	set tempf to ( player->GetLuck )
+    	set luck to tempf
+    	set temp to ( Random 100 )
+    	set random25 to ( temp / 4 )
+    	set rrandom100 to ( Random 100 )
+    
+    	if ( luck < 40 )
+    		set lk to ( luck - 40 )
+    	elseif ( luck < 60 )
+    		set tempi to ( luck - 40 )
+    		set lk to ( tempi / 4 )
+    	else
+    		set tempi to ( luck - 60 )
+    		set tempi to ( tempi / 8 )
+    		set lk to ( 5 + tempi )
+    	endif
+    
+    	set lk to ( lk + alchemy )
+    	set lk to ( lk + retort )
+    
+    	set p_success to lk
+    	if ( p_success > 100 )
+    		set exp to 1
+    	elseif ( p_success <= 0 )
+    		set exp to 0
+    	else
+    		set exp to p_success
+    		set exp to ( 100.0 / exp )
+    	endif
+    	if ( p_success > calcinator )
+    		set p_success to calcinator
+    	endif
+    	if ( rrandom100 >= p_success )
+    		set in to 0
+    	endif
+    	if ( in > 1 )
+    		set in to lk
+    	else
+    		set in to 0
+    	endif
+    	if ( in > mortar )
+    		set in to mortar
+    	endif
+    	set state to 4
+    	return
+    endif
+    
+    if ( state == 0 )
+    	if ( GetItemCount apparatus_g_mortar_01 > 0 )
+    		set mortar to 100
+    	elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
+    		set mortar to 80
+    	elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
+    		set mortar to 60
+    	elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
+    		set mortar to 40
+    	else
+    		set mortar to 0
+    	endif
+    
+    	if ( GetItemCount apparatus_g_retort_01 > 0 )
+    		set retort to 5
+    	elseif ( GetItemCount apparatus_m_retort_01 > 0 )
+    		set retort to 0
+    	elseif ( GetItemCount apparatus_j_retort_01 > 0 )
+    		set retort to -5
+    	elseif ( GetItemCount apparatus_a_retort_01 > 0 )
+    		set retort to -10
+    	else
+    		set retort to -20
+    	endif
+    
+    	if ( GetItemCount apparatus_g_alembic_01 > 0 )
+    		set alembic_up to 5
+    		set alembic_down to 3
+    	elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
+    		set alembic_up to 4
+    		set alembic_down to 4
+    	elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
+    		set alembic_up to 3
+    		set alembic_down to 5
+    	elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
+    		set alembic_up to 2
+    		set alembic_down to 6
+    	elseif ( GetItemCount apparatus_a_spipe_01 > 0 )
+    		set alembic_up to 1
+    		set alembic_down to 7
+    	elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
+    		set alembic_up to 1
+    		set alembic_down to 7
+    	else
+    		set alembic_up to 0
+    		set alembic_down to 8
+    	endif
+    
+    	if ( GetItemCount apparatus_g_calcinator_01 > 0 )
+    		set calcinator to 100
+    	elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
+    		set calcinator to 95
+    	elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+    		set calcinator to 80
+    	elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
+    		set calcinator to 65
+    	else
+    		set calcinator to 50
+    	endif
+    	set state to 3
+    	return
+    endif
+    
+    End

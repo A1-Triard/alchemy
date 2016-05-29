@@ -1,0 +1,16 @@
+SCPT
+SCTX
+    Begin A1V4_ADel1_RestoreHealth_sc
+    
+    if ( player->GetItemCount A1V4_L15_restore_health == 1 )
+    	player->RemoveItem A1V4_L15_restore_health, 1
+    elseif ( player->GetItemCount A1V4_L30_restore_health == 1 )
+    	player->RemoveItem A1V4_L30_restore_health, 1
+    elseif ( player->GetItemCount A1V4_L60_restore_health == 1 )
+    	player->RemoveItem A1V4_L60_restore_health, 1
+    endif
+    
+    StopScript A1V4_ADel1_RestoreHealth_sc
+    StartScript A1V4_ADel2_RestoreFatig_sc
+    
+    End

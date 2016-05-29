@@ -1,0 +1,14 @@
+SCPT
+SCTX
+    Begin A1V4_ADel48_SwitfSwim_sc
+    
+    if ( player->GetItemCount A1V4_L60_swift_swim == 1 )
+    	player->RemoveItem A1V4_L60_swift_swim, 1
+    endif
+    
+    MessageBox "Установка деактивирована"
+    EnablePlayerControls
+    
+    StopScript A1V4_ADel48_SwitfSwim_sc
+    
+    End

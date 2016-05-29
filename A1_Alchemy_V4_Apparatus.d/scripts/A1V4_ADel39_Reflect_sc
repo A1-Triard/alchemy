@@ -1,0 +1,14 @@
+SCPT
+SCTX
+    Begin A1V4_ADel39_Reflect_sc
+    
+    if ( player->GetItemCount A1V4_L45_reflection == 1 )
+    	player->RemoveItem A1V4_L45_reflection, 1
+    elseif ( player->GetItemCount A1V4_L60_reflection == 1 )
+    	player->RemoveItem A1V4_L60_reflection, 1
+    endif
+    
+    StopScript A1V4_ADel39_Reflect_sc
+    StartScript A1V4_ADel40_RestoreAgility_sc
+    
+    End

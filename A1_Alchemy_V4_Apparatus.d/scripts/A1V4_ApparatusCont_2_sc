@@ -1,0 +1,227 @@
+SCPT
+SCTX
+    Begin A1V4_ApparatusCont_2_sc
+    
+    short doOnce
+    short doDisable
+    short temp
+    float cx
+    float cy
+    float cz
+    long invItem
+    long invCount
+    long invRef
+    long tempLong
+    float aCos
+    float aSin
+    float tempFloat
+    float tempFloat2
+    float mortarX
+    float mortarY
+    float alembicX
+    float alembicY
+    float calcinatorX
+    float calcinatorY
+    float retortX
+    float retortY
+    short doSetUp
+    short doRemove
+    short doActivate
+    long pcRef
+    long invRefType
+    long invNextRef
+    short waitActivate
+    short doClose
+    
+    if ( doDisable > 20 )
+    	if ( GetDisabled == 1 )
+    		SetDelete 1
+    		return
+    	endif
+    endif
+    
+    if ( doDisable > 20 )
+    	Disable
+    	return
+    endif
+    
+    if ( doDisable > 0 )
+    	AddItem "A1V4_ApparatusFakeIngred", 2
+    	set doDisable to ( doDisable + 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	Enable
+    	set doDisable to 1
+    endif
+    
+    if ( waitActivate == 2 )
+    	if ( A1V4_CalcAlchemy5 == 1 )
+    		set A1V4_CalcAlchemy5 to 0
+    		set A1V4_CalcAlchemy5_sc.state to 0
+    		StartScript A1V4_CalcAlchemy5_sc
+    	endif
+    	if ( A1V4_CalcAlchemy2 == 1 )
+    		set A1V4_CalcAlchemy2 to 0
+    		set A1V4_CalcAlchemy2_sc.state to 0
+    		StartScript A1V4_CalcAlchemy2_sc
+    	endif
+    	if ( MenuMode == 0 )
+    		set waitActivate to 0
+    		DisablePlayerControls
+    		if ( GetItemCount "A1V4_ApparatusItem_2" == 0 )
+    			set A1V4_ApparatusDisable_2 to 1
+    			set doDisable to 1
+    			StartScript A1V4_ApparatusDeactivate_sc
+    		else
+    			set doClose to 1
+    			set invRef to 0
+    			set doRemove to 1
+    		endif
+    	endif
+    	return
+    elseif ( waitActivate == 1 )
+    	if ( MenuMode == 1 )
+    		set waitActivate to 2
+    	endif
+    	return
+    endif
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    ifx ( doOnce )
+    else
+    	DisablePlayerControls
+    	set doOnce to 1
+    	set cx to A1V4_ApparatusX
+    	set cy to A1V4_ApparatusY
+    	set cz to A1V4_ApparatusZ
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    	set tempFloat to A1V4_ApparatusAngle
+    	set tempFloat to ( tempFloat / 57.29578 )
+    	setx aCos to xCos tempFloat
+    	setx aSin to xSin tempFloat
+    	set tempFloat to ( 30 * aCos )
+    	set tempFloat2 to ( 20 * aSin )
+    	set alembicX to ( cx - tempFloat + tempFloat2 )
+    	set tempFloat to ( 30 * aSin )
+    	set tempFloat2 to ( 20 * aCos )
+    	set alembicY to ( cy + tempFloat + tempFloat2 )
+    	set tempFloat to ( 20 * aCos )
+    	set tempFloat2 to ( 25 * aSin )
+    	set calcinatorX to ( cx + tempFloat + tempFloat2 )
+    	set tempFloat to ( 20 * aSin )
+    	set tempFloat2 to ( 25 * aCos )
+    	set calcinatorY to ( cy - tempFloat + tempFloat2 )
+    	set tempFloat to ( 40 * aCos )
+    	set mortarX to ( cx + tempFloat )
+    	set tempFloat to ( 40 * aSin )
+    	set mortarY to ( cy - tempFloat )
+    	set tempFloat to ( 30 * aCos )
+    	set tempFloat2 to ( 20 * aSin )
+    	set retortX to ( cx - tempFloat - tempFloat2 )
+    	set tempFloat to ( 30 * aSin )
+    	set tempFloat2 to ( 20 * aCos )
+    	set retortY to ( cy + tempFloat - tempFloat2 )
+    	setx invItem,invCount,invRef to xInventory
+    	whilex ( invCount )
+    		xRemoveItem invItem invCount
+    		setx invItem,invCount,invRef to xInventory
+    	endwhile
+    	AddItem "A1V4_ApparatusItem_2", 1
+    	set A1V4_ApparatusDisable_2 to 0
+    	set doSetUp to 1
+    	return
+    endif
+    
+    if ( doActivate == 1 )
+    	set waitActivate to 1
+    	set doActivate to 0
+    	Activate
+    	return
+    endif
+    
+    if ( doRemove > 5 )
+    	set temp to 1
+    else
+    	set temp to 0
+    endif
+    
+    ifx ( temp )
+    	setx pcRef to xGetRef "player"
+    	whilex ( pcRef )
+    		ifx ( doClose )
+    			setx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to xContentList invRef
+    		else
+    			setx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to pcRef->xContentList invRef
+    		endif
+    		ifx ( invItem )
+    			if ( invRefType == 1380404809 )
+    				set temp to 1
+    			else
+    				set temp to 0
+    			endif
+    		endif
+    		ifx ( temp )
+    			ifx ( doClose )
+    				xRemoveItem invItem invCount
+    				pcRef->xAddItem invItem invCount
+    			else
+    				pcRef->xRemoveItem invItem invCount
+    				xAddItem invItem invCount
+    			endif
+    			set invRef to 0
+    			set pcRef to 0
+    			set doRemove to 1
+    		endif
+    		if ( doRemove > 1 )
+    			set invRef to invNextRef
+    		endif
+    		if ( invNextRef == 0 )
+    			set pcRef to 0
+    			set doRemove to 0
+    			if ( doClose == 1 )
+    				set doClose to 0
+    				StartScript A1V4_ApparatusDeactivate_sc
+    			else
+    				set doActivate to 1
+    				StartScript A1V4_ApparatusActivate_sc
+    			endif
+    		endif
+    	endwhile
+    	return
+    endif
+    
+    if ( doRemove > 0 )
+    	set doRemove to ( doRemove + 1 )
+    	return
+    endif
+    
+    if ( doSetUp == 1 )
+    	set doSetUp to 0
+    	set A1V4_MortarX to mortarX
+    	set A1V4_MortarY to mortarY
+    	set A1V4_AlembicX to alembicX
+    	set A1V4_AlembicY to alembicY
+    	set A1V4_CalcinatorX to calcinatorX
+    	set A1V4_CalcinatorY to calcinatorY
+    	set A1V4_RetortX to retortX
+    	set A1V4_RetortY to retortY
+    	set A1V4_ApparatusZ to cz
+    	StartScript A1V4_ApparatusSetUp_2
+    	return
+    endif
+    
+    if ( OnActivate == 1 )
+    	DisablePlayerControls
+    	set invRef to 0
+    	set doRemove to 1
+    	return
+    endif
+    
+    End
