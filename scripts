@@ -1,10 +1,5 @@
 #!/bin/sh
 
-cd esp-assembler
-stack build || exit 1
-root_path="$(stack path --local-install-root)"
-cd ..
-cp "$root_path/bin/espa" . || exit 1
 cp -- "${1}.esp" "${1}.scripts.esp"
 ./espa -di SCPT -- "${1}.scripts.esp" || exit 1
 rm -- "${1}.scripts.esp"
