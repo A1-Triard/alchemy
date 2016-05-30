@@ -2,6 +2,10 @@
 
 basedir="$(dirname "$0")"
 cd "$basedir"
+find scripts -type f -exec basename {} \; | sort > all_scripts
+cat scripts.list | sort > sorted_scripts
+diff sorted_scripts all_scripts || exit 1
+rm all_scripts sorted_scripts
 cat A1_Alchemy_V4_Apparatus.nosc > A1_Alchemy_V4_Apparatus.sctx
 cd scripts
 for script in *; do

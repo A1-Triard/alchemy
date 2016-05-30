@@ -6,7 +6,7 @@ DESCRIPTION
     Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах).
     Для получения алхимической установки используйте команду
     player->AddItem A1V4_ApparatusItem_#, 1
-    Здесь # - номер установки (1, 2, 3).
+    Здесь # - номер установки (1, 2, 3).\0ановки (1, 2 или 3).
 Morrowind.esm 79764287
 Tribunal.esm 6616539
 Bloodmoon.esm 11799703
@@ -130,6 +130,2051 @@ GLOB
 NAME A1V4_CalcAlchemy2
 FNAM s%
 FLTV 0.0
+
+SCPT
+SCHD A1V4_AlchemyActivator_sc 2 0 0 56 22
+SCVR PCSkipEquip;OnPCEquip;;
+SCDT BQFzAQACIDEGAQIJIHMCACA9PSAxBQFzAgACIDAbEBRBMVY0X0FsY2hlbXlDaGVja19zYwkBAQE=
+SCTX
+    Begin A1V4_AlchemyActivator_sc
+    
+    short PCSkipEquip
+    short OnPCEquip
+    
+    set PCSkipEquip to 1
+    
+    if ( OnPCEquip == 1 )
+    	set OnPCEquip to 0
+    	StartScript A1V4_AlchemyCheck_sc
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_AlchemyCheck_sc 0 0 0 57 0
+SCDT HBAUQTFWNF9BbGNoZW15Q2hlY2tfc2MbEB1BMVY0X0FDaGVjazFfUmVzdG9yZUhlYWx0aF9zYwEB
+SCTX
+    Begin A1V4_AlchemyCheck_sc
+    
+    StopScript A1V4_AlchemyCheck_sc
+    StartScript A1V4_ACheck1_RestoreHealth_sc
+    
+    End
+
+SCPT
+SCHD A1V4_Alembic_1_sc 1 0 3 226 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzEgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAESBHDUExVjRfQWxlbWJpY1gABQFmAgARIEcNQTFWNF9BbGVtYmljWQAFAWYDABMgRw9BMVY0X0FwcGFyYXR1c1oABQFmAwAJIGYDACAxNSAtCxBYZgEAAAsQWWYCAAALEFpmAwAACQEBAQ==
+SCTX
+    Begin A1V4_Alembic_1_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_1 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_AlembicX
+    	set cy to A1V4_AlembicY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_Alembic_2_sc 1 0 3 226 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzIgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAESBHDUExVjRfQWxlbWJpY1gABQFmAgARIEcNQTFWNF9BbGVtYmljWQAFAWYDABMgRw9BMVY0X0FwcGFyYXR1c1oABQFmAwAJIGYDACAxNSAtCxBYZgEAAAsQWWYCAAALEFpmAwAACQEBAQ==
+SCTX
+    Begin A1V4_Alembic_2_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_2 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_AlembicX
+    	set cy to A1V4_AlembicY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_Alembic_3_sc 1 0 3 226 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzMgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAESBHDUExVjRfQWxlbWJpY1gABQFmAgARIEcNQTFWNF9BbGVtYmljWQAFAWYDABMgRw9BMVY0X0FwcGFyYXR1c1oABQFmAwAJIGYDACAxNSAtCxBYZgEAAAsQWWYCAAALEFpmAwAACQEBAQ==
+SCTX
+    Begin A1V4_Alembic_3_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_3 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_AlembicX
+    	set cy to A1V4_AlembicY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_ApparatusActivate_sc 0 0 0 97 0
+SCDT DAEGcGxheWVy1BAVQTFWNF9BbGNoZW15QWN0aXZhdG9yAQAJAQAQFgDT8fLg7e7i6uAg4Ory6OLo8O7i4O3gAADdEBwQGUExVjRfQXBwYXJhdHVzQWN0aXZhdGVfc2MBAQ==
+SCTX
+    Begin A1V4_ApparatusActivate_sc
+    
+    player->AddItem A1V4_AlchemyActivator, 1
+    endif
+    
+    MessageBox "Установка активирована"
+    EnablePlayerControls
+    
+    StopScript A1V4_ApparatusActivate_sc
+    
+    End
+
+SCPT
+SCHD A1V4_ApparatusCont_1_sc 8 7 15 2402 246
+SCVR doOnce;doDisable;temp;doSetUp;doRemove;doActivate;waitActivate;doClose;invItem;invCount;invRef;tempLong;pcRef;invRefType;invNextRef;cx;cy;cz;aCos;aSin;tempFloat;tempFloat2;mortarX;mortarY;alembicX;alembicY;calcinatorX;calcinatorY;retortX;retortY;;
+SCDT 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
+SCTX
+    Begin A1V4_ApparatusCont_1_sc
+    
+    short doOnce
+    short doDisable
+    short temp
+    float cx
+    float cy
+    float cz
+    long invItem
+    long invCount
+    long invRef
+    long tempLong
+    float aCos
+    float aSin
+    float tempFloat
+    float tempFloat2
+    float mortarX
+    float mortarY
+    float alembicX
+    float alembicY
+    float calcinatorX
+    float calcinatorY
+    float retortX
+    float retortY
+    short doSetUp
+    short doRemove
+    short doActivate
+    long pcRef
+    long invRefType
+    long invNextRef
+    short waitActivate
+    short doClose
+    
+    if ( doDisable > 20 )
+    	if ( GetDisabled == 1 )
+    		SetDelete 1
+    		return
+    	endif
+    endif
+    
+    if ( doDisable > 20 )
+    	Disable
+    	return
+    endif
+    
+    if ( doDisable > 0 )
+    	AddItem "A1V4_ApparatusFakeIngred", 2
+    	set doDisable to ( doDisable + 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	Enable
+    	set doDisable to 1
+    endif
+    
+    if ( waitActivate == 2 )
+    	if ( A1V4_CalcAlchemy5 == 1 )
+    		set A1V4_CalcAlchemy5 to 0
+    		set A1V4_CalcAlchemy5_sc.state to 0
+    		StartScript A1V4_CalcAlchemy5_sc
+    	endif
+    	if ( A1V4_CalcAlchemy2 == 1 )
+    		set A1V4_CalcAlchemy2 to 0
+    		set A1V4_CalcAlchemy2_sc.state to 0
+    		StartScript A1V4_CalcAlchemy2_sc
+    	endif
+    	if ( MenuMode == 0 )
+    		set waitActivate to 0
+    		DisablePlayerControls
+    		if ( GetItemCount "A1V4_ApparatusItem_1" == 0 )
+    			set A1V4_ApparatusDisable_1 to 1
+    			set doDisable to 1
+    			StartScript A1V4_ApparatusDeactivate_sc
+    		else
+    			set doClose to 1
+    			set invRef to 0
+    			set doRemove to 1
+    		endif
+    	endif
+    	return
+    elseif ( waitActivate == 1 )
+    	if ( MenuMode == 1 )
+    		set waitActivate to 2
+    	endif
+    	return
+    endif
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    ifx ( doOnce )
+    else
+    	DisablePlayerControls
+    	set doOnce to 1
+    	set cx to A1V4_ApparatusX
+    	set cy to A1V4_ApparatusY
+    	set cz to A1V4_ApparatusZ
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    	set tempFloat to A1V4_ApparatusAngle
+    	set tempFloat to ( tempFloat / 57.29578 )
+    	setx aCos to xCos tempFloat
+    	setx aSin to xSin tempFloat
+    	set tempFloat to ( 30 * aCos )
+    	set tempFloat2 to ( 20 * aSin )
+    	set alembicX to ( cx - tempFloat + tempFloat2 )
+    	set tempFloat to ( 30 * aSin )
+    	set tempFloat2 to ( 20 * aCos )
+    	set alembicY to ( cy + tempFloat + tempFloat2 )
+    	set tempFloat to ( 20 * aCos )
+    	set tempFloat2 to ( 25 * aSin )
+    	set calcinatorX to ( cx + tempFloat + tempFloat2 )
+    	set tempFloat to ( 20 * aSin )
+    	set tempFloat2 to ( 25 * aCos )
+    	set calcinatorY to ( cy - tempFloat + tempFloat2 )
+    	set tempFloat to ( 40 * aCos )
+    	set mortarX to ( cx + tempFloat )
+    	set tempFloat to ( 40 * aSin )
+    	set mortarY to ( cy - tempFloat )
+    	set tempFloat to ( 30 * aCos )
+    	set tempFloat2 to ( 20 * aSin )
+    	set retortX to ( cx - tempFloat - tempFloat2 )
+    	set tempFloat to ( 30 * aSin )
+    	set tempFloat2 to ( 20 * aCos )
+    	set retortY to ( cy + tempFloat - tempFloat2 )
+    	setx invItem,invCount,invRef to xInventory
+    	whilex ( invCount )
+    		xRemoveItem invItem invCount
+    		setx invItem,invCount,invRef to xInventory
+    	endwhile
+    	AddItem "A1V4_ApparatusItem_1", 1
+    	set A1V4_ApparatusDisable_1 to 0
+    	set doSetUp to 1
+    	return
+    endif
+    
+    if ( doActivate == 1 )
+    	set waitActivate to 1
+    	set doActivate to 0
+    	Activate
+    	return
+    endif
+    
+    if ( doRemove > 5 )
+    	set temp to 1
+    else
+    	set temp to 0
+    endif
+    
+    ifx ( temp )
+    	setx pcRef to xGetRef "player"
+    	whilex ( pcRef )
+    		ifx ( doClose )
+    			setx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to xContentList invRef
+    		else
+    			setx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to pcRef->xContentList invRef
+    		endif
+    		ifx ( invItem )
+    			if ( invRefType == 1380404809 )
+    				set temp to 1
+    			else
+    				set temp to 0
+    			endif
+    		endif
+    		ifx ( temp )
+    			ifx ( doClose )
+    				xRemoveItem invItem invCount
+    				pcRef->xAddItem invItem invCount
+    			else
+    				pcRef->xRemoveItem invItem invCount
+    				xAddItem invItem invCount
+    			endif
+    			set invRef to 0
+    			set pcRef to 0
+    			set doRemove to 1
+    		endif
+    		if ( doRemove > 1 )
+    			set invRef to invNextRef
+    		endif
+    		if ( invNextRef == 0 )
+    			set pcRef to 0
+    			set doRemove to 0
+    			if ( doClose == 1 )
+    				set doClose to 0
+    				StartScript A1V4_ApparatusDeactivate_sc
+    			else
+    				set doActivate to 1
+    				StartScript A1V4_ApparatusActivate_sc
+    			endif
+    		endif
+    	endwhile
+    	return
+    endif
+    
+    if ( doRemove > 0 )
+    	set doRemove to ( doRemove + 1 )
+    	return
+    endif
+    
+    if ( doSetUp == 1 )
+    	set doSetUp to 0
+    	set A1V4_MortarX to mortarX
+    	set A1V4_MortarY to mortarY
+    	set A1V4_AlembicX to alembicX
+    	set A1V4_AlembicY to alembicY
+    	set A1V4_CalcinatorX to calcinatorX
+    	set A1V4_CalcinatorY to calcinatorY
+    	set A1V4_RetortX to retortX
+    	set A1V4_RetortY to retortY
+    	set A1V4_ApparatusZ to cz
+    	StartScript A1V4_ApparatusSetUp_1
+    	return
+    endif
+    
+    if ( OnActivate == 1 )
+    	DisablePlayerControls
+    	set invRef to 0
+    	set doRemove to 1
+    	return
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_ApparatusCont_2_sc 8 7 15 2402 246
+SCVR doOnce;doDisable;temp;doSetUp;doRemove;doActivate;waitActivate;doClose;invItem;invCount;invRef;tempLong;pcRef;invRefType;invNextRef;cx;cy;cz;aCos;aSin;tempFloat;tempFloat2;mortarX;mortarY;alembicX;alembicY;calcinatorX;calcinatorY;retortX;retortY;;
+SCDT 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
+SCTX
+    Begin A1V4_ApparatusCont_2_sc
+    
+    short doOnce
+    short doDisable
+    short temp
+    float cx
+    float cy
+    float cz
+    long invItem
+    long invCount
+    long invRef
+    long tempLong
+    float aCos
+    float aSin
+    float tempFloat
+    float tempFloat2
+    float mortarX
+    float mortarY
+    float alembicX
+    float alembicY
+    float calcinatorX
+    float calcinatorY
+    float retortX
+    float retortY
+    short doSetUp
+    short doRemove
+    short doActivate
+    long pcRef
+    long invRefType
+    long invNextRef
+    short waitActivate
+    short doClose
+    
+    if ( doDisable > 20 )
+    	if ( GetDisabled == 1 )
+    		SetDelete 1
+    		return
+    	endif
+    endif
+    
+    if ( doDisable > 20 )
+    	Disable
+    	return
+    endif
+    
+    if ( doDisable > 0 )
+    	AddItem "A1V4_ApparatusFakeIngred", 2
+    	set doDisable to ( doDisable + 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	Enable
+    	set doDisable to 1
+    endif
+    
+    if ( waitActivate == 2 )
+    	if ( A1V4_CalcAlchemy5 == 1 )
+    		set A1V4_CalcAlchemy5 to 0
+    		set A1V4_CalcAlchemy5_sc.state to 0
+    		StartScript A1V4_CalcAlchemy5_sc
+    	endif
+    	if ( A1V4_CalcAlchemy2 == 1 )
+    		set A1V4_CalcAlchemy2 to 0
+    		set A1V4_CalcAlchemy2_sc.state to 0
+    		StartScript A1V4_CalcAlchemy2_sc
+    	endif
+    	if ( MenuMode == 0 )
+    		set waitActivate to 0
+    		DisablePlayerControls
+    		if ( GetItemCount "A1V4_ApparatusItem_2" == 0 )
+    			set A1V4_ApparatusDisable_2 to 1
+    			set doDisable to 1
+    			StartScript A1V4_ApparatusDeactivate_sc
+    		else
+    			set doClose to 1
+    			set invRef to 0
+    			set doRemove to 1
+    		endif
+    	endif
+    	return
+    elseif ( waitActivate == 1 )
+    	if ( MenuMode == 1 )
+    		set waitActivate to 2
+    	endif
+    	return
+    endif
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    ifx ( doOnce )
+    else
+    	DisablePlayerControls
+    	set doOnce to 1
+    	set cx to A1V4_ApparatusX
+    	set cy to A1V4_ApparatusY
+    	set cz to A1V4_ApparatusZ
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    	set tempFloat to A1V4_ApparatusAngle
+    	set tempFloat to ( tempFloat / 57.29578 )
+    	setx aCos to xCos tempFloat
+    	setx aSin to xSin tempFloat
+    	set tempFloat to ( 30 * aCos )
+    	set tempFloat2 to ( 20 * aSin )
+    	set alembicX to ( cx - tempFloat + tempFloat2 )
+    	set tempFloat to ( 30 * aSin )
+    	set tempFloat2 to ( 20 * aCos )
+    	set alembicY to ( cy + tempFloat + tempFloat2 )
+    	set tempFloat to ( 20 * aCos )
+    	set tempFloat2 to ( 25 * aSin )
+    	set calcinatorX to ( cx + tempFloat + tempFloat2 )
+    	set tempFloat to ( 20 * aSin )
+    	set tempFloat2 to ( 25 * aCos )
+    	set calcinatorY to ( cy - tempFloat + tempFloat2 )
+    	set tempFloat to ( 40 * aCos )
+    	set mortarX to ( cx + tempFloat )
+    	set tempFloat to ( 40 * aSin )
+    	set mortarY to ( cy - tempFloat )
+    	set tempFloat to ( 30 * aCos )
+    	set tempFloat2 to ( 20 * aSin )
+    	set retortX to ( cx - tempFloat - tempFloat2 )
+    	set tempFloat to ( 30 * aSin )
+    	set tempFloat2 to ( 20 * aCos )
+    	set retortY to ( cy + tempFloat - tempFloat2 )
+    	setx invItem,invCount,invRef to xInventory
+    	whilex ( invCount )
+    		xRemoveItem invItem invCount
+    		setx invItem,invCount,invRef to xInventory
+    	endwhile
+    	AddItem "A1V4_ApparatusItem_2", 1
+    	set A1V4_ApparatusDisable_2 to 0
+    	set doSetUp to 1
+    	return
+    endif
+    
+    if ( doActivate == 1 )
+    	set waitActivate to 1
+    	set doActivate to 0
+    	Activate
+    	return
+    endif
+    
+    if ( doRemove > 5 )
+    	set temp to 1
+    else
+    	set temp to 0
+    endif
+    
+    ifx ( temp )
+    	setx pcRef to xGetRef "player"
+    	whilex ( pcRef )
+    		ifx ( doClose )
+    			setx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to xContentList invRef
+    		else
+    			setx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to pcRef->xContentList invRef
+    		endif
+    		ifx ( invItem )
+    			if ( invRefType == 1380404809 )
+    				set temp to 1
+    			else
+    				set temp to 0
+    			endif
+    		endif
+    		ifx ( temp )
+    			ifx ( doClose )
+    				xRemoveItem invItem invCount
+    				pcRef->xAddItem invItem invCount
+    			else
+    				pcRef->xRemoveItem invItem invCount
+    				xAddItem invItem invCount
+    			endif
+    			set invRef to 0
+    			set pcRef to 0
+    			set doRemove to 1
+    		endif
+    		if ( doRemove > 1 )
+    			set invRef to invNextRef
+    		endif
+    		if ( invNextRef == 0 )
+    			set pcRef to 0
+    			set doRemove to 0
+    			if ( doClose == 1 )
+    				set doClose to 0
+    				StartScript A1V4_ApparatusDeactivate_sc
+    			else
+    				set doActivate to 1
+    				StartScript A1V4_ApparatusActivate_sc
+    			endif
+    		endif
+    	endwhile
+    	return
+    endif
+    
+    if ( doRemove > 0 )
+    	set doRemove to ( doRemove + 1 )
+    	return
+    endif
+    
+    if ( doSetUp == 1 )
+    	set doSetUp to 0
+    	set A1V4_MortarX to mortarX
+    	set A1V4_MortarY to mortarY
+    	set A1V4_AlembicX to alembicX
+    	set A1V4_AlembicY to alembicY
+    	set A1V4_CalcinatorX to calcinatorX
+    	set A1V4_CalcinatorY to calcinatorY
+    	set A1V4_RetortX to retortX
+    	set A1V4_RetortY to retortY
+    	set A1V4_ApparatusZ to cz
+    	StartScript A1V4_ApparatusSetUp_2
+    	return
+    endif
+    
+    if ( OnActivate == 1 )
+    	DisablePlayerControls
+    	set invRef to 0
+    	set doRemove to 1
+    	return
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_ApparatusCont_3_sc 8 7 15 2402 246
+SCVR doOnce;doDisable;temp;doSetUp;doRemove;doActivate;waitActivate;doClose;invItem;invCount;invRef;tempLong;pcRef;invRefType;invNextRef;cx;cy;cz;aCos;aSin;tempFloat;tempFloat2;mortarX;mortarY;alembicX;alembicY;calcinatorX;calcinatorY;retortX;retortY;;
+SCDT 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
+SCTX
+    Begin A1V4_ApparatusCont_3_sc
+    
+    short doOnce
+    short doDisable
+    short temp
+    float cx
+    float cy
+    float cz
+    long invItem
+    long invCount
+    long invRef
+    long tempLong
+    float aCos
+    float aSin
+    float tempFloat
+    float tempFloat2
+    float mortarX
+    float mortarY
+    float alembicX
+    float alembicY
+    float calcinatorX
+    float calcinatorY
+    float retortX
+    float retortY
+    short doSetUp
+    short doRemove
+    short doActivate
+    long pcRef
+    long invRefType
+    long invNextRef
+    short waitActivate
+    short doClose
+    
+    if ( doDisable > 20 )
+    	if ( GetDisabled == 1 )
+    		SetDelete 1
+    		return
+    	endif
+    endif
+    
+    if ( doDisable > 20 )
+    	Disable
+    	return
+    endif
+    
+    if ( doDisable > 0 )
+    	AddItem "A1V4_ApparatusFakeIngred", 2
+    	set doDisable to ( doDisable + 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	Enable
+    	set doDisable to 1
+    endif
+    
+    if ( waitActivate == 2 )
+    	if ( A1V4_CalcAlchemy5 == 1 )
+    		set A1V4_CalcAlchemy5 to 0
+    		set A1V4_CalcAlchemy5_sc.state to 0
+    		StartScript A1V4_CalcAlchemy5_sc
+    	endif
+    	if ( A1V4_CalcAlchemy2 == 1 )
+    		set A1V4_CalcAlchemy2 to 0
+    		set A1V4_CalcAlchemy2_sc.state to 0
+    		StartScript A1V4_CalcAlchemy2_sc
+    	endif
+    	if ( MenuMode == 0 )
+    		set waitActivate to 0
+    		DisablePlayerControls
+    		if ( GetItemCount "A1V4_ApparatusItem_3" == 0 )
+    			set A1V4_ApparatusDisable_3 to 1
+    			set doDisable to 1
+    			StartScript A1V4_ApparatusDeactivate_sc
+    		else
+    			set doClose to 1
+    			set invRef to 0
+    			set doRemove to 1
+    		endif
+    	endif
+    	return
+    elseif ( waitActivate == 1 )
+    	if ( MenuMode == 1 )
+    		set waitActivate to 2
+    	endif
+    	return
+    endif
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    ifx ( doOnce )
+    else
+    	DisablePlayerControls
+    	set doOnce to 1
+    	set cx to A1V4_ApparatusX
+    	set cy to A1V4_ApparatusY
+    	set cz to A1V4_ApparatusZ
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    	set tempFloat to A1V4_ApparatusAngle
+    	set tempFloat to ( tempFloat / 57.29578 )
+    	setx aCos to xCos tempFloat
+    	setx aSin to xSin tempFloat
+    	set tempFloat to ( 30 * aCos )
+    	set tempFloat2 to ( 20 * aSin )
+    	set alembicX to ( cx - tempFloat + tempFloat2 )
+    	set tempFloat to ( 30 * aSin )
+    	set tempFloat2 to ( 20 * aCos )
+    	set alembicY to ( cy + tempFloat + tempFloat2 )
+    	set tempFloat to ( 20 * aCos )
+    	set tempFloat2 to ( 25 * aSin )
+    	set calcinatorX to ( cx + tempFloat + tempFloat2 )
+    	set tempFloat to ( 20 * aSin )
+    	set tempFloat2 to ( 25 * aCos )
+    	set calcinatorY to ( cy - tempFloat + tempFloat2 )
+    	set tempFloat to ( 40 * aCos )
+    	set mortarX to ( cx + tempFloat )
+    	set tempFloat to ( 40 * aSin )
+    	set mortarY to ( cy - tempFloat )
+    	set tempFloat to ( 30 * aCos )
+    	set tempFloat2 to ( 20 * aSin )
+    	set retortX to ( cx - tempFloat - tempFloat2 )
+    	set tempFloat to ( 30 * aSin )
+    	set tempFloat2 to ( 20 * aCos )
+    	set retortY to ( cy + tempFloat - tempFloat2 )
+    	setx invItem,invCount,invRef to xInventory
+    	whilex ( invCount )
+    		xRemoveItem invItem invCount
+    		setx invItem,invCount,invRef to xInventory
+    	endwhile
+    	AddItem "A1V4_ApparatusItem_3", 1
+    	set A1V4_ApparatusDisable_3 to 0
+    	set doSetUp to 1
+    	return
+    endif
+    
+    if ( doActivate == 1 )
+    	set waitActivate to 1
+    	set doActivate to 0
+    	Activate
+    	return
+    endif
+    
+    if ( doRemove > 5 )
+    	set temp to 1
+    else
+    	set temp to 0
+    endif
+    
+    ifx ( temp )
+    	setx pcRef to xGetRef "player"
+    	whilex ( pcRef )
+    		ifx ( doClose )
+    			setx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to xContentList invRef
+    		else
+    			setx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to pcRef->xContentList invRef
+    		endif
+    		ifx ( invItem )
+    			if ( invRefType == 1380404809 )
+    				set temp to 1
+    			else
+    				set temp to 0
+    			endif
+    		endif
+    		ifx ( temp )
+    			ifx ( doClose )
+    				xRemoveItem invItem invCount
+    				pcRef->xAddItem invItem invCount
+    			else
+    				pcRef->xRemoveItem invItem invCount
+    				xAddItem invItem invCount
+    			endif
+    			set invRef to 0
+    			set pcRef to 0
+    			set doRemove to 1
+    		endif
+    		if ( doRemove > 1 )
+    			set invRef to invNextRef
+    		endif
+    		if ( invNextRef == 0 )
+    			set pcRef to 0
+    			set doRemove to 0
+    			if ( doClose == 1 )
+    				set doClose to 0
+    				StartScript A1V4_ApparatusDeactivate_sc
+    			else
+    				set doActivate to 1
+    				StartScript A1V4_ApparatusActivate_sc
+    			endif
+    		endif
+    	endwhile
+    	return
+    endif
+    
+    if ( doRemove > 0 )
+    	set doRemove to ( doRemove + 1 )
+    	return
+    endif
+    
+    if ( doSetUp == 1 )
+    	set doSetUp to 0
+    	set A1V4_MortarX to mortarX
+    	set A1V4_MortarY to mortarY
+    	set A1V4_AlembicX to alembicX
+    	set A1V4_AlembicY to alembicY
+    	set A1V4_CalcinatorX to calcinatorX
+    	set A1V4_CalcinatorY to calcinatorY
+    	set A1V4_RetortX to retortX
+    	set A1V4_RetortY to retortY
+    	set A1V4_ApparatusZ to cz
+    	StartScript A1V4_ApparatusSetUp_3
+    	return
+    endif
+    
+    if ( OnActivate == 1 )
+    	DisablePlayerControls
+    	set invRef to 0
+    	set doRemove to 1
+    	return
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_ApparatusDeactivate_sc 0 0 0 144 0
+SCDT DAEGcGxheWVyBgEBICBY/RAgbxVBMVY0X0FsY2hlbXlBY3RpdmF0b3IgPiAwDAEGcGxheWVy1RAVQTFWNF9BbGNoZW15QWN0aXZhdG9yAQAJARwQG0ExVjRfQXBwYXJhdHVzRGVhY3RpdmF0ZV9zYxsQG0ExVjRfQURlbDFfUmVzdG9yZUhlYWx0aF9zYwEB
+SCTX
+    Begin A1V4_ApparatusDeactivate_sc
+    
+    if ( player->GetItemCount A1V4_AlchemyActivator > 0 )
+    	player->RemoveItem A1V4_AlchemyActivator, 1
+    endif
+    
+    StopScript A1V4_ApparatusDeactivate_sc
+    StartScript A1V4_ADel1_RestoreHealth_sc
+    
+    End
+
+SCPT
+SCHD A1V4_ApparatusItem_1_sc 1 0 0 196 9
+SCVR OnPCDrop;;
+SCDT BgECCSBY3BAgPT0gMasRAQAkAQkBBgEHCSBzAQAgPT0gMQUBcwEAAiAwBQFHD0ExVjRfQXBwYXJhdHVzWAYgWAoQWAAFAUcPQTFWNF9BcHBhcmF0dXNZBiBYChBZAAUBRw9BMVY0X0FwcGFyYXR1c1oGIFgKEFoADAEGcGxheWVyBQFHE0ExVjRfQXBwYXJhdHVzQW5nbGUGIFgMEFoA5hAUQTFWNF9BcHBhcmF0dXNDb250XzEBAAAASEIAANsQCQEBAQ==
+SCTX
+    Begin A1V4_ApparatusItem_1_sc
+    
+    short OnPCDrop
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( OnPCDrop == 1 )
+    	set OnPCDrop to 0
+    	set A1V4_ApparatusX to GetPos X
+    	set A1V4_ApparatusY to GetPos Y
+    	set A1V4_ApparatusZ to GetPos Z
+    	set A1V4_ApparatusAngle to ( player -> GetAngle Z )
+    	PlaceAtPC "A1V4_ApparatusCont_1" 1, 50, 0
+    	Disable
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_ApparatusItem_2_sc 1 0 0 196 9
+SCVR OnPCDrop;;
+SCDT BgECCSBY3BAgPT0gMasRAQAkAQkBBgEHCSBzAQAgPT0gMQUBcwEAAiAwBQFHD0ExVjRfQXBwYXJhdHVzWAYgWAoQWAAFAUcPQTFWNF9BcHBhcmF0dXNZBiBYChBZAAUBRw9BMVY0X0FwcGFyYXR1c1oGIFgKEFoADAEGcGxheWVyBQFHE0ExVjRfQXBwYXJhdHVzQW5nbGUGIFgMEFoA5hAUQTFWNF9BcHBhcmF0dXNDb250XzIBAAAASEIAANsQCQEBAQ==
+SCTX
+    Begin A1V4_ApparatusItem_2_sc
+    
+    short OnPCDrop
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( OnPCDrop == 1 )
+    	set OnPCDrop to 0
+    	set A1V4_ApparatusX to GetPos X
+    	set A1V4_ApparatusY to GetPos Y
+    	set A1V4_ApparatusZ to GetPos Z
+    	set A1V4_ApparatusAngle to ( player -> GetAngle Z )
+    	PlaceAtPC "A1V4_ApparatusCont_2" 1, 50, 0
+    	Disable
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_ApparatusItem_3_sc 1 0 0 196 9
+SCVR OnPCDrop;;
+SCDT BgECCSBY3BAgPT0gMasRAQAkAQkBBgEHCSBzAQAgPT0gMQUBcwEAAiAwBQFHD0ExVjRfQXBwYXJhdHVzWAYgWAoQWAAFAUcPQTFWNF9BcHBhcmF0dXNZBiBYChBZAAUBRw9BMVY0X0FwcGFyYXR1c1oGIFgKEFoADAEGcGxheWVyBQFHE0ExVjRfQXBwYXJhdHVzQW5nbGUGIFgMEFoA5hAUQTFWNF9BcHBhcmF0dXNDb250XzMBAAAASEIAANsQCQEBAQ==
+SCTX
+    Begin A1V4_ApparatusItem_3_sc
+    
+    short OnPCDrop
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( OnPCDrop == 1 )
+    	set OnPCDrop to 0
+    	set A1V4_ApparatusX to GetPos X
+    	set A1V4_ApparatusY to GetPos Y
+    	set A1V4_ApparatusZ to GetPos Z
+    	set A1V4_ApparatusAngle to ( player -> GetAngle Z )
+    	PlaceAtPC "A1V4_ApparatusCont_3" 1, 50, 0
+    	Disable
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_ApparatusSetUp_1 0 0 0 2736 0
+SCDT BgEBCSBYIBAgPT0gMSQBCQEMAQZwbGF5ZXIGAQMhIFj9ECBvFmFwcGFyYXR1c19nX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX2dfYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX2dfYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfZ19hbGVtYmljX2UxAQAAAEhCAAAMAQZwbGF5ZXIIAQMhIFj9ECBvFmFwcGFyYXR1c19tX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX21fYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX21fYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfbV9hbGVtYmljX2UxAQAAAEhCAAAMAQZwbGF5ZXIIAQMhIFj9ECBvFmFwcGFyYXR1c19qX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX2pfYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX2pfYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfal9hbGVtYmljX2UxAQAAAEhCAAAMAQZwbGF5ZXIIAQMhIFj9ECBvFmFwcGFyYXR1c19hX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX2FfYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX2FfYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfYV9hbGVtYmljX2UxAQAAAEhCAAAMAQZwbGF5ZXIIAQMiIFj9ECBvF2FwcGFyYXR1c19hX3NwaXBlX3RzaXlhID4gMAwBBnBsYXllctUQF2FwcGFyYXR1c19hX3NwaXBlX3RzaXlhAQDUEBdhcHBhcmF0dXNfYV9zcGlwZV90c2l5YQEA5hAfQTFWNF9hcHBhcmF0dXNfYV9zcGlwZV90c2l5YV9lMQEAAABIQgAADAEGcGxheWVyCAEDHyBY/RAgbxRhcHBhcmF0dXNfYV9zcGlwZV8wMSA+IDAMAQZwbGF5ZXLVEBRhcHBhcmF0dXNfYV9zcGlwZV8wMQEA1BAUYXBwYXJhdHVzX2Ffc3BpcGVfMDEBAOYQGUExVjRfYXBwYXJhdHVzX2Ffc3BpcGVfZTEBAAAASEIAAAkBDAEGcGxheWVyBgEDJCBY/RAgbxlhcHBhcmF0dXNfZ19jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19nX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19nX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX2dfY2FsY2luYXRvcl9lMQEAAABIQgAADAEGcGxheWVyCAEDJCBY/RAgbxlhcHBhcmF0dXNfbV9jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19tX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19tX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX21fY2FsY2luYXRvcl9lMQEAAABIQgAADAEGcGxheWVyCAEDJCBY/RAgbxlhcHBhcmF0dXNfal9jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19qX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19qX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX2pfY2FsY2luYXRvcl9lMQEAAABIQgAADAEGcGxheWVyCAEDJCBY/RAgbxlhcHBhcmF0dXNfYV9jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19hX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19hX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX2FfY2FsY2luYXRvcl9lMQEAAABIQgAACQEMAQZwbGF5ZXIGAQMgIFj9ECBvFWFwcGFyYXR1c19nX3JldG9ydF8wMSA+IDAMAQZwbGF5ZXLVEBVhcHBhcmF0dXNfZ19yZXRvcnRfMDEBANQQFWFwcGFyYXR1c19nX3JldG9ydF8wMQEA5hAaQTFWNF9hcHBhcmF0dXNfZ19yZXRvcnRfZTEBAAAASEIAAAwBBnBsYXllcggBAyAgWP0QIG8VYXBwYXJhdHVzX21fcmV0b3J0XzAxID4gMAwBBnBsYXllctUQFWFwcGFyYXR1c19tX3JldG9ydF8wMQEA1BAVYXBwYXJhdHVzX21fcmV0b3J0XzAxAQDmEBpBMVY0X2FwcGFyYXR1c19tX3JldG9ydF9lMQEAAABIQgAADAEGcGxheWVyCAEDICBY/RAgbxVhcHBhcmF0dXNfal9yZXRvcnRfMDEgPiAwDAEGcGxheWVy1RAVYXBwYXJhdHVzX2pfcmV0b3J0XzAxAQDUEBVhcHBhcmF0dXNfal9yZXRvcnRfMDEBAOYQGkExVjRfYXBwYXJhdHVzX2pfcmV0b3J0X2UxAQAAAEhCAAAMAQZwbGF5ZXIIAQMgIFj9ECBvFWFwcGFyYXR1c19hX3JldG9ydF8wMSA+IDAMAQZwbGF5ZXLVEBVhcHBhcmF0dXNfYV9yZXRvcnRfMDEBANQQFWFwcGFyYXR1c19hX3JldG9ydF8wMQEA5hAaQTFWNF9hcHBhcmF0dXNfYV9yZXRvcnRfZTEBAAAASEIAAAkBDAEGcGxheWVyBgEDICBY/RAgbxVhcHBhcmF0dXNfZ19tb3J0YXJfMDEgPiAwDAEGcGxheWVy1RAVYXBwYXJhdHVzX2dfbW9ydGFyXzAxAQDUEBVhcHBhcmF0dXNfZ19tb3J0YXJfMDEBAOYQGkExVjRfYXBwYXJhdHVzX2dfbW9ydGFyX2UxAQAAAEhCAAAMAQZwbGF5ZXIIAQMgIFj9ECBvFWFwcGFyYXR1c19tX21vcnRhcl8wMSA+IDAMAQZwbGF5ZXLVEBVhcHBhcmF0dXNfbV9tb3J0YXJfMDEBANQQFWFwcGFyYXR1c19tX21vcnRhcl8wMQEA5hAaQTFWNF9hcHBhcmF0dXNfbV9tb3J0YXJfZTEBAAAASEIAAAwBBnBsYXllcggBAyAgWP0QIG8VYXBwYXJhdHVzX2pfbW9ydGFyXzAxID4gMAwBBnBsYXllctUQFWFwcGFyYXR1c19qX21vcnRhcl8wMQEA1BAVYXBwYXJhdHVzX2pfbW9ydGFyXzAxAQDmEBpBMVY0X2FwcGFyYXR1c19qX21vcnRhcl9lMQEAAABIQgAADAEGcGxheWVyCAEDICBY/RAgbxVhcHBhcmF0dXNfYV9tb3J0YXJfMDEgPiAwDAEGcGxheWVy1RAVYXBwYXJhdHVzX2FfbW9ydGFyXzAxAQDUEBVhcHBhcmF0dXNfYV9tb3J0YXJfMDEBAOYQGkExVjRfYXBwYXJhdHVzX2FfbW9ydGFyX2UxAQAAAEhCAAAJAQAQEADT8fLg7e7i6uAg4+7y7uLgAADdEBwQFUExVjRfQXBwYXJhdHVzU2V0VXBfMQEB
+SCTX
+    Begin A1V4_ApparatusSetUp_1
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( player->GetItemCount apparatus_g_alembic_01 > 0 )
+    	player->RemoveItem apparatus_g_alembic_01, 1
+    	AddItem apparatus_g_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_g_alembic_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_alembic_01 > 0 )
+    	player->RemoveItem apparatus_m_alembic_01, 1
+    	AddItem apparatus_m_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_m_alembic_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_alembic_01 > 0 )
+    	player->RemoveItem apparatus_j_alembic_01, 1
+    	AddItem apparatus_j_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_j_alembic_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_alembic_01 > 0 )
+    	player->RemoveItem apparatus_a_alembic_01, 1
+    	AddItem apparatus_a_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_a_alembic_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
+    	player->RemoveItem apparatus_a_spipe_tsiya, 1
+    	AddItem apparatus_a_spipe_tsiya, 1
+    	PlaceAtPC A1V4_apparatus_a_spipe_tsiya_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
+    	player->RemoveItem apparatus_a_spipe_01, 1
+    	AddItem apparatus_a_spipe_01, 1
+    	PlaceAtPC A1V4_apparatus_a_spipe_e1, 1, 50, 0
+    endif
+    
+    if ( player->GetItemCount apparatus_g_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_g_calcinator_01, 1
+    	AddItem apparatus_g_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_g_calcinator_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_m_calcinator_01, 1
+    	AddItem apparatus_m_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_m_calcinator_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_j_calcinator_01, 1
+    	AddItem apparatus_j_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_j_calcinator_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_a_calcinator_01, 1
+    	AddItem apparatus_a_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_a_calcinator_e1, 1, 50, 0
+    endif
+    
+    if ( player->GetItemCount apparatus_g_retort_01 > 0 )
+    	player->RemoveItem apparatus_g_retort_01, 1
+    	AddItem apparatus_g_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_g_retort_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_retort_01 > 0 )
+    	player->RemoveItem apparatus_m_retort_01, 1
+    	AddItem apparatus_m_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_m_retort_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_retort_01 > 0 )
+    	player->RemoveItem apparatus_j_retort_01, 1
+    	AddItem apparatus_j_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_j_retort_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_retort_01 > 0 )
+    	player->RemoveItem apparatus_a_retort_01, 1
+    	AddItem apparatus_a_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_a_retort_e1, 1, 50, 0
+    endif
+    
+    if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
+    	player->RemoveItem apparatus_g_mortar_01, 1
+    	AddItem apparatus_g_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_g_mortar_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )
+    	player->RemoveItem apparatus_m_mortar_01, 1
+    	AddItem apparatus_m_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_m_mortar_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )
+    	player->RemoveItem apparatus_j_mortar_01, 1
+    	AddItem apparatus_j_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_j_mortar_e1, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )
+    	player->RemoveItem apparatus_a_mortar_01, 1
+    	AddItem apparatus_a_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_a_mortar_e1, 1, 50, 0
+    endif
+    
+    MessageBox "Установка готова"
+    EnablePlayerControls
+    
+    StopScript A1V4_ApparatusSetUp_1
+    
+    End
+
+SCPT
+SCHD A1V4_ApparatusSetUp_2 0 0 0 2736 0
+SCDT BgEBCSBYIBAgPT0gMSQBCQEMAQZwbGF5ZXIGAQMhIFj9ECBvFmFwcGFyYXR1c19nX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX2dfYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX2dfYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfZ19hbGVtYmljX2UyAQAAAEhCAAAMAQZwbGF5ZXIIAQMhIFj9ECBvFmFwcGFyYXR1c19tX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX21fYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX21fYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfbV9hbGVtYmljX2UyAQAAAEhCAAAMAQZwbGF5ZXIIAQMhIFj9ECBvFmFwcGFyYXR1c19qX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX2pfYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX2pfYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfal9hbGVtYmljX2UyAQAAAEhCAAAMAQZwbGF5ZXIIAQMhIFj9ECBvFmFwcGFyYXR1c19hX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX2FfYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX2FfYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfYV9hbGVtYmljX2UyAQAAAEhCAAAMAQZwbGF5ZXIIAQMiIFj9ECBvF2FwcGFyYXR1c19hX3NwaXBlX3RzaXlhID4gMAwBBnBsYXllctUQF2FwcGFyYXR1c19hX3NwaXBlX3RzaXlhAQDUEBdhcHBhcmF0dXNfYV9zcGlwZV90c2l5YQEA5hAfQTFWNF9hcHBhcmF0dXNfYV9zcGlwZV90c2l5YV9lMgEAAABIQgAADAEGcGxheWVyCAEDHyBY/RAgbxRhcHBhcmF0dXNfYV9zcGlwZV8wMSA+IDAMAQZwbGF5ZXLVEBRhcHBhcmF0dXNfYV9zcGlwZV8wMQEA1BAUYXBwYXJhdHVzX2Ffc3BpcGVfMDEBAOYQGUExVjRfYXBwYXJhdHVzX2Ffc3BpcGVfZTIBAAAASEIAAAkBDAEGcGxheWVyBgEDJCBY/RAgbxlhcHBhcmF0dXNfZ19jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19nX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19nX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX2dfY2FsY2luYXRvcl9lMgEAAABIQgAADAEGcGxheWVyCAEDJCBY/RAgbxlhcHBhcmF0dXNfbV9jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19tX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19tX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX21fY2FsY2luYXRvcl9lMgEAAABIQgAADAEGcGxheWVyCAEDJCBY/RAgbxlhcHBhcmF0dXNfal9jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19qX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19qX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX2pfY2FsY2luYXRvcl9lMgEAAABIQgAADAEGcGxheWVyCAEDJCBY/RAgbxlhcHBhcmF0dXNfYV9jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19hX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19hX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX2FfY2FsY2luYXRvcl9lMgEAAABIQgAACQEMAQZwbGF5ZXIGAQMgIFj9ECBvFWFwcGFyYXR1c19nX3JldG9ydF8wMSA+IDAMAQZwbGF5ZXLVEBVhcHBhcmF0dXNfZ19yZXRvcnRfMDEBANQQFWFwcGFyYXR1c19nX3JldG9ydF8wMQEA5hAaQTFWNF9hcHBhcmF0dXNfZ19yZXRvcnRfZTIBAAAASEIAAAwBBnBsYXllcggBAyAgWP0QIG8VYXBwYXJhdHVzX21fcmV0b3J0XzAxID4gMAwBBnBsYXllctUQFWFwcGFyYXR1c19tX3JldG9ydF8wMQEA1BAVYXBwYXJhdHVzX21fcmV0b3J0XzAxAQDmEBpBMVY0X2FwcGFyYXR1c19tX3JldG9ydF9lMgEAAABIQgAADAEGcGxheWVyCAEDICBY/RAgbxVhcHBhcmF0dXNfal9yZXRvcnRfMDEgPiAwDAEGcGxheWVy1RAVYXBwYXJhdHVzX2pfcmV0b3J0XzAxAQDUEBVhcHBhcmF0dXNfal9yZXRvcnRfMDEBAOYQGkExVjRfYXBwYXJhdHVzX2pfcmV0b3J0X2UyAQAAAEhCAAAMAQZwbGF5ZXIIAQMgIFj9ECBvFWFwcGFyYXR1c19hX3JldG9ydF8wMSA+IDAMAQZwbGF5ZXLVEBVhcHBhcmF0dXNfYV9yZXRvcnRfMDEBANQQFWFwcGFyYXR1c19hX3JldG9ydF8wMQEA5hAaQTFWNF9hcHBhcmF0dXNfYV9yZXRvcnRfZTIBAAAASEIAAAkBDAEGcGxheWVyBgEDICBY/RAgbxVhcHBhcmF0dXNfZ19tb3J0YXJfMDEgPiAwDAEGcGxheWVy1RAVYXBwYXJhdHVzX2dfbW9ydGFyXzAxAQDUEBVhcHBhcmF0dXNfZ19tb3J0YXJfMDEBAOYQGkExVjRfYXBwYXJhdHVzX2dfbW9ydGFyX2UyAQAAAEhCAAAMAQZwbGF5ZXIIAQMgIFj9ECBvFWFwcGFyYXR1c19tX21vcnRhcl8wMSA+IDAMAQZwbGF5ZXLVEBVhcHBhcmF0dXNfbV9tb3J0YXJfMDEBANQQFWFwcGFyYXR1c19tX21vcnRhcl8wMQEA5hAaQTFWNF9hcHBhcmF0dXNfbV9tb3J0YXJfZTIBAAAASEIAAAwBBnBsYXllcggBAyAgWP0QIG8VYXBwYXJhdHVzX2pfbW9ydGFyXzAxID4gMAwBBnBsYXllctUQFWFwcGFyYXR1c19qX21vcnRhcl8wMQEA1BAVYXBwYXJhdHVzX2pfbW9ydGFyXzAxAQDmEBpBMVY0X2FwcGFyYXR1c19qX21vcnRhcl9lMgEAAABIQgAADAEGcGxheWVyCAEDICBY/RAgbxVhcHBhcmF0dXNfYV9tb3J0YXJfMDEgPiAwDAEGcGxheWVy1RAVYXBwYXJhdHVzX2FfbW9ydGFyXzAxAQDUEBVhcHBhcmF0dXNfYV9tb3J0YXJfMDEBAOYQGkExVjRfYXBwYXJhdHVzX2FfbW9ydGFyX2UyAQAAAEhCAAAJAQAQEADT8fLg7e7i6uAg4+7y7uLgAADdEBwQFUExVjRfQXBwYXJhdHVzU2V0VXBfMgEB
+SCTX
+    Begin A1V4_ApparatusSetUp_2
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( player->GetItemCount apparatus_g_alembic_01 > 0 )
+    	player->RemoveItem apparatus_g_alembic_01, 1
+    	AddItem apparatus_g_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_g_alembic_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_alembic_01 > 0 )
+    	player->RemoveItem apparatus_m_alembic_01, 1
+    	AddItem apparatus_m_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_m_alembic_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_alembic_01 > 0 )
+    	player->RemoveItem apparatus_j_alembic_01, 1
+    	AddItem apparatus_j_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_j_alembic_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_alembic_01 > 0 )
+    	player->RemoveItem apparatus_a_alembic_01, 1
+    	AddItem apparatus_a_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_a_alembic_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
+    	player->RemoveItem apparatus_a_spipe_tsiya, 1
+    	AddItem apparatus_a_spipe_tsiya, 1
+    	PlaceAtPC A1V4_apparatus_a_spipe_tsiya_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
+    	player->RemoveItem apparatus_a_spipe_01, 1
+    	AddItem apparatus_a_spipe_01, 1
+    	PlaceAtPC A1V4_apparatus_a_spipe_e2, 1, 50, 0
+    endif
+    
+    if ( player->GetItemCount apparatus_g_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_g_calcinator_01, 1
+    	AddItem apparatus_g_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_g_calcinator_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_m_calcinator_01, 1
+    	AddItem apparatus_m_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_m_calcinator_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_j_calcinator_01, 1
+    	AddItem apparatus_j_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_j_calcinator_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_a_calcinator_01, 1
+    	AddItem apparatus_a_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_a_calcinator_e2, 1, 50, 0
+    endif
+    
+    if ( player->GetItemCount apparatus_g_retort_01 > 0 )
+    	player->RemoveItem apparatus_g_retort_01, 1
+    	AddItem apparatus_g_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_g_retort_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_retort_01 > 0 )
+    	player->RemoveItem apparatus_m_retort_01, 1
+    	AddItem apparatus_m_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_m_retort_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_retort_01 > 0 )
+    	player->RemoveItem apparatus_j_retort_01, 1
+    	AddItem apparatus_j_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_j_retort_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_retort_01 > 0 )
+    	player->RemoveItem apparatus_a_retort_01, 1
+    	AddItem apparatus_a_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_a_retort_e2, 1, 50, 0
+    endif
+    
+    if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
+    	player->RemoveItem apparatus_g_mortar_01, 1
+    	AddItem apparatus_g_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_g_mortar_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )
+    	player->RemoveItem apparatus_m_mortar_01, 1
+    	AddItem apparatus_m_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_m_mortar_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )
+    	player->RemoveItem apparatus_j_mortar_01, 1
+    	AddItem apparatus_j_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_j_mortar_e2, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )
+    	player->RemoveItem apparatus_a_mortar_01, 1
+    	AddItem apparatus_a_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_a_mortar_e2, 1, 50, 0
+    endif
+    
+    MessageBox "Установка готова"
+    EnablePlayerControls
+    
+    StopScript A1V4_ApparatusSetUp_2
+    
+    End
+
+SCPT
+SCHD A1V4_ApparatusSetUp_3 0 0 0 2736 0
+SCDT BgEBCSBYIBAgPT0gMSQBCQEMAQZwbGF5ZXIGAQMhIFj9ECBvFmFwcGFyYXR1c19nX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX2dfYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX2dfYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfZ19hbGVtYmljX2UzAQAAAEhCAAAMAQZwbGF5ZXIIAQMhIFj9ECBvFmFwcGFyYXR1c19tX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX21fYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX21fYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfbV9hbGVtYmljX2UzAQAAAEhCAAAMAQZwbGF5ZXIIAQMhIFj9ECBvFmFwcGFyYXR1c19qX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX2pfYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX2pfYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfal9hbGVtYmljX2UzAQAAAEhCAAAMAQZwbGF5ZXIIAQMhIFj9ECBvFmFwcGFyYXR1c19hX2FsZW1iaWNfMDEgPiAwDAEGcGxheWVy1RAWYXBwYXJhdHVzX2FfYWxlbWJpY18wMQEA1BAWYXBwYXJhdHVzX2FfYWxlbWJpY18wMQEA5hAbQTFWNF9hcHBhcmF0dXNfYV9hbGVtYmljX2UzAQAAAEhCAAAMAQZwbGF5ZXIIAQMiIFj9ECBvF2FwcGFyYXR1c19hX3NwaXBlX3RzaXlhID4gMAwBBnBsYXllctUQF2FwcGFyYXR1c19hX3NwaXBlX3RzaXlhAQDUEBdhcHBhcmF0dXNfYV9zcGlwZV90c2l5YQEA5hAfQTFWNF9hcHBhcmF0dXNfYV9zcGlwZV90c2l5YV9lMwEAAABIQgAADAEGcGxheWVyCAEDHyBY/RAgbxRhcHBhcmF0dXNfYV9zcGlwZV8wMSA+IDAMAQZwbGF5ZXLVEBRhcHBhcmF0dXNfYV9zcGlwZV8wMQEA1BAUYXBwYXJhdHVzX2Ffc3BpcGVfMDEBAOYQGUExVjRfYXBwYXJhdHVzX2Ffc3BpcGVfZTMBAAAASEIAAAkBDAEGcGxheWVyBgEDJCBY/RAgbxlhcHBhcmF0dXNfZ19jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19nX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19nX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX2dfY2FsY2luYXRvcl9lMwEAAABIQgAADAEGcGxheWVyCAEDJCBY/RAgbxlhcHBhcmF0dXNfbV9jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19tX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19tX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX21fY2FsY2luYXRvcl9lMwEAAABIQgAADAEGcGxheWVyCAEDJCBY/RAgbxlhcHBhcmF0dXNfal9jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19qX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19qX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX2pfY2FsY2luYXRvcl9lMwEAAABIQgAADAEGcGxheWVyCAEDJCBY/RAgbxlhcHBhcmF0dXNfYV9jYWxjaW5hdG9yXzAxID4gMAwBBnBsYXllctUQGWFwcGFyYXR1c19hX2NhbGNpbmF0b3JfMDEBANQQGWFwcGFyYXR1c19hX2NhbGNpbmF0b3JfMDEBAOYQHkExVjRfYXBwYXJhdHVzX2FfY2FsY2luYXRvcl9lMwEAAABIQgAACQEMAQZwbGF5ZXIGAQMgIFj9ECBvFWFwcGFyYXR1c19nX3JldG9ydF8wMSA+IDAMAQZwbGF5ZXLVEBVhcHBhcmF0dXNfZ19yZXRvcnRfMDEBANQQFWFwcGFyYXR1c19nX3JldG9ydF8wMQEA5hAaQTFWNF9hcHBhcmF0dXNfZ19yZXRvcnRfZTMBAAAASEIAAAwBBnBsYXllcggBAyAgWP0QIG8VYXBwYXJhdHVzX21fcmV0b3J0XzAxID4gMAwBBnBsYXllctUQFWFwcGFyYXR1c19tX3JldG9ydF8wMQEA1BAVYXBwYXJhdHVzX21fcmV0b3J0XzAxAQDmEBpBMVY0X2FwcGFyYXR1c19tX3JldG9ydF9lMwEAAABIQgAADAEGcGxheWVyCAEDICBY/RAgbxVhcHBhcmF0dXNfal9yZXRvcnRfMDEgPiAwDAEGcGxheWVy1RAVYXBwYXJhdHVzX2pfcmV0b3J0XzAxAQDUEBVhcHBhcmF0dXNfal9yZXRvcnRfMDEBAOYQGkExVjRfYXBwYXJhdHVzX2pfcmV0b3J0X2UzAQAAAEhCAAAMAQZwbGF5ZXIIAQMgIFj9ECBvFWFwcGFyYXR1c19hX3JldG9ydF8wMSA+IDAMAQZwbGF5ZXLVEBVhcHBhcmF0dXNfYV9yZXRvcnRfMDEBANQQFWFwcGFyYXR1c19hX3JldG9ydF8wMQEA5hAaQTFWNF9hcHBhcmF0dXNfYV9yZXRvcnRfZTMBAAAASEIAAAkBDAEGcGxheWVyBgEDICBY/RAgbxVhcHBhcmF0dXNfZ19tb3J0YXJfMDEgPiAwDAEGcGxheWVy1RAVYXBwYXJhdHVzX2dfbW9ydGFyXzAxAQDUEBVhcHBhcmF0dXNfZ19tb3J0YXJfMDEBAOYQGkExVjRfYXBwYXJhdHVzX2dfbW9ydGFyX2UzAQAAAEhCAAAMAQZwbGF5ZXIIAQMgIFj9ECBvFWFwcGFyYXR1c19tX21vcnRhcl8wMSA+IDAMAQZwbGF5ZXLVEBVhcHBhcmF0dXNfbV9tb3J0YXJfMDEBANQQFWFwcGFyYXR1c19tX21vcnRhcl8wMQEA5hAaQTFWNF9hcHBhcmF0dXNfbV9tb3J0YXJfZTMBAAAASEIAAAwBBnBsYXllcggBAyAgWP0QIG8VYXBwYXJhdHVzX2pfbW9ydGFyXzAxID4gMAwBBnBsYXllctUQFWFwcGFyYXR1c19qX21vcnRhcl8wMQEA1BAVYXBwYXJhdHVzX2pfbW9ydGFyXzAxAQDmEBpBMVY0X2FwcGFyYXR1c19qX21vcnRhcl9lMwEAAABIQgAADAEGcGxheWVyCAEDICBY/RAgbxVhcHBhcmF0dXNfYV9tb3J0YXJfMDEgPiAwDAEGcGxheWVy1RAVYXBwYXJhdHVzX2FfbW9ydGFyXzAxAQDUEBVhcHBhcmF0dXNfYV9tb3J0YXJfMDEBAOYQGkExVjRfYXBwYXJhdHVzX2FfbW9ydGFyX2UzAQAAAEhCAAAJAQAQEADT8fLg7e7i6uAg4+7y7uLgAADdEBwQFUExVjRfQXBwYXJhdHVzU2V0VXBfMwEB
+SCTX
+    Begin A1V4_ApparatusSetUp_3
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( player->GetItemCount apparatus_g_alembic_01 > 0 )
+    	player->RemoveItem apparatus_g_alembic_01, 1
+    	AddItem apparatus_g_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_g_alembic_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_alembic_01 > 0 )
+    	player->RemoveItem apparatus_m_alembic_01, 1
+    	AddItem apparatus_m_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_m_alembic_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_alembic_01 > 0 )
+    	player->RemoveItem apparatus_j_alembic_01, 1
+    	AddItem apparatus_j_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_j_alembic_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_alembic_01 > 0 )
+    	player->RemoveItem apparatus_a_alembic_01, 1
+    	AddItem apparatus_a_alembic_01, 1
+    	PlaceAtPC A1V4_apparatus_a_alembic_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
+    	player->RemoveItem apparatus_a_spipe_tsiya, 1
+    	AddItem apparatus_a_spipe_tsiya, 1
+    	PlaceAtPC A1V4_apparatus_a_spipe_tsiya_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
+    	player->RemoveItem apparatus_a_spipe_01, 1
+    	AddItem apparatus_a_spipe_01, 1
+    	PlaceAtPC A1V4_apparatus_a_spipe_e3, 1, 50, 0
+    endif
+    
+    if ( player->GetItemCount apparatus_g_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_g_calcinator_01, 1
+    	AddItem apparatus_g_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_g_calcinator_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_m_calcinator_01, 1
+    	AddItem apparatus_m_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_m_calcinator_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_j_calcinator_01, 1
+    	AddItem apparatus_j_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_j_calcinator_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
+    	player->RemoveItem apparatus_a_calcinator_01, 1
+    	AddItem apparatus_a_calcinator_01, 1
+    	PlaceAtPC A1V4_apparatus_a_calcinator_e3, 1, 50, 0
+    endif
+    
+    if ( player->GetItemCount apparatus_g_retort_01 > 0 )
+    	player->RemoveItem apparatus_g_retort_01, 1
+    	AddItem apparatus_g_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_g_retort_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_retort_01 > 0 )
+    	player->RemoveItem apparatus_m_retort_01, 1
+    	AddItem apparatus_m_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_m_retort_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_retort_01 > 0 )
+    	player->RemoveItem apparatus_j_retort_01, 1
+    	AddItem apparatus_j_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_j_retort_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_retort_01 > 0 )
+    	player->RemoveItem apparatus_a_retort_01, 1
+    	AddItem apparatus_a_retort_01, 1
+    	PlaceAtPC A1V4_apparatus_a_retort_e3, 1, 50, 0
+    endif
+    
+    if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
+    	player->RemoveItem apparatus_g_mortar_01, 1
+    	AddItem apparatus_g_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_g_mortar_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )
+    	player->RemoveItem apparatus_m_mortar_01, 1
+    	AddItem apparatus_m_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_m_mortar_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )
+    	player->RemoveItem apparatus_j_mortar_01, 1
+    	AddItem apparatus_j_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_j_mortar_e3, 1, 50, 0
+    elseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )
+    	player->RemoveItem apparatus_a_mortar_01, 1
+    	AddItem apparatus_a_mortar_01, 1
+    	PlaceAtPC A1V4_apparatus_a_mortar_e3, 1, 50, 0
+    endif
+    
+    MessageBox "Установка готова"
+    EnablePlayerControls
+    
+    StopScript A1V4_ApparatusSetUp_3
+    
+    End
+
+SCPT
+SCHD A1V4_CalcAlchemy2_sc 15 5 2 1961 147
+SCVR bbb;bbb2;sss;sss2;random25;rrandom100;in;pin;temp;state;alembic_up;alembic_down;mortar;retort;calcinator;alchemy;luck;lk;p_success;tempi;tempf;exp;;
+SCDT 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
+SCTX
+    Begin A1V4_CalcAlchemy2_sc
+    
+    short bbb
+    short bbb2
+    short sss
+    short sss2
+    long alchemy
+    long luck
+    short random25
+    short rrandom100
+    short in
+    short pin
+    long lk
+    long p_success
+    short temp
+    float tempf
+    long tempi
+    short state
+    short alembic_up
+    short alembic_down
+    short mortar
+    short retort
+    short calcinator
+    float exp
+    
+    if ( state == 5 )
+    	if ( ScriptRunning A1V4_ModAlchemyExp == 0 )
+    		set state to 0
+    		StopScript A1V4_CalcAlchemy2_sc
+    	endif
+    endif
+    
+    if ( state == 4 )
+    	set bbb2 to 0
+    	set sss2 to 0
+    	set bbb to 0
+    	set sss to 0
+    	set temp to 2
+    	if ( in > 0 )
+    		set in to ( in - pin )
+    		if ( in > 0 )
+    			set bbb2 to alembic_down
+    			set sss2 to alembic_up
+    			set temp to 1
+    		else
+    			set in to ( in + 100 )
+    		endif
+    	endif
+    	set rrandom100 to ( Random 100 )
+    	if ( rrandom100 < in )
+    		set bbb to alembic_down
+    		set sss to alembic_up
+    		set temp to 1
+    	endif
+    	set A1V4_AlchemyRes to temp
+    	if ( temp == 1 )
+    		set A1V4_ModAlchemyExp.Value to exp
+    		StartScript A1V4_ModAlchemyExp
+    	endif
+    	set A1V4_PotionB to bbb
+    	set A1V4_PotionC to bbb2
+    	set A1V4_PotionS to sss
+    	set A1V4_PotionQ to sss2
+    	set A1V4_PotionE to 0
+    	set state to 5
+    	return
+    endif
+    
+    if ( state == 3 )
+    	set tempf to ( player->GetAlchemy )
+    	set alchemy to tempf
+    	set tempf to ( player->GetLuck )
+    	set luck to tempf
+    	set temp to ( Random 100 )
+    	set random25 to ( temp / 4 )
+    	set rrandom100 to ( Random 100 )
+    
+    	if ( luck < 40 )
+    		set lk to ( luck - 40 )
+    	elseif ( luck < 60 )
+    		set tempi to ( luck - 40 )
+    		set lk to ( tempi / 4 )
+    	else
+    		set tempi to ( luck - 60 )
+    		set tempi to ( tempi / 8 )
+    		set lk to ( 5 + tempi )
+    	endif
+    
+    	set lk to ( lk + alchemy )
+    	set lk to ( lk + retort )
+    
+    	set p_success to lk
+    	if ( p_success > 100 )
+    		set exp to 1
+    	elseif ( p_success <= 0 )
+    		set exp to 0
+    	else
+    		set exp to p_success
+    		set exp to ( 100.0 / exp )
+    	endif
+    	if ( p_success > calcinator )
+    		set p_success to calcinator
+    	endif
+    	if ( rrandom100 >= p_success )
+    		set in to 0
+    	endif
+    	if ( in > 1 )
+    		set in to lk
+    	else
+    		set in to 0
+    	endif
+    	if ( in > mortar )
+    		set in to mortar
+    	endif
+    	set state to 4
+    	return
+    endif
+    
+    if ( state == 0 )
+    	if ( GetItemCount apparatus_g_mortar_01 > 0 )
+    		set mortar to 100
+    	elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
+    		set mortar to 80
+    	elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
+    		set mortar to 60
+    	elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
+    		set mortar to 40
+    	else
+    		set mortar to 0
+    	endif
+    
+    	if ( GetItemCount apparatus_g_retort_01 > 0 )
+    		set retort to 5
+    	elseif ( GetItemCount apparatus_m_retort_01 > 0 )
+    		set retort to 0
+    	elseif ( GetItemCount apparatus_j_retort_01 > 0 )
+    		set retort to -5
+    	elseif ( GetItemCount apparatus_a_retort_01 > 0 )
+    		set retort to -10
+    	else
+    		set retort to -20
+    	endif
+    
+    	if ( GetItemCount apparatus_g_alembic_01 > 0 )
+    		set alembic_up to 5
+    		set alembic_down to 3
+    	elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
+    		set alembic_up to 4
+    		set alembic_down to 4
+    	elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
+    		set alembic_up to 3
+    		set alembic_down to 5
+    	elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
+    		set alembic_up to 2
+    		set alembic_down to 6
+    	elseif ( GetItemCount apparatus_a_spipe_01 > 0 )
+    		set alembic_up to 1
+    		set alembic_down to 7
+    	elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
+    		set alembic_up to 1
+    		set alembic_down to 7
+    	else
+    		set alembic_up to 0
+    		set alembic_down to 8
+    	endif
+    
+    	if ( GetItemCount apparatus_g_calcinator_01 > 0 )
+    		set calcinator to 100
+    	elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
+    		set calcinator to 95
+    	elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+    		set calcinator to 80
+    	elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
+    		set calcinator to 65
+    	else
+    		set calcinator to 50
+    	endif
+    	set state to 3
+    	return
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_CalcAlchemy5_sc 15 5 2 2149 145
+SCVR bbb;ccc;sss;qqq;eee;random25;rrandom100;in;temp;state;alembic_up;alembic_down;mortar;retort;calcinator;alchemy;luck;lk;p_success;tempi;tempf;exp;;
+SCDT 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
+SCTX
+    Begin A1V4_CalcAlchemy5_sc
+    
+    short bbb
+    short ccc
+    short sss
+    short qqq
+    short eee
+    long alchemy
+    long luck
+    short random25
+    short rrandom100
+    short in
+    long lk
+    long p_success
+    short temp
+    float tempf
+    long tempi
+    short state
+    short alembic_up
+    short alembic_down
+    short mortar
+    short retort
+    short calcinator
+    float exp
+    
+    if ( state == 5 )
+    	if ( ScriptRunning A1V4_ModAlchemyExp == 0 )
+    		set state to 0
+    		StopScript A1V4_CalcAlchemy5_sc
+    	endif
+    endif
+    
+    if ( state == 4 )
+    	set bbb to 0
+    	set ccc to 0
+    	set sss to 0
+    	set qqq to 0
+    	set eee to 0
+    	if ( in < 0 )
+    		set A1V4_AlchemyRes to 2
+    	else
+    		set temp to ( in + 20 )
+    		if ( temp < 20 )
+    			set bbb to ( bbb + alembic_up )
+    		elseif ( temp < 40 )
+    			set ccc to ( ccc + alembic_up )
+    		elseif ( temp < 60 )
+    			set sss to ( sss + alembic_up )
+    		elseif ( temp < 80 )
+    			set qqq to ( qqq + alembic_up )
+    		else
+    			set eee to ( eee + alembic_up )
+    		endif
+    		if ( in < 20 )
+    			set bbb to ( bbb + alembic_down )
+    		elseif ( in < 40 )
+    			set ccc to ( ccc + alembic_down )
+    		elseif ( in < 60 )
+    			set sss to ( sss + alembic_down )
+    		elseif ( in < 80 )
+    			set qqq to ( qqq + alembic_down )
+    		else
+    			set eee to ( eee + alembic_down )
+    		endif
+    		set A1V4_AlchemyRes to 1
+    		set A1V4_ModAlchemyExp.Value to exp
+    		StartScript A1V4_ModAlchemyExp
+    	endif
+    	set A1V4_PotionB to bbb
+    	set A1V4_PotionC to ccc
+    	set A1V4_PotionS to sss
+    	set A1V4_PotionQ to qqq
+    	set A1V4_PotionE to eee
+    	set state to 5
+    	return
+    endif
+    
+    if ( state == 3 )
+    	set tempf to ( player->GetAlchemy )
+    	set alchemy to tempf
+    	set tempf to ( player->GetLuck )
+    	set luck to tempf
+    	set temp to ( Random 100 )
+    	set random25 to ( temp / 4 )
+    	set rrandom100 to ( Random 100 )
+    
+    	if ( luck < 40 )
+    		set lk to ( luck - 40 )
+    	elseif ( luck < 60 )
+    		set tempi to ( luck - 40 )
+    		set lk to ( tempi / 4 )
+    	else
+    		set tempi to ( luck - 60 )
+    		set tempi to ( tempi / 8 )
+    		set lk to ( 5 + tempi )
+    	endif
+    
+    	set lk to ( lk + alchemy )
+    	set lk to ( lk + retort )
+    
+    	set p_success to lk
+    	if ( p_success > 100 )
+    		set exp to 1
+    	elseif ( p_success <= 0 )
+    		set exp to 0
+    	else
+    		set exp to p_success
+    		set exp to ( 100.0 / exp )
+    	endif
+    	if ( p_success > calcinator )
+    		set p_success to calcinator
+    	endif
+    	if ( rrandom100 >= p_success )
+    		set in to 0
+    	endif
+    	if ( in > 1 )
+    		set tempi to ( lk + random25 )
+    		set in to ( tempi - 32 )
+    	else
+    		set in to -1
+    	endif
+    	if ( in > mortar )
+    		set in to mortar
+    	endif
+    	set state to 4
+    	return
+    endif
+    
+    if ( state == 0 )
+    	if ( GetItemCount apparatus_g_mortar_01 > 0 )
+    		set mortar to 99
+    	elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
+    		set mortar to 79
+    	elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
+    		set mortar to 59
+    	elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
+    		set mortar to 39
+    	else
+    		set mortar to -1
+    	endif
+    
+    	if ( GetItemCount apparatus_g_retort_01 > 0 )
+    		set retort to 5
+    	elseif ( GetItemCount apparatus_m_retort_01 > 0 )
+    		set retort to 0
+    	elseif ( GetItemCount apparatus_j_retort_01 > 0 )
+    		set retort to -5
+    	elseif ( GetItemCount apparatus_a_retort_01 > 0 )
+    		set retort to -10
+    	else
+    		set retort to -20
+    	endif
+    
+    	if ( GetItemCount apparatus_g_alembic_01 > 0 )
+    		set alembic_up to 5
+    		set alembic_down to 3
+    	elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
+    		set alembic_up to 4
+    		set alembic_down to 4
+    	elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
+    		set alembic_up to 3
+    		set alembic_down to 5
+    	elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
+    		set alembic_up to 2
+    		set alembic_down to 6
+    	elseif ( GetItemCount apparatus_a_spipe_01 > 0 )
+    		set alembic_up to 1
+    		set alembic_down to 7
+    	elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
+    		set alembic_up to 1
+    		set alembic_down to 7
+    	else
+    		set alembic_up to 0
+    		set alembic_down to 8
+    	endif
+    
+    	if ( GetItemCount apparatus_g_calcinator_01 > 0 )
+    		set calcinator to 100
+    	elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
+    		set calcinator to 95
+    	elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+    		set calcinator to 80
+    	elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
+    		set calcinator to 65
+    	else
+    		set calcinator to 50
+    	endif
+    	set state to 3
+    	return
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_Calcinator_1_sc 1 0 3 232 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzEgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAFCBHEEExVjRfQ2FsY2luYXRvclgABQFmAgAUIEcQQTFWNF9DYWxjaW5hdG9yWQAFAWYDABMgRw9BMVY0X0FwcGFyYXR1c1oABQFmAwAJIGYDACAxNSAtCxBYZgEAAAsQWWYCAAALEFpmAwAACQEBAQ==
+SCTX
+    Begin A1V4_Calcinator_1_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_1 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_CalcinatorX
+    	set cy to A1V4_CalcinatorY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_Calcinator_2_sc 1 0 3 232 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzIgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAFCBHEEExVjRfQ2FsY2luYXRvclgABQFmAgAUIEcQQTFWNF9DYWxjaW5hdG9yWQAFAWYDABMgRw9BMVY0X0FwcGFyYXR1c1oABQFmAwAJIGYDACAxNSAtCxBYZgEAAAsQWWYCAAALEFpmAwAACQEBAQ==
+SCTX
+    Begin A1V4_Calcinator_2_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_2 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_CalcinatorX
+    	set cy to A1V4_CalcinatorY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_Calcinator_3_sc 1 0 3 232 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzMgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAFCBHEEExVjRfQ2FsY2luYXRvclgABQFmAgAUIEcQQTFWNF9DYWxjaW5hdG9yWQAFAWYDABMgRw9BMVY0X0FwcGFyYXR1c1oABQFmAwAJIGYDACAxNSAtCxBYZgEAAAsQWWYCAAALEFpmAwAACQEBAQ==
+SCTX
+    Begin A1V4_Calcinator_3_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_3 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_CalcinatorX
+    	set cy to A1V4_CalcinatorY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_ModAlchemyExp 0 0 5 283 32
+SCVR Value;alch1;alch2;tempf1;tempf2;;
+SCDT BQFmBAAKIDEuNSBmAQAgKgUBZgUAEyBHD0ExVjRfQWxjaGVteUV4cAAFAWYEAAogZgQAIGYFACArBQFHD0ExVjRfQWxjaGVteUV4cAUgZgQAAAYBCBkgRw9BMVY0X0FsY2hlbXlFeHAgPj0gMTAwBQFHD0ExVjRfQWxjaGVteUV4cAIgMAwBBnBsYXllcgUBZgIABSBYaxAADAEGcGxheWVybRAAAIA/DAEGcGxheWVyBQFmAwAFIFhrEAAGAQILIGYDACA+IGYCAAACEApza2lsbHJhaXNlABAfAMLg+CDt4OL76iDg6/Xo7OjoIOL78O7xIOTuICUuMGYBZgMAAAkBCQEcEBJBMVY0X01vZEFsY2hlbXlFeHABAQ==
+SCTX
+    Begin A1V4_ModAlchemyExp
+    
+    float Value
+    float alch1
+    float alch2
+    float tempf1
+    float tempf2
+    
+    set tempf1 to ( 1.5 * Value )
+    set tempf2 to A1V4_AlchemyExp
+    set tempf1 to ( tempf1 + tempf2 )
+    set A1V4_AlchemyExp to tempf1
+    if ( A1V4_AlchemyExp >= 100 )
+    	set A1V4_AlchemyExp to 0
+    	set alch1 to ( player->GetAlchemy )
+    	player->ModAlchemy 1
+    	set alch2 to ( player->GetAlchemy )
+    	if ( alch2 > alch1 )
+    		PlaySound skillraise
+    		MessageBox "Ваш навык алхимии вырос до %.0f", alch2
+    	endif
+    endif
+    
+    StopScript A1V4_ModAlchemyExp
+    
+    End
+
+SCPT
+SCHD A1V4_Mortar_1_sc 1 0 3 224 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzEgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAECBHDEExVjRfTW9ydGFyWAAFAWYCABAgRwxBMVY0X01vcnRhclkABQFmAwATIEcPQTFWNF9BcHBhcmF0dXNaAAUBZgMACSBmAwAgMTUgLQsQWGYBAAALEFlmAgAACxBaZgMAAAkBAQE=
+SCTX
+    Begin A1V4_Mortar_1_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_1 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_MortarX
+    	set cy to A1V4_MortarY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_Mortar_2_sc 1 0 3 224 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzIgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAECBHDEExVjRfTW9ydGFyWAAFAWYCABAgRwxBMVY0X01vcnRhclkABQFmAwATIEcPQTFWNF9BcHBhcmF0dXNaAAUBZgMACSBmAwAgMTUgLQsQWGYBAAALEFlmAgAACxBaZgMAAAkBAQE=
+SCTX
+    Begin A1V4_Mortar_2_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_2 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_MortarX
+    	set cy to A1V4_MortarY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_Mortar_3_sc 1 0 3 224 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzMgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAECBHDEExVjRfTW9ydGFyWAAFAWYCABAgRwxBMVY0X01vcnRhclkABQFmAwATIEcPQTFWNF9BcHBhcmF0dXNaAAUBZgMACSBmAwAgMTUgLQsQWGYBAAALEFlmAgAACxBaZgMAAAkBAQE=
+SCTX
+    Begin A1V4_Mortar_3_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_3 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_MortarX
+    	set cy to A1V4_MortarY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_Retort_1_sc 1 0 3 224 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzEgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAECBHDEExVjRfUmV0b3J0WAAFAWYCABAgRwxBMVY0X1JldG9ydFkABQFmAwATIEcPQTFWNF9BcHBhcmF0dXNaAAUBZgMACSBmAwAgMTUgLQsQWGYBAAALEFlmAgAACxBaZgMAAAkBAQE=
+SCTX
+    Begin A1V4_Retort_1_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_1 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_RetortX
+    	set cy to A1V4_RetortY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_Retort_2_sc 1 0 3 224 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzIgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAECBHDEExVjRfUmV0b3J0WAAFAWYCABAgRwxBMVY0X1JldG9ydFkABQFmAwATIEcPQTFWNF9BcHBhcmF0dXNaAAUBZgMACSBmAwAgMTUgLQsQWGYBAAALEFlmAgAACxBaZgMAAAkBAQE=
+SCTX
+    Begin A1V4_Retort_2_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_2 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_RetortX
+    	set cy to A1V4_RetortY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
+
+SCPT
+SCHD A1V4_Retort_3_sc 1 0 3 224 16
+SCVR doOnce;cx;cy;cz;;
+SCDT BgEBCSBYIBAgPT0gMSQBCQEGAQIJIFjcECA9PSAxqxEBACQBCQEGAQEfIEcXQTFWNF9BcHBhcmF0dXNEaXNhYmxlXzMgPT0gMdsQCQEGAQEJIFgYECA9PSAxJAEJAQYBCAkgcwEAID09IDAFAXMBAAIgMQUBZgEAECBHDEExVjRfUmV0b3J0WAAFAWYCABAgRwxBMVY0X1JldG9ydFkABQFmAwATIEcPQTFWNF9BcHBhcmF0dXNaAAUBZgMACSBmAwAgMTUgLQsQWGYBAAALEFlmAgAACxBaZgMAAAkBAQE=
+SCTX
+    Begin A1V4_Retort_3_sc
+    
+    short doOnce
+    float cx
+    float cy
+    float cz
+    
+    if ( MenuMode == 1 )
+    	return
+    endif
+    
+    if ( GetDisabled == 1 )
+    	SetDelete 1
+    	return
+    endif
+    
+    if ( A1V4_ApparatusDisable_3 == 1 )
+    	Disable
+    endif
+    
+    if ( OnActivate == 1 )
+    	return
+    endif
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	set cx to A1V4_RetortX
+    	set cy to A1V4_RetortY
+    	set cz to A1V4_ApparatusZ
+    	set cz to ( cz - 15 )
+    	SetPos X cx
+    	SetPos Y cy
+    	SetPos Z cz
+    endif
+    
+    End
 
 INGR
 NAME A1V4_AlchemyActivator

@@ -1,7 +1,0 @@
-SCTX
-    Begin A1V4_AlchemyCheck_sc
-    
-    StopScript A1V4_AlchemyCheck_sc
-    StartScript A1V4_ACheck1_RestoreHealth_sc
-    
-    End

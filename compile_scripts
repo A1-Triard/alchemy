@@ -1,10 +1,6 @@
 #!/bin/sh
 
 basedir="$(dirname "$0")"
-("$basedir/scripts" "$1"  || exit 1) | sort > "${1}.sc_list"
-cat "$2" | sort > "${1}.sc_sorted"
-diff "${1}.sc_list" "${1}.sc_sorted" || exit 1
-rm "${1}.sc_list" "${1}.sc_sorted"
 text="$(cat "$basedir/sc.au_")"
 cat "$basedir/h.au_" > "${1}.au3"
 awk -v TEXT="$text" '{
