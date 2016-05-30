@@ -2,6 +2,8 @@
 
 VERSION=0.0.3
 
+basedir="$(dirname "$0")"
+cd "$basedir"
 ./espa -v A1_Alchemy_Potions || exit 1
 ./espa -v A1_Alchemy_V4_Containers || exit 1
 ./espa -v A1_Alchemy_V4_Apparatus || exit 1

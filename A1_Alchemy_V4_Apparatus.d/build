@@ -1,13 +1,16 @@
 #!/bin/sh
 
+basedir="$(dirname "$0")"
+cd "$basedir"
 cat A1_Alchemy_V4_Apparatus.nosc > A1_Alchemy_V4_Apparatus.sctx
 cd scripts
 for script in *; do
   echo '' >> ../A1_Alchemy_V4_Apparatus.sctx
   echo "SCPT" >> ../A1_Alchemy_V4_Apparatus.sctx
-#  echo "SCHD ${script} 0 0 0 0 0" >> ../A1_Alchemy_V4_Apparatus.sctx
+  echo "SCHD ${script} 0 0 0 0 0" >> ../A1_Alchemy_V4_Apparatus.sctx
   cat $script >> ../A1_Alchemy_V4_Apparatus.sctx
 done
 cd ..
 
 ../espa -v A1_Alchemy_V4_Apparatus.sctx
+../compile_scripts A1_Alchemy_V4_Apparatus.sctx scripts.list

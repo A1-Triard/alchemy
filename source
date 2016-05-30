@@ -1,7 +1,8 @@
 #!/bin/sh
 
-./espa -vd -- "${1}.esp" || exit 1
+basedir="$(dirname "$0")"
+"$basedir/espa" -vd -- "${1}.esp" || exit 1
 mv -- "${1}.esp" "${1}.esp.orig" || exit 1
-./espa -v -- "$1" || exit 1
+"$basedir/espa" -v -- "$1" || exit 1
 diff -- "${1}.esp" "${1}.esp.orig" || exit 1
 rm -- "${1}.esp" "${1}.esp.orig" || exit 1

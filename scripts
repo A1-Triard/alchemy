@@ -1,7 +1,8 @@
 #!/bin/sh
 
+basedir="$(dirname "$0")"
 cp -- "${1}.esp" "${1}.scripts.esp"
-./espa -di SCPT -- "${1}.scripts.esp" || exit 1
+"$basedir/espa" -di SCPT -- "${1}.scripts.esp" || exit 1
 rm -- "${1}.scripts.esp"
 list="$(awk -- 'BEGIN { n = 0 } {
     if(n) {
