@@ -4,10 +4,11 @@ VERSION=0.0.3
 
 basedir="$(dirname "$0")"
 cd "$basedir"
-./espa -v A1_Alchemy_Potions || exit 1
+cp tes3cs/A1_Alchemy_V4_Apparatus.esp . || exit 1
+./source A1_Alchemy_V4_Apparatus
+
 ./espa -v A1_Alchemy_V4_Containers || exit 1
 ./espa -v A1_Alchemy_V4_Apparatus || exit 1
-./espa -v A1_Alchemy_DaeCursed || exit 1
 iconv -f UTF-8 -t CP1251 README | perl -p -e 's/\n/\r\n/' > Readme.txt
 iconv -f UTF-8 -t CP1251 VERSIONS | perl -p -e 's/\n/\r\n/' > Versions.txt
 rm -rf A1_Alchemy_${VERSION}
