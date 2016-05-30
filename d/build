@@ -6,18 +6,18 @@ find scripts -type f -exec basename {} \; | sort > all_scripts
 cat scripts.list | sort > sorted_scripts
 diff sorted_scripts all_scripts || exit 1
 rm all_scripts sorted_scripts
-cat A1_Alchemy_V4_Apparatus.nosc > A1_Alchemy_V4_Apparatus.sctx
+cat h > A.sctx
 cd scripts
 for script in *; do
-  echo '' >> ../A1_Alchemy_V4_Apparatus.sctx
-  echo "SCPT" >> ../A1_Alchemy_V4_Apparatus.sctx
-  echo "SCHD ${script} 0 0 0 0 0" >> ../A1_Alchemy_V4_Apparatus.sctx
-  cat $script >> ../A1_Alchemy_V4_Apparatus.sctx
+  echo '' >> ../A.sctx
+  echo "SCPT" >> ../A.sctx
+  echo "SCHD ${script} 0 0 0 0 0" >> ../A.sctx
+  cat $script >> ../A.sctx
 done
 cd ..
 
-../espa -v A1_Alchemy_V4_Apparatus.sctx
-rm A1_Alchemy_V4_Apparatus.sctx
-../compile_scripts A1_Alchemy_V4_Apparatus.sctx scripts.list
-mv A1_Alchemy_V4_Apparatus.sctx.esp ..
-mv A1_Alchemy_V4_Apparatus.sctx.au3 ..
+../espa -v A.sctx
+rm A.sctx
+../compile_scripts A.sctx scripts.list
+mv A.sctx.esp ..
+mv A.sctx.au3 ..

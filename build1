@@ -10,5 +10,5 @@ rm -rf tes3cs
 mkdir tes3cs
 cp A1_Alchemy_DaeCursed.esp tes3cs
 cp A1_Alchemy_Potions.esp tes3cs
-mv A1_Alchemy_V4_Apparatus.sctx.esp tes3cs
-mv A1_Alchemy_V4_Apparatus.sctx.au3 tes3cs
+mv A.sctx.esp tes3cs
+mv A.sctx.au3 tes3cs
