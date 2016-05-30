@@ -13,4 +13,7 @@ done
 cd ..
 
 ../espa -v A1_Alchemy_V4_Apparatus.sctx
+rm A1_Alchemy_V4_Apparatus.sctx
 ../compile_scripts A1_Alchemy_V4_Apparatus.sctx scripts.list
+mv A1_Alchemy_V4_Apparatus.sctx.esp ..
+mv A1_Alchemy_V4_Apparatus.sctx.au3 ..
