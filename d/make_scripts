@@ -1,0 +1,7 @@
+#!/bin/sh
+
+basedir="$(dirname "$0")"
+cd "$basedir"
+rm -rf s
+mkdir s
+awk -v RS= '{print > ($1)}'
