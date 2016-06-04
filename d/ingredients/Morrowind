@@ -1,89 +1,89 @@
-ingred_dreugh_wax_01:79-0 74-0 17-7 17-2:n\\Ingred_Dreugh_wax_01.NIF+n\\Tx_dreugh_wax_01.tga
-food_kwama_egg_01:77 -1 -1 -1:f\\Food_kwama_egg_01.NIF+m\\Tx_food_kwama_egg_01.tga
-food_kwama_egg_02:77 45 6 80:f\\Food_kwama_egg_02.NIF+m\\Tx_food_kwama_egg_01.tga
-ingred_kwama_cuttle_01:97 20 2 0:n\\Ingred_kwama_cuttle_01.nif+n\\Tx_kwama_cuttle.tga
-ingred_marshmerrow_01:75 65 17-2 20:n\\Ingred_marshmerrow_01.NIF+n\\TX_Ing_marshmerrow.tga
-ingred_saltrice_01:77 81 17 75:n\\Ingred_saltrice_01.NIF+n\\Tx_saltrice_01.tga
-ingred_diamond_01:17-3 39 68 66:n\\Ingred_diamond_01.NIF+n\\Tx_diamond.tga
-ingred_emerald_01:81 75 17-3 17-5:n\\Ingred_emerald_01.NIF+n\\Tx_emerald.tga
-ingred_pearl_01:17-3 57 0 94:n\\Ingred_pearl_01.NIF+n\\Tx_pearl.tga
-ingred_raw_ebony_01:17-3 72 6 74-4:n\\Ingred_RawEbony_01.NIF+n\\Tx_RawEbony.tga
-ingred_ruby_01:18 8 74-1 17-3:n\\Ingred_ruby_01.NIF+n\\Tx_ruby.tga
-ingred_ash_salts_01:17-3 93 70 93:n\\Ingred_ash_salts_01.NIF+n\\Tx_ashsalts_01.tga
-ingred_corprus_weepings_01:20 79-7 17-2 75:n\\Ingred_Corprus_weeping_01.NIF+n\\Tx_corprus_weep_01.tga
-ingred_crab_meat_01:77 92 5 74-7:n\\Ingred_crabmeat_01.NIF+n\\Tx_crabmeat_01.tga
-ingred_daedras_heart_01:76 79-5 17-3 43:n\\Ingred_Daedra_heart_01.NIF+n\\Tx_daedra_heart_01.tga
-ingred_daedra_skin_01:79 69 45 1:n\\Ingred_Daedra_skin_01.NIF+n\\Tx_daedra_skin_01.tga
-ingred_resin_01:75 74-4 7 94:n\\Ingred_resin_01.nif+n\\Tx_resin_01.tga
-ingred_alit_hide_01:17-1 97 59 64:n\\Ingred_Alit_Hide_01.nif+n\\Tx_alit_hide_01.tga
-ingred_ash_yam_01:79-1 79-0 94 66:n\\Ingred_ash_yam_01.nif+n\\Tx_ashyam_01.tga
-ingred_bittergreen_petals_01:74-1 39 17-5 19:n\\Ingred_Bittergreen_01.nif+n\\Tx_bittergreen_petal_01.tga
-ingred_black_anther_01:17-3 90 17-5 41:n\\Ingred_Black_Anther_01.nif+n\\Tx_black_anther_01.tga
-ingred_black_lichen_01:17-0 91 17-4 72:n\\Ingred_Black_Lichen_01.nif+n\\Tx_black_lichen_01.tga
-ingred_bloat_01:19 79-1 79-2 64:n\\Ingred_ash_salts_01.NIF+n\\Tx_ashsalts_01.tga
-ingred_bonemeal_01:74-3 59 20 17-6:n\\Ingred_Blonemeal_01.nif+n\\Tx_bonemeal_01.tga
-ingred_comberry_01:20 76 4 68:n\\Ingred_Comberry_01.nif+n\\Tx_comberry_01.tga
-ingred_chokeweed_01:17-7 77 69 17-2:n\\Ingred_Chokeweed_01.nif+n\\Tx_chokeweed_01.tga
-ingred_corkbulb_root_01:73 75 5 79-7:n\\Ingred_Corkbulb_Root_01.nif+n\\Tx_corkbulb_root_01.tga
-ingred_ectoplasm_01:79-3 64 17-0 18:n\\Ingred_Ectoplasm_01.nif+n\\Tx_ectoplasm_01.tga
-ingred_fire_salts_01:18 79-3 91 4:n\\Ingred_Fire_Salts_01.nif+n\\Tx_firesalt_01.tga
-ingred_frost_salts_01:17-4 76 6 90:n\\Ingred_Frost_Salts_01.nif+n\\Tx_frostsalt_01.tga
-ingred_ghoul_heart_01:45 72 117 -1:n\\Ingred_Ghoul_heart_01.nif+n\\Tx_ghoul_heart_01.tga
-ingred_gold_kanet_01:18 7 17-7 74-0:n\\Ingred_Gold_Kanet_01.nif+n\\Tx_goldkanet_01.tga
-ingred_gravedust_01:17-1 69 19 74-5:n\\Ingred_Gravedust_01.nif+n\\Tx_gravedust_01.tga
-ingred_green_lichen_01:79-6 69 17-0 18:n\\Ingred_Green_Lichen_01.nif+n\\Tx_greenlichen_01.tga
-ingred_guar_hide_01:20 79-5 74-6 79-7:n\\Ingred_Guar_Hide_01.nif+n\\Tx_guarhide_01.tga
-ingred_hackle-lo_leaf_01:77 45 0 74-7:n\\Ingred_Hackle-Lo_01.nif+n\\Tx_hackle-lo_01.tga
-ingred_heather_01:74-6 8 17-4 17-6:n\\Ingred_Heather_01.nif+n\\Tx_heather_01.tga
-ingred_hound_meat_01:77 82 68 65:n\\Ingred_Hound_Meat_01.nif+n\\Tx_houndmeat_01.tga
-ingred_kagouti_hide_01:20 79-4 94 43:n\\Ingred_Kagouti_Hide_01.nif+n\\Tx_kagouti_hide_01.tga
-ingred_kresh_fiber_01:74-7 79-6 19 17-4:n\\Ingred_Kresh_Fiber_01.nif+n\\Tx_kresh_fiber_01.tga
-ingred_moon_sugar_01:79-4 57 17-5 17-7:n\\Ingred_Moon_Sugar_01.nif+n\\Tx_moon_sugar_01.tga
-ingred_muck_01:17-1 66 17-6 69:n\\Ingred_Muck_01.nif+n\\Tx_muck_01.tga
-ingred_netch_leather_01:79-5 79-1 17-6 73:n\\Ingred_Netch_Leather_01.nif+n\\Tx_netch_leather_01.tga
-ingred_racer_plumes_01:17-2 10 -1 -1:n\\Ingred_Racer_Plumes_01.nif+n\\Tx_racer_plumes_01.tga
-ingred_rat_meat_01:19 45 72 97:n\\Ingred_Rat_Meat_01.nif+n\\Tx_rat_meat_01.tga
-ingred_raw_glass_01:17-1 17-0 17-4 4:n\\Ingred_Raw_Glass_01.nif+n\\Tx_RawGlass.tga
-ingred_red_lichen_01:17-1 41 69 19:n\\Ingred_Red_Lichen_01.nif+n\\Tx_red_lichen_01.tga
-ingred_roobrush_01:17-2 79-3 18 72:n\\Ingred_Roobrush_01.nif+n\\Tx_roobrush_01.tga
-ingred_scales_01:17-6 2 74-5 1:n\\Ingred_Scales_01.nif+n\\Tx_scales_01.tga
-ingred_scamp_skin_01:19 73 74-6 74-0:n\\Ingred_Scamp_Skin_01.nif+n\\Tx_scamp_skin_01.tga
-ingred_scathecraw_01:17-0 72 18 74-2:n\\Ingred_Scathecraw_01.nif+n\\Tx_scathecraw_01.tga
-ingred_scrap_metal_01:18 5 92 74-1:n\\Ingred_Scrap_Metal_01.nif+n\\Tx_scrapmetal_01.tga
-ingred_scrib_jelly_01:79-2 72 70 74-2:n\\Ingred_Scrib_Jelly_01.nif+n\\Tx_scrib_jelly_01.tga
-ingred_scuttle_01:77 82 8 59:n\\Ingred_Scuttle_01.nif+n\\Tx_scuttle_01.tga
-ingred_shalk_resin_01:20 80 17-6 79-4:n\\Ingred_Shalk_Resin_01.nif+n\\Tx_shalk_resin_01.tga
-ingred_sload_soap_01:17-6 79-3 4 74-3:n\\Ingred_Sload_Soap_01.nif+n\\Tx_sload_soap_01.tga
-ingred_stoneflower_petals_01:74-0 81 17-7 79-6:n\\Ingred_Stoneflower_01.nif+n\\Tx_stoneflower_01.tga
-ingred_trama_root_01:74-2 10 19 17-4:n\\Ingred_Trama_Root_01.nif+n\\Tx_trama_root_01.tga
-ingred_vampire_dust_01:80 79-0 67 133:n\\Ingred_Vampire_Dust_01.nif+n\\Tx_vampire_dust_01.tga
-ingred_void_salts_01:76 67 45 17-5:n\\Ingred_Void_Salts_01.nif+n\\Tx_void_salts_01.tga
-ingred_wickwheat_01:75 79-2 45 22-1:n\\Ingred_Whickwheat_01.nif+n\\Tx_whickwheat_01.tga
-ingred_willow_anther_01:17-6 6 69 73:n\\Ingred_Willow_Anther_01.nif+n\\Tx_willow_anther_01.tga
-ingred_scrib_jerky_01:77 82 7 1:n\\Ingred_Scrib_Jerky_01.nif+n\\Tx_scrib_jerky_01.tga
-ingred_fire_petal_01:90 18 67 45:n\\Ingred_Fire_Petal_01.nif+n\\Tx_firepetal_01.tga
-ingred_bread_01:77 -1 -1 -1:n\\Ingred_bread_01.NIF+m\\Tx_bread_01.tga
-ingred_coprinus_01:2 20 27 -1:n\\Ingred_coprinus_01.NIF+n\\Tx_coprinus_01.tga
-ingred_russula_01:0 20 27 -1:n\\Ingred_russula_01.NIF+n\\Tx_russula_01.tga
-ingred_bc_ampoule_pod:2 45 64 17-2:n\\Ingred_BC_Ampoule_Pod.NIF+n\\Ingred_BC_Ampoule_Pod.tga
-ingred_bc_bungler's_bane:17-4 17-5 57 17-0:n\\Ingred_BC_Bungler's_Bane.NIF+n\\Ingred_BC_Bungler's_Bane.tga
-ingred_bc_hypha_facia:17-7 17-3 20 65:n\\Ingred_BC_Hypha_Facia.NIF+n\\Ingred_BC_Hypha_Facia.tga
-ingred_bc_spore_pod:17-0 20 66 45:n\\Ingred_BC_Spore_Pod.NIF+n\\Ingred_BC_Spore_Pod.tga
-ingred_bc_coda_flower:17-6 10 17-1 18:n\\Ingred_BC_Coda_Flower.NIF+n\\Ingred_BC_Coda_Flower.tga
-ingred_guar_hide_girith:20 79-5 74-6 79-7:n\\Ingred_Guar_Hide_01.nif+n\\Tx_guarhide_01.tga
-ingred_guar_hide_marsus:20 79-5 74-6 79-7:n\\Ingred_Guar_Hide_01.nif+n\\Tx_guarhide_01.tga
-ingred_raw_glass_tinos:17-1 17-0 17-4 4:n\\Ingred_Raw_Glass_01.nif+n\\Tx_RawGlass.tga
-ingred_treated_bittergreen_uniq:74-1 19 17-5 39:n\\Ingred_Bittergreen_01.nif+n\\Tx_bittergreen_petal_01.tga
-ingred_gold_kanet_unique:18 7 17-7 74-0:n\\Ingred_Gold_Kanet_01.nif+n\\Tx_goldkanet_01.tga
-ingred_bread_01_UNI2:77 -1 -1 -1:n\\Ingred_bread_01.NIF+m\\Tx_bread_01.tga
-poison_goop00:35 23 25 27:n\\Ingred_Corprus_weeping_01.NIF+n\\Tx_corprus_weep_01.tga
-ingred_human_meat_01:80 17-1 17-6 -1:n\\Ingred_Rat_Meat_01.nif+n\\Tx_rat_meat_01.tga
-ingred_6th_corprusmeat_01:20 18 19 -1:n\\Ingred_6th_Corpusmeat_01.NIF+n\\Ingred_6th_Corpusmeat_01.tga
-ingred_6th_corprusmeat_02:20 18 19 -1:n\\Ingred_6th_Corpusmeat_02.NIF+n\\Ingred_6th_Corpusmeat_02.tga
-ingred_6th_corprusmeat_03:20 18 19 -1:n\\Ingred_6th_Corpusmeat_03.NIF+n\\Ingred_6th_Corpusmeat_03.tga
-ingred_6th_corprusmeat_04:20 18 19 -1:n\\Ingred_6th_Corpusmeat_04.NIF+n\\Ingred_6th_Corpusmeat_04.tga
-ingred_6th_corprusmeat_05:20 18 19 -1:n\\Ingred_6th_Corpusmeat_05.NIF+n\\Ingred_6th_Corpusmeat_05.tga
-ingred_6th_corprusmeat_06:20 18 19 -1:n\\Ingred_6th_Corpusmeat_06.NIF+n\\Ingred_6th_Corpusmeat_06.tga
-ingred_6th_corprusmeat_07:20 18 19 -1:n\\Ingred_6th_Corpusmeat_07.NIF+n\\Ingred_6th_Corpusmeat_07.tga
-ingred_scrib_jelly_02:79-2 72 70 74-2:n\\Ingred_Scrib_Jelly_01.nif+n\\Tx_scrib_jelly_01.tga
-ingred_bread_01_UNI3:77 -1 -1 -1:n\\Ingred_bread_01.NIF+m\\Tx_bread_01.tga
+ingred_dreugh_wax_01:79-0:74-0:17-7:17-2:n\\Ingred_Dreugh_wax_01.NIF+n\\Tx_dreugh_wax_01.tga
+food_kwama_egg_01:77:-1:-1:-1:f\\Food_kwama_egg_01.NIF+m\\Tx_food_kwama_egg_01.tga
+food_kwama_egg_02:77:45:6:80:f\\Food_kwama_egg_02.NIF+m\\Tx_food_kwama_egg_01.tga
+ingred_kwama_cuttle_01:97:20:2:0:n\\Ingred_kwama_cuttle_01.nif+n\\Tx_kwama_cuttle.tga
+ingred_marshmerrow_01:75:65:17-2:20:n\\Ingred_marshmerrow_01.NIF+n\\TX_Ing_marshmerrow.tga
+ingred_saltrice_01:77:81:17:75:n\\Ingred_saltrice_01.NIF+n\\Tx_saltrice_01.tga
+ingred_diamond_01:17-3:39:68:66:n\\Ingred_diamond_01.NIF+n\\Tx_diamond.tga
+ingred_emerald_01:81:75:17-3:17-5:n\\Ingred_emerald_01.NIF+n\\Tx_emerald.tga
+ingred_pearl_01:17-3:57:0:94:n\\Ingred_pearl_01.NIF+n\\Tx_pearl.tga
+ingred_raw_ebony_01:17-3:72:6:74-4:n\\Ingred_RawEbony_01.NIF+n\\Tx_RawEbony.tga
+ingred_ruby_01:18:8:74-1:17-3:n\\Ingred_ruby_01.NIF+n\\Tx_ruby.tga
+ingred_ash_salts_01:17-3:93:70:93:n\\Ingred_ash_salts_01.NIF+n\\Tx_ashsalts_01.tga
+ingred_corprus_weepings_01:20:79-7:17-2:75:n\\Ingred_Corprus_weeping_01.NIF+n\\Tx_corprus_weep_01.tga
+ingred_crab_meat_01:77:92:5:74-7:n\\Ingred_crabmeat_01.NIF+n\\Tx_crabmeat_01.tga
+ingred_daedras_heart_01:76:79-5:17-3:43:n\\Ingred_Daedra_heart_01.NIF+n\\Tx_daedra_heart_01.tga
+ingred_daedra_skin_01:79:69:45:1:n\\Ingred_Daedra_skin_01.NIF+n\\Tx_daedra_skin_01.tga
+ingred_resin_01:75:74-4:7:94:n\\Ingred_resin_01.nif+n\\Tx_resin_01.tga
+ingred_alit_hide_01:17-1:97:59:64:n\\Ingred_Alit_Hide_01.nif+n\\Tx_alit_hide_01.tga
+ingred_ash_yam_01:79-1:79-0:94:66:n\\Ingred_ash_yam_01.nif+n\\Tx_ashyam_01.tga
+ingred_bittergreen_petals_01:74-1:39:17-5:19:n\\Ingred_Bittergreen_01.nif+n\\Tx_bittergreen_petal_01.tga
+ingred_black_anther_01:17-3:90:17-5:41:n\\Ingred_Black_Anther_01.nif+n\\Tx_black_anther_01.tga
+ingred_black_lichen_01:17-0:91:17-4:72:n\\Ingred_Black_Lichen_01.nif+n\\Tx_black_lichen_01.tga
+ingred_bloat_01:19:79-1:79-2:64:n\\Ingred_ash_salts_01.NIF+n\\Tx_ashsalts_01.tga
+ingred_bonemeal_01:74-3:59:20:17-6:n\\Ingred_Blonemeal_01.nif+n\\Tx_bonemeal_01.tga
+ingred_comberry_01:20:76:4:68:n\\Ingred_Comberry_01.nif+n\\Tx_comberry_01.tga
+ingred_chokeweed_01:17-7:77:69:17-2:n\\Ingred_Chokeweed_01.nif+n\\Tx_chokeweed_01.tga
+ingred_corkbulb_root_01:73:75:5:79-7:n\\Ingred_Corkbulb_Root_01.nif+n\\Tx_corkbulb_root_01.tga
+ingred_ectoplasm_01:79-3:64:17-0:18:n\\Ingred_Ectoplasm_01.nif+n\\Tx_ectoplasm_01.tga
+ingred_fire_salts_01:18:79-3:91:4:n\\Ingred_Fire_Salts_01.nif+n\\Tx_firesalt_01.tga
+ingred_frost_salts_01:17-4:76:6:90:n\\Ingred_Frost_Salts_01.nif+n\\Tx_frostsalt_01.tga
+ingred_ghoul_heart_01:45:72:117:-1:n\\Ingred_Ghoul_heart_01.nif+n\\Tx_ghoul_heart_01.tga
+ingred_gold_kanet_01:18:7:17-7:74-0:n\\Ingred_Gold_Kanet_01.nif+n\\Tx_goldkanet_01.tga
+ingred_gravedust_01:17-1:69:19:74-5:n\\Ingred_Gravedust_01.nif+n\\Tx_gravedust_01.tga
+ingred_green_lichen_01:79-6:69:17-0:18:n\\Ingred_Green_Lichen_01.nif+n\\Tx_greenlichen_01.tga
+ingred_guar_hide_01:20:79-5:74-6:79-7:n\\Ingred_Guar_Hide_01.nif+n\\Tx_guarhide_01.tga
+ingred_hackle-lo_leaf_01:77:45:0:74-7:n\\Ingred_Hackle-Lo_01.nif+n\\Tx_hackle-lo_01.tga
+ingred_heather_01:74-6:8:17-4:17-6:n\\Ingred_Heather_01.nif+n\\Tx_heather_01.tga
+ingred_hound_meat_01:77:82:68:65:n\\Ingred_Hound_Meat_01.nif+n\\Tx_houndmeat_01.tga
+ingred_kagouti_hide_01:20:79-4:94:43:n\\Ingred_Kagouti_Hide_01.nif+n\\Tx_kagouti_hide_01.tga
+ingred_kresh_fiber_01:74-7:79-6:19:17-4:n\\Ingred_Kresh_Fiber_01.nif+n\\Tx_kresh_fiber_01.tga
+ingred_moon_sugar_01:79-4:57:17-5:17-7:n\\Ingred_Moon_Sugar_01.nif+n\\Tx_moon_sugar_01.tga
+ingred_muck_01:17-1:66:17-6:69:n\\Ingred_Muck_01.nif+n\\Tx_muck_01.tga
+ingred_netch_leather_01:79-5:79-1:17-6:73:n\\Ingred_Netch_Leather_01.nif+n\\Tx_netch_leather_01.tga
+ingred_racer_plumes_01:17-2:10:-1:-1:n\\Ingred_Racer_Plumes_01.nif+n\\Tx_racer_plumes_01.tga
+ingred_rat_meat_01:19:45:72:97:n\\Ingred_Rat_Meat_01.nif+n\\Tx_rat_meat_01.tga
+ingred_raw_glass_01:17-1:17-0:17-4:4:n\\Ingred_Raw_Glass_01.nif+n\\Tx_RawGlass.tga
+ingred_red_lichen_01:17-1:41:69:19:n\\Ingred_Red_Lichen_01.nif+n\\Tx_red_lichen_01.tga
+ingred_roobrush_01:17-2:79-3:18:72:n\\Ingred_Roobrush_01.nif+n\\Tx_roobrush_01.tga
+ingred_scales_01:17-6:2:74-5:1:n\\Ingred_Scales_01.nif+n\\Tx_scales_01.tga
+ingred_scamp_skin_01:19:73:74-6:74-0:n\\Ingred_Scamp_Skin_01.nif+n\\Tx_scamp_skin_01.tga
+ingred_scathecraw_01:17-0:72:18:74-2:n\\Ingred_Scathecraw_01.nif+n\\Tx_scathecraw_01.tga
+ingred_scrap_metal_01:18:5:92:74-1:n\\Ingred_Scrap_Metal_01.nif+n\\Tx_scrapmetal_01.tga
+ingred_scrib_jelly_01:79-2:72:70:74-2:n\\Ingred_Scrib_Jelly_01.nif+n\\Tx_scrib_jelly_01.tga
+ingred_scuttle_01:77:82:8:59:n\\Ingred_Scuttle_01.nif+n\\Tx_scuttle_01.tga
+ingred_shalk_resin_01:20:80:17-6:79-4:n\\Ingred_Shalk_Resin_01.nif+n\\Tx_shalk_resin_01.tga
+ingred_sload_soap_01:17-6:79-3:4:74-3:n\\Ingred_Sload_Soap_01.nif+n\\Tx_sload_soap_01.tga
+ingred_stoneflower_petals_01:74-0:81:17-7:79-6:n\\Ingred_Stoneflower_01.nif+n\\Tx_stoneflower_01.tga
+ingred_trama_root_01:74-2:10:19:17-4:n\\Ingred_Trama_Root_01.nif+n\\Tx_trama_root_01.tga
+ingred_vampire_dust_01:80:79-0:67:133:n\\Ingred_Vampire_Dust_01.nif+n\\Tx_vampire_dust_01.tga
+ingred_void_salts_01:76:67:45:17-5:n\\Ingred_Void_Salts_01.nif+n\\Tx_void_salts_01.tga
+ingred_wickwheat_01:75:79-2:45:22-1:n\\Ingred_Whickwheat_01.nif+n\\Tx_whickwheat_01.tga
+ingred_willow_anther_01:17-6:6:69:73:n\\Ingred_Willow_Anther_01.nif+n\\Tx_willow_anther_01.tga
+ingred_scrib_jerky_01:77:82:7:1:n\\Ingred_Scrib_Jerky_01.nif+n\\Tx_scrib_jerky_01.tga
+ingred_fire_petal_01:90:18:67:45:n\\Ingred_Fire_Petal_01.nif+n\\Tx_firepetal_01.tga
+ingred_bread_01:77:-1:-1:-1:n\\Ingred_bread_01.NIF+m\\Tx_bread_01.tga
+ingred_coprinus_01:2:20:27:-1:n\\Ingred_coprinus_01.NIF+n\\Tx_coprinus_01.tga
+ingred_russula_01:0:20:27:-1:n\\Ingred_russula_01.NIF+n\\Tx_russula_01.tga
+ingred_bc_ampoule_pod:2:45:64:17-2:n\\Ingred_BC_Ampoule_Pod.NIF+n\\Ingred_BC_Ampoule_Pod.tga
+ingred_bc_bungler's_bane:17-4:17-5:57:17-0:n\\Ingred_BC_Bungler's_Bane.NIF+n\\Ingred_BC_Bungler's_Bane.tga
+ingred_bc_hypha_facia:17-7:17-3:20:65:n\\Ingred_BC_Hypha_Facia.NIF+n\\Ingred_BC_Hypha_Facia.tga
+ingred_bc_spore_pod:17-0:20:66:45:n\\Ingred_BC_Spore_Pod.NIF+n\\Ingred_BC_Spore_Pod.tga
+ingred_bc_coda_flower:17-6:10:17-1:18:n\\Ingred_BC_Coda_Flower.NIF+n\\Ingred_BC_Coda_Flower.tga
+ingred_guar_hide_girith:20:79-5:74-6:79-7:n\\Ingred_Guar_Hide_01.nif+n\\Tx_guarhide_01.tga
+ingred_guar_hide_marsus:20:79-5:74-6:79-7:n\\Ingred_Guar_Hide_01.nif+n\\Tx_guarhide_01.tga
+ingred_raw_glass_tinos:17-1:17-0:17-4:4:n\\Ingred_Raw_Glass_01.nif+n\\Tx_RawGlass.tga
+ingred_treated_bittergreen_uniq:74-1:19:17-5:39:n\\Ingred_Bittergreen_01.nif+n\\Tx_bittergreen_petal_01.tga
+ingred_gold_kanet_unique:18:7:17-7:74-0:n\\Ingred_Gold_Kanet_01.nif+n\\Tx_goldkanet_01.tga
+ingred_bread_01_UNI2:77:-1:-1:-1:n\\Ingred_bread_01.NIF+m\\Tx_bread_01.tga
+poison_goop00:35:23:25:27:n\\Ingred_Corprus_weeping_01.NIF+n\\Tx_corprus_weep_01.tga
+ingred_human_meat_01:80:17-1:17-6:-1:n\\Ingred_Rat_Meat_01.nif+n\\Tx_rat_meat_01.tga
+ingred_6th_corprusmeat_01:20:18:19:-1:n\\Ingred_6th_Corpusmeat_01.NIF+n\\Ingred_6th_Corpusmeat_01.tga
+ingred_6th_corprusmeat_02:20:18:19:-1:n\\Ingred_6th_Corpusmeat_02.NIF+n\\Ingred_6th_Corpusmeat_02.tga
+ingred_6th_corprusmeat_03:20:18:19:-1:n\\Ingred_6th_Corpusmeat_03.NIF+n\\Ingred_6th_Corpusmeat_03.tga
+ingred_6th_corprusmeat_04:20:18:19:-1:n\\Ingred_6th_Corpusmeat_04.NIF+n\\Ingred_6th_Corpusmeat_04.tga
+ingred_6th_corprusmeat_05:20:18:19:-1:n\\Ingred_6th_Corpusmeat_05.NIF+n\\Ingred_6th_Corpusmeat_05.tga
+ingred_6th_corprusmeat_06:20:18:19:-1:n\\Ingred_6th_Corpusmeat_06.NIF+n\\Ingred_6th_Corpusmeat_06.tga
+ingred_6th_corprusmeat_07:20:18:19:-1:n\\Ingred_6th_Corpusmeat_07.NIF+n\\Ingred_6th_Corpusmeat_07.tga
+ingred_scrib_jelly_02:79-2:72:70:74-2:n\\Ingred_Scrib_Jelly_01.nif+n\\Tx_scrib_jelly_01.tga
+ingred_bread_01_UNI3:77:-1:-1:-1:n\\Ingred_bread_01.NIF+m\\Tx_bread_01.tga

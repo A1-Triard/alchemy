@@ -1,7 +1,849 @@
 #!/bin/sh
 
+gen_ingrs() {
+    name=$(awk -v FS=':' '{print $2}' "$sd")
+    effect=$(awk -v FS=':' '{print $4}' "$sd")
+    ingrs=scripts2/${name}.ef
+    ingrs15=scripts2/${name}.ef15
+    ingrs30=scripts2/${name}.ef30
+    ingrs45=scripts2/${name}.ef45
+    ingrs60=scripts2/${name}.ef60
+    awk -v FS=':' -v ef=$effect '{
+        if($2 == ef || $3 == ef || $4 == ef || $5 == ef) {
+            print
+        }
+    }' ingredients/Morrowind > $ingrs
+    awk -v FS=':' -v ef=$effect '{
+        if($2 == ef) {
+            print
+        }
+    }' $ingrs > $ingrs15
+    awk -v FS=':' -v ef=$effect '{
+        if($3 == ef) {
+            print
+        }
+    }' $ingrs > $ingrs30
+    awk -v FS=':' -v ef=$effect '{
+        if($4 == ef) {
+            print
+        }
+    }' $ingrs > $ingrs45
+    awk -v FS=':' -v ef=$effect '{
+        if($5 == ef) {
+            print
+        }
+    }' $ingrs > $ingrs60
+}
+
+gen_add() {
+    index=$(awk -v FS=':' '{print $1}' "$sd")
+    name=$(awk -v FS=':' '{print $2}' "$sd")
+    kind=$(awk -v FS=':' '{print $3}' "$sd")
+    add_name=A1V4_AAdd${index}_${name}_sc
+    check_name=A1V4_ACheck${index}_${name}_sc
+    add_s=scripts2/$add_name
+    echo 'SCTX' > $add_s
+    echo "    Begin ${add_name}" >> $add_s
+    echo '    ' >> $add_s
+    effect=$(awk -v FS=':' '{print $4}' "$sd")
+    ingrs=scripts2/${name}.ef
+    ingrs_count=$(wc -l < $ingrs)
+    for i in $(seq 1 $ingrs_count); do
+        echo "    short in${i}" >> $add_s
+    done
+    echo '    short sum' >> $add_s
+    echo '    short temp' >> $add_s
+    echo '    short state' >> $add_s
+    echo '    ' >> $add_s
+    echo '    short PCSkipEquip' >> $add_s
+    echo '    short OnPCEquip' >> $add_s
+    echo '    ' >> $add_s
+    echo '    set PCSkipEquip to 1' >> $add_s
+    echo '    ' >> $add_s
+    echo '    if ( state == 2 )' >> $add_s
+    echo "    	set ${check_name}.AddPotion to 1" >> $add_s
+    echo '    	StartScript A1V4_AlchemyCheck_sc' >> $add_s
+    echo '    	set state to 0' >> $add_s
+    echo '    	return' >> $add_s
+    echo '    endif' >> $add_s
+    echo '    ' >> $add_s
+    echo '    if ( state == 1 )' >> $add_s
+    echo "    	if ( ScriptRunning A1V4_CalcAlchemy${kind}_sc == 0 )" >> $add_s
+    echo '    		set state to 2' >> $add_s
+    echo '    	endif' >> $add_s
+    echo '    	return' >> $add_s
+    echo '    endif' >> $add_s
+    echo '    ' >> $add_s
+    echo '    if ( OnPCEquip == 1 )' >> $add_s
+    echo '    set OnPCEquip to 0' >> $add_s
+    echo '    ' >> $add_s
+    for i in $(seq 1 $ingrs_count); do
+        echo "    set in${i} to 0" >> $add_s
+    done
+    echo '    ' >> $add_s
+    for i in $(seq 1 $ingrs_count); do
+        ingr="\"$(awk -v FS=':' -v N=$i '{ if(FNR == N) { print $1 } }' $ingrs)\""
+        echo "    if ( player->GetItemCount $ingr > 0 )" >> $add_s
+        echo "    	set in${i} to 1" >> $add_s
+        echo '    endif' >> $add_s
+    done
+    echo '    ' >> $add_s
+    echo '    set sum to ( in1 + in2 )' >> $add_s
+    for i in $(seq 3 $ingrs_count); do
+        echo "    set sum to ( sum + in${i} )" >> $add_s
+    done
+    for i in $(seq 1 $ingrs_count); do
+        for ei in $(seq 2 5); do
+            e=$(awk -v FS=':' -v N=$i -v F=$ei '{ if(FNR == N) { print $F } }' $ingrs)
+            if [ "x$e" = "x-1" ]; then
+                true
+            elif [ -n "$(grep $e negative_effects)" ]; then
+                true
+            elif [ -n "$(grep $e neutral_effects)" ]; then
+                true
+            elif [ -n "$(grep $e positive_effects)" ]; then
+                true
+            else
+                echo "unknown effect: $e"
+                exit 1
+            fi
+        done
+    done
+    for i in $(seq 1 $(($ingrs_count - 1))); do
+        for j in $(seq $(($i + 1)) $ingrs_count); do
+            stop=''
+            for e1i in $(seq 2 5); do
+                for e2i in $(seq 2 5); do
+                    e1=$(awk -v FS=':' -v N=$i -v F=$e1i '{ if(FNR == N) { print $F } }' $ingrs)
+                    e2=$(awk -v FS=':' -v N=$j -v F=$e2i '{ if(FNR == N) { print $F } }' $ingrs)
+                    if [ "x${e1}" = "x${e2}" ]; then
+                        if [ -n "$(grep -- $e1 negative_effects)" ]; then
+                            stop='stop'
+                        fi
+                    fi
+                done
+            done
+            is_copy='is_copy'
+            for ei in $(seq 2 5); do
+                e1=$(awk -v FS=':' -v N=$i -v F=$ei '{ if(FNR == N) { print $F } }' $ingrs)
+                e2=$(awk -v FS=':' -v N=$j -v F=$ei '{ if(FNR == N) { print $F } }' $ingrs)
+                if [ "x${e1}" != "x${e2}" ]; then
+                    is_copy=''
+                fi
+            done
+            appearance1=$(awk -v FS=':' -v N=$i '{ if(FNR == N) { print $6 } }' $ingrs)
+            appearance2=$(awk -v FS=':' -v N=$j '{ if(FNR == N) { print $6 } }' $ingrs)
+            if [ "${appearance1}" != "${appearance2}" ]; then
+                is_copy=''
+            fi
+            if [ -n "$stop" -o -n "$is_copy" ]; then
+                echo "    set temp to ( in${i} + in${j} )" >> $add_s
+                echo '    if ( temp > 1 )' >> $add_s
+                echo '    	set sum to 0' >> $add_s
+                echo '    endif' >> $add_s
+            fi
+        done
+    done
+    echo '    if ( sum > 1 )' >> $add_s
+    for i in $(seq 1 $ingrs_count); do
+        ingr="\"$(awk -v FS=':' -v N=$i '{ if(FNR == N) { print $1 } }' $ingrs)\""
+        echo "    	if ( in${i} > 0 )" >> $add_s
+        echo "    		player->RemoveItem ${ingr}, 1" >> $add_s
+        echo '    	endif' >> $add_s
+    done
+    echo '    	set state to 1' >> $add_s
+    echo "    	set A1V4_CalcAlchemy${kind}_sc.in to sum" >> $add_s
+    echo "    	set A1V4_CalcAlchemy${kind} to 1" >> $add_s
+    echo '    else' >> $add_s
+    echo '    	StartScript A1V4_AlchemyCheck_sc' >> $add_s
+    echo '    endif' >> $add_s
+    echo '    ' >> $add_s
+    echo '    endif' >> $add_s
+    echo '    ' >> $add_s
+    echo '    End' >> $add_s
+}
+
+gen_check2() {
+    index=$(awk -v FS=':' '{print $1}' "$sd")
+    name=$(awk -v FS=':' '{print $2}' "$sd")
+    add_name=A1V4_AAdd${index}_${name}_sc
+    check_name=A1V4_ACheck${index}_${name}_sc
+    add_s=scripts2/$check_name
+    echo 'SCTX' > $add_s
+    echo "    Begin ${check_name}" >> $add_s
+    echo '    ' >> $add_s
+    echo '    short AddPotion' >> $add_s
+    effect=$(awk -v FS=':' '{print $4}' "$sd")
+    ingrs=scripts2/${name}.ef
+    ingrs_count=$(wc -l < $ingrs)
+    ingrs15=scripts2/${name}.ef15
+    ingrs30=scripts2/${name}.ef30
+    ingrs45=scripts2/${name}.ef45
+    ingrs60=scripts2/${name}.ef60
+    for i in $(seq 1 $ingrs_count); do
+        echo "    short in${i}" >> $add_s
+    done
+    ingrs15_count=$(wc -l < $ingrs15)
+    ingrs30_count=$(wc -l < $ingrs30)
+    ingrs45_count=$(wc -l < $ingrs45)
+    ingrs60_count=$(wc -l < $ingrs60)
+    if [ $ingrs15_count != 0 ]; then
+        echo '    short sum15' >> $add_s
+    fi
+    if [ $ingrs30_count != 0 ]; then
+        echo '    short sum30' >> $add_s
+    fi
+    if [ $ingrs45_count != 0 ]; then
+        echo '    short sum45' >> $add_s
+    fi
+    if [ $ingrs60_count != 0 ]; then
+        echo '    short sum60' >> $add_s
+    fi
+    echo '    short temp' >> $add_s
+    echo '    short bad' >> $add_s
+    echo '    ' >> $add_s
+    echo '    if ( AddPotion == 1 )' >> $add_s
+    s16="$(awk -v FS=':' '{print $5}' "$sd")"
+    s1="$(awk -v FS=':' '{print $6}' "$sd")"
+    echo '    	if ( A1V4_PotionB == 1 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 1" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 2 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 2" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 3 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 3" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 4 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 4" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 5 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 5" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 6 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 6" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 7 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 7" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 8 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 8" >> $add_s
+    echo '    	endif' >> $add_s
+    echo '    	if ( A1V4_PotionC == 1 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 1" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 2 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 2" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 3 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 3" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 4 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 4" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 5 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 5" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 6 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 6" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 7 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 7" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 8 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 8" >> $add_s
+    echo '    	endif' >> $add_s
+    echo '    	if ( A1V4_PotionS == 1 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 1" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 2 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 2" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 3 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 3" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 4 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 4" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 5 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 5" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 6 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 6" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 7 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 7" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 8 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 8" >> $add_s
+    echo '    	endif' >> $add_s
+    echo '    	if ( A1V4_PotionQ == 1 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 1" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 2 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 2" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 3 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 3" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 4 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 4" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 5 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 5" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 6 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 6" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 7 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 7" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 8 )' >> $add_s
+    echo "    		player->AddItem ${s16}, 8" >> $add_s
+    echo '    	endif' >> $add_s
+    echo '    endif' >> $add_s
+    echo '    ' >> $add_s
+    echo '    set AddPotion to 0' >> $add_s
+    echo '    ' >> $add_s
+    echo "    if ( player->GetItemCount ${s16} >= 16 )" >> $add_s
+    echo "    	player->AddItem ${s1}, 1" >> $add_s
+    echo "    	player->RemoveItem ${s16}, 16" >> $add_s
+    echo '    endif' >> $add_s
+    echo "    if ( player->GetItemCount ${s16} >= 16 )" >> $add_s
+    echo "    	player->AddItem ${s1}, 1" >> $add_s
+    echo "    	player->RemoveItem ${s16}, 16" >> $add_s
+    echo '    endif' >> $add_s
+    echo "    if ( player->GetItemCount ${s16} >= 16 )" >> $add_s
+    echo "    	player->AddItem ${s1}, 1" >> $add_s
+    echo "    	player->RemoveItem ${s16}, 16" >> $add_s
+    echo '    endif' >> $add_s
+    echo "    if ( player->GetItemCount ${s16} >= 16 )" >> $add_s
+    echo "    	player->AddItem ${s1}, 1" >> $add_s
+    echo "    	player->RemoveItem ${s16}, 16" >> $add_s
+    echo '    endif' >> $add_s
+    echo '    ' >> $add_s
+    for i in $(seq 1 $ingrs_count); do
+        echo "    set in${i} to 0" >> $add_s
+    done
+    echo '    ' >> $add_s
+    for i in $(seq 1 $ingrs_count); do
+        ingr="\"$(awk -v FS=':' -v N=$i '{ if(FNR == N) { print $1 } }' $ingrs)\""
+        echo "    if ( player->GetItemCount $ingr > 0 )" >> $add_s
+        echo "    	set in${i} to 1" >> $add_s
+        echo '    endif' >> $add_s
+    done
+    echo '    ' >> $add_s
+    if [ $ingrs15_count != 0 ]; then
+        echo '    short sum15' >> $add_s
+    fi
+    if [ $ingrs15_count != 0 ]; then
+        echo '    short sum30' >> $add_s
+    fi
+    if [ $ingrs15_count != 0 ]; then
+        echo '    short sum45' >> $add_s
+    fi
+    if [ $ingrs15_count != 0 ]; then
+        echo '    short sum60' >> $add_s
+    fi
+    for i in $(seq 1 $ingrs_count); do
+        awk -v FS=':' -v ef=$effect -v N=$i '{
+            if(FNR == N && $2 == ef) {
+                print "    set sum15 to ( sum15 + in" N " )"
+            } else if(FNR == N && $3 == ef) {
+                print "    set sum30 to ( sum30 + in" N " )"
+            } else if(FNR == N && $4 == ef) {
+                print "    set sum45 to ( sum45 + in" N " )"
+            } else if(FNR == N && $5 == ef) {
+                print "    set sum60 to ( sum60 + in" N " )"
+            }
+        }' $ingrs >> $add_s
+    done
+    for i in $(seq 1 $(($ingrs_count - 1))); do
+        for j in $(seq $(($i + 1)) $ingrs_count); do
+            stop=''
+            for e1i in $(seq 2 5); do
+                for e2i in $(seq 2 5); do
+                    e1=$(awk -v FS=':' -v N=$i -v F=$e1i '{ if(FNR == N) { print $F } }' $ingrs)
+                    e2=$(awk -v FS=':' -v N=$j -v F=$e2i '{ if(FNR == N) { print $F } }' $ingrs)
+                    if [ "x${e1}" = "x${e2}" ]; then
+                        if [ -n "$(grep -- $e1 negative_effects)" ]; then
+                            stop='stop'
+                        fi
+                    fi
+                done
+            done
+            is_copy='is_copy'
+            for ei in $(seq 2 5); do
+                e1=$(awk -v FS=':' -v N=$i -v F=$ei '{ if(FNR == N) { print $F } }' $ingrs)
+                e2=$(awk -v FS=':' -v N=$j -v F=$ei '{ if(FNR == N) { print $F } }' $ingrs)
+                if [ "x${e1}" != "x${e2}" ]; then
+                    is_copy=''
+                fi
+            done
+            appearance1=$(awk -v FS=':' -v N=$i '{ if(FNR == N) { print $6 } }' $ingrs)
+            appearance2=$(awk -v FS=':' -v N=$j '{ if(FNR == N) { print $6 } }' $ingrs)
+            if [ "${appearance1}" != "${appearance2}" ]; then
+                is_copy=''
+            fi
+            if [ -n "$stop" -o -n "$is_copy" ]; then
+                echo "    set temp to ( in${i} + in${j} )" >> $add_s
+                echo '    if ( temp > 1 )' >> $add_s
+                echo '    	set bad to 1' >> $add_s
+                echo '    endif' >> $add_s
+            fi
+        done
+    done
+    LL="$(awk -v FS=':' '{print $7}' "$sd")"
+    echo -n "    " >> $add_s
+    if [ $ingrs15_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L15_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L15_${LL}\", 1" >> $add_s
+        if [ $ingrs30_count != 0 -o $ingrs45_count != 0 -o $ingrs60_count != 0 ]; then
+            echo -n "    else" >> $add_s
+        fi
+    fi
+    if [ $ingrs30_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L30_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L30_${LL}\", 1" >> $add_s
+        if [ $ingrs45_count != 0 -o $ingrs60_count != 0 ]; then
+            echo -n "    else" >> $add_s
+        fi
+    fi
+    if [ $ingrs45_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L45_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L45_${LL}\", 1" >> $add_s
+        if [ $ingrs60_count != 0 ]; then
+            echo -n "    else" >> $add_s
+        fi
+    fi
+    if [ $ingrs60_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L60_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L60_${LL}\", 1" >> $add_s
+    fi
+    echo "    endif" >> $add_s
+    echo "    if ( bad == 0 )" >> $add_s
+    echo -n "    	" >> $add_s
+    if [ $ingrs15_count != 0 ]; then
+        echo "if ( sum15 > 1 )" >> $add_s
+        echo "    		player->AddItem \"A1V4_L15_${LL}\", 1" >> $add_s
+        if [ $ingrs30_count != 0 -o $ingrs45_count != 0 -o $ingrs60_count != 0 ]; then
+            echo -n "    	else" >> $add_s
+        fi
+    fi
+    if [ $ingrs30_count != 0 ]; then
+        echo "if ( sum30 > 1 )" >> $add_s
+        echo "    		player->AddItem \"A1V4_L30_${LL}\", 1" >> $add_s
+        if [ $ingrs45_count != 0 -o $ingrs60_count != 0 ]; then
+            echo -n "    	else" >> $add_s
+        fi
+    fi
+    if [ $ingrs45_count != 0 ]; then
+        echo "if ( sum45 > 1 )" >> $add_s
+        echo "    		player->AddItem \"A1V4_L45_${LL}\", 1" >> $add_s
+        if [ $ingrs60_count != 0 ]; then
+            echo -n "    	else" >> $add_s
+        fi
+    fi
+    if [ $ingrs60_count != 0 ]; then
+        echo "if ( sum60 > 1 )" >> $add_s
+        echo "    		player->AddItem \"A1V4_L60_${LL}\", 1" >> $add_s
+    fi
+    echo "    	endif" >> $add_s
+    echo "    endif" >> $add_s
+    echo "    " >> $add_s
+    echo "    StopScript ${check_name}" >> $add_s
+    sd_count=$(wc -l < scripts_data)
+    if [ $index -lt $sd_count ]; then
+        awk -v FS=':' -v N=$(($index + 1)) '{
+            if($1 == N)
+                print "    StartScript A1V4_ACheck" $1 "_" $2 "_sc"
+        }' scripts_data >> $add_s
+    else
+        echo "    if ( A1V4_AlchemyRes == 0 )" >> $add_s
+        echo "    	MessageBox \"Готово\"" >> $add_s
+        echo "    elseif ( A1V4_AlchemyRes == 1 )" >> $add_s
+        echo "    	PlaySound \"potion success\"" >> $add_s
+        echo "    elseif ( A1V4_AlchemyRes == 2 )" >> $add_s
+        echo "    	PlaySound \"potion fail\"" >> $add_s
+        echo "    endif" >> $add_s
+        echo "    set A1V4_AlchemyRes to 0" >> $add_s
+    fi
+    echo "    " >> $add_s
+    echo "    End" >> $add_s
+}
+
+gen_check5() {
+    index=$(awk -v FS=':' '{print $1}' "$sd")
+    name=$(awk -v FS=':' '{print $2}' "$sd")
+    add_name=A1V4_AAdd${index}_${name}_sc
+    check_name=A1V4_ACheck${index}_${name}_sc
+    add_s=scripts2/$check_name
+    echo 'SCTX' > $add_s
+    echo "    Begin ${check_name}" >> $add_s
+    echo '    ' >> $add_s
+    echo '    short AddPotion' >> $add_s
+    effect=$(awk -v FS=':' '{print $4}' "$sd")
+    ingrs=scripts2/${name}.ef
+    ingrs_count=$(wc -l < $ingrs)
+    ingrs15=scripts2/${name}.ef15
+    ingrs30=scripts2/${name}.ef30
+    ingrs45=scripts2/${name}.ef45
+    ingrs60=scripts2/${name}.ef60
+    for i in $(seq 1 $ingrs_count); do
+        echo "    short in${i}" >> $add_s
+    done
+    ingrs15_count=$(wc -l < $ingrs15)
+    ingrs30_count=$(wc -l < $ingrs30)
+    ingrs45_count=$(wc -l < $ingrs45)
+    ingrs60_count=$(wc -l < $ingrs60)
+    if [ $ingrs15_count != 0 ]; then
+        echo '    short sum15' >> $add_s
+    fi
+    if [ $ingrs30_count != 0 ]; then
+        echo '    short sum30' >> $add_s
+    fi
+    if [ $ingrs45_count != 0 ]; then
+        echo '    short sum45' >> $add_s
+    fi
+    if [ $ingrs60_count != 0 ]; then
+        echo '    short sum60' >> $add_s
+    fi
+    echo '    short temp' >> $add_s
+    echo '    short bad' >> $add_s
+    echo '    ' >> $add_s
+    echo '    if ( AddPotion == 1 )' >> $add_s
+    b8="$(awk -v FS=':' '{print $5}' "$sd")"
+    c8="$(awk -v FS=':' '{print $6}' "$sd")"
+    s8="$(awk -v FS=':' '{print $7}' "$sd")"
+    q8="$(awk -v FS=':' '{print $8}' "$sd")"
+    e8="$(awk -v FS=':' '{print $9}' "$sd")"
+    b1="$(awk -v FS=':' '{print $10}' "$sd")"
+    c1="$(awk -v FS=':' '{print $11}' "$sd")"
+    s1="$(awk -v FS=':' '{print $12}' "$sd")"
+    q1="$(awk -v FS=':' '{print $13}' "$sd")"
+    e1="$(awk -v FS=':' '{print $14}' "$sd")"
+    echo '    	if ( A1V4_PotionB == 1 )' >> $add_s
+    echo "    		player->AddItem ${b8}, 1" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 2 )' >> $add_s
+    echo "    		player->AddItem ${b8}, 2" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 3 )' >> $add_s
+    echo "    		player->AddItem ${b8}, 3" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 4 )' >> $add_s
+    echo "    		player->AddItem ${b8}, 4" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 5 )' >> $add_s
+    echo "    		player->AddItem ${b8}, 5" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 6 )' >> $add_s
+    echo "    		player->AddItem ${b8}, 6" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 7 )' >> $add_s
+    echo "    		player->AddItem ${b8}, 7" >> $add_s
+    echo '    	elseif ( A1V4_PotionB == 8 )' >> $add_s
+    echo "    		player->AddItem ${b8}, 8" >> $add_s
+    echo '    	endif' >> $add_s
+    echo '    	if ( A1V4_PotionC == 1 )' >> $add_s
+    echo "    		player->AddItem ${c8}, 1" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 2 )' >> $add_s
+    echo "    		player->AddItem ${c8}, 2" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 3 )' >> $add_s
+    echo "    		player->AddItem ${c8}, 3" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 4 )' >> $add_s
+    echo "    		player->AddItem ${c8}, 4" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 5 )' >> $add_s
+    echo "    		player->AddItem ${c8}, 5" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 6 )' >> $add_s
+    echo "    		player->AddItem ${c8}, 6" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 7 )' >> $add_s
+    echo "    		player->AddItem ${c8}, 7" >> $add_s
+    echo '    	elseif ( A1V4_PotionC == 8 )' >> $add_s
+    echo "    		player->AddItem ${c8}, 8" >> $add_s
+    echo '    	endif' >> $add_s
+    echo '    	if ( A1V4_PotionS == 1 )' >> $add_s
+    echo "    		player->AddItem ${s8}, 1" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 2 )' >> $add_s
+    echo "    		player->AddItem ${s8}, 2" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 3 )' >> $add_s
+    echo "    		player->AddItem ${s8}, 3" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 4 )' >> $add_s
+    echo "    		player->AddItem ${s8}, 4" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 5 )' >> $add_s
+    echo "    		player->AddItem ${s8}, 5" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 6 )' >> $add_s
+    echo "    		player->AddItem ${s8}, 6" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 7 )' >> $add_s
+    echo "    		player->AddItem ${s8}, 7" >> $add_s
+    echo '    	elseif ( A1V4_PotionS == 8 )' >> $add_s
+    echo "    		player->AddItem ${s8}, 8" >> $add_s
+    echo '    	endif' >> $add_s
+    echo '    	if ( A1V4_PotionQ == 1 )' >> $add_s
+    echo "    		player->AddItem ${q8}, 1" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 2 )' >> $add_s
+    echo "    		player->AddItem ${q8}, 2" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 3 )' >> $add_s
+    echo "    		player->AddItem ${q8}, 3" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 4 )' >> $add_s
+    echo "    		player->AddItem ${q8}, 4" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 5 )' >> $add_s
+    echo "    		player->AddItem ${q8}, 5" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 6 )' >> $add_s
+    echo "    		player->AddItem ${q8}, 6" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 7 )' >> $add_s
+    echo "    		player->AddItem ${q8}, 7" >> $add_s
+    echo '    	elseif ( A1V4_PotionQ == 8 )' >> $add_s
+    echo "    		player->AddItem ${q8}, 8" >> $add_s
+    echo '    	endif' >> $add_s
+    echo '    	if ( A1V4_PotionE == 1 )' >> $add_s
+    echo "    		player->AddItem ${e8}, 1" >> $add_s
+    echo '    	elseif ( A1V4_PotionE == 2 )' >> $add_s
+    echo "    		player->AddItem ${e8}, 2" >> $add_s
+    echo '    	elseif ( A1V4_PotionE == 3 )' >> $add_s
+    echo "    		player->AddItem ${e8}, 3" >> $add_s
+    echo '    	elseif ( A1V4_PotionE == 4 )' >> $add_s
+    echo "    		player->AddItem ${e8}, 4" >> $add_s
+    echo '    	elseif ( A1V4_PotionE == 5 )' >> $add_s
+    echo "    		player->AddItem ${e8}, 5" >> $add_s
+    echo '    	elseif ( A1V4_PotionE == 6 )' >> $add_s
+    echo "    		player->AddItem ${e8}, 6" >> $add_s
+    echo '    	elseif ( A1V4_PotionE == 7 )' >> $add_s
+    echo "    		player->AddItem ${e8}, 7" >> $add_s
+    echo '    	elseif ( A1V4_PotionE == 8 )' >> $add_s
+    echo "    		player->AddItem ${e8}, 8" >> $add_s
+    echo '    	endif' >> $add_s
+    echo '    endif' >> $add_s
+    echo '    ' >> $add_s
+    echo '    set AddPotion to 0' >> $add_s
+    echo '    ' >> $add_s
+    echo "    if ( player->GetItemCount ${b8} >= 8 )" >> $add_s
+    echo "    	player->AddItem ${b1}, 1" >> $add_s
+    echo "    	player->RemoveItem ${b8}, 8" >> $add_s
+    echo '    endif' >> $add_s
+    echo "    if ( player->GetItemCount ${c8} >= 8 )" >> $add_s
+    echo "    	player->AddItem ${c1}, 1" >> $add_s
+    echo "    	player->RemoveItem ${c8}, 8" >> $add_s
+    echo '    endif' >> $add_s
+    echo "    if ( player->GetItemCount ${s8} >= 8 )" >> $add_s
+    echo "    	player->AddItem ${s1}, 1" >> $add_s
+    echo "    	player->RemoveItem ${s8}, 8" >> $add_s
+    echo '    endif' >> $add_s
+    echo "    if ( player->GetItemCount ${q8} >= 8 )" >> $add_s
+    echo "    	player->AddItem ${q1}, 1" >> $add_s
+    echo "    	player->RemoveItem ${q8}, 8" >> $add_s
+    echo '    endif' >> $add_s
+    echo "    if ( player->GetItemCount ${e8} >= 8 )" >> $add_s
+    echo "    	player->AddItem ${e1}, 1" >> $add_s
+    echo "    	player->RemoveItem ${e8}, 8" >> $add_s
+    echo '    endif' >> $add_s
+    echo '    ' >> $add_s
+    for i in $(seq 1 $ingrs_count); do
+        echo "    set in${i} to 0" >> $add_s
+    done
+    echo '    ' >> $add_s
+    for i in $(seq 1 $ingrs_count); do
+        ingr="\"$(awk -v FS=':' -v N=$i '{ if(FNR == N) { print $1 } }' $ingrs)\""
+        echo "    if ( player->GetItemCount $ingr > 0 )" >> $add_s
+        echo "    	set in${i} to 1" >> $add_s
+        echo '    endif' >> $add_s
+    done
+    echo '    ' >> $add_s
+    if [ $ingrs15_count != 0 ]; then
+        echo '    set sum15 to 0' >> $add_s
+    fi
+    if [ $ingrs30_count != 0 ]; then
+        echo '    set sum30 to 0' >> $add_s
+    fi
+    if [ $ingrs45_count != 0 ]; then
+        echo '    set sum45 to 0' >> $add_s
+    fi
+    if [ $ingrs60_count != 0 ]; then
+        echo '    set sum60 to 0' >> $add_s
+    fi
+    for i in $(seq 1 $ingrs_count); do
+        awk -v FS=':' -v ef=$effect -v N=$i '{
+            if(FNR == N && $2 == ef) {
+                print "    set sum15 to ( sum15 + in" N " )"
+            } else if(FNR == N && $3 == ef) {
+                print "    set sum30 to ( sum30 + in" N " )"
+            } else if(FNR == N && $4 == ef) {
+                print "    set sum45 to ( sum45 + in" N " )"
+            } else if(FNR == N && $5 == ef) {
+                print "    set sum60 to ( sum60 + in" N " )"
+            }
+        }' $ingrs >> $add_s
+    done
+    for i in $(seq 1 $(($ingrs_count - 1))); do
+        for j in $(seq $(($i + 1)) $ingrs_count); do
+            stop=''
+            for e1i in $(seq 2 5); do
+                for e2i in $(seq 2 5); do
+                    e1=$(awk -v FS=':' -v N=$i -v F=$e1i '{ if(FNR == N) { print $F } }' $ingrs)
+                    e2=$(awk -v FS=':' -v N=$j -v F=$e2i '{ if(FNR == N) { print $F } }' $ingrs)
+                    if [ "x${e1}" = "x${e2}" ]; then
+                        if [ -n "$(grep -- $e1 negative_effects)" ]; then
+                            stop='stop'
+                        fi
+                    fi
+                done
+            done
+            is_copy='is_copy'
+            for ei in $(seq 2 5); do
+                e1=$(awk -v FS=':' -v N=$i -v F=$ei '{ if(FNR == N) { print $F } }' $ingrs)
+                e2=$(awk -v FS=':' -v N=$j -v F=$ei '{ if(FNR == N) { print $F } }' $ingrs)
+                if [ "x${e1}" != "x${e2}" ]; then
+                    is_copy=''
+                fi
+            done
+            appearance1=$(awk -v FS=':' -v N=$i '{ if(FNR == N) { print $6 } }' $ingrs)
+            appearance2=$(awk -v FS=':' -v N=$j '{ if(FNR == N) { print $6 } }' $ingrs)
+            if [ "${appearance1}" != "${appearance2}" ]; then
+                is_copy=''
+            fi
+            if [ -n "$stop" -o -n "$is_copy" ]; then
+                echo "    set temp to ( in${i} + in${j} )" >> $add_s
+                echo '    if ( temp > 1 )' >> $add_s
+                echo '    	set bad to 1' >> $add_s
+                echo '    endif' >> $add_s
+            fi
+        done
+    done
+    LL="$(awk -v FS=':' '{print $15}' "$sd")"
+    echo -n "    " >> $add_s
+    if [ $ingrs15_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L15_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L15_${LL}\", 1" >> $add_s
+        if [ $ingrs30_count != 0 -o $ingrs45_count != 0 -o $ingrs60_count != 0 ]; then
+            echo -n "    else" >> $add_s
+        fi
+    fi
+    if [ $ingrs30_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L30_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L30_${LL}\", 1" >> $add_s
+        if [ $ingrs45_count != 0 -o $ingrs60_count != 0 ]; then
+            echo -n "    else" >> $add_s
+        fi
+    fi
+    if [ $ingrs45_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L45_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L45_${LL}\", 1" >> $add_s
+        if [ $ingrs60_count != 0 ]; then
+            echo -n "    else" >> $add_s
+        fi
+    fi
+    if [ $ingrs60_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L60_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L60_${LL}\", 1" >> $add_s
+    fi
+    echo "    endif" >> $add_s
+    echo "    if ( bad == 0 )" >> $add_s
+    echo -n "    	" >> $add_s
+    if [ $ingrs15_count != 0 ]; then
+        echo "if ( sum15 > 1 )" >> $add_s
+        echo "    		player->AddItem \"A1V4_L15_${LL}\", 1" >> $add_s
+        if [ $ingrs30_count != 0 -o $ingrs45_count != 0 -o $ingrs60_count != 0 ]; then
+            echo -n "    	else" >> $add_s
+        fi
+    fi
+    if [ $ingrs30_count != 0 ]; then
+        echo "if ( sum30 > 1 )" >> $add_s
+        echo "    		player->AddItem \"A1V4_L30_${LL}\", 1" >> $add_s
+        if [ $ingrs45_count != 0 -o $ingrs60_count != 0 ]; then
+            echo -n "    	else" >> $add_s
+        fi
+    fi
+    if [ $ingrs45_count != 0 ]; then
+        echo "if ( sum45 > 1 )" >> $add_s
+        echo "    		player->AddItem \"A1V4_L45_${LL}\", 1" >> $add_s
+        if [ $ingrs60_count != 0 ]; then
+            echo -n "    	else" >> $add_s
+        fi
+    fi
+    if [ $ingrs60_count != 0 ]; then
+        echo "if ( sum60 > 1 )" >> $add_s
+        echo "    		player->AddItem \"A1V4_L60_${LL}\", 1" >> $add_s
+    fi
+    echo "    	endif" >> $add_s
+    echo "    endif" >> $add_s
+    echo "    " >> $add_s
+    echo "    StopScript ${check_name}" >> $add_s
+    sd_count=$(wc -l < scripts_data)
+    if [ $index -lt $sd_count ]; then
+        awk -v FS=':' -v N=$(($index + 1)) '{
+            if($1 == N)
+                print "    StartScript A1V4_ACheck" $1 "_" $2 "_sc"
+        }' scripts_data >> $add_s
+    else
+        echo "    if ( A1V4_AlchemyRes == 0 )" >> $add_s
+        echo "    	MessageBox \"Готово\"" >> $add_s
+        echo "    elseif ( A1V4_AlchemyRes == 1 )" >> $add_s
+        echo "    	PlaySound \"potion success\"" >> $add_s
+        echo "    elseif ( A1V4_AlchemyRes == 2 )" >> $add_s
+        echo "    	PlaySound \"potion fail\"" >> $add_s
+        echo "    endif" >> $add_s
+        echo "    set A1V4_AlchemyRes to 0" >> $add_s
+    fi
+    echo "    " >> $add_s
+    echo "    End" >> $add_s
+}
+
+gen_del() {
+    index=$(awk -v FS=':' '{print $1}' "$sd")
+    name=$(awk -v FS=':' '{print $2}' "$sd")
+    add_name=A1V4_AAdd${index}_${name}_sc
+    check_name=A1V4_ADel${index}_${name}_sc
+    add_s=scripts2/$check_name
+    echo 'SCTX' > $add_s
+    echo "    Begin ${check_name}" >> $add_s
+    echo '    ' >> $add_s
+    effect=$(awk -v FS=':' '{print $4}' "$sd")
+    ingrs=scripts2/${name}.ef
+    ingrs_count=$(wc -l < $ingrs)
+    ingrs15=scripts2/${name}.ef15
+    ingrs30=scripts2/${name}.ef30
+    ingrs45=scripts2/${name}.ef45
+    ingrs60=scripts2/${name}.ef60
+    ingrs15_count=$(wc -l < $ingrs15)
+    ingrs30_count=$(wc -l < $ingrs30)
+    ingrs45_count=$(wc -l < $ingrs45)
+    ingrs60_count=$(wc -l < $ingrs60)
+    kind=$(awk -v FS=':' '{print $3}' "$sd")
+    if [ $kind = 2 ]; then
+        LL="$(awk -v FS=':' '{print $7}' "$sd")"
+    else
+        LL="$(awk -v FS=':' '{print $15}' "$sd")"
+    fi
+    echo -n "    " >> $add_s
+    if [ $ingrs15_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L15_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L15_${LL}\", 1" >> $add_s
+        if [ $ingrs30_count != 0 -o $ingrs45_count != 0 -o $ingrs60_count != 0 ]; then
+            echo -n "    else" >> $add_s
+        fi
+    fi
+    if [ $ingrs30_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L30_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L30_${LL}\", 1" >> $add_s
+        if [ $ingrs45_count != 0 -o $ingrs60_count != 0 ]; then
+            echo -n "    else" >> $add_s
+        fi
+    fi
+    if [ $ingrs45_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L45_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L45_${LL}\", 1" >> $add_s
+        if [ $ingrs60_count != 0 ]; then
+            echo -n "    else" >> $add_s
+        fi
+    fi
+    if [ $ingrs60_count != 0 ]; then
+        echo "if ( player->GetItemCount \"A1V4_L60_${LL}\" == 1 )" >> $add_s
+        echo "    	player->RemoveItem \"A1V4_L60_${LL}\", 1" >> $add_s
+    fi
+    echo "    endif" >> $add_s
+    echo "    " >> $add_s
+    sd_count=$(wc -l < scripts_data)
+    if [ $index -lt $sd_count ]; then
+        echo "    StopScript ${check_name}" >> $add_s
+        awk -v FS=':' -v N=$(($index + 1)) '{
+            if($1 == N)
+                print "    StartScript A1V4_ADel" $1 "_" $2 "_sc"
+        }' scripts_data >> $add_s
+    else
+        echo "    MessageBox \"Установка деактивирована\"" >> $add_s
+        echo "    EnablePlayerControls" >> $add_s
+        echo "    " >> $add_s
+        echo "    StopScript ${check_name}" >> $add_s
+    fi
+    echo "    " >> $add_s
+    echo "    End" >> $add_s
+}
+
 basedir="$(dirname "$0")"
 cd "$basedir"
 rm -rf s
 mkdir s
-awk -v RS= '{print > ($1)}'
+awk -v FS=':' '{print > ("s/" $1)}' scripts_data
+rm -rf scripts2
+mkdir scripts2
+awk -v FS=':' '{ print $4 }' scripts_data > positive_effects
+for sd in s/*; do
+    gen_ingrs
+    gen_add
+    kind=$(awk -v FS=':' '{print $3}' "$sd")
+    if [ $kind = 2 ]; then
+        gen_check2
+    else
+        gen_check5
+    fi
+    gen_del
+done
+rm -f scripts2/*.ef
+rm -f scripts2/*.ef??
+rm -rf s
