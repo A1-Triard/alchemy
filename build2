@@ -15,4 +15,8 @@ rm -rf A1_Alchemy_${VERSION}
 rm A1_Alchemy_${VERSION}.zip
 mkdir A1_Alchemy_${VERSION}
 cp -r Screenshots Readme.txt Versions.txt *.esp A1_Alchemy_${VERSION}
+touch -t 201408021853 A1_Alchemy_${VERSION}/A1_Alchemy_DaeCursed.esp
+touch -t 201408031853 A1_Alchemy_${VERSION}/A1_Alchemy_Potions.esp
+touch -t 201408101853 A1_Alchemy_${VERSION}/A1_Alchemy_V4_Apparatus.esp
+touch -t 201408151853 A1_Alchemy_${VERSION}/A1_Alchemy_V4_Containers.esp
 zip -v -X -9 -r A1_Alchemy_${VERSION}.zip A1_Alchemy_${VERSION} || exit 1
