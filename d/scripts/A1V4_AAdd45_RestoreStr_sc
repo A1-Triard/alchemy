@@ -40,38 +40,43 @@ SCTX
     set in5 to 0
     set in6 to 0
     
-    if ( player->GetItemCount ingred_dreugh_wax_01 > 0 )
+    if ( player->GetItemCount "ingred_dreugh_wax_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_gold_kanet_01 > 0 )
+    if ( player->GetItemCount "ingred_gold_kanet_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_scamp_skin_01 > 0 )
+    if ( player->GetItemCount "ingred_gold_kanet_unique" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_stoneflower_petals_01 > 0 )
+    if ( player->GetItemCount "Ingred_horn_lily_bulb_01" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount Ingred_horn_lily_bulb_01 > 0 )
+    if ( player->GetItemCount "ingred_scamp_skin_01" > 0 )
     	set in5 to 1
     endif
-    if ( player->GetItemCount ingred_gold_kanet_unique > 0 )
+    if ( player->GetItemCount "ingred_stoneflower_petals_01" > 0 )
     	set in6 to 1
     endif
     
-    set sum to ( in4 )
-    set sum to ( sum + in1 )
+    set sum to ( in1 + in2 )
+    set sum to ( sum + in3 )
+    set sum to ( sum + in4 )
     set sum to ( sum + in5 )
-    set sum to ( sum + in2 + in3 + in6 )
+    set sum to ( sum + in6 )
     set temp to ( in1 + in2 )
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in1 + in4 )
+    set temp to ( in1 + in3 )
     if ( temp > 1 )
     	set sum to 0
     endif
     set temp to ( in1 + in6 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    set temp to ( in2 + in3 )
     if ( temp > 1 )
     	set sum to 0
     endif
@@ -83,36 +88,32 @@ SCTX
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in4 + in6 )
+    set temp to ( in3 + in4 )
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in2 + in5 )
-    if ( temp > 1 )
-    	set sum to 0
-    endif
-    set temp to ( in5 + in6 )
+    set temp to ( in3 + in6 )
     if ( temp > 1 )
     	set sum to 0
     endif
     if ( sum > 1 )
     	if ( in1 > 0 )
-    		player->RemoveItem ingred_dreugh_wax_01, 1
+    		player->RemoveItem "ingred_dreugh_wax_01", 1
     	endif
     	if ( in2 > 0 )
-    		player->RemoveItem ingred_gold_kanet_01, 1
+    		player->RemoveItem "ingred_gold_kanet_01", 1
     	endif
     	if ( in3 > 0 )
-    		player->RemoveItem ingred_scamp_skin_01, 1
+    		player->RemoveItem "ingred_gold_kanet_unique", 1
     	endif
     	if ( in4 > 0 )
-    		player->RemoveItem ingred_stoneflower_petals_01, 1
+    		player->RemoveItem "Ingred_horn_lily_bulb_01", 1
     	endif
     	if ( in5 > 0 )
-    		player->RemoveItem Ingred_horn_lily_bulb_01, 1
+    		player->RemoveItem "ingred_scamp_skin_01", 1
     	endif
     	if ( in6 > 0 )
-    		player->RemoveItem ingred_gold_kanet_unique, 1
+    		player->RemoveItem "ingred_stoneflower_petals_01", 1
     	endif
     	set state to 1
     	set A1V4_CalcAlchemy5_sc.in to sum

@@ -126,34 +126,36 @@ SCTX
     set in2 to 0
     set in3 to 0
     
-    if ( player->GetItemCount ingred_frost_salts_01 > 0 )
+    if ( player->GetItemCount "ingred_black_anther_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_fire_petal_01 > 0 )
+    if ( player->GetItemCount "ingred_fire_petal_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_black_anther_01 > 0 )
+    if ( player->GetItemCount "ingred_frost_salts_01" > 0 )
     	set in3 to 1
     endif
     
-    set sum15 to ( in2 )
-    set sum30 to ( sum15 + in3 )
-    set sum60 to ( sum30 + in1 )
-    set bad to 0
-    if ( player->GetItemCount A1V4_L15_fire_resistance == 1 )
-    	player->RemoveItem A1V4_L15_fire_resistance, 1
-    elseif ( player->GetItemCount A1V4_L30_fire_resistance == 1 )
-    	player->RemoveItem A1V4_L30_fire_resistance, 1
-    elseif ( player->GetItemCount A1V4_L60_fire_resistance == 1 )
-    	player->RemoveItem A1V4_L60_fire_resistance, 1
+    set sum15 to 0
+    set sum15 to ( sum15 + in2 )
+    set sum30 to sum15
+    set sum30 to ( sum30 + in1 )
+    set sum60 to sum30
+    set sum60 to ( sum60 + in3 )
+    if ( player->GetItemCount "A1V4_L15_fire_resistance" == 1 )
+    	player->RemoveItem "A1V4_L15_fire_resistance", 1
+    elseif ( player->GetItemCount "A1V4_L30_fire_resistance" == 1 )
+    	player->RemoveItem "A1V4_L30_fire_resistance", 1
+    elseif ( player->GetItemCount "A1V4_L60_fire_resistance" == 1 )
+    	player->RemoveItem "A1V4_L60_fire_resistance", 1
     endif
     if ( bad == 0 )
     	if ( sum15 > 1 )
-    		player->AddItem A1V4_L15_fire_resistance, 1
+    		player->AddItem "A1V4_L15_fire_resistance", 1
     	elseif ( sum30 > 1 )
-    		player->AddItem A1V4_L30_fire_resistance, 1
+    		player->AddItem "A1V4_L30_fire_resistance", 1
     	elseif ( sum60 > 1 )
-    		player->AddItem A1V4_L60_fire_resistance, 1
+    		player->AddItem "A1V4_L60_fire_resistance", 1
     	endif
     endif
     

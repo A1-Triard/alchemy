@@ -3020,6 +3020,18 @@ SCRI A1V4_AAdd4_WaterWalk_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V4_L60_restore_luck
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 74
+    -1 -1 -1 0
+    -1 -1 -1 7
+SCRI A1V4_AAdd43_RestoreLuck_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V4_L60_cure_common
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать

@@ -2,6 +2,7 @@
 
 basedir="$(dirname "$0")"
 cd "$basedir"
+./make_scripts || exit 1
 find scripts -type f -exec basename {} \; | sort > all_scripts
 cat scripts.list | sort > sorted_scripts
 diff sorted_scripts all_scripts || exit 1

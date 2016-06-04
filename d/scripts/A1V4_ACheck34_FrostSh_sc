@@ -129,35 +129,39 @@ SCTX
     set in4 to 0
     set in5 to 0
     
-    if ( player->GetItemCount food_kwama_egg_02 > 0 )
+    if ( player->GetItemCount "food_kwama_egg_02" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_willow_anther_01 > 0 )
+    if ( player->GetItemCount "ingred_frost_salts_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_frost_salts_01 > 0 )
+    if ( player->GetItemCount "ingred_holly_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_raw_ebony_01 > 0 )
+    if ( player->GetItemCount "ingred_raw_ebony_01" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount ingred_holly_01 > 0 )
+    if ( player->GetItemCount "ingred_willow_anther_01" > 0 )
     	set in5 to 1
     endif
     
-    set sum30 to ( in2 + in5 )
-    set sum45 to ( sum30 + in1 + in3 + in4 )
-    set bad to 0
-    if ( player->GetItemCount A1V4_L30_frost_shield == 1 )
-    	player->RemoveItem A1V4_L30_frost_shield, 1
-    elseif ( player->GetItemCount A1V4_L45_frost_shield == 1 )
-    	player->RemoveItem A1V4_L45_frost_shield, 1
+    set sum30 to 0
+    set sum30 to ( sum30 + in3 )
+    set sum30 to ( sum30 + in5 )
+    set sum45 to sum30
+    set sum45 to ( sum45 + in1 )
+    set sum45 to ( sum45 + in2 )
+    set sum45 to ( sum45 + in4 )
+    if ( player->GetItemCount "A1V4_L30_frost_shield" == 1 )
+    	player->RemoveItem "A1V4_L30_frost_shield", 1
+    elseif ( player->GetItemCount "A1V4_L45_frost_shield" == 1 )
+    	player->RemoveItem "A1V4_L45_frost_shield", 1
     endif
     if ( bad == 0 )
     	if ( sum30 > 1 )
-    		player->AddItem A1V4_L30_frost_shield, 1
+    		player->AddItem "A1V4_L30_frost_shield", 1
     	elseif ( sum45 > 1 )
-    		player->AddItem A1V4_L45_frost_shield, 1
+    		player->AddItem "A1V4_L45_frost_shield", 1
     	endif
     endif
     

@@ -9,6 +9,7 @@ SCTX
     short in6
     short in7
     short in8
+    short in9
     short sum
     short temp
     short state
@@ -43,72 +44,83 @@ SCTX
     set in6 to 0
     set in7 to 0
     set in8 to 0
+    set in9 to 0
     
-    if ( player->GetItemCount ingred_eyeball > 0 )
+    if ( player->GetItemCount "ingred_ash_yam_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_dreugh_wax_01 > 0 )
+    if ( player->GetItemCount "ingred_bear_pelt" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_daedra_skin_01 > 0 )
+    if ( player->GetItemCount "ingred_daedra_skin_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_eyeball_unique > 0 )
+    if ( player->GetItemCount "ingred_dreugh_wax_01" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount ingred_ash_yam_01 > 0 )
+    if ( player->GetItemCount "ingred_durzog_meat_01" > 0 )
     	set in5 to 1
     endif
-    if ( player->GetItemCount ingred_vampire_dust_01 > 0 )
+    if ( player->GetItemCount "ingred_eyeball" > 0 )
     	set in6 to 1
     endif
-    if ( player->GetItemCount Ingred_golden_sedge_01 > 0 )
+    if ( player->GetItemCount "ingred_eyeball_unique" > 0 )
     	set in7 to 1
     endif
-    if ( player->GetItemCount ingred_bear_pelt > 0 )
+    if ( player->GetItemCount "Ingred_golden_sedge_01" > 0 )
     	set in8 to 1
     endif
+    if ( player->GetItemCount "ingred_vampire_dust_01" > 0 )
+    	set in9 to 1
+    endif
     
-    set sum to ( in2 + in3 )
-    set sum to ( sum + in5 + in6 + in7 )
+    set sum to ( in1 + in2 )
+    set sum to ( sum + in3 )
+    set sum to ( sum + in4 )
+    set sum to ( sum + in5 )
+    set sum to ( sum + in6 )
+    set sum to ( sum + in7 )
     set sum to ( sum + in8 )
-    set sum to ( sum + in1 + in4 )
-    set temp to ( in1 + in4 )
+    set sum to ( sum + in9 )
+    set temp to ( in6 + in7 )
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in1 + in7 )
+    set temp to ( in6 + in8 )
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in4 + in7 )
+    set temp to ( in7 + in8 )
     if ( temp > 1 )
     	set sum to 0
     endif
     if ( sum > 1 )
     	if ( in1 > 0 )
-    		player->RemoveItem ingred_eyeball, 1
+    		player->RemoveItem "ingred_ash_yam_01", 1
     	endif
     	if ( in2 > 0 )
-    		player->RemoveItem ingred_dreugh_wax_01, 1
+    		player->RemoveItem "ingred_bear_pelt", 1
     	endif
     	if ( in3 > 0 )
-    		player->RemoveItem ingred_daedra_skin_01, 1
+    		player->RemoveItem "ingred_daedra_skin_01", 1
     	endif
     	if ( in4 > 0 )
-    		player->RemoveItem ingred_eyeball_unique, 1
+    		player->RemoveItem "ingred_dreugh_wax_01", 1
     	endif
     	if ( in5 > 0 )
-    		player->RemoveItem ingred_ash_yam_01, 1
+    		player->RemoveItem "ingred_durzog_meat_01", 1
     	endif
     	if ( in6 > 0 )
-    		player->RemoveItem ingred_vampire_dust_01, 1
+    		player->RemoveItem "ingred_eyeball", 1
     	endif
     	if ( in7 > 0 )
-    		player->RemoveItem Ingred_golden_sedge_01, 1
+    		player->RemoveItem "ingred_eyeball_unique", 1
     	endif
     	if ( in8 > 0 )
-    		player->RemoveItem ingred_bear_pelt, 1
+    		player->RemoveItem "Ingred_golden_sedge_01", 1
+    	endif
+    	if ( in9 > 0 )
+    		player->RemoveItem "ingred_vampire_dust_01", 1
     	endif
     	set state to 1
     	set A1V4_CalcAlchemy5_sc.in to sum

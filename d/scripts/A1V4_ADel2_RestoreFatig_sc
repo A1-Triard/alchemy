@@ -1,10 +1,10 @@
 SCTX
     Begin A1V4_ADel2_RestoreFatig_sc
     
-    if ( player->GetItemCount A1V4_L15_restore_fatigue == 1 )
-    	player->RemoveItem A1V4_L15_restore_fatigue, 1
-    elseif ( player->GetItemCount A1V4_L30_restore_fatigue == 1 )
-    	player->RemoveItem A1V4_L30_restore_fatigue, 1
+    if ( player->GetItemCount "A1V4_L15_restore_fatigue" == 1 )
+    	player->RemoveItem "A1V4_L15_restore_fatigue", 1
+    elseif ( player->GetItemCount "A1V4_L30_restore_fatigue" == 1 )
+    	player->RemoveItem "A1V4_L30_restore_fatigue", 1
     endif
     
     StopScript A1V4_ADel2_RestoreFatig_sc

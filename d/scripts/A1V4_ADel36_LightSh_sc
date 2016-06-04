@@ -1,10 +1,10 @@
 SCTX
     Begin A1V4_ADel36_LightSh_sc
     
-    if ( player->GetItemCount A1V4_L30_lightning_shield == 1 )
-    	player->RemoveItem A1V4_L30_lightning_shield, 1
-    elseif ( player->GetItemCount A1V4_L45_lightning_shield == 1 )
-    	player->RemoveItem A1V4_L45_lightning_shield, 1
+    if ( player->GetItemCount "A1V4_L30_lightning_shield" == 1 )
+    	player->RemoveItem "A1V4_L30_lightning_shield", 1
+    elseif ( player->GetItemCount "A1V4_L45_lightning_shield" == 1 )
+    	player->RemoveItem "A1V4_L45_lightning_shield", 1
     endif
     
     StopScript A1V4_ADel36_LightSh_sc

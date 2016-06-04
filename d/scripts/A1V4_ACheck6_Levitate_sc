@@ -126,28 +126,30 @@ SCTX
     set in3 to 0
     set in4 to 0
     
-    if ( player->GetItemCount ingred_trama_root_01 > 0 )
+    if ( player->GetItemCount "ingred_bc_coda_flower" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_racer_plumes_01 > 0 )
+    if ( player->GetItemCount "ingred_racer_plumes_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount Ingred_sweetpulp_01 > 0 )
+    if ( player->GetItemCount "Ingred_sweetpulp_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_bc_coda_flower > 0 )
+    if ( player->GetItemCount "ingred_trama_root_01" > 0 )
     	set in4 to 1
     endif
     
-    set sum30 to ( in1 + in2 + in3 )
+    set sum30 to 0
+    set sum30 to ( sum30 + in1 )
+    set sum30 to ( sum30 + in2 )
+    set sum30 to ( sum30 + in3 )
     set sum30 to ( sum30 + in4 )
-    set bad to 0
-    if ( player->GetItemCount A1V4_L30_levitation == 1 )
-    	player->RemoveItem A1V4_L30_levitation, 1
+    if ( player->GetItemCount "A1V4_L30_levitation" == 1 )
+    	player->RemoveItem "A1V4_L30_levitation", 1
     endif
     if ( bad == 0 )
     	if ( sum30 > 1 )
-    		player->AddItem A1V4_L30_levitation, 1
+    		player->AddItem "A1V4_L30_levitation", 1
     	endif
     endif
     

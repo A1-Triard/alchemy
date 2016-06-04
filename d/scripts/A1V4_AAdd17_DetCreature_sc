@@ -38,40 +38,41 @@ SCTX
     set in4 to 0
     set in5 to 0
     
-    if ( player->GetItemCount ingred_bc_ampoule_pod > 0 )
+    if ( player->GetItemCount "ingred_alit_hide_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_horker_tusk_01 > 0 )
+    if ( player->GetItemCount "ingred_bc_ampoule_pod" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_bloat_01 > 0 )
+    if ( player->GetItemCount "ingred_bloat_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_alit_hide_01 > 0 )
+    if ( player->GetItemCount "ingred_ectoplasm_01" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount ingred_ectoplasm_01 > 0 )
+    if ( player->GetItemCount "ingred_horker_tusk_01" > 0 )
     	set in5 to 1
     endif
     
-    set sum to ( in5 )
-    set sum to ( sum + in1 )
-    set sum to ( sum + in2 + in3 + in4 )
+    set sum to ( in1 + in2 )
+    set sum to ( sum + in3 )
+    set sum to ( sum + in4 )
+    set sum to ( sum + in5 )
     if ( sum > 1 )
     	if ( in1 > 0 )
-    		player->RemoveItem ingred_bc_ampoule_pod, 1
+    		player->RemoveItem "ingred_alit_hide_01", 1
     	endif
     	if ( in2 > 0 )
-    		player->RemoveItem ingred_horker_tusk_01, 1
+    		player->RemoveItem "ingred_bc_ampoule_pod", 1
     	endif
     	if ( in3 > 0 )
-    		player->RemoveItem ingred_bloat_01, 1
+    		player->RemoveItem "ingred_bloat_01", 1
     	endif
     	if ( in4 > 0 )
-    		player->RemoveItem ingred_alit_hide_01, 1
+    		player->RemoveItem "ingred_ectoplasm_01", 1
     	endif
     	if ( in5 > 0 )
-    		player->RemoveItem ingred_ectoplasm_01, 1
+    		player->RemoveItem "ingred_horker_tusk_01", 1
     	endif
     	set state to 1
     	set A1V4_CalcAlchemy5_sc.in to sum

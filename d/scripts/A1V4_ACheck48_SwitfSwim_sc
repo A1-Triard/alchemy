@@ -126,28 +126,30 @@ SCTX
     set in3 to 0
     set in4 to 0
     
-    if ( player->GetItemCount ingred_scrib_jerky_01 > 0 )
+    if ( player->GetItemCount "ingred_daedra_skin_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_daedra_skin_01 > 0 )
+    if ( player->GetItemCount "Ingred_golden_sedge_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount Ingred_golden_sedge_01 > 0 )
+    if ( player->GetItemCount "ingred_scales_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_scales_01 > 0 )
+    if ( player->GetItemCount "ingred_scrib_jerky_01" > 0 )
     	set in4 to 1
     endif
     
-    set sum60 to ( in1 + in2 + in3 )
+    set sum60 to 0
+    set sum60 to ( sum60 + in1 )
+    set sum60 to ( sum60 + in2 )
+    set sum60 to ( sum60 + in3 )
     set sum60 to ( sum60 + in4 )
-    set bad to 0
-    if ( player->GetItemCount A1V4_L60_swift_swim == 1 )
-    	player->RemoveItem A1V4_L60_swift_swim, 1
+    if ( player->GetItemCount "A1V4_L60_swift_swim" == 1 )
+    	player->RemoveItem "A1V4_L60_swift_swim", 1
     endif
     if ( bad == 0 )
     	if ( sum60 > 1 )
-    		player->AddItem A1V4_L60_swift_swim, 1
+    		player->AddItem "A1V4_L60_swift_swim", 1
     	endif
     endif
     

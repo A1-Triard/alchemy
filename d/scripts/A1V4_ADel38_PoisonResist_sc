@@ -1,12 +1,12 @@
 SCTX
     Begin A1V4_ADel38_PoisonResist_sc
     
-    if ( player->GetItemCount A1V4_L15_poison_resistance == 1 )
-    	player->RemoveItem A1V4_L15_poison_resistance, 1
-    elseif ( player->GetItemCount A1V4_L30_poison_resistance == 1 )
-    	player->RemoveItem A1V4_L30_poison_resistance, 1
-    elseif ( player->GetItemCount A1V4_L60_poison_resistance == 1 )
-    	player->RemoveItem A1V4_L60_poison_resistance, 1
+    if ( player->GetItemCount "A1V4_L15_poison_resistance" == 1 )
+    	player->RemoveItem "A1V4_L15_poison_resistance", 1
+    elseif ( player->GetItemCount "A1V4_L30_poison_resistance" == 1 )
+    	player->RemoveItem "A1V4_L30_poison_resistance", 1
+    elseif ( player->GetItemCount "A1V4_L60_poison_resistance" == 1 )
+    	player->RemoveItem "A1V4_L60_poison_resistance", 1
     endif
     
     StopScript A1V4_ADel38_PoisonResist_sc

@@ -125,33 +125,35 @@ SCTX
     set in2 to 0
     set in3 to 0
     
-    if ( player->GetItemCount ingred_belladonna_02 > 0 )
+    if ( player->GetItemCount "ingred_ash_salts_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_belladonna_01 > 0 )
+    if ( player->GetItemCount "ingred_belladonna_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_ash_salts_01 > 0 )
+    if ( player->GetItemCount "ingred_belladonna_02" > 0 )
     	set in3 to 1
     endif
     
-    set sum15 to ( in1 + in2 )
-    set sum30 to ( sum15 + in3 )
-    set bad to 0
-    set temp to ( in1 + in2 )
+    set sum15 to 0
+    set sum15 to ( sum15 + in2 )
+    set sum15 to ( sum15 + in3 )
+    set sum30 to sum15
+    set sum30 to ( sum30 + in1 )
+    set temp to ( in2 + in3 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    if ( player->GetItemCount A1V4_L15_magicka_resistance == 1 )
-    	player->RemoveItem A1V4_L15_magicka_resistance, 1
-    elseif ( player->GetItemCount A1V4_L30_magicka_resistance == 1 )
-    	player->RemoveItem A1V4_L30_magicka_resistance, 1
+    if ( player->GetItemCount "A1V4_L15_magicka_resistance" == 1 )
+    	player->RemoveItem "A1V4_L15_magicka_resistance", 1
+    elseif ( player->GetItemCount "A1V4_L30_magicka_resistance" == 1 )
+    	player->RemoveItem "A1V4_L30_magicka_resistance", 1
     endif
     if ( bad == 0 )
     	if ( sum15 > 1 )
-    		player->AddItem A1V4_L15_magicka_resistance, 1
+    		player->AddItem "A1V4_L15_magicka_resistance", 1
     	elseif ( sum30 > 1 )
-    		player->AddItem A1V4_L30_magicka_resistance, 1
+    		player->AddItem "A1V4_L30_magicka_resistance", 1
     	endif
     endif
     

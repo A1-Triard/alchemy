@@ -122,21 +122,22 @@ SCTX
     set in1 to 0
     set in2 to 0
     
-    if ( player->GetItemCount ingred_ghoul_heart_01 > 0 )
+    if ( player->GetItemCount "ingred_ghoul_heart_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount Ingred_golden_sedge_01 > 0 )
+    if ( player->GetItemCount "Ingred_golden_sedge_01" > 0 )
     	set in2 to 1
     endif
     
-    set sum45 to ( in1 + in2 )
-    set bad to 0
-    if ( player->GetItemCount A1V4_L45_fortify_attack == 1 )
-    	player->RemoveItem A1V4_L45_fortify_attack, 1
+    set sum45 to 0
+    set sum45 to ( sum45 + in1 )
+    set sum45 to ( sum45 + in2 )
+    if ( player->GetItemCount "A1V4_L45_fortify_attack" == 1 )
+    	player->RemoveItem "A1V4_L45_fortify_attack", 1
     endif
     if ( bad == 0 )
     	if ( sum45 > 1 )
-    		player->AddItem A1V4_L45_fortify_attack, 1
+    		player->AddItem "A1V4_L45_fortify_attack", 1
     	endif
     endif
     

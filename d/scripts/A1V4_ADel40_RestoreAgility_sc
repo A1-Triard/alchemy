@@ -1,14 +1,14 @@
 SCTX
     Begin A1V4_ADel40_RestoreAgility_sc
     
-    if ( player->GetItemCount A1V4_L15_restore_agility == 1 )
-    	player->RemoveItem A1V4_L15_restore_agility, 1
-    elseif ( player->GetItemCount A1V4_L30_restore_agility == 1 )
-    	player->RemoveItem A1V4_L30_restore_agility, 1
-    elseif ( player->GetItemCount A1V4_L45_restore_agility == 1 )
-    	player->RemoveItem A1V4_L45_restore_agility, 1
-    elseif ( player->GetItemCount A1V4_L60_restore_agility == 1 )
-    	player->RemoveItem A1V4_L60_restore_agility, 1
+    if ( player->GetItemCount "A1V4_L15_restore_agility" == 1 )
+    	player->RemoveItem "A1V4_L15_restore_agility", 1
+    elseif ( player->GetItemCount "A1V4_L30_restore_agility" == 1 )
+    	player->RemoveItem "A1V4_L30_restore_agility", 1
+    elseif ( player->GetItemCount "A1V4_L45_restore_agility" == 1 )
+    	player->RemoveItem "A1V4_L45_restore_agility", 1
+    elseif ( player->GetItemCount "A1V4_L60_restore_agility" == 1 )
+    	player->RemoveItem "A1V4_L60_restore_agility", 1
     endif
     
     StopScript A1V4_ADel40_RestoreAgility_sc

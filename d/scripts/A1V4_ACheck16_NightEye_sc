@@ -141,46 +141,78 @@ SCTX
     set in10 to 0
     set in11 to 0
     
-    if ( player->GetItemCount ingred_eyeball > 0 )
+    if ( player->GetItemCount "ingred_bear_pelt" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_eyeball_unique > 0 )
+    if ( player->GetItemCount "ingred_daedras_heart_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_wolf_heart > 0 )
+    if ( player->GetItemCount "ingred_eyeball" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_daedras_heart_01 > 0 )
+    if ( player->GetItemCount "ingred_eyeball_unique" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount ingred_innocent_heart > 0 )
+    if ( player->GetItemCount "ingred_innocent_heart" > 0 )
     	set in5 to 1
     endif
-    if ( player->GetItemCount ingred_udyrfrykte_heart > 0 )
+    if ( player->GetItemCount "ingred_kagouti_hide_01" > 0 )
     	set in6 to 1
     endif
-    if ( player->GetItemCount ingred_wolf_pelt > 0 )
+    if ( player->GetItemCount "ingred_snowbear_pelt_unique" > 0 )
     	set in7 to 1
     endif
-    if ( player->GetItemCount ingred_kagouti_hide_01 > 0 )
+    if ( player->GetItemCount "ingred_snowwolf_pelt_unique" > 0 )
     	set in8 to 1
     endif
-    if ( player->GetItemCount ingred_bear_pelt > 0 )
+    if ( player->GetItemCount "ingred_udyrfrykte_heart" > 0 )
     	set in9 to 1
     endif
-    if ( player->GetItemCount ingred_snowwolf_pelt_unique > 0 )
+    if ( player->GetItemCount "ingred_wolf_heart" > 0 )
     	set in10 to 1
     endif
-    if ( player->GetItemCount ingred_snowbear_pelt_unique > 0 )
+    if ( player->GetItemCount "ingred_wolf_pelt" > 0 )
     	set in11 to 1
     endif
     
-    set sum30 to ( in1 + in2 )
-    set sum60 to ( sum30 + in3 + in4 + in5 )
-    set sum60 to ( sum60 + in6 + in7 + in8 )
-    set sum60 to ( sum60 + in9 + in10 + in11 )
-    set bad to 0
-    set temp to ( in1 + in2 )
+    set sum30 to 0
+    set sum30 to ( sum30 + in3 )
+    set sum30 to ( sum30 + in4 )
+    set sum60 to sum30
+    set sum60 to ( sum60 + in1 )
+    set sum60 to ( sum60 + in2 )
+    set sum60 to ( sum60 + in5 )
+    set sum60 to ( sum60 + in6 )
+    set sum60 to ( sum60 + in7 )
+    set sum60 to ( sum60 + in8 )
+    set sum60 to ( sum60 + in9 )
+    set sum60 to ( sum60 + in10 )
+    set sum60 to ( sum60 + in11 )
+    set temp to ( in1 + in6 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in1 + in7 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in1 + in8 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in1 + in11 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in2 + in5 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in2 + in9 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in2 + in10 )
     if ( temp > 1 )
     	set bad to 1
     endif
@@ -188,23 +220,23 @@ SCTX
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in3 + in5 )
+    set temp to ( in5 + in9 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in3 + in6 )
+    set temp to ( in5 + in10 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in4 + in5 )
+    set temp to ( in6 + in7 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in4 + in6 )
+    set temp to ( in6 + in8 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in5 + in6 )
+    set temp to ( in6 + in11 )
     if ( temp > 1 )
     	set bad to 1
     endif
@@ -212,23 +244,7 @@ SCTX
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in7 + in9 )
-    if ( temp > 1 )
-    	set bad to 1
-    endif
-    set temp to ( in7 + in10 )
-    if ( temp > 1 )
-    	set bad to 1
-    endif
     set temp to ( in7 + in11 )
-    if ( temp > 1 )
-    	set bad to 1
-    endif
-    set temp to ( in8 + in9 )
-    if ( temp > 1 )
-    	set bad to 1
-    endif
-    set temp to ( in8 + in10 )
     if ( temp > 1 )
     	set bad to 1
     endif
@@ -237,14 +253,6 @@ SCTX
     	set bad to 1
     endif
     set temp to ( in9 + in10 )
-    if ( temp > 1 )
-    	set bad to 1
-    endif
-    set temp to ( in9 + in11 )
-    if ( temp > 1 )
-    	set bad to 1
-    endif
-    set temp to ( in10 + in11 )
     if ( temp > 1 )
     	set bad to 1
     endif

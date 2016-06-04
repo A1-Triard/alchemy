@@ -39,20 +39,20 @@ SCTX
     if ( player->GetItemCount "ingred_bc_bungler's_bane" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_pearl_01 > 0 )
+    if ( player->GetItemCount "ingred_moon_sugar_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_moon_sugar_01 > 0 )
+    if ( player->GetItemCount "ingred_pearl_01" > 0 )
     	set in3 to 1
     endif
     if ( player->GetItemCount "Ingred_timsa-come-by_01" > 0 )
     	set in4 to 1
     endif
     
-    set sum to ( in4 )
-    set sum to ( sum + in2 + in3 )
-    set sum to ( sum + in1 )
-    set temp to ( in1 + in3 )
+    set sum to ( in1 + in2 )
+    set sum to ( sum + in3 )
+    set sum to ( sum + in4 )
+    set temp to ( in1 + in2 )
     if ( temp > 1 )
     	set sum to 0
     endif
@@ -61,10 +61,10 @@ SCTX
     		player->RemoveItem "ingred_bc_bungler's_bane", 1
     	endif
     	if ( in2 > 0 )
-    		player->RemoveItem ingred_pearl_01, 1
+    		player->RemoveItem "ingred_moon_sugar_01", 1
     	endif
     	if ( in3 > 0 )
-    		player->RemoveItem ingred_moon_sugar_01, 1
+    		player->RemoveItem "ingred_pearl_01", 1
     	endif
     	if ( in4 > 0 )
     		player->RemoveItem "Ingred_timsa-come-by_01", 1

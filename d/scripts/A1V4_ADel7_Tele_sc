@@ -1,12 +1,12 @@
 SCTX
     Begin A1V4_ADel7_Tele_sc
     
-    if ( player->GetItemCount A1V4_L30_telekinesis == 1 )
-    	player->RemoveItem A1V4_L30_telekinesis, 1
-    elseif ( player->GetItemCount A1V4_L45_telekinesis == 1 )
-    	player->RemoveItem A1V4_L45_telekinesis, 1
-    elseif ( player->GetItemCount A1V4_L60_telekinesis == 1 )
-    	player->RemoveItem A1V4_L60_telekinesis, 1
+    if ( player->GetItemCount "A1V4_L30_telekinesis" == 1 )
+    	player->RemoveItem "A1V4_L30_telekinesis", 1
+    elseif ( player->GetItemCount "A1V4_L45_telekinesis" == 1 )
+    	player->RemoveItem "A1V4_L45_telekinesis", 1
+    elseif ( player->GetItemCount "A1V4_L60_telekinesis" == 1 )
+    	player->RemoveItem "A1V4_L60_telekinesis", 1
     endif
     
     StopScript A1V4_ADel7_Tele_sc

@@ -136,37 +136,59 @@ SCTX
     set in7 to 0
     set in8 to 0
     
-    if ( player->GetItemCount Ingred_meadow_rye_01 > 0 )
+    if ( player->GetItemCount "ingred_kagouti_hide_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_moon_sugar_01 > 0 )
+    if ( player->GetItemCount "Ingred_meadow_rye_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount Ingred_nirthfly_stalks_01 > 0 )
+    if ( player->GetItemCount "ingred_moon_sugar_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_shalk_resin_01 > 0 )
+    if ( player->GetItemCount "Ingred_nirthfly_stalks_01" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount ingred_wolf_pelt > 0 )
+    if ( player->GetItemCount "ingred_shalk_resin_01" > 0 )
     	set in5 to 1
     endif
-    if ( player->GetItemCount ingred_kagouti_hide_01 > 0 )
+    if ( player->GetItemCount "ingred_snowbear_pelt_unique" > 0 )
     	set in6 to 1
     endif
-    if ( player->GetItemCount ingred_snowwolf_pelt_unique > 0 )
+    if ( player->GetItemCount "ingred_snowwolf_pelt_unique" > 0 )
     	set in7 to 1
     endif
-    if ( player->GetItemCount ingred_snowbear_pelt_unique > 0 )
+    if ( player->GetItemCount "ingred_wolf_pelt" > 0 )
     	set in8 to 1
     endif
     
-    set sum15 to ( in1 + in2 )
-    set sum30 to ( sum15 + in3 + in5 + in6 )
-    set sum30 to ( sum30 + in7 + in8 )
-    set sum60 to ( sum30 + in4 )
-    set bad to 0
-    set temp to ( in1 + in3 )
+    set sum15 to 0
+    set sum15 to ( sum15 + in2 )
+    set sum15 to ( sum15 + in3 )
+    set sum30 to sum15
+    set sum30 to ( sum30 + in1 )
+    set sum30 to ( sum30 + in4 )
+    set sum30 to ( sum30 + in6 )
+    set sum30 to ( sum30 + in7 )
+    set sum30 to ( sum30 + in8 )
+    set sum60 to sum30
+    set sum60 to ( sum60 + in5 )
+    set temp to ( in1 + in5 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in1 + in6 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in1 + in7 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in1 + in8 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in2 + in4 )
     if ( temp > 1 )
     	set bad to 1
     endif
@@ -194,20 +216,20 @@ SCTX
     if ( temp > 1 )
     	set bad to 1
     endif
-    if ( player->GetItemCount A1V4_L15_fortify_speed == 1 )
-    	player->RemoveItem A1V4_L15_fortify_speed, 1
-    elseif ( player->GetItemCount A1V4_L30_fortify_speed == 1 )
-    	player->RemoveItem A1V4_L30_fortify_speed, 1
-    elseif ( player->GetItemCount A1V4_L60_fortify_speed == 1 )
-    	player->RemoveItem A1V4_L60_fortify_speed, 1
+    if ( player->GetItemCount "A1V4_L15_fortify_speed" == 1 )
+    	player->RemoveItem "A1V4_L15_fortify_speed", 1
+    elseif ( player->GetItemCount "A1V4_L30_fortify_speed" == 1 )
+    	player->RemoveItem "A1V4_L30_fortify_speed", 1
+    elseif ( player->GetItemCount "A1V4_L60_fortify_speed" == 1 )
+    	player->RemoveItem "A1V4_L60_fortify_speed", 1
     endif
     if ( bad == 0 )
     	if ( sum15 > 1 )
-    		player->AddItem A1V4_L15_fortify_speed, 1
+    		player->AddItem "A1V4_L15_fortify_speed", 1
     	elseif ( sum30 > 1 )
-    		player->AddItem A1V4_L30_fortify_speed, 1
+    		player->AddItem "A1V4_L30_fortify_speed", 1
     	elseif ( sum60 > 1 )
-    		player->AddItem A1V4_L60_fortify_speed, 1
+    		player->AddItem "A1V4_L60_fortify_speed", 1
     	endif
     endif
     

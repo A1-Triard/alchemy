@@ -1,12 +1,12 @@
 SCTX
     Begin A1V4_ADel26_FortHealth_sc
     
-    if ( player->GetItemCount A1V4_L15_fortify_health == 1 )
-    	player->RemoveItem A1V4_L15_fortify_health, 1
-    elseif ( player->GetItemCount A1V4_L30_fortify_health == 1 )
-    	player->RemoveItem A1V4_L30_fortify_health, 1
-    elseif ( player->GetItemCount A1V4_L60_fortify_health == 1 )
-    	player->RemoveItem A1V4_L60_fortify_health, 1
+    if ( player->GetItemCount "A1V4_L15_fortify_health" == 1 )
+    	player->RemoveItem "A1V4_L15_fortify_health", 1
+    elseif ( player->GetItemCount "A1V4_L30_fortify_health" == 1 )
+    	player->RemoveItem "A1V4_L30_fortify_health", 1
+    elseif ( player->GetItemCount "A1V4_L60_fortify_health" == 1 )
+    	player->RemoveItem "A1V4_L60_fortify_health", 1
     endif
     
     StopScript A1V4_ADel26_FortHealth_sc

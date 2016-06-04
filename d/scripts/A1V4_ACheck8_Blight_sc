@@ -45,38 +45,38 @@ SCTX
     		player->AddItem p_cure_blight_s_A1_16, 8
     	endif
     	if ( A1V4_PotionS == 1 )
-    		player->AddItem p_cure_blight_s_A1_16, 2
+    		player->AddItem p_cure_blight_s_A1_16, 1
     	elseif ( A1V4_PotionS == 2 )
-    		player->AddItem p_cure_blight_s_A1_16, 4
+    		player->AddItem p_cure_blight_s_A1_16, 2
     	elseif ( A1V4_PotionS == 3 )
-    		player->AddItem p_cure_blight_s_A1_16, 6
+    		player->AddItem p_cure_blight_s_A1_16, 3
     	elseif ( A1V4_PotionS == 4 )
-    		player->AddItem p_cure_blight_s_A1_16, 8
+    		player->AddItem p_cure_blight_s_A1_16, 4
     	elseif ( A1V4_PotionS == 5 )
-    		player->AddItem p_cure_blight_s_A1_16, 10
+    		player->AddItem p_cure_blight_s_A1_16, 5
     	elseif ( A1V4_PotionS == 6 )
-    		player->AddItem p_cure_blight_s_A1_16, 12
+    		player->AddItem p_cure_blight_s_A1_16, 6
     	elseif ( A1V4_PotionS == 7 )
-    		player->AddItem p_cure_blight_s_A1_16, 14
+    		player->AddItem p_cure_blight_s_A1_16, 7
     	elseif ( A1V4_PotionS == 8 )
-    		player->AddItem p_cure_blight_s_A1_16, 16
+    		player->AddItem p_cure_blight_s_A1_16, 8
     	endif
     	if ( A1V4_PotionQ == 1 )
-    		player->AddItem p_cure_blight_s_A1_16, 2
+    		player->AddItem p_cure_blight_s_A1_16, 1
     	elseif ( A1V4_PotionQ == 2 )
-    		player->AddItem p_cure_blight_s_A1_16, 4
+    		player->AddItem p_cure_blight_s_A1_16, 2
     	elseif ( A1V4_PotionQ == 3 )
-    		player->AddItem p_cure_blight_s_A1_16, 6
+    		player->AddItem p_cure_blight_s_A1_16, 3
     	elseif ( A1V4_PotionQ == 4 )
-    		player->AddItem p_cure_blight_s_A1_16, 8
+    		player->AddItem p_cure_blight_s_A1_16, 4
     	elseif ( A1V4_PotionQ == 5 )
-    		player->AddItem p_cure_blight_s_A1_16, 10
+    		player->AddItem p_cure_blight_s_A1_16, 5
     	elseif ( A1V4_PotionQ == 6 )
-    		player->AddItem p_cure_blight_s_A1_16, 12
+    		player->AddItem p_cure_blight_s_A1_16, 6
     	elseif ( A1V4_PotionQ == 7 )
-    		player->AddItem p_cure_blight_s_A1_16, 14
+    		player->AddItem p_cure_blight_s_A1_16, 7
     	elseif ( A1V4_PotionQ == 8 )
-    		player->AddItem p_cure_blight_s_A1_16, 16
+    		player->AddItem p_cure_blight_s_A1_16, 8
     	endif
     endif
     
@@ -103,28 +103,30 @@ SCTX
     set in2 to 0
     set in3 to 0
     
-    if ( player->GetItemCount ingred_scrib_jelly_01 > 0 )
+    if ( player->GetItemCount "ingred_ash_salts_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_scrib_jelly_02 > 0 )
+    if ( player->GetItemCount "ingred_scrib_jelly_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_ash_salts_01 > 0 )
+    if ( player->GetItemCount "ingred_scrib_jelly_02" > 0 )
     	set in3 to 1
     endif
     
-    set sum45 to ( in1 + in2 + in3 )
-    set bad to 0
-    set temp to ( in1 + in2 )
+    set sum45 to 0
+    set sum45 to ( sum45 + in1 )
+    set sum45 to ( sum45 + in2 )
+    set sum45 to ( sum45 + in3 )
+    set temp to ( in2 + in3 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    if ( player->GetItemCount A1V4_L45_cure_blight == 1 )
-    	player->RemoveItem A1V4_L45_cure_blight, 1
+    if ( player->GetItemCount "A1V4_L45_cure_blight" == 1 )
+    	player->RemoveItem "A1V4_L45_cure_blight", 1
     endif
     if ( bad == 0 )
     	if ( sum45 > 1 )
-    		player->AddItem A1V4_L45_cure_blight, 1
+    		player->AddItem "A1V4_L45_cure_blight", 1
     	endif
     endif
     

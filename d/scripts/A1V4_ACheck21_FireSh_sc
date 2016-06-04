@@ -129,39 +129,43 @@ SCTX
     set in4 to 0
     set in5 to 0
     
-    if ( player->GetItemCount ingred_comberry_01 > 0 )
+    if ( player->GetItemCount "ingred_comberry_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_sload_soap_01 > 0 )
+    if ( player->GetItemCount "ingred_fire_salts_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_fire_salts_01 > 0 )
+    if ( player->GetItemCount "ingred_raw_glass_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_raw_glass_01 > 0 )
+    if ( player->GetItemCount "ingred_raw_glass_tinos" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount ingred_raw_glass_tinos > 0 )
+    if ( player->GetItemCount "ingred_sload_soap_01" > 0 )
     	set in5 to 1
     endif
     
-    set sum45 to ( in1 + in2 )
-    set sum60 to ( sum45 + in3 + in4 + in5 )
-    set bad to 0
-    set temp to ( in4 + in5 )
+    set sum45 to 0
+    set sum45 to ( sum45 + in1 )
+    set sum45 to ( sum45 + in5 )
+    set sum60 to sum45
+    set sum60 to ( sum60 + in2 )
+    set sum60 to ( sum60 + in3 )
+    set sum60 to ( sum60 + in4 )
+    set temp to ( in3 + in4 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    if ( player->GetItemCount A1V4_L45_fire_shield == 1 )
-    	player->RemoveItem A1V4_L45_fire_shield, 1
-    elseif ( player->GetItemCount A1V4_L60_fire_shield == 1 )
-    	player->RemoveItem A1V4_L60_fire_shield, 1
+    if ( player->GetItemCount "A1V4_L45_fire_shield" == 1 )
+    	player->RemoveItem "A1V4_L45_fire_shield", 1
+    elseif ( player->GetItemCount "A1V4_L60_fire_shield" == 1 )
+    	player->RemoveItem "A1V4_L60_fire_shield", 1
     endif
     if ( bad == 0 )
     	if ( sum45 > 1 )
-    		player->AddItem A1V4_L45_fire_shield, 1
+    		player->AddItem "A1V4_L45_fire_shield", 1
     	elseif ( sum60 > 1 )
-    		player->AddItem A1V4_L60_fire_shield, 1
+    		player->AddItem "A1V4_L60_fire_shield", 1
     	endif
     endif
     

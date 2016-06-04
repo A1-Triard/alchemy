@@ -52,112 +52,106 @@ SCTX
     set in11 to 0
     set in12 to 0
     
-    if ( player->GetItemCount food_kwama_egg_02 > 0 )
+    if ( player->GetItemCount "food_kwama_egg_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_scrib_jerky_01 > 0 )
+    if ( player->GetItemCount "food_kwama_egg_02" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_crab_meat_01 > 0 )
+    if ( player->GetItemCount "ingred_bread_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount "ingred_hackle-lo_leaf_01" > 0 )
+    if ( player->GetItemCount "ingred_bread_01_UNI2" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount food_kwama_egg_01 > 0 )
+    if ( player->GetItemCount "ingred_bread_01_UNI3" > 0 )
     	set in5 to 1
     endif
-    if ( player->GetItemCount ingred_hound_meat_01 > 0 )
+    if ( player->GetItemCount "ingred_chokeweed_01" > 0 )
     	set in6 to 1
     endif
-    if ( player->GetItemCount ingred_bread_01_UNI3 > 0 )
+    if ( player->GetItemCount "ingred_crab_meat_01" > 0 )
     	set in7 to 1
     endif
-    if ( player->GetItemCount ingred_scuttle_01 > 0 )
+    if ( player->GetItemCount "ingred_hackle-lo_leaf_01" > 0 )
     	set in8 to 1
     endif
-    if ( player->GetItemCount ingred_saltrice_01 > 0 )
+    if ( player->GetItemCount "ingred_hound_meat_01" > 0 )
     	set in9 to 1
     endif
-    if ( player->GetItemCount ingred_chokeweed_01 > 0 )
+    if ( player->GetItemCount "ingred_saltrice_01" > 0 )
     	set in10 to 1
     endif
-    if ( player->GetItemCount ingred_bread_01 > 0 )
+    if ( player->GetItemCount "ingred_scrib_jerky_01" > 0 )
     	set in11 to 1
     endif
-    if ( player->GetItemCount ingred_bread_01_UNI2 > 0 )
+    if ( player->GetItemCount "ingred_scuttle_01" > 0 )
     	set in12 to 1
     endif
     
-    set sum to ( in1 + in2 + in3 )
-    set sum to ( sum + in4 + in5 + in6 )
-    set sum to ( sum + in7 + in8 + in9 )
-    set sum to ( sum + in11 + in12 )
+    set sum to ( in1 + in2 )
+    set sum to ( sum + in3 )
+    set sum to ( sum + in4 )
+    set sum to ( sum + in5 )
+    set sum to ( sum + in6 )
+    set sum to ( sum + in7 )
+    set sum to ( sum + in8 )
+    set sum to ( sum + in9 )
     set sum to ( sum + in10 )
-    set temp to ( in1 + in4 )
+    set sum to ( sum + in11 )
+    set sum to ( sum + in12 )
+    set temp to ( in2 + in8 )
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in5 + in7 )
+    set temp to ( in3 + in4 )
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in5 + in11 )
+    set temp to ( in3 + in5 )
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in5 + in12 )
-    if ( temp > 1 )
-    	set sum to 0
-    endif
-    set temp to ( in7 + in11 )
-    if ( temp > 1 )
-    	set sum to 0
-    endif
-    set temp to ( in7 + in12 )
-    if ( temp > 1 )
-    	set sum to 0
-    endif
-    set temp to ( in11 + in12 )
+    set temp to ( in4 + in5 )
     if ( temp > 1 )
     	set sum to 0
     endif
     if ( sum > 1 )
     	if ( in1 > 0 )
-    		player->RemoveItem food_kwama_egg_02, 1
+    		player->RemoveItem "food_kwama_egg_01", 1
     	endif
     	if ( in2 > 0 )
-    		player->RemoveItem ingred_scrib_jerky_01, 1
+    		player->RemoveItem "food_kwama_egg_02", 1
     	endif
     	if ( in3 > 0 )
-    		player->RemoveItem ingred_crab_meat_01, 1
+    		player->RemoveItem "ingred_bread_01", 1
     	endif
     	if ( in4 > 0 )
-    		player->RemoveItem "ingred_hackle-lo_leaf_01", 1
+    		player->RemoveItem "ingred_bread_01_UNI2", 1
     	endif
     	if ( in5 > 0 )
-    		player->RemoveItem food_kwama_egg_01, 1
+    		player->RemoveItem "ingred_bread_01_UNI3", 1
     	endif
     	if ( in6 > 0 )
-    		player->RemoveItem ingred_hound_meat_01, 1
+    		player->RemoveItem "ingred_chokeweed_01", 1
     	endif
     	if ( in7 > 0 )
-    		player->RemoveItem ingred_bread_01_UNI3, 1
+    		player->RemoveItem "ingred_crab_meat_01", 1
     	endif
     	if ( in8 > 0 )
-    		player->RemoveItem ingred_scuttle_01, 1
+    		player->RemoveItem "ingred_hackle-lo_leaf_01", 1
     	endif
     	if ( in9 > 0 )
-    		player->RemoveItem ingred_saltrice_01, 1
+    		player->RemoveItem "ingred_hound_meat_01", 1
     	endif
     	if ( in10 > 0 )
-    		player->RemoveItem ingred_chokeweed_01, 1
+    		player->RemoveItem "ingred_saltrice_01", 1
     	endif
     	if ( in11 > 0 )
-    		player->RemoveItem ingred_bread_01, 1
+    		player->RemoveItem "ingred_scrib_jerky_01", 1
     	endif
     	if ( in12 > 0 )
-    		player->RemoveItem ingred_bread_01_UNI2, 1
+    		player->RemoveItem "ingred_scuttle_01", 1
     	endif
     	set state to 1
     	set A1V4_CalcAlchemy5_sc.in to sum

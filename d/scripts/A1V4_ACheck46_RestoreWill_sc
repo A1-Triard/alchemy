@@ -127,36 +127,39 @@ SCTX
     set in3 to 0
     set in4 to 0
     
-    if ( player->GetItemCount ingred_scathecraw_01 > 0 )
+    if ( player->GetItemCount "ingred_scathecraw_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_trama_root_01 > 0 )
+    if ( player->GetItemCount "ingred_scrib_jelly_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_scrib_jelly_01 > 0 )
+    if ( player->GetItemCount "ingred_scrib_jelly_02" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_scrib_jelly_02 > 0 )
+    if ( player->GetItemCount "ingred_trama_root_01" > 0 )
     	set in4 to 1
     endif
     
-    set sum15 to ( in2 )
-    set sum60 to ( sum15 + in1 + in3 + in4 )
-    set bad to 0
-    set temp to ( in3 + in4 )
+    set sum15 to 0
+    set sum15 to ( sum15 + in4 )
+    set sum60 to sum15
+    set sum60 to ( sum60 + in1 )
+    set sum60 to ( sum60 + in2 )
+    set sum60 to ( sum60 + in3 )
+    set temp to ( in2 + in3 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    if ( player->GetItemCount A1V4_L15_restore_willpower == 1 )
-    	player->RemoveItem A1V4_L15_restore_willpower, 1
-    elseif ( player->GetItemCount A1V4_L60_restore_willpower == 1 )
-    	player->RemoveItem A1V4_L60_restore_willpower, 1
+    if ( player->GetItemCount "A1V4_L15_restore_willpower" == 1 )
+    	player->RemoveItem "A1V4_L15_restore_willpower", 1
+    elseif ( player->GetItemCount "A1V4_L60_restore_willpower" == 1 )
+    	player->RemoveItem "A1V4_L60_restore_willpower", 1
     endif
     if ( bad == 0 )
     	if ( sum15 > 1 )
-    		player->AddItem A1V4_L15_restore_willpower, 1
+    		player->AddItem "A1V4_L15_restore_willpower", 1
     	elseif ( sum60 > 1 )
-    		player->AddItem A1V4_L60_restore_willpower, 1
+    		player->AddItem "A1V4_L60_restore_willpower", 1
     	endif
     endif
     

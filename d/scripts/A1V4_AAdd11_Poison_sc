@@ -44,44 +44,43 @@ SCTX
     set in7 to 0
     set in8 to 0
     
-    if ( player->GetItemCount ingred_scathecraw_01 > 0 )
+    if ( player->GetItemCount "ingred_black_lichen_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_rat_meat_01 > 0 )
+    if ( player->GetItemCount "ingred_ghoul_heart_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_roobrush_01 > 0 )
+    if ( player->GetItemCount "ingred_rat_meat_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_ghoul_heart_01 > 0 )
+    if ( player->GetItemCount "ingred_raw_ebony_01" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount ingred_scrib_jelly_01 > 0 )
+    if ( player->GetItemCount "ingred_roobrush_01" > 0 )
     	set in5 to 1
     endif
-    if ( player->GetItemCount ingred_scrib_jelly_02 > 0 )
+    if ( player->GetItemCount "ingred_scathecraw_01" > 0 )
     	set in6 to 1
     endif
-    if ( player->GetItemCount ingred_black_lichen_01 > 0 )
+    if ( player->GetItemCount "ingred_scrib_jelly_01" > 0 )
     	set in7 to 1
     endif
-    if ( player->GetItemCount ingred_raw_ebony_01 > 0 )
+    if ( player->GetItemCount "ingred_scrib_jelly_02" > 0 )
     	set in8 to 1
     endif
     
-    set sum to ( in1 + in4 + in5 )
-    set sum to ( sum + in6 + in8 )
-    set sum to ( sum + in2 )
-    set sum to ( sum + in3 + in7 )
-    set temp to ( in1 + in7 )
+    set sum to ( in1 + in2 )
+    set sum to ( sum + in3 )
+    set sum to ( sum + in4 )
+    set sum to ( sum + in5 )
+    set sum to ( sum + in6 )
+    set sum to ( sum + in7 )
+    set sum to ( sum + in8 )
+    set temp to ( in1 + in6 )
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in1 + in3 )
-    if ( temp > 1 )
-    	set sum to 0
-    endif
-    set temp to ( in2 + in4 )
+    set temp to ( in2 + in3 )
     if ( temp > 1 )
     	set sum to 0
     endif
@@ -89,33 +88,36 @@ SCTX
     if ( temp > 1 )
     	set sum to 0
     endif
+    set temp to ( in7 + in8 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
     if ( sum > 1 )
     	if ( in1 > 0 )
-    		player->RemoveItem ingred_scathecraw_01, 1
+    		player->RemoveItem "ingred_black_lichen_01", 1
     	endif
     	if ( in2 > 0 )
-    		player->RemoveItem ingred_rat_meat_01, 1
+    		player->RemoveItem "ingred_ghoul_heart_01", 1
     	endif
     	if ( in3 > 0 )
-    		player->RemoveItem ingred_roobrush_01, 1
+    		player->RemoveItem "ingred_rat_meat_01", 1
     	endif
     	if ( in4 > 0 )
-    		player->RemoveItem ingred_ghoul_heart_01, 1
+    		player->RemoveItem "ingred_raw_ebony_01", 1
     	endif
     	if ( in5 > 0 )
-    		player->RemoveItem ingred_scrib_jelly_01, 1
+    		player->RemoveItem "ingred_roobrush_01", 1
     	endif
     	if ( in6 > 0 )
-    		player->RemoveItem ingred_scrib_jelly_02, 1
+    		player->RemoveItem "ingred_scathecraw_01", 1
     	endif
     	if ( in7 > 0 )
-    		player->RemoveItem ingred_black_lichen_01, 1
+    		player->RemoveItem "ingred_scrib_jelly_01", 1
     	endif
     	if ( in8 > 0 )
-    		player->RemoveItem ingred_raw_ebony_01, 1
+    		player->RemoveItem "ingred_scrib_jelly_02", 1
     	endif
     	set state to 1
-    	set A1V4_CalcAlchemy2_sc.pin to 40
     	set A1V4_CalcAlchemy2_sc.in to sum
     	set A1V4_CalcAlchemy2 to 1
     else

@@ -141,54 +141,54 @@ SCTX
     set in10 to 0
     set in11 to 0
     
-    if ( player->GetItemCount ingred_adamantium_ore_01 > 0 )
+    if ( player->GetItemCount "ingred_adamantium_ore_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_comberry_01 > 0 )
+    if ( player->GetItemCount "ingred_belladonna_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_frost_salts_01 > 0 )
+    if ( player->GetItemCount "ingred_belladonna_02" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_belladonna_02 > 0 )
+    if ( player->GetItemCount "ingred_comberry_01" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount ingred_wolf_heart > 0 )
+    if ( player->GetItemCount "ingred_daedras_heart_01" > 0 )
     	set in5 to 1
     endif
-    if ( player->GetItemCount ingred_daedras_heart_01 > 0 )
+    if ( player->GetItemCount "ingred_frost_salts_01" > 0 )
     	set in6 to 1
     endif
-    if ( player->GetItemCount ingred_innocent_heart > 0 )
+    if ( player->GetItemCount "ingred_heartwood_01" > 0 )
     	set in7 to 1
     endif
-    if ( player->GetItemCount ingred_udyrfrykte_heart > 0 )
+    if ( player->GetItemCount "ingred_innocent_heart" > 0 )
     	set in8 to 1
     endif
-    if ( player->GetItemCount ingred_belladonna_01 > 0 )
+    if ( player->GetItemCount "ingred_udyrfrykte_heart" > 0 )
     	set in9 to 1
     endif
-    if ( player->GetItemCount ingred_void_salts_01 > 0 )
+    if ( player->GetItemCount "ingred_void_salts_01" > 0 )
     	set in10 to 1
     endif
-    if ( player->GetItemCount ingred_heartwood_01 > 0 )
+    if ( player->GetItemCount "ingred_wolf_heart" > 0 )
     	set in11 to 1
     endif
     
-    set sum15 to ( in5 + in6 + in7 )
-    set sum15 to ( sum15 + in8 + in10 + in11 )
-    set sum30 to ( sum15 + in1 + in2 + in3 )
-    set sum30 to ( sum30 + in4 + in9 )
-    set bad to 0
-    set temp to ( in4 + in9 )
-    if ( temp > 1 )
-    	set bad to 1
-    endif
-    set temp to ( in5 + in6 )
-    if ( temp > 1 )
-    	set bad to 1
-    endif
-    set temp to ( in5 + in7 )
+    set sum15 to 0
+    set sum15 to ( sum15 + in5 )
+    set sum15 to ( sum15 + in7 )
+    set sum15 to ( sum15 + in8 )
+    set sum15 to ( sum15 + in9 )
+    set sum15 to ( sum15 + in10 )
+    set sum15 to ( sum15 + in11 )
+    set sum30 to sum15
+    set sum30 to ( sum30 + in1 )
+    set sum30 to ( sum30 + in2 )
+    set sum30 to ( sum30 + in3 )
+    set sum30 to ( sum30 + in4 )
+    set sum30 to ( sum30 + in6 )
+    set temp to ( in2 + in3 )
     if ( temp > 1 )
     	set bad to 1
     endif
@@ -196,28 +196,36 @@ SCTX
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in6 + in7 )
+    set temp to ( in5 + in9 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in6 + in8 )
+    set temp to ( in5 + in11 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in7 + in8 )
+    set temp to ( in8 + in9 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    if ( player->GetItemCount A1V4_L15_restore_magicka == 1 )
-    	player->RemoveItem A1V4_L15_restore_magicka, 1
-    elseif ( player->GetItemCount A1V4_L30_restore_magicka == 1 )
-    	player->RemoveItem A1V4_L30_restore_magicka, 1
+    set temp to ( in8 + in11 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in9 + in11 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    if ( player->GetItemCount "A1V4_L15_restore_magicka" == 1 )
+    	player->RemoveItem "A1V4_L15_restore_magicka", 1
+    elseif ( player->GetItemCount "A1V4_L30_restore_magicka" == 1 )
+    	player->RemoveItem "A1V4_L30_restore_magicka", 1
     endif
     if ( bad == 0 )
     	if ( sum15 > 1 )
-    		player->AddItem A1V4_L15_restore_magicka, 1
+    		player->AddItem "A1V4_L15_restore_magicka", 1
     	elseif ( sum30 > 1 )
-    		player->AddItem A1V4_L30_restore_magicka, 1
+    		player->AddItem "A1V4_L30_restore_magicka", 1
     	endif
     endif
     

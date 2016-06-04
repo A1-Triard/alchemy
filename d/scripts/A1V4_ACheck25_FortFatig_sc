@@ -6,8 +6,6 @@ SCTX
     short in2
     short in3
     short in4
-    short in5
-    short sum15
     short sum30
     short sum45
     short temp
@@ -128,42 +126,36 @@ SCTX
     set in2 to 0
     set in3 to 0
     set in4 to 0
-    set in5 to 0
     
-    if ( player->GetItemCount ingred_scrib_jerky_01 > 0 )
+    if ( player->GetItemCount "ingred_gravetar_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_gravetar_01 > 0 )
+    if ( player->GetItemCount "ingred_hound_meat_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_hound_meat_01 > 0 )
+    if ( player->GetItemCount "ingred_scrib_jerky_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_scuttle_01 > 0 )
+    if ( player->GetItemCount "ingred_scuttle_01" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount ingred_shalk_resin_01 > 0 )
-    	set in5 to 1
-    endif
     
-    set sum15 to ( in5 )
-    set sum30 to ( sum15 + in1 + in3 + in4 )
-    set sum45 to ( sum30 + in2 )
-    set bad to 0
-    if ( player->GetItemCount A1V4_L15_fortify_fatigue == 1 )
-    	player->RemoveItem A1V4_L15_fortify_fatigue, 1
-    elseif ( player->GetItemCount A1V4_L30_fortify_fatigue == 1 )
-    	player->RemoveItem A1V4_L30_fortify_fatigue, 1
-    elseif ( player->GetItemCount A1V4_L45_fortify_fatigue == 1 )
-    	player->RemoveItem A1V4_L45_fortify_fatigue, 1
+    set sum30 to 0
+    set sum30 to ( sum30 + in2 )
+    set sum30 to ( sum30 + in3 )
+    set sum30 to ( sum30 + in4 )
+    set sum45 to sum30
+    set sum45 to ( sum45 + in1 )
+    if ( player->GetItemCount "A1V4_L30_fortify_fatigue" == 1 )
+    	player->RemoveItem "A1V4_L30_fortify_fatigue", 1
+    elseif ( player->GetItemCount "A1V4_L45_fortify_fatigue" == 1 )
+    	player->RemoveItem "A1V4_L45_fortify_fatigue", 1
     endif
     if ( bad == 0 )
-    	if ( sum15 > 1 )
-    		player->AddItem A1V4_L15_fortify_fatigue, 1
-    	elseif ( sum30 > 1 )
-    		player->AddItem A1V4_L30_fortify_fatigue, 1
+    	if ( sum30 > 1 )
+    		player->AddItem "A1V4_L30_fortify_fatigue", 1
     	elseif ( sum45 > 1 )
-    		player->AddItem A1V4_L45_fortify_fatigue, 1
+    		player->AddItem "A1V4_L45_fortify_fatigue", 1
     	endif
     endif
     

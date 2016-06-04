@@ -1,0 +1,56 @@
+#!/bin/sh
+
+cp "$1" "$1.ingr"
+echo "" >> "$1.ingr"
+awk 'BEGIN { i = 0; scri =0 } {
+    if(ir == 1) {
+        ir = 2
+    } else if(ir == 2) {
+        e1 = $1
+        e2 = $2
+        e3 = $3
+        e4 = $4
+        ir = 3
+    } else if(ir == 3) {
+        if(e1 == "21")
+            e1 = e1 "-" $1
+        if(e2 == "21")
+            e2 = e2 "-" $2
+        if(e3 == "21")
+            e3 = e3 "-" $3
+        if(e4 == "21")
+            e4 = e4 "-" $4
+        ir = 4
+    } else if(ir == 4) {
+        if(e1 == "74" || e1 == "79" || e1 == "17" || e1 == "22")
+            e1 = e1 "-" $1
+        if(e2 == "74" || e2 == "79" || e2 == "17" || e2 == "22")
+            e2 = e2 "-" $2
+        if(e3 == "74" || e3 == "79" || e3 == "17" || e3 == "22")
+            e3 = e3 "-" $3
+        if(e4 == "74" || e4 == "79" || e4 == "17" || e4 == "22")
+            e4 = e4 "-" $4
+        ir = 0
+    } else if(substr($0, 1, 4) == "INGR") {
+        i = 1
+    } else if(i && substr($0, 1, 4) == "NAME") {
+        name = substr($0, 6, length($0) - 5)
+    } else if(i && substr($0, 1, 4) == "MODL") {
+        modl = substr($0, 6, length($0) - 5)
+    } else if(i && substr($0, 1, 4) == "ITEX") {
+        itex = substr($0, 6, length($0) - 5)
+    } else if(i && substr($0, 1, 4) == "IRDT") {
+        ir=1
+    } else if(i && substr($0, 1, 4) == "SCRI") {
+        scri=1
+    } else if(i && $0 == "") {
+        if(!scri)
+            print name ":" e1 ":" e2 ":" e3 ":" e4 ":" modl "+" itex
+        name = ""
+        modl = ""
+        itex = ""
+        ir = 0
+        scri = 0
+    }
+}' "$1.ingr"
+rm "$1.ingr"

@@ -127,36 +127,39 @@ SCTX
     set in3 to 0
     set in4 to 0
     
-    if ( player->GetItemCount Ingred_horn_lily_bulb_01 > 0 )
+    if ( player->GetItemCount "ingred_gravedust_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_gravedust_01 > 0 )
+    if ( player->GetItemCount "Ingred_horn_lily_bulb_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount "Ingred_timsa-come-by_01" > 0 )
+    if ( player->GetItemCount "ingred_scales_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_scales_01 > 0 )
+    if ( player->GetItemCount "Ingred_timsa-come-by_01" > 0 )
     	set in4 to 1
     endif
     
-    set sum45 to ( in4 )
-    set sum60 to ( sum45 + in1 + in2 + in3 )
-    set bad to 0
-    set temp to ( in2 + in3 )
+    set sum45 to 0
+    set sum45 to ( sum45 + in3 )
+    set sum60 to sum45
+    set sum60 to ( sum60 + in1 )
+    set sum60 to ( sum60 + in2 )
+    set sum60 to ( sum60 + in4 )
+    set temp to ( in1 + in4 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    if ( player->GetItemCount A1V4_L45_restore_endurance == 1 )
-    	player->RemoveItem A1V4_L45_restore_endurance, 1
-    elseif ( player->GetItemCount A1V4_L60_restore_endurance == 1 )
-    	player->RemoveItem A1V4_L60_restore_endurance, 1
+    if ( player->GetItemCount "A1V4_L45_restore_endurance" == 1 )
+    	player->RemoveItem "A1V4_L45_restore_endurance", 1
+    elseif ( player->GetItemCount "A1V4_L60_restore_endurance" == 1 )
+    	player->RemoveItem "A1V4_L60_restore_endurance", 1
     endif
     if ( bad == 0 )
     	if ( sum45 > 1 )
-    		player->AddItem A1V4_L45_restore_endurance, 1
+    		player->AddItem "A1V4_L45_restore_endurance", 1
     	elseif ( sum60 > 1 )
-    		player->AddItem A1V4_L60_restore_endurance, 1
+    		player->AddItem "A1V4_L60_restore_endurance", 1
     	endif
     endif
     

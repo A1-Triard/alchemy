@@ -3,33 +3,33 @@
 gen_ingrs() {
     name=$(awk -v FS=':' '{print $2}' "$sd")
     effect=$(awk -v FS=':' '{print $4}' "$sd")
-    ingrs=scripts2/${name}.ef
-    ingrs15=scripts2/${name}.ef15
-    ingrs30=scripts2/${name}.ef30
-    ingrs45=scripts2/${name}.ef45
-    ingrs60=scripts2/${name}.ef60
+    ingrs=scripts/${name}.ef
+    ingrs15=scripts/${name}.ef15
+    ingrs30=scripts/${name}.ef30
+    ingrs45=scripts/${name}.ef45
+    ingrs60=scripts/${name}.ef60
     awk -v FS=':' -v ef=$effect '{
         if($2 == ef || $3 == ef || $4 == ef || $5 == ef) {
             print
         }
-    }' ingredients/Morrowind > $ingrs
+    }' ingredients_data > $ingrs
     awk -v FS=':' -v ef=$effect '{
         if($2 == ef) {
             print
         }
     }' $ingrs > $ingrs15
     awk -v FS=':' -v ef=$effect '{
-        if($3 == ef) {
+        if($2 != ef && $3 == ef) {
             print
         }
     }' $ingrs > $ingrs30
     awk -v FS=':' -v ef=$effect '{
-        if($4 == ef) {
+        if($2 != ef && $3 != ef && $4 == ef) {
             print
         }
     }' $ingrs > $ingrs45
     awk -v FS=':' -v ef=$effect '{
-        if($5 == ef) {
+        if($2 != ef && $3 != ef && $4 != ef && $5 == ef) {
             print
         }
     }' $ingrs > $ingrs60
@@ -41,12 +41,12 @@ gen_add() {
     kind=$(awk -v FS=':' '{print $3}' "$sd")
     add_name=A1V4_AAdd${index}_${name}_sc
     check_name=A1V4_ACheck${index}_${name}_sc
-    add_s=scripts2/$add_name
+    add_s=scripts/$add_name
     echo 'SCTX' > $add_s
     echo "    Begin ${add_name}" >> $add_s
     echo '    ' >> $add_s
     effect=$(awk -v FS=':' '{print $4}' "$sd")
-    ingrs=scripts2/${name}.ef
+    ingrs=scripts/${name}.ef
     ingrs_count=$(wc -l < $ingrs)
     for i in $(seq 1 $ingrs_count); do
         echo "    short in${i}" >> $add_s
@@ -97,11 +97,11 @@ gen_add() {
             e=$(awk -v FS=':' -v N=$i -v F=$ei '{ if(FNR == N) { print $F } }' $ingrs)
             if [ "x$e" = "x-1" ]; then
                 true
-            elif [ -n "$(grep $e negative_effects)" ]; then
+            elif [ -n "$(grep -x -- $e negative_effects)" ]; then
                 true
-            elif [ -n "$(grep $e neutral_effects)" ]; then
+            elif [ -n "$(grep -x -- $e neutral_effects)" ]; then
                 true
-            elif [ -n "$(grep $e positive_effects)" ]; then
+            elif [ -n "$(grep -x -- $e positive_effects)" ]; then
                 true
             else
                 echo "unknown effect: $e"
@@ -117,7 +117,7 @@ gen_add() {
                     e1=$(awk -v FS=':' -v N=$i -v F=$e1i '{ if(FNR == N) { print $F } }' $ingrs)
                     e2=$(awk -v FS=':' -v N=$j -v F=$e2i '{ if(FNR == N) { print $F } }' $ingrs)
                     if [ "x${e1}" = "x${e2}" ]; then
-                        if [ -n "$(grep -- $e1 negative_effects)" ]; then
+                        if [ -n "$(grep -x -- $e1 negative_effects)" ]; then
                             stop='stop'
                         fi
                     fi
@@ -168,18 +168,18 @@ gen_check2() {
     name=$(awk -v FS=':' '{print $2}' "$sd")
     add_name=A1V4_AAdd${index}_${name}_sc
     check_name=A1V4_ACheck${index}_${name}_sc
-    add_s=scripts2/$check_name
+    add_s=scripts/$check_name
     echo 'SCTX' > $add_s
     echo "    Begin ${check_name}" >> $add_s
     echo '    ' >> $add_s
     echo '    short AddPotion' >> $add_s
     effect=$(awk -v FS=':' '{print $4}' "$sd")
-    ingrs=scripts2/${name}.ef
+    ingrs=scripts/${name}.ef
     ingrs_count=$(wc -l < $ingrs)
-    ingrs15=scripts2/${name}.ef15
-    ingrs30=scripts2/${name}.ef30
-    ingrs45=scripts2/${name}.ef45
-    ingrs60=scripts2/${name}.ef60
+    ingrs15=scripts/${name}.ef15
+    ingrs30=scripts/${name}.ef30
+    ingrs45=scripts/${name}.ef45
+    ingrs60=scripts/${name}.ef60
     for i in $(seq 1 $ingrs_count); do
         echo "    short in${i}" >> $add_s
     done
@@ -306,26 +306,59 @@ gen_check2() {
     done
     echo '    ' >> $add_s
     if [ $ingrs15_count != 0 ]; then
-        echo '    short sum15' >> $add_s
-    fi
-    if [ $ingrs15_count != 0 ]; then
-        echo '    short sum30' >> $add_s
-    fi
-    if [ $ingrs15_count != 0 ]; then
-        echo '    short sum45' >> $add_s
-    fi
-    if [ $ingrs15_count != 0 ]; then
-        echo '    short sum60' >> $add_s
+        echo '    set sum15 to 0' >> $add_s
     fi
     for i in $(seq 1 $ingrs_count); do
         awk -v FS=':' -v ef=$effect -v N=$i '{
             if(FNR == N && $2 == ef) {
                 print "    set sum15 to ( sum15 + in" N " )"
-            } else if(FNR == N && $3 == ef) {
+            }
+        }' $ingrs >> $add_s
+    done
+    if [ $ingrs30_count != 0 ]; then
+        if [ $ingrs15_count != 0 ]; then
+            echo '    set sum30 to sum15' >> $add_s
+        else
+            echo '    set sum30 to 0' >> $add_s
+        fi
+    fi
+    for i in $(seq 1 $ingrs_count); do
+        awk -v FS=':' -v ef=$effect -v N=$i '{
+            if(FNR == N && $3 == ef && $2 != ef) {
                 print "    set sum30 to ( sum30 + in" N " )"
-            } else if(FNR == N && $4 == ef) {
+            }
+        }' $ingrs >> $add_s
+    done
+    if [ $ingrs45_count != 0 ]; then
+        if [ $ingrs30_count != 0 ]; then
+            echo '    set sum45 to sum30' >> $add_s
+        elif [ $ingrs15_count != 0 ]; then
+            echo '    set sum45 to sum15' >> $add_s
+        else
+            echo '    set sum45 to 0' >> $add_s
+        fi
+    fi
+    for i in $(seq 1 $ingrs_count); do
+        awk -v FS=':' -v ef=$effect -v N=$i '{
+            if(FNR == N && $4 == ef && $2 != ef && $3 != ef) {
                 print "    set sum45 to ( sum45 + in" N " )"
-            } else if(FNR == N && $5 == ef) {
+            }
+        }' $ingrs >> $add_s
+    done
+    if [ $ingrs60_count != 0 ]; then
+        if [ $ingrs45_count != 0 ]; then
+            echo '    set sum60 to sum45' >> $add_s
+        elif [ $ingrs30_count != 0 ]; then
+            echo '    set sum60 to sum30' >> $add_s
+        elif [ $ingrs15_count != 0 ]; then
+            echo '    set sum60 to sum15' >> $add_s
+        else
+            echo '    set sum60 to 0' >> $add_s
+        fi
+    fi
+    for i in $(seq 1 $ingrs_count); do
+        awk -v FS=':' -v ef=$effect -v N=$i '{
+            if(FNR == N && $5 == ef && $2 != ef && $3 != ef && $4 != ef) {
                 print "    set sum60 to ( sum60 + in" N " )"
             }
         }' $ingrs >> $add_s
@@ -338,7 +371,7 @@ gen_check2() {
                     e1=$(awk -v FS=':' -v N=$i -v F=$e1i '{ if(FNR == N) { print $F } }' $ingrs)
                     e2=$(awk -v FS=':' -v N=$j -v F=$e2i '{ if(FNR == N) { print $F } }' $ingrs)
                     if [ "x${e1}" = "x${e2}" ]; then
-                        if [ -n "$(grep -- $e1 negative_effects)" ]; then
+                        if [ -n "$(grep -x -- $e1 negative_effects)" ]; then
                             stop='stop'
                         fi
                     fi
@@ -449,18 +482,18 @@ gen_check5() {
     name=$(awk -v FS=':' '{print $2}' "$sd")
     add_name=A1V4_AAdd${index}_${name}_sc
     check_name=A1V4_ACheck${index}_${name}_sc
-    add_s=scripts2/$check_name
+    add_s=scripts/$check_name
     echo 'SCTX' > $add_s
     echo "    Begin ${check_name}" >> $add_s
     echo '    ' >> $add_s
     echo '    short AddPotion' >> $add_s
     effect=$(awk -v FS=':' '{print $4}' "$sd")
-    ingrs=scripts2/${name}.ef
+    ingrs=scripts/${name}.ef
     ingrs_count=$(wc -l < $ingrs)
-    ingrs15=scripts2/${name}.ef15
-    ingrs30=scripts2/${name}.ef30
-    ingrs45=scripts2/${name}.ef45
-    ingrs60=scripts2/${name}.ef60
+    ingrs15=scripts/${name}.ef15
+    ingrs30=scripts/${name}.ef30
+    ingrs45=scripts/${name}.ef45
+    ingrs60=scripts/${name}.ef60
     for i in $(seq 1 $ingrs_count); do
         echo "    short in${i}" >> $add_s
     done
@@ -618,24 +651,57 @@ gen_check5() {
     if [ $ingrs15_count != 0 ]; then
         echo '    set sum15 to 0' >> $add_s
     fi
-    if [ $ingrs30_count != 0 ]; then
-        echo '    set sum30 to 0' >> $add_s
-    fi
-    if [ $ingrs45_count != 0 ]; then
-        echo '    set sum45 to 0' >> $add_s
-    fi
-    if [ $ingrs60_count != 0 ]; then
-        echo '    set sum60 to 0' >> $add_s
-    fi
     for i in $(seq 1 $ingrs_count); do
         awk -v FS=':' -v ef=$effect -v N=$i '{
             if(FNR == N && $2 == ef) {
                 print "    set sum15 to ( sum15 + in" N " )"
-            } else if(FNR == N && $3 == ef) {
+            }
+        }' $ingrs >> $add_s
+    done
+    if [ $ingrs30_count != 0 ]; then
+        if [ $ingrs15_count != 0 ]; then
+            echo '    set sum30 to sum15' >> $add_s
+        else
+            echo '    set sum30 to 0' >> $add_s
+        fi
+    fi
+    for i in $(seq 1 $ingrs_count); do
+        awk -v FS=':' -v ef=$effect -v N=$i '{
+            if(FNR == N && $3 == ef && $2 != ef) {
                 print "    set sum30 to ( sum30 + in" N " )"
-            } else if(FNR == N && $4 == ef) {
+            }
+        }' $ingrs >> $add_s
+    done
+    if [ $ingrs45_count != 0 ]; then
+        if [ $ingrs30_count != 0 ]; then
+            echo '    set sum45 to sum30' >> $add_s
+        elif [ $ingrs15_count != 0 ]; then
+            echo '    set sum45 to sum15' >> $add_s
+        else
+            echo '    set sum45 to 0' >> $add_s
+        fi
+    fi
+    for i in $(seq 1 $ingrs_count); do
+        awk -v FS=':' -v ef=$effect -v N=$i '{
+            if(FNR == N && $4 == ef && $2 != ef && $3 != ef) {
                 print "    set sum45 to ( sum45 + in" N " )"
-            } else if(FNR == N && $5 == ef) {
+            }
+        }' $ingrs >> $add_s
+    done
+    if [ $ingrs60_count != 0 ]; then
+        if [ $ingrs45_count != 0 ]; then
+            echo '    set sum60 to sum45' >> $add_s
+        elif [ $ingrs30_count != 0 ]; then
+            echo '    set sum60 to sum30' >> $add_s
+        elif [ $ingrs15_count != 0 ]; then
+            echo '    set sum60 to sum15' >> $add_s
+        else
+            echo '    set sum60 to 0' >> $add_s
+        fi
+    fi
+    for i in $(seq 1 $ingrs_count); do
+        awk -v FS=':' -v ef=$effect -v N=$i '{
+            if(FNR == N && $5 == ef && $2 != ef && $3 != ef && $4 != ef) {
                 print "    set sum60 to ( sum60 + in" N " )"
             }
         }' $ingrs >> $add_s
@@ -648,7 +714,7 @@ gen_check5() {
                     e1=$(awk -v FS=':' -v N=$i -v F=$e1i '{ if(FNR == N) { print $F } }' $ingrs)
                     e2=$(awk -v FS=':' -v N=$j -v F=$e2i '{ if(FNR == N) { print $F } }' $ingrs)
                     if [ "x${e1}" = "x${e2}" ]; then
-                        if [ -n "$(grep -- $e1 negative_effects)" ]; then
+                        if [ -n "$(grep -x -- $e1 negative_effects)" ]; then
                             stop='stop'
                         fi
                     fi
@@ -759,17 +825,17 @@ gen_del() {
     name=$(awk -v FS=':' '{print $2}' "$sd")
     add_name=A1V4_AAdd${index}_${name}_sc
     check_name=A1V4_ADel${index}_${name}_sc
-    add_s=scripts2/$check_name
+    add_s=scripts/$check_name
     echo 'SCTX' > $add_s
     echo "    Begin ${check_name}" >> $add_s
     echo '    ' >> $add_s
     effect=$(awk -v FS=':' '{print $4}' "$sd")
-    ingrs=scripts2/${name}.ef
+    ingrs=scripts/${name}.ef
     ingrs_count=$(wc -l < $ingrs)
-    ingrs15=scripts2/${name}.ef15
-    ingrs30=scripts2/${name}.ef30
-    ingrs45=scripts2/${name}.ef45
-    ingrs60=scripts2/${name}.ef60
+    ingrs15=scripts/${name}.ef15
+    ingrs30=scripts/${name}.ef30
+    ingrs45=scripts/${name}.ef45
+    ingrs60=scripts/${name}.ef60
     ingrs15_count=$(wc -l < $ingrs15)
     ingrs30_count=$(wc -l < $ingrs30)
     ingrs45_count=$(wc -l < $ingrs45)
@@ -830,9 +896,25 @@ cd "$basedir"
 rm -rf s
 mkdir s
 awk -v FS=':' '{print > ("s/" $1)}' scripts_data
-rm -rf scripts2
-mkdir scripts2
+rm -rf scripts
+mkdir scripts
 awk -v FS=':' '{ print $4 }' scripts_data > positive_effects
+./ingr ingredients/Morrowind > ingredients_data1
+./ingr ingredients/Tribunal >> ingredients_data1
+./ingr ingredients/Bloodmoon >> ingredients_data1
+cat ingredients_data1 | sort > ingredients_data2
+rm ingredients_data1
+awk -v FS=':' 'BEGIN { p = ""; p1 = "" } {
+    if($0 == p) {
+        if($1 != p1)
+            exit 1
+    } else {
+        p = $0
+        p1 = $1
+        print
+    }
+}' ingredients_data2 > ingredients_data || exit 1
+rm ingredients_data2
 for sd in s/*; do
     gen_ingrs
     gen_add
@@ -844,6 +926,6 @@ for sd in s/*; do
     fi
     gen_del
 done
-rm -f scripts2/*.ef
-rm -f scripts2/*.ef??
+rm -f scripts/*.ef
+rm -f scripts/*.ef??
 rm -rf s

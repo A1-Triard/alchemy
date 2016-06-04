@@ -10,6 +10,7 @@ SCTX
     short in6
     short in7
     short in8
+    short in9
     short sum15
     short sum30
     short sum60
@@ -135,63 +136,74 @@ SCTX
     set in6 to 0
     set in7 to 0
     set in8 to 0
+    set in9 to 0
     
-    if ( player->GetItemCount ingred_eyeball > 0 )
+    if ( player->GetItemCount "ingred_ash_yam_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_dreugh_wax_01 > 0 )
+    if ( player->GetItemCount "ingred_bear_pelt" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_daedra_skin_01 > 0 )
+    if ( player->GetItemCount "ingred_daedra_skin_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_eyeball_unique > 0 )
+    if ( player->GetItemCount "ingred_dreugh_wax_01" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount ingred_ash_yam_01 > 0 )
+    if ( player->GetItemCount "ingred_durzog_meat_01" > 0 )
     	set in5 to 1
     endif
-    if ( player->GetItemCount ingred_vampire_dust_01 > 0 )
+    if ( player->GetItemCount "ingred_eyeball" > 0 )
     	set in6 to 1
     endif
-    if ( player->GetItemCount Ingred_golden_sedge_01 > 0 )
+    if ( player->GetItemCount "ingred_eyeball_unique" > 0 )
     	set in7 to 1
     endif
-    if ( player->GetItemCount ingred_bear_pelt > 0 )
+    if ( player->GetItemCount "Ingred_golden_sedge_01" > 0 )
     	set in8 to 1
     endif
+    if ( player->GetItemCount "ingred_vampire_dust_01" > 0 )
+    	set in9 to 1
+    endif
     
-    set sum15 to ( in2 + in3 )
-    set sum30 to ( sum15 + in5 + in6 + in7 )
+    set sum15 to 0
+    set sum15 to ( sum15 + in3 )
+    set sum15 to ( sum15 + in4 )
+    set sum30 to sum15
+    set sum30 to ( sum30 + in1 )
+    set sum30 to ( sum30 + in2 )
+    set sum30 to ( sum30 + in5 )
     set sum30 to ( sum30 + in8 )
-    set sum60 to ( sum30 + in1 + in4 )
-    set bad to 0
-    set temp to ( in1 + in4 )
+    set sum30 to ( sum30 + in9 )
+    set sum60 to sum30
+    set sum60 to ( sum60 + in6 )
+    set sum60 to ( sum60 + in7 )
+    set temp to ( in6 + in7 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in1 + in7 )
+    set temp to ( in6 + in8 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in4 + in7 )
+    set temp to ( in7 + in8 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    if ( player->GetItemCount A1V4_L15_fortify_strength == 1 )
-    	player->RemoveItem A1V4_L15_fortify_strength, 1
-    elseif ( player->GetItemCount A1V4_L30_fortify_strength == 1 )
-    	player->RemoveItem A1V4_L30_fortify_strength, 1
-    elseif ( player->GetItemCount A1V4_L60_fortify_strength == 1 )
-    	player->RemoveItem A1V4_L60_fortify_strength, 1
+    if ( player->GetItemCount "A1V4_L15_fortify_strength" == 1 )
+    	player->RemoveItem "A1V4_L15_fortify_strength", 1
+    elseif ( player->GetItemCount "A1V4_L30_fortify_strength" == 1 )
+    	player->RemoveItem "A1V4_L30_fortify_strength", 1
+    elseif ( player->GetItemCount "A1V4_L60_fortify_strength" == 1 )
+    	player->RemoveItem "A1V4_L60_fortify_strength", 1
     endif
     if ( bad == 0 )
     	if ( sum15 > 1 )
-    		player->AddItem A1V4_L15_fortify_strength, 1
+    		player->AddItem "A1V4_L15_fortify_strength", 1
     	elseif ( sum30 > 1 )
-    		player->AddItem A1V4_L30_fortify_strength, 1
+    		player->AddItem "A1V4_L30_fortify_strength", 1
     	elseif ( sum60 > 1 )
-    		player->AddItem A1V4_L60_fortify_strength, 1
+    		player->AddItem "A1V4_L60_fortify_strength", 1
     	endif
     endif
     

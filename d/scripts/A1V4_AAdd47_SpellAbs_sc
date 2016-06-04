@@ -36,38 +36,38 @@ SCTX
     set in3 to 0
     set in4 to 0
     
-    if ( player->GetItemCount ingred_fire_petal_01 > 0 )
+    if ( player->GetItemCount "ingred_fire_petal_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_vampire_dust_01 > 0 )
+    if ( player->GetItemCount "Ingred_lloramor_spines_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_void_salts_01 > 0 )
+    if ( player->GetItemCount "ingred_vampire_dust_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount Ingred_lloramor_spines_01 > 0 )
+    if ( player->GetItemCount "ingred_void_salts_01" > 0 )
     	set in4 to 1
     endif
     
-    set sum to ( in4 )
+    set sum to ( in1 + in2 )
     set sum to ( sum + in3 )
-    set sum to ( sum + in1 + in2 )
-    set temp to ( in1 + in3 )
+    set sum to ( sum + in4 )
+    set temp to ( in1 + in4 )
     if ( temp > 1 )
     	set sum to 0
     endif
     if ( sum > 1 )
     	if ( in1 > 0 )
-    		player->RemoveItem ingred_fire_petal_01, 1
+    		player->RemoveItem "ingred_fire_petal_01", 1
     	endif
     	if ( in2 > 0 )
-    		player->RemoveItem ingred_vampire_dust_01, 1
+    		player->RemoveItem "Ingred_lloramor_spines_01", 1
     	endif
     	if ( in3 > 0 )
-    		player->RemoveItem ingred_void_salts_01, 1
+    		player->RemoveItem "ingred_vampire_dust_01", 1
     	endif
     	if ( in4 > 0 )
-    		player->RemoveItem Ingred_lloramor_spines_01, 1
+    		player->RemoveItem "ingred_void_salts_01", 1
     	endif
     	set state to 1
     	set A1V4_CalcAlchemy5_sc.in to sum

@@ -1,10 +1,10 @@
 SCTX
     Begin A1V4_ADel19_DetEnch_sc
     
-    if ( player->GetItemCount A1V4_L30_detect_enchantment == 1 )
-    	player->RemoveItem A1V4_L30_detect_enchantment, 1
-    elseif ( player->GetItemCount A1V4_L60_detect_enchantment == 1 )
-    	player->RemoveItem A1V4_L60_detect_enchantment, 1
+    if ( player->GetItemCount "A1V4_L30_detect_enchantment" == 1 )
+    	player->RemoveItem "A1V4_L30_detect_enchantment", 1
+    elseif ( player->GetItemCount "A1V4_L60_detect_enchantment" == 1 )
+    	player->RemoveItem "A1V4_L60_detect_enchantment", 1
     endif
     
     StopScript A1V4_ADel19_DetEnch_sc

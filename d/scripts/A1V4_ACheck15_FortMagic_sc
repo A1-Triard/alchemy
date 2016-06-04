@@ -132,51 +132,56 @@ SCTX
     set in5 to 0
     set in6 to 0
     
-    if ( player->GetItemCount ingred_emerald_01 > 0 )
+    if ( player->GetItemCount "ingred_belladonna_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_stoneflower_petals_01 > 0 )
+    if ( player->GetItemCount "ingred_belladonna_02" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_belladonna_02 > 0 )
+    if ( player->GetItemCount "ingred_emerald_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_emerald_pinetear > 0 )
+    if ( player->GetItemCount "ingred_emerald_pinetear" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount ingred_belladonna_01 > 0 )
+    if ( player->GetItemCount "ingred_saltrice_01" > 0 )
     	set in5 to 1
     endif
-    if ( player->GetItemCount ingred_saltrice_01 > 0 )
+    if ( player->GetItemCount "ingred_stoneflower_petals_01" > 0 )
     	set in6 to 1
     endif
     
-    set sum15 to ( in1 + in4 )
-    set sum30 to ( sum15 + in2 + in6 )
-    set sum45 to ( sum30 + in3 + in5 )
-    set bad to 0
-    set temp to ( in1 + in4 )
+    set sum15 to 0
+    set sum15 to ( sum15 + in3 )
+    set sum15 to ( sum15 + in4 )
+    set sum30 to sum15
+    set sum30 to ( sum30 + in5 )
+    set sum30 to ( sum30 + in6 )
+    set sum45 to sum30
+    set sum45 to ( sum45 + in1 )
+    set sum45 to ( sum45 + in2 )
+    set temp to ( in1 + in2 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    set temp to ( in3 + in5 )
+    set temp to ( in3 + in4 )
     if ( temp > 1 )
     	set bad to 1
     endif
-    if ( player->GetItemCount A1V4_L15_fortify_magicka == 1 )
-    	player->RemoveItem A1V4_L15_fortify_magicka, 1
-    elseif ( player->GetItemCount A1V4_L30_fortify_magicka == 1 )
-    	player->RemoveItem A1V4_L30_fortify_magicka, 1
-    elseif ( player->GetItemCount A1V4_L45_fortify_magicka == 1 )
-    	player->RemoveItem A1V4_L45_fortify_magicka, 1
+    if ( player->GetItemCount "A1V4_L15_fortify_magicka" == 1 )
+    	player->RemoveItem "A1V4_L15_fortify_magicka", 1
+    elseif ( player->GetItemCount "A1V4_L30_fortify_magicka" == 1 )
+    	player->RemoveItem "A1V4_L30_fortify_magicka", 1
+    elseif ( player->GetItemCount "A1V4_L45_fortify_magicka" == 1 )
+    	player->RemoveItem "A1V4_L45_fortify_magicka", 1
     endif
     if ( bad == 0 )
     	if ( sum15 > 1 )
-    		player->AddItem A1V4_L15_fortify_magicka, 1
+    		player->AddItem "A1V4_L15_fortify_magicka", 1
     	elseif ( sum30 > 1 )
-    		player->AddItem A1V4_L30_fortify_magicka, 1
+    		player->AddItem "A1V4_L30_fortify_magicka", 1
     	elseif ( sum45 > 1 )
-    		player->AddItem A1V4_L45_fortify_magicka, 1
+    		player->AddItem "A1V4_L45_fortify_magicka", 1
     	endif
     endif
     

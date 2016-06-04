@@ -34,28 +34,27 @@ SCTX
     set in2 to 0
     set in3 to 0
     
-    if ( player->GetItemCount ingred_bonemeal_01 > 0 )
+    if ( player->GetItemCount "ingred_alit_hide_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_scuttle_01 > 0 )
+    if ( player->GetItemCount "ingred_bonemeal_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_alit_hide_01 > 0 )
+    if ( player->GetItemCount "ingred_scuttle_01" > 0 )
     	set in3 to 1
     endif
     
-    set sum to ( in1 )
+    set sum to ( in1 + in2 )
     set sum to ( sum + in3 )
-    set sum to ( sum + in2 )
     if ( sum > 1 )
     	if ( in1 > 0 )
-    		player->RemoveItem ingred_bonemeal_01, 1
+    		player->RemoveItem "ingred_alit_hide_01", 1
     	endif
     	if ( in2 > 0 )
-    		player->RemoveItem ingred_scuttle_01, 1
+    		player->RemoveItem "ingred_bonemeal_01", 1
     	endif
     	if ( in3 > 0 )
-    		player->RemoveItem ingred_alit_hide_01, 1
+    		player->RemoveItem "ingred_scuttle_01", 1
     	endif
     	set state to 1
     	set A1V4_CalcAlchemy5_sc.in to sum

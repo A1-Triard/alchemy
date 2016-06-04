@@ -48,91 +48,96 @@ SCTX
     set in9 to 0
     set in10 to 0
     
-    if ( player->GetItemCount ingred_marshmerrow_01 > 0 )
+    if ( player->GetItemCount "ingred_corkbulb_root_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_wickwheat_01 > 0 )
+    if ( player->GetItemCount "ingred_corprus_weepings_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_emerald_01 > 0 )
+    if ( player->GetItemCount "ingred_emerald_01" > 0 )
     	set in3 to 1
     endif
-    if ( player->GetItemCount ingred_corkbulb_root_01 > 0 )
+    if ( player->GetItemCount "ingred_emerald_pinetear" > 0 )
     	set in4 to 1
     endif
-    if ( player->GetItemCount Ingred_sweetpulp_01 > 0 )
+    if ( player->GetItemCount "ingred_marshmerrow_01" > 0 )
     	set in5 to 1
     endif
-    if ( player->GetItemCount ingred_corprus_weepings_01 > 0 )
+    if ( player->GetItemCount "ingred_raw_Stalhrim_01" > 0 )
     	set in6 to 1
     endif
-    if ( player->GetItemCount ingred_emerald_pinetear > 0 )
+    if ( player->GetItemCount "ingred_resin_01" > 0 )
     	set in7 to 1
     endif
-    if ( player->GetItemCount ingred_resin_01 > 0 )
+    if ( player->GetItemCount "ingred_saltrice_01" > 0 )
     	set in8 to 1
     endif
-    if ( player->GetItemCount ingred_saltrice_01 > 0 )
+    if ( player->GetItemCount "Ingred_sweetpulp_01" > 0 )
     	set in9 to 1
     endif
-    if ( player->GetItemCount ingred_raw_Stalhrim_01 > 0 )
+    if ( player->GetItemCount "ingred_wickwheat_01" > 0 )
     	set in10 to 1
     endif
     
-    set sum to ( in1 + in2 + in8 )
-    set sum to ( sum + in3 + in4 + in7 )
-    set sum to ( sum + in5 + in6 + in9 )
+    set sum to ( in1 + in2 )
+    set sum to ( sum + in3 )
+    set sum to ( sum + in4 )
+    set sum to ( sum + in5 )
+    set sum to ( sum + in6 )
+    set sum to ( sum + in7 )
+    set sum to ( sum + in8 )
+    set sum to ( sum + in9 )
     set sum to ( sum + in10 )
-    set temp to ( in1 + in6 )
-    if ( temp > 1 )
-    	set sum to 0
-    endif
     set temp to ( in2 + in5 )
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in2 + in10 )
+    set temp to ( in3 + in4 )
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in5 + in10 )
+    set temp to ( in6 + in9 )
     if ( temp > 1 )
     	set sum to 0
     endif
-    set temp to ( in3 + in7 )
+    set temp to ( in6 + in10 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    set temp to ( in9 + in10 )
     if ( temp > 1 )
     	set sum to 0
     endif
     if ( sum > 1 )
     	if ( in1 > 0 )
-    		player->RemoveItem ingred_marshmerrow_01, 1
+    		player->RemoveItem "ingred_corkbulb_root_01", 1
     	endif
     	if ( in2 > 0 )
-    		player->RemoveItem ingred_wickwheat_01, 1
+    		player->RemoveItem "ingred_corprus_weepings_01", 1
     	endif
     	if ( in3 > 0 )
-    		player->RemoveItem ingred_emerald_01, 1
+    		player->RemoveItem "ingred_emerald_01", 1
     	endif
     	if ( in4 > 0 )
-    		player->RemoveItem ingred_corkbulb_root_01, 1
+    		player->RemoveItem "ingred_emerald_pinetear", 1
     	endif
     	if ( in5 > 0 )
-    		player->RemoveItem Ingred_sweetpulp_01, 1
+    		player->RemoveItem "ingred_marshmerrow_01", 1
     	endif
     	if ( in6 > 0 )
-    		player->RemoveItem ingred_corprus_weepings_01, 1
+    		player->RemoveItem "ingred_raw_Stalhrim_01", 1
     	endif
     	if ( in7 > 0 )
-    		player->RemoveItem ingred_emerald_pinetear, 1
+    		player->RemoveItem "ingred_resin_01", 1
     	endif
     	if ( in8 > 0 )
-    		player->RemoveItem ingred_resin_01, 1
+    		player->RemoveItem "ingred_saltrice_01", 1
     	endif
     	if ( in9 > 0 )
-    		player->RemoveItem ingred_saltrice_01, 1
+    		player->RemoveItem "Ingred_sweetpulp_01", 1
     	endif
     	if ( in10 > 0 )
-    		player->RemoveItem ingred_raw_Stalhrim_01, 1
+    		player->RemoveItem "ingred_wickwheat_01", 1
     	endif
     	set state to 1
     	set A1V4_CalcAlchemy5_sc.in to sum

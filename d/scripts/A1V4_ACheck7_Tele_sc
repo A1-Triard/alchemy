@@ -126,34 +126,36 @@ SCTX
     set in2 to 0
     set in3 to 0
     
-    if ( player->GetItemCount ingred_bonemeal_01 > 0 )
+    if ( player->GetItemCount "ingred_alit_hide_01" > 0 )
     	set in1 to 1
     endif
-    if ( player->GetItemCount ingred_scuttle_01 > 0 )
+    if ( player->GetItemCount "ingred_bonemeal_01" > 0 )
     	set in2 to 1
     endif
-    if ( player->GetItemCount ingred_alit_hide_01 > 0 )
+    if ( player->GetItemCount "ingred_scuttle_01" > 0 )
     	set in3 to 1
     endif
     
-    set sum30 to ( in1 )
-    set sum45 to ( sum30 + in3 )
-    set sum60 to ( sum45 + in2 )
-    set bad to 0
-    if ( player->GetItemCount A1V4_L30_telekinesis == 1 )
-    	player->RemoveItem A1V4_L30_telekinesis, 1
-    elseif ( player->GetItemCount A1V4_L45_telekinesis == 1 )
-    	player->RemoveItem A1V4_L45_telekinesis, 1
-    elseif ( player->GetItemCount A1V4_L60_telekinesis == 1 )
-    	player->RemoveItem A1V4_L60_telekinesis, 1
+    set sum30 to 0
+    set sum30 to ( sum30 + in2 )
+    set sum45 to sum30
+    set sum45 to ( sum45 + in1 )
+    set sum60 to sum45
+    set sum60 to ( sum60 + in3 )
+    if ( player->GetItemCount "A1V4_L30_telekinesis" == 1 )
+    	player->RemoveItem "A1V4_L30_telekinesis", 1
+    elseif ( player->GetItemCount "A1V4_L45_telekinesis" == 1 )
+    	player->RemoveItem "A1V4_L45_telekinesis", 1
+    elseif ( player->GetItemCount "A1V4_L60_telekinesis" == 1 )
+    	player->RemoveItem "A1V4_L60_telekinesis", 1
     endif
     if ( bad == 0 )
     	if ( sum30 > 1 )
-    		player->AddItem A1V4_L30_telekinesis, 1
+    		player->AddItem "A1V4_L30_telekinesis", 1
     	elseif ( sum45 > 1 )
-    		player->AddItem A1V4_L45_telekinesis, 1
+    		player->AddItem "A1V4_L45_telekinesis", 1
     	elseif ( sum60 > 1 )
-    		player->AddItem A1V4_L60_telekinesis, 1
+    		player->AddItem "A1V4_L60_telekinesis", 1
     	endif
     endif
     
