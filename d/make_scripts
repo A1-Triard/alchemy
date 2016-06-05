@@ -905,8 +905,8 @@ awk -v FS=':' '{ print $4 }' scripts_data > positive_effects
 cat ingredients_data1 | sort > ingredients_data2
 rm ingredients_data1
 awk -v FS=':' 'BEGIN { p = ""; p1 = "" } {
-    if($0 == p) {
-        if($1 != p1)
+    if($1 == p1) {
+        if($0 != p)
             exit 1
     } else {
         p = $0
