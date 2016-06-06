@@ -1,0 +1,13 @@
+SCTX
+    Begin A1V4_ADel8_Blight_sc
+    
+    if ( player->GetItemCount "A1V4_L45_cure_blight" == 1 )
+    	player->RemoveItem "A1V4_L45_cure_blight", 1
+    elseif ( player->GetItemCount "A1V4_L60_cure_blight" == 1 )
+    	player->RemoveItem "A1V4_L60_cure_blight", 1
+    endif
+    
+    StopScript A1V4_ADel8_Blight_sc
+    StartScript A1V4_ADel9_Cure_sc
+    
+    End

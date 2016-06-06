@@ -1,0 +1,17 @@
+SCTX
+    Begin A1V4_ADel11_Poison_sc
+    
+    if ( player->GetItemCount "A1V4_L15_cure_poison" == 1 )
+    	player->RemoveItem "A1V4_L15_cure_poison", 1
+    elseif ( player->GetItemCount "A1V4_L30_cure_poison" == 1 )
+    	player->RemoveItem "A1V4_L30_cure_poison", 1
+    elseif ( player->GetItemCount "A1V4_L45_cure_poison" == 1 )
+    	player->RemoveItem "A1V4_L45_cure_poison", 1
+    elseif ( player->GetItemCount "A1V4_L60_cure_poison" == 1 )
+    	player->RemoveItem "A1V4_L60_cure_poison", 1
+    endif
+    
+    StopScript A1V4_ADel11_Poison_sc
+    StartScript A1V4_ADel12_Feather_sc
+    
+    End

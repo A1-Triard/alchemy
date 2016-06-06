@@ -2221,3 +2221,17 @@ TEXT m\\tx_potion_standard_01.dds
 FNAM 1/8 Станд. з. хождения по воде
 ALDT mpkZPgAAAAAAAAAA
 ENAM AgD//wAAAAAAAAAAAAAAAAEAAAABAAAA
+
+ALCH
+NAME p_mark_s_A1_16
+MODL m\\Misc_Potion_Fresh_01.nif
+TEXT m\\Tx_potion_fresh_01.tga
+FNAM 1/16 Зелье пометки
+ALDT 7FG4PQAAAAAAAAAA
+
+ALCH
+NAME p_recall_s_A1_16
+MODL m\\Misc_Potion_Fresh_01.nif
+TEXT m\\Tx_potion_fresh_01.tga
+FNAM 1/16 Зелье воспоминания
+ALDT 7FG4PQAAAAAAAAAA

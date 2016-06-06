@@ -1,0 +1,15 @@
+SCTX
+    Begin A1V4_ADel50_Recall_sc
+    
+    if ( player->GetItemCount "A1V4_L45_recall" == 1 )
+    	player->RemoveItem "A1V4_L45_recall", 1
+    elseif ( player->GetItemCount "A1V4_L60_recall" == 1 )
+    	player->RemoveItem "A1V4_L60_recall", 1
+    endif
+    
+    MessageBox "Установка деактивирована"
+    EnablePlayerControls
+    
+    StopScript A1V4_ADel50_Recall_sc
+    
+    End

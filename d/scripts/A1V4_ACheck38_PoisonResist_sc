@@ -142,6 +142,7 @@ SCTX
     set sum30 to ( sum30 + in1 )
     set sum60 to sum30
     set sum60 to ( sum60 + in3 )
+    set bad to 0
     if ( player->GetItemCount "A1V4_L15_poison_resistance" == 1 )
     	player->RemoveItem "A1V4_L15_poison_resistance", 1
     elseif ( player->GetItemCount "A1V4_L30_poison_resistance" == 1 )

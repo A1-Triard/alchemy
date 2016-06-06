@@ -2,7 +2,13 @@
 
 basedir="$(dirname "$0")"
 cd "$basedir"
+echo "MW"
 ./make_scripts || exit 1
+echo "Done MW"
+echo "MFR"
+./make_scripts_mfr || exit 1
+echo "Done MFR"
+
 find scripts -type f -exec basename {} \; | sort > all_scripts
 cat scripts.list | sort > sorted_scripts
 diff sorted_scripts all_scripts || exit 1
@@ -17,8 +23,28 @@ for script in *; do
 done
 cd ..
 
+find scripts_mfr -type f -exec basename {} \; | sort > all_scripts_mfr
+cat scripts_mfr.list | sort > sorted_scripts_mfr
+diff sorted_scripts_mfr all_scripts_mfr || exit 1
+rm all_scripts_mfr sorted_scripts_mfr
+cat h > B.sctx
+cd scripts_mfr
+for script in *; do
+  echo '' >> ../B.sctx
+  echo "SCPT" >> ../B.sctx
+  echo "SCHD ${script} 0 0 0 0 0" >> ../B.sctx
+  cat $script >> ../B.sctx
+done
+cd ..
+
 ../espa -v A.sctx
 rm A.sctx
 ../compile_scripts A.sctx scripts.list
 mv A.sctx.esp ..
 mv A.sctx.au3 ..
+
+../espa -v B.sctx
+rm B.sctx
+../compile_scripts B.sctx scripts_mfr.list
+mv B.sctx.esp ..
+mv B.sctx.au3 ..

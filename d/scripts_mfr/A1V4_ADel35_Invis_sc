@@ -1,0 +1,13 @@
+SCTX
+    Begin A1V4_ADel35_Invis_sc
+    
+    if ( player->GetItemCount "A1V4_L30_invisibility" == 1 )
+    	player->RemoveItem "A1V4_L30_invisibility", 1
+    elseif ( player->GetItemCount "A1V4_L60_invisibility" == 1 )
+    	player->RemoveItem "A1V4_L60_invisibility", 1
+    endif
+    
+    StopScript A1V4_ADel35_Invis_sc
+    StartScript A1V4_ADel36_LightSh_sc
+    
+    End

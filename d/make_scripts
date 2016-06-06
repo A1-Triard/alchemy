@@ -363,6 +363,7 @@ gen_check2() {
             }
         }' $ingrs >> $add_s
     done
+    echo '    set bad to 0' >> $add_s
     for i in $(seq 1 $(($ingrs_count - 1))); do
         for j in $(seq $(($i + 1)) $ingrs_count); do
             stop=''
@@ -706,6 +707,7 @@ gen_check5() {
             }
         }' $ingrs >> $add_s
     done
+    echo '    set bad to 0' >> $add_s
     for i in $(seq 1 $(($ingrs_count - 1))); do
         for j in $(seq $(($i + 1)) $ingrs_count); do
             stop=''

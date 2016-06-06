@@ -144,6 +144,7 @@ SCTX
     set sum60 to ( sum60 + in2 )
     set sum60 to ( sum60 + in3 )
     set sum60 to ( sum60 + in4 )
+    set bad to 0
     if ( player->GetItemCount "A1V4_L60_swift_swim" == 1 )
     	player->RemoveItem "A1V4_L60_swift_swim", 1
     endif

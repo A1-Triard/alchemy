@@ -1,0 +1,13 @@
+SCTX
+    Begin A1V4_ADel28_FortLuck_sc
+    
+    if ( player->GetItemCount "A1V4_L30_fortify_luck" == 1 )
+    	player->RemoveItem "A1V4_L30_fortify_luck", 1
+    elseif ( player->GetItemCount "A1V4_L60_fortify_luck" == 1 )
+    	player->RemoveItem "A1V4_L60_fortify_luck", 1
+    endif
+    
+    StopScript A1V4_ADel28_FortLuck_sc
+    StartScript A1V4_ADel29_FortPers_sc
+    
+    End

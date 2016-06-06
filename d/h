@@ -6,7 +6,7 @@ DESCRIPTION
     Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах).
     Для получения алхимической установки используйте команду
     player->AddItem A1V4_ApparatusItem_#, 1
-    Здесь # - номер установки (1, 2, 3).\0ановки (1, 2 или 3).
+    Здесь # - номер установки (1, 2, 3).
 Morrowind.esm 79764287
 Tribunal.esm 6616539
 Bloodmoon.esm 11799703
@@ -2408,12 +2408,72 @@ SCRI A1V4_AAdd5_WaterBrf_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V4_L15_mark
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    60 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd49_Mark_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_mark
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 60 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd49_Mark_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_recall
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 61 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd50_Recall_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_recall
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 61
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd50_Recall_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V4_L15_restore_fatigue
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
 IRDT
     0.0 0
     77 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd2_RestoreFatig_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_restore_fatigue
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 77
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V4_AAdd2_RestoreFatig_sc
@@ -2464,6 +2524,18 @@ IRDT
     74 -1 -1 -1
     0 -1 -1 -1
     6 -1 -1 -1
+SCRI A1V4_AAdd14_RestPers_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_restore_personality
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 74
+    -1 -1 -1 0
+    -1 -1 -1 6
 SCRI A1V4_AAdd14_RestPers_sc
 ITEX m\\misc_com_bottle_05.dds
 
@@ -2546,6 +2618,18 @@ FNAM _Создать
 IRDT
     0.0 0
     57 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd20_Dispel_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_dispel
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 57
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V4_AAdd20_Dispel_sc
@@ -2672,6 +2756,18 @@ SCRI A1V4_AAdd22_FortAgil_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V4_L45_fortify_agility
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 79 -1
+    -1 -1 0 -1
+    -1 -1 3 -1
+SCRI A1V4_AAdd22_FortAgil_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V4_L15_fortify_personality
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
@@ -2732,6 +2828,18 @@ SCRI A1V4_AAdd4_WaterWalk_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V4_L60_water_walking
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 2
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd4_WaterWalk_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V4_L30_restore_fatigue
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
@@ -2753,6 +2861,18 @@ IRDT
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V4_AAdd9_Cure_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_cure_poison
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    72 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd11_Poison_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
@@ -2804,6 +2924,18 @@ SCRI A1V4_AAdd12_Feather_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V4_L60_feather
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 8
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd12_Feather_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V4_L30_fire_resistance
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
@@ -2834,6 +2966,18 @@ FNAM _Создать
 IRDT
     0.0 0
     -1 10 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd6_Levitate_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_levitation
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 10
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V4_AAdd6_Levitate_sc
@@ -2894,6 +3038,18 @@ FNAM _Создать
 IRDT
     0.0 0
     -1 -1 70 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd8_Blight_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_cure_blight
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 70
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V4_AAdd8_Blight_sc
@@ -2993,6 +3149,18 @@ IRDT
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V4_AAdd7_Tele_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_water_breathing
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 0 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd5_WaterBrf_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
@@ -3197,6 +3365,18 @@ IRDT
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V4_AAdd20_Dispel_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_fire_shield
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 4 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd21_FireSh_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR

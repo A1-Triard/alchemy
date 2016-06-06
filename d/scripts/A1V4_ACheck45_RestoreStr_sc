@@ -162,6 +162,7 @@ SCTX
     set sum60 to ( sum60 + in2 )
     set sum60 to ( sum60 + in3 )
     set sum60 to ( sum60 + in5 )
+    set bad to 0
     set temp to ( in1 + in2 )
     if ( temp > 1 )
     	set bad to 1

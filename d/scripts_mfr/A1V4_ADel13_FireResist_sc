@@ -1,0 +1,15 @@
+SCTX
+    Begin A1V4_ADel13_FireResist_sc
+    
+    if ( player->GetItemCount "A1V4_L15_fire_resistance" == 1 )
+    	player->RemoveItem "A1V4_L15_fire_resistance", 1
+    elseif ( player->GetItemCount "A1V4_L30_fire_resistance" == 1 )
+    	player->RemoveItem "A1V4_L30_fire_resistance", 1
+    elseif ( player->GetItemCount "A1V4_L60_fire_resistance" == 1 )
+    	player->RemoveItem "A1V4_L60_fire_resistance", 1
+    endif
+    
+    StopScript A1V4_ADel13_FireResist_sc
+    StartScript A1V4_ADel14_RestPers_sc
+    
+    End

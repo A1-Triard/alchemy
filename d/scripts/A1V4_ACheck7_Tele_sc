@@ -142,6 +142,7 @@ SCTX
     set sum45 to ( sum45 + in1 )
     set sum60 to sum45
     set sum60 to ( sum60 + in3 )
+    set bad to 0
     if ( player->GetItemCount "A1V4_L30_telekinesis" == 1 )
     	player->RemoveItem "A1V4_L30_telekinesis", 1
     elseif ( player->GetItemCount "A1V4_L45_telekinesis" == 1 )

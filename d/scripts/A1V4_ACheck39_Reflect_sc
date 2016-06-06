@@ -146,6 +146,7 @@ SCTX
     set sum60 to sum45
     set sum60 to ( sum60 + in1 )
     set sum60 to ( sum60 + in2 )
+    set bad to 0
     if ( player->GetItemCount "A1V4_L45_reflection" == 1 )
     	player->RemoveItem "A1V4_L45_reflection", 1
     elseif ( player->GetItemCount "A1V4_L60_reflection" == 1 )

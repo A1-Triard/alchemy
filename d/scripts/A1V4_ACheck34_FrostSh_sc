@@ -152,6 +152,7 @@ SCTX
     set sum45 to ( sum45 + in1 )
     set sum45 to ( sum45 + in2 )
     set sum45 to ( sum45 + in4 )
+    set bad to 0
     if ( player->GetItemCount "A1V4_L30_frost_shield" == 1 )
     	player->RemoveItem "A1V4_L30_frost_shield", 1
     elseif ( player->GetItemCount "A1V4_L45_frost_shield" == 1 )

@@ -132,6 +132,7 @@ SCTX
     set sum45 to 0
     set sum45 to ( sum45 + in1 )
     set sum45 to ( sum45 + in2 )
+    set bad to 0
     if ( player->GetItemCount "A1V4_L45_fortify_attack" == 1 )
     	player->RemoveItem "A1V4_L45_fortify_attack", 1
     endif

@@ -172,6 +172,7 @@ SCTX
     set sum45 to sum30
     set sum45 to ( sum45 + in2 )
     set sum45 to ( sum45 + in5 )
+    set bad to 0
     set temp to ( in2 + in7 )
     if ( temp > 1 )
     	set bad to 1

@@ -1,0 +1,779 @@
+3SET
+VERSION 1067869798
+TYPE ESP
+AUTHOR 
+DESCRIPTION
+    
+Morrowind.esm 79764287
+Tribunal.esm 6616539
+Bloodmoon.esm 11799703
+
+INGR
+NAME al_AnCr_EyeOfBeholder
+MODL AnCr\\AnCr_EyeOfBeholder.nif
+FNAM Глаз созерцателя
+IRDT
+    1.0 500
+    -1 -1 67 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX AnCr\\AnCr_EyeBeholder.tga
+
+INGR
+NAME al_AnCr_EyeOfBeholder2
+MODL AnCr\\AnCr_EyeOfBeholder.nif
+FNAM Глаз созерцателя
+IRDT
+    1.0 500
+    -1 -1 67 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX AnCr\\AnCr_EyeBeholder.tga
+
+INGR
+NAME ual_weed
+MODL LadyE\\a_bag01.NIF
+FNAM Кисет табака
+IRDT
+    0.6 20
+    77 76 23 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX a_bag01.tga
+
+INGR
+NAME al_i_animal_bone
+MODL mtrl\\m_animal_bone.nif
+FNAM Кости
+IRDT
+    0.1 2
+    20 79 -1 -1
+    -1 0 -1 -1
+    -1 5 -1 -1
+ITEX mtrl\\icn_animal_bone.dds
+
+INGR
+NAME al_i_animal_skin
+MODL mtrl\\m_animal_skin.nif
+FNAM Кожа крысы
+IRDT
+    0.12 2
+    20 74 136 66
+    -1 0 -1 -1
+    -1 4 -1 -1
+ITEX mtrl\\icn_animal_skin.dds
+
+INGR
+NAME al_i_coal
+MODL mtrl\\m_coal.nif
+FNAM Уголь
+IRDT
+    5.0e-2 2
+    7 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_coal.dds
+
+INGR
+NAME al_i_charcoal
+MODL mtrl\\m_charcoal.nif
+FNAM Древесный уголь
+IRDT
+    0.1 3
+    28 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_charcoal.dds
+
+INGR
+NAME al_i_varnish
+MODL mtrl\\m_varnish.nif
+FNAM Щелочь
+IRDT
+    0.1 4
+    27 32 14 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_varnish.dds
+
+INGR
+NAME al_i_iron_ore
+MODL mtrl\\m_iron_ore.nif
+FNAM Железная руда
+IRDT
+    2.0 1
+    20 23 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_iron_ore.dds
+
+INGR
+NAME al_i_mithril_ore
+MODL mtrl\\m_mithril_ore.nif
+FNAM Мифриловая руда
+IRDT
+    2.1 10
+    18 91 74 -1
+    -1 -1 0 -1
+    -1 -1 2 -1
+ITEX mtrl\\icn_mithril_ore.dds
+
+INGR
+NAME al_i_stone_of_purity
+MODL mtrl\\m_stone_of_purity.nif
+FNAM Камень Чистоты
+IRDT
+    0.12 20
+    25 22 68 41
+    -1 0 -1 -1
+    -1 7 -1 -1
+ITEX mtrl\\icn_stone_of_purity.dds
+
+INGR
+NAME al_i_oriharukon_ore
+MODL mtrl\\m_oriharukon_ore.nif
+FNAM Орихаруконовая руда
+IRDT
+    1.3 20
+    74 24 57 -1
+    0 0 -1 -1
+    1 2 -1 -1
+ITEX mtrl\\icn_oriharukon_ore.dds
+
+INGR
+NAME al_i_cokes
+MODL mtrl\\m_cokes.nif
+FNAM Пепел
+IRDT
+    0.15 13
+    28 7 23 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_cokes.dds
+
+INGR
+NAME al_i_coarse_bone_powder
+MODL mtrl\\m_coarse_bone_powder.nif
+FNAM Грубый костный порошок
+IRDT
+    0.12 14
+    20 18 19 73
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_coarse_bone_powder.dds
+
+INGR
+NAME al_i_synthetic_cokes
+MODL mtrl\\m_synthetic_cokes.nif
+FNAM Прессованый пепел
+IRDT
+    0.3 70
+    98 18 27 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_synthetic_cokes.dds
+
+INGR
+NAME al_i_varnish_of_purity
+MODL mtrl\\m_varnish_of_purity.nif
+FNAM Очищенная щелочь
+IRDT
+    0.15 72
+    27 18 17 57
+    -1 -1 0 -1
+    -1 -1 4 -1
+ITEX mtrl\\icn_varnish_of_purity.dds
+
+INGR
+NAME al_i_orichalcum_ore
+MODL mtrl\\m_orichalcum_ore.nif
+FNAM Орихалковая руда
+IRDT
+    1.82 40
+    136 93 47 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_orichalcum_ore.dds
+
+INGR
+NAME al_i_corundum_ore
+MODL mtrl\\m_corundum_ore.nif
+FNAM Корундовая руда
+IRDT
+    1.8 10
+    98 47 25 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_corundum_ore.dds
+
+INGR
+NAME al_i_quicksilver_bottle
+MODL mtrl\\m_quicksilver_bottle.nif
+FNAM Склянка ртути
+IRDT
+    0.12 115
+    27 29 61 68
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_quicksilver_bottle.dds
+
+INGR
+NAME al_i_sulfur
+MODL mtrl\\m_sulfur.nif
+FNAM Сера
+IRDT
+    0.12 30
+    97 92 23 59
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_sulfur.dds
+
+INGR
+NAME al_i_moonstone_ore
+MODL mtrl\\m_moonstone_ore.nif
+FNAM Лунная руда
+IRDT
+    2.0 8
+    19 31 5 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_moonstone_ore.dds
+
+INGR
+NAME al_i_alit_meat
+MODL mtrl\\ing\\i_alit_meat.nif
+FNAM Мясо алита
+IRDT
+    0.8 3
+    82 74 9 38
+    -1 0 -1 -1
+    -1 5 -1 -1
+ITEX mtrl\\ing\\icn_alit_meat.dds
+
+INGR
+NAME al_i_clannfear_claw
+MODL mtrl\\ing\\i_clannfear_claw.nif
+FNAM Когти ужаса клана
+IRDT
+    0.18 12
+    1 30 33 41
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_clannfear_claw.dds
+
+INGR
+NAME al_i_clannfear_eye
+MODL mtrl\\ing\\i_clannfear_eye.nif
+FNAM Глаз ужаса клана
+IRDT
+    8.0e-2 22
+    75 24 103 14
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_clannfear_eye.dds
+
+INGR
+NAME al_i_clannfear_skin
+MODL mtrl\\ing\\i_clannfear_skin.nif
+FNAM Кожа ужаса клана
+IRDT
+    0.22 15
+    17 79 40 8
+    0 0 -1 -1
+    2 0 -1 -1
+ITEX mtrl\\ing\\icn_clannfear_skin.dds
+
+INGR
+NAME al_i_clannfear_tail
+MODL mtrl\\ing\\i_clannfear_tail.nif
+FNAM Хвост ужаса клана
+IRDT
+    0.45 25
+    46 4 36 117
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_clannfear_tail.dds
+
+INGR
+NAME al_i_cliffracer_skin
+MODL mtrl\\ing\\i_cliffracer_skin.nif
+FNAM Кожа скального наездника
+IRDT
+    0.18 3
+    80 20 6 43
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_cracer_skin.dds
+
+INGR
+NAME al_i_daedroth_claw
+MODL mtrl\\ing\\i_daedroth_claw.nif
+FNAM Когти даэдрота
+IRDT
+    0.2 24
+    29 136 3 27
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_daedroth_claw.dds
+
+INGR
+NAME al_i_daedroth_teeth
+MODL mtrl\\ing\\i_daedroth_teeth.nif
+FNAM Зубы даэдрота
+IRDT
+    0.1 20
+    35 22 4 11
+    -1 0 -1 -1
+    -1 1 -1 -1
+ITEX mtrl\\ing\\icn_daedroth_teeth.dds
+
+INGR
+NAME al_i_daedroth_venom
+MODL mtrl\\ing\\i_daedroth_venom.nif
+FNAM Яд даэдрота
+IRDT
+    3.0e-2 50
+    35 27 31 67
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_daedroth_venom.dds
+
+INGR
+NAME al_i_dreugh_shell
+MODL mtrl\\ing\\i_dreugh_shell.nif
+FNAM Панцирь дреуга
+IRDT
+    0.32 10
+    79 1 0 -1
+    0 -1 -1 -1
+    0 -1 -1 -1
+ITEX mtrl\\ing\\icn_dreugh_shell.dds
+
+INGR 4398046511104
+NAME al_i_dreugh_skin
+MODL mtrl\\ing\\i_dreugh_skin.nif
+FNAM Кожа дреуга
+IRDT
+    0.2 12
+    22 18 74 -1
+    0 -1 0 -1
+    4 -1 2 -1
+ITEX mtrl\\ing\\icn_dreugh_skin.dds
+
+INGR
+NAME al_i_fabricant_skin
+MODL mtrl\\ing\\i_fabricant_skin.nif
+FNAM Кожа фабриканта
+IRDT
+    0.35 15
+    20 17 37 39
+    -1 0 -1 -1
+    -1 5 -1 -1
+ITEX mtrl\\ing\\icn_fabricant_skin.dds
+
+INGR
+NAME al_i_guar_meat
+MODL mtrl\\ing\\i_guar_meat.nif
+FNAM Мясо гуара
+IRDT
+    0.72 2
+    20 75 22 -1
+    -1 -1 0 -1
+    -1 -1 3 -1
+ITEX mtrl\\ing\\icn_guar_meat.dds
+
+INGR
+NAME al_i_hunger_claw
+MODL mtrl\\ing\\i_hunger_claw.nif
+FNAM Когти алчущего
+IRDT
+    0.21 22
+    80 95 60 65
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_hunger_claw.dds
+
+INGR
+NAME al_i_hunger_skin
+MODL mtrl\\ing\\i_hunger_skin.nif
+FNAM Кожа алчущего
+IRDT
+    0.23 30
+    76 77 93 45
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_hunger_skin.dds
+
+INGR
+NAME al_i_hunger_tongue
+MODL mtrl\\ing\\i_hunger_tongue.nif
+FNAM Язык алчущего
+IRDT
+    0.14 25
+    32 8 70 67
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_hunger_tongue.dds
+
+INGR
+NAME al_i_kagouti_meat
+MODL mtrl\\ing\\i_kagouti_meat.nif
+FNAM Мясо кагути
+IRDT
+    0.8 2
+    77 91 99 17
+    -1 -1 -1 0
+    -1 -1 -1 1
+ITEX mtrl\\ing\\icn_kagouti_meat.dds
+
+INGR
+NAME al_i_kwama_meat
+MODL mtrl\\ing\\i_kwama_meat.nif
+FNAM Мясо квама
+IRDT
+    0.6 2
+    19 97 48 8
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_kwama_meat.dds
+
+INGR
+NAME al_i_mudcrab_shell
+MODL mtrl\\ing\\i_mudcrab_shell.nif
+FNAM Панцирь грязекраба
+IRDT
+    1.2 2
+    25 23 98 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_mudcrab_shell.dds
+
+INGR
+NAME al_i_netch_jelly
+MODL mtrl\\ing\\i_netch_jelly.nif
+FNAM Студень нетча
+IRDT
+    0.4 20
+    76 81 17 70
+    -1 -1 0 -1
+    -1 -1 0 -1
+ITEX mtrl\\ing\\icn_netch_jelly.dds
+
+INGR
+NAME al_i_nixhound_eye
+MODL mtrl\\ing\\i_nixhound_eye.nif
+FNAM Глаз никс-гончей
+IRDT
+    0.1 18
+    75 17 6 77
+    -1 0 -1 -1
+    -1 5 -1 -1
+ITEX mtrl\\ing\\icn_nixhound_eye.dds
+
+INGR
+NAME al_i_nixhound_skin
+MODL mtrl\\ing\\i_nixhound_skin.nif
+FNAM Кожа никс-гончей
+IRDT
+    0.18 3
+    25 74 46 -1
+    -1 0 -1 -1
+    -1 2 -1 -1
+ITEX mtrl\\ing\\icn_nixhound_skin.dds
+
+INGR
+NAME al_i_ogrim_horn
+MODL mtrl\\ing\\i_ogrim_horn.nif
+FNAM Рог огрима
+IRDT
+    0.6 30
+    28 99 70 42
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_ogrim_horn.dds
+
+INGR
+NAME al_i_ogrim_skin
+MODL mtrl\\ing\\i_ogrim_skin.nif
+FNAM Кожа огрима
+IRDT
+    0.26 10
+    74 17 98 97
+    0 0 -1 -1
+    0 1 -1 -1
+ITEX mtrl\\ing\\icn_ogrim_skin.dds
+
+INGR
+NAME al_i_ogrim_teeth
+MODL mtrl\\ing\\i_ogrim_teeth.nif
+FNAM Зубы огрима
+IRDT
+    0.12 18
+    94 23 66 3
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_ogrim_teeth.dds
+
+INGR
+NAME al_i_rat_eye
+MODL mtrl\\ing\\i_rat_eye.nif
+FNAM Глаз крысы
+IRDT
+    4.0e-2 10
+    77 73 72 10
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_rat_eye.dds
+
+INGR
+NAME al_i_scamp_claw
+MODL mtrl\\ing\\i_scamp_claw.nif
+FNAM Когти скампа
+IRDT
+    0.12 12
+    22 23 79 117
+    0 -1 0 -1
+    4 -1 3 -1
+ITEX mtrl\\ing\\icn_scamp_claw.dds
+
+INGR
+NAME al_i_scamp_ear
+MODL mtrl\\ing\\i_scamp_ear.nif
+FNAM Ухо скампа
+IRDT
+    0.12 16
+    30 74 79 8
+    -1 0 0 -1
+    -1 2 6 -1
+ITEX mtrl\\ing\\icn_scamp_ear.dds
+
+INGR
+NAME al_i_scamp_eye
+MODL mtrl\\ing\\i_scamp_eye.nif
+FNAM Глаз скампа
+IRDT
+    5.0e-2 25
+    60 43 102 40
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_scamp_eye.dds
+
+INGR
+NAME al_i_scrib_gland
+MODL mtrl\\ing\\i_scrib_gland.nif
+FNAM Железа скриба
+IRDT
+    5.0e-2 6
+    45 19 80 74
+    -1 -1 -1 0
+    -1 -1 -1 6
+ITEX mtrl\\ing\\icn_scrib_gland.dds
+
+INGR
+NAME al_i_scrib_legs
+MODL mtrl\\ing\\i_scrib_legs.nif
+FNAM Лапки скриба
+IRDT
+    6.0e-2 4
+    82 80 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_scrib_legs.dds
+
+INGR
+NAME al_i_shalk_antena
+MODL mtrl\\ing\\i_shalk_antena.nif
+FNAM Усики шалка
+IRDT
+    0.2 10
+    80 79 79 -1
+    -1 0 0 -1
+    -1 2 4 -1
+ITEX mtrl\\ing\\icn_shalk_antena.dds
+
+INGR
+NAME al_i_shalk_mandible
+MODL mtrl\\ing\\i_shalk_mandible.nif
+FNAM Жвала шалка
+IRDT
+    0.5 8
+    72 94 4 29
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_shalk_mandible.dds
+
+INGR
+NAME al_i_shalk_shell
+MODL mtrl\\ing\\i_shalk_shell.nif
+FNAM Панцирь шалка
+IRDT
+    0.5 5
+    20 79 34 -1
+    -1 0 -1 -1
+    -1 0 -1 -1
+ITEX mtrl\\ing\\icn_shalk_shell.dds
+
+INGR
+NAME al_i_slaughterfish_caviar
+MODL mtrl\\ing\\i_slaufish_caviar.nif
+FNAM Икра рыбы-убийцы
+IRDT
+    0.1 4
+    1 0 30 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_sfish_caviar.dds
+
+INGR
+NAME al_i_slaughterfish_meat
+MODL mtrl\\ing\\i_slaufish_meat.nif
+FNAM Мясо рыбы-убийцы
+IRDT
+    0.12 2
+    25 74 17 2
+    -1 0 0 -1
+    -1 5 2 -1
+ITEX mtrl\\ing\\icn_sfish_meat.dds
+
+INGR
+NAME al_i_undead_skin
+MODL mtrl\\ing\\i_undead_skin.nif
+FNAM Кожа мертвеца
+IRDT
+    0.18 2
+    31 35 36 43
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_undead_skin.dds
+
+INGR
+NAME al_i_wt_claw
+MODL mtrl\\ing\\i_wt_claw.nif
+FNAM Когти крылатого сумрака
+IRDT
+    0.15 14
+    34 74 79 79
+    -1 0 0 0
+    -1 0 0 3
+ITEX mtrl\\ing\\icn_wt_claw.dds
+
+INGR
+NAME al_i_wt_eye
+MODL mtrl\\ing\\i_wt_eye.nif
+FNAM Глаз крылатого сумрака
+IRDT
+    0.1 40
+    17 35 111 68
+    0 -1 -1 0
+    3 -1 -1 3
+ITEX mtrl\\ing\\icn_wt_eye.dds
+
+INGR
+NAME al_i_wt_membrane
+MODL mtrl\\ing\\i_wt_membrane.nif
+FNAM Перепонка крылатого сумрака
+IRDT
+    0.5 26
+    23 32 3 10
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_wt_membrane.dds
+
+INGR
+NAME al_i_wt_skin
+MODL mtrl\\ing\\i_wt_skin.nif
+FNAM Кожа крылатого сумрака
+IRDT
+    0.15 20
+    76 77 81 18
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\ing\\icn_wt_skin.dds
+
+INGR
+NAME al_i_wt_tail
+MODL mtrl\\ing\\i_wt_tail.nif
+FNAM Хвост крылатого сумрака
+IRDT
+    1.0 30
+    79 79 79 79
+    0 0 0 0
+    0 2 2 7
+ITEX mtrl\\ing\\icn_wt_tail.dds
+
+INGR
+NAME al_i_silver_ore
+MODL mtrl\\m_silver_ore.nif
+FNAM Серебряная руда
+IRDT
+    1.0 7
+    29 24 22 40
+    -1 -1 0 -1
+    -1 -1 3 -1
+ITEX mtrl\\icn_silver_ore.dds
+
+INGR
+NAME al_cv_CairnBoleteCap
+MODL n\\Q_CairnBoleteCap.nif
+FNAM Шляпка каменного гриба
+IRDT
+    0.1 1
+    17 19 93 70
+    0 -1 -1 -1
+    3 -1 -1 -1
+ITEX n\\Q_CairnBoleteCap.dds
+
+INGR
+NAME al_cv_WispStalkCaps
+MODL n\\Q_WispStalkCaps.nif
+FNAM Шляпки Глицинии
+IRDT
+    0.1 1
+    27 117 35 45
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX n\\Q_WispStalkCaps.dds
+
+INGR
+NAME al_i_golden_ore
+MODL mtrl\\m_golden_ore.nif
+FNAM Золотая руда
+IRDT
+    1.0 40
+    20 18 93 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX mtrl\\icn_golden_ore.dds
+
+INGR
+NAME al_i_topaz_01
+MODL n\\ingred_topaz_01.nif
+FNAM Топаз
+IRDT
+    1.0 170
+    47 63 74 2
+    -1 -1 0 -1
+    -1 -1 7 -1
+ITEX n\\tx_topaz.dds
+
+INGR
+NAME al_i_amethyst_01
+MODL n\\ingred_amethyst_01.nif
+FNAM Аметист
+IRDT
+    1.0 160
+    17 3 45 67
+    0 -1 -1 -1
+    0 -1 -1 -1
+ITEX n\\tx_amethyst.dds
+
+INGR
+NAME al_i_sapfire_01
+MODL n\\ingred_saphire_01.nif
+FNAM Сапфир
+IRDT
+    1.0 220
+    6 75 81 68
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+ITEX n\\tx_saphire.dds

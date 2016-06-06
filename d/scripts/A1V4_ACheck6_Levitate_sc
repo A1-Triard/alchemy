@@ -144,6 +144,7 @@ SCTX
     set sum30 to ( sum30 + in2 )
     set sum30 to ( sum30 + in3 )
     set sum30 to ( sum30 + in4 )
+    set bad to 0
     if ( player->GetItemCount "A1V4_L30_levitation" == 1 )
     	player->RemoveItem "A1V4_L30_levitation", 1
     endif

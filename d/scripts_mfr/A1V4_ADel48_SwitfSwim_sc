@@ -1,0 +1,15 @@
+SCTX
+    Begin A1V4_ADel48_SwitfSwim_sc
+    
+    if ( player->GetItemCount "A1V4_L15_swift_swim" == 1 )
+    	player->RemoveItem "A1V4_L15_swift_swim", 1
+    elseif ( player->GetItemCount "A1V4_L30_swift_swim" == 1 )
+    	player->RemoveItem "A1V4_L30_swift_swim", 1
+    elseif ( player->GetItemCount "A1V4_L60_swift_swim" == 1 )
+    	player->RemoveItem "A1V4_L60_swift_swim", 1
+    endif
+    
+    StopScript A1V4_ADel48_SwitfSwim_sc
+    StartScript A1V4_ADel49_Mark_sc
+    
+    End

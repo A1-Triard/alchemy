@@ -1,0 +1,117 @@
+SCTX
+    Begin A1V4_AAdd21_FireSh_sc
+    
+    short in1
+    short in2
+    short in3
+    short in4
+    short in5
+    short in6
+    short in7
+    short in8
+    short sum
+    short temp
+    short state
+    
+    short PCSkipEquip
+    short OnPCEquip
+    
+    set PCSkipEquip to 1
+    
+    if ( state == 2 )
+    	set A1V4_ACheck21_FireSh_sc.AddPotion to 1
+    	StartScript A1V4_AlchemyCheck_sc
+    	set state to 0
+    	return
+    endif
+    
+    if ( state == 1 )
+    	if ( ScriptRunning A1V4_CalcAlchemy5_sc == 0 )
+    		set state to 2
+    	endif
+    	return
+    endif
+    
+    if ( OnPCEquip == 1 )
+    set OnPCEquip to 0
+    
+    set in1 to 0
+    set in2 to 0
+    set in3 to 0
+    set in4 to 0
+    set in5 to 0
+    set in6 to 0
+    set in7 to 0
+    set in8 to 0
+    
+    if ( player->GetItemCount "al_i_clannfear_tail" > 0 )
+    	set in1 to 1
+    endif
+    if ( player->GetItemCount "al_i_daedroth_teeth" > 0 )
+    	set in2 to 1
+    endif
+    if ( player->GetItemCount "al_i_shalk_mandible" > 0 )
+    	set in3 to 1
+    endif
+    if ( player->GetItemCount "ingred_comberry_01" > 0 )
+    	set in4 to 1
+    endif
+    if ( player->GetItemCount "ingred_fire_salts_01" > 0 )
+    	set in5 to 1
+    endif
+    if ( player->GetItemCount "ingred_raw_glass_01" > 0 )
+    	set in6 to 1
+    endif
+    if ( player->GetItemCount "ingred_raw_glass_tinos" > 0 )
+    	set in7 to 1
+    endif
+    if ( player->GetItemCount "ingred_sload_soap_01" > 0 )
+    	set in8 to 1
+    endif
+    
+    set sum to ( in1 + in2 )
+    set sum to ( sum + in3 )
+    set sum to ( sum + in4 )
+    set sum to ( sum + in5 )
+    set sum to ( sum + in6 )
+    set sum to ( sum + in7 )
+    set sum to ( sum + in8 )
+    set temp to ( in6 + in7 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    if ( sum > 1 )
+    	if ( in1 > 0 )
+    		player->RemoveItem "al_i_clannfear_tail", 1
+    	endif
+    	if ( in2 > 0 )
+    		player->RemoveItem "al_i_daedroth_teeth", 1
+    	endif
+    	if ( in3 > 0 )
+    		player->RemoveItem "al_i_shalk_mandible", 1
+    	endif
+    	if ( in4 > 0 )
+    		player->RemoveItem "ingred_comberry_01", 1
+    	endif
+    	if ( in5 > 0 )
+    		player->RemoveItem "ingred_fire_salts_01", 1
+    	endif
+    	if ( in6 > 0 )
+    		player->RemoveItem "ingred_raw_glass_01", 1
+    	endif
+    	if ( in7 > 0 )
+    		player->RemoveItem "ingred_raw_glass_tinos", 1
+    	endif
+    	if ( in8 > 0 )
+    		player->RemoveItem "ingred_sload_soap_01", 1
+    	endif
+    	set state to 1
+    	set A1V4_CalcAlchemy5_sc.in to sum
+    	set A1V4_CalcAlchemy5 to 1
+    else
+    	StartScript A1V4_AlchemyCheck_sc
+    endif
+    
+    endif
+    
+    End

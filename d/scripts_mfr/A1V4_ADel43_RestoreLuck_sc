@@ -1,0 +1,15 @@
+SCTX
+    Begin A1V4_ADel43_RestoreLuck_sc
+    
+    if ( player->GetItemCount "A1V4_L15_restore_luck" == 1 )
+    	player->RemoveItem "A1V4_L15_restore_luck", 1
+    elseif ( player->GetItemCount "A1V4_L45_restore_luck" == 1 )
+    	player->RemoveItem "A1V4_L45_restore_luck", 1
+    elseif ( player->GetItemCount "A1V4_L60_restore_luck" == 1 )
+    	player->RemoveItem "A1V4_L60_restore_luck", 1
+    endif
+    
+    StopScript A1V4_ADel43_RestoreLuck_sc
+    StartScript A1V4_ADel44_RestoreSpeed_sc
+    
+    End
