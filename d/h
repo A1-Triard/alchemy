@@ -2564,6 +2564,30 @@ SCRI A1V4_AAdd46_RestoreWill_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V4_L30_restore_willpower
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 74 -1 -1
+    -1 0 -1 -1
+    -1 2 -1 -1
+SCRI A1V4_AAdd46_RestoreWill_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_restore_willpower
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 74 -1
+    -1 -1 0 -1
+    -1 -1 2 -1
+SCRI A1V4_AAdd46_RestoreWill_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V4_L15_restore_luck
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
@@ -2572,6 +2596,18 @@ IRDT
     74 -1 -1 -1
     0 -1 -1 -1
     7 -1 -1 -1
+SCRI A1V4_AAdd43_RestoreLuck_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_restore_luck
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 74 -1
+    -1 -1 0 -1
+    -1 -1 7 -1
 SCRI A1V4_AAdd43_RestoreLuck_sc
 ITEX m\\misc_com_bottle_05.dds
 
@@ -2612,6 +2648,18 @@ SCRI A1V4_AAdd47_SpellAbs_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V4_L60_spell_absorption
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 67
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd47_SpellAbs_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V4_L15_dispel
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
@@ -2642,6 +2690,18 @@ FNAM _Создать
 IRDT
     0.0 0
     93 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd37_MagicResist_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_magicka_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 93 -1
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V4_AAdd37_MagicResist_sc
@@ -2702,6 +2762,18 @@ FNAM _Создать
 IRDT
     0.0 0
     80 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd26_FortHealth_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_fortify_health
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 88 -1
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V4_AAdd26_FortHealth_sc
@@ -2780,6 +2852,18 @@ SCRI A1V4_AAdd29_FortPers_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V4_L45_fortify_personality
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 79 -1
+    -1 -1 0 -1
+    -1 -1 6 -1
+SCRI A1V4_AAdd29_FortPers_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V4_L15_fortify_strength
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
@@ -2788,6 +2872,18 @@ IRDT
     79 -1 -1 -1
     0 -1 -1 -1
     0 -1 -1 -1
+SCRI A1V4_AAdd31_FortStr_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_fortify_strength
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 79 -1
+    -1 -1 0 -1
+    -1 -1 0 -1
 SCRI A1V4_AAdd31_FortStr_sc
 ITEX m\\misc_com_bottle_05.dds
 
@@ -2812,6 +2908,18 @@ IRDT
     79 -1 -1 -1
     0 -1 -1 -1
     4 -1 -1 -1
+SCRI A1V4_AAdd30_FortSpeed_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L45_fortify_speed
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 79 -1
+    -1 -1 0 -1
+    -1 -1 4 -1
 SCRI A1V4_AAdd30_FortSpeed_sc
 ITEX m\\misc_com_bottle_05.dds
 
@@ -3428,12 +3536,36 @@ SCRI A1V4_AAdd22_FortAgil_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V4_L30_fortify_attack
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 117 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd23_FortAttack_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V4_L45_fortify_attack
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
 IRDT
     0.0 0
     -1 -1 117 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd23_FortAttack_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L60_fortify_attack
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 117
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V4_AAdd23_FortAttack_sc
@@ -3656,6 +3788,18 @@ SCRI A1V4_AAdd33_FrostResist_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V4_L15_frost_shield
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    6 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd34_FrostSh_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V4_L30_frost_shield
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
@@ -3824,6 +3968,18 @@ SCRI A1V4_AAdd40_RestoreAgility_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V4_L30_restore_endurance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 74 -1 -1
+    -1 0 -1 -1
+    -1 5 -1 -1
+SCRI A1V4_AAdd41_RestoreEndur_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V4_L45_restore_endurance
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
@@ -3977,6 +4133,30 @@ IRDT
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V4_AAdd47_SpellAbs_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L15_swift_swim
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    1 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd48_SwitfSwim_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V4_L30_swift_swim
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V4_AAdd48_SwitfSwim_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
