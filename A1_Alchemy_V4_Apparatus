@@ -17200,6 +17200,616 @@ MCDT AAAAAAAAAAAAAAAA
 SCRI A1V4_ApparatusItem_3_sc
 ITEX m\\misc_com_bottle_05.dds
 
+BOOK
+NAME A1V4_AlchemyPlus_0
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 0)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_1
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 1)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_2
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 2)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_3
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 3)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_4
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 4)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_5
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 5)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_6
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 6)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_7
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 7)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_8
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 8)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_9
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 9)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_10
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 10)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_11
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 11)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_12
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 12)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_13
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 13)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_14
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 14)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_15
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 15)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_16
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 16)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_17
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 17)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_18
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 18)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_19
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 19)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_20
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 20)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_21
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 21)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_22
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 22)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_23
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 23)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_24
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 24)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_25
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 25)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_26
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 26)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_27
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 27)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_28
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 28)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_29
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 29)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_30
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 30)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_31
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 31)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_32
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 32)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_33
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 33)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_34
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 34)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_35
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 35)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_36
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 36)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_37
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 37)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_38
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 38)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_39
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 39)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_40
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 40)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_41
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 41)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_42
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 42)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_43
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 43)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_44
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 44)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_45
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 45)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_46
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 46)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_47
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 47)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_48
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 48)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_49
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 49)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_50
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 50)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_51
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 51)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_52
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 52)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_53
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 53)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_54
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 54)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_55
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 55)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_56
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 56)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_57
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 57)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_58
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 58)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_59
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 59)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
+BOOK
+NAME A1V4_AlchemyPlus_60
+MODL m\\Text_Scroll_01.NIF
+FNAM Алхимия (конспект 60)
+BKDT zcxMPgAAAAABAAAAEAAAAAAAAAA=
+ITEX m\\Tx_scroll_open_01.tga
+TEXT
+    <DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>[Конспект, содержащий ваши записи об алхимии.]<BR>
+    
+
 CONT
 NAME A1V4_ApparatusCont_3
 MODL m\\misc_potion_fresh_01.nif
