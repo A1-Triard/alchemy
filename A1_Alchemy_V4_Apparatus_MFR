@@ -19445,9 +19445,9 @@ SCTX
     End
 
 SCPT
-SCHD A1V4_IncAlchemy 1 2 0 194 12
+SCHD A1V4_IncAlchemy 1 2 0 218 12
 SCVR a;str;pcRef;;
-SCDT BQFzAQAUIEcQQTFWNF9BbGNoZW15UGx1cwATOAAAEzhzAAA8EzgsAAo4QAATQTFWNF9BbGNoZW15UGx1c18lZAs/EzgAABM4bAACPBM4VAAKOFwABnBsYXllcgAdPBM4AQATOGwAAjwROAEAAAATOAAAEzhsAAA8EzgBABM4bAAAPBg8KDwFAXMBAAggcwEAIDEgKwUBRxBBMVY0X0FsY2hlbXlQbHVzBSBzAQAAHBAPQTFWNF9JbmNBbGNoZW15AQE=
+SCDT BQFzAQAUIEcQQTFWNF9BbGNoZW15UGx1cwATOAAAEzhzAAA8EzgsAAo4QAATQTFWNF9BbGNoZW15UGx1c18lZAs/EzgAABM4bAACPBM4VAAKOFwABnBsYXllcgAdPBM4AQATOGwAAjwROAEAAAATOAAAEzhsAAA8EzgBABM4bAAAPBg8KDwTOAAAEzhsAAA8EzgBABM4bAAAPBg8Dj8FAXMBAAggcwEAIDEgKwUBRxBBMVY0X0FsY2hlbXlQbHVzBSBzAQAAHBAPQTFWNF9JbmNBbGNoZW15AQE=
 SCTX
     Begin A1V4_IncAlchemy
     
@@ -19459,6 +19459,7 @@ SCTX
     setx str to xStringBuild "A1V4_AlchemyPlus_%d" a
     setx pcRef to xGetRef "player"
     pcRef->xAddItem str 1
+    pcRef->xEquip str
     set a to ( a + 1 )
     set A1V4_AlchemyPlus to a
     
@@ -19467,9 +19468,9 @@ SCTX
     End
 
 SCPT
-SCHD A1V4_ModAlchemyExp 1 0 5 456 34
-SCVR a;Value;alch1;alch2;tempf1;tempf2;;
-SCDT BQFmBAAKIDEuNSBmAQAgKgUBZgUAEyBHD0ExVjRfQWxjaGVteUV4cAAFAWYEAAogZgQAIGYFACArBQFHD0ExVjRfQWxjaGVteUV4cAUgZgQAAAYBEhkgRw9BMVY0X0FsY2hlbXlFeHAgPj0gMTAwBQFHD0ExVjRfQWxjaGVteUV4cAIgMAUBcwEAFCBHEEExVjRfQWxjaGVteVBsdXMABgEBHSBHFUdhbHNfX0NoYXJEZXZfUHJlc2VudCAhPSAwBQFzAQAEIDEwMAkBBgEHCyBzAQAgPj0gMTAwDAEGcGxheWVyBQFmAgAFIFhrEAAMAQZwbGF5ZXJtEAAAgD8MAQZwbGF5ZXIFAWYDAAUgWGsQAAYBAgsgZgMAID4gZgIAAAIQCnNraWxscmFpc2UAEB8AwuD4IO3g4vvqIODr9ejs6Ogg4vvw7vEg5O4gJS4wZgFmAwAACQEHAQMCEAZzY3JvbGwAEDEAz/Du9+jy4Ony5SDq7u3x7+Xq8iwg9/Lu4fsg7+7i+/Ho8vwg7eDi++og4Ov16Ozo6AAAGxAPQTFWNF9JbmNBbGNoZW15CQEJARwQEkExVjRfTW9kQWxjaGVteUV4cAEB
+SCHD A1V4_ModAlchemyExp 1 0 5 488 38
+SCVR state;Value;alch1;alch2;tempf1;tempf2;;
+SCDT BgEGCSBzAQAgPT0gMQUBcwEAAiAwHBASQTFWNF9Nb2RBbGNoZW15RXhwBgEBGSBHEEExVjRfQWxjaGVteVBsdXMgPCAxMDAbEA9BMVY0X0luY0FsY2hlbXkJASQBCQEFAWYEAAogMS41IGYBACAqBQFmBQATIEcPQTFWNF9BbGNoZW15RXhwAAUBZgQACiBmBAAgZgUAICsFAUcPQTFWNF9BbGNoZW15RXhwBSBmBAAABgEPGSBHD0ExVjRfQWxjaGVteUV4cCA+PSAxMDAFAUcPQTFWNF9BbGNoZW15RXhwAiAwBgEDHSBHFUdhbHNfX0NoYXJEZXZfUHJlc2VudCA9PSAxAhAGc2Nyb2xsABAxAM/w7vfo8uDp8uUg6u7t8e/l6vIsIPfy7uH7IO/u4vvx6PL8IO3g4vvqIODr9ejs6OgAAAUBcwEAAiAxBwEIDAEGcGxheWVyBQFmAgAFIFhrEAAMAQZwbGF5ZXJtEAAAgD8MAQZwbGF5ZXIFAWYDAAUgWGsQAAYBAgsgZgMAID4gZgIAAAIQCnNraWxscmFpc2UAEB8AwuD4IO3g4vvqIODr9ejs6Ogg4vvw7vEg5O4gJS4wZgFmAwAACQEcEBJBMVY0X01vZEFsY2hlbXlFeHAJAQkBAQE=
 SCTX
     Begin A1V4_ModAlchemyExp
     
@@ -19478,7 +19479,16 @@ SCTX
     float alch2
     float tempf1
     float tempf2
-    short a
+    short state
+    
+    if ( state == 1 )
+    	set state to 0
+    	StopScript A1V4_ModAlchemyExp
+    	if ( A1V4_AlchemyPlus < 100 )
+    		StartScript A1V4_IncAlchemy
+    	endif
+    	return
+    endif
     
     set tempf1 to ( 1.5 * Value )
     set tempf2 to A1V4_AlchemyExp
@@ -19486,11 +19496,11 @@ SCTX
     set A1V4_AlchemyExp to tempf1
     if ( A1V4_AlchemyExp >= 100 )
     	set A1V4_AlchemyExp to 0
-    	set a to A1V4_AlchemyPlus
-    	if ( Gals__CharDev_Present != 0 )
-    		set a to 100
-    	endif
-    	if ( a >= 100 )
+    	if ( Gals__CharDev_Present == 1 )
+    		PlaySound scroll
+    		MessageBox "Прочитайте конспект, чтобы повысить навык алхимии"
+    		set state to 1
+    	else
     		set alch1 to ( player->GetAlchemy )
     		player->ModAlchemy 1
     		set alch2 to ( player->GetAlchemy )
@@ -19498,14 +19508,9 @@ SCTX
     			PlaySound skillraise
     			MessageBox "Ваш навык алхимии вырос до %.0f", alch2
     		endif
-    	else
-    		PlaySound scroll
-    		MessageBox "Прочитайте конспект, чтобы повысить навык алхимии"
-    		StartScript A1V4_IncAlchemy
+    		StopScript A1V4_ModAlchemyExp
     	endif
     endif
-    
-    StopScript A1V4_ModAlchemyExp
     
     End
 
