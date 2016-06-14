@@ -7,9 +7,7 @@ SCTX
     	player->RemoveItem "A1V4_L60_recall", 1
     endif
     
-    MessageBox "Установка деактивирована"
-    EnablePlayerControls
-    
     StopScript A1V4_ADel50_Recall_sc
+    StartScript A1V4_ADelPlus
     
     End

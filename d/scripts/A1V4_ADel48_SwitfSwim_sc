@@ -5,9 +5,7 @@ SCTX
     	player->RemoveItem "A1V4_L60_swift_swim", 1
     endif
     
-    MessageBox "Установка деактивирована"
-    EnablePlayerControls
-    
     StopScript A1V4_ADel48_SwitfSwim_sc
+    StartScript A1V4_ADelPlus
     
     End

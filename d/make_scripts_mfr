@@ -884,10 +884,8 @@ gen_del() {
                 print "    StartScript A1V4_ADel" $1 "_" $2 "_sc"
         }' scripts_data_mfr >> $add_s
     else
-        echo "    MessageBox \"Установка деактивирована\"" >> $add_s
-        echo "    EnablePlayerControls" >> $add_s
-        echo "    " >> $add_s
         echo "    StopScript ${check_name}" >> $add_s
+        echo "    StartScript A1V4_ADelPlus" >> $add_s
     fi
     echo "    " >> $add_s
     echo "    End" >> $add_s
