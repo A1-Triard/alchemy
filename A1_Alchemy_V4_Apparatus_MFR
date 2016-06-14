@@ -12,6 +12,16 @@ Tribunal.esm 6616539
 Bloodmoon.esm 11799703
 
 GLOB
+NAME Gals__CharDev_Present
+FNAM s%
+FLTV 0.0
+
+GLOB
+NAME A1V4_AlchemyPlus
+FNAM s%
+FLTV 0.0
+
+GLOB
 NAME A1V4_AlchemyRes
 FNAM s%
 FLTV 0.0
@@ -19435,9 +19445,31 @@ SCTX
     End
 
 SCPT
-SCHD A1V4_ModAlchemyExp 0 0 5 283 32
-SCVR Value;alch1;alch2;tempf1;tempf2;;
-SCDT BQFmBAAKIDEuNSBmAQAgKgUBZgUAEyBHD0ExVjRfQWxjaGVteUV4cAAFAWYEAAogZgQAIGYFACArBQFHD0ExVjRfQWxjaGVteUV4cAUgZgQAAAYBCBkgRw9BMVY0X0FsY2hlbXlFeHAgPj0gMTAwBQFHD0ExVjRfQWxjaGVteUV4cAIgMAwBBnBsYXllcgUBZgIABSBYaxAADAEGcGxheWVybRAAAIA/DAEGcGxheWVyBQFmAwAFIFhrEAAGAQILIGYDACA+IGYCAAACEApza2lsbHJhaXNlABAfAMLg+CDt4OL76iDg6/Xo7OjoIOL78O7xIOTuICUuMGYBZgMAAAkBCQEcEBJBMVY0X01vZEFsY2hlbXlFeHABAQ==
+SCHD A1V4_IncAlchemy 1 2 0 194 12
+SCVR a;str;pcRef;;
+SCDT BQFzAQAUIEcQQTFWNF9BbGNoZW15UGx1cwATOAAAEzhzAAA8EzgsAAo4QAATQTFWNF9BbGNoZW15UGx1c18lZAs/EzgAABM4bAACPBM4VAAKOFwABnBsYXllcgAdPBM4AQATOGwAAjwROAEAAAATOAAAEzhsAAA8EzgBABM4bAAAPBg8KDwFAXMBAAggcwEAIDEgKwUBRxBBMVY0X0FsY2hlbXlQbHVzBSBzAQAAHBAPQTFWNF9JbmNBbGNoZW15AQE=
+SCTX
+    Begin A1V4_IncAlchemy
+    
+    short a
+    long str
+    long pcRef
+    
+    set a to A1V4_AlchemyPlus
+    setx str to xStringBuild "A1V4_AlchemyPlus_%d" a
+    setx pcRef to xGetRef "player"
+    pcRef->xAddItem str 1
+    set a to ( a + 1 )
+    set A1V4_AlchemyPlus to a
+    
+    StopScript A1V4_IncAlchemy
+    
+    End
+
+SCPT
+SCHD A1V4_ModAlchemyExp 1 0 5 456 34
+SCVR a;Value;alch1;alch2;tempf1;tempf2;;
+SCDT BQFmBAAKIDEuNSBmAQAgKgUBZgUAEyBHD0ExVjRfQWxjaGVteUV4cAAFAWYEAAogZgQAIGYFACArBQFHD0ExVjRfQWxjaGVteUV4cAUgZgQAAAYBEhkgRw9BMVY0X0FsY2hlbXlFeHAgPj0gMTAwBQFHD0ExVjRfQWxjaGVteUV4cAIgMAUBcwEAFCBHEEExVjRfQWxjaGVteVBsdXMABgEBHSBHFUdhbHNfX0NoYXJEZXZfUHJlc2VudCAhPSAwBQFzAQAEIDEwMAkBBgEHCyBzAQAgPj0gMTAwDAEGcGxheWVyBQFmAgAFIFhrEAAMAQZwbGF5ZXJtEAAAgD8MAQZwbGF5ZXIFAWYDAAUgWGsQAAYBAgsgZgMAID4gZgIAAAIQCnNraWxscmFpc2UAEB8AwuD4IO3g4vvqIODr9ejs6Ogg4vvw7vEg5O4gJS4wZgFmAwAACQEHAQMCEAZzY3JvbGwAEDEAz/Du9+jy4Ony5SDq7u3x7+Xq8iwg9/Lu4fsg7+7i+/Ho8vwg7eDi++og4Ov16Ozo6AAAGxAPQTFWNF9JbmNBbGNoZW15CQEJARwQEkExVjRfTW9kQWxjaGVteUV4cAEB
 SCTX
     Begin A1V4_ModAlchemyExp
     
@@ -19446,6 +19478,7 @@ SCTX
     float alch2
     float tempf1
     float tempf2
+    short a
     
     set tempf1 to ( 1.5 * Value )
     set tempf2 to A1V4_AlchemyExp
@@ -19453,12 +19486,22 @@ SCTX
     set A1V4_AlchemyExp to tempf1
     if ( A1V4_AlchemyExp >= 100 )
     	set A1V4_AlchemyExp to 0
-    	set alch1 to ( player->GetAlchemy )
-    	player->ModAlchemy 1
-    	set alch2 to ( player->GetAlchemy )
-    	if ( alch2 > alch1 )
-    		PlaySound skillraise
-    		MessageBox "Ваш навык алхимии вырос до %.0f", alch2
+    	set a to A1V4_AlchemyPlus
+    	if ( Gals__CharDev_Present != 0 )
+    		set a to 100
+    	endif
+    	if ( a >= 100 )
+    		set alch1 to ( player->GetAlchemy )
+    		player->ModAlchemy 1
+    		set alch2 to ( player->GetAlchemy )
+    		if ( alch2 > alch1 )
+    			PlaySound skillraise
+    			MessageBox "Ваш навык алхимии вырос до %.0f", alch2
+    		endif
+    	else
+    		PlaySound scroll
+    		MessageBox "Прочитайте конспект, чтобы повысить навык алхимии"
+    		StartScript A1V4_IncAlchemy
     	endif
     endif
     
