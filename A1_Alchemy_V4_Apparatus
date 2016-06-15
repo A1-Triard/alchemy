@@ -16846,9 +16846,9 @@ SCTX
     End
 
 SCPT
-SCHD A1V4_ModAlchemyExp 1 0 5 424 38
-SCVR state;Value;alch1;alch2;tempf1;tempf2;;
-SCDT BgEGCSBzAQAgPT0gMQUBcwEAAiAwHBASQTFWNF9Nb2RBbGNoZW15RXhwBgEBGSBHEEExVjRfQWxjaGVteVBsdXMgPCAxMDAbEA9BMVY0X0luY0FsY2hlbXkJASQBCQEFAWYEAAogMS41IGYBACAqBQFmBQATIEcPQTFWNF9BbGNoZW15RXhwAAUBZgQACiBmBAAgZgUAICsFAUcPQTFWNF9BbGNoZW15RXhwBSBmBAAABgENGSBHD0ExVjRfQWxjaGVteUV4cCA+PSAxMDAFAUcPQTFWNF9BbGNoZW15RXhwAiAwBgEBHSBHFUdhbHNfX0NoYXJEZXZfUHJlc2VudCA9PSAwBQFzAQACIDEHAQgMAQZwbGF5ZXIFAWYCAAUgWGsQAAwBBnBsYXllcm0QAACAPwwBBnBsYXllcgUBZgMABSBYaxAABgECCyBmAwAgPiBmAgAAAhAKc2tpbGxyYWlzZQAQHwDC4Pgg7eDi++og4Ov16Ozo6CDi+/Du8SDk7iAlLjBmAWYDAAAJARwQEkExVjRfTW9kQWxjaGVteUV4cAkBCQEBAQ==
+SCHD A1V4_ModAlchemyExp 0 0 5 370 32
+SCVR Value;alch1;alch2;tempf1;tempf2;;
+SCDT BQFmBAAKIDEuNSBmAQAgKgUBZgUAEyBHD0ExVjRfQWxjaGVteUV4cAAFAWYEAAogZgQAIGYFACArBQFHD0ExVjRfQWxjaGVteUV4cAUgZgQAAAYBDhkgRw9BMVY0X0FsY2hlbXlFeHAgPj0gMTAwBQFHD0ExVjRfQWxjaGVteUV4cAIgMAYBAx0gRxVHYWxzX19DaGFyRGV2X1ByZXNlbnQgPT0gMAYBARkgRxBBMVY0X0FsY2hlbXlQbHVzIDwgMTAwGxAPQTFWNF9JbmNBbGNoZW15CQEHAQcMAQZwbGF5ZXIFAWYCAAUgWGsQAAwBBnBsYXllcm0QAACAPwwBBnBsYXllcgUBZgMABSBYaxAABgECCyBmAwAgPiBmAgAAAhAKc2tpbGxyYWlzZQAQHwDC4Pgg7eDi++og4Ov16Ozo6CDi+/Du8SDk7iAlLjBmAWYDAAAJAQkBCQEcEBJBMVY0X01vZEFsY2hlbXlFeHABAQ==
 SCTX
     Begin A1V4_ModAlchemyExp
     
@@ -16857,16 +16857,6 @@ SCTX
     float alch2
     float tempf1
     float tempf2
-    short state
-    
-    if ( state == 1 )
-    	set state to 0
-    	StopScript A1V4_ModAlchemyExp
-    	if ( A1V4_AlchemyPlus < 100 )
-    		StartScript A1V4_IncAlchemy
-    	endif
-    	return
-    endif
     
     set tempf1 to ( 1.5 * Value )
     set tempf2 to A1V4_AlchemyExp
@@ -16875,7 +16865,9 @@ SCTX
     if ( A1V4_AlchemyExp >= 100 )
     	set A1V4_AlchemyExp to 0
     	if ( Gals__CharDev_Present == 0 )
-    		set state to 1
+    		if ( A1V4_AlchemyPlus < 100 )
+    			StartScript A1V4_IncAlchemy
+    		endif
     	else
     		set alch1 to ( player->GetAlchemy )
     		player->ModAlchemy 1
@@ -16884,9 +16876,10 @@ SCTX
     			PlaySound skillraise
     			MessageBox "Ваш навык алхимии вырос до %.0f", alch2
     		endif
-    		StopScript A1V4_ModAlchemyExp
     	endif
     endif
+    
+    StopScript A1V4_ModAlchemyExp
     
     End
 
