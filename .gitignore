@@ -1,5 +1,6 @@
 /espa
 *.esp
+/A1_Alchemy_*.*/
 /A1_Alchemy_*.*.*/
 *.zip
 *.txt
