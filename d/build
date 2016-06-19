@@ -10,7 +10,7 @@ echo "MFR"
 echo "Done MFR"
 
 find scripts -type f -exec basename {} \; | sort > all_scripts
-cat scripts.list | sort > sorted_scripts
+cat scripts.list | sort | awk '{ print "A1V5_" $0 }' > sorted_scripts
 diff sorted_scripts all_scripts || exit 1
 rm all_scripts sorted_scripts
 cat h > A.sctx
@@ -24,7 +24,7 @@ done
 cd ..
 
 find scripts_mfr -type f -exec basename {} \; | sort > all_scripts_mfr
-cat scripts_mfr.list | sort > sorted_scripts_mfr
+cat scripts_mfr.list | sort | awk '{ print "A1V5_" $0 }' > sorted_scripts_mfr
 diff sorted_scripts_mfr all_scripts_mfr || exit 1
 rm all_scripts_mfr sorted_scripts_mfr
 cat h > B.sctx
@@ -39,12 +39,16 @@ cd ..
 
 ../espa -v A.sctx
 rm A.sctx
-../compile_scripts A.sctx scripts.list
+awk '{ print "A1V5_" $0 }' scripts.list > slist
+../compile_scripts A.sctx slist
+rm slist
 mv A.sctx.esp ..
 mv A.sctx.au3 ..
 
 ../espa -v B.sctx
 rm B.sctx
-../compile_scripts B.sctx scripts_mfr.list
+awk '{ print "A1V5_" $0 }' scripts_mfr.list > smfrlist
+../compile_scripts B.sctx smfrlist
+rm smfrlist
 mv B.sctx.esp ..
 mv B.sctx.au3 ..

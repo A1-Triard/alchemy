@@ -3,9 +3,7 @@ VERSION 1067869798
 TYPE ESP
 AUTHOR A1
 DESCRIPTION
-    Модифицирует некоторые существующие и добавляет новые зелья. Вспомогательный плагин для A1_Alchemy_V4_Apparatus.esp\0лучения мешка используйте команду
-    player->AddItem A1_ApparatItem_НОМЕР 1
-    Вместо НОМЕР подставьте номер мешка (1, 2 или 3).
+    Модифицирует некоторые существующие и добавляет новые зелья. Вспомогательный плагин для A1_Alchemy_V5_Apparatus.esp
 Morrowind.esm 79764287
 Tribunal.esm 6616539
 Bloodmoon.esm 11799703
