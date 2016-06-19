@@ -22,5 +22,5 @@ iconv -f UTF-8 -t CP1251 VERSIONS | perl -p -e 's/\n/\r\n/' > Versions.txt
 rm -rf A1_Alchemy_${VERSION}
 rm -f A1_Alchemy_${VERSION}.zip
 mkdir A1_Alchemy_${VERSION}
-cp -a Screenshots Readme.txt Versions.txt *.esp A1_Alchemy_${VERSION}
+cp -a Screenshots Readme.txt Versions.txt A1_Alchemy_DaeCursed.esp A1_Alchemy_Potions.esp A1_Alchemy_V4_Containers.esp A1_Alchemy_V5_Apparatus.esp A1_Alchemy_V5_Apparatus_MFR.esp A1_Alchemy_${VERSION}
 zip -v -X -9 -r A1_Alchemy_${VERSION}.zip A1_Alchemy_${VERSION} || exit 1
