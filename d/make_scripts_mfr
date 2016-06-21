@@ -152,6 +152,10 @@ gen_add() {
         echo '    	endif' >> $add_s
     done
     echo '    	set state to 1' >> $add_s
+    if [ $kind = 2 ]; then
+        difficulty=$(awk -v FS=':' '{print $8}' "$sd")
+        echo "    	set A1V5_CalcAlchemy2_sc.pin to ${difficulty}" >> $add_s
+    fi
     echo "    	set A1V5_CalcAlchemy${kind}_sc.in to sum" >> $add_s
     echo "    	set A1V5_CalcAlchemy${kind} to 1" >> $add_s
     echo '    else' >> $add_s

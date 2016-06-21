@@ -1,4 +1,4 @@
 1. Run ./build1
-2. Compile scripts in the A.sctx.esp file in tes3cs directory using TES Construction Set and provided *.au3 file. Put result back into tes3cs/A.esp file
+2. Compile scripts in the A.sctx.esp and B.sctx.esp files in tes3cs directory using TES Construction Set and provided *.au3 files. Put result back into tes3cs/A.esp and tes3cs/B.esp files. The A plugin requires Morrowind.esm, Tribunal.esm, Bloodmoon.esm and A1_Alchemy_Potions.asp dependencies. The B plugin requires EVA.esp additionally.
 3. Run ./build2
 4. Test result (A1_Alchemy_%Version%.zip)
