@@ -27,7 +27,7 @@ find scripts_mfr -type f -exec basename {} \; | sort > all_scripts_mfr
 cat scripts_mfr.list | sort | awk '{ print "A1V5_" $0 }' > sorted_scripts_mfr
 diff sorted_scripts_mfr all_scripts_mfr || exit 1
 rm all_scripts_mfr sorted_scripts_mfr
-cat h > B.sctx
+cat h_mfr > B.sctx
 cd scripts_mfr
 for script in *; do
   echo '' >> ../B.sctx

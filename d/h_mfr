@@ -3509,6 +3509,54 @@ SCRI A1V5_AAdd5_WaterBrf_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V5_L15_mark
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    60 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V5_AAdd49_Mark_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V5_L45_mark
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 60 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V5_AAdd49_Mark_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V5_L45_recall
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 61 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V5_AAdd50_Recall_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V5_L60_recall
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 61
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V5_AAdd50_Recall_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V5_L15_restore_fatigue
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
@@ -5225,6 +5273,30 @@ SCRI A1V5_AAdd48_SwitfSwim_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
+NAME A1V5_L15_disease_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    94 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V5_AAdd51_ResCom_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V5_L30_disease_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 94 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V5_AAdd51_ResCom_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
 NAME A1V5_L45_disease_resistance
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
@@ -5233,7 +5305,7 @@ IRDT
     -1 -1 94 -1
     -1 -1 -1 -1
     -1 -1 -1 -1
-SCRI A1V5_AAdd49_ResCom_sc
+SCRI A1V5_AAdd51_ResCom_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
@@ -5245,7 +5317,7 @@ IRDT
     -1 -1 -1 94
     -1 -1 -1 -1
     -1 -1 -1 -1
-SCRI A1V5_AAdd49_ResCom_sc
+SCRI A1V5_AAdd51_ResCom_sc
 ITEX m\\misc_com_bottle_05.dds
 
 APPA

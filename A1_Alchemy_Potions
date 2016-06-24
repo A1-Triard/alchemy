@@ -2233,3 +2233,43 @@ MODL m\\Misc_Potion_Fresh_01.nif
 TEXT m\\Tx_potion_fresh_01.tga
 FNAM 1/16 Зелье воспоминания
 ALDT 7FG4PQAAAAAAAAAA
+
+ALCH
+NAME p_disease_resistance_b_A1_8
+MODL m\\Misc_Potion_Bargain_01.nif
+TEXT m\\Tx_potion_bargain_01.tga
+FNAM 1/8 Уцененное сопр. недугам
+ALDT j8J1PgAAAAAAAAAA
+ENAM XgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+ALCH
+NAME p_disease_resistance_c_A1_8
+MODL m\\Misc_Potion_Cheap_01.nif
+TEXT m\\Tx_potion_cheap_01.tga
+FNAM 1/8 Дешевое сопротив. недугам
+ALDT 7FE4PgAAAAAAAAAA
+ENAM XgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+ALCH
+NAME p_disease_resistance_e_A1_8
+MODL m\\Misc_Potion_Exclusive_01.nif
+TEXT m\\Tx_potion_exclusive_01.tga
+FNAM 1/8 Экскл. сопротив. недугам
+ALDT 7FG4PQAAAAAAAAAA
+ENAM XgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+ALCH
+NAME p_disease_resistance_q_A1_8
+MODL m\\Misc_Potion_Quality_01.nif
+TEXT m\\Tx_potion_quality_01.tga
+FNAM 1/8 Качеств. сопротив. недугам
+ALDT j8L1PQAAAAAAAAAA
+ENAM XgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+ALCH
+NAME p_disease_resistance_s_A1_8
+MODL m\\Misc_Potion_Standard_01.nif
+TEXT m\\Tx_potion_standard_01.tga
+FNAM 1/8 Стандартное сопр. недугам
+ALDT mpkZPgAAAAAAAAAA
+ENAM XgD//wAAAAAAAAAAAAAAAAAAAAAAAAAA

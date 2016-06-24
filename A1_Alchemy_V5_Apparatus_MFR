@@ -5826,6 +5826,182 @@ SCTX
     End
 
 SCPT
+SCHD A1V5_AAdd51_ResCom_sc 15 0 0 1886 78
+SCVR in1;in2;in3;in4;in5;in6;in7;in8;in9;in10;sum;temp;state;PCSkipEquip;OnPCEquip;;
+SCDT BQFzDgACIDEGAQQJIHMNACA9PSAyBQFtF0ExVjVfQUNoZWNrNTFfUmVzQ29tX3NjcwEAAiAxGxAUQTFWNV9BbGNoZW15Q2hlY2tfc2MFAXMNAAIgMCQBCQEGAQQJIHMNACA9PSAxBgEBICBYHRAgbRRBMVY1X0NhbGNBbGNoZW15NV9zYyA9PSAwBQFzDQACIDIJASQBCQEGAX8JIHMPACA9PSAxBQFzDwACIDAFAXMBAAIgMAUBcwIAAiAwBQFzAwACIDAFAXMEAAIgMAUBcwUAAiAwBQFzBgACIDAFAXMHAAIgMAUBcwgAAiAwBQFzCQACIDAFAXMKAAIgMAwBBnBsYXllcgYBARsgWP0QIG8QYWxfaV9vZ3JpbV90ZWV0aCA+IDAFAXMBAAIgMQkBDAEGcGxheWVyBgEBHiBY/RAgbxNhbF9pX3NoYWxrX21hbmRpYmxlID4gMAUBcwIAAiAxCQEMAQZwbGF5ZXIGAQEcIFj9ECBvEWluZ3JlZF9hc2hfeWFtXzAxID4gMAUBcwMAAiAxCQEMAQZwbGF5ZXIGAQEbIFj9ECBvEGluZ3JlZF9iZWFyX3BlbHQgPiAwBQFzBAACIDEJAQwBBnBsYXllcgYBASEgWP0QIG8WaW5ncmVkX2thZ291dGlfaGlkZV8wMSA+IDAFAXMFAAIgMQkBDAEGcGxheWVyBgEBGiBY/RAgbw9pbmdyZWRfcGVhcmxfMDEgPiAwBQFzBgACIDEJAQwBBnBsYXllcgYBARogWP0QIG8PaW5ncmVkX3Jlc2luXzAxID4gMAUBcwcAAiAxCQEMAQZwbGF5ZXIGAQEmIFj9ECBvG2luZ3JlZF9zbm93YmVhcl9wZWx0X3VuaXF1ZSA+IDAFAXMIAAIgMQkBDAEGcGxheWVyBgEBJiBY/RAgbxtpbmdyZWRfc25vd3dvbGZfcGVsdF91bmlxdWUgPiAwBQFzCQACIDEJAQwBBnBsYXllcgYBARsgWP0QIG8QaW5ncmVkX3dvbGZfcGVsdCA+IDAFAXMKAAIgMQkBBQFzCwAKIHMBACBzAgAgKwUBcwsACiBzCwAgcwMAICsFAXMLAAogcwsAIHMEACArBQFzCwAKIHMLACBzBQAgKwUBcwsACiBzCwAgcwYAICsFAXMLAAogcwsAIHMHACArBQFzCwAKIHMLACBzCAAgKwUBcwsACiBzCwAgcwkAICsFAXMLAAogcwsAIHMKACArBQFzDAAKIHMEACBzBQAgKwYBAQggcwwAID4gMQUBcwsAAiAwCQEFAXMMAAogcwQAIHMIACArBgEBCCBzDAAgPiAxBQFzCwACIDAJAQUBcwwACiBzBAAgcwkAICsGAQEIIHMMACA+IDEFAXMLAAIgMAkBBQFzDAAKIHMEACBzCgAgKwYBAQggcwwAID4gMQUBcwsAAiAwCQEFAXMMAAogcwUAIHMIACArBgEBCCBzDAAgPiAxBQFzCwACIDAJAQUBcwwACiBzBQAgcwkAICsGAQEIIHMMACA+IDEFAXMLAAIgMAkBBQFzDAAKIHMFACBzCgAgKwYBAQggcwwAID4gMQUBcwsAAiAwCQEFAXMMAAogcwgAIHMJACArBgEBCCBzDAAgPiAxBQFzCwACIDAJAQUBcwwACiBzCAAgcwoAICsGAQEIIHMMACA+IDEFAXMLAAIgMAkBBQFzDAAKIHMJACBzCgAgKwYBAQggcwwAID4gMQUBcwsAAiAwCQEGASEIIHMLACA+IDEGAQEIIHMBACA+IDAMAQZwbGF5ZXLVEBBhbF9pX29ncmltX3RlZXRoAQAJAQYBAQggcwIAID4gMAwBBnBsYXllctUQE2FsX2lfc2hhbGtfbWFuZGlibGUBAAkBBgEBCCBzAwAgPiAwDAEGcGxheWVy1RARaW5ncmVkX2FzaF95YW1fMDEBAAkBBgEBCCBzBAAgPiAwDAEGcGxheWVy1RAQaW5ncmVkX2JlYXJfcGVsdAEACQEGAQEIIHMFACA+IDAMAQZwbGF5ZXLVEBZpbmdyZWRfa2Fnb3V0aV9oaWRlXzAxAQAJAQYBAQggcwYAID4gMAwBBnBsYXllctUQD2luZ3JlZF9wZWFybF8wMQEACQEGAQEIIHMHACA+IDAMAQZwbGF5ZXLVEA9pbmdyZWRfcmVzaW5fMDEBAAkBBgEBCCBzCAAgPiAwDAEGcGxheWVy1RAbaW5ncmVkX3Nub3diZWFyX3BlbHRfdW5pcXVlAQAJAQYBAQggcwkAID4gMAwBBnBsYXllctUQG2luZ3JlZF9zbm93d29sZl9wZWx0X3VuaXF1ZQEACQEGAQEIIHMKACA+IDAMAQZwbGF5ZXLVEBBpbmdyZWRfd29sZl9wZWx0AQAJAQUBcw0AAiAxBQFtFEExVjVfQ2FsY0FsY2hlbXk1X3NjcwgABSBzCwAABQFHEUExVjVfQ2FsY0FsY2hlbXk1AiAxBwEBGxAUQTFWNV9BbGNoZW15Q2hlY2tfc2MJAQkBAQE=
+SCTX
+    Begin A1V5_AAdd51_ResCom_sc
+    
+    short in1
+    short in2
+    short in3
+    short in4
+    short in5
+    short in6
+    short in7
+    short in8
+    short in9
+    short in10
+    short sum
+    short temp
+    short state
+    
+    short PCSkipEquip
+    short OnPCEquip
+    
+    set PCSkipEquip to 1
+    
+    if ( state == 2 )
+    	set A1V5_ACheck51_ResCom_sc.AddPotion to 1
+    	StartScript A1V5_AlchemyCheck_sc
+    	set state to 0
+    	return
+    endif
+    
+    if ( state == 1 )
+    	if ( ScriptRunning A1V5_CalcAlchemy5_sc == 0 )
+    		set state to 2
+    	endif
+    	return
+    endif
+    
+    if ( OnPCEquip == 1 )
+    set OnPCEquip to 0
+    
+    set in1 to 0
+    set in2 to 0
+    set in3 to 0
+    set in4 to 0
+    set in5 to 0
+    set in6 to 0
+    set in7 to 0
+    set in8 to 0
+    set in9 to 0
+    set in10 to 0
+    
+    if ( player->GetItemCount "al_i_ogrim_teeth" > 0 )
+    	set in1 to 1
+    endif
+    if ( player->GetItemCount "al_i_shalk_mandible" > 0 )
+    	set in2 to 1
+    endif
+    if ( player->GetItemCount "ingred_ash_yam_01" > 0 )
+    	set in3 to 1
+    endif
+    if ( player->GetItemCount "ingred_bear_pelt" > 0 )
+    	set in4 to 1
+    endif
+    if ( player->GetItemCount "ingred_kagouti_hide_01" > 0 )
+    	set in5 to 1
+    endif
+    if ( player->GetItemCount "ingred_pearl_01" > 0 )
+    	set in6 to 1
+    endif
+    if ( player->GetItemCount "ingred_resin_01" > 0 )
+    	set in7 to 1
+    endif
+    if ( player->GetItemCount "ingred_snowbear_pelt_unique" > 0 )
+    	set in8 to 1
+    endif
+    if ( player->GetItemCount "ingred_snowwolf_pelt_unique" > 0 )
+    	set in9 to 1
+    endif
+    if ( player->GetItemCount "ingred_wolf_pelt" > 0 )
+    	set in10 to 1
+    endif
+    
+    set sum to ( in1 + in2 )
+    set sum to ( sum + in3 )
+    set sum to ( sum + in4 )
+    set sum to ( sum + in5 )
+    set sum to ( sum + in6 )
+    set sum to ( sum + in7 )
+    set sum to ( sum + in8 )
+    set sum to ( sum + in9 )
+    set sum to ( sum + in10 )
+    set temp to ( in4 + in5 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    set temp to ( in4 + in8 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    set temp to ( in4 + in9 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    set temp to ( in4 + in10 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    set temp to ( in5 + in8 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    set temp to ( in5 + in9 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    set temp to ( in5 + in10 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    set temp to ( in8 + in9 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    set temp to ( in8 + in10 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    set temp to ( in9 + in10 )
+    if ( temp > 1 )
+    	set sum to 0
+    endif
+    if ( sum > 1 )
+    	if ( in1 > 0 )
+    		player->RemoveItem "al_i_ogrim_teeth", 1
+    	endif
+    	if ( in2 > 0 )
+    		player->RemoveItem "al_i_shalk_mandible", 1
+    	endif
+    	if ( in3 > 0 )
+    		player->RemoveItem "ingred_ash_yam_01", 1
+    	endif
+    	if ( in4 > 0 )
+    		player->RemoveItem "ingred_bear_pelt", 1
+    	endif
+    	if ( in5 > 0 )
+    		player->RemoveItem "ingred_kagouti_hide_01", 1
+    	endif
+    	if ( in6 > 0 )
+    		player->RemoveItem "ingred_pearl_01", 1
+    	endif
+    	if ( in7 > 0 )
+    		player->RemoveItem "ingred_resin_01", 1
+    	endif
+    	if ( in8 > 0 )
+    		player->RemoveItem "ingred_snowbear_pelt_unique", 1
+    	endif
+    	if ( in9 > 0 )
+    		player->RemoveItem "ingred_snowwolf_pelt_unique", 1
+    	endif
+    	if ( in10 > 0 )
+    		player->RemoveItem "ingred_wolf_pelt", 1
+    	endif
+    	set state to 1
+    	set A1V5_CalcAlchemy5_sc.in to sum
+    	set A1V5_CalcAlchemy5 to 1
+    else
+    	StartScript A1V5_AlchemyCheck_sc
+    endif
+    
+    endif
+    
+    End
+
+SCPT
 SCHD A1V5_AAdd5_WaterBrf_sc 11 0 0 1061 61
 SCVR in1;in2;in3;in4;in5;in6;sum;temp;state;PCSkipEquip;OnPCEquip;;
 SCDT BQFzCgACIDEGAQQJIHMJACA9PSAyBQFtGEExVjVfQUNoZWNrNV9XYXRlckJyZl9zY3MBAAIgMRsQFEExVjVfQWxjaGVteUNoZWNrX3NjBQFzCQACIDAkAQkBBgEECSBzCQAgPT0gMQYBASAgWB0QIG0UQTFWNV9DYWxjQWxjaGVteTVfc2MgPT0gMAUBcwkAAiAyCQEkAQkBBgE7CSBzCwAgPT0gMQUBcwsAAiAwBQFzAQACIDAFAXMCAAIgMAUBcwMAAiAwBQFzBAACIDAFAXMFAAIgMAUBcwYAAiAwDAEGcGxheWVyBgEBHCBY/RAgbxFhbF9pX2RyZXVnaF9zaGVsbCA+IDAFAXMBAAIgMQkBDAEGcGxheWVyBgEBJCBY/RAgbxlhbF9pX3NsYXVnaHRlcmZpc2hfY2F2aWFyID4gMAUBcwIAAiAxCQEMAQZwbGF5ZXIGAQEjIFj9ECBvGGluZ3JlZF9oYWNrbGUtbG9fbGVhZl8wMSA+IDAFAXMDAAIgMQkBDAEGcGxheWVyBgEBISBY/RAgbxZpbmdyZWRfa3dhbWFfY3V0dGxlXzAxID4gMAUBcwQAAiAxCQEMAQZwbGF5ZXIGAQEaIFj9ECBvD2luZ3JlZF9wZWFybF8wMSA+IDAFAXMFAAIgMQkBDAEGcGxheWVyBgEBHCBY/RAgbxFpbmdyZWRfcnVzc3VsYV8wMSA+IDAFAXMGAAIgMQkBBQFzBwAKIHMBACBzAgAgKwUBcwcACiBzBwAgcwMAICsFAXMHAAogcwcAIHMEACArBQFzBwAKIHMHACBzBQAgKwUBcwcACiBzBwAgcwYAICsFAXMIAAogcwQAIHMGACArBgEBCCBzCAAgPiAxBQFzBwACIDAJAQYBFQggcwcAID4gMQYBAQggcwEAID4gMAwBBnBsYXllctUQEWFsX2lfZHJldWdoX3NoZWxsAQAJAQYBAQggcwIAID4gMAwBBnBsYXllctUQGWFsX2lfc2xhdWdodGVyZmlzaF9jYXZpYXIBAAkBBgEBCCBzAwAgPiAwDAEGcGxheWVy1RAYaW5ncmVkX2hhY2tsZS1sb19sZWFmXzAxAQAJAQYBAQggcwQAID4gMAwBBnBsYXllctUQFmluZ3JlZF9rd2FtYV9jdXR0bGVfMDEBAAkBBgEBCCBzBQAgPiAwDAEGcGxheWVy1RAPaW5ncmVkX3BlYXJsXzAxAQAJAQYBAQggcwYAID4gMAwBBnBsYXllctUQEWluZ3JlZF9ydXNzdWxhXzAxAQAJAQUBcwkAAiAxBQFtFEExVjVfQ2FsY0FsY2hlbXk1X3NjcwgABSBzBwAABQFHEUExVjVfQ2FsY0FsY2hlbXk1AiAxBwEBGxAUQTFWNV9BbGNoZW15Q2hlY2tfc2MJAQkBAQE=
@@ -15658,9 +15834,9 @@ SCTX
     End
 
 SCPT
-SCHD A1V5_ACheck50_Recall_sc 7 0 0 2751 39
+SCHD A1V5_ACheck50_Recall_sc 7 0 0 2629 39
 SCVR AddPotion;in1;in2;sum45;sum60;temp;bad;;
-SCDT BgFECSBzAQAgPT0gMQYBARQgRwxBMVY1X1BvdGlvbkIgPT0gMQwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYBAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gMgwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYCAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gMwwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYDAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gNAwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYEAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gNQwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYFAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gNgwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYGAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gNwwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYHAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gOAwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYIAAkBBgEBFCBHDEExVjVfUG90aW9uQyA9PSAxDAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgEACAEBFCBHDEExVjVfUG90aW9uQyA9PSAyDAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgIACAEBFCBHDEExVjVfUG90aW9uQyA9PSAzDAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgMACAEBFCBHDEExVjVfUG90aW9uQyA9PSA0DAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgQACAEBFCBHDEExVjVfUG90aW9uQyA9PSA1DAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgUACAEBFCBHDEExVjVfUG90aW9uQyA9PSA2DAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgYACAEBFCBHDEExVjVfUG90aW9uQyA9PSA3DAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgcACAEBFCBHDEExVjVfUG90aW9uQyA9PSA4DAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNggACQEGAQEUIEcMQTFWNV9Qb3Rpb25TID09IDEMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2AQAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDIMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2AgAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDMMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2AwAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDQMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2BAAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDUMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2BQAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDYMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2BgAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDcMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2BwAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDgMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2CAAJAQYBARQgRwxBMVY1X1BvdGlvblEgPT0gMQwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYBAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gMgwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYCAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gMwwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYDAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gNAwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYEAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gNQwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYFAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gNgwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYGAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gNwwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYHAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gOAwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYIAAkBCQEFAXMBAAIgMAwBBnBsYXllcgYBAh0gWP0QIG8QcF9yZWNhbGxfc19BMV8xNiA+PSAxNgwBBnBsYXllctQQCnBfcmVjYWxsX3MBAAwBBnBsYXllctUQEHBfcmVjYWxsX3NfQTFfMTYQAAkBDAEGcGxheWVyBgECHSBY/RAgbxBwX3JlY2FsbF9zX0ExXzE2ID49IDE2DAEGcGxheWVy1BAKcF9yZWNhbGxfcwEADAEGcGxheWVy1RAQcF9yZWNhbGxfc19BMV8xNhAACQEMAQZwbGF5ZXIGAQIdIFj9ECBvEHBfcmVjYWxsX3NfQTFfMTYgPj0gMTYMAQZwbGF5ZXLUEApwX3JlY2FsbF9zAQAMAQZwbGF5ZXLVEBBwX3JlY2FsbF9zX0ExXzE2EAAJAQwBBnBsYXllcgYBAh0gWP0QIG8QcF9yZWNhbGxfc19BMV8xNiA+PSAxNgwBBnBsYXllctQQCnBfcmVjYWxsX3MBAAwBBnBsYXllctUQEHBfcmVjYWxsX3NfQTFfMTYQAAkBBQFzAgACIDAFAXMDAAIgMAwBBnBsYXllcgYBASIgWP0QIG8XYWxfaV9xdWlja3NpbHZlcl9ib3R0bGUgPiAwBQFzAgACIDEJAQwBBnBsYXllcgYBAR4gWP0QIG8TaW5ncmVkX2JvYXJfbGVhdGhlciA+IDAFAXMDAAIgMQkBBQFzBAACIDAFAXMEAAogcwQAIHMCACArBQFzBQAFIHMEAAAFAXMFAAogcwUAIHMDACArBQFzBwACIDAMAQZwbGF5ZXIGAQEbIFj9ECBvD0ExVjVfTDQ1X3JlY2FsbCA9PSAxDAEGcGxheWVy1RAPQTFWNV9MNDVfcmVjYWxsAQAMAQZwbGF5ZXIIAQEbIFj9ECBvD0ExVjVfTDYwX3JlY2FsbCA9PSAxDAEGcGxheWVy1RAPQTFWNV9MNjBfcmVjYWxsAQAJAQYBBQkgcwcAID09IDAGAQEIIHMEACA+IDEMAQZwbGF5ZXLUEA9BMVY1X0w0NV9yZWNhbGwBAAgBAQggcwUAID4gMQwBBnBsYXllctQQD0ExVjVfTDYwX3JlY2FsbAEACQEJARwQF0ExVjVfQUNoZWNrNTBfUmVjYWxsX3NjBgEBFyBHD0ExVjVfQWxjaGVteVJlcyA9PSAwABAGAMPu8u7i7gAACAEBFyBHD0ExVjVfQWxjaGVteVJlcyA9PSAxAhAOcG90aW9uIHN1Y2Nlc3MIAQEXIEcPQTFWNV9BbGNoZW15UmVzID09IDICEAtwb3Rpb24gZmFpbAkBBQFHD0ExVjVfQWxjaGVteVJlcwIgMAEB
+SCDT BgFECSBzAQAgPT0gMQYBARQgRwxBMVY1X1BvdGlvbkIgPT0gMQwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYBAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gMgwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYCAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gMwwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYDAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gNAwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYEAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gNQwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYFAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gNgwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYGAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gNwwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYHAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gOAwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYIAAkBBgEBFCBHDEExVjVfUG90aW9uQyA9PSAxDAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgEACAEBFCBHDEExVjVfUG90aW9uQyA9PSAyDAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgIACAEBFCBHDEExVjVfUG90aW9uQyA9PSAzDAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgMACAEBFCBHDEExVjVfUG90aW9uQyA9PSA0DAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgQACAEBFCBHDEExVjVfUG90aW9uQyA9PSA1DAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgUACAEBFCBHDEExVjVfUG90aW9uQyA9PSA2DAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgYACAEBFCBHDEExVjVfUG90aW9uQyA9PSA3DAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNgcACAEBFCBHDEExVjVfUG90aW9uQyA9PSA4DAEGcGxheWVy1BAQcF9yZWNhbGxfc19BMV8xNggACQEGAQEUIEcMQTFWNV9Qb3Rpb25TID09IDEMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2AQAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDIMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2AgAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDMMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2AwAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDQMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2BAAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDUMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2BQAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDYMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2BgAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDcMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2BwAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDgMAQZwbGF5ZXLUEBBwX3JlY2FsbF9zX0ExXzE2CAAJAQYBARQgRwxBMVY1X1BvdGlvblEgPT0gMQwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYBAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gMgwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYCAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gMwwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYDAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gNAwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYEAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gNQwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYFAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gNgwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYGAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gNwwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYHAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gOAwBBnBsYXllctQQEHBfcmVjYWxsX3NfQTFfMTYIAAkBCQEFAXMBAAIgMAwBBnBsYXllcgYBAh0gWP0QIG8QcF9yZWNhbGxfc19BMV8xNiA+PSAxNgwBBnBsYXllctQQCnBfcmVjYWxsX3MBAAwBBnBsYXllctUQEHBfcmVjYWxsX3NfQTFfMTYQAAkBDAEGcGxheWVyBgECHSBY/RAgbxBwX3JlY2FsbF9zX0ExXzE2ID49IDE2DAEGcGxheWVy1BAKcF9yZWNhbGxfcwEADAEGcGxheWVy1RAQcF9yZWNhbGxfc19BMV8xNhAACQEMAQZwbGF5ZXIGAQIdIFj9ECBvEHBfcmVjYWxsX3NfQTFfMTYgPj0gMTYMAQZwbGF5ZXLUEApwX3JlY2FsbF9zAQAMAQZwbGF5ZXLVEBBwX3JlY2FsbF9zX0ExXzE2EAAJAQwBBnBsYXllcgYBAh0gWP0QIG8QcF9yZWNhbGxfc19BMV8xNiA+PSAxNgwBBnBsYXllctQQCnBfcmVjYWxsX3MBAAwBBnBsYXllctUQEHBfcmVjYWxsX3NfQTFfMTYQAAkBBQFzAgACIDAFAXMDAAIgMAwBBnBsYXllcgYBASIgWP0QIG8XYWxfaV9xdWlja3NpbHZlcl9ib3R0bGUgPiAwBQFzAgACIDEJAQwBBnBsYXllcgYBAR4gWP0QIG8TaW5ncmVkX2JvYXJfbGVhdGhlciA+IDAFAXMDAAIgMQkBBQFzBAACIDAFAXMEAAogcwQAIHMCACArBQFzBQAFIHMEAAAFAXMFAAogcwUAIHMDACArBQFzBwACIDAMAQZwbGF5ZXIGAQEbIFj9ECBvD0ExVjVfTDQ1X3JlY2FsbCA9PSAxDAEGcGxheWVy1RAPQTFWNV9MNDVfcmVjYWxsAQAMAQZwbGF5ZXIIAQEbIFj9ECBvD0ExVjVfTDYwX3JlY2FsbCA9PSAxDAEGcGxheWVy1RAPQTFWNV9MNjBfcmVjYWxsAQAJAQYBBQkgcwcAID09IDAGAQEIIHMEACA+IDEMAQZwbGF5ZXLUEA9BMVY1X0w0NV9yZWNhbGwBAAgBAQggcwUAID4gMQwBBnBsYXllctQQD0ExVjVfTDYwX3JlY2FsbAEACQEJARwQF0ExVjVfQUNoZWNrNTBfUmVjYWxsX3NjGxAXQTFWNV9BQ2hlY2s1MV9SZXNDb21fc2MBAQ==
 SCTX
     Begin A1V5_ACheck50_Recall_sc
     
@@ -15791,6 +15967,265 @@ SCTX
     endif
     
     StopScript A1V5_ACheck50_Recall_sc
+    StartScript A1V5_ACheck51_ResCom_sc
+    
+    End
+
+SCPT
+SCHD A1V5_ACheck51_ResCom_sc 17 0 0 5266 84
+SCVR AddPotion;in1;in2;in3;in4;in5;in6;in7;in8;in9;in10;sum15;sum30;sum45;sum60;temp;bad;;
+SCDT BgFVCSBzAQAgPT0gMQYBARQgRwxBMVY1X1BvdGlvbkIgPT0gMQwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX2JfQTFfOAEACAEBFCBHDEExVjVfUG90aW9uQiA9PSAyDAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfYl9BMV84AgAIAQEUIEcMQTFWNV9Qb3Rpb25CID09IDMMAQZwbGF5ZXLUEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9iX0ExXzgDAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gNAwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX2JfQTFfOAQACAEBFCBHDEExVjVfUG90aW9uQiA9PSA1DAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfYl9BMV84BQAIAQEUIEcMQTFWNV9Qb3Rpb25CID09IDYMAQZwbGF5ZXLUEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9iX0ExXzgGAAgBARQgRwxBMVY1X1BvdGlvbkIgPT0gNwwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX2JfQTFfOAcACAEBFCBHDEExVjVfUG90aW9uQiA9PSA4DAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfYl9BMV84CAAJAQYBARQgRwxBMVY1X1BvdGlvbkMgPT0gMQwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX2NfQTFfOAEACAEBFCBHDEExVjVfUG90aW9uQyA9PSAyDAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfY19BMV84AgAIAQEUIEcMQTFWNV9Qb3Rpb25DID09IDMMAQZwbGF5ZXLUEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9jX0ExXzgDAAgBARQgRwxBMVY1X1BvdGlvbkMgPT0gNAwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX2NfQTFfOAQACAEBFCBHDEExVjVfUG90aW9uQyA9PSA1DAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfY19BMV84BQAIAQEUIEcMQTFWNV9Qb3Rpb25DID09IDYMAQZwbGF5ZXLUEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9jX0ExXzgGAAgBARQgRwxBMVY1X1BvdGlvbkMgPT0gNwwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX2NfQTFfOAcACAEBFCBHDEExVjVfUG90aW9uQyA9PSA4DAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfY19BMV84CAAJAQYBARQgRwxBMVY1X1BvdGlvblMgPT0gMQwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX3NfQTFfOAEACAEBFCBHDEExVjVfUG90aW9uUyA9PSAyDAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2Vfc19BMV84AgAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDMMAQZwbGF5ZXLUEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9zX0ExXzgDAAgBARQgRwxBMVY1X1BvdGlvblMgPT0gNAwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX3NfQTFfOAQACAEBFCBHDEExVjVfUG90aW9uUyA9PSA1DAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2Vfc19BMV84BQAIAQEUIEcMQTFWNV9Qb3Rpb25TID09IDYMAQZwbGF5ZXLUEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9zX0ExXzgGAAgBARQgRwxBMVY1X1BvdGlvblMgPT0gNwwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX3NfQTFfOAcACAEBFCBHDEExVjVfUG90aW9uUyA9PSA4DAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2Vfc19BMV84CAAJAQYBARQgRwxBMVY1X1BvdGlvblEgPT0gMQwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX3FfQTFfOAEACAEBFCBHDEExVjVfUG90aW9uUSA9PSAyDAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfcV9BMV84AgAIAQEUIEcMQTFWNV9Qb3Rpb25RID09IDMMAQZwbGF5ZXLUEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9xX0ExXzgDAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gNAwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX3FfQTFfOAQACAEBFCBHDEExVjVfUG90aW9uUSA9PSA1DAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfcV9BMV84BQAIAQEUIEcMQTFWNV9Qb3Rpb25RID09IDYMAQZwbGF5ZXLUEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9xX0ExXzgGAAgBARQgRwxBMVY1X1BvdGlvblEgPT0gNwwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX3FfQTFfOAcACAEBFCBHDEExVjVfUG90aW9uUSA9PSA4DAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfcV9BMV84CAAJAQYBARQgRwxBMVY1X1BvdGlvbkUgPT0gMQwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX2VfQTFfOAEACAEBFCBHDEExVjVfUG90aW9uRSA9PSAyDAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfZV9BMV84AgAIAQEUIEcMQTFWNV9Qb3Rpb25FID09IDMMAQZwbGF5ZXLUEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9lX0ExXzgDAAgBARQgRwxBMVY1X1BvdGlvbkUgPT0gNAwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX2VfQTFfOAQACAEBFCBHDEExVjVfUG90aW9uRSA9PSA1DAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfZV9BMV84BQAIAQEUIEcMQTFWNV9Qb3Rpb25FID09IDYMAQZwbGF5ZXLUEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9lX0ExXzgGAAgBARQgRwxBMVY1X1BvdGlvbkUgPT0gNwwBBnBsYXllctQQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX2VfQTFfOAcACAEBFCBHDEExVjVfUG90aW9uRSA9PSA4DAEGcGxheWVy1BAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfZV9BMV84CAAJAQkBBQFzAQACIDAMAQZwbGF5ZXIGAQInIFj9ECBvG3BfZGlzZWFzZV9yZXNpc3RhbmNlX2JfQTFfOCA+PSA4DAEGcGxheWVy1BAWcF9kaXNlYXNlX3Jlc2lzdGFuY2VfYgEADAEGcGxheWVy1RAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfYl9BMV84CAAJAQwBBnBsYXllcgYBAicgWP0QIG8bcF9kaXNlYXNlX3Jlc2lzdGFuY2VfY19BMV84ID49IDgMAQZwbGF5ZXLUEBZwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9jAQAMAQZwbGF5ZXLVEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9jX0ExXzgIAAkBDAEGcGxheWVyBgECJyBY/RAgbxtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9zX0ExXzggPj0gOAwBBnBsYXllctQQFnBfZGlzZWFzZV9yZXNpc3RhbmNlX3MBAAwBBnBsYXllctUQG3BfZGlzZWFzZV9yZXNpc3RhbmNlX3NfQTFfOAgACQEMAQZwbGF5ZXIGAQInIFj9ECBvG3BfZGlzZWFzZV9yZXNpc3RhbmNlX3FfQTFfOCA+PSA4DAEGcGxheWVy1BAWcF9kaXNlYXNlX3Jlc2lzdGFuY2VfcQEADAEGcGxheWVy1RAbcF9kaXNlYXNlX3Jlc2lzdGFuY2VfcV9BMV84CAAJAQwBBnBsYXllcgYBAicgWP0QIG8bcF9kaXNlYXNlX3Jlc2lzdGFuY2VfZV9BMV84ID49IDgMAQZwbGF5ZXLUEBZwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9lAQAMAQZwbGF5ZXLVEBtwX2Rpc2Vhc2VfcmVzaXN0YW5jZV9lX0ExXzgIAAkBBQFzAgACIDAFAXMDAAIgMAUBcwQAAiAwBQFzBQACIDAFAXMGAAIgMAUBcwcAAiAwBQFzCAACIDAFAXMJAAIgMAUBcwoAAiAwBQFzCwACIDAMAQZwbGF5ZXIGAQEbIFj9ECBvEGFsX2lfb2dyaW1fdGVldGggPiAwBQFzAgACIDEJAQwBBnBsYXllcgYBAR4gWP0QIG8TYWxfaV9zaGFsa19tYW5kaWJsZSA+IDAFAXMDAAIgMQkBDAEGcGxheWVyBgEBHCBY/RAgbxFpbmdyZWRfYXNoX3lhbV8wMSA+IDAFAXMEAAIgMQkBDAEGcGxheWVyBgEBGyBY/RAgbxBpbmdyZWRfYmVhcl9wZWx0ID4gMAUBcwUAAiAxCQEMAQZwbGF5ZXIGAQEhIFj9ECBvFmluZ3JlZF9rYWdvdXRpX2hpZGVfMDEgPiAwBQFzBgACIDEJAQwBBnBsYXllcgYBARogWP0QIG8PaW5ncmVkX3BlYXJsXzAxID4gMAUBcwcAAiAxCQEMAQZwbGF5ZXIGAQEaIFj9ECBvD2luZ3JlZF9yZXNpbl8wMSA+IDAFAXMIAAIgMQkBDAEGcGxheWVyBgEBJiBY/RAgbxtpbmdyZWRfc25vd2JlYXJfcGVsdF91bmlxdWUgPiAwBQFzCQACIDEJAQwBBnBsYXllcgYBASYgWP0QIG8baW5ncmVkX3Nub3d3b2xmX3BlbHRfdW5pcXVlID4gMAUBcwoAAiAxCQEMAQZwbGF5ZXIGAQEbIFj9ECBvEGluZ3JlZF93b2xmX3BlbHQgPiAwBQFzCwACIDEJAQUBcwwAAiAwBQFzDAAKIHMMACBzAgAgKwUBcw0ABSBzDAAABQFzDQAKIHMNACBzAwAgKwUBcw4ABSBzDQAABQFzDgAKIHMOACBzBAAgKwUBcw4ACiBzDgAgcwUAICsFAXMOAAogcw4AIHMGACArBQFzDgAKIHMOACBzCQAgKwUBcw4ACiBzDgAgcwoAICsFAXMOAAogcw4AIHMLACArBQFzDwAFIHMOAAAFAXMPAAogcw8AIHMHACArBQFzDwAKIHMPACBzCAAgKwUBcxEAAiAwBQFzEAAKIHMFACBzBgAgKwYBAQggcxAAID4gMQUBcxEAAiAxCQEFAXMQAAogcwUAIHMJACArBgEBCCBzEAAgPiAxBQFzEQACIDEJAQUBcxAACiBzBQAgcwoAICsGAQEIIHMQACA+IDEFAXMRAAIgMQkBBQFzEAAKIHMFACBzCwAgKwYBAQggcxAAID4gMQUBcxEAAiAxCQEFAXMQAAogcwYAIHMJACArBgEBCCBzEAAgPiAxBQFzEQACIDEJAQUBcxAACiBzBgAgcwoAICsGAQEIIHMQACA+IDEFAXMRAAIgMQkBBQFzEAAKIHMGACBzCwAgKwYBAQggcxAAID4gMQUBcxEAAiAxCQEFAXMQAAogcwkAIHMKACArBgEBCCBzEAAgPiAxBQFzEQACIDEJAQUBcxAACiBzCQAgcwsAICsGAQEIIHMQACA+IDEFAXMRAAIgMQkBBQFzEAAKIHMKACBzCwAgKwYBAQggcxAAID4gMQUBcxEAAiAxCQEMAQZwbGF5ZXIGAQEnIFj9ECBvG0ExVjVfTDE1X2Rpc2Vhc2VfcmVzaXN0YW5jZSA9PSAxDAEGcGxheWVy1RAbQTFWNV9MMTVfZGlzZWFzZV9yZXNpc3RhbmNlAQAMAQZwbGF5ZXIIAQEnIFj9ECBvG0ExVjVfTDMwX2Rpc2Vhc2VfcmVzaXN0YW5jZSA9PSAxDAEGcGxheWVy1RAbQTFWNV9MMzBfZGlzZWFzZV9yZXNpc3RhbmNlAQAMAQZwbGF5ZXIIAQEnIFj9ECBvG0ExVjVfTDQ1X2Rpc2Vhc2VfcmVzaXN0YW5jZSA9PSAxDAEGcGxheWVy1RAbQTFWNV9MNDVfZGlzZWFzZV9yZXNpc3RhbmNlAQAMAQZwbGF5ZXIIAQEnIFj9ECBvG0ExVjVfTDYwX2Rpc2Vhc2VfcmVzaXN0YW5jZSA9PSAxDAEGcGxheWVy1RAbQTFWNV9MNjBfZGlzZWFzZV9yZXNpc3RhbmNlAQAJAQYBCQkgcxEAID09IDAGAQEIIHMMACA+IDEMAQZwbGF5ZXLUEBtBMVY1X0wxNV9kaXNlYXNlX3Jlc2lzdGFuY2UBAAgBAQggcw0AID4gMQwBBnBsYXllctQQG0ExVjVfTDMwX2Rpc2Vhc2VfcmVzaXN0YW5jZQEACAEBCCBzDgAgPiAxDAEGcGxheWVy1BAbQTFWNV9MNDVfZGlzZWFzZV9yZXNpc3RhbmNlAQAIAQEIIHMPACA+IDEMAQZwbGF5ZXLUEBtBMVY1X0w2MF9kaXNlYXNlX3Jlc2lzdGFuY2UBAAkBCQEcEBdBMVY1X0FDaGVjazUxX1Jlc0NvbV9zYwYBARcgRw9BMVY1X0FsY2hlbXlSZXMgPT0gMAAQBgDD7vLu4u4AAAgBARcgRw9BMVY1X0FsY2hlbXlSZXMgPT0gMQIQDnBvdGlvbiBzdWNjZXNzCAEBFyBHD0ExVjVfQWxjaGVteVJlcyA9PSAyAhALcG90aW9uIGZhaWwJAQUBRw9BMVY1X0FsY2hlbXlSZXMCIDABAQ==
+SCTX
+    Begin A1V5_ACheck51_ResCom_sc
+    
+    short AddPotion
+    short in1
+    short in2
+    short in3
+    short in4
+    short in5
+    short in6
+    short in7
+    short in8
+    short in9
+    short in10
+    short sum15
+    short sum30
+    short sum45
+    short sum60
+    short temp
+    short bad
+    
+    if ( AddPotion == 1 )
+    	if ( A1V5_PotionB == 1 )
+    		player->AddItem p_disease_resistance_b_A1_8, 1
+    	elseif ( A1V5_PotionB == 2 )
+    		player->AddItem p_disease_resistance_b_A1_8, 2
+    	elseif ( A1V5_PotionB == 3 )
+    		player->AddItem p_disease_resistance_b_A1_8, 3
+    	elseif ( A1V5_PotionB == 4 )
+    		player->AddItem p_disease_resistance_b_A1_8, 4
+    	elseif ( A1V5_PotionB == 5 )
+    		player->AddItem p_disease_resistance_b_A1_8, 5
+    	elseif ( A1V5_PotionB == 6 )
+    		player->AddItem p_disease_resistance_b_A1_8, 6
+    	elseif ( A1V5_PotionB == 7 )
+    		player->AddItem p_disease_resistance_b_A1_8, 7
+    	elseif ( A1V5_PotionB == 8 )
+    		player->AddItem p_disease_resistance_b_A1_8, 8
+    	endif
+    	if ( A1V5_PotionC == 1 )
+    		player->AddItem p_disease_resistance_c_A1_8, 1
+    	elseif ( A1V5_PotionC == 2 )
+    		player->AddItem p_disease_resistance_c_A1_8, 2
+    	elseif ( A1V5_PotionC == 3 )
+    		player->AddItem p_disease_resistance_c_A1_8, 3
+    	elseif ( A1V5_PotionC == 4 )
+    		player->AddItem p_disease_resistance_c_A1_8, 4
+    	elseif ( A1V5_PotionC == 5 )
+    		player->AddItem p_disease_resistance_c_A1_8, 5
+    	elseif ( A1V5_PotionC == 6 )
+    		player->AddItem p_disease_resistance_c_A1_8, 6
+    	elseif ( A1V5_PotionC == 7 )
+    		player->AddItem p_disease_resistance_c_A1_8, 7
+    	elseif ( A1V5_PotionC == 8 )
+    		player->AddItem p_disease_resistance_c_A1_8, 8
+    	endif
+    	if ( A1V5_PotionS == 1 )
+    		player->AddItem p_disease_resistance_s_A1_8, 1
+    	elseif ( A1V5_PotionS == 2 )
+    		player->AddItem p_disease_resistance_s_A1_8, 2
+    	elseif ( A1V5_PotionS == 3 )
+    		player->AddItem p_disease_resistance_s_A1_8, 3
+    	elseif ( A1V5_PotionS == 4 )
+    		player->AddItem p_disease_resistance_s_A1_8, 4
+    	elseif ( A1V5_PotionS == 5 )
+    		player->AddItem p_disease_resistance_s_A1_8, 5
+    	elseif ( A1V5_PotionS == 6 )
+    		player->AddItem p_disease_resistance_s_A1_8, 6
+    	elseif ( A1V5_PotionS == 7 )
+    		player->AddItem p_disease_resistance_s_A1_8, 7
+    	elseif ( A1V5_PotionS == 8 )
+    		player->AddItem p_disease_resistance_s_A1_8, 8
+    	endif
+    	if ( A1V5_PotionQ == 1 )
+    		player->AddItem p_disease_resistance_q_A1_8, 1
+    	elseif ( A1V5_PotionQ == 2 )
+    		player->AddItem p_disease_resistance_q_A1_8, 2
+    	elseif ( A1V5_PotionQ == 3 )
+    		player->AddItem p_disease_resistance_q_A1_8, 3
+    	elseif ( A1V5_PotionQ == 4 )
+    		player->AddItem p_disease_resistance_q_A1_8, 4
+    	elseif ( A1V5_PotionQ == 5 )
+    		player->AddItem p_disease_resistance_q_A1_8, 5
+    	elseif ( A1V5_PotionQ == 6 )
+    		player->AddItem p_disease_resistance_q_A1_8, 6
+    	elseif ( A1V5_PotionQ == 7 )
+    		player->AddItem p_disease_resistance_q_A1_8, 7
+    	elseif ( A1V5_PotionQ == 8 )
+    		player->AddItem p_disease_resistance_q_A1_8, 8
+    	endif
+    	if ( A1V5_PotionE == 1 )
+    		player->AddItem p_disease_resistance_e_A1_8, 1
+    	elseif ( A1V5_PotionE == 2 )
+    		player->AddItem p_disease_resistance_e_A1_8, 2
+    	elseif ( A1V5_PotionE == 3 )
+    		player->AddItem p_disease_resistance_e_A1_8, 3
+    	elseif ( A1V5_PotionE == 4 )
+    		player->AddItem p_disease_resistance_e_A1_8, 4
+    	elseif ( A1V5_PotionE == 5 )
+    		player->AddItem p_disease_resistance_e_A1_8, 5
+    	elseif ( A1V5_PotionE == 6 )
+    		player->AddItem p_disease_resistance_e_A1_8, 6
+    	elseif ( A1V5_PotionE == 7 )
+    		player->AddItem p_disease_resistance_e_A1_8, 7
+    	elseif ( A1V5_PotionE == 8 )
+    		player->AddItem p_disease_resistance_e_A1_8, 8
+    	endif
+    endif
+    
+    set AddPotion to 0
+    
+    if ( player->GetItemCount p_disease_resistance_b_A1_8 >= 8 )
+    	player->AddItem p_disease_resistance_b, 1
+    	player->RemoveItem p_disease_resistance_b_A1_8, 8
+    endif
+    if ( player->GetItemCount p_disease_resistance_c_A1_8 >= 8 )
+    	player->AddItem p_disease_resistance_c, 1
+    	player->RemoveItem p_disease_resistance_c_A1_8, 8
+    endif
+    if ( player->GetItemCount p_disease_resistance_s_A1_8 >= 8 )
+    	player->AddItem p_disease_resistance_s, 1
+    	player->RemoveItem p_disease_resistance_s_A1_8, 8
+    endif
+    if ( player->GetItemCount p_disease_resistance_q_A1_8 >= 8 )
+    	player->AddItem p_disease_resistance_q, 1
+    	player->RemoveItem p_disease_resistance_q_A1_8, 8
+    endif
+    if ( player->GetItemCount p_disease_resistance_e_A1_8 >= 8 )
+    	player->AddItem p_disease_resistance_e, 1
+    	player->RemoveItem p_disease_resistance_e_A1_8, 8
+    endif
+    
+    set in1 to 0
+    set in2 to 0
+    set in3 to 0
+    set in4 to 0
+    set in5 to 0
+    set in6 to 0
+    set in7 to 0
+    set in8 to 0
+    set in9 to 0
+    set in10 to 0
+    
+    if ( player->GetItemCount "al_i_ogrim_teeth" > 0 )
+    	set in1 to 1
+    endif
+    if ( player->GetItemCount "al_i_shalk_mandible" > 0 )
+    	set in2 to 1
+    endif
+    if ( player->GetItemCount "ingred_ash_yam_01" > 0 )
+    	set in3 to 1
+    endif
+    if ( player->GetItemCount "ingred_bear_pelt" > 0 )
+    	set in4 to 1
+    endif
+    if ( player->GetItemCount "ingred_kagouti_hide_01" > 0 )
+    	set in5 to 1
+    endif
+    if ( player->GetItemCount "ingred_pearl_01" > 0 )
+    	set in6 to 1
+    endif
+    if ( player->GetItemCount "ingred_resin_01" > 0 )
+    	set in7 to 1
+    endif
+    if ( player->GetItemCount "ingred_snowbear_pelt_unique" > 0 )
+    	set in8 to 1
+    endif
+    if ( player->GetItemCount "ingred_snowwolf_pelt_unique" > 0 )
+    	set in9 to 1
+    endif
+    if ( player->GetItemCount "ingred_wolf_pelt" > 0 )
+    	set in10 to 1
+    endif
+    
+    set sum15 to 0
+    set sum15 to ( sum15 + in1 )
+    set sum30 to sum15
+    set sum30 to ( sum30 + in2 )
+    set sum45 to sum30
+    set sum45 to ( sum45 + in3 )
+    set sum45 to ( sum45 + in4 )
+    set sum45 to ( sum45 + in5 )
+    set sum45 to ( sum45 + in8 )
+    set sum45 to ( sum45 + in9 )
+    set sum45 to ( sum45 + in10 )
+    set sum60 to sum45
+    set sum60 to ( sum60 + in6 )
+    set sum60 to ( sum60 + in7 )
+    set bad to 0
+    set temp to ( in4 + in5 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in4 + in8 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in4 + in9 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in4 + in10 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in5 + in8 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in5 + in9 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in5 + in10 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in8 + in9 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in8 + in10 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    set temp to ( in9 + in10 )
+    if ( temp > 1 )
+    	set bad to 1
+    endif
+    if ( player->GetItemCount "A1V5_L15_disease_resistance" == 1 )
+    	player->RemoveItem "A1V5_L15_disease_resistance", 1
+    elseif ( player->GetItemCount "A1V5_L30_disease_resistance" == 1 )
+    	player->RemoveItem "A1V5_L30_disease_resistance", 1
+    elseif ( player->GetItemCount "A1V5_L45_disease_resistance" == 1 )
+    	player->RemoveItem "A1V5_L45_disease_resistance", 1
+    elseif ( player->GetItemCount "A1V5_L60_disease_resistance" == 1 )
+    	player->RemoveItem "A1V5_L60_disease_resistance", 1
+    endif
+    if ( bad == 0 )
+    	if ( sum15 > 1 )
+    		player->AddItem "A1V5_L15_disease_resistance", 1
+    	elseif ( sum30 > 1 )
+    		player->AddItem "A1V5_L30_disease_resistance", 1
+    	elseif ( sum45 > 1 )
+    		player->AddItem "A1V5_L45_disease_resistance", 1
+    	elseif ( sum60 > 1 )
+    		player->AddItem "A1V5_L60_disease_resistance", 1
+    	endif
+    endif
+    
+    StopScript A1V5_ACheck51_ResCom_sc
     if ( A1V5_AlchemyRes == 0 )
     	MessageBox "Готово"
     elseif ( A1V5_AlchemyRes == 1 )
@@ -17578,8 +18013,8 @@ SCTX
     End
 
 SCPT
-SCHD A1V5_ADel50_Recall_sc 0 0 0 182 0
-SCDT DAEGcGxheWVyBgEBGyBY/RAgbw9BMVY1X0w0NV9yZWNhbGwgPT0gMQwBBnBsYXllctUQD0ExVjVfTDQ1X3JlY2FsbAEADAEGcGxheWVyCAEBGyBY/RAgbw9BMVY1X0w2MF9yZWNhbGwgPT0gMQwBBnBsYXllctUQD0ExVjVfTDYwX3JlY2FsbAEACQEcEBVBMVY1X0FEZWw1MF9SZWNhbGxfc2MbEA1BMVY1X0FEZWxQbHVzAQE=
+SCHD A1V5_ADel50_Recall_sc 0 0 0 190 0
+SCDT DAEGcGxheWVyBgEBGyBY/RAgbw9BMVY1X0w0NV9yZWNhbGwgPT0gMQwBBnBsYXllctUQD0ExVjVfTDQ1X3JlY2FsbAEADAEGcGxheWVyCAEBGyBY/RAgbw9BMVY1X0w2MF9yZWNhbGwgPT0gMQwBBnBsYXllctUQD0ExVjVfTDYwX3JlY2FsbAEACQEcEBVBMVY1X0FEZWw1MF9SZWNhbGxfc2MbEBVBMVY1X0FEZWw1MV9SZXNDb21fc2MBAQ==
 SCTX
     Begin A1V5_ADel50_Recall_sc
     
@@ -17590,6 +18025,27 @@ SCTX
     endif
     
     StopScript A1V5_ADel50_Recall_sc
+    StartScript A1V5_ADel51_ResCom_sc
+    
+    End
+
+SCPT
+SCHD A1V5_ADel51_ResCom_sc 0 0 0 416 0
+SCDT DAEGcGxheWVyBgEBJyBY/RAgbxtBMVY1X0wxNV9kaXNlYXNlX3Jlc2lzdGFuY2UgPT0gMQwBBnBsYXllctUQG0ExVjVfTDE1X2Rpc2Vhc2VfcmVzaXN0YW5jZQEADAEGcGxheWVyCAEBJyBY/RAgbxtBMVY1X0wzMF9kaXNlYXNlX3Jlc2lzdGFuY2UgPT0gMQwBBnBsYXllctUQG0ExVjVfTDMwX2Rpc2Vhc2VfcmVzaXN0YW5jZQEADAEGcGxheWVyCAEBJyBY/RAgbxtBMVY1X0w0NV9kaXNlYXNlX3Jlc2lzdGFuY2UgPT0gMQwBBnBsYXllctUQG0ExVjVfTDQ1X2Rpc2Vhc2VfcmVzaXN0YW5jZQEADAEGcGxheWVyCAEBJyBY/RAgbxtBMVY1X0w2MF9kaXNlYXNlX3Jlc2lzdGFuY2UgPT0gMQwBBnBsYXllctUQG0ExVjVfTDYwX2Rpc2Vhc2VfcmVzaXN0YW5jZQEACQEcEBVBMVY1X0FEZWw1MV9SZXNDb21fc2MbEA1BMVY1X0FEZWxQbHVzAQE=
+SCTX
+    Begin A1V5_ADel51_ResCom_sc
+    
+    if ( player->GetItemCount "A1V5_L15_disease_resistance" == 1 )
+    	player->RemoveItem "A1V5_L15_disease_resistance", 1
+    elseif ( player->GetItemCount "A1V5_L30_disease_resistance" == 1 )
+    	player->RemoveItem "A1V5_L30_disease_resistance", 1
+    elseif ( player->GetItemCount "A1V5_L45_disease_resistance" == 1 )
+    	player->RemoveItem "A1V5_L45_disease_resistance", 1
+    elseif ( player->GetItemCount "A1V5_L60_disease_resistance" == 1 )
+    	player->RemoveItem "A1V5_L60_disease_resistance", 1
+    endif
+    
+    StopScript A1V5_ADel51_ResCom_sc
     StartScript A1V5_ADelPlus
     
     End
@@ -21063,6 +21519,7 @@ IRDT
     60 -1 -1 -1
     -1 -1 -1 -1
     -1 -1 -1 -1
+SCRI A1V5_AAdd49_Mark_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
@@ -21074,6 +21531,7 @@ IRDT
     -1 -1 60 -1
     -1 -1 -1 -1
     -1 -1 -1 -1
+SCRI A1V5_AAdd49_Mark_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
@@ -21085,6 +21543,7 @@ IRDT
     -1 -1 61 -1
     -1 -1 -1 -1
     -1 -1 -1 -1
+SCRI A1V5_AAdd50_Recall_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
@@ -21096,6 +21555,7 @@ IRDT
     -1 -1 -1 61
     -1 -1 -1 -1
     -1 -1 -1 -1
+SCRI A1V5_AAdd50_Recall_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
@@ -22812,6 +23272,54 @@ IRDT
     -1 -1 -1 -1
     -1 -1 -1 -1
 SCRI A1V5_AAdd48_SwitfSwim_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V5_L15_disease_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    94 -1 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V5_AAdd51_ResCom_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V5_L30_disease_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 94 -1 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V5_AAdd51_ResCom_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V5_L45_disease_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 94 -1
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V5_AAdd51_ResCom_sc
+ITEX m\\misc_com_bottle_05.dds
+
+INGR
+NAME A1V5_L60_disease_resistance
+MODL m\\misc_com_bottle_05.nif
+FNAM _Создать
+IRDT
+    0.0 0
+    -1 -1 -1 94
+    -1 -1 -1 -1
+    -1 -1 -1 -1
+SCRI A1V5_AAdd51_ResCom_sc
 ITEX m\\misc_com_bottle_05.dds
 
 APPA

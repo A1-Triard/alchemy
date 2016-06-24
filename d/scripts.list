@@ -46,6 +46,7 @@ ACheck45_RestoreStr_sc
 ACheck46_RestoreWill_sc
 ACheck47_SpellAbs_sc
 ACheck48_SwitfSwim_sc
+ACheck49_ResCom_sc
 AAdd1_RestoreHealth_sc
 AAdd2_RestoreFatig_sc
 AAdd3_RestoreMagic_sc
@@ -94,6 +95,7 @@ AAdd45_RestoreStr_sc
 AAdd46_RestoreWill_sc
 AAdd47_SpellAbs_sc
 AAdd48_SwitfSwim_sc
+AAdd49_ResCom_sc
 ADel1_RestoreHealth_sc
 ADel2_RestoreFatig_sc
 ADel3_RestoreMagic_sc
@@ -142,3 +144,4 @@ ADel45_RestoreStr_sc
 ADel46_RestoreWill_sc
 ADel47_SpellAbs_sc
 ADel48_SwitfSwim_sc
+ADel49_ResCom_sc
