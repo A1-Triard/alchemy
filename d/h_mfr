@@ -3713,18 +3713,6 @@ SCRI A1V5_AAdd43_RestoreLuck_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
-NAME A1V5_L15_cure_common
-MODL m\\misc_com_bottle_05.nif
-FNAM _Создать
-IRDT
-    0.0 0
-    69 -1 -1 -1
-    -1 -1 -1 -1
-    -1 -1 -1 -1
-SCRI A1V5_AAdd9_Cure_sc
-ITEX m\\misc_com_bottle_05.dds
-
-INGR
 NAME A1V5_L15_cure_paralyzation
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать

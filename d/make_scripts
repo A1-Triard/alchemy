@@ -33,6 +33,36 @@ gen_ingrs() {
             print
         }
     }' $ingrs > $ingrs60
+    ingrs15_count=$(wc -l < $ingrs15)
+    ingrs30_count=$(wc -l < $ingrs30)
+    ingrs45_count=$(wc -l < $ingrs45)
+    ingrs60_count=$(wc -l < $ingrs60)
+    kind=$(awk -v FS=':' '{print $3}' "$sd")
+    if [ $kind = 2 ]; then
+        LL="$(awk -v FS=':' '{print $7}' "$sd")"
+    else
+        LL="$(awk -v FS=':' '{print $15}' "$sd")"
+    fi    
+    if [ $ingrs15_count = 0 ]; then
+        if grep "A1V5_L15_${LL}" h; then
+            exit 1
+        fi
+    fi
+    if [ $ingrs30_count = 0 ]; then
+        if grep "A1V5_L30_${LL}" h; then
+            exit 1
+        fi
+    fi
+    if [ $ingrs45_count = 0 ]; then
+        if grep "A1V5_L45_${LL}" h; then
+            exit 1
+        fi
+    fi
+    if [ $ingrs60_count = 0 ]; then
+        if grep "A1V5_L60_${LL}" h; then
+            exit 1
+        fi
+    fi
 }
 
 gen_add() {
