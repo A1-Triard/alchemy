@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=0.4.2.2
+VERSION=0.4.2.3
 
 basedir="$(dirname "$0")"
 cd "$basedir"
@@ -16,7 +16,7 @@ touch -t 201408021853 A1_Alchemy_DaeCursed.esp
 ./espa -v A1_Alchemy_V5_Apparatus || exit 1
 touch -t 201408101853 A1_Alchemy_V5_Apparatus.esp
 ./espa -v A1_Alchemy_V5_Apparatus_EVA || exit 1
-touch -t 209007300000 A1_Alchemy_V5_Apparatus_EVA.esp
+touch -t 209709010000 A1_Alchemy_V5_Apparatus_EVA.esp
 iconv -f UTF-8 -t CP1251 README | perl -p -e 's/\n/\r\n/' > Readme.txt
 iconv -f UTF-8 -t CP1251 VERSIONS | perl -p -e 's/\n/\r\n/' > Versions.txt
 rm -rf A1_Alchemy_${VERSION}
