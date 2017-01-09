@@ -1,13 +1,13 @@
 #!/bin/sh
 
-VERSION=0.4.2.1
+VERSION=0.4.2.2
 
 basedir="$(dirname "$0")"
 cd "$basedir"
 cp tes3cs/A.esp A1_Alchemy_V5_Apparatus.esp || exit 1
 ./source A1_Alchemy_V5_Apparatus
-cp tes3cs/B.esp A1_Alchemy_V5_Apparatus_MFR.esp || exit 1
-./source A1_Alchemy_V5_Apparatus_MFR
+cp tes3cs/B.esp A1_Alchemy_V5_Apparatus_EVA.esp || exit 1
+./source A1_Alchemy_V5_Apparatus_EVA
 
 ./espa -v A1_Alchemy_V4_Containers || exit 1
 touch -t 201408151853 A1_Alchemy_V4_Containers.esp
@@ -15,12 +15,12 @@ touch -t 201408151853 A1_Alchemy_V4_Containers.esp
 touch -t 201408021853 A1_Alchemy_DaeCursed.esp
 ./espa -v A1_Alchemy_V5_Apparatus || exit 1
 touch -t 201408101853 A1_Alchemy_V5_Apparatus.esp
-./espa -v A1_Alchemy_V5_Apparatus_MFR || exit 1
-touch -t 209007300000 A1_Alchemy_V5_Apparatus_MFR.esp
+./espa -v A1_Alchemy_V5_Apparatus_EVA || exit 1
+touch -t 209007300000 A1_Alchemy_V5_Apparatus_EVA.esp
 iconv -f UTF-8 -t CP1251 README | perl -p -e 's/\n/\r\n/' > Readme.txt
 iconv -f UTF-8 -t CP1251 VERSIONS | perl -p -e 's/\n/\r\n/' > Versions.txt
 rm -rf A1_Alchemy_${VERSION}
 rm -f A1_Alchemy_${VERSION}.zip
 mkdir A1_Alchemy_${VERSION}
-cp -a Screenshots Readme.txt Versions.txt A1_Alchemy_DaeCursed.esp A1_Alchemy_Potions.esp A1_Alchemy_V4_Containers.esp A1_Alchemy_V5_Apparatus.esp A1_Alchemy_V5_Apparatus_MFR.esp A1_Alchemy_${VERSION}
+cp -a Screenshots Readme.txt Versions.txt A1_Alchemy_DaeCursed.esp A1_Alchemy_Potions.esp A1_Alchemy_V4_Containers.esp A1_Alchemy_V5_Apparatus.esp A1_Alchemy_V5_Apparatus_EVA.esp A1_Alchemy_${VERSION}
 zip -v -X -9 -r A1_Alchemy_${VERSION}.zip A1_Alchemy_${VERSION} || exit 1
