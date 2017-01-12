@@ -9,7 +9,7 @@ d/build || exit 1
 rm -rf tes3cs
 mkdir tes3cs
 touch -t 201408101853 A.sctx.esp
-touch -t 209007300000 B.sctx.esp
+touch -t 209709010000 B.sctx.esp
 cp -a A1_Alchemy_Potions.esp tes3cs
 mv A.sctx.esp tes3cs
 mv A.sctx.au3 tes3cs

@@ -32,4 +32,7 @@ V3
 A1_Alchemy_V5_Apparatus_MFR.esp переименован в A1_Alchemy_V5_Apparatus_EVA.esp, и соответственно исравлен Readme.txt.
 
 0.4.2.3
-Исправлена дата A1_Alchemy_V5_Apparatus_EVA.esp.
+Исправлена дата A1_Alchemy_V5_Apparatus_EVA.esp. _Сломанная версия (утерян файл A1_Alchemy_Potions.esp)._
+
+0.4.2.4
+Исправлена опечатка в readme и отсутствие A1_Alchemy_Potions.esp.

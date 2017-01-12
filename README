@@ -1,17 +1,17 @@
-A1 Professional Alchemist v. 0.4.2.2
+A1 Professional Alchemist v. 0.4.2.4
 
 
 
 УСТАНОВКА
 =========
 
-1. Скопировать файлы
+1. Скопировать содержимое папки Data Files со всем содержимым (список файлов приведён ниже) в подпапку Data Files директории, куда установлен Morrowind (при необходимости, с заменой имеющихся файлов от более старой версии). Список файлов:
+
 A1_Alchemy_DaeCursed.esp
 A1_Alchemy_Potions.esp
 A1_Alchemy_V5_Apparatus.esp
 A1_Alchemy_V5_Apparatus_EVA.esp
 A1_Alchemy_V4_Containers.esp
-в подпапку Data Files в директории, куда установлен Morrowind FullRest.
 
 2. Подключить скопированные файлы. Из двух файлов A1_Alchemy_V5_Apparatus.esp и A1_Alchemy_V5_Apparatus_EVA.esp следует подключать только один, в зависимости от того, используется ли плагин EVA.esp.
 
