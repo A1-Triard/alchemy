@@ -10,6 +10,7 @@ DESCRIPTION
 Morrowind.esm 79764287
 Tribunal.esm 6616539
 Bloodmoon.esm 11799703
+Trib_BM_patch_1C.esm 23382
 
 GLOB
 NAME Gals__CharDev_Present
@@ -19614,7 +19615,7 @@ MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
 IRDT
     0.0 0
-    -1 17 -1 -1
+    -1 79 -1 -1
     -1 0 -1 -1
     -1 5 -1 -1
 SCRI A1V5_AAdd24_FortEndur_sc
