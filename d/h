@@ -2345,12 +2345,18 @@ SCTX
     End
 
 SCPT
-SCHD A1V6_StartAlchemy 0 0 0 56 0
-SCDT DAEGcGxheWVy1BAUQTFWNl9BcHBhcmF0dXNJdGVtXzEBABwQEUExVjZfU3RhcnRBbGNoZW15AQE=
+SCHD A1V6_StartAlchemy 1 0 0 79 7
+SCVR doOnce;;
+SCDT BgECCSBzAQAgPT0gMAUBcwEAAiAxDAEGcGxheWVy1BAUQTFWNl9BcHBhcmF0dXNJdGVtXzEBAAkBHBARQTFWNl9TdGFydEFsY2hlbXkBAQ==
 SCTX
     Begin A1V6_StartAlchemy
     
-    player->AddItem A1V6_ApparatusItem_1, 1
+    short doOnce
+    
+    if ( doOnce == 0 )
+    	set doOnce to 1
+    	player->AddItem A1V6_ApparatusItem_1, 1
+    endif
     
     StopScript A1V6_StartAlchemy
     
