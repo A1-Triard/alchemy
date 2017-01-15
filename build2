@@ -15,7 +15,7 @@ touch -t 201408151853 A1_Alchemy_V6_Containers.esp
 touch -t 201408021853 A1_Alchemy_DaeCursed.esp
 ./espa -v A1_Alchemy_V6_Apparatus || exit 1
 touch -t 201408101853 A1_Alchemy_V6_Apparatus.esp
-./espa -v A1_Alchemy_V5_Apparatus_EVA || exit 1
+./espa -v A1_Alchemy_V6_Apparatus_EVA || exit 1
 touch -t 209709010000 A1_Alchemy_V6_Apparatus_EVA.esp
 iconv -f UTF-8 -t CP1251 README | perl -p -e 's/\n/\r\n/' > Readme.txt
 iconv -f UTF-8 -t CP1251 VERSIONS | perl -p -e 's/\n/\r\n/' > Versions.txt
