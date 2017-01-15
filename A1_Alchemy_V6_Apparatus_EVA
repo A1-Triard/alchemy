@@ -20347,12 +20347,14 @@ SCTX
     End
 
 SCPT
-SCHD A1V6_StartAlchemy 0 0 0 36 0
-SCDT DAEGcGxheWVy1BAUQTFWNl9BcHBhcmF0dXNJdGVtXzEBAAEB
+SCHD A1V6_StartAlchemy 0 0 0 56 0
+SCDT DAEGcGxheWVy1BAUQTFWNl9BcHBhcmF0dXNJdGVtXzEBABwQEUExVjZfU3RhcnRBbGNoZW15AQE=
 SCTX
     Begin A1V6_StartAlchemy
     
     player->AddItem A1V6_ApparatusItem_1, 1
+    
+    StopScript A1V6_StartAlchemy
     
     End
     
