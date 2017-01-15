@@ -4,6 +4,7 @@ TYPE ESP
 AUTHOR A1
 DESCRIPTION
     Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах).
+    Версия для использования с EVA.esp
 Morrowind.esm 79764287
 Tribunal.esm 6616539
 Bloodmoon.esm 11799703
