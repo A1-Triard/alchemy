@@ -1,12 +1,13 @@
-3SET
-VERSION 1067869798
-TYPE ESP
-AUTHOR A1
-DESCRIPTION
+TES3
+HEDR ESP 1067869798
+    A1
     Изменяет скрипт на драгоценностях в даэдрических святилищах, чтобы вместо заскриптованных версий ингредиентов в инвентарь игрока попадали обычные. Вспомогательный плагин для A1_Alchemy_V6_Apparatus.esp
-Morrowind.esm 79764287
-Tribunal.esm 6616539
-Bloodmoon.esm 11799703
+MAST Morrowind.esm
+DATA 79764287
+MAST Tribunal.esm
+DATA 6616539
+MAST Bloodmoon.esm
+DATA 11799703
 
 SCPT
 SCHD A1_DaedrSumm_diamond 0 0 0 73 0
