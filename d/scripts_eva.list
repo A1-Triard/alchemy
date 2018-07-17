@@ -40,8 +40,10 @@ A1V6_AAdd45_RestoreStr_sc
 A1V6_AAdd46_RestoreWill_sc
 A1V6_AAdd47_SpellAbs_sc
 A1V6_AAdd48_SwitfSwim_sc
-A1V6_AAdd49_ResCom_sc
+A1V6_AAdd49_Mark_sc
 A1V6_AAdd4_WaterWalk_sc
+A1V6_AAdd50_Recall_sc
+A1V6_AAdd51_ResCom_sc
 A1V6_AAdd5_WaterBrf_sc
 A1V6_AAdd6_Levitate_sc
 A1V6_AAdd7_Tele_sc
@@ -89,8 +91,10 @@ A1V6_ACheck45_RestoreStr_sc
 A1V6_ACheck46_RestoreWill_sc
 A1V6_ACheck47_SpellAbs_sc
 A1V6_ACheck48_SwitfSwim_sc
-A1V6_ACheck49_ResCom_sc
+A1V6_ACheck49_Mark_sc
 A1V6_ACheck4_WaterWalk_sc
+A1V6_ACheck50_Recall_sc
+A1V6_ACheck51_ResCom_sc
 A1V6_ACheck5_WaterBrf_sc
 A1V6_ACheck6_Levitate_sc
 A1V6_ACheck7_Tele_sc
@@ -138,8 +142,10 @@ A1V6_ADel45_RestoreStr_sc
 A1V6_ADel46_RestoreWill_sc
 A1V6_ADel47_SpellAbs_sc
 A1V6_ADel48_SwitfSwim_sc
-A1V6_ADel49_ResCom_sc
+A1V6_ADel49_Mark_sc
 A1V6_ADel4_WaterWalk_sc
+A1V6_ADel50_Recall_sc
+A1V6_ADel51_ResCom_sc
 A1V6_ADel5_WaterBrf_sc
 A1V6_ADel6_Levitate_sc
 A1V6_ADel7_Tele_sc

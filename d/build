@@ -2,18 +2,21 @@
 
 basedir="$(dirname "$0")"
 cd "$basedir"
-echo "MW"
-./make_scripts || exit 1
+echo "MW..."
+rm -rf scripts
+mkdir scripts
+cd scripts
+python ../make_scripts.py std || exit 1
+cd ..
 echo "Done MW"
-echo "MFR"
-./make_scripts_mfr || exit 1
-echo "Done MFR"
+echo "EVA..."
+rm -rf scripts_eva
+mkdir scripts_eva
+cd scripts_eva
+python ../make_scripts.py eva || exit 1
+cd ..
+echo "Done EVA"
 
-find scripts -type f -exec basename {} \; | sort > all_scripts
-cat scripts.list | sort | awk '{ print "A1V6_" $0 }' > sorted_scripts
-diff sorted_scripts all_scripts || exit 1
-rm all_scripts sorted_scripts
-cat h > A.sctx
 cd scripts
 for script in *; do
   echo '' >> ../A.sctx
@@ -22,13 +25,10 @@ for script in *; do
   cat $script >> ../A.sctx
 done
 cd ..
+find scripts -type f -exec basename {} \; | sort > scripts.list
+rm -rf scripts
 
-find scripts_mfr -type f -exec basename {} \; | sort > all_scripts_mfr
-cat scripts_mfr.list | sort | awk '{ print "A1V6_" $0 }' > sorted_scripts_mfr
-diff sorted_scripts_mfr all_scripts_mfr || exit 1
-rm all_scripts_mfr sorted_scripts_mfr
-cat h_mfr > B.sctx
-cd scripts_mfr
+cd scripts_eva
 for script in *; do
   echo '' >> ../B.sctx
   echo "SCPT" >> ../B.sctx
@@ -36,19 +36,19 @@ for script in *; do
   cat $script >> ../B.sctx
 done
 cd ..
+find scripts_eva -type f -exec basename {} \; | sort > scripts_eva.list
+rm -rf scripts_eva
 
-../espa -v A.sctx
+../espa -v A.sctx || exit 1
 rm A.sctx
-awk '{ print "A1V6_" $0 }' scripts.list > slist
-../compile_scripts A.sctx slist
-rm slist
+../compile_scripts A.sctx scripts.list
+rm scripts.list
 mv A.sctx.esp ..
 mv A.sctx.au3 ..
 
-../espa -v B.sctx
+../espa -v B.sctx || exit 1
 rm B.sctx
-awk '{ print "A1V6_" $0 }' scripts_mfr.list > smfrlist
-../compile_scripts B.sctx smfrlist
-rm smfrlist
+../compile_scripts B.sctx scripts_eva.list
+rm scripts_eva.list
 mv B.sctx.esp ..
 mv B.sctx.au3 ..
