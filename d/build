@@ -17,6 +17,7 @@ python ../make_scripts.py eva || exit 1
 cd ..
 echo "Done EVA"
 
+cat h > A.sctx
 cd scripts
 for script in *; do
   echo '' >> ../A.sctx
@@ -28,6 +29,7 @@ cd ..
 find scripts -type f -exec basename {} \; | sort > scripts.list
 rm -rf scripts
 
+cat h_eva > B.sctx
 cd scripts_eva
 for script in *; do
   echo '' >> ../B.sctx

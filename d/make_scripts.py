@@ -216,8 +216,8 @@ def parse_tes3(path):
         elif not line and effects != None and not scri:
             yield Ingredient(name, modl, itex, effects)
 
-def check_h_not_contains(s):
-    f = open('../h', 'r')
+def check_h_not_contains(s, eva):
+    f = open('../' + ('h_eva' if eva else 'h'), 'r')
     pos = f.tell()
     while True:
         line = f.readline()
@@ -825,16 +825,16 @@ for kind in kinds_eva if eva else kinds:
     ingrs_45 = list(filter(lambda x: kind.effect == x.effects[2] and kind.effect != x.effects[1] and kind.effect != x.effects[0], all_ingrs))
     ingrs_60 = list(filter(lambda x: kind.effect == x.effects[3] and kind.effect != x.effects[2] and kind.effect != x.effects[1] and kind.effect != x.effects[0], all_ingrs))
     l15_name = 'A1V6_L15_' + kind.potion.id_base
-    if not ingrs_15 and not check_h_not_contains(l15_name):
+    if not ingrs_15 and not check_h_not_contains(l15_name, eva):
         sys.exit(1)
     l30_name = 'A1V6_L30_' + kind.potion.id_base
-    if not ingrs_30 and not check_h_not_contains(l30_name):
+    if not ingrs_30 and not check_h_not_contains(l30_name, eva):
         sys.exit(1)
     l45_name = 'A1V6_L45_' + kind.potion.id_base
-    if not ingrs_45 and not check_h_not_contains(l45_name):
+    if not ingrs_45 and not check_h_not_contains(l45_name, eva):
         sys.exit(1)
     l60_name = 'A1V6_L60_' + kind.potion.id_base
-    if not ingrs_60 and not check_h_not_contains(l60_name):
+    if not ingrs_60 and not check_h_not_contains(l60_name, eva):
         sys.exit(1)
     all_ingrs = list(chain(ingrs_15, ingrs_30, ingrs_45, ingrs_60))
     gen_add_script(kind, all_ingrs, eva)

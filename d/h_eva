@@ -4968,18 +4968,6 @@ SCRI A1V6_AAdd33_FrostResist_sc
 ITEX m\\misc_com_bottle_05.dds
 
 INGR
-NAME A1V6_L15_frost_shield
-MODL m\\misc_com_bottle_05.nif
-FNAM _Создать
-IRDT
-    0.0 0
-    6 -1 -1 -1
-    -1 -1 -1 -1
-    -1 -1 -1 -1
-SCRI A1V6_AAdd34_FrostSh_sc
-ITEX m\\misc_com_bottle_05.dds
-
-INGR
 NAME A1V6_L30_frost_shield
 MODL m\\misc_com_bottle_05.nif
 FNAM _Создать
