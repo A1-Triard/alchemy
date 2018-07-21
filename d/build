@@ -19,26 +19,26 @@ echo "Done EVA"
 
 cat h > A.sctx
 cd scripts
-for script in *; do
+cat ../scripts.list | while read script
+do
   echo '' >> ../A.sctx
   echo "SCPT" >> ../A.sctx
   echo "SCHD ${script} 0 0 0 0 0" >> ../A.sctx
   cat $script >> ../A.sctx
 done
 cd ..
-find scripts -type f -exec basename {} \; | sort > scripts.list
 rm -rf scripts
 
 cat h_eva > B.sctx
 cd scripts_eva
-for script in *; do
+cat ../scripts_eva.list | while read script
+do
   echo '' >> ../B.sctx
   echo "SCPT" >> ../B.sctx
   echo "SCHD ${script} 0 0 0 0 0" >> ../B.sctx
   cat $script >> ../B.sctx
 done
 cd ..
-find scripts_eva -type f -exec basename {} \; | sort > scripts_eva.list
 rm -rf scripts_eva
 
 ../espa -v A.sctx || exit 1

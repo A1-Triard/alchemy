@@ -270,7 +270,7 @@ def gen_add_script(kind, ingrs, eva):
         s.write('    set in' + str(i + 1) + ' to 0\n')
     s.write('    \n')
     for i in range(0, len(ingrs)):
-        s.write('    if ( player->GetItemCount ' + ingrs[i].name + ' > 0 )\n')
+        s.write('    if ( player->GetItemCount "' + ingrs[i].name + '" > 0 )\n')
         s.write('    	set in' + str(i + 1) + ' to 1\n')
         s.write('    endif\n')
     s.write('    \n')
@@ -288,7 +288,7 @@ def gen_add_script(kind, ingrs, eva):
     s.write('    if ( sum > 1 )\n')
     for i in range(0, len(ingrs)):
         s.write('    	if ( in' + str(i + 1) + ' > 0 )\n')
-        s.write('    		player->RemoveItem ' + ingrs[i].name + ', 1\n')
+        s.write('    		player->RemoveItem "' + ingrs[i].name + '", 1\n')
         s.write('    	endif\n')
     s.write('    	set state to 1\n')
     if type(kind.potion) == Potion2:
@@ -302,10 +302,10 @@ def gen_add_script(kind, ingrs, eva):
     s.write('    endif\n')
     s.write('    \n')
     s.write('    End\n')
+    return add_name
 
 def gen_check2_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
     ingrs = list(chain(ingrs_15, ingrs_30, ingrs_45, ingrs_60))
-    add_name = 'A1V6_AAdd' + str(kind.index) + '_' + kind.name + '_sc'
     check_name = 'A1V6_ACheck' + str(kind.index) + '_' + kind.name + '_sc'
     s = open(check_name, 'w')
     s.write('SCTX\n')
@@ -419,7 +419,7 @@ def gen_check2_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
         s.write('    set in' + str(i + 1) + ' to 0\n')
     s.write('    \n')
     for i in range(0, len(ingrs)):
-        s.write('    if ( player->GetItemCount ' + ingrs[i].name + ' > 0 )\n')
+        s.write('    if ( player->GetItemCount "' + ingrs[i].name + '" > 0 )\n')
         s.write('    	set in' + str(i + 1) + ' to 1\n')
         s.write('    endif\n')
     s.write('    \n')
@@ -521,10 +521,10 @@ def gen_check2_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
         s.write('    set A1V6_AlchemyRes to 0\n')
     s.write('    \n')
     s.write('    End\n')
+    return check_name
 
 def gen_check5_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
     ingrs = list(chain(ingrs_15, ingrs_30, ingrs_45, ingrs_60))
-    add_name = 'A1V6_AAdd' + str(kind.index) + '_' + kind.name + '_sc'
     check_name = 'A1V6_ACheck' + str(kind.index) + '_' + kind.name + '_sc'
     s = open(check_name, 'w')
     s.write('SCTX\n')
@@ -659,7 +659,7 @@ def gen_check5_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
         s.write('    set in' + str(i + 1) + ' to 0\n')
     s.write('    \n')
     for i in range(0, len(ingrs)):
-        s.write('    if ( player->GetItemCount ' + ingrs[i].name + ' > 0 )\n')
+        s.write('    if ( player->GetItemCount "' + ingrs[i].name + '" > 0 )\n')
         s.write('    	set in' + str(i + 1) + ' to 1\n')
         s.write('    endif\n')
     s.write('    \n')
@@ -761,6 +761,7 @@ def gen_check5_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
         s.write('    set A1V6_AlchemyRes to 0\n')
     s.write('    \n')
     s.write('    End\n')
+    return check_name
 
 def gen_del_script(kind, eva):
     del_name = 'A1V6_ADel' + str(kind.index) + '_' + kind.name + '_sc'
@@ -797,6 +798,7 @@ def gen_del_script(kind, eva):
         s.write('    StartScript A1V6_ADelPlus\n')
     s.write('    \n')
     s.write('    End\n')
+    return del_name
 
 morrowind_ingrs = { i.name: i for i in parse_tes3('../ingredients/Morrowind') }
 tribunal_ingrs = { i.name: i for i in parse_tes3('../ingredients/Tribunal') }
@@ -818,6 +820,9 @@ else:
     print('Parameter required')
     sys.exit(1)
 
+add_scripts = []
+check_scripts = []
+del_scripts = []
 for kind in kinds_eva if eva else kinds:
     all_ingrs = list(filter(lambda x: kind.effect in x.effects, (ingrs_eva if eva else ingrs).values()))
     ingrs_15 = list(filter(lambda x: kind.effect == x.effects[0], all_ingrs))
@@ -837,9 +842,14 @@ for kind in kinds_eva if eva else kinds:
     if not ingrs_60 and not check_h_not_contains(l60_name, eva):
         sys.exit(1)
     all_ingrs = list(chain(ingrs_15, ingrs_30, ingrs_45, ingrs_60))
-    gen_add_script(kind, all_ingrs, eva)
-    if type(kind.potion) == Potion2:
-        gen_check2_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva)
-    else:
+    add_scripts.append(gen_add_script(kind, all_ingrs, eva))
+    check_scripts.append(
+        gen_check2_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva) if type(kind.potion) == Potion2 else
         gen_check5_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva)
-    gen_del_script(kind, eva)
+    )
+    del_scripts.append(gen_del_script(kind, eva))
+
+scripts_list = open('../' + ('scripts_eva' if eva else 'scripts') + '.list', 'w')
+scripts_list.writelines(map(lambda x: x + '\n', check_scripts))
+scripts_list.writelines(map(lambda x: x + '\n', add_scripts))
+scripts_list.writelines(map(lambda x: x + '\n', del_scripts))
