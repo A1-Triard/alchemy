@@ -185,7 +185,7 @@ def same_ingr(ingr1, ingr2):
 def parse_tes3(path):
     f = open(path, 'r')
     pos = f.tell()
-    effects = None
+    ingr = False
     while True:
         line = f.readline()
         newpos = f.tell()
@@ -193,28 +193,33 @@ def parse_tes3(path):
             break
         pos = newpos
         line = line[:-1]
-        if line == 'INGR':
-            name = ''
-            modl = ''
-            itex = ''
-            scri = False
-            effects = None
-        elif line.startswith('SCRI '):
-            scri = True
-        elif line.startswith('NAME '):
-            name = line[len('NAME '):]
-        elif line.startswith('MODL '):
-            modl = line[len('MODL '):]
-        elif line.startswith('ITEX '):
-            itex = line[len('ITEX '):]
-        elif line == 'IRDT':
-            f.readline();
-            ids = map(int, f.readline()[4:-1].split(' '));
-            specs1 = map(int, f.readline()[4:-1].split(' '));
-            specs2 = map(int, f.readline()[4:-1].split(' '));
-            effects = list(map(lambda x: None if x[0] < 0 else Effect(x[0], x[1] if x[0] == 21 else x[2] if x[0] == 74 or x[0] == 79 or x[0] == 17 or x[0] == 22 else None), zip(ids, specs1, specs2)))
-        elif not line and effects != None and not scri:
-            yield Ingredient(name, modl, itex, effects)
+        if not ingr:
+            if line == 'INGR' or line.startswith('INGR '):
+                name = ''
+                modl = ''
+                itex = ''
+                scri = False
+                effects = None
+                ingr = True
+        else:
+            if line.startswith('SCRI '):
+                scri = True
+            elif line.startswith('NAME '):
+                name = line[len('NAME '):]
+            elif line.startswith('MODL '):
+                modl = line[len('MODL '):]
+            elif line.startswith('ITEX '):
+                itex = line[len('ITEX '):]
+            elif line == 'IRDT':
+                f.readline();
+                ids = map(int, f.readline()[4:-1].split(' '));
+                specs1 = map(int, f.readline()[4:-1].split(' '));
+                specs2 = map(int, f.readline()[4:-1].split(' '));
+                effects = list(map(lambda x: None if x[0] < 0 else Effect(x[0], x[1] if x[0] == 21 else x[2] if x[0] == 74 or x[0] == 79 or x[0] == 17 or x[0] == 22 else None), zip(ids, specs1, specs2)))
+            elif not line:
+                ingr = False
+                if not scri:
+                    yield Ingredient(name, modl, itex, effects)
 
 def check_h_not_contains(s, eva):
     f = open('../' + ('h_eva' if eva else 'h'), 'r')
@@ -824,7 +829,7 @@ add_scripts = []
 check_scripts = []
 del_scripts = []
 for kind in kinds_eva if eva else kinds:
-    all_ingrs = list(filter(lambda x: kind.effect in x.effects, (ingrs_eva if eva else ingrs).values()))
+    all_ingrs = sorted(list(filter(lambda x: kind.effect in x.effects, (ingrs_eva if eva else ingrs).values())), key=lambda x: x.name)
     ingrs_15 = list(filter(lambda x: kind.effect == x.effects[0], all_ingrs))
     ingrs_30 = list(filter(lambda x: kind.effect == x.effects[1] and kind.effect != x.effects[0], all_ingrs))
     ingrs_45 = list(filter(lambda x: kind.effect == x.effects[2] and kind.effect != x.effects[1] and kind.effect != x.effects[0], all_ingrs))
