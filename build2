@@ -5,9 +5,9 @@ VERSION=1.0
 basedir="$(dirname "$0")"
 cd "$basedir"
 cp tes3cs/A.esp A1_Alchemy_V6_Apparatus.esp || exit 1
-./source A1_Alchemy_V6_Apparatus
+./espa -vad -e CELL -- A1_Alchemy_V6_Apparatus.esp || exit 1
 cp tes3cs/B.esp A1_Alchemy_V6_Apparatus_EVA.esp || exit 1
-./source A1_Alchemy_V6_Apparatus_EVA
+./espa -vad -e CELL -- A1_Alchemy_V6_Apparatus_EVA.esp || exit 1
 
 ./espa -v A1_Alchemy_V6_Containers || exit 1
 touch -t 201408151853 A1_Alchemy_V6_Containers.esp

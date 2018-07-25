@@ -190,6 +190,8 @@ def parse_tes3(path):
         line = f.readline()
         newpos = f.tell()
         if newpos == pos:
+            if ingr and not scri:
+                yield Ingredient(name, modl, itex, effects)
             break
         pos = newpos
         line = line[:-1]
