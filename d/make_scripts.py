@@ -237,18 +237,41 @@ def check_h_not_contains(s, eva):
             print('check_h_not_contains failed: ' + s)
             return False
     return True
+    
+def same_group(ingr1, ingr2, eva):
+    return same_ingr(ingr1, ingr2) or list(filter(lambda x: x[0] == x[1] and x[0] != None and effect_value(x[0], eva) < 0, product(ingr1.effects, ingr2.effects)))
+
+def group_ingredients(ingrs, eva):
+    links = list(map(lambda i: set([i]), range(0, len(ingrs))))
+    for pair in filter(lambda pair: same_group(ingrs[pair[0]], ingrs[pair[1]], eva), combinations(range(0, len(ingrs)), 2)):
+        group = links[pair[0]] | links[pair[1]]
+        links[pair[0]] = group
+        links[pair[1]] = group
+    groups = []
+    for i in range(0, len(ingrs)):
+        group = list(filter(lambda g: i in links[g[0]], groups))
+        if group:
+            group[0].append(i)
+        else:
+            groups.append([i])
+    groups.sort(key=len, reverse=True)
+    special_pairs = list(chain.from_iterable(map(lambda group: filter(lambda pair: not same_group(ingrs[pair[0]], ingrs[pair[1]], eva), combinations(group, 2)), groups)))
+    return (
+        list(map(lambda g: list(map(lambda i: ingrs[i], g)), groups)),
+        list(map(lambda s: (ingrs[s[0]], ingrs[s[1]]), special_pairs))
+    )
 
 def gen_add_script(kind, ingrs, eva):
+    (groups, pairs) = group_ingredients(ingrs, eva)
     add_name = 'A1V6_AAdd' + str(kind.index) + '_' + kind.name + '_sc'
     check_name = 'A1V6_ACheck' + str(kind.index) + '_' + kind.name + '_sc'
     s = open(add_name, 'w')
     s.write('SCTX\n')
     s.write('    Begin ' + add_name + '\n')
     s.write('    \n')
-    for i in range(0, len(ingrs)):
-        s.write('    short in' + str(i + 1) + '\n')
-    s.write('    short sum\n')
-    s.write('    short temp\n')
+    s.write('    short gr\n')
+    s.write('    short in\n')
+    s.write('    short add\n')
     s.write('    short state\n')
     s.write('    \n')
     s.write('    short PCSkipEquip\n')
@@ -273,34 +296,81 @@ def gen_add_script(kind, ingrs, eva):
     s.write('    if ( OnPCEquip == 1 )\n')
     s.write('    set OnPCEquip to 0\n')
     s.write('    \n')
-    for i in range(0, len(ingrs)):
-        s.write('    set in' + str(i + 1) + ' to 0\n')
+    s.write('    set add to 0\n')
+    s.write('    set gr to ' + str(len(groups)) + '\n')
     s.write('    \n')
-    for i in range(0, len(ingrs)):
-        s.write('    if ( player->GetItemCount "' + ingrs[i].name + '" > 0 )\n')
-        s.write('    	set in' + str(i + 1) + ' to 1\n')
-        s.write('    endif\n')
+    for g in range(0, len(groups)):
+        for i in range(0, len(groups[g])):
+            if g == 0:
+                s.write('    if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
+                s.write('    	set gr to 1\n')
+                if len(groups[g]) > 1:
+                    s.write('    	set in to ' + str(i + 1) + '\n')
+                s.write('    endif\n')
+            elif g == 1:
+                s.write('    if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
+                s.write('    	if ( gr < ' + str(g + 1) + ' )\n')
+                s.write('    		set add to 1\n')
+                s.write('    		player->RemoveItem "' + groups[g][i].name + '", 1\n')
+                if g < len(groups) - 1:
+                    s.write('    	else\n')
+                    s.write('    		set gr to ' + str(g + 1) + '\n')
+                    if len(groups[g]) > 1:
+                        s.write('    		set in to ' + str(i + 1) + '\n')
+                s.write('    	endif\n')
+                s.write('    endif\n')
+            else:
+                s.write('    if ( add == 0 )\n')
+                s.write('    	if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
+                s.write('    		if ( gr < ' + str(g + 1) + ' )\n')
+                s.write('    			set add to 1\n')
+                s.write('    			player->RemoveItem "' + groups[g][i].name + '", 1\n')
+                if g < len(groups) - 1:
+                    s.write('    		else\n')
+                    s.write('    			set gr to ' + str(g + 1) + '\n')
+                    if len(groups[g]) > 1:
+                        s.write('    			set in to ' + str(i + 1) + '\n')
+                s.write('    		endif\n')
+                s.write('    	endif\n')
+                s.write('    endif\n')
     s.write('    \n')
-    s.write('    set sum to ( in1 + in2 )\n')
-    for i in range(2, len(ingrs)):
-        s.write('    set sum to ( sum + in' + str(i + 1) + ' )\n')
-    for i in combinations(range(0, len(ingrs)), 2):
-        ingr1 = ingrs[i[0]]
-        ingr2 = ingrs[i[1]]
-        if same_ingr(ingr1, ingr2) or list(filter(lambda x: x[0] == x[1] and x[0] != None and effect_value(x[0], eva) < 0, product(ingr1.effects, ingr2.effects))):
-            s.write('    set temp to ( in' + str(i[0] + 1) + ' + in' + str(i[1] + 1) + ' )\n')
-            s.write('    if ( temp > 1 )\n')
-            s.write('    	set sum to 0\n')
-            s.write('    endif\n')
-    s.write('    if ( sum > 1 )\n')
-    for i in range(0, len(ingrs)):
-        s.write('    	if ( in' + str(i + 1) + ' > 0 )\n')
-        s.write('    		player->RemoveItem "' + ingrs[i].name + '", 1\n')
+    s.write('    if ( add == 1 )\n')
+    for g in range(0, len(groups)):
+        if g == 0:
+            s.write('    	if ( gr == ' + str(g + 1) + ' )\n')
+        elif g == len(groups) - 1:
+            s.write('    	else\n')
+        else:
+            s.write('    	elseif ( gr == ' + str(g + 1) + ' )\n')
+        if len(groups[g]) > 1:
+            for i in range(0, len(groups[g])):
+                if i == 0:
+                    s.write('    		if ( in == ' + str(i + 1) + ' )\n')
+                elif i == len(groups[g]) - 1:
+                    s.write('    		else\n')
+                else:
+                    s.write('    		elseif ( in == ' + str(i + 1) + ' )\n')
+                s.write('    			player->RemoveItem "' + groups[g][i].name + '", 1\n')
+            s.write('    		endif\n')
+        else:
+            s.write('    		player->RemoveItem "' + groups[g][0].name + '", 1\n')
+    s.write('    	endif\n')
+    s.write('    endif\n')
+    for p in pairs:
+        s.write('    if ( add == 0 )\n')
+        s.write('    	if ( player->GetItemCount "' + p[0].name + '" > 0 )\n')
+        s.write('    		if ( player->GetItemCount "' + p[1].name + '" > 0 )\n')
+        s.write('    			player->RemoveItem "' + p[0].name + '", 1\n')
+        s.write('    			player->RemoveItem "' + p[1].name + '", 1\n')
+        s.write('    			set add to 1\n')
+        s.write('    		endif\n')
         s.write('    	endif\n')
+        s.write('    endif\n')
+    s.write('    if ( add == 1 )\n')
     s.write('    	set state to 1\n')
     if type(kind.potion) == Potion2:
         s.write('    	set A1V6_CalcAlchemy2_sc.pin to ' + str(kind.potion.difficulty) + '\n')
-    s.write('    	set A1V6_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + '_sc.in to sum\n')
+    s.write('    	set A1V6_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + '_sc.in to 2\n')
     s.write('    	set A1V6_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + ' to 1\n')
     s.write('    else\n')
     s.write('    	StartScript A1V6_AlchemyCheck_sc\n')
