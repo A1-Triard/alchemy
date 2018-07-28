@@ -22,6 +22,9 @@ if [ ".$1" = ".s" ]; then
 fi
 
 cat h > A.sctx
+cat inf >> A.sctx
+cat items >> A.sctx
+cat appa >> A.sctx
 cd scripts
 cat ../scripts.list | while read script
 do
@@ -32,8 +35,12 @@ do
 done
 cd ..
 rm -rf scripts
+rm -f items
 
 cat h_eva > B.sctx
+cat inf >> B.sctx
+cat items_eva >> B.sctx
+cat appa >> B.sctx
 cd scripts_eva
 cat ../scripts_eva.list | while read script
 do
@@ -44,6 +51,7 @@ do
 done
 cd ..
 rm -rf scripts_eva
+rm -f items_eva
 
 ../espa -v A.sctx || exit 1
 rm A.sctx
