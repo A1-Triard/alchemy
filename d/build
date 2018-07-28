@@ -17,6 +17,10 @@ python ../make_scripts.py eva || exit 1
 cd ..
 echo "Done EVA"
 
+if [ ".$1" = ".s" ]; then
+  exit 0
+fi
+
 cat h > A.sctx
 cd scripts
 cat ../scripts.list | while read script

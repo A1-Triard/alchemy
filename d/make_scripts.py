@@ -179,6 +179,17 @@ def effect_value(effect, eva):
 
 Ingredient = namedtuple('Ingredient', ['name', 'modl', 'itex', 'effects'])
 
+def level(ingr, kind):
+    if kind.effect == ingr.effects[0]:
+        return 15
+    if kind.effect == ingr.effects[1]:
+        return 30
+    if kind.effect == ingr.effects[2]:
+        return 45
+    if kind.effect == ingr.effects[3]:
+        return 60
+    return None
+
 def same_ingr(ingr1, ingr2):
     return ingr1.modl == ingr2.modl and not list(filter(lambda x: x[0] != x[1], zip(ingr1.effects, ingr2.effects)))
 
@@ -241,7 +252,15 @@ def check_h_not_contains(s, eva):
 def same_group(ingr1, ingr2, eva):
     return same_ingr(ingr1, ingr2) or list(filter(lambda x: x[0] == x[1] and x[0] != None and effect_value(x[0], eva) < 0, product(ingr1.effects, ingr2.effects)))
 
-def group_ingredients(ingrs, eva):
+def pair_level(pair, kind):
+    l1 = level(pair[0], kind)
+    l2 = level(pair[1], kind)
+    if l1 < l2:
+        return l2
+    else:
+        return l1
+
+def group_ingredients(ingrs, kind, eva):
     if len(ingrs) < 2:
         return None
     if len(ingrs) == 2:
@@ -263,12 +282,12 @@ def group_ingredients(ingrs, eva):
     groups.sort(key=len, reverse=True)
     special_pairs = list(chain.from_iterable(map(lambda group: filter(lambda pair: not same_group(ingrs[pair[0]], ingrs[pair[1]], eva), combinations(group, 2)), groups)))
     return (
-        list(map(lambda g: list(map(lambda i: ingrs[i], g)), groups)),
-        list(map(lambda s: (ingrs[s[0]], ingrs[s[1]]), special_pairs))
+        list(map(lambda g: list(sorted(map(lambda i: ingrs[i], g), key=lambda i: level(i, kind))), groups)),
+        list(sorted(map(lambda s: (ingrs[s[0]], ingrs[s[1]]), special_pairs), key=lambda p: pair_level(p, kind)))
     )
 
 def gen_add_script(kind, ingrs, eva):
-    (groups, pairs) = group_ingredients(ingrs, eva)
+    (groups, pairs) = group_ingredients(ingrs, kind, eva)
     add_name = 'A1V6_AAdd' + str(kind.index) + '_' + kind.name + '_sc'
     check_name = 'A1V6_ACheck' + str(kind.index) + '_' + kind.name + '_sc'
     s = open(add_name, 'w')
@@ -437,24 +456,24 @@ def gen_add_script(kind, ingrs, eva):
 
 def gen_check2_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
     ingrs = list(chain(ingrs_15, ingrs_30, ingrs_45, ingrs_60))
+    (groups, pairs) = group_ingredients(ingrs, kind, eva)
     check_name = 'A1V6_ACheck' + str(kind.index) + '_' + kind.name + '_sc'
     s = open(check_name, 'w')
     s.write('SCTX\n')
     s.write('    Begin ' + check_name + '\n')
     s.write('    \n')
     s.write('    short AddPotion\n')
-    for i in range(0, len(ingrs)):
-        s.write('    short in' + str(i + 1) + '\n')
-    if ingrs_15:
-        s.write('    short sum15\n')
-    if ingrs_30:
-        s.write('    short sum30\n')
-    if ingrs_45:
-        s.write('    short sum45\n')
-    if ingrs_60:
-        s.write('    short sum60\n')
-    s.write('    short temp\n')
-    s.write('    short bad\n')
+    if groups:
+        if ingrs_15:
+            s.write('    short in15\n')
+        if ingrs_30:
+            s.write('    short in30\n')
+        if ingrs_45:
+            s.write('    short in45\n')
+        if ingrs_60:
+            s.write('    short in60\n')
+    if len(pairs) > 1:
+        s.write('    short pair\n')
     s.write('    \n')
     s.write('    if ( AddPotion == 1 )\n')
     s.write('    	if ( A1V6_PotionB == 1 )\n')
@@ -546,54 +565,6 @@ def gen_check2_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
     s.write('    	player->RemoveItem ' + kind.potion.id_1_16 + ', 16\n')
     s.write('    endif\n')
     s.write('    \n')
-    for i in range(0, len(ingrs)):
-        s.write('    set in' + str(i + 1) + ' to 0\n')
-    s.write('    \n')
-    for i in range(0, len(ingrs)):
-        s.write('    if ( player->GetItemCount "' + ingrs[i].name + '" > 0 )\n')
-        s.write('    	set in' + str(i + 1) + ' to 1\n')
-        s.write('    endif\n')
-    s.write('    \n')
-    if ingrs_15:
-        s.write('    set sum15 to 0\n')
-    for i in range(0, len(ingrs_15)):
-        s.write('    set sum15 to ( sum15 + in' + str(i + 1) + ' )\n')
-    if ingrs_30:
-        if ingrs_15:
-            s.write('    set sum30 to sum15\n')
-        else:
-            s.write('    set sum30 to 0\n')
-    for i in range(0, len(ingrs_30)):
-        s.write('    set sum30 to ( sum30 + in' + str(len(ingrs_15) + i + 1) + ' )\n')
-    if ingrs_45:
-        if ingrs_30:
-            s.write('    set sum45 to sum30\n')
-        elif ingrs_15:
-            s.write('    set sum45 to sum15\n')
-        else:
-            s.write('    set sum45 to 0\n')
-    for i in range(0, len(ingrs_45)):
-        s.write('    set sum45 to ( sum45 + in' + str(len(ingrs_15) + len(ingrs_30) + i + 1) + ' )\n')
-    if ingrs_60:
-        if ingrs_45:
-            s.write('    set sum60 to sum45\n')
-        elif ingrs_30:
-            s.write('    set sum60 to sum30\n')
-        elif ingrs_15:
-            s.write('    set sum60 to sum15\n')
-        else:
-            s.write('    set sum60 to 0\n')
-    for i in range(0, len(ingrs_60)):
-        s.write('    set sum60 to ( sum60 + in' + str(len(ingrs_15) + len(ingrs_30) + len(ingrs_45) + i + 1) + ' )\n')
-    s.write('    set bad to 0\n')
-    for i in combinations(range(0, len(ingrs)), 2):
-        ingr1 = ingrs[i[0]]
-        ingr2 = ingrs[i[1]]
-        if same_ingr(ingr1, ingr2) or list(filter(lambda x: x[0] == x[1] and x[0] != None and effect_value(x[0], eva) < 0, product(ingr1.effects, ingr2.effects))):
-            s.write('    set temp to ( in' + str(i[0] + 1) + ' + in' + str(i[1] + 1) + ' )\n')
-            s.write('    if ( temp > 1 )\n')
-            s.write('    	set bad to 1\n')
-            s.write('    endif\n')
     s.write('    ')
     if ingrs_15:
         s.write('if ( player->GetItemCount "A1V6_L15_' + kind.potion.id_base + '" == 1 )\n')
@@ -614,28 +585,98 @@ def gen_check2_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
         s.write('if ( player->GetItemCount "A1V6_L60_' + kind.potion.id_base + '" == 1 )\n')
         s.write('    	player->RemoveItem "A1V6_L60_' + kind.potion.id_base + '", 1\n')
     s.write('    endif\n')
-    s.write('    if ( bad == 0 )\n')
-    s.write('    	')
-    if ingrs_15:
-        s.write('if ( sum15 > 1 )\n')
-        s.write('    		player->AddItem "A1V6_L15_' + kind.potion.id_base + '", 1\n')
-        if ingrs_30 or ingrs_45 or ingrs_60:
-            s.write('    	else')
-    if ingrs_30:
-        s.write('if ( sum30 > 1 )\n')
-        s.write('    		player->AddItem "A1V6_L30_' + kind.potion.id_base + '", 1\n')
-        if ingrs_45 or ingrs_60:
-            s.write('    	else')
-    if ingrs_45:
-        s.write('if ( sum45 > 1 )\n')
-        s.write('    		player->AddItem "A1V6_L45_' + kind.potion.id_base + '", 1\n')
+    s.write('    \n')
+    if groups:
+        if ingrs_15:
+            s.write('    set in15 to 0\n')
+        if ingrs_30:
+            s.write('    set in30 to 0\n')
+        if ingrs_45:
+            s.write('    set in45 to 0\n')
         if ingrs_60:
-            s.write('    	else')
-    if ingrs_60:
-        s.write('if ( sum60 > 1 )\n')
-        s.write('    		player->AddItem "A1V6_L60_' + kind.potion.id_base + '", 1\n')
-    s.write('    	endif\n')
-    s.write('    endif\n')
+            s.write('    set in60 to 0\n')
+        s.write('    \n')
+        for g in range(0, len(groups)):
+            for i in range(0, len(groups[g])):
+                if g == 0 and i == 0:
+                    s.write('    if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
+                    s.write('    	set in' + str(level(groups[g][i], kind)) + ' to 1\n')
+                elif g == 0:
+                    s.write('    elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
+                    s.write('    	set in' + str(level(groups[g][i], kind)) + ' to 1\n')
+                elif i == 0:
+                    s.write('    if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
+                    s.write('    	set in' + str(level(groups[g][i], kind)) + ' to ( in' + str(level(groups[g][i], kind)) + ' + 1 )\n')
+                else:
+                    s.write('    elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
+                    s.write('    	set in' + str(level(groups[g][i], kind)) + ' to ( in' + str(level(groups[g][i], kind)) + ' + 1 )\n')
+            s.write('    endif\n')
+        s.write('    \n')
+        if ingrs_30 and ingrs_15:
+            s.write('    set in30 to ( in30 + in15 )\n')
+        if ingrs_45:
+            if ingrs_30:
+                s.write('    set in45 to ( in45 + in30 )\n')
+            elif ingrs_15:
+                s.write('    set in45 to ( in45 + in15 )\n')
+        if ingrs_60:
+            if ingrs_45:
+                s.write('    set in60 to ( in60 + in45 )\n')
+            elif ingrs_30:
+                s.write('    set in60 to ( in60 + in30 )\n')
+            elif ingrs_15:
+                s.write('    set in60 to ( in60 + in15 )\n')
+        s.write('    \n')
+        s.write('    ')
+        if ingrs_15:
+            s.write('if ( in15 > 1 )\n')
+            s.write('    	player->AddItem "A1V6_L15_' + kind.potion.id_base + '", 1\n')
+            if ingrs_30 or ingrs_45 or ingrs_60 or pairs:
+                s.write('    else')
+        if ingrs_30:
+            s.write('if ( in30 > 1 )\n')
+            s.write('    	player->AddItem "A1V6_L30_' + kind.potion.id_base + '", 1\n')
+            if ingrs_45 or ingrs_60 or pairs:
+                s.write('    else')
+        if ingrs_45:
+            s.write('if ( in45 > 1 )\n')
+            s.write('    	player->AddItem "A1V6_L45_' + kind.potion.id_base + '", 1\n')
+            if ingrs_60 or pairs:
+                s.write('    else')
+        if ingrs_60:
+            s.write('if ( in60 > 1 )\n')
+            s.write('    	player->AddItem "A1V6_L60_' + kind.potion.id_base + '", 1\n')
+            if pairs:
+                s.write('    else')
+    if pairs:
+        if groups:
+            s.write('\n')
+        tabs = '	' if groups else ''
+        if len(pairs) > 1:
+            s.write('    ' + tabs + 'set pair to 0\n')
+        n_pair = 0
+        for p in pairs:
+            n_pair += 1
+            if n_pair == 1:
+                s.write('    ' + tabs + 'if ( player->GetItemCount "' + p[0].name + '" > 0 )\n')
+                s.write('    ' + tabs + '	if ( player->GetItemCount "' + p[1].name + '" > 0 )\n')
+                s.write('    ' + tabs + '		player->AddItem "A1V6_L' + str(pair_level(p, kind)) + '_' + kind.potion.id_base + '", 1\n')
+                if n_pair < len(pairs):
+                    s.write('    ' + tabs + '		set pair to 1\n')
+                s.write('    ' + tabs + '	endif\n')
+                s.write('    ' + tabs + 'endif\n')
+            else:
+                s.write('    ' + tabs + 'if ( pair == 0 )\n')
+                s.write('    ' + tabs + '	if ( player->GetItemCount "' + p[0].name + '" > 0 )\n')
+                s.write('    ' + tabs + '		if ( player->GetItemCount "' + p[1].name + '" > 0 )\n')
+                s.write('    ' + tabs + '			player->AddItem "A1V6_L' + str(pair_level(p, kind)) + '_' + kind.potion.id_base + '", 1\n')
+                if n_pair < len(pairs):
+                    s.write('    ' + tabs + '			set pair to 1\n')
+                s.write('    ' + tabs + '		endif\n')
+                s.write('    ' + tabs + '	endif\n')
+                s.write('    ' + tabs + 'endif\n')
+    if groups:
+        s.write('    endif\n')
     s.write('    \n')
     s.write('    StopScript ' + check_name + '\n')
     all_kinds = kinds_eva if eva else kinds
@@ -656,24 +697,24 @@ def gen_check2_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
 
 def gen_check5_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
     ingrs = list(chain(ingrs_15, ingrs_30, ingrs_45, ingrs_60))
+    (groups, pairs) = group_ingredients(ingrs, kind, eva)
     check_name = 'A1V6_ACheck' + str(kind.index) + '_' + kind.name + '_sc'
     s = open(check_name, 'w')
     s.write('SCTX\n')
     s.write('    Begin ' + check_name + '\n')
     s.write('    \n')
     s.write('    short AddPotion\n')
-    for i in range(0, len(ingrs)):
-        s.write('    short in' + str(i + 1) + '\n')
-    if ingrs_15:
-        s.write('    short sum15\n')
-    if ingrs_30:
-        s.write('    short sum30\n')
-    if ingrs_45:
-        s.write('    short sum45\n')
-    if ingrs_60:
-        s.write('    short sum60\n')
-    s.write('    short temp\n')
-    s.write('    short bad\n')
+    if groups:
+        if ingrs_15:
+            s.write('    short in15\n')
+        if ingrs_30:
+            s.write('    short in30\n')
+        if ingrs_45:
+            s.write('    short in45\n')
+        if ingrs_60:
+            s.write('    short in60\n')
+    if len(pairs) > 1:
+        s.write('    short pair\n')
     s.write('    \n')
     s.write('    if ( AddPotion == 1 )\n')
     s.write('    	if ( A1V6_PotionB == 1 )\n')
@@ -786,54 +827,6 @@ def gen_check5_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
     s.write('    	player->RemoveItem ' + kind.potion.id_exclusive_1_8 + ', 8\n')
     s.write('    endif\n')
     s.write('    \n')
-    for i in range(0, len(ingrs)):
-        s.write('    set in' + str(i + 1) + ' to 0\n')
-    s.write('    \n')
-    for i in range(0, len(ingrs)):
-        s.write('    if ( player->GetItemCount "' + ingrs[i].name + '" > 0 )\n')
-        s.write('    	set in' + str(i + 1) + ' to 1\n')
-        s.write('    endif\n')
-    s.write('    \n')
-    if ingrs_15:
-        s.write('    set sum15 to 0\n')
-    for i in range(0, len(ingrs_15)):
-        s.write('    set sum15 to ( sum15 + in' + str(i + 1) + ' )\n')
-    if ingrs_30:
-        if ingrs_15:
-            s.write('    set sum30 to sum15\n')
-        else:
-            s.write('    set sum30 to 0\n')
-    for i in range(0, len(ingrs_30)):
-        s.write('    set sum30 to ( sum30 + in' + str(len(ingrs_15) + i + 1) + ' )\n')
-    if ingrs_45:
-        if ingrs_30:
-            s.write('    set sum45 to sum30\n')
-        elif ingrs_15:
-            s.write('    set sum45 to sum15\n')
-        else:
-            s.write('    set sum45 to 0\n')
-    for i in range(0, len(ingrs_45)):
-        s.write('    set sum45 to ( sum45 + in' + str(len(ingrs_15) + len(ingrs_30) + i + 1) + ' )\n')
-    if ingrs_60:
-        if ingrs_45:
-            s.write('    set sum60 to sum45\n')
-        elif ingrs_30:
-            s.write('    set sum60 to sum30\n')
-        elif ingrs_15:
-            s.write('    set sum60 to sum15\n')
-        else:
-            s.write('    set sum60 to 0\n')
-    for i in range(0, len(ingrs_60)):
-        s.write('    set sum60 to ( sum60 + in' + str(len(ingrs_15) + len(ingrs_30) + len(ingrs_45) + i + 1) + ' )\n')
-    s.write('    set bad to 0\n')
-    for i in combinations(range(0, len(ingrs)), 2):
-        ingr1 = ingrs[i[0]]
-        ingr2 = ingrs[i[1]]
-        if same_ingr(ingr1, ingr2) or list(filter(lambda x: x[0] == x[1] and x[0] != None and effect_value(x[0], eva) < 0, product(ingr1.effects, ingr2.effects))):
-            s.write('    set temp to ( in' + str(i[0] + 1) + ' + in' + str(i[1] + 1) + ' )\n')
-            s.write('    if ( temp > 1 )\n')
-            s.write('    	set bad to 1\n')
-            s.write('    endif\n')
     s.write('    ')
     if ingrs_15:
         s.write('if ( player->GetItemCount "A1V6_L15_' + kind.potion.id_base + '" == 1 )\n')
@@ -854,28 +847,98 @@ def gen_check5_script(kind, ingrs_15, ingrs_30, ingrs_45, ingrs_60, eva):
         s.write('if ( player->GetItemCount "A1V6_L60_' + kind.potion.id_base + '" == 1 )\n')
         s.write('    	player->RemoveItem "A1V6_L60_' + kind.potion.id_base + '", 1\n')
     s.write('    endif\n')
-    s.write('    if ( bad == 0 )\n')
-    s.write('    	')
-    if ingrs_15:
-        s.write('if ( sum15 > 1 )\n')
-        s.write('    		player->AddItem "A1V6_L15_' + kind.potion.id_base + '", 1\n')
-        if ingrs_30 or ingrs_45 or ingrs_60:
-            s.write('    	else')
-    if ingrs_30:
-        s.write('if ( sum30 > 1 )\n')
-        s.write('    		player->AddItem "A1V6_L30_' + kind.potion.id_base + '", 1\n')
-        if ingrs_45 or ingrs_60:
-            s.write('    	else')
-    if ingrs_45:
-        s.write('if ( sum45 > 1 )\n')
-        s.write('    		player->AddItem "A1V6_L45_' + kind.potion.id_base + '", 1\n')
+    s.write('    \n')
+    if groups:
+        if ingrs_15:
+            s.write('    set in15 to 0\n')
+        if ingrs_30:
+            s.write('    set in30 to 0\n')
+        if ingrs_45:
+            s.write('    set in45 to 0\n')
         if ingrs_60:
-            s.write('    	else')
-    if ingrs_60:
-        s.write('if ( sum60 > 1 )\n')
-        s.write('    		player->AddItem "A1V6_L60_' + kind.potion.id_base + '", 1\n')
-    s.write('    	endif\n')
-    s.write('    endif\n')
+            s.write('    set in60 to 0\n')
+        s.write('    \n')
+        for g in range(0, len(groups)):
+            for i in range(0, len(groups[g])):
+                if g == 0 and i == 0:
+                    s.write('    if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
+                    s.write('    	set in' + str(level(groups[g][i], kind)) + ' to 1\n')
+                elif g == 0:
+                    s.write('    elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
+                    s.write('    	set in' + str(level(groups[g][i], kind)) + ' to 1\n')
+                elif i == 0:
+                    s.write('    if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
+                    s.write('    	set in' + str(level(groups[g][i], kind)) + ' to ( in' + str(level(groups[g][i], kind)) + ' + 1 )\n')
+                else:
+                    s.write('    elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
+                    s.write('    	set in' + str(level(groups[g][i], kind)) + ' to ( in' + str(level(groups[g][i], kind)) + ' + 1 )\n')
+            s.write('    endif\n')
+        s.write('    \n')
+        if ingrs_30 and ingrs_15:
+            s.write('    set in30 to ( in30 + in15 )\n')
+        if ingrs_45:
+            if ingrs_30:
+                s.write('    set in45 to ( in45 + in30 )\n')
+            elif ingrs_15:
+                s.write('    set in45 to ( in45 + in15 )\n')
+        if ingrs_60:
+            if ingrs_45:
+                s.write('    set in60 to ( in60 + in45 )\n')
+            elif ingrs_30:
+                s.write('    set in60 to ( in60 + in30 )\n')
+            elif ingrs_15:
+                s.write('    set in60 to ( in60 + in15 )\n')
+        s.write('    \n')
+        s.write('    ')
+        if ingrs_15:
+            s.write('if ( in15 > 1 )\n')
+            s.write('    	player->AddItem "A1V6_L15_' + kind.potion.id_base + '", 1\n')
+            if ingrs_30 or ingrs_45 or ingrs_60 or pairs:
+                s.write('    else')
+        if ingrs_30:
+            s.write('if ( in30 > 1 )\n')
+            s.write('    	player->AddItem "A1V6_L30_' + kind.potion.id_base + '", 1\n')
+            if ingrs_45 or ingrs_60 or pairs:
+                s.write('    else')
+        if ingrs_45:
+            s.write('if ( in45 > 1 )\n')
+            s.write('    	player->AddItem "A1V6_L45_' + kind.potion.id_base + '", 1\n')
+            if ingrs_60 or pairs:
+                s.write('    else')
+        if ingrs_60:
+            s.write('if ( in60 > 1 )\n')
+            s.write('    	player->AddItem "A1V6_L60_' + kind.potion.id_base + '", 1\n')
+            if pairs:
+                s.write('    else')
+    if pairs:
+        if groups:
+            s.write('\n')
+        tabs = '	' if groups else ''
+        if len(pairs) > 1:
+            s.write('    ' + tabs + 'set pair to 0\n')
+        n_pair = 0
+        for p in pairs:
+            n_pair += 1
+            if n_pair == 1:
+                s.write('    ' + tabs + 'if ( player->GetItemCount "' + p[0].name + '" > 0 )\n')
+                s.write('    ' + tabs + '	if ( player->GetItemCount "' + p[1].name + '" > 0 )\n')
+                s.write('    ' + tabs + '		player->AddItem "A1V6_L' + str(pair_level(p, kind)) + '_' + kind.potion.id_base + '", 1\n')
+                if n_pair < len(pairs):
+                    s.write('    ' + tabs + '		set pair to 1\n')
+                s.write('    ' + tabs + '	endif\n')
+                s.write('    ' + tabs + 'endif\n')
+            else:
+                s.write('    ' + tabs + 'if ( pair == 0 )\n')
+                s.write('    ' + tabs + '	if ( player->GetItemCount "' + p[0].name + '" > 0 )\n')
+                s.write('    ' + tabs + '		if ( player->GetItemCount "' + p[1].name + '" > 0 )\n')
+                s.write('    ' + tabs + '			player->AddItem "A1V6_L' + str(pair_level(p, kind)) + '_' + kind.potion.id_base + '", 1\n')
+                if n_pair < len(pairs):
+                    s.write('    ' + tabs + '			set pair to 1\n')
+                s.write('    ' + tabs + '		endif\n')
+                s.write('    ' + tabs + '	endif\n')
+                s.write('    ' + tabs + 'endif\n')
+    if groups:
+        s.write('    endif\n')
     s.write('    \n')
     s.write('    StopScript ' + check_name + '\n')
     all_kinds = kinds_eva if eva else kinds
