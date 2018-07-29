@@ -1017,7 +1017,12 @@ def pairs_filter_level(pairs, level, kind):
 
 def ingrs_filter_level(ingrs, level, kind):
     (groups, pairs) = ingrs
-    return (groups_filter_level(groups, level, kind), pairs_filter_level(pairs, level, kind))
+    groups = groups_filter_level(groups, level, kind)
+    pairs = pairs_filter_level(pairs, level, kind)
+    if len(groups) == 2 and len(groups[0]) == 1 and len(groups[1]) == 1:
+        pairs.append((groups[0][0], groups[1][0]))
+        groups = []
+    return (groups, pairs)
 
 def ingrs_empty(ingrs):
     (groups, pairs) = ingrs
