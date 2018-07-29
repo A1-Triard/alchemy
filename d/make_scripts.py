@@ -63,24 +63,6 @@ neutral_effects = [
     Effect(40, None),
     Effect(41, None),
     Effect(42, None),
-    Effect(61, None),
-    Effect(83, None),
-    Effect(84, None),
-    Effect(92, None),
-    Effect(95, None),
-    Effect(96, None),
-    Effect(98, None),
-    Effect(99, None),
-    Effect(100, None),
-]
-
-neutral_effects_eva = [
-    Effect(3, None),
-    Effect(9, None),
-    Effect(11, None),
-    Effect(40, None),
-    Effect(41, None),
-    Effect(42, None),
     Effect(63, None),
     Effect(83, None),
     Effect(84, None),
@@ -98,81 +80,70 @@ neutral_effects_eva = [
 Potion2 = namedtuple('Potion2', ['id_1_16', 'id_1', 'id_base', 'difficulty'])
 Potion5 = namedtuple('Potion5', ['id_broken_1_8', 'id_cheap_1_8', 'id_standard_1_8', 'id_qualitative_1_8', 'id_exclusive_1_8', 'id_broken_1', 'id_cheap_1', 'id_standard_1', 'id_qualitative_1', 'id_exclusive_1', 'id_base'])
 
-Kind = namedtuple('Kind', ['index', 'name', 'effect', 'potion'])
+Kind = namedtuple('Kind', ['name', 'effect', 'potion'])
 
-base_kinds = [
-    Kind(1, 'RestoreHealth', Effect(75, None), Potion5('p_restore_health_b_A1_8', 'p_restore_health_c_A1_8', 'p_restore_health_s_A1_8', 'p_restore_health_q_A1_8', 'p_restore_health_e_A1_8', 'p_restore_health_b', 'p_restore_health_c', 'p_restore_health_s', 'p_restore_health_q', 'p_restore_health_e', 'restore_health')),
-    Kind(2, 'RestoreFatig', Effect(77, None), Potion5('p_restore_fatigue_b_A1_8', 'p_restore_fatigue_c_A1_8', 'p_restore_fatigue_s_A1_8', 'p_restore_fatigue_q_A1_8', 'p_restore_fatigue_e_A1_8', 'p_restore_fatigue_b', 'p_restore_fatigue_c', 'p_restore_fatigue_s', 'p_restore_fatigue_q', 'p_restore_fatigue_e', 'restore_fatigue')),
-    Kind(3, 'RestoreMagic', Effect(76, None), Potion5('p_restore_magicka_b_A1_8', 'p_restore_magicka_c_A1_8', 'p_restore_magicka_s_A1_8', 'p_restore_magicka_q_A1_8', 'p_restore_magicka_e_A1_8', 'p_restore_magicka_b', 'p_restore_magicka_c', 'p_restore_magicka_s', 'p_restore_magicka_q', 'p_restore_magicka_e', 'restore_magicka')),
-    Kind(4, 'WaterWalk', Effect(2, None), Potion5('p_water_walking_b_A1_8', 'p_water_walking_c_A1_8', 'p_water_walking_s_A1_8', 'p_water_walking_q_A1_8', 'p_water_walking_e_A1_8', 'p_water_walking_b_A1', 'p_water_walking_c_A1', 'p_water_walking_s', 'p_water_walking_q_A1', 'p_water_walking_e_A1', 'water_walking')),
-    Kind(5, 'WaterBrf', Effect(0, None), Potion5('p_water_breathing_b_A1_8', 'p_water_breathing_c_A1_8', 'p_water_breathing_s_A1_8', 'p_water_breathing_q_A1_8', 'p_water_breathing_e_A1_8', 'p_water_breathing_b_A1', 'p_water_breathing_c_A1', 'p_water_breathing_s', 'p_water_breathing_q_A1', 'p_water_breathing_e_A1', 'water_breathing')),
-    Kind(6, 'Levitate', Effect(10, None), Potion5('p_levitation_b_A1_8', 'p_levitation_c_A1_8', 'p_levitation_s_A1_8', 'p_levitation_q_A1_8', 'p_levitation_e_A1_8', 'p_levitation_b', 'p_levitation_c', 'p_levitation_s', 'p_levitation_q', 'p_levitation_e', 'levitation')),
-    Kind(7, 'Tele', Effect(59, None), Potion5('p_telekinesis_b_A1_8', 'p_telekinesis_c_A1_8', 'p_telekinesis_s_A1_8', 'p_telekinesis_q_A1_8', 'p_telekinesis_e_A1_8', 'p_telekinesis_b_A1', 'p_telekinesis_c_A1', 'p_telekinesis_s', 'p_telekinesis_q_A1', 'p_telekinesis_e_A1', 'telekinesis')),
-    Kind(8, 'Blight', Effect(70, None), Potion2('p_cure_blight_s_A1_16', 'p_cure_blight_s', 'cure_blight', 60)),
-    Kind(9, 'Cure', Effect(69, None), Potion2('p_cure_common_s_A1_16', 'p_cure_common_s', 'cure_common', 40)),
-    Kind(10, 'DetKey', Effect(66, None), Potion5('p_detect_key_b_A1_8', 'p_detect_key_c_A1_8', 'p_detect_key_s_A1_8', 'p_detect_key_q_A1_8', 'p_detect_key_e_A1_8', 'p_detect_key_b_A1', 'p_detect_key_c_A1', 'p_detect_key_s', 'p_detect_key_q_A1', 'p_detect_key_e_A1', 'detect_key')),
-    Kind(11, 'Poison', Effect(72, None), Potion2('p_cure_poison_s_A1_16', 'p_cure_poison_s', 'cure_poison', 40)),
-    Kind(12, 'Feather', Effect(8, None), Potion5('p_feather_b_A1_8', 'p_feather_c_A1_8', 'p_feather_s_A1_8', 'p_feather_q_A1_8', 'p_feather_e_A1_8', 'p_feather_b', 'p_feather_c', 'p_feather_s_A1', 'p_feather_q', 'p_feather_e', 'feather')),
-    Kind(13, 'FireResist', Effect(90, None), Potion5('p_fire_resistance_b_A1_8', 'p_fire_resistance_c_A1_8', '"p_fire resistance_s_A1_8"', 'p_fire_resistance_q_A1_8', 'p_fire_resistance_e_A1_8', 'p_fire_resistance_b', 'p_fire_resistance_c', '"p_fire resistance_s"', 'p_fire_resistance_q', 'p_fire_resistance_e', 'fire_resistance')),
-    Kind(14, 'RestPers', Effect(74, 6), Potion5('p_restore_personality_b_A1_8', 'p_restore_personality_c_A1_8', 'p_restore_personality_s_A1_8', 'p_restore_personality_q_A1_8', 'p_restore_personality_e_A1_8', 'p_restore_personality_b', 'p_restore_personality_c', 'p_restore_personality_s', 'p_restore_personality_q', 'p_restore_personality_e', 'restore_personality')),
-    Kind(15, 'FortMagic', Effect(81, None), Potion5('p_fortify_magicka_b_A1_8', 'p_fortify_magicka_c_A1_8', 'p_fortify_magicka_s_A1_8', 'p_fortify_magicka_q_A1_8', 'p_fortify_magicka_e_A1_8', 'p_fortify_magicka_b', 'p_fortify_magicka_c', 'p_fortify_magicka_s', 'p_fortify_magicka_q', 'p_fortify_magicka_e', 'fortify_magicka')),
-    Kind(16, 'NightEye', Effect(43, None), Potion5('"p_night-eye_b_A1_8"', '"p_night-eye_c_A1_8"', '"p_night-eye_s_A1_8"', '"p_night-eye_q_A1_8"', '"p_night-eye_e_A1_8"', '"p_night-eye_b"', '"p_night-eye_c"', '"p_night-eye_s"', '"p_night-eye_q"', '"p_night-eye_e"', 'night-eye')),
-    Kind(17, 'DetCreature', Effect(64, None), Potion5('p_detect_creatures_b_A1_8', 'p_detect_creatures_c_A1_8', 'p_detect_creatures_s_A1_8', 'p_detect_creatures_q_A1_8', 'p_detect_creatures_e_A1_8', 'p_detect_creatures_b_A1', 'p_detect_creatures_c_A1', 'p_detect_creatures_s', 'p_detect_creatures_q_A1', 'p_detect_creatures_e_A1', 'detect_creatures')),
-    Kind(18, 'Para', Effect(73, None), Potion2('p_cure_paralyzation_s_A1_16', 'p_cure_paralyzation_s', 'cure_paralyzation', 40)),
-    Kind(19, 'DetEnch', Effect(65, None), Potion5('p_detect_enchantment_b_A1_8', 'p_detect_enchantment_c_A1_8', 'p_detect_enchantment_s_A1_8', 'p_detect_enchantment_q_A1_8', 'p_detect_enchantment_e_A1_8', 'p_detect_enchantment_b_A1', 'p_detect_enchantment_c_A1', 'p_detect_enchantment_s', 'p_detect_enchantment_q_A1', 'p_detect_enchantment_e_A1', 'detect_enchantment')),
-    Kind(20, 'Dispel', Effect(57, None), Potion5('p_dispel_b_A1_8', 'p_dispel_c_A1_8', 'p_dispel_s_A1_8', 'p_dispel_q_A1_8', 'p_dispel_e_A1_8', 'p_dispel_b_A1', 'p_dispel_c_A1', 'p_dispel_s', 'p_dispel_q_A1', 'p_dispel_e_A1', 'dispel')),
-    Kind(21, 'FireSh', Effect(4, None), Potion5('p_fire_shield_b_A1_8', 'p_fire_shield_c_A1_8', 'p_fire_shield_s_A1_8', 'p_fire_shield_q_A1_8', 'p_fire_shield_e_A1_8', 'p_fire_shield_b', 'p_fire_shield_c', 'p_fire_shield_s', 'p_fire_shield_q', 'p_fire_shield_e', 'fire_shield')),
-    Kind(22, 'FortAgil', Effect(79, 3), Potion5('p_fortify_agility_b_A1_8', 'p_fortify_agility_c_A1_8', 'p_fortify_agility_s_A1_8', 'p_fortify_agility_q_A1_8', 'p_fortify_agility_e_A1_8', 'p_fortify_agility_b', 'p_fortify_agility_c', 'p_fortify_agility_s', 'p_fortify_agility_q', 'p_fortify_agility_e', 'fortify_agility')),
-    Kind(23, 'FortAttack', Effect(117, None), Potion5('p_fortify_attack_b_A1_8', 'p_fortify_attack_c_A1_8', 'p_fortify_attack_s_A1_8', 'p_fortify_attack_q_A1_8', 'p_fortify_attack_e_A1_8', 'p_fortify_attack_b_A1', 'p_fortify_attack_c_A1', 'p_fortify_attack_s_A1', 'p_fortify_attack_q_A1', 'p_fortify_attack_e', 'fortify_attack')),
-    Kind(24, 'FortEndur', Effect(79, 5), Potion5('p_fortify_endurance_b_A1_8', 'p_fortify_endurance_c_A1_8', 'p_fortify_endurance_s_A1_8', 'p_fortify_endurance_q_A1_8', 'p_fortify_endurance_e_A1_8', 'p_fortify_endurance_b', 'p_fortify_endurance_c', 'p_fortify_endurance_s', 'p_fortify_endurance_q', 'p_fortify_endurance_e', 'fortify_endurance')),
-    Kind(25, 'FortFatig', Effect(82, None), Potion5('p_fortify_fatigue_b_A1_8', 'p_fortify_fatigue_c_A1_8', 'p_fortify_fatigue_s_A1_8', 'p_fortify_fatigue_q_A1_8', 'p_fortify_fatigue_e_A1_8', 'p_fortify_fatigue_b', 'p_fortify_fatigue_c', 'p_fortify_fatigue_s', 'p_fortify_fatigue_q', 'p_fortify_fatigue_e', 'fortify_fatigue')),
-    Kind(26, 'FortHealth', Effect(80, None), Potion5('p_fortify_health_b_A1_8', 'p_fortify_health_c_A1_8', 'p_fortify_health_s_A1_8', 'p_fortify_health_q_A1_8', 'p_fortify_health_e_A1_8', 'p_fortify_health_b', 'p_fortify_health_c', 'p_fortify_health_s', 'p_fortify_health_q', 'p_fortify_health_e', 'fortify_health')),
-    Kind(27, 'FortIntel', Effect(79, 1), Potion5('p_fortify_intelligence_b_A1_8', 'p_fortify_intelligence_c_A1_8', 'p_fortify_intelligence_s_A1_8', 'p_fortify_intelligence_q_A1_8', 'p_fortify_intelligence_e_A1_8', 'p_fortify_intelligence_b', 'p_fortify_intelligence_c', 'p_fortify_intelligence_s', 'p_fortify_intelligence_q', 'p_fortify_intelligence_e', 'fortify_intelligence')),
-    Kind(28, 'FortLuck', Effect(79, 7), Potion5('p_fortify_luck_b_A1_8', 'p_fortify_luck_c_A1_8', 'p_fortify_luck_s_A1_8', 'p_fortify_luck_q_A1_8', 'p_fortify_luck_e_A1_8', 'p_fortify_luck_b', 'p_fortify_luck_c', 'p_fortify_luck_s', 'p_fortify_luck_q', 'p_fortify_luck_e', 'fortify_luck')),
-    Kind(29, 'FortPers', Effect(79, 6), Potion5('p_fortify_personality_b_A1_8', 'p_fortify_personality_c_A1_8', 'p_fortify_personality_s_A1_8', 'p_fortify_personality_q_A1_8', 'p_fortify_personality_e_A1_8', 'p_fortify_personality_b', 'p_fortify_personality_c', 'p_fortify_personality_s', 'p_fortify_personality_q', 'p_fortify_personality_e', 'fortify_personality')),
-    Kind(30, 'FortSpeed', Effect(79, 4), Potion5('p_fortify_speed_b_A1_8', 'p_fortify_speed_c_A1_8', 'p_fortify_speed_s_A1_8', 'p_fortify_speed_q_A1_8', 'p_fortify_speed_e_A1_8', 'p_fortify_speed_b', 'p_fortify_speed_c', 'p_fortify_speed_s', 'p_fortify_speed_q', 'p_fortify_speed_e', 'fortify_speed')),
-    Kind(31, 'FortStr', Effect(79, 0), Potion5('p_fortify_strength_b_A1_8', 'p_fortify_strength_c_A1_8', 'p_fortify_strength_s_A1_8', 'p_fortify_strength_q_A1_8', 'p_fortify_strength_e_A1_8', 'p_fortify_strength_b', 'p_fortify_strength_c', 'p_fortify_strength_s', 'p_fortify_strength_q', 'p_fortify_strength_e', 'fortify_strength')),
-    Kind(32, 'FortWill', Effect(79, 2), Potion5('p_fortify_willpower_b_A1_8', 'p_fortify_willpower_c_A1_8', 'p_fortify_willpower_s_A1_8', 'p_fortify_willpower_q_A1_8', 'p_fortify_willpower_e_A1_8', 'p_fortify_willpower_b', 'p_fortify_willpower_c', 'p_fortify_willpower_s', 'p_fortify_willpower_q', 'p_fortify_willpower_e', 'fortify_willpower')),
-    Kind(33, 'FrostResist', Effect(91, None), Potion5('p_frost_resistance_b_A1_8', 'p_frost_resistance_c_A1_8', 'p_frost_resistance_s_A1_8', 'p_frost_resistance_q_A1_8', 'p_frost_resistance_e_A1_8', 'p_frost_resistance_b', 'p_frost_resistance_c', 'p_frost_resistance_s', 'p_frost_resistance_q', 'p_frost_resistance_e', 'frost_resistance')),
-    Kind(34, 'FrostSh', Effect(6, None), Potion5('p_frost_shield_b_A1_8', 'p_frost_shield_c_A1_8', 'p_frost_shield_s_A1_8', 'p_frost_shield_q_A1_8', 'p_frost_shield_e_A1_8', 'p_frost_shield_b', 'p_frost_shield_c', 'p_frost_shield_s', 'p_frost_shield_q', 'p_frost_shield_e', 'frost_shield')),
-    Kind(35, 'Invis', Effect(39, None), Potion5('p_invisibility_b_A1_8', 'p_invisibility_c_A1_8', 'p_invisibility_s_A1_8', 'p_invisibility_q_A1_8', 'p_invisibility_e_A1_8', 'p_invisibility_b', 'p_invisibility_c', 'p_invisibility_s', 'p_invisibility_q', 'p_invisibility_e', 'invisibility')),
-    Kind(36, 'LightSh', Effect(5, None), Potion5('"p_lightning shield_b_A1_8"', '"p_lightning shield_c_A1_8"', '"p_lightning shield_s_A1_8"', '"p_lightning shield_q_A1_8"', '"p_lightning shield_e_A1_8"', '"p_lightning shield_b"', '"p_lightning shield_c"', '"p_lightning shield_s"', '"p_lightning shield_q"', '"p_lightning shield_e"', 'lightning_shield')),
-    Kind(37, 'MagicResist', Effect(93, None), Potion5('p_magicka_resistance_b_A1_8', 'p_magicka_resistance_c_A1_8', 'p_magicka_resistance_s_A1_8', 'p_magicka_resistance_q_A1_8', 'p_magicka_resistance_e_A1_8', 'p_magicka_resistance_b', 'p_magicka_resistance_c', 'p_magicka_resistance_s', 'p_magicka_resistance_q', 'p_magicka_resistance_e', 'magicka_resistance')),
-    Kind(38, 'PoisonResist', Effect(97, None), Potion5('p_poison_resistance_b_A1_8', 'p_poison_resistance_c_A1_8', 'p_poison_resistance_s_A1_8', 'p_poison_resistance_q_A1_8', 'p_poison_resistance_e_A1_8', 'p_poison_resistance_b', 'p_poison_resistance_c', 'p_poison_resistance_s', 'p_poison_resistance_q', 'p_poison_resistance_e', 'poison_resistance')),
-    Kind(39, 'Reflect', Effect(68, None), Potion5('p_reflection_b_A1_8', 'p_reflection_c_A1_8', 'p_reflection_s_A1_8', 'p_reflection_q_A1_8', 'p_reflection_e_A1_8', 'p_reflection_b', 'p_reflection_c', 'p_reflection_s', 'p_reflection_q', 'p_reflection_e', 'reflection')),
-    Kind(40, 'RestoreAgility', Effect(74, 3), Potion5('p_restore_agility_b_A1_8', 'p_restore_agility_c_A1_8', 'p_restore_agility_s_A1_8', 'p_restore_agility_q_A1_8', 'p_restore_agility_e_A1_8', 'p_restore_agility_b', 'p_restore_agility_c', 'p_restore_agility_s', 'p_restore_agility_q', 'p_restore_agility_e', 'restore_agility')),
-    Kind(41, 'RestoreEndur', Effect(74, 5), Potion5('p_restore_endurance_b_A1_8', 'p_restore_endurance_c_A1_8', 'p_restore_endurance_s_A1_8', 'p_restore_endurance_q_A1_8', 'p_restore_endurance_e_A1_8', 'p_restore_endurance_b', 'p_restore_endurance_c', 'p_restore_endurance_s', 'p_restore_endurance_q', 'p_restore_endurance_e', 'restore_endurance')),
-    Kind(42, 'RestoreIntel', Effect(74, 1), Potion5('p_restore_intelligence_b_A1_8', 'p_restore_intelligence_c_A1_8', 'p_restore_intelligence_s_A1_8', 'p_restore_intelligence_q_A1_8', 'p_restore_intelligence_e_A1_8', 'p_restore_intelligence_b', 'p_restore_intelligence_c', 'p_restore_intelligence_s', 'p_restore_intelligence_q', 'p_restore_intelligence_e', 'restore_intelligence')),
-    Kind(43, 'RestoreLuck', Effect(74, 7), Potion5('p_restore_luck_b_A1_8', 'p_restore_luck_c_A1_8', 'p_restore_luck_s_A1_8', 'p_restore_luck_q_A1_8', 'p_restore_luck_e_A1_8', 'p_restore_luck_b', 'p_restore_luck_c', 'p_restore_luck_s', 'p_restore_luck_q', 'p_restore_luck_e', 'restore_luck')),
-    Kind(44, 'RestoreSpeed', Effect(74, 4), Potion5('p_restore_speed_b_A1_8', 'p_restore_speed_c_A1_8', 'p_restore_speed_s_A1_8', 'p_restore_speed_q_A1_8', 'p_restore_speed_e_A1_8', 'p_restore_speed_b', 'p_restore_speed_c', 'p_restore_speed_s', 'p_restore_speed_q', 'p_restore_speed_e', 'restore_speed')),
-    Kind(45, 'RestoreStr', Effect(74, 0), Potion5('p_restore_strength_b_A1_8', 'p_restore_strength_c_A1_8', 'p_restore_strength_s_A1_8', 'p_restore_strength_q_A1_8', 'p_restore_strength_e_A1_8', 'p_restore_strength_b', 'p_restore_strength_c', 'p_restore_strength_s', 'p_restore_strength_q', 'p_restore_strength_e', 'restore_strength')),
-    Kind(46, 'RestoreWill', Effect(74, 2), Potion5('p_restore_willpower_b_A1_8', 'p_restore_willpower_c_A1_8', 'p_restore_willpower_s_A1_8', 'p_restore_willpower_q_A1_8', 'p_restore_willpower_e_A1_8', 'p_restore_willpower_b', 'p_restore_willpower_c', 'p_restore_willpower_s', 'p_restore_willpower_q', 'p_restore_willpower_e', 'restore_willpower')),
-    Kind(47, 'SpellAbs', Effect(67, None), Potion5('p_spell_absorption_b_A1_8', 'p_spell_absorption_c_A1_8', 'p_spell_absorption_s_A1_8', 'p_spell_absorption_q_A1_8', 'p_spell_absorption_e_A1_8', 'p_spell_absorption_b', 'p_spell_absorption_c', 'p_spell_absorption_s', 'p_spell_absorption_q', 'p_spell_absorption_e', 'spell_absorption')),
-    Kind(48, 'SwitfSwim', Effect(1, None), Potion5('p_swift_swim_b_A1_8', 'p_swift_swim_c_A1_8', 'p_swift_swim_s_A1_8', 'p_swift_swim_q_A1_8', 'p_swift_swim_e_A1_8', 'p_swift_swim_b', 'p_swift_swim_c', 'p_swift_swim_s_A1', 'p_swift_swim_q', 'p_swift_swim_e', 'swift_swim')),
+kinds = [
+    Kind('RestoreHealth', Effect(75, None), Potion5('p_restore_health_b_A1_8', 'p_restore_health_c_A1_8', 'p_restore_health_s_A1_8', 'p_restore_health_q_A1_8', 'p_restore_health_e_A1_8', 'p_restore_health_b', 'p_restore_health_c', 'p_restore_health_s', 'p_restore_health_q', 'p_restore_health_e', 'restore_health')),
+    Kind('RestoreFatig', Effect(77, None), Potion5('p_restore_fatigue_b_A1_8', 'p_restore_fatigue_c_A1_8', 'p_restore_fatigue_s_A1_8', 'p_restore_fatigue_q_A1_8', 'p_restore_fatigue_e_A1_8', 'p_restore_fatigue_b', 'p_restore_fatigue_c', 'p_restore_fatigue_s', 'p_restore_fatigue_q', 'p_restore_fatigue_e', 'restore_fatigue')),
+    Kind('RestoreMagic', Effect(76, None), Potion5('p_restore_magicka_b_A1_8', 'p_restore_magicka_c_A1_8', 'p_restore_magicka_s_A1_8', 'p_restore_magicka_q_A1_8', 'p_restore_magicka_e_A1_8', 'p_restore_magicka_b', 'p_restore_magicka_c', 'p_restore_magicka_s', 'p_restore_magicka_q', 'p_restore_magicka_e', 'restore_magicka')),
+    Kind('WaterWalk', Effect(2, None), Potion5('p_water_walking_b_A1_8', 'p_water_walking_c_A1_8', 'p_water_walking_s_A1_8', 'p_water_walking_q_A1_8', 'p_water_walking_e_A1_8', 'p_water_walking_b_A1', 'p_water_walking_c_A1', 'p_water_walking_s', 'p_water_walking_q_A1', 'p_water_walking_e_A1', 'water_walking')),
+    Kind('WaterBrf', Effect(0, None), Potion5('p_water_breathing_b_A1_8', 'p_water_breathing_c_A1_8', 'p_water_breathing_s_A1_8', 'p_water_breathing_q_A1_8', 'p_water_breathing_e_A1_8', 'p_water_breathing_b_A1', 'p_water_breathing_c_A1', 'p_water_breathing_s', 'p_water_breathing_q_A1', 'p_water_breathing_e_A1', 'water_breathing')),
+    Kind('Levitate', Effect(10, None), Potion5('p_levitation_b_A1_8', 'p_levitation_c_A1_8', 'p_levitation_s_A1_8', 'p_levitation_q_A1_8', 'p_levitation_e_A1_8', 'p_levitation_b', 'p_levitation_c', 'p_levitation_s', 'p_levitation_q', 'p_levitation_e', 'levitation')),
+    Kind('Tele', Effect(59, None), Potion5('p_telekinesis_b_A1_8', 'p_telekinesis_c_A1_8', 'p_telekinesis_s_A1_8', 'p_telekinesis_q_A1_8', 'p_telekinesis_e_A1_8', 'p_telekinesis_b_A1', 'p_telekinesis_c_A1', 'p_telekinesis_s', 'p_telekinesis_q_A1', 'p_telekinesis_e_A1', 'telekinesis')),
+    Kind('Blight', Effect(70, None), Potion2('p_cure_blight_s_A1_16', 'p_cure_blight_s', 'cure_blight', 60)),
+    Kind('Cure', Effect(69, None), Potion2('p_cure_common_s_A1_16', 'p_cure_common_s', 'cure_common', 40)),
+    Kind('DetKey', Effect(66, None), Potion5('p_detect_key_b_A1_8', 'p_detect_key_c_A1_8', 'p_detect_key_s_A1_8', 'p_detect_key_q_A1_8', 'p_detect_key_e_A1_8', 'p_detect_key_b_A1', 'p_detect_key_c_A1', 'p_detect_key_s', 'p_detect_key_q_A1', 'p_detect_key_e_A1', 'detect_key')),
+    Kind('Poison', Effect(72, None), Potion2('p_cure_poison_s_A1_16', 'p_cure_poison_s', 'cure_poison', 40)),
+    Kind('Feather', Effect(8, None), Potion5('p_feather_b_A1_8', 'p_feather_c_A1_8', 'p_feather_s_A1_8', 'p_feather_q_A1_8', 'p_feather_e_A1_8', 'p_feather_b', 'p_feather_c', 'p_feather_s_A1', 'p_feather_q', 'p_feather_e', 'feather')),
+    Kind('FireResist', Effect(90, None), Potion5('p_fire_resistance_b_A1_8', 'p_fire_resistance_c_A1_8', '"p_fire resistance_s_A1_8"', 'p_fire_resistance_q_A1_8', 'p_fire_resistance_e_A1_8', 'p_fire_resistance_b', 'p_fire_resistance_c', '"p_fire resistance_s"', 'p_fire_resistance_q', 'p_fire_resistance_e', 'fire_resistance')),
+    Kind('RestPers', Effect(74, 6), Potion5('p_restore_personality_b_A1_8', 'p_restore_personality_c_A1_8', 'p_restore_personality_s_A1_8', 'p_restore_personality_q_A1_8', 'p_restore_personality_e_A1_8', 'p_restore_personality_b', 'p_restore_personality_c', 'p_restore_personality_s', 'p_restore_personality_q', 'p_restore_personality_e', 'restore_personality')),
+    Kind('FortMagic', Effect(81, None), Potion5('p_fortify_magicka_b_A1_8', 'p_fortify_magicka_c_A1_8', 'p_fortify_magicka_s_A1_8', 'p_fortify_magicka_q_A1_8', 'p_fortify_magicka_e_A1_8', 'p_fortify_magicka_b', 'p_fortify_magicka_c', 'p_fortify_magicka_s', 'p_fortify_magicka_q', 'p_fortify_magicka_e', 'fortify_magicka')),
+    Kind('NightEye', Effect(43, None), Potion5('"p_night-eye_b_A1_8"', '"p_night-eye_c_A1_8"', '"p_night-eye_s_A1_8"', '"p_night-eye_q_A1_8"', '"p_night-eye_e_A1_8"', '"p_night-eye_b"', '"p_night-eye_c"', '"p_night-eye_s"', '"p_night-eye_q"', '"p_night-eye_e"', 'night-eye')),
+    Kind('DetCreature', Effect(64, None), Potion5('p_detect_creatures_b_A1_8', 'p_detect_creatures_c_A1_8', 'p_detect_creatures_s_A1_8', 'p_detect_creatures_q_A1_8', 'p_detect_creatures_e_A1_8', 'p_detect_creatures_b_A1', 'p_detect_creatures_c_A1', 'p_detect_creatures_s', 'p_detect_creatures_q_A1', 'p_detect_creatures_e_A1', 'detect_creatures')),
+    Kind('Para', Effect(73, None), Potion2('p_cure_paralyzation_s_A1_16', 'p_cure_paralyzation_s', 'cure_paralyzation', 40)),
+    Kind('DetEnch', Effect(65, None), Potion5('p_detect_enchantment_b_A1_8', 'p_detect_enchantment_c_A1_8', 'p_detect_enchantment_s_A1_8', 'p_detect_enchantment_q_A1_8', 'p_detect_enchantment_e_A1_8', 'p_detect_enchantment_b_A1', 'p_detect_enchantment_c_A1', 'p_detect_enchantment_s', 'p_detect_enchantment_q_A1', 'p_detect_enchantment_e_A1', 'detect_enchantment')),
+    Kind('Dispel', Effect(57, None), Potion5('p_dispel_b_A1_8', 'p_dispel_c_A1_8', 'p_dispel_s_A1_8', 'p_dispel_q_A1_8', 'p_dispel_e_A1_8', 'p_dispel_b_A1', 'p_dispel_c_A1', 'p_dispel_s', 'p_dispel_q_A1', 'p_dispel_e_A1', 'dispel')),
+    Kind('FireSh', Effect(4, None), Potion5('p_fire_shield_b_A1_8', 'p_fire_shield_c_A1_8', 'p_fire_shield_s_A1_8', 'p_fire_shield_q_A1_8', 'p_fire_shield_e_A1_8', 'p_fire_shield_b', 'p_fire_shield_c', 'p_fire_shield_s', 'p_fire_shield_q', 'p_fire_shield_e', 'fire_shield')),
+    Kind('FortAgil', Effect(79, 3), Potion5('p_fortify_agility_b_A1_8', 'p_fortify_agility_c_A1_8', 'p_fortify_agility_s_A1_8', 'p_fortify_agility_q_A1_8', 'p_fortify_agility_e_A1_8', 'p_fortify_agility_b', 'p_fortify_agility_c', 'p_fortify_agility_s', 'p_fortify_agility_q', 'p_fortify_agility_e', 'fortify_agility')),
+    Kind('FortAttack', Effect(117, None), Potion5('p_fortify_attack_b_A1_8', 'p_fortify_attack_c_A1_8', 'p_fortify_attack_s_A1_8', 'p_fortify_attack_q_A1_8', 'p_fortify_attack_e_A1_8', 'p_fortify_attack_b_A1', 'p_fortify_attack_c_A1', 'p_fortify_attack_s_A1', 'p_fortify_attack_q_A1', 'p_fortify_attack_e', 'fortify_attack')),
+    Kind('FortEndur', Effect(79, 5), Potion5('p_fortify_endurance_b_A1_8', 'p_fortify_endurance_c_A1_8', 'p_fortify_endurance_s_A1_8', 'p_fortify_endurance_q_A1_8', 'p_fortify_endurance_e_A1_8', 'p_fortify_endurance_b', 'p_fortify_endurance_c', 'p_fortify_endurance_s', 'p_fortify_endurance_q', 'p_fortify_endurance_e', 'fortify_endurance')),
+    Kind('FortFatig', Effect(82, None), Potion5('p_fortify_fatigue_b_A1_8', 'p_fortify_fatigue_c_A1_8', 'p_fortify_fatigue_s_A1_8', 'p_fortify_fatigue_q_A1_8', 'p_fortify_fatigue_e_A1_8', 'p_fortify_fatigue_b', 'p_fortify_fatigue_c', 'p_fortify_fatigue_s', 'p_fortify_fatigue_q', 'p_fortify_fatigue_e', 'fortify_fatigue')),
+    Kind('FortHealth', Effect(80, None), Potion5('p_fortify_health_b_A1_8', 'p_fortify_health_c_A1_8', 'p_fortify_health_s_A1_8', 'p_fortify_health_q_A1_8', 'p_fortify_health_e_A1_8', 'p_fortify_health_b', 'p_fortify_health_c', 'p_fortify_health_s', 'p_fortify_health_q', 'p_fortify_health_e', 'fortify_health')),
+    Kind('FortIntel', Effect(79, 1), Potion5('p_fortify_intelligence_b_A1_8', 'p_fortify_intelligence_c_A1_8', 'p_fortify_intelligence_s_A1_8', 'p_fortify_intelligence_q_A1_8', 'p_fortify_intelligence_e_A1_8', 'p_fortify_intelligence_b', 'p_fortify_intelligence_c', 'p_fortify_intelligence_s', 'p_fortify_intelligence_q', 'p_fortify_intelligence_e', 'fortify_intelligence')),
+    Kind('FortLuck', Effect(79, 7), Potion5('p_fortify_luck_b_A1_8', 'p_fortify_luck_c_A1_8', 'p_fortify_luck_s_A1_8', 'p_fortify_luck_q_A1_8', 'p_fortify_luck_e_A1_8', 'p_fortify_luck_b', 'p_fortify_luck_c', 'p_fortify_luck_s', 'p_fortify_luck_q', 'p_fortify_luck_e', 'fortify_luck')),
+    Kind('FortPers', Effect(79, 6), Potion5('p_fortify_personality_b_A1_8', 'p_fortify_personality_c_A1_8', 'p_fortify_personality_s_A1_8', 'p_fortify_personality_q_A1_8', 'p_fortify_personality_e_A1_8', 'p_fortify_personality_b', 'p_fortify_personality_c', 'p_fortify_personality_s', 'p_fortify_personality_q', 'p_fortify_personality_e', 'fortify_personality')),
+    Kind('FortSpeed', Effect(79, 4), Potion5('p_fortify_speed_b_A1_8', 'p_fortify_speed_c_A1_8', 'p_fortify_speed_s_A1_8', 'p_fortify_speed_q_A1_8', 'p_fortify_speed_e_A1_8', 'p_fortify_speed_b', 'p_fortify_speed_c', 'p_fortify_speed_s', 'p_fortify_speed_q', 'p_fortify_speed_e', 'fortify_speed')),
+    Kind('FortStr', Effect(79, 0), Potion5('p_fortify_strength_b_A1_8', 'p_fortify_strength_c_A1_8', 'p_fortify_strength_s_A1_8', 'p_fortify_strength_q_A1_8', 'p_fortify_strength_e_A1_8', 'p_fortify_strength_b', 'p_fortify_strength_c', 'p_fortify_strength_s', 'p_fortify_strength_q', 'p_fortify_strength_e', 'fortify_strength')),
+    Kind('FortWill', Effect(79, 2), Potion5('p_fortify_willpower_b_A1_8', 'p_fortify_willpower_c_A1_8', 'p_fortify_willpower_s_A1_8', 'p_fortify_willpower_q_A1_8', 'p_fortify_willpower_e_A1_8', 'p_fortify_willpower_b', 'p_fortify_willpower_c', 'p_fortify_willpower_s', 'p_fortify_willpower_q', 'p_fortify_willpower_e', 'fortify_willpower')),
+    Kind('FrostResist', Effect(91, None), Potion5('p_frost_resistance_b_A1_8', 'p_frost_resistance_c_A1_8', 'p_frost_resistance_s_A1_8', 'p_frost_resistance_q_A1_8', 'p_frost_resistance_e_A1_8', 'p_frost_resistance_b', 'p_frost_resistance_c', 'p_frost_resistance_s', 'p_frost_resistance_q', 'p_frost_resistance_e', 'frost_resistance')),
+    Kind('FrostSh', Effect(6, None), Potion5('p_frost_shield_b_A1_8', 'p_frost_shield_c_A1_8', 'p_frost_shield_s_A1_8', 'p_frost_shield_q_A1_8', 'p_frost_shield_e_A1_8', 'p_frost_shield_b', 'p_frost_shield_c', 'p_frost_shield_s', 'p_frost_shield_q', 'p_frost_shield_e', 'frost_shield')),
+    Kind('Invis', Effect(39, None), Potion5('p_invisibility_b_A1_8', 'p_invisibility_c_A1_8', 'p_invisibility_s_A1_8', 'p_invisibility_q_A1_8', 'p_invisibility_e_A1_8', 'p_invisibility_b', 'p_invisibility_c', 'p_invisibility_s', 'p_invisibility_q', 'p_invisibility_e', 'invisibility')),
+    Kind('LightSh', Effect(5, None), Potion5('"p_lightning shield_b_A1_8"', '"p_lightning shield_c_A1_8"', '"p_lightning shield_s_A1_8"', '"p_lightning shield_q_A1_8"', '"p_lightning shield_e_A1_8"', '"p_lightning shield_b"', '"p_lightning shield_c"', '"p_lightning shield_s"', '"p_lightning shield_q"', '"p_lightning shield_e"', 'lightning_shield')),
+    Kind('MagicResist', Effect(93, None), Potion5('p_magicka_resistance_b_A1_8', 'p_magicka_resistance_c_A1_8', 'p_magicka_resistance_s_A1_8', 'p_magicka_resistance_q_A1_8', 'p_magicka_resistance_e_A1_8', 'p_magicka_resistance_b', 'p_magicka_resistance_c', 'p_magicka_resistance_s', 'p_magicka_resistance_q', 'p_magicka_resistance_e', 'magicka_resistance')),
+    Kind('PoisonResist', Effect(97, None), Potion5('p_poison_resistance_b_A1_8', 'p_poison_resistance_c_A1_8', 'p_poison_resistance_s_A1_8', 'p_poison_resistance_q_A1_8', 'p_poison_resistance_e_A1_8', 'p_poison_resistance_b', 'p_poison_resistance_c', 'p_poison_resistance_s', 'p_poison_resistance_q', 'p_poison_resistance_e', 'poison_resistance')),
+    Kind('Reflect', Effect(68, None), Potion5('p_reflection_b_A1_8', 'p_reflection_c_A1_8', 'p_reflection_s_A1_8', 'p_reflection_q_A1_8', 'p_reflection_e_A1_8', 'p_reflection_b', 'p_reflection_c', 'p_reflection_s', 'p_reflection_q', 'p_reflection_e', 'reflection')),
+    Kind('RestoreAgility', Effect(74, 3), Potion5('p_restore_agility_b_A1_8', 'p_restore_agility_c_A1_8', 'p_restore_agility_s_A1_8', 'p_restore_agility_q_A1_8', 'p_restore_agility_e_A1_8', 'p_restore_agility_b', 'p_restore_agility_c', 'p_restore_agility_s', 'p_restore_agility_q', 'p_restore_agility_e', 'restore_agility')),
+    Kind('RestoreEndur', Effect(74, 5), Potion5('p_restore_endurance_b_A1_8', 'p_restore_endurance_c_A1_8', 'p_restore_endurance_s_A1_8', 'p_restore_endurance_q_A1_8', 'p_restore_endurance_e_A1_8', 'p_restore_endurance_b', 'p_restore_endurance_c', 'p_restore_endurance_s', 'p_restore_endurance_q', 'p_restore_endurance_e', 'restore_endurance')),
+    Kind('RestoreIntel', Effect(74, 1), Potion5('p_restore_intelligence_b_A1_8', 'p_restore_intelligence_c_A1_8', 'p_restore_intelligence_s_A1_8', 'p_restore_intelligence_q_A1_8', 'p_restore_intelligence_e_A1_8', 'p_restore_intelligence_b', 'p_restore_intelligence_c', 'p_restore_intelligence_s', 'p_restore_intelligence_q', 'p_restore_intelligence_e', 'restore_intelligence')),
+    Kind('RestoreLuck', Effect(74, 7), Potion5('p_restore_luck_b_A1_8', 'p_restore_luck_c_A1_8', 'p_restore_luck_s_A1_8', 'p_restore_luck_q_A1_8', 'p_restore_luck_e_A1_8', 'p_restore_luck_b', 'p_restore_luck_c', 'p_restore_luck_s', 'p_restore_luck_q', 'p_restore_luck_e', 'restore_luck')),
+    Kind('RestoreSpeed', Effect(74, 4), Potion5('p_restore_speed_b_A1_8', 'p_restore_speed_c_A1_8', 'p_restore_speed_s_A1_8', 'p_restore_speed_q_A1_8', 'p_restore_speed_e_A1_8', 'p_restore_speed_b', 'p_restore_speed_c', 'p_restore_speed_s', 'p_restore_speed_q', 'p_restore_speed_e', 'restore_speed')),
+    Kind('RestoreStr', Effect(74, 0), Potion5('p_restore_strength_b_A1_8', 'p_restore_strength_c_A1_8', 'p_restore_strength_s_A1_8', 'p_restore_strength_q_A1_8', 'p_restore_strength_e_A1_8', 'p_restore_strength_b', 'p_restore_strength_c', 'p_restore_strength_s', 'p_restore_strength_q', 'p_restore_strength_e', 'restore_strength')),
+    Kind('RestoreWill', Effect(74, 2), Potion5('p_restore_willpower_b_A1_8', 'p_restore_willpower_c_A1_8', 'p_restore_willpower_s_A1_8', 'p_restore_willpower_q_A1_8', 'p_restore_willpower_e_A1_8', 'p_restore_willpower_b', 'p_restore_willpower_c', 'p_restore_willpower_s', 'p_restore_willpower_q', 'p_restore_willpower_e', 'restore_willpower')),
+    Kind('SpellAbs', Effect(67, None), Potion5('p_spell_absorption_b_A1_8', 'p_spell_absorption_c_A1_8', 'p_spell_absorption_s_A1_8', 'p_spell_absorption_q_A1_8', 'p_spell_absorption_e_A1_8', 'p_spell_absorption_b', 'p_spell_absorption_c', 'p_spell_absorption_s', 'p_spell_absorption_q', 'p_spell_absorption_e', 'spell_absorption')),
+    Kind('SwitfSwim', Effect(1, None), Potion5('p_swift_swim_b_A1_8', 'p_swift_swim_c_A1_8', 'p_swift_swim_s_A1_8', 'p_swift_swim_q_A1_8', 'p_swift_swim_e_A1_8', 'p_swift_swim_b', 'p_swift_swim_c', 'p_swift_swim_s_A1', 'p_swift_swim_q', 'p_swift_swim_e', 'swift_swim')),
+    Kind('Mark', Effect(60, None), Potion2('p_mark_s_A1_16', 'p_mark_s', 'mark', 40)),
+    Kind('Recall', Effect(61, None), Potion2('p_recall_s_A1_16', 'p_recall_s', 'recall', 80)),
+    Kind('ResCom', Effect(94, None), Potion5('p_disease_resistance_b_A1_8', 'p_disease_resistance_c_A1_8', 'p_disease_resistance_s_A1_8', 'p_disease_resistance_q_A1_8', 'p_disease_resistance_e_A1_8', 'p_disease_resistance_b', 'p_disease_resistance_c', 'p_disease_resistance_s', 'p_disease_resistance_q', 'p_disease_resistance_e', 'disease_resistance')),
 ]
-
-std_kinds = [
-    Kind(49, 'ResCom', Effect(94, None), Potion5('p_disease_resistance_b_A1_8', 'p_disease_resistance_c_A1_8', 'p_disease_resistance_s_A1_8', 'p_disease_resistance_q_A1_8', 'p_disease_resistance_e_A1_8', 'p_disease_resistance_b', 'p_disease_resistance_c', 'p_disease_resistance_s', 'p_disease_resistance_q', 'p_disease_resistance_e', 'disease_resistance')),
-]
-
-eva_kinds = [
-    Kind(49, 'Mark', Effect(60, None), Potion2('p_mark_s_A1_16', 'p_mark_s', 'mark', 40)),
-    Kind(50, 'Recall', Effect(61, None), Potion2('p_recall_s_A1_16', 'p_recall_s', 'recall', 80)),
-    Kind(51, 'ResCom', Effect(94, None), Potion5('p_disease_resistance_b_A1_8', 'p_disease_resistance_c_A1_8', 'p_disease_resistance_s_A1_8', 'p_disease_resistance_q_A1_8', 'p_disease_resistance_e_A1_8', 'p_disease_resistance_b', 'p_disease_resistance_c', 'p_disease_resistance_s', 'p_disease_resistance_q', 'p_disease_resistance_e', 'disease_resistance')),
-]
-
-kinds = list(chain(base_kinds, std_kinds))
-kinds_eva = list(chain(base_kinds, eva_kinds))
 
 positive_effects = list(map(lambda x: x.effect, kinds))
-positive_effects_eva = list(map(lambda x: x.effect, kinds_eva))
 
-def effect_value(effect, eva):
+def effect_value(effect):
     if effect in negative_effects:
         return -1
-    if effect in (neutral_effects_eva if eva else neutral_effects):
+    if effect in neutral_effects:
         return 0
-    if effect in (positive_effects_eva if eva else positive_effects):
+    if effect in positive_effects:
         return 1
     print('unknown effect ' + str(effect))
     sys.exit(1)
@@ -234,8 +205,8 @@ def parse_tes3(path):
                 if not scri:
                     yield Ingredient(name, modl, itex, effects)
 
-def same_group(ingr1, ingr2, eva):
-    return same_ingr(ingr1, ingr2) or list(filter(lambda x: x[0] == x[1] and x[0] != None and effect_value(x[0], eva) < 0, product(ingr1.effects, ingr2.effects)))
+def same_group(ingr1, ingr2):
+    return same_ingr(ingr1, ingr2) or list(filter(lambda x: x[0] == x[1] and x[0] != None and effect_value(x[0]) < 0, product(ingr1.effects, ingr2.effects)))
 
 def pair_level(pair, kind):
     l1 = ingr_level(pair[0], kind)
@@ -245,10 +216,10 @@ def pair_level(pair, kind):
     else:
         return l1
 
-def filter_and_group_ingredients(ingrs, kind, eva):
+def filter_and_group_ingredients(ingrs, kind):
     ingrs = list(filter(lambda i: kind.effect in i.effects, ingrs))
     links = list(map(lambda i: set([i]), range(0, len(ingrs))))
-    for pair in filter(lambda pair: same_group(ingrs[pair[0]], ingrs[pair[1]], eva), combinations(range(0, len(ingrs)), 2)):
+    for pair in filter(lambda pair: same_group(ingrs[pair[0]], ingrs[pair[1]]), combinations(range(0, len(ingrs)), 2)):
         group = links[pair[0]] | links[pair[1]]
         links[pair[0]] = group
         links[pair[1]] = group
@@ -260,7 +231,7 @@ def filter_and_group_ingredients(ingrs, kind, eva):
         else:
             groups.append([i])
     groups.sort(key=len, reverse=True)
-    special_pairs = list(chain.from_iterable(map(lambda group: filter(lambda pair: not same_group(ingrs[pair[0]], ingrs[pair[1]], eva), combinations(group, 2)), groups)))
+    special_pairs = list(chain.from_iterable(map(lambda group: filter(lambda pair: not same_group(ingrs[pair[0]], ingrs[pair[1]]), combinations(group, 2)), groups)))
     if len(groups) < 2:
         groups = []
     elif len(groups) == 2 and len(groups[0]) == 1 and len(groups[1]) == 1:
@@ -271,10 +242,10 @@ def filter_and_group_ingredients(ingrs, kind, eva):
         list(sorted(map(lambda s: (ingrs[s[0]], ingrs[s[1]]), special_pairs), key=lambda p: pair_level(p, kind)))
     )
 
-def gen_add_script(kind, ingrs, level, eva):
+def gen_add_script(kind, ingrs, level, index):
     (groups, pairs) = ingrs
-    add_name = 'A1V6_AAdd' + str(kind.index) + '_' + kind.name + '_' + str(level)
-    check_name = 'A1V6_ACheck' + str(kind.index) + '_' + kind.name + '_sc'
+    add_name = 'A1V6_AAdd' + str(index) + '_' + kind.name + '_' + str(level)
+    check_name = 'A1V6_ACheck' + str(index) + '_' + kind.name + '_sc'
     s = open(add_name, 'w')
     s.write('SCTX\n')
     s.write('    Begin ' + add_name + '\n')
@@ -439,7 +410,7 @@ def gen_add_script(kind, ingrs, level, eva):
     s.write('    End\n')
     return add_name
 
-def gen_check2_script(kind, ingrs, eva):
+def gen_check_script(kind, ingrs, index, next_kind):
     (groups, pairs) = ingrs
     ingrs_15 = ingrs_has_level(ingrs, 15, kind)
     ingrs_30 = ingrs_has_level(ingrs, 30, kind)
@@ -453,7 +424,7 @@ def gen_check2_script(kind, ingrs, eva):
     groups_has_30 = len(groups_filter_level(groups, 30, kind)) >= 2
     groups_has_45 = len(groups_filter_level(groups, 45, kind)) >= 2
     groups_has_60 = len(groups_filter_level(groups, 60, kind)) >= 2
-    check_name = 'A1V6_ACheck' + str(kind.index) + '_' + kind.name + '_sc'
+    check_name = 'A1V6_ACheck' + str(index) + '_' + kind.name + '_sc'
     s = open(check_name, 'w')
     s.write('SCTX\n')
     s.write('    Begin ' + check_name + '\n')
@@ -471,95 +442,207 @@ def gen_check2_script(kind, ingrs, eva):
     if len(pairs) > 1:
         s.write('    short pair\n')
     s.write('    \n')
-    s.write('    if ( AddPotion == 1 )\n')
-    s.write('    	if ( A1V6_PotionB == 1 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 1\n')
-    s.write('    	elseif ( A1V6_PotionB == 2 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 2\n')
-    s.write('    	elseif ( A1V6_PotionB == 3 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 3\n')
-    s.write('    	elseif ( A1V6_PotionB == 4 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 4\n')
-    s.write('    	elseif ( A1V6_PotionB == 5 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 5\n')
-    s.write('    	elseif ( A1V6_PotionB == 6 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 6\n')
-    s.write('    	elseif ( A1V6_PotionB == 7 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 7\n')
-    s.write('    	elseif ( A1V6_PotionB == 8 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 8\n')
-    s.write('    	endif\n')
-    s.write('    	if ( A1V6_PotionC == 1 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 1\n')
-    s.write('    	elseif ( A1V6_PotionC == 2 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 2\n')
-    s.write('    	elseif ( A1V6_PotionC == 3 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 3\n')
-    s.write('    	elseif ( A1V6_PotionC == 4 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 4\n')
-    s.write('    	elseif ( A1V6_PotionC == 5 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 5\n')
-    s.write('    	elseif ( A1V6_PotionC == 6 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 6\n')
-    s.write('    	elseif ( A1V6_PotionC == 7 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 7\n')
-    s.write('    	elseif ( A1V6_PotionC == 8 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 8\n')
-    s.write('    	endif\n')
-    s.write('    	if ( A1V6_PotionS == 1 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 1\n')
-    s.write('    	elseif ( A1V6_PotionS == 2 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 2\n')
-    s.write('    	elseif ( A1V6_PotionS == 3 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 3\n')
-    s.write('    	elseif ( A1V6_PotionS == 4 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 4\n')
-    s.write('    	elseif ( A1V6_PotionS == 5 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 5\n')
-    s.write('    	elseif ( A1V6_PotionS == 6 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 6\n')
-    s.write('    	elseif ( A1V6_PotionS == 7 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 7\n')
-    s.write('    	elseif ( A1V6_PotionS == 8 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 8\n')
-    s.write('    	endif\n')
-    s.write('    	if ( A1V6_PotionQ == 1 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 1\n')
-    s.write('    	elseif ( A1V6_PotionQ == 2 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 2\n')
-    s.write('    	elseif ( A1V6_PotionQ == 3 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 3\n')
-    s.write('    	elseif ( A1V6_PotionQ == 4 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 4\n')
-    s.write('    	elseif ( A1V6_PotionQ == 5 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 5\n')
-    s.write('    	elseif ( A1V6_PotionQ == 6 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 6\n')
-    s.write('    	elseif ( A1V6_PotionQ == 7 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 7\n')
-    s.write('    	elseif ( A1V6_PotionQ == 8 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 8\n')
-    s.write('    	endif\n')
-    s.write('    endif\n')
-    s.write('    \n')
-    s.write('    set AddPotion to 0\n')
-    s.write('    \n')
-    s.write('    if ( player->GetItemCount ' + kind.potion.id_1_16 + ' >= 16 )\n')
-    s.write('    	player->AddItem ' + kind.potion.id_1 + ', 1\n')
-    s.write('    	player->RemoveItem ' + kind.potion.id_1_16 + ', 16\n')
-    s.write('    endif\n')
-    s.write('    if ( player->GetItemCount ' + kind.potion.id_1_16 + ' >= 16 )\n')
-    s.write('    	player->AddItem ' + kind.potion.id_1 + ', 1\n')
-    s.write('    	player->RemoveItem ' + kind.potion.id_1_16 + ', 16\n')
-    s.write('    endif\n')
-    s.write('    if ( player->GetItemCount ' + kind.potion.id_1_16 + ' >= 16 )\n')
-    s.write('    	player->AddItem ' + kind.potion.id_1 + ', 1\n')
-    s.write('    	player->RemoveItem ' + kind.potion.id_1_16 + ', 16\n')
-    s.write('    endif\n')
-    s.write('    if ( player->GetItemCount ' + kind.potion.id_1_16 + ' >= 16 )\n')
-    s.write('    	player->AddItem ' + kind.potion.id_1 + ', 1\n')
-    s.write('    	player->RemoveItem ' + kind.potion.id_1_16 + ', 16\n')
-    s.write('    endif\n')
+    if type(kind.potion) == Potion2:
+        s.write('    if ( AddPotion == 1 )\n')
+        s.write('    	if ( A1V6_PotionB == 1 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 1\n')
+        s.write('    	elseif ( A1V6_PotionB == 2 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 2\n')
+        s.write('    	elseif ( A1V6_PotionB == 3 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 3\n')
+        s.write('    	elseif ( A1V6_PotionB == 4 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 4\n')
+        s.write('    	elseif ( A1V6_PotionB == 5 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 5\n')
+        s.write('    	elseif ( A1V6_PotionB == 6 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 6\n')
+        s.write('    	elseif ( A1V6_PotionB == 7 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 7\n')
+        s.write('    	elseif ( A1V6_PotionB == 8 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 8\n')
+        s.write('    	endif\n')
+        s.write('    	if ( A1V6_PotionC == 1 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 1\n')
+        s.write('    	elseif ( A1V6_PotionC == 2 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 2\n')
+        s.write('    	elseif ( A1V6_PotionC == 3 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 3\n')
+        s.write('    	elseif ( A1V6_PotionC == 4 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 4\n')
+        s.write('    	elseif ( A1V6_PotionC == 5 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 5\n')
+        s.write('    	elseif ( A1V6_PotionC == 6 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 6\n')
+        s.write('    	elseif ( A1V6_PotionC == 7 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 7\n')
+        s.write('    	elseif ( A1V6_PotionC == 8 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 8\n')
+        s.write('    	endif\n')
+        s.write('    	if ( A1V6_PotionS == 1 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 1\n')
+        s.write('    	elseif ( A1V6_PotionS == 2 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 2\n')
+        s.write('    	elseif ( A1V6_PotionS == 3 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 3\n')
+        s.write('    	elseif ( A1V6_PotionS == 4 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 4\n')
+        s.write('    	elseif ( A1V6_PotionS == 5 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 5\n')
+        s.write('    	elseif ( A1V6_PotionS == 6 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 6\n')
+        s.write('    	elseif ( A1V6_PotionS == 7 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 7\n')
+        s.write('    	elseif ( A1V6_PotionS == 8 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 8\n')
+        s.write('    	endif\n')
+        s.write('    	if ( A1V6_PotionQ == 1 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 1\n')
+        s.write('    	elseif ( A1V6_PotionQ == 2 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 2\n')
+        s.write('    	elseif ( A1V6_PotionQ == 3 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 3\n')
+        s.write('    	elseif ( A1V6_PotionQ == 4 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 4\n')
+        s.write('    	elseif ( A1V6_PotionQ == 5 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 5\n')
+        s.write('    	elseif ( A1V6_PotionQ == 6 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 6\n')
+        s.write('    	elseif ( A1V6_PotionQ == 7 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 7\n')
+        s.write('    	elseif ( A1V6_PotionQ == 8 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_1_16 + ', 8\n')
+        s.write('    	endif\n')
+        s.write('    endif\n')
+        s.write('    \n')
+        s.write('    set AddPotion to 0\n')
+        s.write('    \n')
+        s.write('    if ( player->GetItemCount ' + kind.potion.id_1_16 + ' >= 16 )\n')
+        s.write('    	player->AddItem ' + kind.potion.id_1 + ', 1\n')
+        s.write('    	player->RemoveItem ' + kind.potion.id_1_16 + ', 16\n')
+        s.write('    endif\n')
+        s.write('    if ( player->GetItemCount ' + kind.potion.id_1_16 + ' >= 16 )\n')
+        s.write('    	player->AddItem ' + kind.potion.id_1 + ', 1\n')
+        s.write('    	player->RemoveItem ' + kind.potion.id_1_16 + ', 16\n')
+        s.write('    endif\n')
+        s.write('    if ( player->GetItemCount ' + kind.potion.id_1_16 + ' >= 16 )\n')
+        s.write('    	player->AddItem ' + kind.potion.id_1 + ', 1\n')
+        s.write('    	player->RemoveItem ' + kind.potion.id_1_16 + ', 16\n')
+        s.write('    endif\n')
+        s.write('    if ( player->GetItemCount ' + kind.potion.id_1_16 + ' >= 16 )\n')
+        s.write('    	player->AddItem ' + kind.potion.id_1 + ', 1\n')
+        s.write('    	player->RemoveItem ' + kind.potion.id_1_16 + ', 16\n')
+        s.write('    endif\n')
+    else:
+        s.write('    if ( AddPotion == 1 )\n')
+        s.write('    	if ( A1V6_PotionB == 1 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 1\n')
+        s.write('    	elseif ( A1V6_PotionB == 2 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 2\n')
+        s.write('    	elseif ( A1V6_PotionB == 3 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 3\n')
+        s.write('    	elseif ( A1V6_PotionB == 4 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 4\n')
+        s.write('    	elseif ( A1V6_PotionB == 5 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 5\n')
+        s.write('    	elseif ( A1V6_PotionB == 6 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 6\n')
+        s.write('    	elseif ( A1V6_PotionB == 7 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 7\n')
+        s.write('    	elseif ( A1V6_PotionB == 8 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 8\n')
+        s.write('    	endif\n')
+        s.write('    	if ( A1V6_PotionC == 1 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 1\n')
+        s.write('    	elseif ( A1V6_PotionC == 2 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 2\n')
+        s.write('    	elseif ( A1V6_PotionC == 3 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 3\n')
+        s.write('    	elseif ( A1V6_PotionC == 4 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 4\n')
+        s.write('    	elseif ( A1V6_PotionC == 5 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 5\n')
+        s.write('    	elseif ( A1V6_PotionC == 6 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 6\n')
+        s.write('    	elseif ( A1V6_PotionC == 7 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 7\n')
+        s.write('    	elseif ( A1V6_PotionC == 8 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 8\n')
+        s.write('    	endif\n')
+        s.write('    	if ( A1V6_PotionS == 1 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 1\n')
+        s.write('    	elseif ( A1V6_PotionS == 2 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 2\n')
+        s.write('    	elseif ( A1V6_PotionS == 3 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 3\n')
+        s.write('    	elseif ( A1V6_PotionS == 4 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 4\n')
+        s.write('    	elseif ( A1V6_PotionS == 5 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 5\n')
+        s.write('    	elseif ( A1V6_PotionS == 6 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 6\n')
+        s.write('    	elseif ( A1V6_PotionS == 7 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 7\n')
+        s.write('    	elseif ( A1V6_PotionS == 8 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 8\n')
+        s.write('    	endif\n')
+        s.write('    	if ( A1V6_PotionQ == 1 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 1\n')
+        s.write('    	elseif ( A1V6_PotionQ == 2 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 2\n')
+        s.write('    	elseif ( A1V6_PotionQ == 3 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 3\n')
+        s.write('    	elseif ( A1V6_PotionQ == 4 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 4\n')
+        s.write('    	elseif ( A1V6_PotionQ == 5 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 5\n')
+        s.write('    	elseif ( A1V6_PotionQ == 6 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 6\n')
+        s.write('    	elseif ( A1V6_PotionQ == 7 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 7\n')
+        s.write('    	elseif ( A1V6_PotionQ == 8 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 8\n')
+        s.write('    	endif\n')
+        s.write('    	if ( A1V6_PotionE == 1 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 1\n')
+        s.write('    	elseif ( A1V6_PotionE == 2 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 2\n')
+        s.write('    	elseif ( A1V6_PotionE == 3 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 3\n')
+        s.write('    	elseif ( A1V6_PotionE == 4 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 4\n')
+        s.write('    	elseif ( A1V6_PotionE == 5 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 5\n')
+        s.write('    	elseif ( A1V6_PotionE == 6 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 6\n')
+        s.write('    	elseif ( A1V6_PotionE == 7 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 7\n')
+        s.write('    	elseif ( A1V6_PotionE == 8 )\n')
+        s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 8\n')
+        s.write('    	endif\n')
+        s.write('    endif\n')        
+        s.write('    \n')
+        s.write('    set AddPotion to 0\n')
+        s.write('    \n')
+        s.write('    if ( player->GetItemCount ' + kind.potion.id_broken_1_8 + ' >= 8 )\n')
+        s.write('    	player->AddItem ' + kind.potion.id_broken_1 + ', 1\n')
+        s.write('    	player->RemoveItem ' + kind.potion.id_broken_1_8 + ', 8\n')
+        s.write('    endif\n')
+        s.write('    if ( player->GetItemCount ' + kind.potion.id_cheap_1_8 + ' >= 8 )\n')
+        s.write('    	player->AddItem ' + kind.potion.id_cheap_1 + ', 1\n')
+        s.write('    	player->RemoveItem ' + kind.potion.id_cheap_1_8 + ', 8\n')
+        s.write('    endif\n')
+        s.write('    if ( player->GetItemCount ' + kind.potion.id_standard_1_8 + ' >= 8 )\n')
+        s.write('    	player->AddItem ' + kind.potion.id_standard_1 + ', 1\n')
+        s.write('    	player->RemoveItem ' + kind.potion.id_standard_1_8 + ', 8\n')
+        s.write('    endif\n')
+        s.write('    if ( player->GetItemCount ' + kind.potion.id_qualitative_1_8 + ' >= 8 )\n')
+        s.write('    	player->AddItem ' + kind.potion.id_qualitative_1 + ', 1\n')
+        s.write('    	player->RemoveItem ' + kind.potion.id_qualitative_1_8 + ', 8\n')
+        s.write('    endif\n')
+        s.write('    if ( player->GetItemCount ' + kind.potion.id_exclusive_1_8 + ' >= 8 )\n')
+        s.write('    	player->AddItem ' + kind.potion.id_exclusive_1 + ', 1\n')
+        s.write('    	player->RemoveItem ' + kind.potion.id_exclusive_1_8 + ', 8\n')
+        s.write('    endif\n')
     s.write('    \n')
     s.write('    ')
     if ingrs_15:
@@ -675,10 +758,7 @@ def gen_check2_script(kind, ingrs, eva):
         s.write('    endif\n')
     s.write('    \n')
     s.write('    StopScript ' + check_name + '\n')
-    all_kinds = kinds_eva if eva else kinds
-    if kind.index < len(all_kinds):
-        s.write('    StartScript A1V6_ACheck' + str(kind.index + 1) + '_' + all_kinds[kind.index].name + '_sc\n')
-    else:
+    if next_kind == None:
         s.write('    if ( A1V6_AlchemyRes == 0 )\n')
         s.write('    	MessageBox "Готово"\n')
         s.write('    elseif ( A1V6_AlchemyRes == 1 )\n')
@@ -687,290 +767,19 @@ def gen_check2_script(kind, ingrs, eva):
         s.write('    	PlaySound "potion fail"\n')
         s.write('    endif\n')
         s.write('    set A1V6_AlchemyRes to 0\n')
-    s.write('    \n')
-    s.write('    End\n')
-    return check_name
-
-def gen_check5_script(kind, ingrs, eva):
-    (groups, pairs) = ingrs
-    ingrs_15 = ingrs_has_level(ingrs, 15, kind)
-    ingrs_30 = ingrs_has_level(ingrs, 30, kind)
-    ingrs_45 = ingrs_has_level(ingrs, 45, kind)
-    ingrs_60 = ingrs_has_level(ingrs, 60, kind)
-    groups_15 = groups_has_ingrs_with_level(groups, 15, kind)
-    groups_30 = groups_has_ingrs_with_level(groups, 30, kind)
-    groups_45 = groups_has_ingrs_with_level(groups, 45, kind)
-    groups_60 = groups_has_ingrs_with_level(groups, 60, kind)
-    groups_has_15 = len(groups_filter_level(groups, 15, kind)) >= 2
-    groups_has_30 = len(groups_filter_level(groups, 30, kind)) >= 2
-    groups_has_45 = len(groups_filter_level(groups, 45, kind)) >= 2
-    groups_has_60 = len(groups_filter_level(groups, 60, kind)) >= 2
-    check_name = 'A1V6_ACheck' + str(kind.index) + '_' + kind.name + '_sc'
-    s = open(check_name, 'w')
-    s.write('SCTX\n')
-    s.write('    Begin ' + check_name + '\n')
-    s.write('    \n')
-    s.write('    short AddPotion\n')
-    if groups:
-        if groups_15:
-            s.write('    short in15\n')
-        if groups_30:
-            s.write('    short in30\n')
-        if groups_45:
-            s.write('    short in45\n')
-        if groups_60:
-            s.write('    short in60\n')
-    if len(pairs) > 1:
-        s.write('    short pair\n')
-    s.write('    \n')
-    s.write('    if ( AddPotion == 1 )\n')
-    s.write('    	if ( A1V6_PotionB == 1 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 1\n')
-    s.write('    	elseif ( A1V6_PotionB == 2 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 2\n')
-    s.write('    	elseif ( A1V6_PotionB == 3 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 3\n')
-    s.write('    	elseif ( A1V6_PotionB == 4 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 4\n')
-    s.write('    	elseif ( A1V6_PotionB == 5 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 5\n')
-    s.write('    	elseif ( A1V6_PotionB == 6 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 6\n')
-    s.write('    	elseif ( A1V6_PotionB == 7 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 7\n')
-    s.write('    	elseif ( A1V6_PotionB == 8 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_broken_1_8 + ', 8\n')
-    s.write('    	endif\n')
-    s.write('    	if ( A1V6_PotionC == 1 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 1\n')
-    s.write('    	elseif ( A1V6_PotionC == 2 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 2\n')
-    s.write('    	elseif ( A1V6_PotionC == 3 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 3\n')
-    s.write('    	elseif ( A1V6_PotionC == 4 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 4\n')
-    s.write('    	elseif ( A1V6_PotionC == 5 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 5\n')
-    s.write('    	elseif ( A1V6_PotionC == 6 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 6\n')
-    s.write('    	elseif ( A1V6_PotionC == 7 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 7\n')
-    s.write('    	elseif ( A1V6_PotionC == 8 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_cheap_1_8 + ', 8\n')
-    s.write('    	endif\n')
-    s.write('    	if ( A1V6_PotionS == 1 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 1\n')
-    s.write('    	elseif ( A1V6_PotionS == 2 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 2\n')
-    s.write('    	elseif ( A1V6_PotionS == 3 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 3\n')
-    s.write('    	elseif ( A1V6_PotionS == 4 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 4\n')
-    s.write('    	elseif ( A1V6_PotionS == 5 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 5\n')
-    s.write('    	elseif ( A1V6_PotionS == 6 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 6\n')
-    s.write('    	elseif ( A1V6_PotionS == 7 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 7\n')
-    s.write('    	elseif ( A1V6_PotionS == 8 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_standard_1_8 + ', 8\n')
-    s.write('    	endif\n')
-    s.write('    	if ( A1V6_PotionQ == 1 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 1\n')
-    s.write('    	elseif ( A1V6_PotionQ == 2 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 2\n')
-    s.write('    	elseif ( A1V6_PotionQ == 3 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 3\n')
-    s.write('    	elseif ( A1V6_PotionQ == 4 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 4\n')
-    s.write('    	elseif ( A1V6_PotionQ == 5 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 5\n')
-    s.write('    	elseif ( A1V6_PotionQ == 6 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 6\n')
-    s.write('    	elseif ( A1V6_PotionQ == 7 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 7\n')
-    s.write('    	elseif ( A1V6_PotionQ == 8 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_qualitative_1_8 + ', 8\n')
-    s.write('    	endif\n')
-    s.write('    	if ( A1V6_PotionE == 1 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 1\n')
-    s.write('    	elseif ( A1V6_PotionE == 2 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 2\n')
-    s.write('    	elseif ( A1V6_PotionE == 3 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 3\n')
-    s.write('    	elseif ( A1V6_PotionE == 4 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 4\n')
-    s.write('    	elseif ( A1V6_PotionE == 5 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 5\n')
-    s.write('    	elseif ( A1V6_PotionE == 6 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 6\n')
-    s.write('    	elseif ( A1V6_PotionE == 7 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 7\n')
-    s.write('    	elseif ( A1V6_PotionE == 8 )\n')
-    s.write('    		player->AddItem ' + kind.potion.id_exclusive_1_8 + ', 8\n')
-    s.write('    	endif\n')
-    s.write('    endif\n')
-    s.write('    \n')
-    s.write('    set AddPotion to 0\n')
-    s.write('    \n')
-    s.write('    if ( player->GetItemCount ' + kind.potion.id_broken_1_8 + ' >= 8 )\n')
-    s.write('    	player->AddItem ' + kind.potion.id_broken_1 + ', 1\n')
-    s.write('    	player->RemoveItem ' + kind.potion.id_broken_1_8 + ', 8\n')
-    s.write('    endif\n')
-    s.write('    if ( player->GetItemCount ' + kind.potion.id_cheap_1_8 + ' >= 8 )\n')
-    s.write('    	player->AddItem ' + kind.potion.id_cheap_1 + ', 1\n')
-    s.write('    	player->RemoveItem ' + kind.potion.id_cheap_1_8 + ', 8\n')
-    s.write('    endif\n')
-    s.write('    if ( player->GetItemCount ' + kind.potion.id_standard_1_8 + ' >= 8 )\n')
-    s.write('    	player->AddItem ' + kind.potion.id_standard_1 + ', 1\n')
-    s.write('    	player->RemoveItem ' + kind.potion.id_standard_1_8 + ', 8\n')
-    s.write('    endif\n')
-    s.write('    if ( player->GetItemCount ' + kind.potion.id_qualitative_1_8 + ' >= 8 )\n')
-    s.write('    	player->AddItem ' + kind.potion.id_qualitative_1 + ', 1\n')
-    s.write('    	player->RemoveItem ' + kind.potion.id_qualitative_1_8 + ', 8\n')
-    s.write('    endif\n')
-    s.write('    if ( player->GetItemCount ' + kind.potion.id_exclusive_1_8 + ' >= 8 )\n')
-    s.write('    	player->AddItem ' + kind.potion.id_exclusive_1 + ', 1\n')
-    s.write('    	player->RemoveItem ' + kind.potion.id_exclusive_1_8 + ', 8\n')
-    s.write('    endif\n')
-    s.write('    \n')
-    s.write('    ')
-    if ingrs_15:
-        s.write('if ( player->GetItemCount "A1V6_L15_' + kind.potion.id_base + '" == 1 )\n')
-        s.write('    	player->RemoveItem "A1V6_L15_' + kind.potion.id_base + '", 1\n')
-        if ingrs_30 or ingrs_45 or ingrs_60:
-            s.write('    else')
-    if ingrs_30:
-        s.write('if ( player->GetItemCount "A1V6_L30_' + kind.potion.id_base + '" == 1 )\n')
-        s.write('    	player->RemoveItem "A1V6_L30_' + kind.potion.id_base + '", 1\n')
-        if ingrs_45 or ingrs_60:
-            s.write('    else')
-    if ingrs_45:
-        s.write('if ( player->GetItemCount "A1V6_L45_' + kind.potion.id_base + '" == 1 )\n')
-        s.write('    	player->RemoveItem "A1V6_L45_' + kind.potion.id_base + '", 1\n')
-        if ingrs_60:
-            s.write('    else')
-    if ingrs_60:
-        s.write('if ( player->GetItemCount "A1V6_L60_' + kind.potion.id_base + '" == 1 )\n')
-        s.write('    	player->RemoveItem "A1V6_L60_' + kind.potion.id_base + '", 1\n')
-    s.write('    endif\n')
-    s.write('    \n')
-    if groups:
-        if groups_15:
-            s.write('    set in15 to 0\n')
-        if groups_30:
-            s.write('    set in30 to 0\n')
-        if groups_45:
-            s.write('    set in45 to 0\n')
-        if groups_60:
-            s.write('    set in60 to 0\n')
-        s.write('    \n')
-        was_level = [ False, False, False, False ]
-        for g in range(0, len(groups)):
-            for i in range(0, len(groups[g])):
-                if i == 0:
-                    s.write('    if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
-                else:
-                    s.write('    elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )\n')
-                level = ingr_level(groups[g][i], kind)
-                level_index = level // 15 - 1
-                if was_level[level_index]:
-                    s.write('    	set in' + str(level) + ' to ( in' + str(level) + ' + 1 )\n')
-                else:
-                    was_level[level_index] = True
-                    s.write('    	set in' + str(level) + ' to 1\n')
-            s.write('    endif\n')
-        s.write('    \n')
-        if groups_30 and groups_15:
-            s.write('    set in30 to ( in30 + in15 )\n')
-        if groups_45:
-            if groups_30:
-                s.write('    set in45 to ( in45 + in30 )\n')
-            elif groups_15:
-                s.write('    set in45 to ( in45 + in15 )\n')
-        if groups_60:
-            if groups_45:
-                s.write('    set in60 to ( in60 + in45 )\n')
-            elif groups_30:
-                s.write('    set in60 to ( in60 + in30 )\n')
-            elif groups_15:
-                s.write('    set in60 to ( in60 + in15 )\n')
-        s.write('    \n')
-        s.write('    ')
-        if groups_has_15:
-            s.write('if ( in15 > 1 )\n')
-            s.write('    	player->AddItem "A1V6_L15_' + kind.potion.id_base + '", 1\n')
-            if groups_has_30 or groups_has_45 or groups_has_60 or pairs:
-                s.write('    else')
-        if groups_has_30:
-            s.write('if ( in30 > 1 )\n')
-            s.write('    	player->AddItem "A1V6_L30_' + kind.potion.id_base + '", 1\n')
-            if groups_has_45 or groups_has_60 or pairs:
-                s.write('    else')
-        if groups_has_45:
-            s.write('if ( in45 > 1 )\n')
-            s.write('    	player->AddItem "A1V6_L45_' + kind.potion.id_base + '", 1\n')
-            if groups_has_60 or pairs:
-                s.write('    else')
-        if groups_has_60:
-            s.write('if ( in60 > 1 )\n')
-            s.write('    	player->AddItem "A1V6_L60_' + kind.potion.id_base + '", 1\n')
-            if pairs:
-                s.write('    else')
-    if pairs:
-        if groups:
-            s.write('\n')
-        tabs = '	' if groups else ''
-        if len(pairs) > 1:
-            s.write('    ' + tabs + 'set pair to 0\n')
-        n_pair = 0
-        for p in pairs:
-            n_pair += 1
-            if n_pair == 1:
-                s.write('    ' + tabs + 'if ( player->GetItemCount "' + p[0].name + '" > 0 )\n')
-                s.write('    ' + tabs + '	if ( player->GetItemCount "' + p[1].name + '" > 0 )\n')
-                s.write('    ' + tabs + '		player->AddItem "A1V6_L' + str(pair_level(p, kind)) + '_' + kind.potion.id_base + '", 1\n')
-                if n_pair < len(pairs):
-                    s.write('    ' + tabs + '		set pair to 1\n')
-                s.write('    ' + tabs + '	endif\n')
-                s.write('    ' + tabs + 'endif\n')
-            else:
-                s.write('    ' + tabs + 'if ( pair == 0 )\n')
-                s.write('    ' + tabs + '	if ( player->GetItemCount "' + p[0].name + '" > 0 )\n')
-                s.write('    ' + tabs + '		if ( player->GetItemCount "' + p[1].name + '" > 0 )\n')
-                s.write('    ' + tabs + '			player->AddItem "A1V6_L' + str(pair_level(p, kind)) + '_' + kind.potion.id_base + '", 1\n')
-                if n_pair < len(pairs):
-                    s.write('    ' + tabs + '			set pair to 1\n')
-                s.write('    ' + tabs + '		endif\n')
-                s.write('    ' + tabs + '	endif\n')
-                s.write('    ' + tabs + 'endif\n')
-    if groups:
-        s.write('    endif\n')
-    s.write('    \n')
-    s.write('    StopScript ' + check_name + '\n')
-    all_kinds = kinds_eva if eva else kinds
-    if kind.index < len(all_kinds):
-        s.write('    StartScript A1V6_ACheck' + str(kind.index + 1) + '_' + all_kinds[kind.index].name + '_sc\n')
     else:
-        s.write('    if ( A1V6_AlchemyRes == 0 )\n')
-        s.write('    	MessageBox "Готово"\n')
-        s.write('    elseif ( A1V6_AlchemyRes == 1 )\n')
-        s.write('    	PlaySound "potion success"\n')
-        s.write('    elseif ( A1V6_AlchemyRes == 2 )\n')
-        s.write('    	PlaySound "potion fail"\n')
-        s.write('    endif\n')
-        s.write('    set A1V6_AlchemyRes to 0\n')
+        s.write('    StartScript A1V6_ACheck' + str(index + 1) + '_' + next_kind.name + '_sc\n')
     s.write('    \n')
     s.write('    End\n')
     return check_name
 
-def gen_del_script(kind, ingrs, eva):
+def gen_del_script(kind, ingrs, index, next_kind):
     (groups, pairs) = ingrs
     ingrs_15 = ingrs_has_level(ingrs, 15, kind)
     ingrs_30 = ingrs_has_level(ingrs, 30, kind)
     ingrs_45 = ingrs_has_level(ingrs, 45, kind)
     ingrs_60 = ingrs_has_level(ingrs, 60, kind)
-    del_name = 'A1V6_ADel' + str(kind.index) + '_' + kind.name + '_sc'
+    del_name = 'A1V6_ADel' + str(index) + '_' + kind.name + '_sc'
     s = open(del_name, 'w')
     s.write('SCTX\n')
     s.write('    Begin ' + del_name + '\n')
@@ -997,11 +806,10 @@ def gen_del_script(kind, ingrs, eva):
     s.write('    endif\n')
     s.write('    \n')
     s.write('    StopScript ' + del_name + '\n')
-    all_kinds = kinds_eva if eva else kinds
-    if kind.index < len(all_kinds):
-        s.write('    StartScript A1V6_ADel' + str(kind.index + 1) + '_' + all_kinds[kind.index].name + '_sc\n')
-    else:
+    if next_kind == None:
         s.write('    StartScript A1V6_ADelPlus\n')
+    else:
+        s.write('    StartScript A1V6_ADel' + str(index + 1) + '_' + next_kind.name + '_sc\n')
     s.write('    \n')
     s.write('    End\n')
     return del_name
@@ -1048,7 +856,7 @@ def gen_level_str(value, level):
     print('error')
     exit(1)
 
-def gen_add_item(kind, level, eva):
+def gen_add_item(kind, level):
     add_name = 'A1V6_AAdd' + str(kind.index) + '_' + kind.name + '_' + str(level)
     header = 'INGR\n'
     name = 'NAME A1V6_L' + str(level) + '_' + kind.potion.id_base + '\n'
@@ -1090,19 +898,26 @@ add_items = []
 add_scripts = []
 check_scripts = []
 del_scripts = []
-for kind in kinds_eva if eva else kinds:
-    kind_ingrs = filter_and_group_ingredients((ingrs_eva if eva else ingrs).values(), kind, eva)
+useful_kinds = []
+index = 1
+for kind in kinds:
+    kind_ingrs = filter_and_group_ingredients((ingrs_eva if eva else ingrs).values(), kind)
+    is_useful = False
     for level in [15, 30, 45, 60]:
         level_ingrs = ingrs_filter_level(kind_ingrs, level, kind)
         if not ingrs_empty(level_ingrs):
-            add_items.append(gen_add_item(kind, level, eva))
-            add_scripts.append(gen_add_script(kind, level_ingrs, level, eva))
-    check_scripts.append(
-        gen_check2_script(kind, kind_ingrs, eva) if type(kind.potion) == Potion2 else
-        gen_check5_script(kind, kind_ingrs, eva)
-    )
-    del_scripts.append(gen_del_script(kind, kind_ingrs, eva))
-
+            is_useful = True
+            add_items.append(gen_add_item(kind, level))
+            add_scripts.append(gen_add_script(kind, level_ingrs, level, index))
+    if is_useful:
+        useful_kinds.append((kind, kind_ingrs))
+        index += 1
+for i in range(0, len(useful_kinds)):
+    index = i + 1
+    (kind, kind_ingrs) = useful_kinds[i]
+    next_kind = useful_kinds[i + 1][0] if i < len(useful_kinds) - 1 else None
+    check_scripts.append(gen_check_script(kind, kind_ingrs, index, next_kind))
+    del_scripts.append(gen_del_script(kind, kind_ingrs, index, next_kind))
 
 items_list = open('../' + ('items_eva' if eva else 'items'), 'w')
 items_list.writelines(add_items)
