@@ -3,7 +3,7 @@ from itertools import chain, product, combinations, count
 import os, sys, shutil
 from datetime import datetime
 from time import mktime
-from os import path, chdir, utime
+from os import path, chdir, utime, remove
 from sys import stdout, stderr
 import yaml
 import subprocess
