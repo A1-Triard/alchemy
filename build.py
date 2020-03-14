@@ -1010,7 +1010,7 @@ def main():
     if path.exists('ar'):
         rmtree('ar')
     mkdir('ar')
-    mkdir('ar/Data Files')
+    copytree('Data Files', 'ar/Data Files')
     copyfile('A1_Alchemy_Potions.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions.esp.yaml')
     copyfile('A1_Alchemy_DaeCursed.esp.yaml', 'ar/Data Files/A1_Alchemy_DaeCursed.esp.yaml')
     copyfile('A1_Alchemy_V6_Containers.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Containers.esp.yaml')

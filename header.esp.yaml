@@ -2738,7 +2738,7 @@
 - INGR:
     - NAME: A1V6_AlchemyActivator
     - MODL: "m\\misc_com_plate_03.nif"
-    - FNAM: _Проверить
+    - FNAM: _Обновить
     - IRDT:
         weight: 0.0
         value: 0
@@ -2755,7 +2755,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AlchemyActivator_sc
-    - ITEX: "l\\light_de_lantern_01.dds"
+    - ITEX: "n\\a1_alchemy_act.dds"
 - APPA:
     - NAME: A1V6_apparatus_a_alembic_e3
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
