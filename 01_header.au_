@@ -33,6 +33,8 @@ Else
     $pl = ControlListView("Data Files", "", 0x420, "FindItem", "alchemy_eva.esp", 0)
 EndIf
 _GUICtrlListView_ClickItem($list, $pl, "left", False, 2)
+ControlListView("Data Files", "", 0x420, "SelectClear")
+ControlListView("Data Files", "", 0x420, "Select", $pl)
 ControlClick("Data Files", "", 0x461, "left", 1)
 ControlClick("Data Files", "", 1, "left", 1)
 WinWait("[TITLE:Warning;CLASS:#32770]")

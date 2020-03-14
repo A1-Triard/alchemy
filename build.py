@@ -884,7 +884,7 @@ def gen_level_book(level):
     }
 
 def assembly_plugin(path, year, month, day, hour, minute, second, keep=False):
-    subprocess.run('espa -p ru -' + ('k' if keep else '') + 'v ' + path + '.yaml', stdout=stdout, stderr=stderr, check=True)
+    subprocess.run('espa -p ru -' + ('k' if keep else '') + 'v "' + path + '.yaml"', stdout=stdout, stderr=stderr, check=True)
     date = datetime(year=year, month=month, day=day, hour=hour, minute=minute, second=second)
     t = mktime(date.timetuple())
     utime(path, (t, t))
@@ -897,7 +897,7 @@ def find_mfr():
                 try:
                     (token, _) = winreg.QueryValueEx(key, 'HelpLink')
                     if token == 'http://www.fullrest.ru/forum/topic/36164-morrowind-fullrest-repack/':
-                        return winreg.QueryValueEx(key, 'InstallLocation')[0]
+                        return winreg.QueryValueEx(key, 'InstallLocation')[0] + 'Data Files/'
                 except FileNotFoundError:
                     pass
        
@@ -984,7 +984,7 @@ def gen_plugin(ingrs_set, mfr, year, month, day, hour, minute, second):
         au3.write(au3_close)
     run_au3('alchemy_' + ingrs_set + '.au3')
     remove('alchemy_' + ingrs_set + '.au3')
-    move(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '.esp')
+    copyfile(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '.esp')
     subprocess.run('espa -p ru -vd ' + 'A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '.esp', stdout=stdout, stderr=stderr, check=True)
 
 def check_espa_version():
@@ -1002,12 +1002,16 @@ def main():
     chdir(cd)
     check_espa_version()
     mfr = find_mfr()
-    copyfile('A1_Alchemy_Potions.esp.yaml', mfr + 'A1_Alchemy_Potions.esp.yaml')
-    assembly_plugin(mfr + 'A1_Alchemy_Potions.esp', 2014, 8, 3, 18, 53, 0)
+    copyfile('A1_Alchemy_Potions.esp.yaml', mfr + 'alchemy_potions.esp.yaml')
+    assembly_plugin(mfr + 'alchemy_potions.esp', 2014, 8, 3, 18, 53, 0)
     gen_plugin('std', mfr, 2014, 8, 10, 18, 53, 0)
-    assembly_plugin(mfr + 'A1_Alchemy_V6_Apparatus.esp', 2014, 8, 10, 18, 53, 0)
+    assembly_plugin('A1_Alchemy_V6_Apparatus.esp', 2014, 8, 10, 18, 53, 0, keep=True)
     gen_plugin('eva', mfr, 2097, 9, 1, 0, 0, 0)
-    assembly_plugin(mfr + 'A1_Alchemy_V6_Apparatus_EVA.esp', 2097, 9, 1, 0, 0, 0)
+    assembly_plugin('A1_Alchemy_V6_Apparatus_EVA.esp', 2097, 9, 1, 0, 0, 0, keep=True)
+    remove(mfr + 'alchemy_potions.esp')
+    assembly_plugin('A1_Alchemy_Potions.esp', 2014, 8, 3, 18, 53, 0, keep=True)
+    assembly_plugin('A1_Alchemy_DaeCursed.esp', 2014, 8, 2, 18, 53, 0, keep=True)
+    assembly_plugin('A1_Alchemy_V6_Containers.esp', 2014, 8, 15, 18, 53, 0, keep=True)
 
 if __name__ == "__main__":
     main()
