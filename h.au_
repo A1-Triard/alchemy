@@ -1,7 +1,0 @@
-#include <WinAPI.au3>
-
-$edit = WinActivate("Script Edit")
-ConsoleWrite("EDIT " & $edit & @CRLF)
-$edit_rect = _WinAPI_GetWindowRect($edit)
-$open_select = PixelSearch($edit_rect.Left, $edit_rect.Top, $edit_rect.Right, $edit_rect.Bottom, 0xFFFF00, 0, 1, $edit)
-$save = PixelSearch($edit_rect.Left, $edit_rect.Top, $edit_rect.Right, $edit_rect.Bottom, 0x808000, 0, 1, $edit)

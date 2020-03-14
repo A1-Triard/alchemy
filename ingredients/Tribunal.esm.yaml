@@ -1,0 +1,240 @@
+- INGR:
+    - NAME: ingred_russula_01
+    - MODL: "n\\Ingred_russula_01.NIF"
+    - FNAM: Светящаяся сыроежка
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 1
+        effect_1_index: WaterBreathing
+        effect_2_index: DrainFatigue
+        effect_3_index: Poison
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_russula_01.tga"
+- INGR:
+    - NAME: Ingred_horn_lily_bulb_01
+    - MODL: "n\\Ingred_horn_lily_bulb_01.NIF"
+    - FNAM: Луковица рогатой лилии
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: ResistParalysis
+        effect_2_index: DrainHealth
+        effect_3_index: RestoreAttribute
+        effect_4_index: RestoreAttribute
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: Strength
+        effect_4_attribute: Endurance
+    - ITEX: "n\\Tx_horn_lily_bulb_01.dds"
+- INGR:
+    - NAME: Ingred_nirthfly_stalks_01
+    - MODL: "n\\Ingred_nirthfly_stalks_01.NIF"
+    - FNAM: Ниртовая цветоножка
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: DamageHealth
+        effect_2_index: FortifyAttribute
+        effect_3_index: RestoreAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: Speed
+        effect_3_attribute: Speed
+        effect_4_attribute: Speed
+    - ITEX: "n\\Tx_nirthfly_stalks_01.dds"
+- INGR:
+    - NAME: Ingred_timsa-come-by_01
+    - MODL: "n\\Ingred_timsa-come-by_01.NIF"
+    - FNAM: Тимсовые цветы
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: Dispel
+        effect_2_index: ResistParalysis
+        effect_3_index: DrainSpellpoints
+        effect_4_index: RestoreAttribute
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Endurance
+    - ITEX: "n\\Tx_timsa-come-by_01.dds"
+- INGR:
+    - NAME: Ingred_meadow_rye_01
+    - MODL: "n\\Ingred_meadow_rye_01.NIF"
+    - FNAM: Луговая рожь
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: FortifyAttribute
+        effect_2_index: DamageHealth
+        effect_3_index: RestoreAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Speed
+        effect_2_attribute: ~
+        effect_3_attribute: Speed
+        effect_4_attribute: Speed
+    - ITEX: "n\\Tx_meadow_rye_01.dds"
+- INGR:
+    - NAME: Ingred_sweetpulp_01
+    - MODL: "n\\Ingred_sweetpulp_01.NIF"
+    - FNAM: Сладкая мякоть
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: Paralyze
+        effect_2_index: Levitate
+        effect_3_index: ResistParalysis
+        effect_4_index: RestoreHealth
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_sweetpulp_01.dds"
+- INGR:
+    - NAME: Ingred_scrib_cabbage_01
+    - MODL: "n\\Ingred_scrib_cabbage_01.NIF"
+    - FNAM: Скрибовая капуста
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: DrainAttribute
+        effect_2_index: DamageHealth
+        effect_3_index: RestoreAttribute
+        effect_4_index: FortifyAttribute
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: ~
+        effect_3_attribute: Agility
+        effect_4_attribute: Agility
+    - ITEX: "n\\Tx_scrib_cabbage_01.dds"
+- INGR:
+    - NAME: Ingred_lloramor_spines_01
+    - MODL: "n\\Ingred_lloramor_spines_01.NIF"
+    - FNAM: Шипы Ллорамора
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: SpellAbsorption
+        effect_2_index: Invisibility
+        effect_3_index: Poison
+        effect_4_index: DetectEnchantment
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_lloramor_spines_01.dds"
+- INGR:
+    - NAME: Ingred_golden_sedge_01
+    - MODL: "n\\Ingred_golden_sedge_01.NIF"
+    - FNAM: Цветы золотой осоки
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: DrainSpellpoints
+        effect_2_index: FortifyAttribute
+        effect_3_index: FortifyAttackBonus
+        effect_4_index: SwiftSwim
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Strength
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_golden_sedge_01.dds"
+- INGR:
+    - NAME: Ingred_noble_sedge_01
+    - MODL: "n\\Ingred_noble_sedge_01.NIF"
+    - FNAM: Цветы осоки благородной
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: DamageHealth
+        effect_2_index: RestoreAttribute
+        effect_3_index: Poison
+        effect_4_index: FortifyAttribute
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: Agility
+        effect_3_attribute: ~
+        effect_4_attribute: Agility
+    - ITEX: "n\\Tx_noble_sedge_01.dds"
+- INGR:
+    - NAME: ingred_adamantium_ore_01
+    - MODL: "n\\Ingred_raw_adam.NIF"
+    - FNAM: Адамантиновая руда
+    - IRDT:
+        weight: 50.0
+        value: 300
+        effect_1_index: Burden
+        effect_2_index: RestoreSpellPoints
+        effect_3_index: Poison
+        effect_4_index: Reflect
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\tx_adamantium.dds"
+- INGR:
+    - NAME: ingred_durzog_meat_01
+    - MODL: "n\\Ingred_durzog_meat_01.NIF"
+    - FNAM: Мясо Дурзога
+    - IRDT:
+        weight: 2.0
+        value: 7
+        effect_1_index: FortifyAttribute
+        effect_2_index: FortifyAttribute
+        effect_3_index: Blind
+        effect_4_index: DamageMagicka
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: Agility
+        effect_2_attribute: Strength
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_durzog_meat_01.dds"

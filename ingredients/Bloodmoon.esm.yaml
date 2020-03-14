@@ -1,0 +1,524 @@
+- INGR:
+    - NAME: ingred_saltrice_01
+    - MODL: "n\\Ingred_saltrice_01.NIF"
+    - FNAM: Соленый рис
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: RestoreFatigue
+        effect_2_index: FortifySpellpoints
+        effect_3_index: DrainAttribute
+        effect_4_index: RestoreHealth
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_saltrice_01.tga"
+- INGR:
+    - NAME: ingred_emerald_01
+    - MODL: "n\\Ingred_emerald_01.NIF"
+    - FNAM: Изумруд
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 150
+        effect_1_index: FortifySpellpoints
+        effect_2_index: RestoreHealth
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Agility
+        effect_4_attribute: Endurance
+    - ITEX: "n\\Tx_emerald.tga"
+- INGR:
+    - NAME: ingred_ash_yam_01
+    - MODL: "n\\Ingred_ash_yam_01.nif"
+    - FNAM: Пепельный батат
+    - IRDT:
+        weight: 0.5
+        value: 1
+        effect_1_index: FortifyAttribute
+        effect_2_index: FortifyAttribute
+        effect_3_index: ResistCommonDisease
+        effect_4_index: DetectKey
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_ashyam_01.tga"
+- INGR:
+    - NAME: ingred_moon_sugar_01
+    - MODL: "n\\Ingred_Moon_Sugar_01.nif"
+    - FNAM: Лунный сахар
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 50
+        effect_1_index: FortifyAttribute
+        effect_2_index: Dispel
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Speed
+        effect_2_attribute: Strength
+        effect_3_attribute: Endurance
+        effect_4_attribute: Luck
+    - ITEX: "n\\Tx_moon_sugar_01.tga"
+- INGR:
+    - NAME: ingred_bread_01
+    - MODL: "n\\Ingred_bread_01.NIF"
+    - FNAM: Хлеб
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 1
+        effect_1_index: RestoreFatigue
+        effect_2_index: ~
+        effect_3_index: ~
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "m\\Tx_bread_01.tga"
+- INGR:
+    - NAME: ingred_human_meat_01
+    - MODL: "n\\Ingred_Rat_Meat_01.nif"
+    - FNAM: Человеческая плоть
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: FortifyHealth
+        effect_2_index: DrainAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: ~
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Intelligence
+        effect_3_attribute: Personality
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_rat_meat_01.tga"
+- INGR:
+    - NAME: ingred_emerald_pinetear
+    - MODL: "n\\Ingred_emerald_01.nif"
+    - FNAM: Слезы сосны
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 50
+        effect_1_index: FortifySpellpoints
+        effect_2_index: RestoreHealth
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: Agility
+        effect_4_attribute: Endurance
+    - ITEX: "n\\Tx_emerald.tga"
+- INGR:
+    - NAME: ingred_raw_Stalhrim_01
+    - MODL: "n\\Ingred_BM_stalhrim_01.NIF"
+    - FNAM: Сталгрим-сырец
+    - IRDT:
+        weight: 5.0
+        value: 300
+        effect_1_index: ResistFrost
+        effect_2_index: FrostDamage
+        effect_3_index: Paralyze
+        effect_4_index: RestoreHealth
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_ingred_stalhrim_01.dds"
+- INGR:
+    - NAME: ingred_blood_innocent_unique
+    - MODL: "n\\Ingred_Red_Lichen_01.nif"
+    - FNAM: Кровь невинного
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 25
+        effect_1_index: DrainAttribute
+        effect_2_index: Light
+        effect_3_index: CureCommonDisease
+        effect_4_index: DrainSpellpoints
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: Speed
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_red_lichen_01.tga"
+- INGR:
+    - NAME: ingred_snowwolf_pelt_unique
+    - MODL: "n\\Ingred_Hide_WhtWolf.NIF"
+    - FNAM: Шкура снежного волка
+    - IRDT:
+        weight: 1.0
+        value: 2
+        effect_1_index: DrainFatigue
+        effect_2_index: FortifyAttribute
+        effect_3_index: ResistCommonDisease
+        effect_4_index: NightEye
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Speed
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_ingred_Hide_WhtWolf.dds"
+- INGR:
+    - NAME: ingred_snowbear_pelt_unique
+    - MODL: "n\\Ingred_Hide_WhtBear.NIF"
+    - FNAM: Шкура снежного медведя
+    - IRDT:
+        weight: 1.0
+        value: 2
+        effect_1_index: DrainFatigue
+        effect_2_index: FortifyAttribute
+        effect_3_index: ResistCommonDisease
+        effect_4_index: NightEye
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Speed
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_ingred_Hide_WhtBear.dds"
+- INGR:
+    - META: PERSIST
+    - NAME: ingred_udyrfrykte_heart
+    - MODL: "n\\Ingred_Daedra_heart_01.NIF"
+    - FNAM: Сердце Удурфрукта
+    - IRDT:
+        weight: 5.0
+        value: 300
+        effect_1_index: RestoreSpellPoints
+        effect_2_index: FortifyAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: NightEye
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Endurance
+        effect_3_attribute: Agility
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_daedra_heart_01.tga"
+- INGR:
+    - NAME: ingred_belladonna_01
+    - MODL: "n\\Ingred_BM_belladonna_01.NIF"
+    - FNAM: Созревшие ягоды белладонны
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 5
+        effect_1_index: ResistMagicka
+        effect_2_index: RestoreSpellPoints
+        effect_3_index: FortifySpellpoints
+        effect_4_index: DrainSpellpoints
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: Block
+        effect_4_skill: ~
+        effect_1_attribute: Intelligence
+        effect_2_attribute: ~
+        effect_3_attribute: Endurance
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_ingred_belladonna_01.dds"
+- INGR:
+    - NAME: ingred_wolfsbane_01
+    - MODL: "n\\Ingred_BM_wolfsbane_01.NIF"
+    - FNAM: Лепестки аконита
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 5
+        effect_1_index: RestoreAttribute
+        effect_2_index: Invisibility
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainSpellpoints
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: Block
+        effect_4_skill: ~
+        effect_1_attribute: Intelligence
+        effect_2_attribute: ~
+        effect_3_attribute: Endurance
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_ingred_wolfsbane_01.dds"
+- INGR:
+    - NAME: ingred_holly_01
+    - MODL: "n\\Ingred_BM_holly_01.NIF"
+    - FNAM: Ягоды падуба
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 5
+        effect_1_index: ResistFrost
+        effect_2_index: FrostShield
+        effect_3_index: FrostDamage
+        effect_4_index: WeaknessToFire
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_ingred_holly_01.dds"
+- INGR:
+    - NAME: ingred_belladonna_02
+    - MODL: "n\\Ingred_BM_belladonna_01.NIF"
+    - FNAM: Незрелые ягоды белладонны
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 5
+        effect_1_index: ResistMagicka
+        effect_2_index: RestoreSpellPoints
+        effect_3_index: FortifySpellpoints
+        effect_4_index: DrainSpellpoints
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_ingred_belladonna_01.dds"
+- INGR:
+    - NAME: ingred_bear_pelt
+    - MODL: "n\\Ingred_Hide_BrnBear.NIF"
+    - FNAM: Шкура медведя
+    - IRDT:
+        weight: 1.0
+        value: 2
+        effect_1_index: DrainFatigue
+        effect_2_index: FortifyAttribute
+        effect_3_index: ResistCommonDisease
+        effect_4_index: NightEye
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Strength
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_ingred_Hide_BrnBear.dds"
+- INGR:
+    - NAME: ingred_wolf_pelt
+    - MODL: "n\\Ingred_Hide_GryWolf.NIF"
+    - FNAM: Шкура волка
+    - IRDT:
+        weight: 1.0
+        value: 2
+        effect_1_index: DrainFatigue
+        effect_2_index: FortifyAttribute
+        effect_3_index: ResistCommonDisease
+        effect_4_index: NightEye
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Speed
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_ingred_Hide_GryWolf.dds"
+- INGR:
+    - META: PERSIST
+    - NAME: ingred_innocent_heart
+    - MODL: "n\\Ingred_Daedra_heart_01.NIF"
+    - FNAM: Сердце невинного
+    - IRDT:
+        weight: 1.0
+        value: 10
+        effect_1_index: RestoreSpellPoints
+        effect_2_index: FortifyAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: NightEye
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Endurance
+        effect_3_attribute: Agility
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_daedra_heart_01.tga"
+- INGR:
+    - META: PERSIST
+    - NAME: ingred_wolf_heart
+    - MODL: "n\\Ingred_Daedra_heart_01.NIF"
+    - FNAM: Сердце волка
+    - IRDT:
+        weight: 1.0
+        value: 100
+        effect_1_index: RestoreSpellPoints
+        effect_2_index: FortifyAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: NightEye
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Endurance
+        effect_3_attribute: Agility
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_daedra_heart_01.tga"
+- INGR:
+    - NAME: ingred_heartwood_01
+    - MODL: "m\\Heartwood.NIF"
+    - FNAM: Ядровая древесина
+    - IRDT:
+        weight: 1.0
+        value: 200
+        effect_1_index: RestoreSpellPoints
+        effect_2_index: FortifyAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: WeaknessToFire
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Agility
+        effect_3_attribute: Strength
+        effect_4_attribute: ~
+    - ITEX: "m\\Tx_Heartwood.dds"
+- INGR:
+    - NAME: ingred_boar_leather
+    - MODL: "m\\BoarLeather.NIF"
+    - FNAM: Шкура щетиноспина
+    - IRDT:
+        weight: 1.0
+        value: 2
+        effect_1_index: Blind
+        effect_2_index: FrostDamage
+        effect_3_index: ResistFrost
+        effect_4_index: Recall
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "m\\Tx_BoarLeather.dds"
+- INGR:
+    - NAME: ingred_horker_tusk_01
+    - MODL: "m\\HorkerTusk.NIF"
+    - FNAM: Клык хоркера
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 5
+        effect_1_index: DrainSkill
+        effect_2_index: FortifyAttribute
+        effect_3_index: FortifyMagickaMultiplier
+        effect_4_index: DetectAnimal
+        effect_1_skill: Alteration
+        effect_2_skill: Block
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: Strength
+        effect_2_attribute: Intelligence
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "m\\Tx_HorkerTusk.dds"
+- INGR:
+    - NAME: ingred_gravetar_01
+    - MODL: "n\\Ingred_BM_holly_01.NIF"
+    - FNAM: Могильная смола
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 5
+        effect_1_index: ResistFrost
+        effect_2_index: DrainHealth
+        effect_3_index: FortifyFatigue
+        effect_4_index: DrainAttribute
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Luck
+    - ITEX: "n\\Tx_ingred_holly_01.dds"
+- INGR:
+    - NAME: ingred_eyeball
+    - MODL: "m\\BM_FlamingEyeBall.NIF"
+    - FNAM: Глаз грахла
+    - IRDT:
+        weight: 1.0
+        value: 15
+        effect_1_index: ResistFrost
+        effect_2_index: NightEye
+        effect_3_index: DrainSpellpoints
+        effect_4_index: FortifyAttribute
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Strength
+    - ITEX: "m\\Tx_FlamingEye.dds"
+- INGR:
+    - META: PERSIST
+    - NAME: ingred_eyeball_unique
+    - MODL: "m\\BM_FlamingEyeBall.NIF"
+    - FNAM: Огненный глаз смотрителя
+    - IRDT:
+        weight: 1.0
+        value: 15
+        effect_1_index: ResistFrost
+        effect_2_index: NightEye
+        effect_3_index: DrainSpellpoints
+        effect_4_index: FortifyAttribute
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Strength
+    - ITEX: "m\\Tx_FlamingEye.dds"

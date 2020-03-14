@@ -1,0 +1,3396 @@
+- TES3:
+    - HEDR:
+        version: 1067869798
+        type: ESP
+        author: A1
+        description:
+          - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
+        records: 0
+    - MAST: Morrowind.esm
+    - DATA: 79764287
+    - MAST: Tribunal.esm
+    - DATA: 6616539
+    - MAST: Bloodmoon.esm
+    - DATA: 11799703
+- GLOB:
+    - NAME: Gals__CharDev_Present
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_AlchemyPlus
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_AlchemyRes
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_PotionB
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_PotionC
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_PotionS
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_PotionQ
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_PotionE
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_AlchemyExp
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_CalcAlchemy5
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusX
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusY
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusZ
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_MortarX
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_MortarY
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_RetortX
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_RetortY
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_AlembicX
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_AlembicY
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_CalcinatorX
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_CalcinatorY
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusAngle
+    - FNAM: f
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusDisable_3
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusDisable_2
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusDisable_1
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_CalcAlchemy2
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusExt_1
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusExt_2
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusExt_3
+    - FNAM: s
+    - FLTV: 0.0
+- SCPT:
+    - SCHD:
+        name: A1V6_ADelPlus
+        vars:
+          shorts: 2
+          longs: 7
+          floats: 1
+        data_size: 570
+        var_table_size: 85
+    - SCVR:
+        - doRemove
+        - temp
+        - pcRef
+        - invRef
+        - invItem
+        - invCount
+        - invRefType
+        - tempLong
+        - invNextRef
+        - tempFloat
+    - SCDT: eJyFUk1Lw0AQnZk2W1IUY0OhB4U9ePFkYkudQ6IUvHjTi+CpFIl4WEEMCv0X/gj/kHgWQlAohRbtL3DXxK318/Z4u/Pmvbcr0HFliiDjWIYOakQyAK8FD6+zbDLNx5l8es7Gs1E+epnm2SQDePTWvOVeeNzt9/YTdaiu0w100ecjqPMJiEs1GCZXsB75DOCzArIIohWuwhIz+YwlMz9rRZU9n8nOVCyqWuQsKJ594USJHFQEjlQ1c4kWVjdJIDakcorE2912h5nbHR2ddPSwhljCwGQyLlM7fKOZHazzAa4W+dXpeXIxNBX054u2PnnSy1ypBMgolsHvwveaudXCd9j4JjyAf6R3/5Ru0keTpmv6ofXNoi8yKur9/QWSa9ozFVmy/Byhq30mgPgGubRjdA==
+    - SCTX:
+        - Begin A1V6_ADelPlus
+        - ""
+        - short doRemove
+        - long pcRef
+        - long invRef
+        - long invItem
+        - long invCount
+        - long invRefType
+        - long tempLong
+        - float tempFloat
+        - long invNextRef
+        - short temp
+        - ""
+        - if ( doRemove == 1 )
+        - "\tset doRemove to 0"
+        - "\tMessageBox \"Установка деактивирована\""
+        - "\tEnablePlayerControls"
+        - "\tStopScript A1V6_ADelPlus"
+        - "\treturn"
+        - endif
+        - ""
+        - "setx pcRef to xGetRef \"player\""
+        - whilex ( pcRef )
+        - "\tsetx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to pcRef->xContentList invRef"
+        - "\tset invRef to invNextRef"
+        - "\tifx ( invItem )"
+        - "\t\tif ( invRefType == 1263488834 )"
+        - "\t\t\tset temp to 1"
+        - "\t\telse"
+        - "\t\t\tset temp to 0"
+        - "\t\tendif"
+        - "\t\tifx ( temp )"
+        - "\t\t\tsetx tempLong to xStringCompare invItem \"A1V6_AlchemyPlus_\""
+        - "\t\t\tif ( tempLong <= 0 )"
+        - "\t\t\t\tset temp to 0"
+        - "\t\t\tendif"
+        - "\t\tendif"
+        - "\t\tifx ( temp )"
+        - "\t\t\tsetx tempLong to xStringCompare invItem \"A1V6_AlchemyPlus_a\""
+        - "\t\t\tif ( tempLong >= 0 )"
+        - "\t\t\t\tset temp to 0"
+        - "\t\t\tendif"
+        - "\t\tendif"
+        - "\t\tifx ( temp )"
+        - "\t\t\tpcRef->xRemoveItem invItem invCount"
+        - "\t\t\tset invRef to 0"
+        - "\t\t\tset pcRef to 0"
+        - "\t\tendif"
+        - "\tendif"
+        - "\tif ( invNextRef == 0 )"
+        - "\t\tset pcRef to 0"
+        - "\t\tset doRemove to 1"
+        - "\tendif"
+        - endwhile
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_AlchemyActivator_sc
+        vars:
+          shorts: 2
+          longs: 0
+          floats: 0
+        data_size: 56
+        var_table_size: 22
+    - SCVR:
+        - PCSkipEquip
+        - OnPCEquip
+    - SCDT: eJwBOADH/wUBcwEAAiAxBgECCSBzAgAgPT0gMQUBcwIAAiAwGxAUQTFWNl9BbGNoZW15Q2hlY2tfc2MJAQEB67oKqw==
+    - SCTX:
+        - Begin A1V6_AlchemyActivator_sc
+        - ""
+        - short PCSkipEquip
+        - short OnPCEquip
+        - ""
+        - set PCSkipEquip to 1
+        - ""
+        - if ( OnPCEquip == 1 )
+        - "\tset OnPCEquip to 0"
+        - "\tStartScript A1V6_AlchemyCheck_sc"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_AlchemyCheck_sc
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 57
+        var_table_size: 0
+    - SCDT: eJwBOQDG/xwQFEExVjZfQWxjaGVteUNoZWNrX3NjGxAdQTFWNl9BQ2hlY2sxX1Jlc3RvcmVIZWFsdGhfc2MBAfklEjk=
+    - SCTX:
+        - Begin A1V6_AlchemyCheck_sc
+        - ""
+        - StopScript A1V6_AlchemyCheck_sc
+        - StartScript A1V6_ACheck1_RestoreHealth_sc
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Alembic_1_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 226
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxljcEKgkAQhuc3lBaJVjrUrTl0DdpD3TwIgW8Q6kU0DAQDaeupeqR6mEb3UnSZGb7555sAUJyx5jhms4FCAE/A24FnBHIQa06XiTkdyqTvq1t1f9hja6u6a0ozRl96jMnt6ls2VWxBA9j5kMlj4+MCijidOV3XXOv2nJFg7w/nA57QgtP57/PCLRRLYbPnbagz0VKoc9FIK2RBCsAHkSEppA==
+    - SCTX:
+        - Begin A1V6_Alembic_1_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_1 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_AlembicX"
+        - "\tset cy to A1V6_AlembicY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Alembic_2_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 226
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxljcEKglAQRecaSg+JnrSoXbNoG/SC2rkQAv8g1I1oGAgGkvVVfVJ9TKNvU7iZGc7cOeMBihPWHIZsNlDw4Aj4WPAKQBZizfEyMudjHrVtcS8ez+5Ud0XZVPl+iL71EJPb1a9sqrgD9WDnQiaHjYsrKOB4ZnVNdSvrS0KCnRFOezyhBcfz/+eZXSiWwubAW18noiVfp6KRlsmCFIAvkcAppQ==
+    - SCTX:
+        - Begin A1V6_Alembic_2_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_2 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_AlembicX"
+        - "\tset cy to A1V6_AlembicY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Alembic_3_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 226
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxljcEKglAQRecaSg+JnrSoXbNoG/SI2rkQAv8g1I1oGAgGkvVVfVJ9TKNvU7iZGc7cOeMBihPWHIZsNlDw4Aj4WPAKQBZizfEyMudjHrVtcS8ez+5Ud0XZVPl+iL71EJPb1a9sqrgD9WDnQiaHjYsrKOB4ZnVNdSvrS0KCnRFOezyhBcfz/+eZXSiWwubAW18noiVfp6KRlsmCFIAvkl8ppg==
+    - SCTX:
+        - Begin A1V6_Alembic_3_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_3 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_AlembicX"
+        - "\tset cy to A1V6_AlembicY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ApparatusActivate_sc
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 97
+        var_table_size: 0
+    - SCDT: eJwBYQCe/wwBBnBsYXllctQQFUExVjZfQWxjaGVteUFjdGl2YXRvcgEACQEAEBYA0/Hy4O3u4urgIODq8uji6PDu4uDt4AAA3RAcEBlBMVY2X0FwcGFyYXR1c0FjdGl2YXRlX3NjAQGiiilY
+    - SCTX:
+        - Begin A1V6_ApparatusActivate_sc
+        - ""
+        - "player->AddItem A1V6_AlchemyActivator, 1"
+        - endif
+        - ""
+        - "MessageBox \"Установка активирована\""
+        - EnablePlayerControls
+        - ""
+        - StopScript A1V6_ApparatusActivate_sc
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ApparatusCont_1_sc
+        vars:
+          shorts: 8
+          longs: 7
+          floats: 15
+        data_size: 2454
+        var_table_size: 246
+    - SCVR:
+        - doOnce
+        - doDisable
+        - temp
+        - doSetUp
+        - doRemove
+        - doActivate
+        - waitActivate
+        - doClose
+        - invItem
+        - invCount
+        - invRef
+        - tempLong
+        - pcRef
+        - invRefType
+        - invNextRef
+        - cx
+        - cy
+        - cz
+        - aCos
+        - aSin
+        - tempFloat
+        - tempFloat2
+        - mortarX
+        - mortarY
+        - alembicX
+        - alembicY
+        - calcinatorX
+        - calcinatorY
+        - retortX
+        - retortY
+    - SCDT: eJytVU1u00AUnnE8dpykxCVFTRUhzSKL0qpguw11JRcU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/bsMCRYrt733vd96bJ2Gi0KmA6ANqaBIuKLR7odLdXaoT3Km19Vf3e+3x2J7Y3vvpk49eTxeo9mURoyZW4CdhIdb+oTZ9qFAMIO1cractPLXfOXsnxxPntYAIBhan6nS9GVoL3X9XfYJAdSaogxsZMYEBDlZoZ9E3/Mh2+223/8YZnbXCoGclEDLBo6UZvDftT0vgQWuouUI/mTxfxpW+jCt8Gdf5MgJfZcie+tmDDUgX2JcqhEBp949KT5fStdzznFFPD9id5bTw8XBqH7kOOy49rGNDbWRIjt33hh9sz4EAZFwAYhH5Cm4B+YlMCT8ABTdxEYvRIegSxlGwehCswVgsj4SIATUToZo5RciqmiKqmGdCyfxErmwv/ZKdPOaBDDCq0U41TexC7wyEHMEBExRyBIeorHbBFjwOQBMeh8BjbAkt02wg7ZNj1+HCKoU/2tq+a+y0tk16r2YSyGUAuRhmzSz474IVozqgYoD6BhS6qdGBiOgafMrwacAn4Z8lpFIIynexQUFK1xM6JK0TmCgzHYHrrKd0jIyfVmSikvAzq0PSOoGJhYSfdGxbsZ8iKsWGE+LApMLEoY251bgxU42NudWozlRjY83i/eb654KjNyGDhd24S2Ik1ETWHWuenZL5WzxXc2cSo2sHks2VyNq7CbPCZkpCyTFiT4mN33Jwn2K4JAm7T1sgYYOpyxgHrxobLyE1Xs+KNfOClMyfRBq79pkzQbct3pQ8ATGV/j6w5ZT+WylMElmFh/lFINFbIYUNMpgUFetbwmocQ/2/eYiPjmdBZCjcTeoGtd00tS1ty9R2/qmEX+VsURw5v0vy0GR6q5D6Z3keK9/OqhVfxC5JXsiJnuCXNaGujBBrFkVhr8FWSGlpfFkXo2Yr8nV0/VIQgm6E7bGSuSVjGlsQJfMXYQ0thJFxv/wrWvAViECMIhB5eJ2Kb3n/dOLZky6hcK+gDHoAqOKjCzwK1xkdDfuMXJqFGbvsw2q0a4cntnfqW6/kSpjOQsLvcwdAj/FvzKCMW/XR7J4BAeyVhnorjb9wvJfjns5rACPfrfP1yFZdetcyCsZ/AaDFtSU=
+    - SCTX:
+        - Begin A1V6_ApparatusCont_1_sc
+        - ""
+        - short doOnce
+        - short doDisable
+        - short temp
+        - float cx
+        - float cy
+        - float cz
+        - long invItem
+        - long invCount
+        - long invRef
+        - long tempLong
+        - float aCos
+        - float aSin
+        - float tempFloat
+        - float tempFloat2
+        - float mortarX
+        - float mortarY
+        - float alembicX
+        - float alembicY
+        - float calcinatorX
+        - float calcinatorY
+        - float retortX
+        - float retortY
+        - short doSetUp
+        - short doRemove
+        - short doActivate
+        - long pcRef
+        - long invRefType
+        - long invNextRef
+        - short waitActivate
+        - short doClose
+        - ""
+        - if ( doDisable > 20 )
+        - "\tif ( GetDisabled == 1 )"
+        - "\t\tset A1V6_ApparatusExt_1 to 0"
+        - "\t\tSetDelete 1"
+        - "\t\treturn"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( doDisable > 20 )
+        - "\tDisable"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doDisable > 0 )
+        - "\tAddItem \"A1V6_ApparatusFakeIngred\", 2"
+        - "\tset doDisable to ( doDisable + 1 )"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tEnable"
+        - "\tset doDisable to 1"
+        - endif
+        - ""
+        - if ( waitActivate == 2 )
+        - "\tif ( A1V6_CalcAlchemy5 == 1 )"
+        - "\t\tset A1V6_CalcAlchemy5 to 0"
+        - "\t\tset A1V6_CalcAlchemy5_sc.state to 0"
+        - "\t\tStartScript A1V6_CalcAlchemy5_sc"
+        - "\tendif"
+        - "\tif ( A1V6_CalcAlchemy2 == 1 )"
+        - "\t\tset A1V6_CalcAlchemy2 to 0"
+        - "\t\tset A1V6_CalcAlchemy2_sc.state to 0"
+        - "\t\tStartScript A1V6_CalcAlchemy2_sc"
+        - "\tendif"
+        - "\tif ( MenuMode == 0 )"
+        - "\t\tset waitActivate to 0"
+        - "\t\tDisablePlayerControls"
+        - "\t\tif ( GetItemCount \"A1V6_ApparatusItem_1\" == 0 )"
+        - "\t\t\tset A1V6_ApparatusDisable_1 to 1"
+        - "\t\t\tset doDisable to 1"
+        - "\t\t\tStartScript A1V6_ApparatusDeactivate_sc"
+        - "\t\telse"
+        - "\t\t\tset doClose to 1"
+        - "\t\t\tset invRef to 0"
+        - "\t\t\tset doRemove to 1"
+        - "\t\tendif"
+        - "\tendif"
+        - "\treturn"
+        - elseif ( waitActivate == 1 )
+        - "\tif ( MenuMode == 1 )"
+        - "\t\tset waitActivate to 2"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - ifx ( doOnce )
+        - else
+        - "\tset A1V6_ApparatusExt_1 to 1"
+        - "\tDisablePlayerControls"
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_ApparatusX"
+        - "\tset cy to A1V6_ApparatusY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - "\tset tempFloat to A1V6_ApparatusAngle"
+        - "\tset tempFloat to ( tempFloat / 57.29578 )"
+        - "\tsetx aCos to xCos tempFloat"
+        - "\tsetx aSin to xSin tempFloat"
+        - "\tset tempFloat to ( 30 * aCos )"
+        - "\tset tempFloat2 to ( 20 * aSin )"
+        - "\tset alembicX to ( cx - tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 30 * aSin )"
+        - "\tset tempFloat2 to ( 20 * aCos )"
+        - "\tset alembicY to ( cy + tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 20 * aCos )"
+        - "\tset tempFloat2 to ( 25 * aSin )"
+        - "\tset calcinatorX to ( cx + tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 20 * aSin )"
+        - "\tset tempFloat2 to ( 25 * aCos )"
+        - "\tset calcinatorY to ( cy - tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 40 * aCos )"
+        - "\tset mortarX to ( cx + tempFloat )"
+        - "\tset tempFloat to ( 40 * aSin )"
+        - "\tset mortarY to ( cy - tempFloat )"
+        - "\tset tempFloat to ( 30 * aCos )"
+        - "\tset tempFloat2 to ( 20 * aSin )"
+        - "\tset retortX to ( cx - tempFloat - tempFloat2 )"
+        - "\tset tempFloat to ( 30 * aSin )"
+        - "\tset tempFloat2 to ( 20 * aCos )"
+        - "\tset retortY to ( cy + tempFloat - tempFloat2 )"
+        - "\tsetx invItem,invCount,invRef to xInventory"
+        - "\twhilex ( invCount )"
+        - "\t\txRemoveItem invItem invCount"
+        - "\t\tsetx invItem,invCount,invRef to xInventory"
+        - "\tendwhile"
+        - "\tAddItem \"A1V6_ApparatusItem_1\", 1"
+        - "\tset A1V6_ApparatusDisable_1 to 0"
+        - "\tset doSetUp to 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doActivate == 1 )
+        - "\tset waitActivate to 1"
+        - "\tset doActivate to 0"
+        - "\tActivate"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doRemove > 5 )
+        - "\tset temp to 1"
+        - else
+        - "\tset temp to 0"
+        - endif
+        - ""
+        - ifx ( temp )
+        - "\tsetx pcRef to xGetRef \"player\""
+        - "\twhilex ( pcRef )"
+        - "\t\tifx ( doClose )"
+        - "\t\t\tsetx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to xContentList invRef"
+        - "\t\telse"
+        - "\t\t\tsetx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to pcRef->xContentList invRef"
+        - "\t\tendif"
+        - "\t\tifx ( invItem )"
+        - "\t\t\tif ( invRefType == 1380404809 )"
+        - "\t\t\t\tset temp to 1"
+        - "\t\t\telse"
+        - "\t\t\t\tset temp to 0"
+        - "\t\t\tendif"
+        - "\t\tendif"
+        - "\t\tifx ( temp )"
+        - "\t\t\tifx ( doClose )"
+        - "\t\t\t\txRemoveItem invItem invCount"
+        - "\t\t\t\tpcRef->xAddItem invItem invCount"
+        - "\t\t\telse"
+        - "\t\t\t\tpcRef->xRemoveItem invItem invCount"
+        - "\t\t\t\txAddItem invItem invCount"
+        - "\t\t\tendif"
+        - "\t\t\tset invRef to 0"
+        - "\t\t\tset pcRef to 0"
+        - "\t\t\tset doRemove to 1"
+        - "\t\tendif"
+        - "\t\tif ( doRemove > 1 )"
+        - "\t\t\tset invRef to invNextRef"
+        - "\t\tendif"
+        - "\t\tif ( invNextRef == 0 )"
+        - "\t\t\tset pcRef to 0"
+        - "\t\t\tset doRemove to 0"
+        - "\t\t\tif ( doClose == 1 )"
+        - "\t\t\t\tset doClose to 0"
+        - "\t\t\t\tStartScript A1V6_ApparatusDeactivate_sc"
+        - "\t\t\telse"
+        - "\t\t\t\tset doActivate to 1"
+        - "\t\t\t\tStartScript A1V6_ApparatusActivate_sc"
+        - "\t\t\tendif"
+        - "\t\tendif"
+        - "\tendwhile"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doRemove > 0 )
+        - "\tset doRemove to ( doRemove + 1 )"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doSetUp == 1 )
+        - "\tset doSetUp to 0"
+        - "\tset A1V6_MortarX to mortarX"
+        - "\tset A1V6_MortarY to mortarY"
+        - "\tset A1V6_AlembicX to alembicX"
+        - "\tset A1V6_AlembicY to alembicY"
+        - "\tset A1V6_CalcinatorX to calcinatorX"
+        - "\tset A1V6_CalcinatorY to calcinatorY"
+        - "\tset A1V6_RetortX to retortX"
+        - "\tset A1V6_RetortY to retortY"
+        - "\tset A1V6_ApparatusZ to cz"
+        - "\tStartScript A1V6_ApparatusSetUp_1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\tDisablePlayerControls"
+        - "\tset invRef to 0"
+        - "\tset doRemove to 1"
+        - "\treturn"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ApparatusCont_2_sc
+        vars:
+          shorts: 8
+          longs: 7
+          floats: 15
+        data_size: 2454
+        var_table_size: 246
+    - SCVR:
+        - doOnce
+        - doDisable
+        - temp
+        - doSetUp
+        - doRemove
+        - doActivate
+        - waitActivate
+        - doClose
+        - invItem
+        - invCount
+        - invRef
+        - tempLong
+        - pcRef
+        - invRefType
+        - invNextRef
+        - cx
+        - cy
+        - cz
+        - aCos
+        - aSin
+        - tempFloat
+        - tempFloat2
+        - mortarX
+        - mortarY
+        - alembicX
+        - alembicY
+        - calcinatorX
+        - calcinatorY
+        - retortX
+        - retortY
+    - SCDT: eJytVU1u00AUnnE8dpykxCVFTRUhzSKL0qpguw11JRcU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/bsMCRYrt733vd96bJ2Gi0KmA6ANqaBIuKLR7odLdXaoT3Km19Vf3e+3x2J7Y3vvpk49ezxCo9mURoyZW4CdhIdb+oTZ9qFAMIO1cractPLXfOXsnxxPntYAIBhan6nS9GVoL3X9XfYJAdSaogxsZMYEBDlZoZ9E3/Mh2+223/8YZnbXCoGclEDLBo6UZvDftT0vgQWuouUI/mTxfxpW+jCt8Gdf5MgJfZcie+tmDDUgX2JcqhEBp949KT5fStdzznFHPCNid5bTw8XBqH7kOOy49rGNDbWRIjt33hh9sz4EAZFwAYhH5Cm4B+YlMCT8ABTdxEYvRIegSxlGwehCswVgsj4SIATUToZo5RciqmiKqmGdCyfxErmwv/ZKdPOaBDDCq0U41TexC7wyEHMEBExRyBIeorHbBFjwOQBMeh8BjbAkt02wg7ZNj1+HCKoU/2tq+a+y0tk16r2YSyGUAuRhmzSz474IVozqgYoD6BhS6qdGBiOgafMrwacAn4Z8lpFIIynexQUFK1xM6JK0TmCgzHYHrrKd0jIyfVmSikvAzq0PSOoGJhYSfdGxbsZ8iKsWGE+LApMLEoY251bgxU42NudWozlRjY83i/eb654KjNyGDhd24S2Ik1ETWHWuenZL5WzxXc2cSo2sHks2VyNq7CbPCZkpCyTFiT4mN33Jwn2K4JAm7T1sgYYOpyxgHrxobLyE1Xs+KNfOClMyfRBq79pkzQbct3pQ8ATGV/j6w5ZT+WylMElmFh/lFINFbIYUNMpgUFetbwmocQ/2/eYiPjmdBZCjcTeoGtd00tS1ty9R2/qmEX+VsURw5v0vy0GR6q5D6Z3keK9/OqhVfxC5JXsiJnuCXNaGujBBrFkVhr8FWSGlpfFkXo2Yr8nV0/VIQgm6E7bGSuSVjGlsQJfMXYQ0thJFxv/wrWvAViECMIhB5eJ2Kb3n/dOLZky6hcK+gDHoAqOKjCzwK1xkdDfuMXJqFGbvsw2q0a4cntnfqW6/kSpjOQsLvcwdAj/FvzKCMW/XR7J4BAeyVhnorjb9wvJfjnsFrACPfrfP1yFZdetcyCsZ/AclTtSw=
+    - SCTX:
+        - Begin A1V6_ApparatusCont_2_sc
+        - ""
+        - short doOnce
+        - short doDisable
+        - short temp
+        - float cx
+        - float cy
+        - float cz
+        - long invItem
+        - long invCount
+        - long invRef
+        - long tempLong
+        - float aCos
+        - float aSin
+        - float tempFloat
+        - float tempFloat2
+        - float mortarX
+        - float mortarY
+        - float alembicX
+        - float alembicY
+        - float calcinatorX
+        - float calcinatorY
+        - float retortX
+        - float retortY
+        - short doSetUp
+        - short doRemove
+        - short doActivate
+        - long pcRef
+        - long invRefType
+        - long invNextRef
+        - short waitActivate
+        - short doClose
+        - ""
+        - if ( doDisable > 20 )
+        - "\tif ( GetDisabled == 1 )"
+        - "\t\tset A1V6_ApparatusExt_2 to 0"
+        - "\t\tSetDelete 1"
+        - "\t\treturn"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( doDisable > 20 )
+        - "\tDisable"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doDisable > 0 )
+        - "\tAddItem \"A1V6_ApparatusFakeIngred\", 2"
+        - "\tset doDisable to ( doDisable + 1 )"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tEnable"
+        - "\tset doDisable to 1"
+        - endif
+        - ""
+        - if ( waitActivate == 2 )
+        - "\tif ( A1V6_CalcAlchemy5 == 1 )"
+        - "\t\tset A1V6_CalcAlchemy5 to 0"
+        - "\t\tset A1V6_CalcAlchemy5_sc.state to 0"
+        - "\t\tStartScript A1V6_CalcAlchemy5_sc"
+        - "\tendif"
+        - "\tif ( A1V6_CalcAlchemy2 == 1 )"
+        - "\t\tset A1V6_CalcAlchemy2 to 0"
+        - "\t\tset A1V6_CalcAlchemy2_sc.state to 0"
+        - "\t\tStartScript A1V6_CalcAlchemy2_sc"
+        - "\tendif"
+        - "\tif ( MenuMode == 0 )"
+        - "\t\tset waitActivate to 0"
+        - "\t\tDisablePlayerControls"
+        - "\t\tif ( GetItemCount \"A1V6_ApparatusItem_2\" == 0 )"
+        - "\t\t\tset A1V6_ApparatusDisable_2 to 1"
+        - "\t\t\tset doDisable to 1"
+        - "\t\t\tStartScript A1V6_ApparatusDeactivate_sc"
+        - "\t\telse"
+        - "\t\t\tset doClose to 1"
+        - "\t\t\tset invRef to 0"
+        - "\t\t\tset doRemove to 1"
+        - "\t\tendif"
+        - "\tendif"
+        - "\treturn"
+        - elseif ( waitActivate == 1 )
+        - "\tif ( MenuMode == 1 )"
+        - "\t\tset waitActivate to 2"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - ifx ( doOnce )
+        - else
+        - "\tset A1V6_ApparatusExt_2 to 1"
+        - "\tDisablePlayerControls"
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_ApparatusX"
+        - "\tset cy to A1V6_ApparatusY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - "\tset tempFloat to A1V6_ApparatusAngle"
+        - "\tset tempFloat to ( tempFloat / 57.29578 )"
+        - "\tsetx aCos to xCos tempFloat"
+        - "\tsetx aSin to xSin tempFloat"
+        - "\tset tempFloat to ( 30 * aCos )"
+        - "\tset tempFloat2 to ( 20 * aSin )"
+        - "\tset alembicX to ( cx - tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 30 * aSin )"
+        - "\tset tempFloat2 to ( 20 * aCos )"
+        - "\tset alembicY to ( cy + tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 20 * aCos )"
+        - "\tset tempFloat2 to ( 25 * aSin )"
+        - "\tset calcinatorX to ( cx + tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 20 * aSin )"
+        - "\tset tempFloat2 to ( 25 * aCos )"
+        - "\tset calcinatorY to ( cy - tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 40 * aCos )"
+        - "\tset mortarX to ( cx + tempFloat )"
+        - "\tset tempFloat to ( 40 * aSin )"
+        - "\tset mortarY to ( cy - tempFloat )"
+        - "\tset tempFloat to ( 30 * aCos )"
+        - "\tset tempFloat2 to ( 20 * aSin )"
+        - "\tset retortX to ( cx - tempFloat - tempFloat2 )"
+        - "\tset tempFloat to ( 30 * aSin )"
+        - "\tset tempFloat2 to ( 20 * aCos )"
+        - "\tset retortY to ( cy + tempFloat - tempFloat2 )"
+        - "\tsetx invItem,invCount,invRef to xInventory"
+        - "\twhilex ( invCount )"
+        - "\t\txRemoveItem invItem invCount"
+        - "\t\tsetx invItem,invCount,invRef to xInventory"
+        - "\tendwhile"
+        - "\tAddItem \"A1V6_ApparatusItem_2\", 1"
+        - "\tset A1V6_ApparatusDisable_2 to 0"
+        - "\tset doSetUp to 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doActivate == 1 )
+        - "\tset waitActivate to 1"
+        - "\tset doActivate to 0"
+        - "\tActivate"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doRemove > 5 )
+        - "\tset temp to 1"
+        - else
+        - "\tset temp to 0"
+        - endif
+        - ""
+        - ifx ( temp )
+        - "\tsetx pcRef to xGetRef \"player\""
+        - "\twhilex ( pcRef )"
+        - "\t\tifx ( doClose )"
+        - "\t\t\tsetx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to xContentList invRef"
+        - "\t\telse"
+        - "\t\t\tsetx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to pcRef->xContentList invRef"
+        - "\t\tendif"
+        - "\t\tifx ( invItem )"
+        - "\t\t\tif ( invRefType == 1380404809 )"
+        - "\t\t\t\tset temp to 1"
+        - "\t\t\telse"
+        - "\t\t\t\tset temp to 0"
+        - "\t\t\tendif"
+        - "\t\tendif"
+        - "\t\tifx ( temp )"
+        - "\t\t\tifx ( doClose )"
+        - "\t\t\t\txRemoveItem invItem invCount"
+        - "\t\t\t\tpcRef->xAddItem invItem invCount"
+        - "\t\t\telse"
+        - "\t\t\t\tpcRef->xRemoveItem invItem invCount"
+        - "\t\t\t\txAddItem invItem invCount"
+        - "\t\t\tendif"
+        - "\t\t\tset invRef to 0"
+        - "\t\t\tset pcRef to 0"
+        - "\t\t\tset doRemove to 1"
+        - "\t\tendif"
+        - "\t\tif ( doRemove > 1 )"
+        - "\t\t\tset invRef to invNextRef"
+        - "\t\tendif"
+        - "\t\tif ( invNextRef == 0 )"
+        - "\t\t\tset pcRef to 0"
+        - "\t\t\tset doRemove to 0"
+        - "\t\t\tif ( doClose == 1 )"
+        - "\t\t\t\tset doClose to 0"
+        - "\t\t\t\tStartScript A1V6_ApparatusDeactivate_sc"
+        - "\t\t\telse"
+        - "\t\t\t\tset doActivate to 1"
+        - "\t\t\t\tStartScript A1V6_ApparatusActivate_sc"
+        - "\t\t\tendif"
+        - "\t\tendif"
+        - "\tendwhile"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doRemove > 0 )
+        - "\tset doRemove to ( doRemove + 1 )"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doSetUp == 1 )
+        - "\tset doSetUp to 0"
+        - "\tset A1V6_MortarX to mortarX"
+        - "\tset A1V6_MortarY to mortarY"
+        - "\tset A1V6_AlembicX to alembicX"
+        - "\tset A1V6_AlembicY to alembicY"
+        - "\tset A1V6_CalcinatorX to calcinatorX"
+        - "\tset A1V6_CalcinatorY to calcinatorY"
+        - "\tset A1V6_RetortX to retortX"
+        - "\tset A1V6_RetortY to retortY"
+        - "\tset A1V6_ApparatusZ to cz"
+        - "\tStartScript A1V6_ApparatusSetUp_2"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\tDisablePlayerControls"
+        - "\tset invRef to 0"
+        - "\tset doRemove to 1"
+        - "\treturn"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ApparatusCont_3_sc
+        vars:
+          shorts: 8
+          longs: 7
+          floats: 15
+        data_size: 2454
+        var_table_size: 246
+    - SCVR:
+        - doOnce
+        - doDisable
+        - temp
+        - doSetUp
+        - doRemove
+        - doActivate
+        - waitActivate
+        - doClose
+        - invItem
+        - invCount
+        - invRef
+        - tempLong
+        - pcRef
+        - invRefType
+        - invNextRef
+        - cx
+        - cy
+        - cz
+        - aCos
+        - aSin
+        - tempFloat
+        - tempFloat2
+        - mortarX
+        - mortarY
+        - alembicX
+        - alembicY
+        - calcinatorX
+        - calcinatorY
+        - retortX
+        - retortY
+    - SCDT: eJytVU1u00AUnnE8dpymxCVFTRUhzSKL0qpgOw11JRcU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/bsMCRYrt733vd96bJ2Gi0KmA6ANqaBIuKLR7odLdXaoT3Km29Vf3e+3x2J7Y3vvpk49erylQ7csSRg2swE/CQqz9Q234UKEYQNq5WktbeGq/c/ZOjifOawERDCxO1elGI7QWuv+u+gSB6kxQAzcyYgIDHKzSzpJv+JHt9ttu/40zOmuFQc9KIGSCR8szeG/an5bAg1ZXc4V+Mnm+jCt9GVf4Mq7zZQS+FiB76mcPNiBdYF+qEAKl3T8qPV1O13LPc0a9ZsDurKSFj4dT+8h12HHpYR3raj1Dcuy+N/xgew4EIOMCEIvIV3ALyE9kSvgBKLiBi1iMDkGXMI6C1YNgDcZieSREDKiaCFXNKUJWxRRR2TwTSuYncmV76Zfs5DEPZIBRlXYqaWIXemcg5AgOmKCQIzhEC2oXbMHjADThcQg8xpbQCs0G0j45dh0urFD4o63tu8ZOa9uk96omgVwGkIthVs2C/y5YMaoDKgaob0ChTY0ORETX4VOGTwM+Cf8sIZVCUL6LTQpSupHQIWmdwMQC0xG4zkZKx8j4aUUmygk/szokrROYWEz4Sce2FfspolJsOCEOTCpMHNqYW40bM9XYnFuNykw1Ntct3m+ufy44ehMyWNiNuyRGQk1k3bHm2SmZv8VzNXcmMbp2INlciay9GzArbKYklBwj9pTY+K0E9ymGS5Kw+7QFEjaYuoxx8Kqx8RJS4/WsWDUvSMn8SaSxa585E3Tb4k3JExBT6e8DW07pv5XCJJFVeJhfBBK9FVLYIINJUbG+JazGMdT+m4f46HgWRIbC3aRuUNumqW1pW6a2808l/Cpni+LI+V2ShybTW4PUP8vzWPl21qz4InZJ8kJO9AS/rAl1ZYRYsygKew22QkpL48u6GDVbka+j65eCEHQjbI/VzC0Z09iCKJm/CGtoIYyM++Vf0YIvQwRiFIHIw+uUfcv7pxPPnnQJhXsFZdADQBUfXeRRuM7oaNhn5NIszNgLPqxGu3Z4YnunvvVyroTpLCb8PncA9Bj/xgzKuBUfze4ZEMBeqau30vgLx3s57jV5DWDkuzW+HtmqS+9aRsH4L/HhtTM=
+    - SCTX:
+        - Begin A1V6_ApparatusCont_3_sc
+        - ""
+        - short doOnce
+        - short doDisable
+        - short temp
+        - float cx
+        - float cy
+        - float cz
+        - long invItem
+        - long invCount
+        - long invRef
+        - long tempLong
+        - float aCos
+        - float aSin
+        - float tempFloat
+        - float tempFloat2
+        - float mortarX
+        - float mortarY
+        - float alembicX
+        - float alembicY
+        - float calcinatorX
+        - float calcinatorY
+        - float retortX
+        - float retortY
+        - short doSetUp
+        - short doRemove
+        - short doActivate
+        - long pcRef
+        - long invRefType
+        - long invNextRef
+        - short waitActivate
+        - short doClose
+        - ""
+        - if ( doDisable > 20 )
+        - "\tif ( GetDisabled == 1 )"
+        - "\t\tset A1V6_ApparatusExt_3 to 0"
+        - "\t\tSetDelete 1"
+        - "\t\treturn"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( doDisable > 20 )
+        - "\tDisable"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doDisable > 0 )
+        - "\tAddItem \"A1V6_ApparatusFakeIngred\", 2"
+        - "\tset doDisable to ( doDisable + 1 )"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tEnable"
+        - "\tset doDisable to 1"
+        - endif
+        - ""
+        - if ( waitActivate == 2 )
+        - "\tif ( A1V6_CalcAlchemy5 == 1 )"
+        - "\t\tset A1V6_CalcAlchemy5 to 0"
+        - "\t\tset A1V6_CalcAlchemy5_sc.state to 0"
+        - "\t\tStartScript A1V6_CalcAlchemy5_sc"
+        - "\tendif"
+        - "\tif ( A1V6_CalcAlchemy2 == 1 )"
+        - "\t\tset A1V6_CalcAlchemy2 to 0"
+        - "\t\tset A1V6_CalcAlchemy2_sc.state to 0"
+        - "\t\tStartScript A1V6_CalcAlchemy2_sc"
+        - "\tendif"
+        - "\tif ( MenuMode == 0 )"
+        - "\t\tset waitActivate to 0"
+        - "\t\tDisablePlayerControls"
+        - "\t\tif ( GetItemCount \"A1V6_ApparatusItem_3\" == 0 )"
+        - "\t\t\tset A1V6_ApparatusDisable_3 to 1"
+        - "\t\t\tset doDisable to 1"
+        - "\t\t\tStartScript A1V6_ApparatusDeactivate_sc"
+        - "\t\telse"
+        - "\t\t\tset doClose to 1"
+        - "\t\t\tset invRef to 0"
+        - "\t\t\tset doRemove to 1"
+        - "\t\tendif"
+        - "\tendif"
+        - "\treturn"
+        - elseif ( waitActivate == 1 )
+        - "\tif ( MenuMode == 1 )"
+        - "\t\tset waitActivate to 2"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - ifx ( doOnce )
+        - else
+        - "\tset A1V6_ApparatusExt_3 to 1"
+        - "\tDisablePlayerControls"
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_ApparatusX"
+        - "\tset cy to A1V6_ApparatusY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - "\tset tempFloat to A1V6_ApparatusAngle"
+        - "\tset tempFloat to ( tempFloat / 57.29578 )"
+        - "\tsetx aCos to xCos tempFloat"
+        - "\tsetx aSin to xSin tempFloat"
+        - "\tset tempFloat to ( 30 * aCos )"
+        - "\tset tempFloat2 to ( 20 * aSin )"
+        - "\tset alembicX to ( cx - tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 30 * aSin )"
+        - "\tset tempFloat2 to ( 20 * aCos )"
+        - "\tset alembicY to ( cy + tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 20 * aCos )"
+        - "\tset tempFloat2 to ( 25 * aSin )"
+        - "\tset calcinatorX to ( cx + tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 20 * aSin )"
+        - "\tset tempFloat2 to ( 25 * aCos )"
+        - "\tset calcinatorY to ( cy - tempFloat + tempFloat2 )"
+        - "\tset tempFloat to ( 40 * aCos )"
+        - "\tset mortarX to ( cx + tempFloat )"
+        - "\tset tempFloat to ( 40 * aSin )"
+        - "\tset mortarY to ( cy - tempFloat )"
+        - "\tset tempFloat to ( 30 * aCos )"
+        - "\tset tempFloat2 to ( 20 * aSin )"
+        - "\tset retortX to ( cx - tempFloat - tempFloat2 )"
+        - "\tset tempFloat to ( 30 * aSin )"
+        - "\tset tempFloat2 to ( 20 * aCos )"
+        - "\tset retortY to ( cy + tempFloat - tempFloat2 )"
+        - "\tsetx invItem,invCount,invRef to xInventory"
+        - "\twhilex ( invCount )"
+        - "\t\txRemoveItem invItem invCount"
+        - "\t\tsetx invItem,invCount,invRef to xInventory"
+        - "\tendwhile"
+        - "\tAddItem \"A1V6_ApparatusItem_3\", 1"
+        - "\tset A1V6_ApparatusDisable_3 to 0"
+        - "\tset doSetUp to 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doActivate == 1 )
+        - "\tset waitActivate to 1"
+        - "\tset doActivate to 0"
+        - "\tActivate"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doRemove > 5 )
+        - "\tset temp to 1"
+        - else
+        - "\tset temp to 0"
+        - endif
+        - ""
+        - ifx ( temp )
+        - "\tsetx pcRef to xGetRef \"player\""
+        - "\twhilex ( pcRef )"
+        - "\t\tifx ( doClose )"
+        - "\t\t\tsetx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to xContentList invRef"
+        - "\t\telse"
+        - "\t\t\tsetx invItem,invCount,invRefType,tempLong,tempFloat,tempLong,invNextRef to pcRef->xContentList invRef"
+        - "\t\tendif"
+        - "\t\tifx ( invItem )"
+        - "\t\t\tif ( invRefType == 1380404809 )"
+        - "\t\t\t\tset temp to 1"
+        - "\t\t\telse"
+        - "\t\t\t\tset temp to 0"
+        - "\t\t\tendif"
+        - "\t\tendif"
+        - "\t\tifx ( temp )"
+        - "\t\t\tifx ( doClose )"
+        - "\t\t\t\txRemoveItem invItem invCount"
+        - "\t\t\t\tpcRef->xAddItem invItem invCount"
+        - "\t\t\telse"
+        - "\t\t\t\tpcRef->xRemoveItem invItem invCount"
+        - "\t\t\t\txAddItem invItem invCount"
+        - "\t\t\tendif"
+        - "\t\t\tset invRef to 0"
+        - "\t\t\tset pcRef to 0"
+        - "\t\t\tset doRemove to 1"
+        - "\t\tendif"
+        - "\t\tif ( doRemove > 1 )"
+        - "\t\t\tset invRef to invNextRef"
+        - "\t\tendif"
+        - "\t\tif ( invNextRef == 0 )"
+        - "\t\t\tset pcRef to 0"
+        - "\t\t\tset doRemove to 0"
+        - "\t\t\tif ( doClose == 1 )"
+        - "\t\t\t\tset doClose to 0"
+        - "\t\t\t\tStartScript A1V6_ApparatusDeactivate_sc"
+        - "\t\t\telse"
+        - "\t\t\t\tset doActivate to 1"
+        - "\t\t\t\tStartScript A1V6_ApparatusActivate_sc"
+        - "\t\t\tendif"
+        - "\t\tendif"
+        - "\tendwhile"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doRemove > 0 )
+        - "\tset doRemove to ( doRemove + 1 )"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doSetUp == 1 )
+        - "\tset doSetUp to 0"
+        - "\tset A1V6_MortarX to mortarX"
+        - "\tset A1V6_MortarY to mortarY"
+        - "\tset A1V6_AlembicX to alembicX"
+        - "\tset A1V6_AlembicY to alembicY"
+        - "\tset A1V6_CalcinatorX to calcinatorX"
+        - "\tset A1V6_CalcinatorY to calcinatorY"
+        - "\tset A1V6_RetortX to retortX"
+        - "\tset A1V6_RetortY to retortY"
+        - "\tset A1V6_ApparatusZ to cz"
+        - "\tStartScript A1V6_ApparatusSetUp_3"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\tDisablePlayerControls"
+        - "\tset invRef to 0"
+        - "\tset doRemove to 1"
+        - "\treturn"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ApparatusDeactivate_sc
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 144
+        var_table_size: 0
+    - SCDT: eJxty6EKgDAQgGGvCIJhxaThHkGLURgYzAaxjWMcKEwc2xR8UB9HUBCb+fv/FGJr6GAXAyCOl8A1k9VQK2n0xMshdZh3CqvDBsv0i0/xH0GUQCHy16wlR2HzLdPrrLzOP23ZVKpn/1zcMZkwPQpwA2enLV0=
+    - SCTX:
+        - Begin A1V6_ApparatusDeactivate_sc
+        - ""
+        - if ( player->GetItemCount A1V6_AlchemyActivator > 0 )
+        - "\tplayer->RemoveItem A1V6_AlchemyActivator, 1"
+        - endif
+        - ""
+        - StopScript A1V6_ApparatusDeactivate_sc
+        - StartScript A1V6_ADel1_RestoreHealth_sc
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ApparatusItem_1_sc
+        vars:
+          shorts: 2
+          longs: 0
+          floats: 0
+        data_size: 513
+        var_table_size: 17
+    - SCVR:
+        - OnPCAdd
+        - OnPCDrop
+    - SCDT: eJyNkDuqwkAUhs8fcO6dS+COaGdzChdgDNhZRBF1AzLahBTBxkfQCLomt6OV1u5CcDJCxBekG+Z/8J1fwJGsz4rbbfb2ZVAdEgI/ktcg+1mCeTnccCGSWbSLVwJg1lfFy2rgjVphkCTRKko362Eaz8OmDeXmo/poAkkULPSLFPpZYQbuGnAnB3cy8BL6/88RLVj/KU3vytgq4w/KxCoTykGMpfJsCRbTWWxsrrFdXjG7y0UaeiCiQYfInFzj13xvm97ne2x9+Dbf77cCv0iBneukJIAb/RyG6A==
+    - SCTX:
+        - Begin A1V6_ApparatusItem_1_sc
+        - ""
+        - short OnPCAdd
+        - short OnPCDrop
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( OnPCAdd == 1 )
+        - "\tset OnPCAdd to 0"
+        - "\tif ( player->GetItemCount A1V6_ApparatusItem_2 == 1 )"
+        - "\t\tplayer->RemoveItem A1V6_ApparatusItem_2, 1"
+        - "\tendif"
+        - "\tif ( player->GetItemCount A1V6_ApparatusItem_3 == 1 )"
+        - "\t\tplayer->RemoveItem A1V6_ApparatusItem_3, 1"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( OnPCDrop == 1 )
+        - "\tset OnPCDrop to 0"
+        - "\tset A1V6_ApparatusX to GetPos X"
+        - "\tset A1V6_ApparatusY to GetPos Y"
+        - "\tset A1V6_ApparatusZ to GetPos Z"
+        - "\tset A1V6_ApparatusAngle to ( player -> GetAngle Z )"
+        - "\tPlaceAtPC \"A1V6_ApparatusCont_1\" 1, 50, 0"
+        - "\tif ( A1V6_ApparatusExt_2 == 0 )"
+        - "\t\tplayer->AddItem A1V6_ApparatusItem_2, 1"
+        - "\telseif ( A1V6_ApparatusExt_3 == 0 )"
+        - "\t\tplayer->AddItem A1V6_ApparatusItem_3, 1"
+        - "\tendif"
+        - "\tDisable"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ApparatusItem_2_sc
+        vars:
+          shorts: 2
+          longs: 0
+          floats: 0
+        data_size: 513
+        var_table_size: 17
+    - SCVR:
+        - OnPCAdd
+        - OnPCDrop
+    - SCDT: eJyNkDuqwkAUhs8fcO6dS+COaGdzChdgDNhZRBF1AzLahBTBxkfQCLomt6OV1u5CcDJCxBekG+Z/8J1fwJGsz4rbbfb2ZVAdEgI/ktcg+1mCeTnccCGSWbSLVwJg1lfFy2rgjVphkCTRKko362Eaz0PPhnLzUX00gSQKFvpFCv2sMAN3DbiTgzsZeAn9/+eIFqz/lKZ3ZWyV8QdlYpUJ5SDGUnm2BIvpLDY219gur5jd5SINmyCiQYfInFzj13xvm97ne2x9+Dbf77cCv0iBneukJIAb+beG5Q==
+    - SCTX:
+        - Begin A1V6_ApparatusItem_2_sc
+        - ""
+        - short OnPCAdd
+        - short OnPCDrop
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( OnPCAdd == 1 )
+        - "\tset OnPCAdd to 0"
+        - "\tif ( player->GetItemCount A1V6_ApparatusItem_1 == 1 )"
+        - "\t\tplayer->RemoveItem A1V6_ApparatusItem_1, 1"
+        - "\tendif"
+        - "\tif ( player->GetItemCount A1V6_ApparatusItem_3 == 1 )"
+        - "\t\tplayer->RemoveItem A1V6_ApparatusItem_3, 1"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( OnPCDrop == 1 )
+        - "\tset OnPCDrop to 0"
+        - "\tset A1V6_ApparatusX to GetPos X"
+        - "\tset A1V6_ApparatusY to GetPos Y"
+        - "\tset A1V6_ApparatusZ to GetPos Z"
+        - "\tset A1V6_ApparatusAngle to ( player -> GetAngle Z )"
+        - "\tPlaceAtPC \"A1V6_ApparatusCont_2\" 1, 50, 0"
+        - "\tif ( A1V6_ApparatusExt_1 == 0 )"
+        - "\t\tplayer->AddItem A1V6_ApparatusItem_1, 1"
+        - "\telseif ( A1V6_ApparatusExt_3 == 0 )"
+        - "\t\tplayer->AddItem A1V6_ApparatusItem_3, 1"
+        - "\tendif"
+        - "\tDisable"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ApparatusItem_3_sc
+        vars:
+          shorts: 2
+          longs: 0
+          floats: 0
+        data_size: 513
+        var_table_size: 17
+    - SCVR:
+        - OnPCAdd
+        - OnPCDrop
+    - SCDT: eJyNkDuqwkAUhs8fcO6dS+COaGdzChdgIthZRBF1AzLahBTBxkfQCLomt6OV1u5CcDJCxBekG+Z/8J1fwJGsz4rbbfb2ZVAdEgI/ktcg+1mCeTnccCGSWbSLVwJg1lfFy2rgjVphkCTRKko362Eaz0PPhnLzUX00gSQKFvpFCv2sMAN3DbiTgzsZeAn9/+eIFqz/lKZ3ZWyV8QdlYpUJ5SDGUnm2BIvpLDY219gur5jd5SINmyCiQYfInFzj13xvm97ne2x9+Dbf77cCv0iBneukJIAb93aG4g==
+    - SCTX:
+        - Begin A1V6_ApparatusItem_3_sc
+        - ""
+        - short OnPCAdd
+        - short OnPCDrop
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( OnPCAdd == 1 )
+        - "\tset OnPCAdd to 0"
+        - "\tif ( player->GetItemCount A1V6_ApparatusItem_1 == 1 )"
+        - "\t\tplayer->RemoveItem A1V6_ApparatusItem_1, 1"
+        - "\tendif"
+        - "\tif ( player->GetItemCount A1V6_ApparatusItem_2 == 1 )"
+        - "\t\tplayer->RemoveItem A1V6_ApparatusItem_2, 1"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( OnPCDrop == 1 )
+        - "\tset OnPCDrop to 0"
+        - "\tset A1V6_ApparatusX to GetPos X"
+        - "\tset A1V6_ApparatusY to GetPos Y"
+        - "\tset A1V6_ApparatusZ to GetPos Z"
+        - "\tset A1V6_ApparatusAngle to ( player -> GetAngle Z )"
+        - "\tPlaceAtPC \"A1V6_ApparatusCont_3\" 1, 50, 0"
+        - "\tif ( A1V6_ApparatusExt_1 == 0 )"
+        - "\t\tplayer->AddItem A1V6_ApparatusItem_1, 1"
+        - "\telseif ( A1V6_ApparatusExt_2 == 0 )"
+        - "\t\tplayer->AddItem A1V6_ApparatusItem_2, 1"
+        - "\tendif"
+        - "\tDisable"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ApparatusSetUp_1
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 2736
+        var_table_size: 0
+    - SCDT: eJyd0z9Lw0AYBvA7hGLB4Qb/UBV7Sj9As7hVqJO7KN3CawmSo68NaRz6OdVRKBUyCBbsLtiYWlMv792l8/O85Ed4rsZ5XfakkJ2O9Fq8znd4LRrAOIhrfOtU9r6EHO5DFEEMyePIv/dhEOBd2PfbnryQ7VX7RRAtzp7pKBVHXe/23C/Lg0XO2NUlY6uPbJeR0ImENAktJKxMUk4kRZOUhaQqk8CJBDQJLCSwkM5y0kHxYhSFUeAno3AM/0xULUPRWSqamqpQIGTNXLarX2m/qrSTmYggFQ0C9EdZf3KtHNMovog+DPrhAyTDWBfRxYxlSlNxor29QqX8X+k8dOWhkYd2Hm7CU648ZeQpO09twgNXHhh5YOdBOW99fTIH7hU3EQeLi0THlZcyGJWk4lBb3DIu/186B104SHLQzMGqHOXCUSRHmTmqKgdcOEBywMwBnWNfDy4OILasZ1XS1lNIytazjN3X48BBkoNmDlblKBeOIjnKzFFVOeDCAZIDZg7onDpnQrCnz/nkYzZ9n8i32Xw2nTD2Ko7F3s959/f8OkhuIt/j/BvxWoBy
+    - SCTX:
+        - Begin A1V6_ApparatusSetUp_1
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_alembic_01, 1"
+        - "\tAddItem apparatus_g_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_alembic_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_alembic_01, 1"
+        - "\tAddItem apparatus_m_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_alembic_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_alembic_01, 1"
+        - "\tAddItem apparatus_j_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_alembic_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_alembic_01, 1"
+        - "\tAddItem apparatus_a_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_alembic_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
+        - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
+        - "\tAddItem apparatus_a_spipe_tsiya, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_tsiya_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
+        - "\tAddItem apparatus_a_spipe_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e1, 1, 50, 0"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_calcinator_01, 1"
+        - "\tAddItem apparatus_g_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_calcinator_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_calcinator_01, 1"
+        - "\tAddItem apparatus_m_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_calcinator_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_calcinator_01, 1"
+        - "\tAddItem apparatus_j_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_calcinator_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_calcinator_01, 1"
+        - "\tAddItem apparatus_a_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_calcinator_e1, 1, 50, 0"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_retort_01, 1"
+        - "\tAddItem apparatus_g_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_retort_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_retort_01, 1"
+        - "\tAddItem apparatus_m_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_retort_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_retort_01, 1"
+        - "\tAddItem apparatus_j_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_retort_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_retort_01, 1"
+        - "\tAddItem apparatus_a_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_retort_e1, 1, 50, 0"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_mortar_01, 1"
+        - "\tAddItem apparatus_g_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_mortar_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_mortar_01, 1"
+        - "\tAddItem apparatus_m_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_mortar_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_mortar_01, 1"
+        - "\tAddItem apparatus_j_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_mortar_e1, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_mortar_01, 1"
+        - "\tAddItem apparatus_a_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_mortar_e1, 1, 50, 0"
+        - endif
+        - ""
+        - "MessageBox \"Установка готова\""
+        - EnablePlayerControls
+        - ""
+        - StopScript A1V6_ApparatusSetUp_1
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ApparatusSetUp_2
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 2736
+        var_table_size: 0
+    - SCDT: eJyd0z9Lw0AYBvA7hGLB4Qb/UBV7Sj9A28GtQp3cRekWXkuQHH1tSOPQz6mOQqmQQbBgd8HG1Jp6ee8unZ/nJT/CcxXOq7Inhex0ZKvBq3yHV8IBjP2owrdOZe9LyOE+hCFEED+OvHsPBj7eBX2v2ZIXsrlqvwiixdkzHSXiqNu6PfeKcr/NGWNXl4ytPrJdREInEtIktJCwNEk5kRRNUhaSKk0CJxLQJLCQwEI6y0gH+YtRGIS+F4+CMfwzUbUURWeJqGuqXIGQ1TPZrn6l/arCTmoigkTUCNAfZf3JNTJMLf8i+jDoBw8QDyNdRBdTlilNxIn29nKV4n+l89CVh0Ye2nm4CU+58pSRp+w8tQkPXHlg5IGdB8W89fXJDLiX30TkLy5iHVdcSmFUkohDbXHLuPh/6Rx04SDJQTMHy3KUC0eRHGXmqLIccOEAyQEzB3SOfT24OIDIsp5VSVtPLilazzJ2X48DB0kOmjlYlqNcOIrkKDNHleWACwdIDpg5oHOqnAnBnj7nk4/Z9H0i32bz2XTC2Ks4Fns/593f82s/vgm9NuffTXmAhQ==
+    - SCTX:
+        - Begin A1V6_ApparatusSetUp_2
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_alembic_01, 1"
+        - "\tAddItem apparatus_g_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_alembic_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_alembic_01, 1"
+        - "\tAddItem apparatus_m_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_alembic_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_alembic_01, 1"
+        - "\tAddItem apparatus_j_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_alembic_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_alembic_01, 1"
+        - "\tAddItem apparatus_a_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_alembic_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
+        - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
+        - "\tAddItem apparatus_a_spipe_tsiya, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_tsiya_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
+        - "\tAddItem apparatus_a_spipe_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e2, 1, 50, 0"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_calcinator_01, 1"
+        - "\tAddItem apparatus_g_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_calcinator_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_calcinator_01, 1"
+        - "\tAddItem apparatus_m_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_calcinator_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_calcinator_01, 1"
+        - "\tAddItem apparatus_j_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_calcinator_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_calcinator_01, 1"
+        - "\tAddItem apparatus_a_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_calcinator_e2, 1, 50, 0"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_retort_01, 1"
+        - "\tAddItem apparatus_g_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_retort_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_retort_01, 1"
+        - "\tAddItem apparatus_m_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_retort_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_retort_01, 1"
+        - "\tAddItem apparatus_j_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_retort_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_retort_01, 1"
+        - "\tAddItem apparatus_a_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_retort_e2, 1, 50, 0"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_mortar_01, 1"
+        - "\tAddItem apparatus_g_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_mortar_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_mortar_01, 1"
+        - "\tAddItem apparatus_m_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_mortar_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_mortar_01, 1"
+        - "\tAddItem apparatus_j_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_mortar_e2, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_mortar_01, 1"
+        - "\tAddItem apparatus_a_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_mortar_e2, 1, 50, 0"
+        - endif
+        - ""
+        - "MessageBox \"Установка готова\""
+        - EnablePlayerControls
+        - ""
+        - StopScript A1V6_ApparatusSetUp_2
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ApparatusSetUp_3
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 2736
+        var_table_size: 0
+    - SCDT: eJyd081Kw0AUBeAZhGLBxSz8oSp2lD5AS8FdhbpyL0p34VqCZOi1IY2LPqe6FEqFLAQLdi/YmFpTJ3dm0vU5l3yEMxXOq7Inhex0ZKvBq3yHV8IBjP2owrdOZe9LyOE+hCFEED+OvHsPBj7eBX2v2ZIXsrlqvwiixdkzHSXiqNu6PfeKcr/NGWNXl4ytPrJdREInEtIktJCwNEk5kRRNUhaSKk0CJxLQJLCQwEI6y0gH+YtRGIS+F4+CMfwzUbUURWeJqGuqXIGQ1TPZrn6l/arCTmoigkTUCNAfZf3JNTJMLf8i+jDoBw8QDyNdRBdTlilNxIn29nKV4n+l89CVh0Ye2nm4CU+58pSRp+w8tQkPXHlg5IGdB8W89fXJDLiX30TkLy5iHVdcSmFUkohDbXHLuPh/6Rx04SDJQTMHy3KUC0eRHGXmqLIccOEAyQEzB3SOfT24OIDIsp5VSVtPLilazzJ2X48DB0kOmjlYlqNcOIrkKDNHleWACwdIDpg5oHOqnAnBnj7nk4/Z9H0i32bz2XTC2Ks4Fns/593f82s/vgm9NuffqYmAmA==
+    - SCTX:
+        - Begin A1V6_ApparatusSetUp_3
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_alembic_01, 1"
+        - "\tAddItem apparatus_g_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_alembic_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_alembic_01, 1"
+        - "\tAddItem apparatus_m_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_alembic_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_alembic_01, 1"
+        - "\tAddItem apparatus_j_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_alembic_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_alembic_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_alembic_01, 1"
+        - "\tAddItem apparatus_a_alembic_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_alembic_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
+        - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
+        - "\tAddItem apparatus_a_spipe_tsiya, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_tsiya_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
+        - "\tAddItem apparatus_a_spipe_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e3, 1, 50, 0"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_calcinator_01, 1"
+        - "\tAddItem apparatus_g_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_calcinator_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_calcinator_01, 1"
+        - "\tAddItem apparatus_m_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_calcinator_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_calcinator_01, 1"
+        - "\tAddItem apparatus_j_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_calcinator_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_calcinator_01, 1"
+        - "\tAddItem apparatus_a_calcinator_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_calcinator_e3, 1, 50, 0"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_retort_01, 1"
+        - "\tAddItem apparatus_g_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_retort_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_retort_01, 1"
+        - "\tAddItem apparatus_m_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_retort_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_retort_01, 1"
+        - "\tAddItem apparatus_j_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_retort_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_retort_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_retort_01, 1"
+        - "\tAddItem apparatus_a_retort_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_retort_e3, 1, 50, 0"
+        - endif
+        - ""
+        - if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_g_mortar_01, 1"
+        - "\tAddItem apparatus_g_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_g_mortar_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_m_mortar_01, 1"
+        - "\tAddItem apparatus_m_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_m_mortar_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_j_mortar_01, 1"
+        - "\tAddItem apparatus_j_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_j_mortar_e3, 1, 50, 0"
+        - elseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )
+        - "\tplayer->RemoveItem apparatus_a_mortar_01, 1"
+        - "\tAddItem apparatus_a_mortar_01, 1"
+        - "\tPlaceAtPC A1V6_apparatus_a_mortar_e3, 1, 50, 0"
+        - endif
+        - ""
+        - "MessageBox \"Установка готова\""
+        - EnablePlayerControls
+        - ""
+        - StopScript A1V6_ApparatusSetUp_3
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_CalcAlchemy2_sc
+        vars:
+          shorts: 15
+          longs: 5
+          floats: 2
+        data_size: 1961
+        var_table_size: 147
+    - SCVR:
+        - bbb
+        - bbb2
+        - sss
+        - sss2
+        - random25
+        - rrandom100
+        - in
+        - pin
+        - temp
+        - state
+        - alembic_up
+        - alembic_down
+        - mortar
+        - retort
+        - calcinator
+        - alchemy
+        - luck
+        - lk
+        - p_success
+        - tempi
+        - tempf
+        - exp
+    - SCDT: eJx1VdtO20AQ3bVjxyYBooq2qnobKp6glHVip0ECJIpQnyr1IlV5i9wQ2tCYRHEqlY+v1JnZjWPw5iW7c+ac8dxW8WUthHxDwOkpJL50XkH/ZQuyR+fR9+7g0/TqfDL8NcruLv/OiKE8iVwH1IvWDjMu0snQUNqDfBjKUPpyt4gYI98hPp41c0pzuuYM8Wz7Mgggrws4Y6wuNtjKAwGHvnTLPkd4kDeF4JB4bfCVokR1KUviSCk4oIwQ80UA/d3WlVAKwzUAATghluCMiojug4gk/rjNpZoyv45ypIRCYLNCulCdkSdtLbumyNeOEM9bFi/HbjL+eboYT28/YGBJ376HXiDqVNBviLoV9AuitQp66RSDS/Z4Qm+LCXWa0p9N0rvR3JOcbv93C/UTzhyTqbh77HaMm/tUtBYtDy1qSgxHD9suQ0Adtj1G4sQV2owVHAbUSu3rks8r+ZgaAGIUsy7dkr+r/Z7x9+ibzE7YPqAOo70B+ANYEhyU7HxL27REaOM8JTpqtGYRlXJNixsFnDaiJ7z9DKq6dPjqkUfwtUmid4qmDUfUYtkwwfJtovBn6Mq+Ji/g2anR4x5iVPYsNz1iVGe2XOslp2E4+aYRe3zlRachx3rIx8WQqfkA/X8tmD5OZ7N0ni7+5IOfg2w6X6TzgYrM09oUNSojsLEzC9uFnp18YyV37eTUSo6VLnuzKNtWwXy0QO1KuUU7viZ/G3dd+lVuHQ4j3Kv9NSVUBQEJIgX7ug4DtBGgapxdHeRJuZp0Msp+jIerKA0qB88mnp3AJsrsotiIYqvoxi7qGFFiFaV2UduIuih6rUU7ZVE+G89G9yWRkbxHyRsteVqVLPLxXWpT8etjSBmox/uxp0M9K3d0iP9P49sUZ7NKYbvY8qoiW6Nw4TixCm7WCnr2L6RrBd1EbwrdE1W85g69Zin/Ax3ehzs=
+    - SCTX:
+        - Begin A1V6_CalcAlchemy2_sc
+        - ""
+        - short bbb
+        - short bbb2
+        - short sss
+        - short sss2
+        - long alchemy
+        - long luck
+        - short random25
+        - short rrandom100
+        - short in
+        - short pin
+        - long lk
+        - long p_success
+        - short temp
+        - float tempf
+        - long tempi
+        - short state
+        - short alembic_up
+        - short alembic_down
+        - short mortar
+        - short retort
+        - short calcinator
+        - float exp
+        - ""
+        - if ( state == 5 )
+        - "\tif ( ScriptRunning A1V6_ModAlchemyExp == 0 )"
+        - "\t\tset state to 0"
+        - "\t\tStopScript A1V6_CalcAlchemy2_sc"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( state == 4 )
+        - "\tset bbb2 to 0"
+        - "\tset sss2 to 0"
+        - "\tset bbb to 0"
+        - "\tset sss to 0"
+        - "\tset temp to 2"
+        - "\tif ( in > 0 )"
+        - "\t\tset in to ( in - pin )"
+        - "\t\tif ( in > 0 )"
+        - "\t\t\tset bbb2 to alembic_down"
+        - "\t\t\tset sss2 to alembic_up"
+        - "\t\t\tset temp to 1"
+        - "\t\telse"
+        - "\t\t\tset in to ( in + 100 )"
+        - "\t\tendif"
+        - "\tendif"
+        - "\tset rrandom100 to ( Random 100 )"
+        - "\tif ( rrandom100 < in )"
+        - "\t\tset bbb to alembic_down"
+        - "\t\tset sss to alembic_up"
+        - "\t\tset temp to 1"
+        - "\tendif"
+        - "\tset A1V6_AlchemyRes to temp"
+        - "\tif ( temp == 1 )"
+        - "\t\tset A1V6_ModAlchemyExp.Value to exp"
+        - "\t\tStartScript A1V6_ModAlchemyExp"
+        - "\tendif"
+        - "\tset A1V6_PotionB to bbb"
+        - "\tset A1V6_PotionC to bbb2"
+        - "\tset A1V6_PotionS to sss"
+        - "\tset A1V6_PotionQ to sss2"
+        - "\tset A1V6_PotionE to 0"
+        - "\tset state to 5"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( state == 3 )
+        - "\tset tempf to ( player->GetAlchemy )"
+        - "\tset alchemy to tempf"
+        - "\tset tempf to ( player->GetLuck )"
+        - "\tset luck to tempf"
+        - "\tset temp to ( Random 100 )"
+        - "\tset random25 to ( temp / 4 )"
+        - "\tset rrandom100 to ( Random 100 )"
+        - ""
+        - "\tif ( luck < 40 )"
+        - "\t\tset lk to ( luck - 40 )"
+        - "\telseif ( luck < 60 )"
+        - "\t\tset tempi to ( luck - 40 )"
+        - "\t\tset lk to ( tempi / 4 )"
+        - "\telse"
+        - "\t\tset tempi to ( luck - 60 )"
+        - "\t\tset tempi to ( tempi / 8 )"
+        - "\t\tset lk to ( 5 + tempi )"
+        - "\tendif"
+        - ""
+        - "\tset lk to ( lk + alchemy )"
+        - "\tset lk to ( lk + retort )"
+        - ""
+        - "\tset p_success to lk"
+        - "\tif ( p_success > 100 )"
+        - "\t\tset exp to 1"
+        - "\telseif ( p_success <= 0 )"
+        - "\t\tset exp to 0"
+        - "\telse"
+        - "\t\tset exp to p_success"
+        - "\t\tset exp to ( 100.0 / exp )"
+        - "\tendif"
+        - "\tif ( p_success > calcinator )"
+        - "\t\tset p_success to calcinator"
+        - "\tendif"
+        - "\tif ( rrandom100 >= p_success )"
+        - "\t\tset in to 0"
+        - "\tendif"
+        - "\tif ( in > 1 )"
+        - "\t\tset in to lk"
+        - "\telse"
+        - "\t\tset in to 0"
+        - "\tendif"
+        - "\tif ( in > mortar )"
+        - "\t\tset in to mortar"
+        - "\tendif"
+        - "\tset state to 4"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( state == 0 )
+        - "\tif ( GetItemCount apparatus_g_mortar_01 > 0 )"
+        - "\t\tset mortar to 100"
+        - "\telseif ( GetItemCount apparatus_m_mortar_01 > 0 )"
+        - "\t\tset mortar to 80"
+        - "\telseif ( GetItemCount apparatus_j_mortar_01 > 0 )"
+        - "\t\tset mortar to 60"
+        - "\telseif ( GetItemCount apparatus_a_mortar_01 > 0 )"
+        - "\t\tset mortar to 40"
+        - "\telse"
+        - "\t\tset mortar to 0"
+        - "\tendif"
+        - ""
+        - "\tif ( GetItemCount apparatus_g_retort_01 > 0 )"
+        - "\t\tset retort to 5"
+        - "\telseif ( GetItemCount apparatus_m_retort_01 > 0 )"
+        - "\t\tset retort to 0"
+        - "\telseif ( GetItemCount apparatus_j_retort_01 > 0 )"
+        - "\t\tset retort to -5"
+        - "\telseif ( GetItemCount apparatus_a_retort_01 > 0 )"
+        - "\t\tset retort to -10"
+        - "\telse"
+        - "\t\tset retort to -20"
+        - "\tendif"
+        - ""
+        - "\tif ( GetItemCount apparatus_g_alembic_01 > 0 )"
+        - "\t\tset alembic_up to 5"
+        - "\t\tset alembic_down to 3"
+        - "\telseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
+        - "\t\tset alembic_up to 4"
+        - "\t\tset alembic_down to 4"
+        - "\telseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
+        - "\t\tset alembic_up to 3"
+        - "\t\tset alembic_down to 5"
+        - "\telseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
+        - "\t\tset alembic_up to 2"
+        - "\t\tset alembic_down to 6"
+        - "\telseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
+        - "\t\tset alembic_up to 1"
+        - "\t\tset alembic_down to 7"
+        - "\telseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
+        - "\t\tset alembic_up to 1"
+        - "\t\tset alembic_down to 7"
+        - "\telse"
+        - "\t\tset alembic_up to 0"
+        - "\t\tset alembic_down to 8"
+        - "\tendif"
+        - ""
+        - "\tif ( GetItemCount apparatus_g_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 100"
+        - "\telseif ( GetItemCount apparatus_m_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 95"
+        - "\telseif ( GetItemCount apparatus_j_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 80"
+        - "\telseif ( GetItemCount apparatus_a_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 65"
+        - "\telse"
+        - "\t\tset calcinator to 50"
+        - "\tendif"
+        - "\tset state to 3"
+        - "\treturn"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_CalcAlchemy5_sc
+        vars:
+          shorts: 15
+          longs: 5
+          floats: 2
+        data_size: 2149
+        var_table_size: 145
+    - SCVR:
+        - bbb
+        - ccc
+        - sss
+        - qqq
+        - eee
+        - random25
+        - rrandom100
+        - in
+        - temp
+        - state
+        - alembic_up
+        - alembic_down
+        - mortar
+        - retort
+        - calcinator
+        - alchemy
+        - luck
+        - lk
+        - p_success
+        - tempi
+        - tempf
+        - exp
+    - SCDT: eJx1VdtO20AQ3XWyiQ0Gooq26n2oeApKsRM7JBIgUYT6VKkXqcpb5IbQhtokilOpfHwlZmaX3Lx5yXrnnDN7ZmcWKrLsQb4l4OwM4op03kLvTQ2yJxfhj3b/8/j6Ih38Hmb3V/8mxAiURK4DwevaPjMuk3RgKHE/H3jSkxVZn2eMkC+Jj6tj1pJZy2ZVtFakdCF3BZxS7NMeJzeJvw1zB5pV+RLJnvCY1gzgCDW48UjTDPigLcAfyLcFHLkLMNKnI+gUwba2hGCpCHa0TwTLBqxKyZYxpEyIKpaeMb9qxJ+nc4tG1sBVI2vgqhG/aMRnI9abC5W0tfNGCgU3jhCvahaUc/kc/zKejcZ3HxWVJNail4pqWY9+V1TEevSrIvfr0StFBQgzV/EhD1BjPkAtX1YmaXI/nCrJjnt/akhO2Tz6KcAdhh0D88S40DuoXYuA7rCCO+ptBMe4qy4w7iHqTJvSktDbKICGK51HjLqUqiWMqS5gjHJWZWkJb2tcGbxDZzI75j03LKWW4w9gSXC0tM939b6MpeBeoEEEsP3nEFIpN/SeQp4Rip7y4+RgUJUOfypCBH/6JPoQUMPhmCd22yTL94jCx9AnYz7g1cD5mdHjDGJWQhz9SM9pqFL16LTCThHwuK5WExp6PF1RhUYIIdTNkVqc75isij/pGrj7ke5+d9596gpA738Nxk+TySSZJrO/ef9XPxtPZ8m0H4SYjLq6I0rQ7bo2cmYln9jJt1ZybCcnVnKrq0vfWS3dVsV0OMMEC/kuPYANRdi4wYYaily2EkN9Qx1FgcveA6jrYkwA/+hyNc6BTvJsuZokHWY/R4NFlm0qB1cf15ZrE2V2UWREkVV0axe1jCi2ihK7qGlEbRS906L9ZVE+GU2Gq5LQSE5Q8l5Lnhcls3x0n9hU/DQ5FJhQh+fjUKd6sXyjA/zfOrpLsDcLC3uiTC/ZtSmyDQp8G7FVcLtR0LGfkGwUtGM9KfQdB/MX3aIXLeUDobKjgQ==
+    - SCTX:
+        - Begin A1V6_CalcAlchemy5_sc
+        - ""
+        - short bbb
+        - short ccc
+        - short sss
+        - short qqq
+        - short eee
+        - long alchemy
+        - long luck
+        - short random25
+        - short rrandom100
+        - short in
+        - long lk
+        - long p_success
+        - short temp
+        - float tempf
+        - long tempi
+        - short state
+        - short alembic_up
+        - short alembic_down
+        - short mortar
+        - short retort
+        - short calcinator
+        - float exp
+        - ""
+        - if ( state == 5 )
+        - "\tif ( ScriptRunning A1V6_ModAlchemyExp == 0 )"
+        - "\t\tset state to 0"
+        - "\t\tStopScript A1V6_CalcAlchemy5_sc"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( state == 4 )
+        - "\tset bbb to 0"
+        - "\tset ccc to 0"
+        - "\tset sss to 0"
+        - "\tset qqq to 0"
+        - "\tset eee to 0"
+        - "\tif ( in < 0 )"
+        - "\t\tset A1V6_AlchemyRes to 2"
+        - "\telse"
+        - "\t\tset temp to ( in + 20 )"
+        - "\t\tif ( temp < 20 )"
+        - "\t\t\tset bbb to ( bbb + alembic_up )"
+        - "\t\telseif ( temp < 40 )"
+        - "\t\t\tset ccc to ( ccc + alembic_up )"
+        - "\t\telseif ( temp < 60 )"
+        - "\t\t\tset sss to ( sss + alembic_up )"
+        - "\t\telseif ( temp < 80 )"
+        - "\t\t\tset qqq to ( qqq + alembic_up )"
+        - "\t\telse"
+        - "\t\t\tset eee to ( eee + alembic_up )"
+        - "\t\tendif"
+        - "\t\tif ( in < 20 )"
+        - "\t\t\tset bbb to ( bbb + alembic_down )"
+        - "\t\telseif ( in < 40 )"
+        - "\t\t\tset ccc to ( ccc + alembic_down )"
+        - "\t\telseif ( in < 60 )"
+        - "\t\t\tset sss to ( sss + alembic_down )"
+        - "\t\telseif ( in < 80 )"
+        - "\t\t\tset qqq to ( qqq + alembic_down )"
+        - "\t\telse"
+        - "\t\t\tset eee to ( eee + alembic_down )"
+        - "\t\tendif"
+        - "\t\tset A1V6_AlchemyRes to 1"
+        - "\t\tset A1V6_ModAlchemyExp.Value to exp"
+        - "\t\tStartScript A1V6_ModAlchemyExp"
+        - "\tendif"
+        - "\tset A1V6_PotionB to bbb"
+        - "\tset A1V6_PotionC to ccc"
+        - "\tset A1V6_PotionS to sss"
+        - "\tset A1V6_PotionQ to qqq"
+        - "\tset A1V6_PotionE to eee"
+        - "\tset state to 5"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( state == 3 )
+        - "\tset tempf to ( player->GetAlchemy )"
+        - "\tset alchemy to tempf"
+        - "\tset tempf to ( player->GetLuck )"
+        - "\tset luck to tempf"
+        - "\tset temp to ( Random 100 )"
+        - "\tset random25 to ( temp / 4 )"
+        - "\tset rrandom100 to ( Random 100 )"
+        - ""
+        - "\tif ( luck < 40 )"
+        - "\t\tset lk to ( luck - 40 )"
+        - "\telseif ( luck < 60 )"
+        - "\t\tset tempi to ( luck - 40 )"
+        - "\t\tset lk to ( tempi / 4 )"
+        - "\telse"
+        - "\t\tset tempi to ( luck - 60 )"
+        - "\t\tset tempi to ( tempi / 8 )"
+        - "\t\tset lk to ( 5 + tempi )"
+        - "\tendif"
+        - ""
+        - "\tset lk to ( lk + alchemy )"
+        - "\tset lk to ( lk + retort )"
+        - ""
+        - "\tset p_success to lk"
+        - "\tif ( p_success > 100 )"
+        - "\t\tset exp to 1"
+        - "\telseif ( p_success <= 0 )"
+        - "\t\tset exp to 0"
+        - "\telse"
+        - "\t\tset exp to p_success"
+        - "\t\tset exp to ( 100.0 / exp )"
+        - "\tendif"
+        - "\tif ( p_success > calcinator )"
+        - "\t\tset p_success to calcinator"
+        - "\tendif"
+        - "\tif ( rrandom100 >= p_success )"
+        - "\t\tset in to 0"
+        - "\tendif"
+        - "\tif ( in > 1 )"
+        - "\t\tset tempi to ( lk + random25 )"
+        - "\t\tset in to ( tempi - 32 )"
+        - "\telse"
+        - "\t\tset in to -1"
+        - "\tendif"
+        - "\tif ( in > mortar )"
+        - "\t\tset in to mortar"
+        - "\tendif"
+        - "\tset state to 4"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( state == 0 )
+        - "\tif ( GetItemCount apparatus_g_mortar_01 > 0 )"
+        - "\t\tset mortar to 99"
+        - "\telseif ( GetItemCount apparatus_m_mortar_01 > 0 )"
+        - "\t\tset mortar to 79"
+        - "\telseif ( GetItemCount apparatus_j_mortar_01 > 0 )"
+        - "\t\tset mortar to 59"
+        - "\telseif ( GetItemCount apparatus_a_mortar_01 > 0 )"
+        - "\t\tset mortar to 39"
+        - "\telse"
+        - "\t\tset mortar to -1"
+        - "\tendif"
+        - ""
+        - "\tif ( GetItemCount apparatus_g_retort_01 > 0 )"
+        - "\t\tset retort to 5"
+        - "\telseif ( GetItemCount apparatus_m_retort_01 > 0 )"
+        - "\t\tset retort to 0"
+        - "\telseif ( GetItemCount apparatus_j_retort_01 > 0 )"
+        - "\t\tset retort to -5"
+        - "\telseif ( GetItemCount apparatus_a_retort_01 > 0 )"
+        - "\t\tset retort to -10"
+        - "\telse"
+        - "\t\tset retort to -20"
+        - "\tendif"
+        - ""
+        - "\tif ( GetItemCount apparatus_g_alembic_01 > 0 )"
+        - "\t\tset alembic_up to 5"
+        - "\t\tset alembic_down to 3"
+        - "\telseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
+        - "\t\tset alembic_up to 4"
+        - "\t\tset alembic_down to 4"
+        - "\telseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
+        - "\t\tset alembic_up to 3"
+        - "\t\tset alembic_down to 5"
+        - "\telseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
+        - "\t\tset alembic_up to 2"
+        - "\t\tset alembic_down to 6"
+        - "\telseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
+        - "\t\tset alembic_up to 1"
+        - "\t\tset alembic_down to 7"
+        - "\telseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
+        - "\t\tset alembic_up to 1"
+        - "\t\tset alembic_down to 7"
+        - "\telse"
+        - "\t\tset alembic_up to 0"
+        - "\t\tset alembic_down to 8"
+        - "\tendif"
+        - ""
+        - "\tif ( GetItemCount apparatus_g_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 100"
+        - "\telseif ( GetItemCount apparatus_m_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 95"
+        - "\telseif ( GetItemCount apparatus_j_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 80"
+        - "\telseif ( GetItemCount apparatus_a_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 65"
+        - "\telse"
+        - "\t\tset calcinator to 50"
+        - "\tendif"
+        - "\tset state to 3"
+        - "\treturn"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Calcinator_1_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 232
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxtjsEKglAQRecaSg8XvSioXbNoG/QWtXMhBf5BqBt5RYEgJWpf1SfVxzTqpsDNzHDPzGE8QHHMmoOAzRoKHhwJPn3wmoL6ECuOFqE57bOwLG1lm2d9zGt7Lq6Z6VbfuluT2+WvbKy4BrXB1oVMDhsXN9CcI93pDra45HfbPKqYhDhDJGnJiGYcTf5fSHugWAqbHW98HYucfJ2ISVoqgBSALxWQLFY=
+    - SCTX:
+        - Begin A1V6_Calcinator_1_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_1 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_CalcinatorX"
+        - "\tset cy to A1V6_CalcinatorY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Calcinator_2_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 232
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxtjsEKglAQRecaSg8XvSioXbNoG/SC2rmQAv8g1I28okCQErWv6pPqYxp1U9BmZrhn5jAeoDhmzUHAZgkFD44E7z54jkF9iAVHs9Acd1lYlrayzaM+5LU9FZds062+dLcmt/Nv2VBxDWqDtQuZHDYurqApR7rT7W1xzm+2uVcxCXH+kaQlA5pwNPp9Ie2BYilstrzydSxy8nUiJmmpAFIAPhY1LFc=
+    - SCTX:
+        - Begin A1V6_Calcinator_2_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_2 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_CalcinatorX"
+        - "\tset cy to A1V6_CalcinatorY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Calcinator_3_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 232
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxtjsEKglAQRecaSg8XvSioXbNoG/SI2rmQAv8g1I28okCQErWv6pPqYxp1U9BmZrhn5jAeoDhmzUHAZgkFD44E7z54jkF9iAVHs9Acd1lYlrayzaM+5LU9FZds062+dLcmt/Nv2VBxDWqDtQuZHDYurqApR7rT7W1xzm+2uVcxCXH+kaQlA5pwNPp9Ie2BYilstrzydSxy8nUiJmmpAFIAPhbaLFg=
+    - SCTX:
+        - Begin A1V6_Calcinator_3_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_3 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_CalcinatorX"
+        - "\tset cy to A1V6_CalcinatorY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_IncAlchemy
+        vars:
+          shorts: 1
+          longs: 2
+          floats: 0
+        data_size: 218
+        var_table_size: 12
+    - SCVR:
+        - a
+        - str
+        - pcRef
+    - SCDT: eJxtjj0LwkAQRGeFE1HQyFlYKFwjCNqkkSsOYiqxsxArIUgMWJwiHhb599l8FkmKXYZ5rxhBjrBQJy/0b4cotPEreacX+3eQGnwOMFLvMdZHyLYTbZ6ToPQsBuxd2btj+LWPNPlhzQ1VbM4JqF00BGZptqa/nwYiXzdS/JSvdoK6M0UOsfJmBTh/4ooRZYvoKzs=
+    - SCTX:
+        - Begin A1V6_IncAlchemy
+        - ""
+        - short a
+        - long str
+        - long pcRef
+        - ""
+        - set a to A1V6_AlchemyPlus
+        - "setx str to xStringBuild \"A1V6_AlchemyPlus_%d\" a"
+        - "setx pcRef to xGetRef \"player\""
+        - pcRef->xAddItem str 1
+        - pcRef->xEquip str
+        - set a to ( a + 1 )
+        - set A1V6_AlchemyPlus to a
+        - ""
+        - StopScript A1V6_IncAlchemy
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ModAlchemyExp
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 5
+        data_size: 370
+        var_table_size: 32
+    - SCVR:
+        - Value
+        - alch1
+        - alch2
+        - tempf1
+        - tempf2
+    - SCDT: eJxtj09Lw0AQxWdSN6VVdFE8iIrv4kWhJAc9mUpRCR6EnsRbCHVDS7e1JCr25mfzk4TiIfin6EEQenFjixZaBgZm5vcebwRHC1SGWzlAxIQ9wZGgNfgrNffyMKjpRlN1+mcPPRJj0DQYAvuCZxiRX8nm5Y1ZPaoeXMeZo7Lg2FzYhr/uhzoJgpNmGJ+q+6Aeq0R1b+F5OcDGU04r6/ouwVHuuSnHlufdxuRW4iIXl9ju6bCvYpPcIoGrtqS/XUcSPR5PI4UJYrO1CDOhCiMjS5aTdkvrOGwliuQOPaXfeE8Hoxekr1/ZW5ZhMPoYfuJ5iN2KE+VGVOK8tuTqb66Lm+v/b5l/APW+Yu4=
+    - SCTX:
+        - Begin A1V6_ModAlchemyExp
+        - ""
+        - float Value
+        - float alch1
+        - float alch2
+        - float tempf1
+        - float tempf2
+        - ""
+        - set tempf1 to ( 1.5 * Value )
+        - set tempf2 to A1V6_AlchemyExp
+        - set tempf1 to ( tempf1 + tempf2 )
+        - set A1V6_AlchemyExp to tempf1
+        - if ( A1V6_AlchemyExp >= 100 )
+        - "\tset A1V6_AlchemyExp to 0"
+        - "\tif ( Gals__CharDev_Present == 0 )"
+        - "\t\tif ( A1V6_AlchemyPlus < 100 )"
+        - "\t\t\tStartScript A1V6_IncAlchemy"
+        - "\t\tendif"
+        - "\telse"
+        - "\t\tset alch1 to ( player->GetAlchemy )"
+        - "\t\tplayer->ModAlchemy 1"
+        - "\t\tset alch2 to ( player->GetAlchemy )"
+        - "\t\tif ( alch2 > alch1 )"
+        - "\t\t\tPlaySound skillraise"
+        - "\t\t\tMessageBox \"Ваш навык алхимии вырос до %.0f\", alch2"
+        - "\t\tendif"
+        - "\tendif"
+        - endif
+        - ""
+        - StopScript A1V6_ModAlchemyExp
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Mortar_1_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 224
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBW/QrUNB6OQqbZdygoIgWNr6VD6SPozp3aJdkvDlz5cIUJyz5iRhs4ZChEDAx4PXDOQhVpwtUnPaV2ld28Z2z/Zwa+35fqmMi761i8nt8lc2VtyCerANIVPAJsQVpDmbON3x0XS2yUloMKRFT0c052z6/7r0C8VS2Ox4E+tcpBTrQizSSlmQAvAFN0gpMA==
+    - SCTX:
+        - Begin A1V6_Mortar_1_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_1 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_MortarX"
+        - "\tset cy to A1V6_MortarY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Mortar_2_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 224
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBU/QrUNB6OQqbZdygoIgWNr6VD6SPozp3aIuSfjy50sEKM5Zc5KwWUIhQiDg7cFzAvIQC85mqTnuqrSubWO7R7u/tvZ0O1cbF31pF5Pb+bdsqLgF9WAdQqaATYgLSHM2crrDvelsk5PQ4J8WPR3QlLPx7+vSLxRLYbPlVaxzkVKsC7FIK2VBCsAHN+UpMQ==
+    - SCTX:
+        - Begin A1V6_Mortar_2_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_2 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_MortarX"
+        - "\tset cy to A1V6_MortarY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Mortar_3_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 224
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBQ/RrUNB6OQqbZdygoIgWNr6VD6SPozp3aIuSfjy50sEKM5Zc5KwWUIhQiDg7cFzAvIQC85mqTnuqrSubWO7R7u/tvZ0O1cbF31pF5Pb+bdsqLgF9WAdQqaATYgLSHM2crrDvelsk5PQ4J8WPR3QlLPx7+vSLxRLYbPlVaxzkVKsC7FIK2VBCsAHOIIpMg==
+    - SCTX:
+        - Begin A1V6_Mortar_3_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_3 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_MortarX"
+        - "\tset cy to A1V6_MortarY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Retort_1_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 224
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBW/QrUNB6O4gbZdSoYIgWNrzqXwkfRjTu0VdkvDlz5cIUJyz5iRhs4ZChEDA24PnDOQhVpwtUnPaV2nb1l1tH/3h2tfnW1MZF31pF5Pb5bdsrLgHDWAbQqaATYgLSHM2cbpjY++dzUlo8E+LgY5oztn093XpF4qlsNnxJta5SCnWhViklbIgBeADPg4pRg==
+    - SCTX:
+        - Begin A1V6_Retort_1_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_1 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_RetortX"
+        - "\tset cy to A1V6_RetortY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Retort_2_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 224
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBU/QrUNB6O4gbZdSoYIgWNr6VD6SPozp3aJdkvDlz5cAUJyy5ihis4ZCAE/Ax4HXDOQgVpwsYnM+FHFdl03ZPdvjrS0v96rY2ehb25jcLn9lY8UtqAdbHzJ5bHxcQZqTidWdqu7RdCkJ9YY06+mI5pxM/1/nbqFYCps9b0KdipRCnYlFWi4LUgC+PqspRw==
+    - SCTX:
+        - Begin A1V6_Retort_2_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_2 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_RetortX"
+        - "\tset cy to A1V6_RetortY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Retort_3_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 3
+        data_size: 224
+        var_table_size: 16
+    - SCVR:
+        - doOnce
+        - cx
+        - cy
+        - cz
+    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBQ/RrUNB6O4gbZdSoYIgWNr6VD6SPozp3aJdkvDlz5cAUJyy5ihis4ZCAE/Ax4HXDOQgVpwsYnM+FHFdl03ZPdvjrS0v96rY2ehb25jcLn9lY8UtqAdbHzJ5bHxcQZqTidWdqu7RdCkJ9YY06+mI5pxM/1/nbqFYCps9b0KdipRCnYlFWi4LUgC+P0gpSA==
+    - SCTX:
+        - Begin A1V6_Retort_3_sc
+        - ""
+        - short doOnce
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable_3 == 1 )
+        - "\tDisable"
+        - endif
+        - ""
+        - if ( OnActivate == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset cx to A1V6_RetortX"
+        - "\tset cy to A1V6_RetortY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tset cz to ( cz - 15 )"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_StartAlchemy
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 0
+        data_size: 79
+        var_table_size: 7
+    - SCVR:
+        - doOnce
+    - SCDT: eJwBTwCw/wYBAgkgcwEAID09IDAFAXMBAAIgMQwBBnBsYXllctQQFEExVjZfQXBwYXJhdHVzSXRlbV8xAQAJARwQEUExVjZfU3RhcnRBbGNoZW15AQGishOb
+    - SCTX:
+        - Begin A1V6_StartAlchemy
+        - ""
+        - short doOnce
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tplayer->AddItem A1V6_ApparatusItem_1, 1"
+        - endif
+        - ""
+        - StopScript A1V6_StartAlchemy
+        - ""
+        - End
+        - ""
+- SSCR:
+    - DATA: "2118625382187888739"
+    - NAME: A1V6_StartAlchemy
+- INGR:
+    - NAME: A1V6_AlchemyActivator
+    - MODL: "m\\misc_com_plate_03.nif"
+    - FNAM: _Проверить
+    - IRDT:
+        weight: 0.0
+        value: 0
+        effect_1_index: ~
+        effect_2_index: ~
+        effect_3_index: ~
+        effect_4_index: ~
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - SCRI: A1V6_AlchemyActivator_sc
+    - ITEX: "l\\light_de_lantern_01.dds"
+- APPA:
+    - NAME: A1V6_apparatus_a_alembic_e3
+    - MODL: "m\\Apparatus_A_Alembic_01.NIF"
+    - FNAM: Перегонный куб ученика
+    - SCRI: A1V6_Alembic_3_sc
+    - AADT:
+        type: Alembic
+        quality: 0.5
+        weight: 10.0
+        value: 50
+    - ITEX: "m\\Tx_alembic_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_calcinator_e3
+    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
+    - FNAM: Кальцинатор ученика
+    - SCRI: A1V6_Calcinator_3_sc
+    - AADT:
+        type: Calcinator
+        quality: 0.5
+        weight: 25.0
+        value: 10
+    - ITEX: "m\\Tx_calcinator_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_mortar_e3
+    - MODL: "m\\Misc_mortarpestle_01.NIF"
+    - FNAM: Ступка и пестик ученика
+    - SCRI: A1V6_Mortar_3_sc
+    - AADT:
+        type: MortarPestle
+        quality: 0.5
+        weight: 5.0
+        value: 100
+    - ITEX: "m\\Tx_mortarpestle_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_retort_e3
+    - MODL: "m\\Apparatus_A_Retort_01.NIF"
+    - FNAM: Реторта ученика
+    - SCRI: A1V6_Retort_3_sc
+    - AADT:
+        type: Retort
+        quality: 0.5
+        weight: 8.0
+        value: 20
+    - ITEX: "m\\Tx_retort_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_spipe_e3
+    - MODL: "m\\Apparatus_A_Spipe_01.nif"
+    - FNAM: Хорошая трубка скуума
+    - SCRI: A1V6_Alembic_3_sc
+    - AADT:
+        type: Alembic
+        quality: 0.15000000596046449
+        weight: 2.0
+        value: 50
+    - ITEX: "m\\Tx_Spipe_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_spipe_tsiya_e3
+    - MODL: "m\\Apparatus_A_Spipe_01.nif"
+    - FNAM: Трубка скуума Ции
+    - SCRI: A1V6_Alembic_3_sc
+    - AADT:
+        type: Alembic
+        quality: 0.15000000596046449
+        weight: 2.0
+        value: 30
+    - ITEX: "m\\Tx_Spipe_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_alembic_e3
+    - MODL: "m\\Apparatus_G_Alembic_01.nif"
+    - FNAM: Перегонный куб грандмастера
+    - SCRI: A1V6_Alembic_3_sc
+    - AADT:
+        type: Alembic
+        quality: 1.5
+        weight: 3.0
+        value: 4000
+    - ITEX: "m\\Tx_alembic_04.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_calcinator_e3
+    - MODL: "m\\App_G_Calcinator_01.nif"
+    - FNAM: Кальцинатор грандмастера
+    - SCRI: A1V6_Calcinator_3_sc
+    - AADT:
+        type: Calcinator
+        quality: 1.5
+        weight: 8.0
+        value: 4000
+    - ITEX: "m\\Tx_calcinator_04.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_mortar_e3
+    - MODL: "m\\Misc_mortarpestle_G_01.nif"
+    - FNAM: Ступка и пестик грандмастера
+    - SCRI: A1V6_Mortar_3_sc
+    - AADT:
+        type: MortarPestle
+        quality: 1.5
+        weight: 2.0
+        value: 4000
+    - ITEX: "m\\Tx_mortarpestle_G_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_retort_e3
+    - MODL: "m\\Apparatus_G_Retort_01.nif"
+    - FNAM: Реторта грандмастера
+    - SCRI: A1V6_Retort_3_sc
+    - AADT:
+        type: Retort
+        quality: 1.5
+        weight: 3.0
+        value: 1600
+    - ITEX: "m\\Tx_retort_04.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_alembic_e3
+    - MODL: "m\\Apparatus_J_Alembic_01.nif"
+    - FNAM: Перегонный куб подмастерья
+    - SCRI: A1V6_Alembic_3_sc
+    - AADT:
+        type: Alembic
+        quality: 1.0
+        weight: 7.0
+        value: 200
+    - ITEX: "m\\Tx_alembic_02.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_calcinator_e3
+    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
+    - FNAM: Кальцинатор подмастерья
+    - SCRI: A1V6_Calcinator_3_sc
+    - AADT:
+        type: Calcinator
+        quality: 1.0
+        weight: 18.0
+        value: 40
+    - ITEX: "m\\Tx_calcinator_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_mortar_e3
+    - MODL: "m\\Misc_mortarpestle_01.NIF"
+    - FNAM: Ступка и пестик подмастерья
+    - SCRI: A1V6_Mortar_3_sc
+    - AADT:
+        type: MortarPestle
+        quality: 1.0
+        weight: 4.0
+        value: 400
+    - ITEX: "m\\Tx_mortarpestle_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_retort_e3
+    - MODL: "m\\Apparatus_J_Retort_01.nif"
+    - FNAM: Реторта подмастерья
+    - SCRI: A1V6_Retort_3_sc
+    - AADT:
+        type: Retort
+        quality: 1.0
+        weight: 6.0
+        value: 80
+    - ITEX: "m\\Tx_retort_02.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_alembic_e3
+    - MODL: "m\\Apparatus_M_Alembic_01.nif"
+    - FNAM: Перегонный куб мастера
+    - SCRI: A1V6_Alembic_3_sc
+    - AADT:
+        type: Alembic
+        quality: 1.2000000476837159
+        weight: 5.0
+        value: 1200
+    - ITEX: "m\\Tx_alembic_03.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_calcinator_e3
+    - MODL: "m\\App_M_Calcinator_01.nif"
+    - FNAM: Кальцинатор мастера
+    - SCRI: A1V6_Calcinator_3_sc
+    - AADT:
+        type: Calcinator
+        quality: 1.2000000476837159
+        weight: 13.0
+        value: 240
+    - ITEX: "m\\Tx_calcinator_03.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_mortar_e3
+    - MODL: "m\\Misc_mortarpestle_M_01.nif"
+    - FNAM: Ступка и пестик мастера
+    - SCRI: A1V6_Mortar_3_sc
+    - AADT:
+        type: MortarPestle
+        quality: 1.2000000476837159
+        weight: 3.0
+        value: 2400
+    - ITEX: "m\\Tx_mortarpestle_M_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_retort_e3
+    - MODL: "m\\Apparatus_M_Retort_01.nif"
+    - FNAM: Реторта мастера
+    - SCRI: A1V6_Retort_3_sc
+    - AADT:
+        type: Retort
+        quality: 1.2000000476837159
+        weight: 4.0
+        value: 480
+    - ITEX: "m\\Tx_retort_03.tga"
+- MISC:
+    - NAME: A1V6_ApparatusItem_3
+    - MODL: "m\\misc_potion_fresh_01.nif"
+    - FNAM: Алхимическая установка
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
+    - SCRI: A1V6_ApparatusItem_3_sc
+    - ITEX: "m\\misc_com_bottle_05.dds"
+- APPA:
+    - NAME: A1V6_apparatus_a_alembic_e2
+    - MODL: "m\\Apparatus_A_Alembic_01.NIF"
+    - FNAM: Перегонный куб ученика
+    - SCRI: A1V6_Alembic_2_sc
+    - AADT:
+        type: Alembic
+        quality: 0.5
+        weight: 10.0
+        value: 50
+    - ITEX: "m\\Tx_alembic_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_alembic_e1
+    - MODL: "m\\Apparatus_A_Alembic_01.NIF"
+    - FNAM: Перегонный куб ученика
+    - SCRI: A1V6_Alembic_1_sc
+    - AADT:
+        type: Alembic
+        quality: 0.5
+        weight: 10.0
+        value: 50
+    - ITEX: "m\\Tx_alembic_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_calcinator_e2
+    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
+    - FNAM: Кальцинатор ученика
+    - SCRI: A1V6_Calcinator_2_sc
+    - AADT:
+        type: Calcinator
+        quality: 0.5
+        weight: 25.0
+        value: 10
+    - ITEX: "m\\Tx_calcinator_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_calcinator_e1
+    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
+    - FNAM: Кальцинатор ученика
+    - SCRI: A1V6_Calcinator_1_sc
+    - AADT:
+        type: Calcinator
+        quality: 0.5
+        weight: 25.0
+        value: 10
+    - ITEX: "m\\Tx_calcinator_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_retort_e2
+    - MODL: "m\\Apparatus_A_Retort_01.NIF"
+    - FNAM: Реторта ученика
+    - SCRI: A1V6_Retort_2_sc
+    - AADT:
+        type: Retort
+        quality: 0.5
+        weight: 8.0
+        value: 20
+    - ITEX: "m\\Tx_retort_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_retort_e1
+    - MODL: "m\\Apparatus_A_Retort_01.NIF"
+    - FNAM: Реторта ученика
+    - SCRI: A1V6_Retort_1_sc
+    - AADT:
+        type: Retort
+        quality: 0.5
+        weight: 8.0
+        value: 20
+    - ITEX: "m\\Tx_retort_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_mortar_e2
+    - MODL: "m\\Misc_mortarpestle_01.NIF"
+    - FNAM: Ступка и пестик ученика
+    - SCRI: A1V6_Mortar_2_sc
+    - AADT:
+        type: MortarPestle
+        quality: 0.5
+        weight: 5.0
+        value: 100
+    - ITEX: "m\\Tx_mortarpestle_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_mortar_e1
+    - MODL: "m\\Misc_mortarpestle_01.NIF"
+    - FNAM: Ступка и пестик ученика
+    - SCRI: A1V6_Mortar_1_sc
+    - AADT:
+        type: MortarPestle
+        quality: 0.5
+        weight: 5.0
+        value: 100
+    - ITEX: "m\\Tx_mortarpestle_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_spipe_e2
+    - MODL: "m\\Apparatus_A_Spipe_01.nif"
+    - FNAM: Хорошая трубка скуума
+    - SCRI: A1V6_Alembic_2_sc
+    - AADT:
+        type: Alembic
+        quality: 0.15000000596046449
+        weight: 2.0
+        value: 50
+    - ITEX: "m\\Tx_Spipe_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_spipe_e1
+    - MODL: "m\\Apparatus_A_Spipe_01.nif"
+    - FNAM: Хорошая трубка скуума
+    - SCRI: A1V6_Alembic_1_sc
+    - AADT:
+        type: Alembic
+        quality: 0.15000000596046449
+        weight: 2.0
+        value: 50
+    - ITEX: "m\\Tx_Spipe_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_spipe_tsiya_e2
+    - MODL: "m\\Apparatus_A_Spipe_01.nif"
+    - FNAM: Трубка скуума Ции
+    - SCRI: A1V6_Alembic_2_sc
+    - AADT:
+        type: Alembic
+        quality: 0.15000000596046449
+        weight: 2.0
+        value: 30
+    - ITEX: "m\\Tx_Spipe_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_a_spipe_tsiya_e1
+    - MODL: "m\\Apparatus_A_Spipe_01.nif"
+    - FNAM: Трубка скуума Ции
+    - SCRI: A1V6_Alembic_1_sc
+    - AADT:
+        type: Alembic
+        quality: 0.15000000596046449
+        weight: 2.0
+        value: 30
+    - ITEX: "m\\Tx_Spipe_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_alembic_e2
+    - MODL: "m\\Apparatus_G_Alembic_01.nif"
+    - FNAM: Перегонный куб грандмастера
+    - SCRI: A1V6_Alembic_2_sc
+    - AADT:
+        type: Alembic
+        quality: 1.5
+        weight: 3.0
+        value: 4000
+    - ITEX: "m\\Tx_alembic_04.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_alembic_e1
+    - MODL: "m\\Apparatus_G_Alembic_01.nif"
+    - FNAM: Перегонный куб грандмастера
+    - SCRI: A1V6_Alembic_1_sc
+    - AADT:
+        type: Alembic
+        quality: 1.5
+        weight: 3.0
+        value: 4000
+    - ITEX: "m\\Tx_alembic_04.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_calcinator_e2
+    - MODL: "m\\App_G_Calcinator_01.nif"
+    - FNAM: Кальцинатор грандмастера
+    - SCRI: A1V6_Calcinator_2_sc
+    - AADT:
+        type: Calcinator
+        quality: 1.5
+        weight: 8.0
+        value: 4000
+    - ITEX: "m\\Tx_calcinator_04.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_calcinator_e1
+    - MODL: "m\\App_G_Calcinator_01.nif"
+    - FNAM: Кальцинатор грандмастера
+    - SCRI: A1V6_Calcinator_1_sc
+    - AADT:
+        type: Calcinator
+        quality: 1.5
+        weight: 8.0
+        value: 4000
+    - ITEX: "m\\Tx_calcinator_04.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_mortar_e2
+    - MODL: "m\\Misc_mortarpestle_G_01.nif"
+    - FNAM: Ступка и пестик грандмастера
+    - SCRI: A1V6_Mortar_2_sc
+    - AADT:
+        type: MortarPestle
+        quality: 1.5
+        weight: 2.0
+        value: 4000
+    - ITEX: "m\\Tx_mortarpestle_G_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_mortar_e1
+    - MODL: "m\\Misc_mortarpestle_G_01.nif"
+    - FNAM: Ступка и пестик грандмастера
+    - SCRI: A1V6_Mortar_1_sc
+    - AADT:
+        type: MortarPestle
+        quality: 1.5
+        weight: 2.0
+        value: 4000
+    - ITEX: "m\\Tx_mortarpestle_G_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_retort_e2
+    - MODL: "m\\Apparatus_G_Retort_01.nif"
+    - FNAM: Реторта грандмастера
+    - SCRI: A1V6_Retort_2_sc
+    - AADT:
+        type: Retort
+        quality: 1.5
+        weight: 3.0
+        value: 1600
+    - ITEX: "m\\Tx_retort_04.tga"
+- APPA:
+    - NAME: A1V6_apparatus_g_retort_e1
+    - MODL: "m\\Apparatus_G_Retort_01.nif"
+    - FNAM: Реторта грандмастера
+    - SCRI: A1V6_Retort_1_sc
+    - AADT:
+        type: Retort
+        quality: 1.5
+        weight: 3.0
+        value: 1600
+    - ITEX: "m\\Tx_retort_04.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_alembic_e2
+    - MODL: "m\\Apparatus_J_Alembic_01.nif"
+    - FNAM: Перегонный куб подмастерья
+    - SCRI: A1V6_Alembic_2_sc
+    - AADT:
+        type: Alembic
+        quality: 1.0
+        weight: 7.0
+        value: 200
+    - ITEX: "m\\Tx_alembic_02.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_alembic_e1
+    - MODL: "m\\Apparatus_J_Alembic_01.nif"
+    - FNAM: Перегонный куб подмастерья
+    - SCRI: A1V6_Alembic_1_sc
+    - AADT:
+        type: Alembic
+        quality: 1.0
+        weight: 7.0
+        value: 200
+    - ITEX: "m\\Tx_alembic_02.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_calcinator_e2
+    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
+    - FNAM: Кальцинатор подмастерья
+    - SCRI: A1V6_Calcinator_2_sc
+    - AADT:
+        type: Calcinator
+        quality: 1.0
+        weight: 18.0
+        value: 40
+    - ITEX: "m\\Tx_calcinator_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_calcinator_e1
+    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
+    - FNAM: Кальцинатор подмастерья
+    - SCRI: A1V6_Calcinator_1_sc
+    - AADT:
+        type: Calcinator
+        quality: 1.0
+        weight: 18.0
+        value: 40
+    - ITEX: "m\\Tx_calcinator_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_mortar_e2
+    - MODL: "m\\Misc_mortarpestle_01.NIF"
+    - FNAM: Ступка и пестик подмастерья
+    - SCRI: A1V6_Mortar_2_sc
+    - AADT:
+        type: MortarPestle
+        quality: 1.0
+        weight: 4.0
+        value: 400
+    - ITEX: "m\\Tx_mortarpestle_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_mortar_e1
+    - MODL: "m\\Misc_mortarpestle_01.NIF"
+    - FNAM: Ступка и пестик подмастерья
+    - SCRI: A1V6_Mortar_1_sc
+    - AADT:
+        type: MortarPestle
+        quality: 1.0
+        weight: 4.0
+        value: 400
+    - ITEX: "m\\Tx_mortarpestle_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_retort_e2
+    - MODL: "m\\Apparatus_J_Retort_01.nif"
+    - FNAM: Реторта подмастерья
+    - SCRI: A1V6_Retort_2_sc
+    - AADT:
+        type: Retort
+        quality: 1.0
+        weight: 6.0
+        value: 80
+    - ITEX: "m\\Tx_retort_02.tga"
+- APPA:
+    - NAME: A1V6_apparatus_j_retort_e1
+    - MODL: "m\\Apparatus_J_Retort_01.nif"
+    - FNAM: Реторта подмастерья
+    - SCRI: A1V6_Retort_1_sc
+    - AADT:
+        type: Retort
+        quality: 1.0
+        weight: 6.0
+        value: 80
+    - ITEX: "m\\Tx_retort_02.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_alembic_e2
+    - MODL: "m\\Apparatus_M_Alembic_01.nif"
+    - FNAM: Перегонный куб мастера
+    - SCRI: A1V6_Alembic_2_sc
+    - AADT:
+        type: Alembic
+        quality: 1.2000000476837159
+        weight: 5.0
+        value: 1200
+    - ITEX: "m\\Tx_alembic_03.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_alembic_e1
+    - MODL: "m\\Apparatus_M_Alembic_01.nif"
+    - FNAM: Перегонный куб мастера
+    - SCRI: A1V6_Alembic_1_sc
+    - AADT:
+        type: Alembic
+        quality: 1.2000000476837159
+        weight: 5.0
+        value: 1200
+    - ITEX: "m\\Tx_alembic_03.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_calcinator_e2
+    - MODL: "m\\App_M_Calcinator_01.nif"
+    - FNAM: Кальцинатор мастера
+    - SCRI: A1V6_Calcinator_2_sc
+    - AADT:
+        type: Calcinator
+        quality: 1.2000000476837159
+        weight: 13.0
+        value: 240
+    - ITEX: "m\\Tx_calcinator_03.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_calcinator_e1
+    - MODL: "m\\App_M_Calcinator_01.nif"
+    - FNAM: Кальцинатор мастера
+    - SCRI: A1V6_Calcinator_1_sc
+    - AADT:
+        type: Calcinator
+        quality: 1.2000000476837159
+        weight: 13.0
+        value: 240
+    - ITEX: "m\\Tx_calcinator_03.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_mortar_e2
+    - MODL: "m\\Misc_mortarpestle_M_01.nif"
+    - FNAM: Ступка и пестик мастера
+    - SCRI: A1V6_Mortar_2_sc
+    - AADT:
+        type: MortarPestle
+        quality: 1.2000000476837159
+        weight: 3.0
+        value: 2400
+    - ITEX: "m\\Tx_mortarpestle_M_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_mortar_e1
+    - MODL: "m\\Misc_mortarpestle_M_01.nif"
+    - FNAM: Ступка и пестик мастера
+    - SCRI: A1V6_Mortar_1_sc
+    - AADT:
+        type: MortarPestle
+        quality: 1.2000000476837159
+        weight: 3.0
+        value: 2400
+    - ITEX: "m\\Tx_mortarpestle_M_01.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_retort_e2
+    - MODL: "m\\Apparatus_M_Retort_01.nif"
+    - FNAM: Реторта мастера
+    - SCRI: A1V6_Retort_2_sc
+    - AADT:
+        type: Retort
+        quality: 1.2000000476837159
+        weight: 4.0
+        value: 480
+    - ITEX: "m\\Tx_retort_03.tga"
+- APPA:
+    - NAME: A1V6_apparatus_m_retort_e1
+    - MODL: "m\\Apparatus_M_Retort_01.nif"
+    - FNAM: Реторта мастера
+    - SCRI: A1V6_Retort_1_sc
+    - AADT:
+        type: Retort
+        quality: 1.2000000476837159
+        weight: 4.0
+        value: 480
+    - ITEX: "m\\Tx_retort_03.tga"
+- CONT:
+    - NAME: A1V6_ApparatusCont_2
+    - MODL: "m\\misc_potion_fresh_01.nif"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_2_sc
+- CONT:
+    - NAME: A1V6_ApparatusCont_1
+    - MODL: "m\\misc_potion_fresh_01.nif"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_1_sc
+- MISC:
+    - NAME: A1V6_ApparatusItem_2
+    - MODL: "m\\misc_potion_fresh_01.nif"
+    - FNAM: Алхимическая установка
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
+    - SCRI: A1V6_ApparatusItem_2_sc
+    - ITEX: "m\\misc_com_bottle_05.dds"
+- MISC:
+    - NAME: A1V6_ApparatusItem_1
+    - MODL: "m\\misc_potion_fresh_01.nif"
+    - FNAM: Алхимическая установка
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
+    - SCRI: A1V6_ApparatusItem_1_sc
+    - ITEX: "m\\misc_com_bottle_05.dds"

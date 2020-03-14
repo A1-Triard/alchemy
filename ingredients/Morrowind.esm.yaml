@@ -1,0 +1,1908 @@
+- INGR:
+    - NAME: ingred_dreugh_wax_01
+    - MODL: "n\\Ingred_Dreugh_wax_01.NIF"
+    - FNAM: Дреугский воск
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 100
+        effect_1_index: FortifyAttribute
+        effect_2_index: RestoreAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Luck
+        effect_4_attribute: Willpower
+    - ITEX: "n\\Tx_dreugh_wax_01.tga"
+- INGR:
+    - NAME: food_kwama_egg_01
+    - MODL: "f\\Food_kwama_egg_01.NIF"
+    - FNAM: Маленькое яйцо квама
+    - IRDT:
+        weight: 0.5
+        value: 1
+        effect_1_index: RestoreFatigue
+        effect_2_index: ~
+        effect_3_index: ~
+        effect_4_index: ~
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "m\\Tx_food_kwama_egg_01.tga"
+- INGR:
+    - NAME: food_kwama_egg_02
+    - MODL: "f\\Food_kwama_egg_02.NIF"
+    - FNAM: Большое яйцо квама
+    - IRDT:
+        weight: 2.0
+        value: 2
+        effect_1_index: RestoreFatigue
+        effect_2_index: Paralyze
+        effect_3_index: FrostShield
+        effect_4_index: FortifyHealth
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "m\\Tx_food_kwama_egg_01.tga"
+- INGR:
+    - NAME: ingred_kwama_cuttle_01
+    - MODL: "n\\Ingred_kwama_cuttle_01.nif"
+    - FNAM: Молочко квама
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 2
+        effect_1_index: ResistPoison
+        effect_2_index: DrainFatigue
+        effect_3_index: WaterWalking
+        effect_4_index: WaterBreathing
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_kwama_cuttle.tga"
+- INGR:
+    - NAME: ingred_marshmerrow_01
+    - MODL: "n\\Ingred_marshmerrow_01.NIF"
+    - FNAM: Болотный тростник
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: RestoreHealth
+        effect_2_index: DetectEnchantment
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainFatigue
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Willpower
+        effect_4_attribute: Strength
+    - ITEX: "n\\TX_Ing_marshmerrow.tga"
+- INGR:
+    - NAME: ingred_saltrice_01
+    - MODL: "n\\Ingred_saltrice_01.NIF"
+    - FNAM: Соленый рис
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: RestoreFatigue
+        effect_2_index: FortifySpellpoints
+        effect_3_index: DrainAttribute
+        effect_4_index: RestoreHealth
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_saltrice_01.tga"
+- INGR:
+    - NAME: ingred_diamond_01
+    - MODL: "n\\Ingred_diamond_01.NIF"
+    - FNAM: Бриллиант
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 250
+        effect_1_index: DrainAttribute
+        effect_2_index: Invisibility
+        effect_3_index: Reflect
+        effect_4_index: DetectKey
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Agility
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_diamond.tga"
+- INGR:
+    - NAME: ingred_emerald_01
+    - MODL: "n\\Ingred_emerald_01.NIF"
+    - FNAM: Изумруд
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 150
+        effect_1_index: FortifySpellpoints
+        effect_2_index: RestoreHealth
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Agility
+        effect_4_attribute: Endurance
+    - ITEX: "n\\Tx_emerald.tga"
+- INGR:
+    - NAME: ingred_pearl_01
+    - MODL: "n\\Ingred_pearl_01.NIF"
+    - FNAM: Жемчужина
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 100
+        effect_1_index: DrainAttribute
+        effect_2_index: Dispel
+        effect_3_index: WaterBreathing
+        effect_4_index: ResistCommonDisease
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Agility
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_pearl.tga"
+- INGR:
+    - NAME: ingred_raw_ebony_01
+    - MODL: "n\\Ingred_RawEbony_01.NIF"
+    - FNAM: Эбонит-сырец
+    - IRDT:
+        weight: 10.0
+        value: 200
+        effect_1_index: DrainAttribute
+        effect_2_index: CurePoison
+        effect_3_index: FrostShield
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Agility
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Speed
+    - ITEX: "n\\Tx_RawEbony.tga"
+- INGR:
+    - NAME: ingred_ruby_01
+    - MODL: "n\\Ingred_ruby_01.NIF"
+    - FNAM: Рубин
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 200
+        effect_1_index: DrainHealth
+        effect_2_index: Feather
+        effect_3_index: RestoreAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Intelligence
+        effect_4_attribute: Agility
+    - ITEX: "n\\Tx_ruby.tga"
+- INGR:
+    - NAME: ingred_ash_salts_01
+    - MODL: "n\\Ingred_ash_salts_01.NIF"
+    - FNAM: Соли пепла
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 25
+        effect_1_index: DrainAttribute
+        effect_2_index: ResistMagicka
+        effect_3_index: CureBlightDisease
+        effect_4_index: ResistMagicka
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Agility
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_ashsalts_01.tga"
+- INGR:
+    - NAME: ingred_corprus_weepings_01
+    - MODL: "n\\Ingred_Corprus_weeping_01.NIF"
+    - FNAM: Слезы корпруса
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 50
+        effect_1_index: DrainFatigue
+        effect_2_index: FortifyAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: RestoreHealth
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Luck
+        effect_3_attribute: Willpower
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_corprus_weep_01.tga"
+- INGR:
+    - NAME: ingred_crab_meat_01
+    - MODL: "n\\Ingred_crabmeat_01.NIF"
+    - FNAM: Крабовое мясо
+    - IRDT:
+        weight: 0.5
+        value: 1
+        effect_1_index: RestoreFatigue
+        effect_2_index: ResistShock
+        effect_3_index: LightningShield
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Luck
+    - ITEX: "n\\Tx_crabmeat_01.tga"
+- INGR:
+    - NAME: ingred_daedras_heart_01
+    - MODL: "n\\Ingred_Daedra_heart_01.NIF"
+    - FNAM: Сердце даэдры
+    - IRDT:
+        weight: 1.0
+        value: 200
+        effect_1_index: RestoreSpellPoints
+        effect_2_index: FortifyAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: NightEye
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Endurance
+        effect_3_attribute: Agility
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_daedra_heart_01.tga"
+- INGR:
+    - NAME: ingred_daedra_skin_01
+    - MODL: "n\\Ingred_Daedra_skin_01.NIF"
+    - FNAM: Кожа даэдра
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 200
+        effect_1_index: FortifyAttribute
+        effect_2_index: CureCommonDisease
+        effect_3_index: Paralyze
+        effect_4_index: SwiftSwim
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_daedra_skin_01.tga"
+- INGR:
+    - NAME: ingred_resin_01
+    - MODL: "n\\Ingred_resin_01.nif"
+    - FNAM: Смола
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 10
+        effect_1_index: RestoreHealth
+        effect_2_index: RestoreAttribute
+        effect_3_index: Burden
+        effect_4_index: ResistCommonDisease
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Speed
+        effect_3_attribute: Strength
+        effect_4_attribute: Speed
+    - ITEX: "n\\Tx_resin_01.tga"
+- INGR:
+    - NAME: ingred_alit_hide_01
+    - MODL: "n\\Ingred_Alit_Hide_01.nif"
+    - FNAM: Шкура алита
+    - IRDT:
+        weight: 1.0
+        value: 5
+        effect_1_index: DrainAttribute
+        effect_2_index: ResistPoison
+        effect_3_index: Telekinesis
+        effect_4_index: DetectAnimal
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_alit_hide_01.tga"
+- INGR:
+    - NAME: ingred_ash_yam_01
+    - MODL: "n\\Ingred_ash_yam_01.nif"
+    - FNAM: Пепельный батат
+    - IRDT:
+        weight: 0.5
+        value: 1
+        effect_1_index: FortifyAttribute
+        effect_2_index: FortifyAttribute
+        effect_3_index: ResistCommonDisease
+        effect_4_index: DetectKey
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_ashyam_01.tga"
+- INGR:
+    - NAME: ingred_bittergreen_petals_01
+    - MODL: "n\\Ingred_Bittergreen_01.nif"
+    - FNAM: Лепестки горьколистника
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 5
+        effect_1_index: RestoreAttribute
+        effect_2_index: Invisibility
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainSpellpoints
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: Strength
+        effect_3_attribute: Endurance
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_bittergreen_petal_01.tga"
+- INGR:
+    - NAME: ingred_black_anther_01
+    - MODL: "n\\Ingred_Black_Anther_01.nif"
+    - FNAM: Черный пыльник
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 2
+        effect_1_index: DrainAttribute
+        effect_2_index: ResistFire
+        effect_3_index: DrainAttribute
+        effect_4_index: Light
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Agility
+        effect_2_attribute: Strength
+        effect_3_attribute: Endurance
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_black_anther_01.tga"
+- INGR:
+    - NAME: ingred_black_lichen_01
+    - MODL: "n\\Ingred_Black_Lichen_01.nif"
+    - FNAM: Черный лишайник
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 2
+        effect_1_index: DrainAttribute
+        effect_2_index: ResistFrost
+        effect_3_index: DrainAttribute
+        effect_4_index: CurePoison
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Speed
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_black_lichen_01.tga"
+- INGR:
+    - NAME: ingred_bloat_01
+    - MODL: "n\\Ingred_ash_salts_01.NIF"
+    - FNAM: Толстоспорник
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 5
+        effect_1_index: DrainSpellpoints
+        effect_2_index: FortifyAttribute
+        effect_3_index: FortifyAttribute
+        effect_4_index: DetectAnimal
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Intelligence
+        effect_3_attribute: Willpower
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_ashsalts_01.tga"
+- INGR:
+    - NAME: ingred_bonemeal_01
+    - MODL: "n\\Ingred_Blonemeal_01.nif"
+    - FNAM: Костяная мука
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 2
+        effect_1_index: RestoreAttribute
+        effect_2_index: Telekinesis
+        effect_3_index: DrainFatigue
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Agility
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Personality
+    - ITEX: "n\\Tx_bonemeal_01.tga"
+- INGR:
+    - NAME: ingred_comberry_01
+    - MODL: "n\\Ingred_Comberry_01.nif"
+    - FNAM: Комуника
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 2
+        effect_1_index: DrainFatigue
+        effect_2_index: RestoreSpellPoints
+        effect_3_index: FireShield
+        effect_4_index: Reflect
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_comberry_01.tga"
+- INGR:
+    - NAME: ingred_chokeweed_01
+    - MODL: "n\\Ingred_Chokeweed_01.nif"
+    - FNAM: Удушайка
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: DrainAttribute
+        effect_2_index: RestoreFatigue
+        effect_3_index: CureCommonDisease
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Luck
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Willpower
+    - ITEX: "n\\Tx_chokeweed_01.tga"
+- INGR:
+    - NAME: ingred_corkbulb_root_01
+    - MODL: "n\\Ingred_Corkbulb_Root_01.nif"
+    - FNAM: Корень пробочника
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 5
+        effect_1_index: CureParalyzation
+        effect_2_index: RestoreHealth
+        effect_3_index: LightningShield
+        effect_4_index: FortifyAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Luck
+    - ITEX: "n\\Tx_corkbulb_root_01.tga"
+- INGR:
+    - NAME: ingred_ectoplasm_01
+    - MODL: "n\\Ingred_Ectoplasm_01.nif"
+    - FNAM: Эктоплазма
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 10
+        effect_1_index: FortifyAttribute
+        effect_2_index: DetectAnimal
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainHealth
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Agility
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_ectoplasm_01.tga"
+- INGR:
+    - NAME: ingred_fire_salts_01
+    - MODL: "n\\Ingred_Fire_Salts_01.nif"
+    - FNAM: Огненная соль
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 100
+        effect_1_index: DrainHealth
+        effect_2_index: FortifyAttribute
+        effect_3_index: ResistFrost
+        effect_4_index: FireShield
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Agility
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_firesalt_01.tga"
+- INGR:
+    - NAME: ingred_frost_salts_01
+    - MODL: "n\\Ingred_Frost_Salts_01.nif"
+    - FNAM: Морозная соль
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 75
+        effect_1_index: DrainAttribute
+        effect_2_index: RestoreSpellPoints
+        effect_3_index: FrostShield
+        effect_4_index: ResistFire
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Speed
+        effect_2_attribute: Strength
+        effect_3_attribute: Luck
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_frostsalt_01.tga"
+- INGR:
+    - NAME: ingred_ghoul_heart_01
+    - MODL: "n\\Ingred_Ghoul_heart_01.nif"
+    - FNAM: Сердце упыря
+    - IRDT:
+        weight: 0.5
+        value: 150
+        effect_1_index: Paralyze
+        effect_2_index: CurePoison
+        effect_3_index: FortifyAttackBonus
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Personality
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_ghoul_heart_01.tga"
+- INGR:
+    - NAME: ingred_gold_kanet_01
+    - MODL: "n\\Ingred_Gold_Kanet_01.nif"
+    - FNAM: Золотой канет
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 5
+        effect_1_index: DrainHealth
+        effect_2_index: Burden
+        effect_3_index: DrainAttribute
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Luck
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_goldkanet_01.tga"
+- INGR:
+    - NAME: ingred_gravedust_01
+    - MODL: "n\\Ingred_Gravedust_01.nif"
+    - FNAM: Могильная пыль
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: DrainAttribute
+        effect_2_index: CureCommonDisease
+        effect_3_index: DrainSpellpoints
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Endurance
+    - ITEX: "n\\Tx_gravedust_01.tga"
+- INGR:
+    - NAME: ingred_green_lichen_01
+    - MODL: "n\\Ingred_Green_Lichen_01.nif"
+    - FNAM: Зеленый лишайник
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: FortifyAttribute
+        effect_2_index: CureCommonDisease
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainHealth
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Personality
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_greenlichen_01.tga"
+- INGR:
+    - NAME: ingred_guar_hide_01
+    - MODL: "n\\Ingred_Guar_Hide_01.nif"
+    - FNAM: Шкура гуара
+    - IRDT:
+        weight: 1.0
+        value: 5
+        effect_1_index: DrainFatigue
+        effect_2_index: FortifyAttribute
+        effect_3_index: RestoreAttribute
+        effect_4_index: FortifyAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Endurance
+        effect_3_attribute: Personality
+        effect_4_attribute: Luck
+    - ITEX: "n\\Tx_guarhide_01.tga"
+- INGR:
+    - NAME: ingred_hackle-lo_leaf_01
+    - MODL: "n\\Ingred_Hackle-Lo_01.nif"
+    - FNAM: Лист хакльлоу
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 30
+        effect_1_index: RestoreFatigue
+        effect_2_index: Paralyze
+        effect_3_index: WaterBreathing
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Luck
+    - ITEX: "n\\Tx_hackle-lo_01.tga"
+- INGR:
+    - NAME: ingred_heather_01
+    - MODL: "n\\Ingred_Heather_01.nif"
+    - FNAM: Вереск
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: RestoreAttribute
+        effect_2_index: Feather
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Personality
+        effect_2_attribute: Strength
+        effect_3_attribute: Speed
+        effect_4_attribute: Personality
+    - ITEX: "n\\Tx_heather_01.tga"
+- INGR:
+    - NAME: ingred_hound_meat_01
+    - MODL: "n\\Ingred_Hound_Meat_01.nif"
+    - FNAM: Мясо гончей
+    - IRDT:
+        weight: 1.0
+        value: 2
+        effect_1_index: RestoreFatigue
+        effect_2_index: FortifyFatigue
+        effect_3_index: Reflect
+        effect_4_index: DetectEnchantment
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_houndmeat_01.tga"
+- INGR:
+    - NAME: ingred_kagouti_hide_01
+    - MODL: "n\\Ingred_Kagouti_Hide_01.nif"
+    - FNAM: Шкура кагути
+    - IRDT:
+        weight: 1.0
+        value: 2
+        effect_1_index: DrainFatigue
+        effect_2_index: FortifyAttribute
+        effect_3_index: ResistCommonDisease
+        effect_4_index: NightEye
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Speed
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_kagouti_hide_01.tga"
+- INGR:
+    - NAME: ingred_kresh_fiber_01
+    - MODL: "n\\Ingred_Kresh_Fiber_01.nif"
+    - FNAM: Волокно креша
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: RestoreAttribute
+        effect_2_index: FortifyAttribute
+        effect_3_index: DrainSpellpoints
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Luck
+        effect_2_attribute: Personality
+        effect_3_attribute: Strength
+        effect_4_attribute: Speed
+    - ITEX: "n\\Tx_kresh_fiber_01.tga"
+- INGR:
+    - NAME: ingred_moon_sugar_01
+    - MODL: "n\\Ingred_Moon_Sugar_01.nif"
+    - FNAM: Лунный сахар
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 50
+        effect_1_index: FortifyAttribute
+        effect_2_index: Dispel
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Speed
+        effect_2_attribute: Strength
+        effect_3_attribute: Endurance
+        effect_4_attribute: Luck
+    - ITEX: "n\\Tx_moon_sugar_01.tga"
+- INGR:
+    - NAME: ingred_muck_01
+    - MODL: "n\\Ingred_Muck_01.nif"
+    - FNAM: Муск
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: DrainAttribute
+        effect_2_index: DetectKey
+        effect_3_index: DrainAttribute
+        effect_4_index: CureCommonDisease
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: Strength
+        effect_3_attribute: Personality
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_muck_01.tga"
+- INGR:
+    - NAME: ingred_netch_leather_01
+    - MODL: "n\\Ingred_Netch_Leather_01.nif"
+    - FNAM: Кожа нетча
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: FortifyAttribute
+        effect_2_index: FortifyAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: CureParalyzation
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Endurance
+        effect_2_attribute: Intelligence
+        effect_3_attribute: Personality
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_netch_leather_01.tga"
+- INGR:
+    - NAME: ingred_racer_plumes_01
+    - MODL: "n\\Ingred_Racer_Plumes_01.nif"
+    - FNAM: Перья наездника
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 20
+        effect_1_index: DrainAttribute
+        effect_2_index: Levitate
+        effect_3_index: ~
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Willpower
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_racer_plumes_01.tga"
+- INGR:
+    - NAME: ingred_rat_meat_01
+    - MODL: "n\\Ingred_Rat_Meat_01.nif"
+    - FNAM: Мясо крысы
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: DrainSpellpoints
+        effect_2_index: Paralyze
+        effect_3_index: CurePoison
+        effect_4_index: ResistPoison
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_rat_meat_01.tga"
+- INGR:
+    - NAME: ingred_raw_glass_01
+    - MODL: "n\\Ingred_Raw_Glass_01.nif"
+    - FNAM: Стекло-сырец
+    - IRDT:
+        weight: 2.0
+        value: 200
+        effect_1_index: DrainAttribute
+        effect_2_index: DrainAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: FireShield
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: Strength
+        effect_3_attribute: Speed
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_RawGlass.tga"
+- INGR:
+    - NAME: ingred_red_lichen_01
+    - MODL: "n\\Ingred_Red_Lichen_01.nif"
+    - FNAM: Красный лишайник
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 25
+        effect_1_index: DrainAttribute
+        effect_2_index: Light
+        effect_3_index: CureCommonDisease
+        effect_4_index: DrainSpellpoints
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Speed
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_red_lichen_01.tga"
+- INGR:
+    - NAME: ingred_roobrush_01
+    - MODL: "n\\Ingred_Roobrush_01.nif"
+    - FNAM: "Рубраш "
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: DrainAttribute
+        effect_2_index: FortifyAttribute
+        effect_3_index: DrainHealth
+        effect_4_index: CurePoison
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Willpower
+        effect_2_attribute: Agility
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_roobrush_01.tga"
+- INGR:
+    - NAME: ingred_scales_01
+    - MODL: "n\\Ingred_Scales_01.nif"
+    - FNAM: Чешуя
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 2
+        effect_1_index: DrainAttribute
+        effect_2_index: WaterWalking
+        effect_3_index: RestoreAttribute
+        effect_4_index: SwiftSwim
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Personality
+        effect_2_attribute: Strength
+        effect_3_attribute: Endurance
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_scales_01.tga"
+- INGR:
+    - NAME: ingred_scamp_skin_01
+    - MODL: "n\\Ingred_Scamp_Skin_01.nif"
+    - FNAM: Кожа скампа
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 10
+        effect_1_index: DrainSpellpoints
+        effect_2_index: CureParalyzation
+        effect_3_index: RestoreAttribute
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Personality
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_scamp_skin_01.tga"
+- INGR:
+    - NAME: ingred_scathecraw_01
+    - MODL: "n\\Ingred_Scathecraw_01.nif"
+    - FNAM: Вредозобник
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 2
+        effect_1_index: DrainAttribute
+        effect_2_index: CurePoison
+        effect_3_index: DrainHealth
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Willpower
+    - ITEX: "n\\Tx_scathecraw_01.tga"
+- INGR:
+    - NAME: ingred_scrap_metal_01
+    - MODL: "n\\Ingred_Scrap_Metal_01.nif"
+    - FNAM: Обрезки металла
+    - IRDT:
+        weight: 10.0
+        value: 20
+        effect_1_index: DrainHealth
+        effect_2_index: LightningShield
+        effect_3_index: ResistShock
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Intelligence
+    - ITEX: "n\\Tx_scrapmetal_01.tga"
+- INGR:
+    - NAME: ingred_scrib_jelly_01
+    - MODL: "n\\Ingred_Scrib_Jelly_01.nif"
+    - FNAM: Скрибовое желе
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 10
+        effect_1_index: FortifyAttribute
+        effect_2_index: CurePoison
+        effect_3_index: CureBlightDisease
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Willpower
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Willpower
+    - ITEX: "n\\Tx_scrib_jelly_01.tga"
+- INGR:
+    - NAME: ingred_scuttle_01
+    - MODL: "n\\Ingred_Scuttle_01.nif"
+    - FNAM: Скаттл
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 10
+        effect_1_index: RestoreFatigue
+        effect_2_index: FortifyFatigue
+        effect_3_index: Feather
+        effect_4_index: Telekinesis
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_scuttle_01.tga"
+- INGR:
+    - NAME: ingred_shalk_resin_01
+    - MODL: "n\\Ingred_Shalk_Resin_01.nif"
+    - FNAM: Смола шалка
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 50
+        effect_1_index: DrainFatigue
+        effect_2_index: FortifyHealth
+        effect_3_index: DrainAttribute
+        effect_4_index: FortifyAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Personality
+        effect_4_attribute: Speed
+    - ITEX: "n\\Tx_shalk_resin_01.tga"
+- INGR:
+    - NAME: ingred_sload_soap_01
+    - MODL: "n\\Ingred_Sload_Soap_01.nif"
+    - FNAM: Мыло слоад
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 50
+        effect_1_index: DrainAttribute
+        effect_2_index: FortifyAttribute
+        effect_3_index: FireShield
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Personality
+        effect_2_attribute: Agility
+        effect_3_attribute: Strength
+        effect_4_attribute: Agility
+    - ITEX: "n\\Tx_sload_soap_01.tga"
+- INGR:
+    - NAME: ingred_stoneflower_petals_01
+    - MODL: "n\\Ingred_Stoneflower_01.nif"
+    - FNAM: Лепестки каменевки
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: RestoreAttribute
+        effect_2_index: FortifySpellpoints
+        effect_3_index: DrainAttribute
+        effect_4_index: FortifyAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Luck
+        effect_4_attribute: Personality
+    - ITEX: "n\\Tx_stoneflower_01.tga"
+- INGR:
+    - NAME: ingred_trama_root_01
+    - MODL: "n\\Ingred_Trama_Root_01.nif"
+    - FNAM: Корень трамы
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 10
+        effect_1_index: RestoreAttribute
+        effect_2_index: Levitate
+        effect_3_index: DrainSpellpoints
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Willpower
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Speed
+    - ITEX: "n\\Tx_trama_root_01.tga"
+- INGR:
+    - NAME: ingred_vampire_dust_01
+    - MODL: "n\\Ingred_Vampire_Dust_01.nif"
+    - FNAM: Прах вампира
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 500
+        effect_1_index: FortifyHealth
+        effect_2_index: FortifyAttribute
+        effect_3_index: SpellAbsorption
+        effect_4_index: Vampirism
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Personality
+    - ITEX: "n\\Tx_vampire_dust_01.tga"
+- INGR:
+    - NAME: ingred_void_salts_01
+    - MODL: "n\\Ingred_Void_Salts_01.nif"
+    - FNAM: Соли пустоты
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 100
+        effect_1_index: RestoreSpellPoints
+        effect_2_index: SpellAbsorption
+        effect_3_index: Paralyze
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Endurance
+    - ITEX: "n\\Tx_void_salts_01.tga"
+- INGR:
+    - NAME: ingred_wickwheat_01
+    - MODL: "n\\Ingred_Whickwheat_01.nif"
+    - FNAM: Виквит
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: RestoreHealth
+        effect_2_index: FortifyAttribute
+        effect_3_index: Paralyze
+        effect_4_index: DamageAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Agility
+        effect_2_attribute: Willpower
+        effect_3_attribute: Strength
+        effect_4_attribute: Intelligence
+    - ITEX: "n\\Tx_whickwheat_01.tga"
+- INGR:
+    - NAME: ingred_willow_anther_01
+    - MODL: "n\\Ingred_Willow_Anther_01.nif"
+    - FNAM: Ивовый пыльник
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 10
+        effect_1_index: DrainAttribute
+        effect_2_index: FrostShield
+        effect_3_index: CureCommonDisease
+        effect_4_index: CureParalyzation
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Personality
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_willow_anther_01.tga"
+- INGR:
+    - NAME: ingred_scrib_jerky_01
+    - MODL: "n\\Ingred_Scrib_Jerky_01.nif"
+    - FNAM: Вяленая скрибятина
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 5
+        effect_1_index: RestoreFatigue
+        effect_2_index: FortifyFatigue
+        effect_3_index: Burden
+        effect_4_index: SwiftSwim
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_scrib_jerky_01.tga"
+- INGR:
+    - NAME: ingred_fire_petal_01
+    - MODL: "n\\Ingred_Fire_Petal_01.nif"
+    - FNAM: Огненный лепесток
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 2
+        effect_1_index: ResistFire
+        effect_2_index: DrainHealth
+        effect_3_index: SpellAbsorption
+        effect_4_index: Paralyze
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_firepetal_01.tga"
+- INGR:
+    - NAME: ingred_bread_01
+    - MODL: "n\\Ingred_bread_01.NIF"
+    - FNAM: Хлеб
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 1
+        effect_1_index: RestoreFatigue
+        effect_2_index: ~
+        effect_3_index: ~
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "m\\Tx_bread_01.tga"
+- INGR:
+    - NAME: ingred_coprinus_01
+    - MODL: "n\\Ingred_coprinus_01.NIF"
+    - FNAM: Лиловый копринус
+    - IRDT:
+        weight: 0.5
+        value: 1
+        effect_1_index: WaterWalking
+        effect_2_index: DrainFatigue
+        effect_3_index: Poison
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_coprinus_01.tga"
+- INGR:
+    - NAME: ingred_russula_01
+    - MODL: "n\\Ingred_russula_01.NIF"
+    - FNAM: Светящаяся сыроежка
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 1
+        effect_1_index: WaterBreathing
+        effect_2_index: DrainFatigue
+        effect_3_index: Poison
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_russula_01.tga"
+- INGR:
+    - NAME: ingred_bc_ampoule_pod
+    - MODL: "n\\Ingred_BC_Ampoule_Pod.NIF"
+    - FNAM: "Ампульный стручок "
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 2
+        effect_1_index: WaterWalking
+        effect_2_index: Paralyze
+        effect_3_index: DetectAnimal
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Willpower
+    - ITEX: "n\\Ingred_BC_Ampoule_Pod.tga"
+- INGR:
+    - NAME: "ingred_bc_bungler's_bane"
+    - MODL: "n\\Ingred_BC_Bungler's_Bane.NIF"
+    - FNAM: Банглер бейн
+    - IRDT:
+        weight: 0.5
+        value: 1
+        effect_1_index: DrainAttribute
+        effect_2_index: DrainAttribute
+        effect_3_index: Dispel
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Speed
+        effect_2_attribute: Endurance
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Ingred_BC_Bungler's_Bane.tga"
+- INGR:
+    - NAME: ingred_bc_hypha_facia
+    - MODL: "n\\Ingred_BC_Hypha_Facia.NIF"
+    - FNAM: Гайфа фация
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: DrainAttribute
+        effect_2_index: DrainAttribute
+        effect_3_index: DrainFatigue
+        effect_4_index: DetectEnchantment
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Luck
+        effect_2_attribute: Agility
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Ingred_BC_Hypha_Facia.tga"
+- INGR:
+    - NAME: ingred_bc_spore_pod
+    - MODL: "n\\Ingred_BC_Spore_Pod.NIF"
+    - FNAM: "Спороносный стручок "
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 1
+        effect_1_index: DrainAttribute
+        effect_2_index: DrainFatigue
+        effect_3_index: DetectKey
+        effect_4_index: Paralyze
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Ingred_BC_Spore_Pod.tga"
+- INGR:
+    - NAME: ingred_bc_coda_flower
+    - MODL: "n\\Ingred_BC_Coda_Flower.NIF"
+    - FNAM: Цветок коды
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 23
+        effect_1_index: DrainAttribute
+        effect_2_index: Levitate
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainHealth
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Personality
+        effect_2_attribute: Strength
+        effect_3_attribute: Intelligence
+        effect_4_attribute: Strength
+    - ITEX: "n\\Ingred_BC_Coda_Flower.tga"
+- INGR:
+    - NAME: ingred_guar_hide_girith
+    - MODL: "n\\Ingred_Guar_Hide_01.nif"
+    - FNAM: Шкура гуара Гирита
+    - IRDT:
+        weight: 1.0
+        value: 5
+        effect_1_index: DrainFatigue
+        effect_2_index: FortifyAttribute
+        effect_3_index: RestoreAttribute
+        effect_4_index: FortifyAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Endurance
+        effect_3_attribute: Personality
+        effect_4_attribute: Luck
+    - ITEX: "n\\Tx_guarhide_01.tga"
+- INGR:
+    - NAME: ingred_guar_hide_marsus
+    - MODL: "n\\Ingred_Guar_Hide_01.nif"
+    - FNAM: Шкура гуара Марсуса
+    - IRDT:
+        weight: 1.0
+        value: 5
+        effect_1_index: DrainFatigue
+        effect_2_index: FortifyAttribute
+        effect_3_index: RestoreAttribute
+        effect_4_index: FortifyAttribute
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Endurance
+        effect_3_attribute: Personality
+        effect_4_attribute: Luck
+    - ITEX: "n\\Tx_guarhide_01.tga"
+- INGR:
+    - NAME: ingred_raw_glass_tinos
+    - MODL: "n\\Ingred_Raw_Glass_01.nif"
+    - FNAM: Стекло-сырец
+    - IRDT:
+        weight: 2.0
+        value: 200
+        effect_1_index: DrainAttribute
+        effect_2_index: DrainAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: FireShield
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: Strength
+        effect_3_attribute: Speed
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_RawGlass.tga"
+- INGR:
+    - NAME: ingred_treated_bittergreen_uniq
+    - MODL: "n\\Ingred_Bittergreen_01.nif"
+    - FNAM: Очищ. лепестки горьколистника
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 10
+        effect_1_index: RestoreAttribute
+        effect_2_index: DrainSpellpoints
+        effect_3_index: DrainAttribute
+        effect_4_index: Invisibility
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: Strength
+        effect_3_attribute: Endurance
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_bittergreen_petal_01.tga"
+- INGR:
+    - META: PERSIST
+    - NAME: ingred_gold_kanet_unique
+    - MODL: "n\\Ingred_Gold_Kanet_01.nif"
+    - FNAM: Слеза Роланда
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 5
+        effect_1_index: DrainHealth
+        effect_2_index: Burden
+        effect_3_index: DrainAttribute
+        effect_4_index: RestoreAttribute
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: Luck
+        effect_4_attribute: Strength
+    - ITEX: "n\\Tx_goldkanet_01.tga"
+- INGR:
+    - META: PERSIST
+    - NAME: ingred_bread_01_UNI2
+    - MODL: "n\\Ingred_bread_01.NIF"
+    - FNAM: Хлеб
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 1
+        effect_1_index: RestoreFatigue
+        effect_2_index: ~
+        effect_3_index: ~
+        effect_4_index: ~
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "m\\Tx_bread_01.tga"
+- INGR:
+    - NAME: poison_goop00
+    - MODL: "n\\Ingred_Corprus_weeping_01.NIF"
+    - FNAM: Яд
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 0
+        effect_1_index: WeaknessToPoison
+        effect_2_index: DamageHealth
+        effect_3_index: DamageFatigue
+        effect_4_index: Poison
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_corprus_weep_01.tga"
+- INGR:
+    - NAME: ingred_Dae_cursed_emerald_01
+    - MODL: "n\\Ingred_emerald_01.NIF"
+    - FNAM: Изумруд
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 150
+        effect_1_index: FortifySpellpoints
+        effect_2_index: RestoreHealth
+        effect_3_index: DrainAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: Agility
+        effect_4_attribute: Endurance
+    - SCRI: BILL_MarksDaedraSummon
+    - ITEX: "n\\Tx_emerald.tga"
+- INGR:
+    - NAME: ingred_Dae_cursed_pearl_01
+    - MODL: "n\\Ingred_pearl_01.NIF"
+    - FNAM: Жемчужина
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 100
+        effect_1_index: DrainAttribute
+        effect_2_index: Dispel
+        effect_3_index: WaterBreathing
+        effect_4_index: ResistCommonDisease
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: Agility
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - SCRI: BILL_MarksDaedraSummon
+    - ITEX: "n\\Tx_pearl.tga"
+- INGR:
+    - NAME: ingred_cursed_daedras_heart_01
+    - MODL: "n\\Ingred_Daedra_heart_01.NIF"
+    - FNAM: Сердце даэдры
+    - IRDT:
+        weight: 1.0
+        value: 200
+        effect_1_index: RestoreSpellPoints
+        effect_2_index: FortifyAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: NightEye
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Endurance
+        effect_3_attribute: Agility
+        effect_4_attribute: ~
+    - SCRI: BILL_MarksDaedraSummon
+    - ITEX: "n\\Tx_daedra_heart_01.tga"
+- INGR:
+    - NAME: ingred_Dae_cursed_diamond_01
+    - MODL: "n\\Ingred_diamond_01.NIF"
+    - FNAM: Бриллиант
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 250
+        effect_1_index: DrainAttribute
+        effect_2_index: Invisibility
+        effect_3_index: Reflect
+        effect_4_index: DetectKey
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: Agility
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - SCRI: BILL_MarksDaedraSummon
+    - ITEX: "n\\Tx_diamond.tga"
+- INGR:
+    - NAME: ingred_Dae_cursed_ruby_01
+    - MODL: "n\\Ingred_ruby_01.NIF"
+    - FNAM: Рубин
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 200
+        effect_1_index: DrainHealth
+        effect_2_index: Feather
+        effect_3_index: RestoreAttribute
+        effect_4_index: DrainAttribute
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: Intelligence
+        effect_4_attribute: Agility
+    - SCRI: BILL_MarksDaedraSummon
+    - ITEX: "n\\Tx_ruby.tga"
+- INGR:
+    - NAME: ingred_Dae_cursed_raw_ebony_01
+    - MODL: "n\\Ingred_RawEbony_01.NIF"
+    - FNAM: Эбонит-сырец
+    - IRDT:
+        weight: 10.0
+        value: 200
+        effect_1_index: DrainAttribute
+        effect_2_index: CurePoison
+        effect_3_index: FrostShield
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: Agility
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Speed
+    - SCRI: BILL_MarksDaedraSummon
+    - ITEX: "n\\Tx_RawEbony.tga"
+- INGR:
+    - NAME: ingred_human_meat_01
+    - MODL: "n\\Ingred_Rat_Meat_01.nif"
+    - FNAM: Человечина
+    - IRDT:
+        weight: 1.0
+        value: 1
+        effect_1_index: FortifyHealth
+        effect_2_index: DrainAttribute
+        effect_3_index: DrainAttribute
+        effect_4_index: ~
+        effect_1_skill: ~
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: Intelligence
+        effect_3_attribute: Personality
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_rat_meat_01.tga"
+- INGR:
+    - NAME: ingred_6th_corprusmeat_01
+    - MODL: "n\\Ingred_6th_Corpusmeat_01.NIF"
+    - FNAM: Большой кусок корпрусного мяса
+    - IRDT:
+        weight: 1.0
+        value: 0
+        effect_1_index: DrainFatigue
+        effect_2_index: DrainHealth
+        effect_3_index: DrainSpellpoints
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Ingred_6th_Corpusmeat_01.tga"
+- INGR:
+    - NAME: ingred_6th_corprusmeat_02
+    - MODL: "n\\Ingred_6th_Corpusmeat_02.NIF"
+    - FNAM: Мал. Кусок корпрусного мяса
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 0
+        effect_1_index: DrainFatigue
+        effect_2_index: DrainHealth
+        effect_3_index: DrainSpellpoints
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Ingred_6th_Corpusmeat_02.tga"
+- INGR:
+    - NAME: ingred_6th_corprusmeat_03
+    - MODL: "n\\Ingred_6th_Corpusmeat_03.NIF"
+    - FNAM: Средний кусок корпрусного мяса
+    - IRDT:
+        weight: 0.5
+        value: 0
+        effect_1_index: DrainFatigue
+        effect_2_index: DrainHealth
+        effect_3_index: DrainSpellpoints
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Ingred_6th_Corpusmeat_03.tga"
+- INGR:
+    - NAME: ingred_6th_corprusmeat_04
+    - MODL: "n\\Ingred_6th_Corpusmeat_04.NIF"
+    - FNAM: Ломоть корпрусного мяса
+    - IRDT:
+        weight: 0.0
+        value: 0
+        effect_1_index: DrainFatigue
+        effect_2_index: DrainHealth
+        effect_3_index: DrainSpellpoints
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Ingred_6th_Corpusmeat_04.tga"
+- INGR:
+    - NAME: ingred_6th_corprusmeat_05
+    - MODL: "n\\Ingred_6th_Corpusmeat_05.NIF"
+    - FNAM: Большой ломоть корпрусного мяса
+    - IRDT:
+        weight: 1.0
+        value: 0
+        effect_1_index: DrainFatigue
+        effect_2_index: DrainHealth
+        effect_3_index: DrainSpellpoints
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Ingred_6th_Corpusmeat_05.tga"
+- INGR:
+    - NAME: ingred_6th_corprusmeat_06
+    - MODL: "n\\Ingred_6th_Corpusmeat_06.NIF"
+    - FNAM: Средний ломоть корпрусного мяса
+    - IRDT:
+        weight: 0.5
+        value: 0
+        effect_1_index: DrainFatigue
+        effect_2_index: DrainHealth
+        effect_3_index: DrainSpellpoints
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Ingred_6th_Corpusmeat_06.tga"
+- INGR:
+    - NAME: ingred_6th_corprusmeat_07
+    - MODL: "n\\Ingred_6th_Corpusmeat_07.NIF"
+    - FNAM: Мал. ломоть корпрусного мяса
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 0
+        effect_1_index: DrainFatigue
+        effect_2_index: DrainHealth
+        effect_3_index: DrainSpellpoints
+        effect_4_index: ~
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: Block
+        effect_4_skill: Block
+        effect_1_attribute: Strength
+        effect_2_attribute: Strength
+        effect_3_attribute: Strength
+        effect_4_attribute: Strength
+    - ITEX: "n\\Ingred_6th_Corpusmeat_07.tga"
+- INGR:
+    - NAME: ingred_scrib_jelly_02
+    - MODL: "n\\Ingred_Scrib_Jelly_01.nif"
+    - FNAM: Слизь
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 10
+        effect_1_index: FortifyAttribute
+        effect_2_index: CurePoison
+        effect_3_index: CureBlightDisease
+        effect_4_index: RestoreAttribute
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: Willpower
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Willpower
+    - ITEX: "n\\Tx_scrib_jelly_01.tga"
+- INGR:
+    - NAME: ingred_bread_01_UNI3
+    - MODL: "n\\Ingred_bread_01.NIF"
+    - FNAM: Оладья
+    - IRDT:
+        weight: 0.20000000298023225
+        value: 1
+        effect_1_index: RestoreFatigue
+        effect_2_index: ~
+        effect_3_index: ~
+        effect_4_index: ~
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "m\\Tx_bread_01.tga"
