@@ -1,0 +1,4 @@
+_GUICtrlToolbar_ClickIndex($se_menu, 0, "left", False, 1)
+WinWait("Script Pick")
+ControlCommand("Script Pick", "", 0x3FA, "SelectString", $script)
+_GUICtrlToolbar_ClickIndex($se_menu, 1, "left", False, 1)

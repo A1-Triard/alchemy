@@ -1,5 +1,5 @@
 from collections import namedtuple
-from itertools import chain, product, combinations
+from itertools import chain, product, combinations, count
 import os, sys, shutil
 from datetime import datetime
 from time import mktime
@@ -8,6 +8,9 @@ from sys import stdout, stderr
 import yaml
 import subprocess
 from subprocess import PIPE
+import winreg
+from winreg import HKEY_LOCAL_MACHINE, HKEY_CLASSES_ROOT
+from shutil import copyfile
 
 negative_effects = [
     'Burden',
@@ -886,7 +889,24 @@ def assembly_plugin(path, year, month, day, hour, minute, second, keep=False):
     t = mktime(date.timetuple())
     utime(path, (t, t))
 
-def gen_plugin(ingrs_set, year, month, day, hour, minute, second):
+def find_mfr():
+    with winreg.OpenKey(HKEY_LOCAL_MACHINE, 'SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall') as uninstall_key:
+        for i in count():
+            subkey = winreg.EnumKey(uninstall_key, i)
+            with winreg.OpenKey(uninstall_key, subkey) as key:
+                try:
+                    (token, _) = winreg.QueryValueEx(key, 'HelpLink')
+                    if token == 'http://www.fullrest.ru/forum/topic/36164-morrowind-fullrest-repack/':
+                        return winreg.QueryValueEx(key, 'InstallLocation')[0]
+                except FileNotFoundError:
+                    pass
+       
+def run_au3(path):
+    command = winreg.QueryValue(HKEY_CLASSES_ROOT, 'AutoIt3XScript\\Shell\\Run\\Command')
+    command = command[:command.index('"%1"')]
+    subprocess.run(command + ' ' + path, stdout=stdout, stderr=stderr, check=True)
+       
+def gen_plugin(ingrs_set, mfr, year, month, day, hour, minute, second):
     morrowind_ingrs = { i.name: i for i in load_ingredients('ingredients/Morrowind.esm.yaml') }
     tribunal_ingrs = { i.name: i for i in load_ingredients('ingredients/Tribunal.esm.yaml') }
     bloodmoon_ingrs = { i.name: i for i in load_ingredients('ingredients/Bloodmoon.esm.yaml') }
@@ -934,7 +954,7 @@ def gen_plugin(ingrs_set, year, month, day, hour, minute, second):
     esp_header[0]['TES3'][0]['HEDR']['description'].append('Версия для использования без EVA.esp' if ingrs_set == 'std' else 'Версия для использования с EVA.esp')
     esp_header[0]['TES3'][0]['HEDR']['records'] = len(esp_header) + len(add_items) + len(check_scripts) + len(add_scripts) + len(del_scripts) + len(level_books) - 1
 
-    with open('alchemy_' + ingrs_set + '.esp.yaml', 'w', encoding='utf-8') as esp:
+    with open(mfr + 'alchemy_' + ingrs_set + '.esp.yaml', 'w', encoding='utf-8') as esp:
         yaml.dump(esp_header, esp, allow_unicode=True)
         yaml.dump(add_items, esp, allow_unicode=True)
         yaml.dump(add_scripts, esp, allow_unicode=True)
@@ -942,19 +962,30 @@ def gen_plugin(ingrs_set, year, month, day, hour, minute, second):
         yaml.dump(del_scripts, esp, allow_unicode=True)
         yaml.dump(level_books, esp, allow_unicode=True)
 
-    assembly_plugin('alchemy_' + ingrs_set + '.esp', year, month, day, hour, minute, second)
+    assembly_plugin(mfr + 'alchemy_' + ingrs_set + '.esp', year, month, day, hour, minute, second)
 
-    with open('script.au_', 'r', encoding='utf-8') as f:
-        au3_script = f.read()
-    with open('header.au_', 'r', encoding='utf-8') as f:
+    with open('00_includes.au_', 'r', encoding='utf-8') as f:
+        au3_includes = f.read()
+    with open('01_header.au_', 'r', encoding='utf-8') as f:
         au3_header = f.read()
+    with open('02_script.au_', 'r', encoding='utf-8') as f:
+        au3_script = f.read()
+    with open('03_close.au_', 'r', encoding='utf-8') as f:
+        au3_close = f.read()
     with open('alchemy_' + ingrs_set + '.au3', 'w', encoding='utf-8') as au3:
+        au3.write(au3_includes)
+        au3.write('\n$ingrs_set = "' + ingrs_set +'"\n\n')
         au3.write(au3_header)
         for script in chain(check_scripts, add_scripts, del_scripts):
             script_name = script['SCPT'][0]['SCHD']['name']
             au3.write('\n')
             au3.write('$script = "' + script_name +'"\n')
             au3.write(au3_script)
+        au3.write(au3_close)
+    run_au3('alchemy_' + ingrs_set + '.au3')
+    remove('alchemy_' + ingrs_set + '.au3')
+    move(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '.esp')
+    subprocess.run('espa -p ru -vd ' + 'A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '.esp', stdout=stdout, stderr=stderr, check=True)
 
 def check_espa_version():
   espa = subprocess.run('espa -V', stdout=PIPE, check=True, universal_newlines=True)
@@ -970,9 +1001,13 @@ def main():
     cd = path.dirname(path.realpath(__file__))
     chdir(cd)
     check_espa_version()
-    assembly_plugin('A1_Alchemy_Potions.esp', 2014, 8, 3, 18, 53, 0, keep=True)
-    gen_plugin('std', 2014, 8, 10, 18, 53, 0)
-    gen_plugin('eva', 2097, 9, 1, 0, 0, 0)
+    mfr = find_mfr()
+    copyfile('A1_Alchemy_Potions.esp.yaml', mfr + 'A1_Alchemy_Potions.esp.yaml')
+    assembly_plugin(mfr + 'A1_Alchemy_Potions.esp', 2014, 8, 3, 18, 53, 0)
+    gen_plugin('std', mfr, 2014, 8, 10, 18, 53, 0)
+    assembly_plugin(mfr + 'A1_Alchemy_V6_Apparatus.esp', 2014, 8, 10, 18, 53, 0)
+    gen_plugin('eva', mfr, 2097, 9, 1, 0, 0, 0)
+    assembly_plugin(mfr + 'A1_Alchemy_V6_Apparatus_EVA.esp', 2097, 9, 1, 0, 0, 0)
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,47 @@
+$i = 0
+While True
+   $i += 1
+   $key = RegEnumKey("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall", $i)
+   If @error Then Exit $i
+   $token = RegRead("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\" & $key, "HelpLink")
+   If $token == "http://www.fullrest.ru/forum/topic/36164-morrowind-fullrest-repack/" Then
+	  $mfr = RegRead("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\" & $key, "InstallLocation")
+	  If @error Then Exit 1
+	  ExitLoop
+   EndIf
+WEnd
+
+$cs = Run($mfr & "\TES Construction Set.exe", $mfr)
+WinWait("TES Construction Set")
+$menu = ControlGetHandle("TES Construction Set", "", 1)
+_GUICtrlToolbar_ClickIndex($menu, 0, "left", False, 1)
+WinWait("Data Files")
+$list = ControlGetHandle("Data Files", "", 0x420)
+$mw = ControlListView("Data Files", "", 0x420, "FindItem", "Morrowind.esm", 0)
+_GUICtrlListView_ClickItem($list, $mw, "left", False, 2)
+$tr = ControlListView("Data Files", "", 0x420, "FindItem", "Tribunal.esm", 0)
+_GUICtrlListView_ClickItem($list, $tr, "left", False, 2)
+$bl = ControlListView("Data Files", "", 0x420, "FindItem", "Bloodmoon.esm", 0)
+_GUICtrlListView_ClickItem($list, $bl, "left", False, 2)
+$pt = ControlListView("Data Files", "", 0x420, "FindItem", "A1_Alchemy_Potions.esp", 0)
+_GUICtrlListView_ClickItem($list, $pt, "left", False, 2)
+If $ingrs_set == "std" Then
+    $pl = ControlListView("Data Files", "", 0x420, "FindItem", "alchemy_std.esp", 0)
+Else
+    $eva = ControlListView("Data Files", "", 0x420, "FindItem", "EVA.ESP", 0)
+    _GUICtrlListView_ClickItem($list, $eva, "left", False, 2)
+    $pl = ControlListView("Data Files", "", 0x420, "FindItem", "alchemy_eva.esp", 0)
+EndIf
+_GUICtrlListView_ClickItem($list, $pl, "left", False, 2)
+ControlClick("Data Files", "", 0x461, "left", 1)
+ControlClick("Data Files", "", 1, "left", 1)
+WinWait("[TITLE:Warning;CLASS:#32770]")
+ControlClick("[TITLE:Warning;CLASS:#32770]", "", 2, "left", 1)
+While True
+   Sleep(50)
+   $c = MouseGetCursor()
+   if $c <> 1 And $c <> 15 Then ExitLoop
+WEnd
+_GUICtrlToolbar_ClickIndex($menu, 17, "left", False, 1)
+WinWait("Script Edit")
+$se_menu = ControlGetHandle("Script Edit", "", 1)

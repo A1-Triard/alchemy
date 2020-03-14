@@ -1,4 +1,0 @@
-ControlClick("Script Edit", "", 1, "left", 1, 5, 2)
-WinWait("Script Pick")
-ControlCommand("Script Pick", "", 0x3FA, "SelectString", $script)
-ControlClick("Script Edit", "", 1, "left", 1, 40, 2)

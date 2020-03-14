@@ -1,0 +1,4 @@
+WinClose("TES Construction Set")
+WinWait("[TITLE:Save plugin?;CLASS:#32770]")
+ControlClick("[TITLE:Save Plugin?;CLASS:#32770]", "", 6, "left", 1)
+ProcessWaitClose($cs)
