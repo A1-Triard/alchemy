@@ -10,7 +10,7 @@ import subprocess
 from subprocess import PIPE
 import winreg
 from winreg import HKEY_LOCAL_MACHINE, HKEY_CLASSES_ROOT
-from shutil import copyfile
+from shutil import copyfile, move
 
 negative_effects = [
     'Burden',
