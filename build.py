@@ -3,14 +3,14 @@ from itertools import chain, product, combinations, count
 import os, sys, shutil
 from datetime import datetime
 from time import mktime
-from os import path, chdir, utime, remove
+from os import path, chdir, utime, remove, mkdir
 from sys import stdout, stderr
 import yaml
 import subprocess
 from subprocess import PIPE
 import winreg
 from winreg import HKEY_LOCAL_MACHINE, HKEY_CLASSES_ROOT
-from shutil import copyfile, move
+from shutil import copyfile, move, make_archive, rmtree, copytree
 
 negative_effects = [
     'Burden',
@@ -984,7 +984,7 @@ def gen_plugin(ingrs_set, mfr, year, month, day, hour, minute, second):
         au3.write(au3_close)
     run_au3('alchemy_' + ingrs_set + '.au3')
     remove('alchemy_' + ingrs_set + '.au3')
-    copyfile(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '.esp')
+    move(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '.esp')
     subprocess.run('espa -p ru -vd ' + 'A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '.esp', stdout=stdout, stderr=stderr, check=True)
 
 def check_espa_version():
@@ -993,25 +993,44 @@ def check_espa_version():
     print('wrong espa version')
     sys.exit(1)
 
+def prepare_text(path, d):
+    with open(path.upper(), 'r', encoding='utf-8') as utf8:
+        with open(d + path + '.txt', 'w', encoding='cp1251') as cp1251:
+            cp1251.write(utf8.read())
+
 def represent_none(self, _):
     return self.represent_scalar('tag:yaml.org,2002:null', '~')
 
 def main():
-    yaml.add_representer(type(None), represent_none)
     cd = path.dirname(path.realpath(__file__))
     chdir(cd)
     check_espa_version()
     mfr = find_mfr()
+    yaml.add_representer(type(None), represent_none)
+    if path.exists('ar'):
+        rmtree('ar')
+    mkdir('ar')
+    mkdir('ar/Data Files')
+    copyfile('A1_Alchemy_Potions.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions.esp.yaml')
+    copyfile('A1_Alchemy_DaeCursed.esp.yaml', 'ar/Data Files/A1_Alchemy_DaeCursed.esp.yaml')
+    copyfile('A1_Alchemy_V6_Containers.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Containers.esp.yaml')
+    prepare_text('Readme', 'ar/')
+    prepare_text('Versions', 'ar/')
+    copytree('Screenshots', 'ar/Screenshots')
     copyfile('A1_Alchemy_Potions.esp.yaml', mfr + 'alchemy_potions.esp.yaml')
     assembly_plugin(mfr + 'alchemy_potions.esp', 2014, 8, 3, 18, 53, 0)
     gen_plugin('std', mfr, 2014, 8, 10, 18, 53, 0)
-    assembly_plugin('A1_Alchemy_V6_Apparatus.esp', 2014, 8, 10, 18, 53, 0, keep=True)
     gen_plugin('eva', mfr, 2097, 9, 1, 0, 0, 0)
-    assembly_plugin('A1_Alchemy_V6_Apparatus_EVA.esp', 2097, 9, 1, 0, 0, 0, keep=True)
     remove(mfr + 'alchemy_potions.esp')
-    assembly_plugin('A1_Alchemy_Potions.esp', 2014, 8, 3, 18, 53, 0, keep=True)
-    assembly_plugin('A1_Alchemy_DaeCursed.esp', 2014, 8, 2, 18, 53, 0, keep=True)
-    assembly_plugin('A1_Alchemy_V6_Containers.esp', 2014, 8, 15, 18, 53, 0, keep=True)
+    copyfile('A1_Alchemy_V6_Apparatus.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus.esp.yaml')
+    copyfile('A1_Alchemy_V6_Apparatus_EVA.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus_EVA.esp.yaml')
+    assembly_plugin('ar/Data Files/A1_Alchemy_V6_Apparatus.esp', 2014, 8, 10, 18, 53, 0)
+    assembly_plugin('ar/Data Files/A1_Alchemy_V6_Apparatus_EVA.esp', 2097, 9, 1, 0, 0, 0)
+    assembly_plugin('ar/Data Files/A1_Alchemy_Potions.esp', 2014, 8, 3, 18, 53, 0)
+    assembly_plugin('ar/Data Files/A1_Alchemy_DaeCursed.esp', 2014, 8, 2, 18, 53, 0)
+    assembly_plugin('ar/Data Files/A1_Alchemy_V6_Containers.esp', 2014, 8, 15, 18, 53, 0)
+    make_archive('A1_Alchemy_1.0', 'zip', 'ar')
+    rmtree('ar')    
 
 if __name__ == "__main__":
     main()
