@@ -6,7 +6,7 @@
         description:
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - Версия для использования без EVA.esp
-        records: 495
+        records: 497
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -20777,6 +20777,33 @@
         is_key: false
     - SCRI: A1V6_ApparatusItem_1_sc
     - ITEX: "m\\misc_com_bottle_05.dds"
+- CONT:
+    - NAME: A1V6_ApparatusCont_3
+    - MODL: "m\\misc_potion_fresh_01.nif"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_3_sc
+- INGR:
+    - NAME: A1V6_ApparatusFakeIngred
+    - MODL: "n\\ingred_bittergreen_01.nif"
+    - FNAM: ОШИБКА
+    - IRDT:
+        weight: 0.10000000149011612
+        value: 20
+        effect_1_index: Light
+        effect_2_index: ~
+        effect_3_index: ~
+        effect_4_index: ~
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\tx_bittergreen_petal_01.dds"
 - INGR:
     - NAME: A1V6_L15_restore_health
     - MODL: "m\\misc_com_bottle_05.nif"
