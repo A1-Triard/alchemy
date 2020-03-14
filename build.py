@@ -1,7 +1,9 @@
 from collections import namedtuple
 from itertools import chain, product, combinations
 import os, sys, shutil
-from os import path, chdir
+from datetime import datetime
+from time import mktime
+from os import path, chdir, utime
 from sys import stdout, stderr
 import yaml
 import subprocess
@@ -878,7 +880,13 @@ def gen_level_book(level):
         ]
     }
 
-def gen_plugin(ingrs_set):
+def assembly_plugin(path, year, month, day, hour, minute, second, keep=False):
+    subprocess.run('espa -p ru -' + ('k' if keep else '') + 'v ' + path + '.yaml', stdout=stdout, stderr=stderr, check=True)
+    date = datetime(year=year, month=month, day=day, hour=hour, minute=minute, second=second)
+    t = mktime(date.timetuple())
+    utime(path, (t, t))
+
+def gen_plugin(ingrs_set, year, month, day, hour, minute, second):
     morrowind_ingrs = { i.name: i for i in load_ingredients('ingredients/Morrowind.esm.yaml') }
     tribunal_ingrs = { i.name: i for i in load_ingredients('ingredients/Tribunal.esm.yaml') }
     bloodmoon_ingrs = { i.name: i for i in load_ingredients('ingredients/Bloodmoon.esm.yaml') }
@@ -921,32 +929,38 @@ def gen_plugin(ingrs_set):
         level_books.append(gen_level_book(level))
 
     with open('header.esp.yaml', 'r', encoding='utf-8') as f:
-        header = yaml.load(f, Loader=yaml.FullLoader)
+        esp_header = yaml.load(f, Loader=yaml.FullLoader)
 
-    header[0]['TES3'][0]['HEDR']['description'].append('Версия для использования без EVA.esp' if ingrs_set == 'std' else 'Версия для использования с EVA.esp')
-    header[0]['TES3'][0]['HEDR']['records'] = len(header) + len(add_items) + len(check_scripts) + len(add_scripts) + len(del_scripts) + len(level_books) - 1
+    esp_header[0]['TES3'][0]['HEDR']['description'].append('Версия для использования без EVA.esp' if ingrs_set == 'std' else 'Версия для использования с EVA.esp')
+    esp_header[0]['TES3'][0]['HEDR']['records'] = len(esp_header) + len(add_items) + len(check_scripts) + len(add_scripts) + len(del_scripts) + len(level_books) - 1
 
     with open('alchemy_' + ingrs_set + '.esp.yaml', 'w', encoding='utf-8') as esp:
-        yaml.dump(header, esp, allow_unicode=True)
+        yaml.dump(esp_header, esp, allow_unicode=True)
         yaml.dump(add_items, esp, allow_unicode=True)
         yaml.dump(add_scripts, esp, allow_unicode=True)
         yaml.dump(check_scripts, esp, allow_unicode=True)
         yaml.dump(del_scripts, esp, allow_unicode=True)
         yaml.dump(level_books, esp, allow_unicode=True)
 
-    subprocess.run('espa -p ru -v alchemy_' + ingrs_set + '.esp.yaml', stdout=stdout, stderr=stderr, check=True, universal_newlines=True)
+    assembly_plugin('alchemy_' + ingrs_set + '.esp', year, month, day, hour, minute, second)
+
+    with open('script.au_', 'r', encoding='utf-8') as f:
+        au3_script = f.read()
+    with open('header.au_', 'r', encoding='utf-8') as f:
+        au3_header = f.read()
+    with open('alchemy_' + ingrs_set + '.au3', 'w', encoding='utf-8') as au3:
+        au3.write(au3_header)
+        for script in chain(check_scripts, add_scripts, del_scripts):
+            script_name = script['SCPT'][0]['SCHD']['name']
+            au3.write('\n')
+            au3.write('$script = "' + script_name +'"\n')
+            au3.write(au3_script)
 
 def check_espa_version():
   espa = subprocess.run('espa -V', stdout=PIPE, check=True, universal_newlines=True)
   if espa.stdout != '0.1.4\n':
     print('wrong espa version')
     sys.exit(1)
-
-def gen_au3_script(ingrs_set):
-    with open('header.au_', 'r', encoding='utf-8') as f:
-        header = f.read()
-    with open('alchemy_' + ingrs_set + '.au3', 'w', encoding='utf-8') as au3:
-        au3.write(header)
 
 def represent_none(self, _):
     return self.represent_scalar('tag:yaml.org,2002:null', '~')
@@ -956,10 +970,9 @@ def main():
     cd = path.dirname(path.realpath(__file__))
     chdir(cd)
     check_espa_version()
-    gen_plugin('std')
-    gen_plugin('eva')
-    gen_au3_script('std')
-    gen_au3_script('eva')
+    assembly_plugin('A1_Alchemy_Potions.esp', 2014, 8, 3, 18, 53, 0, keep=True)
+    gen_plugin('std', 2014, 8, 10, 18, 53, 0)
+    gen_plugin('eva', 2097, 9, 1, 0, 0, 0)
 
 if __name__ == "__main__":
     main()
