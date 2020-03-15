@@ -853,10 +853,10 @@ def gen_add_item(kind, index, level):
         'INGR': [
             {'NAME': 'A1V6_L' + str(level) + '_' + kind.potion.id_base},
             {'MODL': 'm\\misc_com_bottle_05.nif'},
-            {'FNAM': '_Создать'},
+            {'FNAM': ' Создать'},
             {'IRDT': irdt},
             {'SCRI': add_name},
-            {'ITEX': 'm\\misc_com_bottle_05.dds'},
+            {'ITEX': 'n\\a1_alchemy_new.dds'},
         ]
     }
 

@@ -27759,7 +27759,7 @@
 - INGR:
     - NAME: A1V6_AlchemyActivator
     - MODL: "m\\misc_com_plate_03.nif"
-    - FNAM: _Обновить
+    - FNAM: " Обновить"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28445,7 +28445,7 @@
 - INGR:
     - NAME: A1V6_L15_restore_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28462,11 +28462,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd1_RestoreHealth_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_restore_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28483,11 +28483,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd1_RestoreHealth_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_restore_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28504,11 +28504,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd1_RestoreHealth_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_restore_fatigue
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28525,11 +28525,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd2_RestoreFatig_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_restore_fatigue
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28546,11 +28546,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd2_RestoreFatig_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_restore_fatigue
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28567,11 +28567,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd2_RestoreFatig_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_restore_magicka
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28588,11 +28588,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd3_RestoreMagic_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_restore_magicka
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28609,11 +28609,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd3_RestoreMagic_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_water_walking
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28630,11 +28630,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd4_WaterWalk_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_water_walking
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28651,11 +28651,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd4_WaterWalk_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_water_walking
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28672,11 +28672,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd4_WaterWalk_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_water_walking
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28693,11 +28693,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd4_WaterWalk_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_water_breathing
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28714,11 +28714,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd5_WaterBrf_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_water_breathing
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28735,11 +28735,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd5_WaterBrf_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_water_breathing
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28756,11 +28756,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd5_WaterBrf_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_levitation
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28777,11 +28777,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd6_Levitate_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_levitation
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28798,11 +28798,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd6_Levitate_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_telekinesis
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28819,11 +28819,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd7_Tele_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_telekinesis
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28840,11 +28840,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd7_Tele_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_cure_blight
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28861,11 +28861,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd8_Blight_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_cure_blight
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28882,11 +28882,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd8_Blight_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_cure_common
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28903,11 +28903,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd9_Cure_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_cure_common
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28924,11 +28924,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd9_Cure_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_cure_common
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28945,11 +28945,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd9_Cure_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_detect_key
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28966,11 +28966,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd10_DetKey_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_detect_key
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28987,11 +28987,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd10_DetKey_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_cure_poison
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29008,11 +29008,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd11_Poison_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_cure_poison
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29029,11 +29029,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd11_Poison_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_cure_poison
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29050,11 +29050,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd11_Poison_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_feather
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29071,11 +29071,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd12_Feather_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_feather
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29092,11 +29092,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd12_Feather_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_feather
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29113,11 +29113,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd12_Feather_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_fire_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29134,11 +29134,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd13_FireResist_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_fire_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29155,11 +29155,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd13_FireResist_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_restore_personality
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29176,11 +29176,11 @@
         effect_3_attribute: Personality
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd14_RestPers_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_restore_personality
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29197,11 +29197,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Personality
     - SCRI: A1V6_AAdd14_RestPers_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_fortify_magicka
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29218,11 +29218,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd15_FortMagic_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_fortify_magicka
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29239,11 +29239,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd15_FortMagic_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_night-eye
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29260,11 +29260,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd16_NightEye_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_night-eye
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29281,11 +29281,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd16_NightEye_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_detect_creatures
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29302,11 +29302,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd17_DetCreature_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_detect_creatures
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29323,11 +29323,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd17_DetCreature_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_cure_paralyzation
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29344,11 +29344,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd18_Para_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_cure_paralyzation
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29365,11 +29365,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd18_Para_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_detect_enchantment
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29386,11 +29386,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd19_DetEnch_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_dispel
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29407,11 +29407,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd20_Dispel_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_dispel
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29428,11 +29428,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd20_Dispel_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_dispel
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29449,11 +29449,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd20_Dispel_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_fire_shield
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29470,11 +29470,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd21_FireSh_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_fire_shield
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29491,11 +29491,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd21_FireSh_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_fortify_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29512,11 +29512,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd22_FortAgil_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_fortify_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29533,11 +29533,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd22_FortAgil_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_fortify_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29554,11 +29554,11 @@
         effect_3_attribute: Agility
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd22_FortAgil_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_fortify_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29575,11 +29575,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Agility
     - SCRI: A1V6_AAdd22_FortAgil_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_fortify_attack
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29596,11 +29596,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd23_FortAttack_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_fortify_attack
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29617,11 +29617,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd23_FortAttack_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_fortify_endurance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29638,11 +29638,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd24_FortEndur_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_fortify_fatigue
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29659,11 +29659,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd25_FortFatig_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_fortify_fatigue
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29680,11 +29680,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd25_FortFatig_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_fortify_fatigue
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29701,11 +29701,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd25_FortFatig_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_fortify_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29722,11 +29722,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd26_FortHealth_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_fortify_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29743,11 +29743,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd26_FortHealth_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_fortify_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29764,11 +29764,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd26_FortHealth_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_fortify_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29785,11 +29785,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd26_FortHealth_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_fortify_luck
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29806,11 +29806,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Luck
     - SCRI: A1V6_AAdd27_FortLuck_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_fortify_personality
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29827,11 +29827,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd28_FortPers_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_fortify_personality
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29848,11 +29848,11 @@
         effect_3_attribute: Personality
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd28_FortPers_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_fortify_personality
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29869,11 +29869,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Personality
     - SCRI: A1V6_AAdd28_FortPers_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_fortify_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29890,11 +29890,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd29_FortSpeed_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_fortify_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29911,11 +29911,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd29_FortSpeed_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_fortify_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29932,11 +29932,11 @@
         effect_3_attribute: Speed
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd29_FortSpeed_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_fortify_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29953,11 +29953,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Speed
     - SCRI: A1V6_AAdd29_FortSpeed_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_fortify_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29974,11 +29974,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd30_FortStr_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_fortify_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -29995,11 +29995,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd30_FortStr_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_fortify_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30016,11 +30016,11 @@
         effect_3_attribute: Strength
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd30_FortStr_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_fortify_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30037,11 +30037,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Strength
     - SCRI: A1V6_AAdd30_FortStr_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_fortify_willpower
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30058,11 +30058,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd31_FortWill_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_fortify_willpower
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30079,11 +30079,11 @@
         effect_3_attribute: Willpower
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd31_FortWill_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_frost_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30100,11 +30100,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd32_FrostResist_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_frost_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30121,11 +30121,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd32_FrostResist_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_frost_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30142,11 +30142,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd32_FrostResist_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_frost_shield
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30163,11 +30163,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd33_FrostSh_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_frost_shield
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30184,11 +30184,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd33_FrostSh_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_invisibility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30205,11 +30205,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd34_Invis_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_invisibility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30226,11 +30226,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd34_Invis_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_lightning_shield
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30247,11 +30247,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd35_LightSh_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_magicka_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30268,11 +30268,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd36_MagicResist_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_magicka_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30289,11 +30289,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd36_MagicResist_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_poison_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30310,11 +30310,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd37_PoisonResist_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_poison_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30331,11 +30331,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd37_PoisonResist_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_poison_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30352,11 +30352,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd37_PoisonResist_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_reflection
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30373,11 +30373,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd38_Reflect_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_reflection
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30394,11 +30394,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd38_Reflect_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_restore_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30415,11 +30415,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd39_RestoreAgility_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_restore_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30436,11 +30436,11 @@
         effect_3_attribute: Agility
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd39_RestoreAgility_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_restore_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30457,11 +30457,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Agility
     - SCRI: A1V6_AAdd39_RestoreAgility_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_restore_endurance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30478,11 +30478,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd40_RestoreEndur_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_restore_endurance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30499,11 +30499,11 @@
         effect_3_attribute: Endurance
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd40_RestoreEndur_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_restore_endurance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30520,11 +30520,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Endurance
     - SCRI: A1V6_AAdd40_RestoreEndur_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_restore_luck
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30541,11 +30541,11 @@
         effect_3_attribute: Luck
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd41_RestoreLuck_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_restore_luck
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30562,11 +30562,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Luck
     - SCRI: A1V6_AAdd41_RestoreLuck_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_restore_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30583,11 +30583,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd42_RestoreSpeed_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_restore_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30604,11 +30604,11 @@
         effect_3_attribute: Speed
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd42_RestoreSpeed_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_restore_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30625,11 +30625,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Speed
     - SCRI: A1V6_AAdd42_RestoreSpeed_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_restore_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30646,11 +30646,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd43_RestoreStr_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_restore_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30667,11 +30667,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd43_RestoreStr_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_restore_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30688,11 +30688,11 @@
         effect_3_attribute: Strength
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd43_RestoreStr_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_restore_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30709,11 +30709,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Strength
     - SCRI: A1V6_AAdd43_RestoreStr_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_restore_willpower
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30730,11 +30730,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd44_RestoreWill_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_restore_willpower
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30751,11 +30751,11 @@
         effect_3_attribute: Willpower
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd44_RestoreWill_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_restore_willpower
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30772,11 +30772,11 @@
         effect_3_attribute: ~
         effect_4_attribute: Willpower
     - SCRI: A1V6_AAdd44_RestoreWill_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_spell_absorption
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30793,11 +30793,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd45_SpellAbs_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_spell_absorption
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30814,11 +30814,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd45_SpellAbs_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_spell_absorption
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30835,11 +30835,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd45_SpellAbs_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_swift_swim
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30856,11 +30856,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd46_SwitfSwim_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_swift_swim
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30877,11 +30877,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd46_SwitfSwim_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_mark
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30898,11 +30898,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd47_Mark_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_recall
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30919,11 +30919,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd48_Recall_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_disease_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30940,11 +30940,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd49_ResCom_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_disease_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30961,11 +30961,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd49_ResCom_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_disease_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -30982,11 +30982,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd49_ResCom_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_silence
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -31003,11 +31003,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd50_Shield_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_silence
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -31024,11 +31024,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd50_Shield_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_chameleon
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -31045,11 +31045,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd51_Chameleon_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L60_light
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -31066,11 +31066,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd52_Light_60
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_shock_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -31087,11 +31087,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd53_ResShock_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_shock_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -31108,11 +31108,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd53_ResShock_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L15_burden
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -31129,11 +31129,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd54_ResWeap_15
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_burden
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -31150,11 +31150,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd54_ResWeap_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L30_paralyze
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -31171,11 +31171,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd55_ResPara_30
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - INGR:
     - NAME: A1V6_L45_paralyze
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: _Создать
+    - FNAM: " Создать"
     - IRDT:
         weight: 0.0
         value: 0
@@ -31192,7 +31192,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd55_ResPara_45
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - ITEX: "n\\a1_alchemy_new.dds"
 - BOOK:
     - NAME: A1V6_AlchemyPlus_0
     - MODL: "m\\Text_Scroll_01.NIF"

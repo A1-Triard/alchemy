@@ -2738,7 +2738,7 @@
 - INGR:
     - NAME: A1V6_AlchemyActivator
     - MODL: "m\\misc_com_plate_03.nif"
-    - FNAM: _Обновить
+    - FNAM: " Обновить"
     - IRDT:
         weight: 0.0
         value: 0
