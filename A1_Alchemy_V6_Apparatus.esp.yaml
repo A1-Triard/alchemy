@@ -21158,16 +21158,6 @@
         weight: 4.0
         value: 480
     - ITEX: "m\\Tx_retort_03.tga"
-- MISC:
-    - NAME: A1V6_ApparatusItem_3
-    - MODL: "m\\misc_potion_fresh_01.nif"
-    - FNAM: Алхимическая установка
-    - MCDT:
-        weight: 0.0
-        value: 0
-        is_key: false
-    - SCRI: A1V6_ApparatusItem_3_sc
-    - ITEX: "m\\misc_com_bottle_05.dds"
 - APPA:
     - NAME: A1V6_apparatus_a_alembic_e2
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
@@ -21565,6 +21555,13 @@
         value: 480
     - ITEX: "m\\Tx_retort_03.tga"
 - CONT:
+    - NAME: A1V6_ApparatusCont_1
+    - MODL: "m\\misc_potion_fresh_01.nif"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_1_sc
+- CONT:
     - NAME: A1V6_ApparatusCont_2
     - MODL: "m\\misc_potion_fresh_01.nif"
     - FNAM: Алхимическая установка
@@ -21572,22 +21569,12 @@
     - FLAG: ""
     - SCRI: A1V6_ApparatusCont_2_sc
 - CONT:
-    - NAME: A1V6_ApparatusCont_1
+    - NAME: A1V6_ApparatusCont_3
     - MODL: "m\\misc_potion_fresh_01.nif"
     - FNAM: Алхимическая установка
     - CNDT: 10000.0
     - FLAG: ""
-    - SCRI: A1V6_ApparatusCont_1_sc
-- MISC:
-    - NAME: A1V6_ApparatusItem_2
-    - MODL: "m\\misc_potion_fresh_01.nif"
-    - FNAM: Алхимическая установка
-    - MCDT:
-        weight: 0.0
-        value: 0
-        is_key: false
-    - SCRI: A1V6_ApparatusItem_2_sc
-    - ITEX: "m\\misc_com_bottle_05.dds"
+    - SCRI: A1V6_ApparatusCont_3_sc
 - MISC:
     - NAME: A1V6_ApparatusItem_1
     - MODL: "m\\misc_potion_fresh_01.nif"
@@ -21597,14 +21584,27 @@
         value: 0
         is_key: false
     - SCRI: A1V6_ApparatusItem_1_sc
-    - ITEX: "m\\misc_com_bottle_05.dds"
-- CONT:
-    - NAME: A1V6_ApparatusCont_3
+    - ITEX: "m\\a1_alchemy_item.dds"
+- MISC:
+    - NAME: A1V6_ApparatusItem_2
     - MODL: "m\\misc_potion_fresh_01.nif"
     - FNAM: Алхимическая установка
-    - CNDT: 10000.0
-    - FLAG: ""
-    - SCRI: A1V6_ApparatusCont_3_sc
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
+    - SCRI: A1V6_ApparatusItem_2_sc
+    - ITEX: "m\\a1_alchemy_item.dds"
+- MISC:
+    - NAME: A1V6_ApparatusItem_3
+    - MODL: "m\\misc_potion_fresh_01.nif"
+    - FNAM: Алхимическая установка
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
+    - SCRI: A1V6_ApparatusItem_3_sc
+    - ITEX: "m\\a1_alchemy_item.dds"
 - INGR:
     - NAME: A1V6_ApparatusFakeIngred
     - MODL: "n\\ingred_bittergreen_01.nif"
