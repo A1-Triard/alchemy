@@ -46,29 +46,6 @@ negative_effects = [
     'StuntedMagicka',
 ]
 
-neutral_effects = [
-    'Shield',
-    'Jump',
-    'SlowFall',
-    'Chameleon',
-    'Light',
-    'Sanctuary',
-    'AlmsiviIntervention',
-    'FortifySkill',
-    'FortifyMagickaMultiplier',
-    'ResistShock',
-    'ResistBlightDisease',
-    'ResistCorprusDisease',
-    'ResistNormalWeapons',
-    'ResistParalysis',
-    'RemoveCurse',
-    'SummonScamp',
-    'SummonClannfear',
-    'SummonWingedTwilight',
-    'Corpus',
-    'Vampirism',
-]
-
 Potion2 = namedtuple('Potion2', ['id_1_16', 'id_1', 'id_base', 'difficulty'])
 Potion5 = namedtuple('Potion5', ['id_broken_1_8', 'id_cheap_1_8', 'id_standard_1_8', 'id_qualitative_1_8', 'id_exclusive_1_8', 'id_broken_1', 'id_cheap_1', 'id_standard_1', 'id_qualitative_1', 'id_exclusive_1', 'id_base'])
 
@@ -126,6 +103,26 @@ kinds = [
     Kind('Mark', 'Mark', Potion2('p_mark_s_A1_16', 'p_mark_s', 'mark', 40)),
     Kind('Recall', 'Recall', Potion2('p_recall_s_A1_16', 'p_recall_s', 'recall', 80)),
     Kind('ResCom', 'ResistCommonDisease', Potion5('p_disease_resistance_b_A1_8', 'p_disease_resistance_c_A1_8', 'p_disease_resistance_s_A1_8', 'p_disease_resistance_q_A1_8', 'p_disease_resistance_e_A1_8', 'p_disease_resistance_b', 'p_disease_resistance_c', 'p_disease_resistance_s', 'p_disease_resistance_q', 'p_disease_resistance_e', 'disease_resistance')),
+    Kind('Shield', 'Shield', Potion5('p_silence_b_A1_8', 'p_silence_c_A1_8', 'p_silence_s_A1_8', 'p_silence_q_A1_8', 'p_silence_e_A1_8', 'p_silence_b', 'p_silence_c', 'p_silence_s', 'p_silence_q', 'p_silence_e', 'silence')),
+    Kind('Jump', 'Jump', None),
+    Kind('SlowFall', 'SlowFall', None),
+    Kind('Chameleon', 'Chameleon', Potion5('p_chameleon_b_A1_8', 'p_chameleon_c_A1_8', 'p_chameleon_s_A1_8', 'p_chameleon_q_A1_8', 'p_chameleon_e_A1_8', 'p_chameleon_b', 'p_chameleon_c', 'p_chameleon_s', 'p_chameleon_q', 'p_chameleon_e', 'chameleon')),
+    Kind('Light', 'Light', Potion5('p_light_b_A1_8', 'p_light_c_A1_8', 'p_light_s_A1_8', 'p_light_q_A1_8', 'p_light_e_A1_8', 'p_light_b', 'p_light_c', 'p_light_s', 'p_light_q', 'p_light_e', 'light')),
+    Kind('Sanctuary', 'Sanctuary', None),
+    Kind('AInt', 'AlmsiviIntervention', None),
+    Kind('FortMult', 'FortifyMagickaMultiplier', None),
+    Kind('ResShock', 'ResistShock', Potion5('p_shock_resistance_b_A1_8', 'p_shock_resistance_c_A1_8', 'p_shock_resistance_s_A1_8', 'p_shock_resistance_q_A1_8', 'p_shock_resistance_e_A1_8', 'p_shock_resistance_b', 'p_shock_resistance_c', 'p_shock_resistance_s', 'p_shock_resistance_q', 'p_shock_resistance_e', 'shock_resistance')),
+    Kind('ResBlight', 'ResistBlightDisease', None),
+    Kind('ResCorpr', 'ResistCorprusDisease', None),
+    Kind('ResWeap', 'ResistNormalWeapons', Potion5('p_burden_b_A1_8', 'p_burden_c_A1_8', 'p_burden_s_A1_8', 'p_burden_q_A1_8', 'p_burden_e_A1_8', 'p_burden_b', 'p_burden_c', 'p_burden_s', 'p_burden_q', 'p_burden_e', 'burden')),
+    Kind('ResPara', 'ResistParalysis', Potion5('p_paralyze_b_A1_8', 'p_paralyze_c_A1_8', 'p_paralyze_s_A1_8', 'p_paralyze_q_A1_8', 'p_paralyze_e_A1_8', 'p_paralyze_b', 'p_paralyze_c', 'p_paralyze_s', 'p_paralyze_q', 'p_paralyze_e', 'paralyze')),
+    Kind('Uncurse', 'RemoveCurse', None),
+    Kind('Scamp', 'SummonScamp', None),
+    Kind('Clfear', 'SummonClannfear', None),
+    Kind('WingTw', 'SummonWingedTwilight', None),
+    Kind('Corpus', 'Corpus', None),
+    Kind('Vampir', 'Vampirism', None),
+    Kind('Skill', ('FortifySkill', None), None),
 ]
 
 positive_effects = list(map(lambda x: x.effect if isinstance(x.effect, str) else x.effect[0], kinds))
@@ -134,8 +131,6 @@ def effect_value(effect):
     effect = effect if isinstance(effect, str) else effect[0]
     if effect in negative_effects:
         return -1
-    if effect in neutral_effects:
-        return 0
     if effect in positive_effects:
         return 1
     print('unknown effect ' + str(effect))
@@ -826,6 +821,9 @@ def gen_effect_prop(irdt, value, suffix, level):
     irdt['effect_' + str(level // 15) + suffix] = str(value)
 
 def gen_add_item(kind, index, level):
+    if kind.potion is None:
+        print(kind.name + ' does not have potion')
+        sys.exit(1)
     add_name = 'A1V6_AAdd' + str(index) + '_' + kind.name + '_' + str(level)
     irdt = {
         'weight': 0.0,
@@ -1019,8 +1017,8 @@ def main():
     copytree('Screenshots', 'ar/Screenshots')
     copyfile('A1_Alchemy_Potions.esp.yaml', mfr + 'alchemy_potions.esp.yaml')
     assembly_plugin(mfr + 'alchemy_potions.esp', 2014, 8, 3, 18, 53, 0)
-    gen_plugin('std', mfr, 2014, 8, 10, 18, 53, 0)
     gen_plugin('eva', mfr, 2097, 9, 1, 0, 0, 0)
+    gen_plugin('std', mfr, 2014, 8, 10, 18, 53, 0)
     remove(mfr + 'alchemy_potions.esp')
     copyfile('A1_Alchemy_V6_Apparatus.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus.esp.yaml')
     copyfile('A1_Alchemy_V6_Apparatus_EVA.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus_EVA.esp.yaml')

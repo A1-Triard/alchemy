@@ -5,13 +5,49 @@
         author: A1
         description:
           - Модифицирует некоторые существующие и добавляет новые зелья. Вспомогательный плагин для A1_Alchemy_V6_Apparatus.esp
-        records: 284
+        records: 319
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
     - DATA: 6616539
     - MAST: Bloodmoon.esm
     - DATA: 11799703
+- ALCH:
+    - NAME: p_burden_s
+    - MODL: "m\\Misc_Potion_Standard_01.NIF"
+    - TEXT: "m\\Tx_potion_standard_01.tga"
+    - FNAM: Станд. зелье даэдра
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_paralyze_s
+    - MODL: "m\\Misc_Potion_Standard_01.nif"
+    - TEXT: "m\\Tx_potion_standard_01.tga"
+    - FNAM: Станд. сопротивление параличу
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
 - ALCH:
     - NAME: p_restore_personality_s
     - MODL: "m\\Misc_Potion_Standard_01.nif"
@@ -30,6 +66,240 @@
         duration: 0
         magnitude_min: 10
         magnitude_max: 10
+- ALCH:
+    - NAME: p_silence_s
+    - MODL: "m\\Misc_Potion_Standard_01.nif"
+    - TEXT: "m\\Tx_potion_standard_01.tga"
+    - FNAM: Стандартное зелье щита
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_burden_c
+    - MODL: "m\\Misc_Potion_Cheap_01.nif"
+    - TEXT: "m\\Tx_potion_cheap_01.tga"
+    - FNAM: Деш. зелье даэдра
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_burden_b
+    - MODL: "m\\Misc_Potion_Bargain_01.nif"
+    - TEXT: "m\\Tx_potion_bargain_01.tga"
+    - FNAM: Уцен. зелье даэдра
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_burden_q
+    - MODL: "m\\Misc_Potion_Quality_01.nif"
+    - TEXT: "m\\Tx_potion_quality_01.tga"
+    - FNAM: Качеств. зелье даэдра
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_burden_e
+    - MODL: "m\\Misc_Potion_Exclusive_01.nif"
+    - TEXT: "m\\Tx_potion_exclusive_01.tga"
+    - FNAM: Экскл. зелье даэдра
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 60
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_paralyze_c
+    - MODL: "m\\Misc_Potion_Cheap_01.nif"
+    - TEXT: "m\\Tx_potion_cheap_01.tga"
+    - FNAM: Дешевое сопротивление параличу
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_paralyze_b
+    - MODL: "m\\Misc_Potion_Bargain_01.nif"
+    - TEXT: "m\\Tx_potion_bargain_01.tga"
+    - FNAM: Уцененное сопротивл. параличу
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_paralyze_e
+    - MODL: "m\\Misc_Potion_Exclusive_01.nif"
+    - TEXT: "m\\Tx_potion_exclusive_01.tga"
+    - FNAM: Экскл. сопротивление параличу
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 60
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_paralyze_q
+    - MODL: "m\\Misc_Potion_Quality_01.nif"
+    - TEXT: "m\\Tx_potion_quality_01.tga"
+    - FNAM: Качественное сопрот. параличу
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_silence_c
+    - MODL: "m\\Misc_Potion_Cheap_01.nif"
+    - TEXT: "m\\Tx_potion_cheap_01.tga"
+    - FNAM: Дешевое зелье щита
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_silence_b
+    - MODL: "m\\Misc_Potion_Bargain_01.nif"
+    - TEXT: "m\\Tx_potion_bargain_01.tga"
+    - FNAM: Уцененное зелье щита
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_silence_q
+    - MODL: "m\\Misc_Potion_Quality_01.nif"
+    - TEXT: "m\\Tx_potion_quality_01.tga"
+    - FNAM: Качественное зелье щита
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_silence_e
+    - MODL: "m\\Misc_Potion_Exclusive_01.nif"
+    - TEXT: "m\\Tx_potion_exclusive_01.tga"
+    - FNAM: Эксклюзивное зелье щита
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 60
+        magnitude_min: 20
+        magnitude_max: 20
 - ALCH:
     - NAME: p_detect_creatures_s
     - MODL: "m\\misc_potion_standard_01.nif"
@@ -5063,6 +5333,366 @@
         auto_calculate_value: false
     - ENAM:
         index: ResistCommonDisease
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_light_b_A1_8
+    - MODL: "m\\Misc_Potion_Bargain_01.nif"
+    - TEXT: "m\\Tx_potion_bargain_01.tga"
+    - FNAM: 1/8 Уцененное зелье света
+    - ALDT:
+        weight: 0.23999999463558198
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: Light
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_light_c_A1_8
+    - MODL: "m\\Misc_Potion_Cheap_01.nif"
+    - TEXT: "m\\Tx_potion_cheap_01.tga"
+    - FNAM: 1/8 Дешевое зелье света
+    - ALDT:
+        weight: 0.18000000715255738
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: Light
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_light_e_A1_8
+    - MODL: "m\\Misc_Potion_Exclusive_01.nif"
+    - TEXT: "m\\Tx_potion_exclusive_01.tga"
+    - FNAM: 1/8 Эксклюзивное зелье света
+    - ALDT:
+        weight: 0.09000000357627869
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: Light
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_light_q_A1_8
+    - MODL: "m\\Misc_Potion_Quality_01.nif"
+    - TEXT: "m\\Tx_potion_quality_01.tga"
+    - FNAM: 1/8 Качественное зелье света
+    - ALDT:
+        weight: 0.11999999731779099
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: Light
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_light_s_A1_8
+    - MODL: "m\\Misc_Potion_Standard_01.nif"
+    - TEXT: "m\\Tx_potion_standard_01.tga"
+    - FNAM: 1/8 Станд. зелье света
+    - ALDT:
+        weight: 0.15000000596046449
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: Light
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_paralyze_b_A1_8
+    - MODL: "m\\Misc_Potion_Bargain_01.nif"
+    - TEXT: "m\\Tx_potion_bargain_01.tga"
+    - FNAM: 1/8 Уцен. сопротивл. параличу
+    - ALDT:
+        weight: 0.23999999463558198
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_paralyze_c_A1_8
+    - MODL: "m\\Misc_Potion_Cheap_01.nif"
+    - TEXT: "m\\Tx_potion_cheap_01.tga"
+    - FNAM: 1/8 Дешевое сопротивл. параличу
+    - ALDT:
+        weight: 0.18000000715255738
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_paralyze_e_A1_8
+    - MODL: "m\\Misc_Potion_Exclusive_01.nif"
+    - TEXT: "m\\Tx_potion_exclusive_01.tga"
+    - FNAM: 1/8 Экскл. сопротивл. параличу
+    - ALDT:
+        weight: 0.09000000357627869
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_paralyze_q_A1_8
+    - MODL: "m\\Misc_Potion_Quality_01.nif"
+    - TEXT: "m\\Tx_potion_quality_01.tga"
+    - FNAM: 1/8 Качеств. сопрот. параличу
+    - ALDT:
+        weight: 0.11999999731779099
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_paralyze_s_A1_8
+    - MODL: "m\\Misc_Potion_Standard_01.nif"
+    - TEXT: "m\\Tx_potion_standard_01.tga"
+    - FNAM: 1/8 Станд. сопротивл. параличу
+    - ALDT:
+        weight: 0.15000000596046449
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_silence_b_A1_8
+    - MODL: "m\\Misc_Potion_Bargain_01.nif"
+    - TEXT: "m\\Tx_potion_bargain_01.tga"
+    - FNAM: 1/8 Уцененное зелье щита
+    - ALDT:
+        weight: 0.23999999463558198
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_silence_c_A1_8
+    - MODL: "m\\Misc_Potion_Cheap_01.nif"
+    - TEXT: "m\\Tx_potion_cheap_01.tga"
+    - FNAM: 1/8 Дешевое зелье щита
+    - ALDT:
+        weight: 0.18000000715255738
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_silence_e_A1_8
+    - MODL: "m\\Misc_Potion_Exclusive_01.nif"
+    - TEXT: "m\\Tx_potion_exclusive_01.tga"
+    - FNAM: 1/8 Эксклюзивное зелье щита
+    - ALDT:
+        weight: 0.09000000357627869
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_silence_q_A1_8
+    - MODL: "m\\Misc_Potion_Quality_01.nif"
+    - TEXT: "m\\Tx_potion_quality_01.tga"
+    - FNAM: 1/8 Качественное зелье щита
+    - ALDT:
+        weight: 0.11999999731779099
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_silence_s_A1_8
+    - MODL: "m\\Misc_Potion_Standard_01.nif"
+    - TEXT: "m\\Tx_potion_standard_01.tga"
+    - FNAM: 1/8 Стандартное зелье щита
+    - ALDT:
+        weight: 0.15000000596046449
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_burden_b_A1_8
+    - MODL: "m\\Misc_Potion_Bargain_01.nif"
+    - TEXT: "m\\Tx_potion_bargain_01.tga"
+    - FNAM: 1/8 Уцен. зелье даэдра
+    - ALDT:
+        weight: 0.23999999463558198
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_burden_c_A1_8
+    - MODL: "m\\Misc_Potion_Cheap_01.nif"
+    - TEXT: "m\\Tx_potion_cheap_01.tga"
+    - FNAM: 1/8 Деш. зелье даэдра
+    - ALDT:
+        weight: 0.18000000715255738
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_burden_e_A1_8
+    - MODL: "m\\Misc_Potion_Exclusive_01.nif"
+    - TEXT: "m\\Tx_potion_exclusive_01.tga"
+    - FNAM: 1/8 Экскл. зелье даэдра
+    - ALDT:
+        weight: 0.09000000357627869
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_burden_q_A1_8
+    - MODL: "m\\Misc_Potion_Quality_01.nif"
+    - TEXT: "m\\Tx_potion_quality_01.tga"
+    - FNAM: 1/8 Качеств. зелье даэдра
+    - ALDT:
+        weight: 0.11999999731779099
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 0
+        magnitude_min: 0
+        magnitude_max: 0
+- ALCH:
+    - NAME: p_burden_s_A1_8
+    - MODL: "m\\Misc_Potion_Standard_01.NIF"
+    - TEXT: "m\\Tx_potion_standard_01.tga"
+    - FNAM: 1/8 Станд. зелье даэдра
+    - ALDT:
+        weight: 0.15000000596046449
+        value: 0
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
         skill: ~
         attribute: ~
         range: Self

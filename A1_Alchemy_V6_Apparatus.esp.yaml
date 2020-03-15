@@ -6,7 +6,7 @@
         description:
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - Версия для использования без EVA.esp
-        records: 497
+        records: 511
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -7429,6 +7429,146 @@
         - End
 - SCPT:
     - SCHD:
+        name: A1V6_AAdd48_Light_60
+        vars:
+          shorts: 5
+          longs: 0
+          floats: 0
+        data_size: 624
+        var_table_size: 35
+    - SCVR:
+        - in
+        - add
+        - state
+        - PCSkipEquip
+        - OnPCEquip
+    - SCDT: eJx9kk9Pg0AQxZltt0LiAZOmF2scExOvQNR4qUnTgxfPprcN0k0hwqJAD/2gfhwTZ1mka/rnQCbLzO895i0c6qHDMBzB0MN64OBshhGHYjIP3x7FfJHK5OP+Sbxm67QRdVKDHr70x6adJ6kstu0QNTmQAMPgFjyw9UgcEJdXPhaGW8R50rEPxOmZoIMjDww+JZwbnFpc61JlXdWfEZzD6DOPt7Ii/Wtc/vhYjjO1ruRK6CfPyEGJIMTnngl7xgW4M8y0Y97zslyJTKkykaoRG5V9baTFRu1WLtJBv7Xc2Y1RmvRKMQUSqyaV1c6f/fP/9o9Mg+O1AXAKgPX5ea2tPlgKB7cF5wzAGjq53p/ZYGfWXQTVw7dVuzoLDi8Xe12iyPvI36GNAH4BMYCWtA==
+    - SCTX:
+        - Begin A1V6_AAdd48_Light_60
+        - ""
+        - short in
+        - short add
+        - short state
+        - ""
+        - short PCSkipEquip
+        - short OnPCEquip
+        - ""
+        - set PCSkipEquip to 1
+        - ""
+        - if ( state == 2 )
+        - "\tset A1V6_ACheck48_Light_sc.AddPotion to 1"
+        - "\tStartScript A1V6_AlchemyCheck_sc"
+        - "\tset state to 0"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( state == 1 )
+        - "\tif ( ScriptRunning A1V6_CalcAlchemy5_sc == 0 )"
+        - "\t\tset state to 2"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( OnPCEquip == 1 )
+        - set OnPCEquip to 0
+        - ""
+        - set add to 0
+        - set in to 0
+        - ""
+        - "if ( player->GetItemCount \"ingred_red_lichen_01\" > 0 )"
+        - "\tset in to 1"
+        - "elseif ( player->GetItemCount \"ingred_blood_innocent_unique\" > 0 )"
+        - "\tset in to 2"
+        - endif
+        - if ( in > 0 )
+        - "\tif ( player->GetItemCount \"ingred_black_anther_01\" > 0 )"
+        - "\t\tset add to 1"
+        - "\t\tplayer->RemoveItem \"ingred_black_anther_01\", 1"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( add == 1 )
+        - "\tif ( in == 1 )"
+        - "\t\tplayer->RemoveItem \"ingred_red_lichen_01\", 1"
+        - "\telse"
+        - "\t\tplayer->RemoveItem \"ingred_blood_innocent_unique\", 1"
+        - "\tendif"
+        - endif
+        - if ( add == 1 )
+        - "\tset state to 1"
+        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
+        - "\tset A1V6_CalcAlchemy5 to 1"
+        - else
+        - "\tStartScript A1V6_AlchemyCheck_sc"
+        - endif
+        - ""
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_AAdd49_ResShock_45
+        vars:
+          shorts: 4
+          longs: 0
+          floats: 0
+        data_size: 458
+        var_table_size: 32
+    - SCVR:
+        - add
+        - state
+        - PCSkipEquip
+        - OnPCEquip
+    - SCDT: eJx1kM1Kw0AUhXOSTDTgYkRdiCh34QMkRQUXFUoX7hWku2EcByNNbMl00wf1cYTe6YTSn3Q1i/t95865Ai6JYiozpDm5OKLhkAYCzfWo/HhSo3FlzfThWb1Z917NzFQ54+D5G3kZiNpUtlmuOR4KcEZMxT1ybEdyPogmt5Ka4I11bTr3kT3PFJ08yBF0yXoadB6lPpdfv744Qzav9dK2GcQdTf4lzS5+fr9b+6VMqz9VY/VCFSW97KAJBfSqQx2zc2YXut6H/2RfHqItoD8FUffHMl+XSLgENiV8P377j+BOfXuB1/ODKVsnwJGj+0XACjD5brc=
+    - SCTX:
+        - Begin A1V6_AAdd49_ResShock_45
+        - ""
+        - short add
+        - short state
+        - ""
+        - short PCSkipEquip
+        - short OnPCEquip
+        - ""
+        - set PCSkipEquip to 1
+        - ""
+        - if ( state == 2 )
+        - "\tset A1V6_ACheck49_ResShock_sc.AddPotion to 1"
+        - "\tStartScript A1V6_AlchemyCheck_sc"
+        - "\tset state to 0"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( state == 1 )
+        - "\tif ( ScriptRunning A1V6_CalcAlchemy5_sc == 0 )"
+        - "\t\tset state to 2"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( OnPCEquip == 1 )
+        - set OnPCEquip to 0
+        - ""
+        - set add to 0
+        - "if ( player->GetItemCount \"ingred_crab_meat_01\" > 0 )"
+        - "\tif ( player->GetItemCount \"ingred_scrap_metal_01\" > 0 )"
+        - "\t\tplayer->RemoveItem \"ingred_crab_meat_01\", 1"
+        - "\t\tplayer->RemoveItem \"ingred_scrap_metal_01\", 1"
+        - "\t\tset add to 1"
+        - "\tendif"
+        - endif
+        - if ( add == 1 )
+        - "\tset state to 1"
+        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
+        - "\tset A1V6_CalcAlchemy5 to 1"
+        - else
+        - "\tStartScript A1V6_AlchemyCheck_sc"
+        - endif
+        - ""
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
         name: A1V6_AAdd4_WaterWalk_15
         vars:
           shorts: 4
@@ -7652,6 +7792,154 @@
         - "\t\tplayer->RemoveItem \"ingred_kwama_cuttle_01\", 1"
         - "\telse"
         - "\t\tplayer->RemoveItem \"ingred_scales_01\", 1"
+        - "\tendif"
+        - endif
+        - if ( add == 1 )
+        - "\tset state to 1"
+        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
+        - "\tset A1V6_CalcAlchemy5 to 1"
+        - else
+        - "\tStartScript A1V6_AlchemyCheck_sc"
+        - endif
+        - ""
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_AAdd50_ResPara_30
+        vars:
+          shorts: 4
+          longs: 0
+          floats: 0
+        data_size: 471
+        var_table_size: 32
+    - SCVR:
+        - add
+        - state
+        - PCSkipEquip
+        - OnPCEquip
+    - SCDT: eJx1kU1LxDAQhjttUy14iCC4IMKgXhfShfW2wrIH8SYeZG8hjcEuJltp9NAf6s8RnGyKrB89zWGe553MhIHPkhSrAvISfZrgYoEzBm6yrB6v5XLVGP0yF/LB+HvVKem1h4Cf8ZMIWN0Y1+8wajKgiBTFFZSwn0jxgLg+5+iit1JWD+6cvMCIQZ6VEHVOeh51auUhl2oYL46geLWqN10B7BLXnxzbyd32uTNPsmm7rbQb28v63dZSVHjzg88uIn868G8b59VUt85M6/43/sFHYyHZo8bCIBleXJW7lTJaCb5XCttS/f8k/jDcgsHt8Z8uWQcAI18QBgF8AZ4LcxM=
+    - SCTX:
+        - Begin A1V6_AAdd50_ResPara_30
+        - ""
+        - short add
+        - short state
+        - ""
+        - short PCSkipEquip
+        - short OnPCEquip
+        - ""
+        - set PCSkipEquip to 1
+        - ""
+        - if ( state == 2 )
+        - "\tset A1V6_ACheck50_ResPara_sc.AddPotion to 1"
+        - "\tStartScript A1V6_AlchemyCheck_sc"
+        - "\tset state to 0"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( state == 1 )
+        - "\tif ( ScriptRunning A1V6_CalcAlchemy5_sc == 0 )"
+        - "\t\tset state to 2"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( OnPCEquip == 1 )
+        - set OnPCEquip to 0
+        - ""
+        - set add to 0
+        - "if ( player->GetItemCount \"Ingred_horn_lily_bulb_01\" > 0 )"
+        - "\tif ( player->GetItemCount \"Ingred_timsa-come-by_01\" > 0 )"
+        - "\t\tplayer->RemoveItem \"Ingred_horn_lily_bulb_01\", 1"
+        - "\t\tplayer->RemoveItem \"Ingred_timsa-come-by_01\", 1"
+        - "\t\tset add to 1"
+        - "\tendif"
+        - endif
+        - if ( add == 1 )
+        - "\tset state to 1"
+        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
+        - "\tset A1V6_CalcAlchemy5 to 1"
+        - else
+        - "\tStartScript A1V6_AlchemyCheck_sc"
+        - endif
+        - ""
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_AAdd50_ResPara_45
+        vars:
+          shorts: 5
+          longs: 0
+          floats: 0
+        data_size: 697
+        var_table_size: 35
+    - SCVR:
+        - in
+        - add
+        - state
+        - PCSkipEquip
+        - OnPCEquip
+    - SCDT: eJyNkkFLw0AQhTNpNzbgIaJgQZRFey0khXqrUHoQb+JBeluSuJjipgnZFskP9ecIzmSXNGgDnoYw8703bycM9NBxeeTB0Od64PDFgs8Y5ONl9HovlqtMph/zULxI/RxXsdCpBhq/Ci7MgEozmdfNGDYZoITLwwn40FVEeeB8fR3w3HCrWKWWnSNHM6GFZz4YfII4Mzi2GOlidW2lNcJT8EoV17JC/Tu+/g54MX7avlfyTWRFtRVqo2qR7FUiwog/tFzkQ4f0bg15acndJtfxNC1yOU1qC3rgjjiyVoSWiFqJr6APBecEwJpiLkrlYSq3SYWiw1a0s497Y/Y5t6L6U8pduVflIcRv/2Oj4JAhWbLWku7gN5b00RHofbUmwb+SGq/BwcveE+vxo+sRvQqDx7M/XaTQtucnIyOAH58Xohk=
+    - SCTX:
+        - Begin A1V6_AAdd50_ResPara_45
+        - ""
+        - short in
+        - short add
+        - short state
+        - ""
+        - short PCSkipEquip
+        - short OnPCEquip
+        - ""
+        - set PCSkipEquip to 1
+        - ""
+        - if ( state == 2 )
+        - "\tset A1V6_ACheck50_ResPara_sc.AddPotion to 1"
+        - "\tStartScript A1V6_AlchemyCheck_sc"
+        - "\tset state to 0"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( state == 1 )
+        - "\tif ( ScriptRunning A1V6_CalcAlchemy5_sc == 0 )"
+        - "\t\tset state to 2"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( OnPCEquip == 1 )
+        - set OnPCEquip to 0
+        - ""
+        - set add to 0
+        - set in to 0
+        - ""
+        - "if ( player->GetItemCount \"Ingred_horn_lily_bulb_01\" > 0 )"
+        - "\tset in to 1"
+        - endif
+        - "if ( player->GetItemCount \"Ingred_timsa-come-by_01\" > 0 )"
+        - "\tif ( in > 0 )"
+        - "\t\tset add to 1"
+        - "\t\tplayer->RemoveItem \"Ingred_timsa-come-by_01\", 1"
+        - "\telse"
+        - "\t\tset in to 2"
+        - "\tendif"
+        - endif
+        - if ( add == 0 )
+        - "\tif ( in > 0 )"
+        - "\t\tif ( player->GetItemCount \"Ingred_sweetpulp_01\" > 0 )"
+        - "\t\t\tset add to 1"
+        - "\t\t\tplayer->RemoveItem \"Ingred_sweetpulp_01\", 1"
+        - "\t\tendif"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( add == 1 )
+        - "\tif ( in == 1 )"
+        - "\t\tplayer->RemoveItem \"Ingred_horn_lily_bulb_01\", 1"
+        - "\telse"
+        - "\t\tplayer->RemoveItem \"Ingred_timsa-come-by_01\", 1"
         - "\tendif"
         - endif
         - if ( add == 1 )
@@ -15285,13 +15573,13 @@
           shorts: 3
           longs: 0
           floats: 0
-        data_size: 4247
+        data_size: 4124
         var_table_size: 20
     - SCVR:
         - AddPotion
         - in45
         - in60
-    - SCDT: eJyV1s1u00AUBWBPQkMCFTUSaiXSxbCBRTdxSdNuGilYVjcsMBaI3cid3DZWHTvOJKryfLwCvAAPkAV7JPyHSRpf93qTSPHcM0f259gt9qXDFdP45SU3Woy94lf7I+PrQHwKF14YfEh/32etme+uYP5D787E2FPgKhBzUJ5auIEEcS1GhrhgWrs84JQY0MAC3hMDmlhAnxjwBAs4IwbsYQEDYkALCzgnBjzFAi6IAW2tw3YlmDQJEpVg0iRIVIJJkyBRCSZNgkQlmDQJEpVg0iRIVIJJkyBRCSZNgqyQ4NAkKFSCQ5OgUAkOTYJCJTg0CQqV4NAkKFSCQ5OgUAkOTYJCJTg0CapCgk2TEKESbJqECJVg0yREqASbJiFCJdg0CREqwaZJiFAJNk1ChEqwaRKiCgkWTQKgEiyaBEAlWDQJgEqwaBIAlWDRJAAqwaJJAFSCRZMAqASLJgEKCR22x+K3xwbvFUMt1njHv/3RediteMngw+2NDsvXMq1Y81OvykvKkCvIGhUkoYKsX0HVqKAIFVT9ClGNChGhQlS/AtSoAIQKUFaB/auQQv/YPyuZ3P77iuMr1m70aD8MH/To4aVrmZbeUo3kloq/mw9uLfYm2+7QC27nMBZ37m24XHhi4o1B9Aw+TKeSaWOz5Nu8ZD6lgvD+PvRvxAz8hVgGXrSEYrTN4w9u8JNHAq7BndMDulmAngcUw7Wmis67U9tX/HU2d5DPzeLd/P+nJzmpRuVAcj2CzYF4n2bJPsfZ2Mt8zFUTsXKnmxdio2Aa9CwNSn47ieezo8PtJ2clvXY61ESGUFLH+lG6YmROQN71z8VnUGY4FUrGLY741UF21JcTmK7iYwnZnqa3tO/r3+tfay3ZF1lmNPQXs/TpwdVSSlAKX3va0J/na29cz0/Oyc66GDxjfwF7BfM8
+    - SCDT: eJyV1jFv2kAYBmAOGgpVpLpSRaWS4bq0QxbcEsISJGpZXTLUtVp1OznHFawQm+NAUf5n+3Mq1TbUMYk/5/UCkn3fe6/sx+A2+97lhjX4xQW324y95l+Op/aPkfgab8I4+pwdP2bt1TK4U+vfVn8lZqFRgVFirUxoNkEklbgSU1uMWaNTHvARDGhSAZ/AgBYVMAQDnlEBZ2DAERUwAgPaVMA5GPCcChiDAZ1Glz2W4GASJCnBwSRIUoKDSZCkBAeTIEkJDiZBkhIcTIIkJTiYBElKcDAJskKCj0kwpAQfk2BICT4mwZASfEyCISX4mARDSvAxCYaU4GMSDCnBxySYCgkeJkGTEjxMgiYleJgETUrwMAmalOBhEjQpwcMkaFKCh0nQpAQPk6ArJLiYBEVKcDEJipTgYhIUKcHFJChSgotJUKQEF5OgSAkuJkGRElxMgsoldNkRS94em3yQD7VZ8wP/+dficb/iJYNPDjfqla9ljXzNH6sqLy0DV5A1KkiggqxfwdSoYIAKpn4FXaOCBiro+hVUjQoKqKDKKrD/FTLol8OzksnDn68kvmJtoUfnYfhogIeXrmWN7JFqpo9U8t168Gixd7vtemE0X6uZuA7m8XYTikU4U2Jg80k2lU7bxZLv9yX3UyaKb2/j5S+xUsuN2Eah3qp8tMOTD27z0ycCrlSwxgP6uwBrH5AP15rKOz+eOrzjb3dzL/dzq2S35f3lSS+qXTmQ3o+oOJDs0yrZ52Q39mo/FpiFuAtuijeiUDALepEFpcdOk/nd2cnhP2clvU421CKGSFIn1ptsxdRZKHk9PBfflHHiG2Fk3+oVz4zFZThfbJITjP0DrvTQ0g==
     - SCTX:
         - Begin A1V6_ACheck47_ResCom_sc
         - ""
@@ -15449,14 +15737,308 @@
         - endif
         - ""
         - StopScript A1V6_ACheck47_ResCom_sc
-        - if ( A1V6_AlchemyRes == 0 )
-        - "\tMessageBox \"Готово\""
-        - elseif ( A1V6_AlchemyRes == 1 )
-        - "\tPlaySound \"potion success\""
-        - elseif ( A1V6_AlchemyRes == 2 )
-        - "\tPlaySound \"potion fail\""
+        - StartScript A1V6_ACheck48_Light_sc
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ACheck48_Light_sc
+        vars:
+          shorts: 3
+          longs: 0
+          floats: 0
+        data_size: 2947
+        var_table_size: 20
+    - SCVR:
+        - AddPotion
+        - in30
+        - in60
+    - SCDT: eJyN1k9v0zAYBvC4ZaFF05TDNAmYhDlx2KWBUcphlYoVcdmBYIG4Wd27V0u0Kpnr7sD3hI8zafmzZcuWJ+qhqRrneezo57bxxa+xdMKTJycy9IXYl993F+HvqfmRb9I8+1ad3xX+1Wr5l9f/gr0rs0ovko05M4vQzIQ36s58xJkBynzCmSHKHOPMC5T5jDM7KDPFGR9lvuDMS5SZ4czIG4vnQgoKERRSUIigkIJCBIUUFCIopKAQQSEFhQgKKShEUEhBIeoR0lDIQSENhRwU0lDIQSENhRwU0lDIQSENhRwU0lDIQSENhVyPUAyFLBSKoZCFQjEUslAohkIWCsVQyEKhGApZKBRDIQuFYihke4QiKMRQKIJCDIUiKMRQKIJCDIUiKMRQKIJCDIUiKMRQKIJC3AiNxY4onhoGctJc54vBG/nnJpD5Xvt/S87bdeNmWHjN6f/Bk1Q5S1839XdTdzdt1e36u113t9uq2/Z32+5uu1U393dzdzd3dYv77mpjnE4n9cXtr2FR0h4WXrUxBuXGKN6HTzaIeFeX7qfZxZrPTflapZRwZiahnFeZMvswQ7E7P9SZw7vM2SrPz02aZTlxtjHXWWqvucmOZHGQoTxq38z7uuOg6VjSpVlmm4TXDzOXqw2r9Q+9V7I4VF1HRXxUfZq3f4Ce3/lhcFCdXKiE6fJ4Zk7rfUFvg9ePB76an+x0khdrcCTELdkeJbY=
+    - SCTX:
+        - Begin A1V6_ACheck48_Light_sc
+        - ""
+        - short AddPotion
+        - short in30
+        - short in60
+        - ""
+        - if ( AddPotion == 1 )
+        - "\tif ( A1V6_PotionB == 1 )"
+        - "\t\tplayer->AddItem p_light_b_A1_8, 1"
+        - "\telseif ( A1V6_PotionB == 2 )"
+        - "\t\tplayer->AddItem p_light_b_A1_8, 2"
+        - "\telseif ( A1V6_PotionB == 3 )"
+        - "\t\tplayer->AddItem p_light_b_A1_8, 3"
+        - "\telseif ( A1V6_PotionB == 4 )"
+        - "\t\tplayer->AddItem p_light_b_A1_8, 4"
+        - "\telseif ( A1V6_PotionB == 5 )"
+        - "\t\tplayer->AddItem p_light_b_A1_8, 5"
+        - "\telseif ( A1V6_PotionB == 6 )"
+        - "\t\tplayer->AddItem p_light_b_A1_8, 6"
+        - "\telseif ( A1V6_PotionB == 7 )"
+        - "\t\tplayer->AddItem p_light_b_A1_8, 7"
+        - "\telseif ( A1V6_PotionB == 8 )"
+        - "\t\tplayer->AddItem p_light_b_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionC == 1 )"
+        - "\t\tplayer->AddItem p_light_c_A1_8, 1"
+        - "\telseif ( A1V6_PotionC == 2 )"
+        - "\t\tplayer->AddItem p_light_c_A1_8, 2"
+        - "\telseif ( A1V6_PotionC == 3 )"
+        - "\t\tplayer->AddItem p_light_c_A1_8, 3"
+        - "\telseif ( A1V6_PotionC == 4 )"
+        - "\t\tplayer->AddItem p_light_c_A1_8, 4"
+        - "\telseif ( A1V6_PotionC == 5 )"
+        - "\t\tplayer->AddItem p_light_c_A1_8, 5"
+        - "\telseif ( A1V6_PotionC == 6 )"
+        - "\t\tplayer->AddItem p_light_c_A1_8, 6"
+        - "\telseif ( A1V6_PotionC == 7 )"
+        - "\t\tplayer->AddItem p_light_c_A1_8, 7"
+        - "\telseif ( A1V6_PotionC == 8 )"
+        - "\t\tplayer->AddItem p_light_c_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionS == 1 )"
+        - "\t\tplayer->AddItem p_light_s_A1_8, 1"
+        - "\telseif ( A1V6_PotionS == 2 )"
+        - "\t\tplayer->AddItem p_light_s_A1_8, 2"
+        - "\telseif ( A1V6_PotionS == 3 )"
+        - "\t\tplayer->AddItem p_light_s_A1_8, 3"
+        - "\telseif ( A1V6_PotionS == 4 )"
+        - "\t\tplayer->AddItem p_light_s_A1_8, 4"
+        - "\telseif ( A1V6_PotionS == 5 )"
+        - "\t\tplayer->AddItem p_light_s_A1_8, 5"
+        - "\telseif ( A1V6_PotionS == 6 )"
+        - "\t\tplayer->AddItem p_light_s_A1_8, 6"
+        - "\telseif ( A1V6_PotionS == 7 )"
+        - "\t\tplayer->AddItem p_light_s_A1_8, 7"
+        - "\telseif ( A1V6_PotionS == 8 )"
+        - "\t\tplayer->AddItem p_light_s_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionQ == 1 )"
+        - "\t\tplayer->AddItem p_light_q_A1_8, 1"
+        - "\telseif ( A1V6_PotionQ == 2 )"
+        - "\t\tplayer->AddItem p_light_q_A1_8, 2"
+        - "\telseif ( A1V6_PotionQ == 3 )"
+        - "\t\tplayer->AddItem p_light_q_A1_8, 3"
+        - "\telseif ( A1V6_PotionQ == 4 )"
+        - "\t\tplayer->AddItem p_light_q_A1_8, 4"
+        - "\telseif ( A1V6_PotionQ == 5 )"
+        - "\t\tplayer->AddItem p_light_q_A1_8, 5"
+        - "\telseif ( A1V6_PotionQ == 6 )"
+        - "\t\tplayer->AddItem p_light_q_A1_8, 6"
+        - "\telseif ( A1V6_PotionQ == 7 )"
+        - "\t\tplayer->AddItem p_light_q_A1_8, 7"
+        - "\telseif ( A1V6_PotionQ == 8 )"
+        - "\t\tplayer->AddItem p_light_q_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionE == 1 )"
+        - "\t\tplayer->AddItem p_light_e_A1_8, 1"
+        - "\telseif ( A1V6_PotionE == 2 )"
+        - "\t\tplayer->AddItem p_light_e_A1_8, 2"
+        - "\telseif ( A1V6_PotionE == 3 )"
+        - "\t\tplayer->AddItem p_light_e_A1_8, 3"
+        - "\telseif ( A1V6_PotionE == 4 )"
+        - "\t\tplayer->AddItem p_light_e_A1_8, 4"
+        - "\telseif ( A1V6_PotionE == 5 )"
+        - "\t\tplayer->AddItem p_light_e_A1_8, 5"
+        - "\telseif ( A1V6_PotionE == 6 )"
+        - "\t\tplayer->AddItem p_light_e_A1_8, 6"
+        - "\telseif ( A1V6_PotionE == 7 )"
+        - "\t\tplayer->AddItem p_light_e_A1_8, 7"
+        - "\telseif ( A1V6_PotionE == 8 )"
+        - "\t\tplayer->AddItem p_light_e_A1_8, 8"
+        - "\tendif"
         - endif
-        - set A1V6_AlchemyRes to 0
+        - ""
+        - set AddPotion to 0
+        - ""
+        - if ( player->GetItemCount p_light_b_A1_8 >= 8 )
+        - "\tplayer->AddItem p_light_b, 1"
+        - "\tplayer->RemoveItem p_light_b_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_light_c_A1_8 >= 8 )
+        - "\tplayer->AddItem p_light_c, 1"
+        - "\tplayer->RemoveItem p_light_c_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_light_s_A1_8 >= 8 )
+        - "\tplayer->AddItem p_light_s, 1"
+        - "\tplayer->RemoveItem p_light_s_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_light_q_A1_8 >= 8 )
+        - "\tplayer->AddItem p_light_q, 1"
+        - "\tplayer->RemoveItem p_light_q_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_light_e_A1_8 >= 8 )
+        - "\tplayer->AddItem p_light_e, 1"
+        - "\tplayer->RemoveItem p_light_e_A1_8, 8"
+        - endif
+        - ""
+        - "if ( player->GetItemCount \"A1V6_L60_light\" == 1 )"
+        - "\tplayer->RemoveItem \"A1V6_L60_light\", 1"
+        - endif
+        - ""
+        - set in30 to 0
+        - set in60 to 0
+        - ""
+        - "if ( player->GetItemCount \"ingred_red_lichen_01\" > 0 )"
+        - "\tset in30 to 1"
+        - "elseif ( player->GetItemCount \"ingred_blood_innocent_unique\" > 0 )"
+        - "\tset in30 to ( in30 + 1 )"
+        - endif
+        - "if ( player->GetItemCount \"ingred_black_anther_01\" > 0 )"
+        - "\tset in60 to 1"
+        - endif
+        - ""
+        - set in60 to ( in60 + in30 )
+        - ""
+        - if ( in60 > 1 )
+        - "\tplayer->AddItem \"A1V6_L60_light\", 1"
+        - endif
+        - ""
+        - StopScript A1V6_ACheck48_Light_sc
+        - StartScript A1V6_ACheck49_ResShock_sc
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ACheck49_ResShock_sc
+        vars:
+          shorts: 1
+          longs: 0
+          floats: 0
+        data_size: 3457
+        var_table_size: 10
+    - SCVR:
+        - AddPotion
+    - SCDT: eJyV1kFrE0EcBfBMatcGeghYwaLIXLwnmtR6aCEOixcPXQfF27Ad/9jQmmT2n4vfs34cwW1aQ9PmZV+umffmLfyWsJn52rFqWvbkxPYzYw7sp/1R/9tROJvOx9PJx8Xv+yabXZW/pbruHs6CXkzjZahExzovJ1HCeRj1w7Fp7a2vv6XqbVR/R9V3UH1A1Z+g+pCq76L6EVXPUP09VX+K6sdUfa/VMY/lHSMfobxj5COUd4x8hPKOkY9Q3jHyEco7Rj5CecfIRyjvGPm4Qd4z8grlPSOvUN4z8grlPSOvUN4z8grlPSOvUN4z8grlPSOvG+QLRj5B+YKRT1C+YOQTlC8Y+QTlC0Y+QfmCkU9QvmDkE5QvGPm0QT5n5AXK54y8QPmckRconzPyAuVzRl6gfM7IC5TPGXmB8jkjL0v5jtk19dde2/aWlcy039jvf7t2egg/Eezp6sjBuqRpLRN/uvium8cgxyM9HhvH47bjSo9r47huO57o8dQ4nrYdF3pcGsdl3bj5P754kT8Pho96q39H9dUwaVav3nl9e/Wz8eRnJT9CrMrz8EvKeej17enKa2/sbfT5XVTr7KzOzsurh+HrhgfomFd3iZG7kHg5+BC+iPpFUuPL7ot7Z8PezdlZWZX1kTH/AKxrF4o=
+    - SCTX:
+        - Begin A1V6_ACheck49_ResShock_sc
+        - ""
+        - short AddPotion
+        - ""
+        - if ( AddPotion == 1 )
+        - "\tif ( A1V6_PotionB == 1 )"
+        - "\t\tplayer->AddItem p_shock_resistance_b_A1_8, 1"
+        - "\telseif ( A1V6_PotionB == 2 )"
+        - "\t\tplayer->AddItem p_shock_resistance_b_A1_8, 2"
+        - "\telseif ( A1V6_PotionB == 3 )"
+        - "\t\tplayer->AddItem p_shock_resistance_b_A1_8, 3"
+        - "\telseif ( A1V6_PotionB == 4 )"
+        - "\t\tplayer->AddItem p_shock_resistance_b_A1_8, 4"
+        - "\telseif ( A1V6_PotionB == 5 )"
+        - "\t\tplayer->AddItem p_shock_resistance_b_A1_8, 5"
+        - "\telseif ( A1V6_PotionB == 6 )"
+        - "\t\tplayer->AddItem p_shock_resistance_b_A1_8, 6"
+        - "\telseif ( A1V6_PotionB == 7 )"
+        - "\t\tplayer->AddItem p_shock_resistance_b_A1_8, 7"
+        - "\telseif ( A1V6_PotionB == 8 )"
+        - "\t\tplayer->AddItem p_shock_resistance_b_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionC == 1 )"
+        - "\t\tplayer->AddItem p_shock_resistance_c_A1_8, 1"
+        - "\telseif ( A1V6_PotionC == 2 )"
+        - "\t\tplayer->AddItem p_shock_resistance_c_A1_8, 2"
+        - "\telseif ( A1V6_PotionC == 3 )"
+        - "\t\tplayer->AddItem p_shock_resistance_c_A1_8, 3"
+        - "\telseif ( A1V6_PotionC == 4 )"
+        - "\t\tplayer->AddItem p_shock_resistance_c_A1_8, 4"
+        - "\telseif ( A1V6_PotionC == 5 )"
+        - "\t\tplayer->AddItem p_shock_resistance_c_A1_8, 5"
+        - "\telseif ( A1V6_PotionC == 6 )"
+        - "\t\tplayer->AddItem p_shock_resistance_c_A1_8, 6"
+        - "\telseif ( A1V6_PotionC == 7 )"
+        - "\t\tplayer->AddItem p_shock_resistance_c_A1_8, 7"
+        - "\telseif ( A1V6_PotionC == 8 )"
+        - "\t\tplayer->AddItem p_shock_resistance_c_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionS == 1 )"
+        - "\t\tplayer->AddItem p_shock_resistance_s_A1_8, 1"
+        - "\telseif ( A1V6_PotionS == 2 )"
+        - "\t\tplayer->AddItem p_shock_resistance_s_A1_8, 2"
+        - "\telseif ( A1V6_PotionS == 3 )"
+        - "\t\tplayer->AddItem p_shock_resistance_s_A1_8, 3"
+        - "\telseif ( A1V6_PotionS == 4 )"
+        - "\t\tplayer->AddItem p_shock_resistance_s_A1_8, 4"
+        - "\telseif ( A1V6_PotionS == 5 )"
+        - "\t\tplayer->AddItem p_shock_resistance_s_A1_8, 5"
+        - "\telseif ( A1V6_PotionS == 6 )"
+        - "\t\tplayer->AddItem p_shock_resistance_s_A1_8, 6"
+        - "\telseif ( A1V6_PotionS == 7 )"
+        - "\t\tplayer->AddItem p_shock_resistance_s_A1_8, 7"
+        - "\telseif ( A1V6_PotionS == 8 )"
+        - "\t\tplayer->AddItem p_shock_resistance_s_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionQ == 1 )"
+        - "\t\tplayer->AddItem p_shock_resistance_q_A1_8, 1"
+        - "\telseif ( A1V6_PotionQ == 2 )"
+        - "\t\tplayer->AddItem p_shock_resistance_q_A1_8, 2"
+        - "\telseif ( A1V6_PotionQ == 3 )"
+        - "\t\tplayer->AddItem p_shock_resistance_q_A1_8, 3"
+        - "\telseif ( A1V6_PotionQ == 4 )"
+        - "\t\tplayer->AddItem p_shock_resistance_q_A1_8, 4"
+        - "\telseif ( A1V6_PotionQ == 5 )"
+        - "\t\tplayer->AddItem p_shock_resistance_q_A1_8, 5"
+        - "\telseif ( A1V6_PotionQ == 6 )"
+        - "\t\tplayer->AddItem p_shock_resistance_q_A1_8, 6"
+        - "\telseif ( A1V6_PotionQ == 7 )"
+        - "\t\tplayer->AddItem p_shock_resistance_q_A1_8, 7"
+        - "\telseif ( A1V6_PotionQ == 8 )"
+        - "\t\tplayer->AddItem p_shock_resistance_q_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionE == 1 )"
+        - "\t\tplayer->AddItem p_shock_resistance_e_A1_8, 1"
+        - "\telseif ( A1V6_PotionE == 2 )"
+        - "\t\tplayer->AddItem p_shock_resistance_e_A1_8, 2"
+        - "\telseif ( A1V6_PotionE == 3 )"
+        - "\t\tplayer->AddItem p_shock_resistance_e_A1_8, 3"
+        - "\telseif ( A1V6_PotionE == 4 )"
+        - "\t\tplayer->AddItem p_shock_resistance_e_A1_8, 4"
+        - "\telseif ( A1V6_PotionE == 5 )"
+        - "\t\tplayer->AddItem p_shock_resistance_e_A1_8, 5"
+        - "\telseif ( A1V6_PotionE == 6 )"
+        - "\t\tplayer->AddItem p_shock_resistance_e_A1_8, 6"
+        - "\telseif ( A1V6_PotionE == 7 )"
+        - "\t\tplayer->AddItem p_shock_resistance_e_A1_8, 7"
+        - "\telseif ( A1V6_PotionE == 8 )"
+        - "\t\tplayer->AddItem p_shock_resistance_e_A1_8, 8"
+        - "\tendif"
+        - endif
+        - ""
+        - set AddPotion to 0
+        - ""
+        - if ( player->GetItemCount p_shock_resistance_b_A1_8 >= 8 )
+        - "\tplayer->AddItem p_shock_resistance_b, 1"
+        - "\tplayer->RemoveItem p_shock_resistance_b_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_shock_resistance_c_A1_8 >= 8 )
+        - "\tplayer->AddItem p_shock_resistance_c, 1"
+        - "\tplayer->RemoveItem p_shock_resistance_c_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_shock_resistance_s_A1_8 >= 8 )
+        - "\tplayer->AddItem p_shock_resistance_s, 1"
+        - "\tplayer->RemoveItem p_shock_resistance_s_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_shock_resistance_q_A1_8 >= 8 )
+        - "\tplayer->AddItem p_shock_resistance_q, 1"
+        - "\tplayer->RemoveItem p_shock_resistance_q_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_shock_resistance_e_A1_8 >= 8 )
+        - "\tplayer->AddItem p_shock_resistance_e, 1"
+        - "\tplayer->RemoveItem p_shock_resistance_e_A1_8, 8"
+        - endif
+        - ""
+        - "if ( player->GetItemCount \"A1V6_L45_shock_resistance\" == 1 )"
+        - "\tplayer->RemoveItem \"A1V6_L45_shock_resistance\", 1"
+        - endif
+        - ""
+        - ""
+        - "if ( player->GetItemCount \"ingred_crab_meat_01\" > 0 )"
+        - "\tif ( player->GetItemCount \"ingred_scrap_metal_01\" > 0 )"
+        - "\t\tplayer->AddItem \"A1V6_L45_shock_resistance\", 1"
+        - "\tendif"
+        - endif
+        - ""
+        - StopScript A1V6_ACheck49_ResShock_sc
+        - StartScript A1V6_ACheck50_ResPara_sc
         - ""
         - End
 - SCPT:
@@ -15630,6 +16212,180 @@
         - ""
         - StopScript A1V6_ACheck4_WaterWalk_sc
         - StartScript A1V6_ACheck5_WaterBrf_sc
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ACheck50_ResPara_sc
+        vars:
+          shorts: 4
+          longs: 0
+          floats: 0
+        data_size: 3375
+        var_table_size: 25
+    - SCVR:
+        - AddPotion
+        - in15
+        - in30
+        - in45
+    - SCDT: eJyN1k2P0kAYB/BOYSso0W402T2omehxswndXda9LAk2zcbEw9ZG420C4yjEQjsMxNSv51fQL+AH4ODdxOkUWaA8T7nw0nn+84f+yotD3jepIha9vqaeQ8gTetPqeR8u2W0yGyWT1+Z4izhp3M/E9Kd7mLK0P+3H2XfBBqznsStiNXbHztCYDcXO0VgNil2gsToU66CxAyh2icYcKPYKjd2DYldorGE1SVnOx+Q4KOdjchyU8zE5Dsr5mBwH5XxMjoNyPibHQTkfk+OgnI/JcUQuwuQUKBdhcgqUizA5BcpFmJwC5SJMToFyESanQLkIk1OgXITJKUQuxOQkKBdichKUCzE5CcqFmJwE5UJMToJyISYnQbkQk5OgXIjJSUQuwOQEKBdgcgKUCzA5AcoFmJwA5QJMToByASYnQLkAkxOgXIDJiZVckxwQ/W/Fpu3VqEPsZ/TjX5cmh6WfRtrd3LS1PkGs1covt5zN6ypKeGUJB0v4viWqskSBJWrfEllZIsESuW+JqCwRYInYVUL+l5gL6e15ezW/+XHWW5Um1poa2xtddKo2Wpsglrko7fyi1Pe15X196yIlL4uK4zeTL1PxiQ2T6YTFozhjg3k8YG2Pdk0u38fbfJcviuTRMjkbjVX/lCdjcTrI7oK1cvB5EXy8DKpvQszSeZzehepFyMTvU31D9QugJ2ZFP69b5tiJ3qthHnU3vyR3nNWGGa0Do1vn7al7bI73/KHgXztt9k6oW73OFNeVR/TmUbEc86EYZ3ox52hbrmP9WPxZ/F5YeR0w5tnuw9R8t1A151woBc+e2e6D5ezn/ijOT0hpTnMS8g/OoLOx
+    - SCTX:
+        - Begin A1V6_ACheck50_ResPara_sc
+        - ""
+        - short AddPotion
+        - short in15
+        - short in30
+        - short in45
+        - ""
+        - if ( AddPotion == 1 )
+        - "\tif ( A1V6_PotionB == 1 )"
+        - "\t\tplayer->AddItem p_paralyze_b_A1_8, 1"
+        - "\telseif ( A1V6_PotionB == 2 )"
+        - "\t\tplayer->AddItem p_paralyze_b_A1_8, 2"
+        - "\telseif ( A1V6_PotionB == 3 )"
+        - "\t\tplayer->AddItem p_paralyze_b_A1_8, 3"
+        - "\telseif ( A1V6_PotionB == 4 )"
+        - "\t\tplayer->AddItem p_paralyze_b_A1_8, 4"
+        - "\telseif ( A1V6_PotionB == 5 )"
+        - "\t\tplayer->AddItem p_paralyze_b_A1_8, 5"
+        - "\telseif ( A1V6_PotionB == 6 )"
+        - "\t\tplayer->AddItem p_paralyze_b_A1_8, 6"
+        - "\telseif ( A1V6_PotionB == 7 )"
+        - "\t\tplayer->AddItem p_paralyze_b_A1_8, 7"
+        - "\telseif ( A1V6_PotionB == 8 )"
+        - "\t\tplayer->AddItem p_paralyze_b_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionC == 1 )"
+        - "\t\tplayer->AddItem p_paralyze_c_A1_8, 1"
+        - "\telseif ( A1V6_PotionC == 2 )"
+        - "\t\tplayer->AddItem p_paralyze_c_A1_8, 2"
+        - "\telseif ( A1V6_PotionC == 3 )"
+        - "\t\tplayer->AddItem p_paralyze_c_A1_8, 3"
+        - "\telseif ( A1V6_PotionC == 4 )"
+        - "\t\tplayer->AddItem p_paralyze_c_A1_8, 4"
+        - "\telseif ( A1V6_PotionC == 5 )"
+        - "\t\tplayer->AddItem p_paralyze_c_A1_8, 5"
+        - "\telseif ( A1V6_PotionC == 6 )"
+        - "\t\tplayer->AddItem p_paralyze_c_A1_8, 6"
+        - "\telseif ( A1V6_PotionC == 7 )"
+        - "\t\tplayer->AddItem p_paralyze_c_A1_8, 7"
+        - "\telseif ( A1V6_PotionC == 8 )"
+        - "\t\tplayer->AddItem p_paralyze_c_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionS == 1 )"
+        - "\t\tplayer->AddItem p_paralyze_s_A1_8, 1"
+        - "\telseif ( A1V6_PotionS == 2 )"
+        - "\t\tplayer->AddItem p_paralyze_s_A1_8, 2"
+        - "\telseif ( A1V6_PotionS == 3 )"
+        - "\t\tplayer->AddItem p_paralyze_s_A1_8, 3"
+        - "\telseif ( A1V6_PotionS == 4 )"
+        - "\t\tplayer->AddItem p_paralyze_s_A1_8, 4"
+        - "\telseif ( A1V6_PotionS == 5 )"
+        - "\t\tplayer->AddItem p_paralyze_s_A1_8, 5"
+        - "\telseif ( A1V6_PotionS == 6 )"
+        - "\t\tplayer->AddItem p_paralyze_s_A1_8, 6"
+        - "\telseif ( A1V6_PotionS == 7 )"
+        - "\t\tplayer->AddItem p_paralyze_s_A1_8, 7"
+        - "\telseif ( A1V6_PotionS == 8 )"
+        - "\t\tplayer->AddItem p_paralyze_s_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionQ == 1 )"
+        - "\t\tplayer->AddItem p_paralyze_q_A1_8, 1"
+        - "\telseif ( A1V6_PotionQ == 2 )"
+        - "\t\tplayer->AddItem p_paralyze_q_A1_8, 2"
+        - "\telseif ( A1V6_PotionQ == 3 )"
+        - "\t\tplayer->AddItem p_paralyze_q_A1_8, 3"
+        - "\telseif ( A1V6_PotionQ == 4 )"
+        - "\t\tplayer->AddItem p_paralyze_q_A1_8, 4"
+        - "\telseif ( A1V6_PotionQ == 5 )"
+        - "\t\tplayer->AddItem p_paralyze_q_A1_8, 5"
+        - "\telseif ( A1V6_PotionQ == 6 )"
+        - "\t\tplayer->AddItem p_paralyze_q_A1_8, 6"
+        - "\telseif ( A1V6_PotionQ == 7 )"
+        - "\t\tplayer->AddItem p_paralyze_q_A1_8, 7"
+        - "\telseif ( A1V6_PotionQ == 8 )"
+        - "\t\tplayer->AddItem p_paralyze_q_A1_8, 8"
+        - "\tendif"
+        - "\tif ( A1V6_PotionE == 1 )"
+        - "\t\tplayer->AddItem p_paralyze_e_A1_8, 1"
+        - "\telseif ( A1V6_PotionE == 2 )"
+        - "\t\tplayer->AddItem p_paralyze_e_A1_8, 2"
+        - "\telseif ( A1V6_PotionE == 3 )"
+        - "\t\tplayer->AddItem p_paralyze_e_A1_8, 3"
+        - "\telseif ( A1V6_PotionE == 4 )"
+        - "\t\tplayer->AddItem p_paralyze_e_A1_8, 4"
+        - "\telseif ( A1V6_PotionE == 5 )"
+        - "\t\tplayer->AddItem p_paralyze_e_A1_8, 5"
+        - "\telseif ( A1V6_PotionE == 6 )"
+        - "\t\tplayer->AddItem p_paralyze_e_A1_8, 6"
+        - "\telseif ( A1V6_PotionE == 7 )"
+        - "\t\tplayer->AddItem p_paralyze_e_A1_8, 7"
+        - "\telseif ( A1V6_PotionE == 8 )"
+        - "\t\tplayer->AddItem p_paralyze_e_A1_8, 8"
+        - "\tendif"
+        - endif
+        - ""
+        - set AddPotion to 0
+        - ""
+        - if ( player->GetItemCount p_paralyze_b_A1_8 >= 8 )
+        - "\tplayer->AddItem p_paralyze_b, 1"
+        - "\tplayer->RemoveItem p_paralyze_b_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_paralyze_c_A1_8 >= 8 )
+        - "\tplayer->AddItem p_paralyze_c, 1"
+        - "\tplayer->RemoveItem p_paralyze_c_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_paralyze_s_A1_8 >= 8 )
+        - "\tplayer->AddItem p_paralyze_s, 1"
+        - "\tplayer->RemoveItem p_paralyze_s_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_paralyze_q_A1_8 >= 8 )
+        - "\tplayer->AddItem p_paralyze_q, 1"
+        - "\tplayer->RemoveItem p_paralyze_q_A1_8, 8"
+        - endif
+        - if ( player->GetItemCount p_paralyze_e_A1_8 >= 8 )
+        - "\tplayer->AddItem p_paralyze_e, 1"
+        - "\tplayer->RemoveItem p_paralyze_e_A1_8, 8"
+        - endif
+        - ""
+        - "if ( player->GetItemCount \"A1V6_L30_paralyze\" == 1 )"
+        - "\tplayer->RemoveItem \"A1V6_L30_paralyze\", 1"
+        - "elseif ( player->GetItemCount \"A1V6_L45_paralyze\" == 1 )"
+        - "\tplayer->RemoveItem \"A1V6_L45_paralyze\", 1"
+        - endif
+        - ""
+        - set in15 to 0
+        - set in30 to 0
+        - set in45 to 0
+        - ""
+        - "if ( player->GetItemCount \"Ingred_horn_lily_bulb_01\" > 0 )"
+        - "\tset in15 to 1"
+        - endif
+        - "if ( player->GetItemCount \"Ingred_timsa-come-by_01\" > 0 )"
+        - "\tset in30 to 1"
+        - endif
+        - "if ( player->GetItemCount \"Ingred_sweetpulp_01\" > 0 )"
+        - "\tset in45 to 1"
+        - endif
+        - ""
+        - set in30 to ( in30 + in15 )
+        - set in45 to ( in45 + in30 )
+        - ""
+        - if ( in30 > 1 )
+        - "\tplayer->AddItem \"A1V6_L30_paralyze\", 1"
+        - elseif ( in45 > 1 )
+        - "\tplayer->AddItem \"A1V6_L45_paralyze\", 1"
+        - endif
+        - ""
+        - StopScript A1V6_ACheck50_ResPara_sc
+        - if ( A1V6_AlchemyRes == 0 )
+        - "\tMessageBox \"Готово\""
+        - elseif ( A1V6_AlchemyRes == 1 )
+        - "\tPlaySound \"potion success\""
+        - elseif ( A1V6_AlchemyRes == 2 )
+        - "\tPlaySound \"potion fail\""
+        - endif
+        - set A1V6_AlchemyRes to 0
         - ""
         - End
 - SCPT:
@@ -17357,9 +18113,9 @@
           shorts: 0
           longs: 0
           floats: 0
-        data_size: 230
+        data_size: 237
         var_table_size: 0
-    - SCDT: eJyNzC0Lg1AUxnFPkQ0c3LLkwm2rE5xLBtnighjEdrjoCcL1BY8GP6gfRxAEDSJiffg9fwvMWqueGhPgKZNRyMoOnNjDv/vGLGdSTNgQ59yqMiXp+9Kxls8gjiwYK7xs497rfHzXgnGFh7jPIviRdj8YEX+rAjm1xW3dQ90xwATgzUZk
+    - SCDT: eJyNzD0LglAUxnHPIgUOd6jJhru1Jpi1OEiNTg3RdrjYoS74hsfFD+rHERRBBRFxffg9fwvMPFYVFSbAWX4aITM7cN4ehu4Vv5pJMWFBrLlUaUTS96VjDZ9arFkwRribx73L9viiBWMPJ3HsRfCk2L3hi/iRJciRLQ7TfsdQ//5lNwO02S9Ivw==
     - SCTX:
         - Begin A1V6_ADel47_ResCom_sc
         - ""
@@ -17370,7 +18126,49 @@
         - endif
         - ""
         - StopScript A1V6_ADel47_ResCom_sc
-        - StartScript A1V6_ADelPlus
+        - StartScript A1V6_ADel48_Light_sc
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ADel48_Light_sc
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 120
+        var_table_size: 0
+    - SCDT: eJxdyj8LQEAYgHHvopR0g1IY7iNQEoNBGU2UbG/S5eTq5Cw+qI+j/Ckp6+95TNBn0W1s0QFc2h6ESisPmxjLOEAxDnylWUZD89128sugGeAT+8G8YCJKsLwdVe8R5+MUK6ZqLvvpKgAnoqMhfw==
+    - SCTX:
+        - Begin A1V6_ADel48_Light_sc
+        - ""
+        - "if ( player->GetItemCount \"A1V6_L60_light\" == 1 )"
+        - "\tplayer->RemoveItem \"A1V6_L60_light\", 1"
+        - endif
+        - ""
+        - StopScript A1V6_ADel48_Light_sc
+        - StartScript A1V6_ADel49_ResShock_sc
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ADel49_ResShock_sc
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 144
+        var_table_size: 0
+    - SCDT: eJx1y60KhEAUQOG9RVgwTNplWcMUu4IKBoNgNIiC2IZhuKAoKnMtPqiPI/gD2szfOSYYYydn1AaAzauV8eEXu2UgUs8XVA+qFRqpoUn2CnkUcde8joU9l/B6g8W+p8cJdl4ocqTirEj92ecW3zkkk1ruALABMHErdw==
+    - SCTX:
+        - Begin A1V6_ADel49_ResShock_sc
+        - ""
+        - "if ( player->GetItemCount \"A1V6_L45_shock_resistance\" == 1 )"
+        - "\tplayer->RemoveItem \"A1V6_L45_shock_resistance\", 1"
+        - endif
+        - ""
+        - StopScript A1V6_ADel49_ResShock_sc
+        - StartScript A1V6_ADel50_ResPara_sc
         - ""
         - End
 - SCPT:
@@ -17396,6 +18194,29 @@
         - ""
         - StopScript A1V6_ADel4_WaterWalk_sc
         - StartScript A1V6_ADel5_WaterBrf_sc
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_ADel50_ResPara_sc
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 191
+        var_table_size: 0
+    - SCDT: eJyFjD8LQEAcQP0WUdRZLKj7COTPZlBGgwyyXZduu6K7DOd7+jiKlEsM1vdezwFz5lQxYQJEeNgRnrwq6QvSpDGZqaBcrQyXJU6cu9zQtwBDa+s9yvK/0aMAw4YQ+RevasbzmHRMtqclcgyQq0XLFwlwAERQNmo=
+    - SCTX:
+        - Begin A1V6_ADel50_ResPara_sc
+        - ""
+        - "if ( player->GetItemCount \"A1V6_L30_paralyze\" == 1 )"
+        - "\tplayer->RemoveItem \"A1V6_L30_paralyze\", 1"
+        - "elseif ( player->GetItemCount \"A1V6_L45_paralyze\" == 1 )"
+        - "\tplayer->RemoveItem \"A1V6_L45_paralyze\", 1"
+        - endif
+        - ""
+        - StopScript A1V6_ADel50_ResPara_sc
+        - StartScript A1V6_ADelPlus
         - ""
         - End
 - SCPT:
@@ -22693,6 +23514,90 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AAdd47_ResCom_60
+    - ITEX: "m\\misc_com_bottle_05.dds"
+- INGR:
+    - NAME: A1V6_L60_light
+    - MODL: "m\\misc_com_bottle_05.nif"
+    - FNAM: _Создать
+    - IRDT:
+        weight: 0.0
+        value: 0
+        effect_1_index: ~
+        effect_2_index: ~
+        effect_3_index: ~
+        effect_4_index: Light
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - SCRI: A1V6_AAdd48_Light_60
+    - ITEX: "m\\misc_com_bottle_05.dds"
+- INGR:
+    - NAME: A1V6_L45_shock_resistance
+    - MODL: "m\\misc_com_bottle_05.nif"
+    - FNAM: _Создать
+    - IRDT:
+        weight: 0.0
+        value: 0
+        effect_1_index: ~
+        effect_2_index: ~
+        effect_3_index: ResistShock
+        effect_4_index: ~
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - SCRI: A1V6_AAdd49_ResShock_45
+    - ITEX: "m\\misc_com_bottle_05.dds"
+- INGR:
+    - NAME: A1V6_L30_paralyze
+    - MODL: "m\\misc_com_bottle_05.nif"
+    - FNAM: _Создать
+    - IRDT:
+        weight: 0.0
+        value: 0
+        effect_1_index: ~
+        effect_2_index: ResistParalysis
+        effect_3_index: ~
+        effect_4_index: ~
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - SCRI: A1V6_AAdd50_ResPara_30
+    - ITEX: "m\\misc_com_bottle_05.dds"
+- INGR:
+    - NAME: A1V6_L45_paralyze
+    - MODL: "m\\misc_com_bottle_05.nif"
+    - FNAM: _Создать
+    - IRDT:
+        weight: 0.0
+        value: 0
+        effect_1_index: ~
+        effect_2_index: ~
+        effect_3_index: ResistParalysis
+        effect_4_index: ~
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - SCRI: A1V6_AAdd50_ResPara_45
     - ITEX: "m\\misc_com_bottle_05.dds"
 - BOOK:
     - NAME: A1V6_AlchemyPlus_0
