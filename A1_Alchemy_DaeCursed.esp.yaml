@@ -143,7 +143,7 @@
     - MODL: "n\\Ingred_emerald_01.NIF"
     - FNAM: Изумруд
     - IRDT:
-        weight: 0.20000000298023225
+        weight: 0.2
         value: 150
         effect_1_index: FortifySpellpoints
         effect_2_index: RestoreHealth
@@ -164,7 +164,7 @@
     - MODL: "n\\Ingred_pearl_01.NIF"
     - FNAM: Жемчужина
     - IRDT:
-        weight: 0.20000000298023225
+        weight: 0.2
         value: 100
         effect_1_index: DrainAttribute
         effect_2_index: Dispel
@@ -206,7 +206,7 @@
     - MODL: "n\\Ingred_diamond_01.NIF"
     - FNAM: Бриллиант
     - IRDT:
-        weight: 0.20000000298023225
+        weight: 0.2
         value: 250
         effect_1_index: DrainAttribute
         effect_2_index: Invisibility
@@ -227,7 +227,7 @@
     - MODL: "n\\Ingred_ruby_01.NIF"
     - FNAM: Рубин
     - IRDT:
-        weight: 0.20000000298023225
+        weight: 0.2
         value: 200
         effect_1_index: DrainHealth
         effect_2_index: Feather

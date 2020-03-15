@@ -4432,7 +4432,7 @@
     - MODL: "n\\ingred_bittergreen_01.nif"
     - FNAM: ERROR
     - IRDT:
-        weight: 0.10000000149011612
+        weight: 0.1
         value: 20
         effect_1_index: Light
         effect_2_index: ~

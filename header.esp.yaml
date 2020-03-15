@@ -2807,7 +2807,7 @@
     - SCRI: A1V6_Alembic_3_sc
     - AADT:
         type: Alembic
-        quality: 0.15000000596046449
+        quality: 0.15
         weight: 2.0
         value: 50
     - ITEX: "m\\Tx_Spipe_01.tga"
@@ -2818,7 +2818,7 @@
     - SCRI: A1V6_Alembic_3_sc
     - AADT:
         type: Alembic
-        quality: 0.15000000596046449
+        quality: 0.15
         weight: 2.0
         value: 30
     - ITEX: "m\\Tx_Spipe_01.tga"
@@ -2917,7 +2917,7 @@
     - SCRI: A1V6_Alembic_3_sc
     - AADT:
         type: Alembic
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 5.0
         value: 1200
     - ITEX: "m\\Tx_alembic_03.tga"
@@ -2928,7 +2928,7 @@
     - SCRI: A1V6_Calcinator_3_sc
     - AADT:
         type: Calcinator
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 13.0
         value: 240
     - ITEX: "m\\Tx_calcinator_03.tga"
@@ -2939,7 +2939,7 @@
     - SCRI: A1V6_Mortar_3_sc
     - AADT:
         type: MortarPestle
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 3.0
         value: 2400
     - ITEX: "m\\Tx_mortarpestle_M_01.tga"
@@ -2950,7 +2950,7 @@
     - SCRI: A1V6_Retort_3_sc
     - AADT:
         type: Retort
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 4.0
         value: 480
     - ITEX: "m\\Tx_retort_03.tga"
@@ -3059,7 +3059,7 @@
     - SCRI: A1V6_Alembic_2_sc
     - AADT:
         type: Alembic
-        quality: 0.15000000596046449
+        quality: 0.15
         weight: 2.0
         value: 50
     - ITEX: "m\\Tx_Spipe_01.tga"
@@ -3070,7 +3070,7 @@
     - SCRI: A1V6_Alembic_1_sc
     - AADT:
         type: Alembic
-        quality: 0.15000000596046449
+        quality: 0.15
         weight: 2.0
         value: 50
     - ITEX: "m\\Tx_Spipe_01.tga"
@@ -3081,7 +3081,7 @@
     - SCRI: A1V6_Alembic_2_sc
     - AADT:
         type: Alembic
-        quality: 0.15000000596046449
+        quality: 0.15
         weight: 2.0
         value: 30
     - ITEX: "m\\Tx_Spipe_01.tga"
@@ -3092,7 +3092,7 @@
     - SCRI: A1V6_Alembic_1_sc
     - AADT:
         type: Alembic
-        quality: 0.15000000596046449
+        quality: 0.15
         weight: 2.0
         value: 30
     - ITEX: "m\\Tx_Spipe_01.tga"
@@ -3279,7 +3279,7 @@
     - SCRI: A1V6_Alembic_2_sc
     - AADT:
         type: Alembic
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 5.0
         value: 1200
     - ITEX: "m\\Tx_alembic_03.tga"
@@ -3290,7 +3290,7 @@
     - SCRI: A1V6_Alembic_1_sc
     - AADT:
         type: Alembic
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 5.0
         value: 1200
     - ITEX: "m\\Tx_alembic_03.tga"
@@ -3301,7 +3301,7 @@
     - SCRI: A1V6_Calcinator_2_sc
     - AADT:
         type: Calcinator
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 13.0
         value: 240
     - ITEX: "m\\Tx_calcinator_03.tga"
@@ -3312,7 +3312,7 @@
     - SCRI: A1V6_Calcinator_1_sc
     - AADT:
         type: Calcinator
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 13.0
         value: 240
     - ITEX: "m\\Tx_calcinator_03.tga"
@@ -3323,7 +3323,7 @@
     - SCRI: A1V6_Mortar_2_sc
     - AADT:
         type: MortarPestle
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 3.0
         value: 2400
     - ITEX: "m\\Tx_mortarpestle_M_01.tga"
@@ -3334,7 +3334,7 @@
     - SCRI: A1V6_Mortar_1_sc
     - AADT:
         type: MortarPestle
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 3.0
         value: 2400
     - ITEX: "m\\Tx_mortarpestle_M_01.tga"
@@ -3345,7 +3345,7 @@
     - SCRI: A1V6_Retort_2_sc
     - AADT:
         type: Retort
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 4.0
         value: 480
     - ITEX: "m\\Tx_retort_03.tga"
@@ -3356,7 +3356,7 @@
     - SCRI: A1V6_Retort_1_sc
     - AADT:
         type: Retort
-        quality: 1.2000000476837159
+        quality: 1.2
         weight: 4.0
         value: 480
     - ITEX: "m\\Tx_retort_03.tga"
@@ -3406,7 +3406,7 @@
     - MODL: "n\\ingred_bittergreen_01.nif"
     - FNAM: ОШИБКА
     - IRDT:
-        weight: 0.10000000149011612
+        weight: 0.1
         value: 20
         effect_1_index: Light
         effect_2_index: ~

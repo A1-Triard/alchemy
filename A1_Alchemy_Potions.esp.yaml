@@ -450,7 +450,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное зелье тени
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 5
         auto_calculate_value: false
     - ENAM:
@@ -468,7 +468,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое зелье тени
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -486,7 +486,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Эксклюзивное зелье тени
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -504,7 +504,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качественное зелье тени
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -522,7 +522,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Стандартное зелье тени
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -540,7 +540,7 @@
     - TEXT: "m\\tx_potion_fresh_01.dds"
     - FNAM: 1/16 Зелье леч. мор. болезней
     - ALDT:
-        weight: 0.05999999865889549
+        weight: 0.06
         value: 0
         auto_calculate_value: false
 - ALCH:
@@ -549,7 +549,7 @@
     - TEXT: "m\\Tx_potion_fresh_01.tga"
     - FNAM: 1/16 Зелье леч. обычных недугов
     - ALDT:
-        weight: 0.05999999865889549
+        weight: 0.06
         value: 0
         auto_calculate_value: false
 - ALCH:
@@ -558,7 +558,7 @@
     - TEXT: "m\\Tx_potion_fresh_01.tga"
     - FNAM: 1/16 Зелье лечения парализации
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
 - ALCH:
@@ -567,7 +567,7 @@
     - TEXT: "m\\Tx_potion_fresh_01.tga"
     - FNAM: 1/16 Зелье лечения отравлений
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
 - ALCH:
@@ -864,7 +864,7 @@
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - FNAM: 1/8 Уцен. зелье обнар. существ
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -882,7 +882,7 @@
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - FNAM: 1/8 Деш. зелье обнар. существ
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -900,7 +900,7 @@
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - FNAM: 1/8 Экскл. зелье обнар. существ
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -918,7 +918,7 @@
     - TEXT: "m\\tx_potion_quality_01.dds"
     - FNAM: 1/8 Кач. зелье обнар. существ
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -936,7 +936,7 @@
     - TEXT: "m\\tx_potion_standard_01.dds"
     - FNAM: 1/8 Станд. зелье обнар. существ
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -954,7 +954,7 @@
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - FNAM: 1/8 Уценен. зелье обнаруж. чар
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -972,7 +972,7 @@
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - FNAM: 1/8 Дешевое зелье обнаруж. чар
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -990,7 +990,7 @@
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - FNAM: 1/8 Эксклюз. зелье обнаруж. чар
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1008,7 +1008,7 @@
     - TEXT: "m\\tx_potion_quality_01.dds"
     - FNAM: 1/8 Качеств. зелье обнаруж. чар
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1026,7 +1026,7 @@
     - TEXT: "m\\tx_potion_standard_01.dds"
     - FNAM: 1/8 Станд. зелье обнаруж. чар
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1044,7 +1044,7 @@
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - FNAM: 1/8 Уценен. зелье обнар. ключа
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1062,7 +1062,7 @@
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - FNAM: 1/8 Дешевое зелье обнар. ключа
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1080,7 +1080,7 @@
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - FNAM: 1/8 Эксклюз. зелье обнар. ключа
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1098,7 +1098,7 @@
     - TEXT: "m\\tx_potion_quality_01.dds"
     - FNAM: 1/8 Качеств. зелье обнар. ключа
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1116,7 +1116,7 @@
     - TEXT: "m\\tx_potion_standard_01.dds"
     - FNAM: 1/8 Станд. зелье обнар. ключа
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1134,7 +1134,7 @@
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - FNAM: 1/8 Уцененное зелье развеивания
     - ALDT:
-        weight: 0.30000001192092898
+        weight: 0.3
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1152,7 +1152,7 @@
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - FNAM: 1/8 Дешевое зелье развеивания
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1170,7 +1170,7 @@
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - FNAM: 1/8 Эксклюз. зелье развеивания
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1188,7 +1188,7 @@
     - TEXT: "m\\tx_potion_quality_01.dds"
     - FNAM: 1/8 Качеств. зелье развеивания
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1206,7 +1206,7 @@
     - TEXT: "m\\tx_potion_standard_01.dds"
     - FNAM: 1/8 Стандарт. зелье развеивания
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1242,7 +1242,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное зелье пера
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1260,7 +1260,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое зелье пера
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1278,7 +1278,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Эксклюзивное зелье пера
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1296,7 +1296,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качественное зелье пера
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1314,7 +1314,7 @@
     - TEXT: "m\\tx_potion_standard_01.dds"
     - FNAM: 1/8 Стандартное зелье пера
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1332,7 +1332,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. сопротивление огню
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1350,7 +1350,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное сопр. огню
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1368,7 +1368,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое сопротивление огню
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1386,7 +1386,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Эксклюзивное сопр. огню
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1404,7 +1404,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качественное сопр. огню
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1422,7 +1422,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное зелье огнен. щита
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1440,7 +1440,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое зелье огнен. щита
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1458,7 +1458,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. зелье огненного щита
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1476,7 +1476,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. зелье огнен. щита
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1494,7 +1494,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье огненного щита
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1512,7 +1512,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. улучшение ловкости
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1530,7 +1530,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое улучшение ловкости
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1548,7 +1548,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. улучшение ловкости
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1566,7 +1566,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. улучшение ловкости
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1584,7 +1584,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье улуч. ловкости
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1674,7 +1674,7 @@
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - FNAM: 1/8 Уцененное улучшение атаки
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1692,7 +1692,7 @@
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - FNAM: 1/8 Дешевое улучшение атаки
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1710,7 +1710,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. улучшение атаки
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1728,7 +1728,7 @@
     - TEXT: "m\\tx_potion_quality_01.dds"
     - FNAM: 1/8 Качеств. улучшение атаки
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1746,7 +1746,7 @@
     - TEXT: "m\\tx_potion_standard_01.dds"
     - FNAM: 1/8 Стандартное улучшение атаки
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1764,7 +1764,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. улучш. выносливости
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1782,7 +1782,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое улучш. выносливости
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1800,7 +1800,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. улучш. выносливости
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1818,7 +1818,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качест. улучш. выносливости
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1836,7 +1836,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. улучш. выносливости
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1854,7 +1854,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. улучшение усталости
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1872,7 +1872,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое улучшение усталости
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1890,7 +1890,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. улучшение усталости
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1908,7 +1908,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качест. улучшение усталости
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1926,7 +1926,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. з. улучш. усталости
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1944,7 +1944,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Деш. зелье укрепл. здоровья
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1962,7 +1962,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. зелье укреп. здоровья
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1980,7 +1980,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. укрепление здоровья
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -1998,7 +1998,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качест. укрепление здоровья
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2016,7 +2016,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. з. укрепл. здоровья
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2034,7 +2034,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. улучшение интеллекта
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2052,7 +2052,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое улучш. интеллекта
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2070,7 +2070,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. улучшение интеллекта
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2088,7 +2088,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. улучш. интеллекта
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2106,7 +2106,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. улучшение интеллекта
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2124,7 +2124,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. зелье улучшения удачи
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2142,7 +2142,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое зелье улучш. удачи
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2160,7 +2160,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. зелье улучш. удачи
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2178,7 +2178,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. улучшение удачи
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2196,7 +2196,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье улучш. удачи
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2214,7 +2214,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное улучшение магии
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2232,7 +2232,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое зелье улучш. магии
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2250,7 +2250,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Эксклюзивное улучш. магии
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2268,7 +2268,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качественное улучш. магии
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2286,7 +2286,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье улучш. магии
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2304,7 +2304,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. улучш. привлекат.
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2322,7 +2322,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Деш. улучш. привлекат.
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2340,7 +2340,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. улучш. привлекат.
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2358,7 +2358,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Кач. улучш. привлекат.
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2376,7 +2376,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. улучш. индивидуальн.
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2394,7 +2394,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. зелье улучш. скорости
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2412,7 +2412,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Деш. зелье улучш. скорости
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2430,7 +2430,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. улучшение скорости
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2448,7 +2448,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Кач. зелье улучш. скорости
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2466,7 +2466,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. улучш. скорости
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2484,7 +2484,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное улучшение силы
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2502,7 +2502,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое улучшение силы
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2520,7 +2520,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Эксклюзивное улучшение силы
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2538,7 +2538,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качественное улучшение силы
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2556,7 +2556,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. укрепление силы
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2574,7 +2574,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/9 Уцененное улучш. силы воли
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2592,7 +2592,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое улучшение силы воли
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2610,7 +2610,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. улучшение силы воли
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2628,7 +2628,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качест. улучшение силы воли
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2646,7 +2646,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. улучшение силы воли
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2664,7 +2664,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное сопрот. холоду
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2682,7 +2682,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое сопрот. холоду
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2700,7 +2700,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. сопротивление холоду
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2718,7 +2718,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. сопрот. холоду
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2736,7 +2736,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье сопр. холоду
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2754,7 +2754,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. зелье ледяного щита
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2772,7 +2772,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое зелье ледяного щита
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2790,7 +2790,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. зелье ледяного щита
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2808,7 +2808,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качест. зелье ледяного щита
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2826,7 +2826,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье ледяного щита
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2844,7 +2844,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное зелье невидимости
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2862,7 +2862,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое зелье невидимости
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2880,7 +2880,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. зелье невидимости
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2898,7 +2898,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. зелье невидимости
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2916,7 +2916,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье невидимости
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2934,7 +2934,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное зелье левитации
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2952,7 +2952,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое зелье левитации
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2970,7 +2970,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. зелье левитации
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -2988,7 +2988,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. зелье левитации
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3006,7 +3006,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье левитации
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3024,7 +3024,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененный щит молний
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3042,7 +3042,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевый щит молний
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3060,7 +3060,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Эксклюзивный щит молний
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3078,7 +3078,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качественный щит молний
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3096,7 +3096,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Стандартный щит молний
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3114,7 +3114,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное сопротив. магии
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3132,7 +3132,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое сопротивление магии
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3150,7 +3150,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. сопротивление магии
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3168,7 +3168,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. сопротив. магии
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3186,7 +3186,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. сопротивление магии
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3204,7 +3204,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. зелье ночного видения
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3222,7 +3222,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Деш. зелье ночного видения
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3240,7 +3240,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. з. ночного видения
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3258,7 +3258,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Кач. зелье ночного видения
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3276,7 +3276,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Стан. зелье ночного видения
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3294,7 +3294,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное сопротивл. ядам
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3312,7 +3312,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое сопротивление ядам
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3330,7 +3330,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. сопротивление ядам
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3348,7 +3348,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. сопротивление ядам
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3366,7 +3366,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. сопротивление ядам
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3384,7 +3384,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное зелье отражения
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3402,7 +3402,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое зелье отражения
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3420,7 +3420,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. зелье отражения
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3438,7 +3438,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. зелье отражения
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3456,7 +3456,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье отражения
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3474,7 +3474,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. восст. ловкости
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3492,7 +3492,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Деш. восст. ловкости
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3510,7 +3510,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. восст. ловкости
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3528,7 +3528,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. восст. ловкости
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3546,7 +3546,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. восст. ловкости
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3564,7 +3564,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. восст. выносливости
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3582,7 +3582,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое восст. выносливости
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3600,7 +3600,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. восст. выносливости
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3618,7 +3618,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качест. восст. выносливости
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3636,7 +3636,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. восст. выносливости
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3654,7 +3654,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. восст. усталости
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3672,7 +3672,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Деш. восст. усталости
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3690,7 +3690,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. восст. усталости
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3708,7 +3708,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. восст. усталости
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3726,7 +3726,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. восст. усталости
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3744,7 +3744,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. восст. здоровья
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3762,7 +3762,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое восст. здоровья
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3780,7 +3780,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. восст. здоровья
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3798,7 +3798,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. восст. здоровья
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3816,7 +3816,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. з. восст. здоровья
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3834,7 +3834,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное восст. интеллекта
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3852,7 +3852,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Деш. восст. интеллекта
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3870,7 +3870,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. восст. интеллекта
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3888,7 +3888,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. восст. интеллекта
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3906,7 +3906,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. восст. интеллекта
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3924,7 +3924,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное восст. удачи
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3942,7 +3942,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое восст. удачи
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3960,7 +3960,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Эксклюзивное восст. удачи
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3978,7 +3978,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качественное восст. удачи
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -3996,7 +3996,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье восст. удачи
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4014,7 +4014,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное восст. магии
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4032,7 +4032,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое восст. магии
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4050,7 +4050,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Эксклюзивное восст. магии
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4068,7 +4068,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье восст. магии
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4086,7 +4086,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качественное восст. магии
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4104,7 +4104,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. восст. привлекат.
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4122,7 +4122,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Деш. восст. привлекат.
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4140,7 +4140,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. восст. привлекат.
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4158,7 +4158,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. восст. привл.
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4176,7 +4176,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. восст. привлекат.
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4194,7 +4194,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное восст. скорости
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4212,7 +4212,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое восст. скорости
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4230,7 +4230,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. восст. скорости
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4248,7 +4248,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. восст. скорости
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4266,7 +4266,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. восст. скорости
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4284,7 +4284,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное восст. силы
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4302,7 +4302,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое восстановление силы
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4320,7 +4320,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Эксклюзивное восст. силы
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4338,7 +4338,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качественное восст. силы
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4356,7 +4356,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. восстановление силы
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4374,7 +4374,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное восст. силы воли
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4392,7 +4392,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое восст. силы воли
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4410,7 +4410,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. восст. силы воли
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4428,7 +4428,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. восст. силы воли
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4446,7 +4446,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. восст. силы воли
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4464,7 +4464,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. сопр. электричеству
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4482,7 +4482,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Деш. сопр. электричеству
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4500,7 +4500,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. сопр. электричеству
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4518,7 +4518,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Кач. сопр. электричеству
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4536,7 +4536,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. сопр. электричеству
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4554,7 +4554,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. поглощение заклинаний
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4572,7 +4572,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Деш. поглощение заклинаний
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4590,7 +4590,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. поглощ. заклинаний
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4608,7 +4608,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. поглощ. заклинаний
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4626,7 +4626,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. поглощение заклятий
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4644,7 +4644,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. зелье быстроплавания
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4662,7 +4662,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешев. зелье быстроплавания
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4680,7 +4680,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. зелье быстроплавания
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4698,7 +4698,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Кач. зелье быстроплавания
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4734,7 +4734,7 @@
     - TEXT: "m\\tx_potion_standard_01.dds"
     - FNAM: 1/8 Станд. зелье быстроплавания
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4968,7 +4968,7 @@
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - FNAM: 1/8 Уцененное зелье телекинеза
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -4986,7 +4986,7 @@
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - FNAM: 1/8 Дешевое зелье телекинеза
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5004,7 +5004,7 @@
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - FNAM: 1/8 Экскл. зелье телекинеза
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5022,7 +5022,7 @@
     - TEXT: "m\\tx_potion_quality_01.dds"
     - FNAM: 1/8 Качеств. зелье телекинеза
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5040,7 +5040,7 @@
     - TEXT: "m\\tx_potion_standard_01.dds"
     - FNAM: 1/8 Стандарт. зелье телекинеза
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5058,7 +5058,7 @@
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - FNAM: 1/8 Уцен. зелье водного дыхания
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5076,7 +5076,7 @@
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - FNAM: 1/8 Дешевое з. водного дыхания
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5094,7 +5094,7 @@
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - FNAM: 1/8 Экскл. з. водного дыхания
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5112,7 +5112,7 @@
     - TEXT: "m\\tx_potion_quality_01.dds"
     - FNAM: 1/8 Качеств. з. водного дыхания
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5130,7 +5130,7 @@
     - TEXT: "m\\tx_potion_standard_01.dds"
     - FNAM: 1/8 Станд. з. водного дыхания
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5148,7 +5148,7 @@
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - FNAM: 1/8 Уцен. з. хождения по воде
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5166,7 +5166,7 @@
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - FNAM: 1/8 Дешевое з. хождения по воде
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5184,7 +5184,7 @@
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - FNAM: 1/8 Экскл. з. хождения по воде
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5202,7 +5202,7 @@
     - TEXT: "m\\tx_potion_quality_01.dds"
     - FNAM: 1/8 Качест. з. хождения по воде
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5220,7 +5220,7 @@
     - TEXT: "m\\tx_potion_standard_01.dds"
     - FNAM: 1/8 Станд. з. хождения по воде
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5238,7 +5238,7 @@
     - TEXT: "m\\Tx_potion_fresh_01.tga"
     - FNAM: 1/16 Зелье пометки
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
 - ALCH:
@@ -5247,7 +5247,7 @@
     - TEXT: "m\\Tx_potion_fresh_01.tga"
     - FNAM: 1/16 Зелье воспоминания
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
 - ALCH:
@@ -5256,7 +5256,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное сопр. недугам
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5274,7 +5274,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое сопротив. недугам
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5292,7 +5292,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. сопротив. недугам
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5310,7 +5310,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. сопротив. недугам
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5328,7 +5328,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Стандартное сопр. недугам
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5346,7 +5346,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное зелье света
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5364,7 +5364,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое зелье света
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5382,7 +5382,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Эксклюзивное зелье света
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5400,7 +5400,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качественное зелье света
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5418,7 +5418,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье света
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5436,7 +5436,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. сопротивл. параличу
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5454,7 +5454,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое сопротивл. параличу
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5472,7 +5472,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. сопротивл. параличу
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5490,7 +5490,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. сопрот. параличу
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5508,7 +5508,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. сопротивл. параличу
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5526,7 +5526,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцененное зелье щита
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5544,7 +5544,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Дешевое зелье щита
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5562,7 +5562,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Эксклюзивное зелье щита
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5580,7 +5580,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качественное зелье щита
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5598,7 +5598,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Стандартное зелье щита
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5616,7 +5616,7 @@
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - FNAM: 1/8 Уцен. зелье даэдра
     - ALDT:
-        weight: 0.23999999463558198
+        weight: 0.24
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5634,7 +5634,7 @@
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - FNAM: 1/8 Деш. зелье даэдра
     - ALDT:
-        weight: 0.18000000715255738
+        weight: 0.18
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5652,7 +5652,7 @@
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - FNAM: 1/8 Экскл. зелье даэдра
     - ALDT:
-        weight: 0.09000000357627869
+        weight: 0.09
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5670,7 +5670,7 @@
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - FNAM: 1/8 Качеств. зелье даэдра
     - ALDT:
-        weight: 0.11999999731779099
+        weight: 0.12
         value: 0
         auto_calculate_value: false
     - ENAM:
@@ -5688,7 +5688,7 @@
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - FNAM: 1/8 Станд. зелье даэдра
     - ALDT:
-        weight: 0.15000000596046449
+        weight: 0.15
         value: 0
         auto_calculate_value: false
     - ENAM:
