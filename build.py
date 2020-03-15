@@ -856,7 +856,7 @@ def gen_add_item(kind, index, level):
             {'FNAM': ' Создать'},
             {'IRDT': irdt},
             {'SCRI': add_name},
-            {'ITEX': 'n\\a1_alchemy_new.dds'},
+            {'ITEX': 'k\\magic_alchemy.dds'},
         ]
     }
 
