@@ -25,23 +25,7 @@
     - FNAM: s
     - FLTV: 0.0
 - GLOB:
-    - NAME: A1V6_PotionB
-    - FNAM: s
-    - FLTV: 0.0
-- GLOB:
-    - NAME: A1V6_PotionC
-    - FNAM: s
-    - FLTV: 0.0
-- GLOB:
-    - NAME: A1V6_PotionS
-    - FNAM: s
-    - FLTV: 0.0
-- GLOB:
     - NAME: A1V6_PotionQ
-    - FNAM: s
-    - FLTV: 0.0
-- GLOB:
-    - NAME: A1V6_PotionE
     - FNAM: s
     - FLTV: 0.0
 - GLOB:
@@ -1719,27 +1703,23 @@
     - SCHD:
         name: A1V6_CalcAlchemy2_sc
         vars:
-          shorts: 15
+          shorts: 11
           longs: 5
           floats: 2
-        data_size: 1961
-        var_table_size: 147
+        data_size: 1830
+        var_table_size: 119
     - SCVR:
-        - bbb
-        - bbb2
-        - sss
-        - sss2
+        - parts
         - random25
         - rrandom100
         - in
         - pin
         - temp
         - state
-        - alembic_up
-        - alembic_down
+        - calcinator
         - mortar
         - retort
-        - calcinator
+        - alembic
         - alchemy
         - luck
         - lk
@@ -1747,14 +1727,11 @@
         - tempi
         - tempf
         - exp
-    - SCDT: eJx1VdtO20AQ3bVjxyYBooq2qnobKp6glHVip0ECJIpQnyr1IlV5i9wQ2tCYRHEqlY+v1JnZjWPw5iW7c+ac8dxW8WUthHxDwOkpJL50XkH/ZQuyR+fR9+7g0/TqfDL8NcruLv/OiKE8iVwH1IvWDjMu0snQUNqDfBjKUPpyt4gYI98hPp41c0pzuuYM8Wz7Mgggrws4Y6wuNtjKAwGHvnTLPkd4kDeF4JB4bfCVokR1KUviSCk4oIwQ80UA/d3WlVAKwzUAATghluCMiojug4gk/rjNpZoyv45ypIRCYLNCulCdkSdtLbumyNeOEM9bFi/HbjL+eboYT28/YGBJ376HXiDqVNBviLoV9AuitQp66RSDS/Z4Qm+LCXWa0p9N0rvR3JOcbv93C/UTzhyTqbh77HaMm/tUtBYtDy1qSgxHD9suQ0Adtj1G4sQV2owVHAbUSu3rks8r+ZgaAGIUsy7dkr+r/Z7x9+ibzE7YPqAOo70B+ANYEhyU7HxL27REaOM8JTpqtGYRlXJNixsFnDaiJ7z9DKq6dPjqkUfwtUmid4qmDUfUYtkwwfJtovBn6Mq+Ji/g2anR4x5iVPYsNz1iVGe2XOslp2E4+aYRe3zlRachx3rIx8WQqfkA/X8tmD5OZ7N0ni7+5IOfg2w6X6TzgYrM09oUNSojsLEzC9uFnp18YyV37eTUSo6VLnuzKNtWwXy0QO1KuUU7viZ/G3dd+lVuHQ4j3Kv9NSVUBQEJIgX7ug4DtBGgapxdHeRJuZp0Msp+jIerKA0qB88mnp3AJsrsotiIYqvoxi7qGFFiFaV2UduIuih6rUU7ZVE+G89G9yWRkbxHyRsteVqVLPLxXWpT8etjSBmox/uxp0M9K3d0iP9P49sUZ7NKYbvY8qoiW6Nw4TixCm7WCnr2L6RrBd1EbwrdE1W85g69Zin/Ax3ehzs=
+    - SCDT: eJx1lN+P0kAQx3cLhfYgSsx5xvhrztwTF7y2FKzJQXIxxicT9eHCG6lcT8H2aCgm8sebODO7QEmXF7I785mZne9Maci6C0VTwGgEg4a0XsPkVQeyJzf+7XD6ZXl3k85+Jdnm09+cCM+WyFrgveycMvExTmcaCabFzJWubMizXcYQeUl8Q0oHirqAa8rx+TEH68DvSWFB0JSPEHI1FHg6MnD2xnBr7JeMw60xLBmjrXHYlFIfI1caK/u2NLV7L4UN95YQLzoGL+dqs/3rcj1fPnyzAasIrc/ggoXwd0L027KRp/EmWdmSM09+dxBOuQjGVdwRuy3txrQN4cDkvHMnPOrNwhuaIIQrvNUOfCWSFcUsWry0JtQ19KDnSGvrIw1Tu+Rj1AG0UYWmrJX8Q+W3tT+iFzA94PslSYP3E8AfwAbhsnQvTtS9jo3hXeAD0YEzG4NPj0fBcSI8SbJe88qx0WtKi482eQQf2xT0zqMxwRUJLls6WdEihMvQkX1tVmw80vG4KZiVPI5azTGtAragX2rxS9Hhcl/9AHpcQKGFq3PYfNTFcRIoZ+Fon1rHwCNR1CLWRRN6PvjQJZl4V0K1K8FuV2hqAJN/HVg+jfM8XsXrP8X05zRbrtbxaur5WJ7m7Io69e+Y6MxA1/CzMMILIzw0w7ERDj3Vn7vV1NjBKllj7D7yhD6VI+83sceeX2VZ5QF0j7RQDXB4LB50VR/agKPrcjcXKsnzcjcz/O+bP8SYaZ/IIZXpP6sakJkCbiUpHRkDFkcDBqExID4aoMfDZz/gjs5V+Fm5ozhNsh/z2b6d1m7FqnhmwmvwwUwvzHRkpmMz/Z7oN4o+LdNFPs+TQ5bX961in1XZdTHfxAe4GjydB97u4+zTxynlfwX8clY=
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
-        - short bbb
-        - short bbb2
-        - short sss
-        - short sss2
+        - short parts
         - long alchemy
         - long luck
         - short random25
@@ -1767,11 +1744,10 @@
         - float tempf
         - long tempi
         - short state
-        - short alembic_up
-        - short alembic_down
+        - short calcinator
         - short mortar
         - short retort
-        - short calcinator
+        - short alembic
         - float exp
         - ""
         - if ( state == 5 )
@@ -1782,37 +1758,26 @@
         - endif
         - ""
         - if ( state == 4 )
-        - "\tset bbb2 to 0"
-        - "\tset sss2 to 0"
-        - "\tset bbb to 0"
-        - "\tset sss to 0"
-        - "\tset temp to 2"
-        - "\tif ( in > 0 )"
-        - "\t\tset in to ( in - pin )"
-        - "\t\tif ( in > 0 )"
-        - "\t\t\tset bbb2 to alembic_down"
-        - "\t\t\tset sss2 to alembic_up"
-        - "\t\t\tset temp to 1"
+        - "\tset parts to 0"
+        - "\tif ( in < 0 )"
+        - "\t\tset A1V6_AlchemyRes to 2"
+        - "\telse"
+        - "\t\tif ( in < 20 )"
+        - "\t\t\tset parts to 2"
+        - "\t\telseif ( in < 40 )"
+        - "\t\t\tset parts to 3"
+        - "\t\telseif ( in < 60 )"
+        - "\t\t\tset parts to 4"
+        - "\t\telseif ( in < 80 )"
+        - "\t\t\tset parts to 6"
         - "\t\telse"
-        - "\t\t\tset in to ( in + 100 )"
+        - "\t\t\tset parts to 8"
         - "\t\tendif"
-        - "\tendif"
-        - "\tset rrandom100 to ( Random 100 )"
-        - "\tif ( rrandom100 < in )"
-        - "\t\tset bbb to alembic_down"
-        - "\t\tset sss to alembic_up"
-        - "\t\tset temp to 1"
-        - "\tendif"
-        - "\tset A1V6_AlchemyRes to temp"
-        - "\tif ( temp == 1 )"
+        - "\t\tset A1V6_AlchemyRes to 1"
         - "\t\tset A1V6_ModAlchemyExp.Value to exp"
         - "\t\tStartScript A1V6_ModAlchemyExp"
         - "\tendif"
-        - "\tset A1V6_PotionB to bbb"
-        - "\tset A1V6_PotionC to bbb2"
-        - "\tset A1V6_PotionS to sss"
-        - "\tset A1V6_PotionQ to sss2"
-        - "\tset A1V6_PotionE to 0"
+        - "\tset A1V6_PotionQ to parts"
         - "\tset state to 5"
         - "\treturn"
         - endif
@@ -1825,6 +1790,7 @@
         - "\tset temp to ( Random 100 )"
         - "\tset random25 to ( temp / 4 )"
         - "\tset rrandom100 to ( Random 100 )"
+        - "\tset temp to ( Random 100 )"
         - ""
         - "\tif ( luck < 40 )"
         - "\t\tset lk to ( luck - 40 )"
@@ -1849,19 +1815,23 @@
         - "\t\tset exp to p_success"
         - "\t\tset exp to ( 100.0 / exp )"
         - "\tendif"
-        - "\tif ( p_success > calcinator )"
-        - "\t\tset p_success to calcinator"
+        - "\tif ( p_success > alembic )"
+        - "\t\tset p_success to alembic"
         - "\tendif"
-        - "\tif ( rrandom100 >= p_success )"
+        - "\tif ( temp >= p_success )"
         - "\t\tset in to 0"
         - "\tendif"
         - "\tif ( in > 1 )"
-        - "\t\tset in to lk"
+        - "\t\tset tempi to ( lk + random25 )"
+        - "\t\tset in to ( tempi - 32 )"
+        - "\t\tif ( in > mortar )"
+        - "\t\t\tset in to mortar"
+        - "\t\tendif"
+        - "\t\tif ( rrandom100 < calcinator )"
+        - "\t\t\tset in to in + 20"
+        - "\t\tendif"
         - "\telse"
-        - "\t\tset in to 0"
-        - "\tendif"
-        - "\tif ( in > mortar )"
-        - "\t\tset in to mortar"
+        - "\t\tset in to -1"
         - "\tendif"
         - "\tset state to 4"
         - "\treturn"
@@ -1892,70 +1862,59 @@
         - "\t\tset retort to -20"
         - "\tendif"
         - ""
-        - "\tif ( GetItemCount apparatus_g_alembic_01 > 0 )"
-        - "\t\tset alembic_up to 5"
-        - "\t\tset alembic_down to 3"
-        - "\telseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
-        - "\t\tset alembic_up to 4"
-        - "\t\tset alembic_down to 4"
-        - "\telseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
-        - "\t\tset alembic_up to 3"
-        - "\t\tset alembic_down to 5"
-        - "\telseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
-        - "\t\tset alembic_up to 2"
-        - "\t\tset alembic_down to 6"
-        - "\telseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
-        - "\t\tset alembic_up to 1"
-        - "\t\tset alembic_down to 7"
-        - "\telseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
-        - "\t\tset alembic_up to 1"
-        - "\t\tset alembic_down to 7"
+        - "\tif ( GetItemCount apparatus_g_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 82"
+        - "\telseif ( GetItemCount apparatus_m_calcinator_01 > 0 )"
+        - "\t\tset calcin_up to 68"
+        - "\telseif ( GetItemCount apparatus_j_calcinator_01 > 0 )"
+        - "\t\tset calcin_up to 54"
+        - "\telseif ( GetItemCount apparatus_a_calcinator_01 > 0 )"
+        - "\t\tset calcin_up to 40"
         - "\telse"
-        - "\t\tset alembic_up to 0"
-        - "\t\tset alembic_down to 8"
+        - "\t\tset calcin_up to 12"
         - "\tendif"
         - ""
-        - "\tif ( GetItemCount apparatus_g_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 100"
-        - "\telseif ( GetItemCount apparatus_m_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 95"
-        - "\telseif ( GetItemCount apparatus_j_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 80"
-        - "\telseif ( GetItemCount apparatus_a_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 65"
+        - "\tif ( GetItemCount apparatus_g_alembic_01 > 0 )"
+        - "\t\tset alembic to 100"
+        - "\telseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
+        - "\t\tset alembic to 90"
+        - "\telseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
+        - "\t\tset alembic to 80"
+        - "\telseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
+        - "\t\tset alembic to 70"
+        - "\telseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
+        - "\t\tset alembic to 60"
+        - "\telseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
+        - "\t\tset alembic to 60"
         - "\telse"
-        - "\t\tset calcinator to 50"
+        - "\t\tset alembic to 50"
         - "\tendif"
         - "\tset state to 3"
         - "\treturn"
         - endif
         - ""
         - End
+        - ""
 - SCPT:
     - SCHD:
         name: A1V6_CalcAlchemy5_sc
         vars:
-          shorts: 15
+          shorts: 10
           longs: 5
           floats: 2
-        data_size: 2149
-        var_table_size: 145
+        data_size: 1834
+        var_table_size: 117
     - SCVR:
-        - bbb
-        - ccc
-        - sss
-        - qqq
-        - eee
+        - quality
         - random25
         - rrandom100
         - in
         - temp
         - state
-        - alembic_up
-        - alembic_down
+        - calcinator
         - mortar
         - retort
-        - calcinator
+        - alembic
         - alchemy
         - luck
         - lk
@@ -1963,15 +1922,11 @@
         - tempi
         - tempf
         - exp
-    - SCDT: eJx1VdtO20AQ3XWyiQ0Gooq26n2oeApKsRM7JBIgUYT6VKkXqcpb5IbQhtokilOpfHwlZmaX3Lx5yXrnnDN7ZmcWKrLsQb4l4OwM4op03kLvTQ2yJxfhj3b/8/j6Ih38Hmb3V/8mxAiURK4DwevaPjMuk3RgKHE/H3jSkxVZn2eMkC+Jj6tj1pJZy2ZVtFakdCF3BZxS7NMeJzeJvw1zB5pV+RLJnvCY1gzgCDW48UjTDPigLcAfyLcFHLkLMNKnI+gUwba2hGCpCHa0TwTLBqxKyZYxpEyIKpaeMb9qxJ+nc4tG1sBVI2vgqhG/aMRnI9abC5W0tfNGCgU3jhCvahaUc/kc/zKejcZ3HxWVJNail4pqWY9+V1TEevSrIvfr0StFBQgzV/EhD1BjPkAtX1YmaXI/nCrJjnt/akhO2Tz6KcAdhh0D88S40DuoXYuA7rCCO+ptBMe4qy4w7iHqTJvSktDbKICGK51HjLqUqiWMqS5gjHJWZWkJb2tcGbxDZzI75j03LKWW4w9gSXC0tM939b6MpeBeoEEEsP3nEFIpN/SeQp4Rip7y4+RgUJUOfypCBH/6JPoQUMPhmCd22yTL94jCx9AnYz7g1cD5mdHjDGJWQhz9SM9pqFL16LTCThHwuK5WExp6PF1RhUYIIdTNkVqc75isij/pGrj7ke5+d9596gpA738Nxk+TySSZJrO/ef9XPxtPZ8m0H4SYjLq6I0rQ7bo2cmYln9jJt1ZybCcnVnKrq0vfWS3dVsV0OMMEC/kuPYANRdi4wYYaily2EkN9Qx1FgcveA6jrYkwA/+hyNc6BTvJsuZokHWY/R4NFlm0qB1cf15ZrE2V2UWREkVV0axe1jCi2ihK7qGlEbRS906L9ZVE+GU2Gq5LQSE5Q8l5Lnhcls3x0n9hU/DQ5FJhQh+fjUKd6sXyjA/zfOrpLsDcLC3uiTC/ZtSmyDQp8G7FVcLtR0LGfkGwUtGM9KfQdB/MX3aIXLeUDobKjgQ==
+    - SCDT: eJx1lN9v2kAMx+8CIUmHNjR1nab9cqc+tep6CQkFqSBV07SnSdseJt5QRukGSwoiTBp//KTZvgOCuLygs/2xfV+fQ0PWAygaAvp9SBrSeQPD1y3In96G3zujz/O722z8a5KvP/5dEKFciawD6lXrmIkPaTY2SDIqxoEMZEOebCvGyEviG1L6UNQF3FCNT0842SR+mxQORJ58jFBgoEiZzNDfOeONMyo5Oxtnu+TsbpyxJ6U5JoG0dg5daZN7L4UL944QL1uWKNdqsv/LfDWdP3x1AbsIM5/kjAcRbgfRbsrGIkvXk6UrufLwdwvhjJtg3kG4y2HHhLGsK3wYnrbuhCJtDlroghiu0KrtxUokTxSrmOFlNaHNWMGlL51NjGaYuaUYoz5kuoMna6V4R8ddE+/SDZhO2L6g0aB9BPgDKBAuSnYRaLuOwtAWeEEM4JsNIKTL48A3b07eG145dipPOnx0KSL42KSk94qeCa5o4PKRKVYcEcJt6MixJk9s0Df5uClYlSK+Xs0BrQJKMDd1+KYYCFhXO4JLbqDRwjc1XD6a5vgSOM7CMzG9jpGioehFrAsPLkMI4ZzGxLsS612JtrtCrwYw/NeC+bN0sUiX6epPMfo5yufLVbocqRDb0zv7oga9nm+Dcyt8bYdnVjixw6kVbve0PL8kr0LFcrLCArv0gD6XChE2VlVoOGT5KgmcV+g4TPD57grOtRjjwOfTas50kRdlNWP8/5s+pFhpV8jDgXTpL+owIa9M6HStCbPKhCS2JqSVCbHSsugcRqzoVKeflBWl2ST/MR3vco9EnT4z34bnNhy30k7P7HTXTqd2+prot5o+LtPFYrqY7LMdYt9p9vkhuyqm63QP1xOic6K2H2ibPlAp/wNdvXN/
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
-        - short bbb
-        - short ccc
-        - short sss
-        - short qqq
-        - short eee
+        - short quality
         - long alchemy
         - long luck
         - short random25
@@ -1983,11 +1938,10 @@
         - float tempf
         - long tempi
         - short state
-        - short alembic_up
-        - short alembic_down
+        - short calcinator
         - short mortar
         - short retort
-        - short calcinator
+        - short alembic
         - float exp
         - ""
         - if ( state == 5 )
@@ -1998,46 +1952,26 @@
         - endif
         - ""
         - if ( state == 4 )
-        - "\tset bbb to 0"
-        - "\tset ccc to 0"
-        - "\tset sss to 0"
-        - "\tset qqq to 0"
-        - "\tset eee to 0"
+        - "\tset quality to 0"
         - "\tif ( in < 0 )"
         - "\t\tset A1V6_AlchemyRes to 2"
         - "\telse"
-        - "\t\tset temp to ( in + 20 )"
-        - "\t\tif ( temp < 20 )"
-        - "\t\t\tset bbb to ( bbb + alembic_up )"
-        - "\t\telseif ( temp < 40 )"
-        - "\t\t\tset ccc to ( ccc + alembic_up )"
-        - "\t\telseif ( temp < 60 )"
-        - "\t\t\tset sss to ( sss + alembic_up )"
-        - "\t\telseif ( temp < 80 )"
-        - "\t\t\tset qqq to ( qqq + alembic_up )"
-        - "\t\telse"
-        - "\t\t\tset eee to ( eee + alembic_up )"
-        - "\t\tendif"
         - "\t\tif ( in < 20 )"
-        - "\t\t\tset bbb to ( bbb + alembic_down )"
+        - "\t\t\tset quality to 1"
         - "\t\telseif ( in < 40 )"
-        - "\t\t\tset ccc to ( ccc + alembic_down )"
+        - "\t\t\tset quality to 2"
         - "\t\telseif ( in < 60 )"
-        - "\t\t\tset sss to ( sss + alembic_down )"
+        - "\t\t\tset quality to 3"
         - "\t\telseif ( in < 80 )"
-        - "\t\t\tset qqq to ( qqq + alembic_down )"
+        - "\t\t\tset quality to 4"
         - "\t\telse"
-        - "\t\t\tset eee to ( eee + alembic_down )"
+        - "\t\t\tset quality to 5"
         - "\t\tendif"
         - "\t\tset A1V6_AlchemyRes to 1"
         - "\t\tset A1V6_ModAlchemyExp.Value to exp"
         - "\t\tStartScript A1V6_ModAlchemyExp"
         - "\tendif"
-        - "\tset A1V6_PotionB to bbb"
-        - "\tset A1V6_PotionC to ccc"
-        - "\tset A1V6_PotionS to sss"
-        - "\tset A1V6_PotionQ to qqq"
-        - "\tset A1V6_PotionE to eee"
+        - "\tset A1V6_PotionQ to quality"
         - "\tset state to 5"
         - "\treturn"
         - endif
@@ -2050,6 +1984,7 @@
         - "\tset temp to ( Random 100 )"
         - "\tset random25 to ( temp / 4 )"
         - "\tset rrandom100 to ( Random 100 )"
+        - "\tset temp to ( Random 100 )"
         - ""
         - "\tif ( luck < 40 )"
         - "\t\tset lk to ( luck - 40 )"
@@ -2074,20 +2009,23 @@
         - "\t\tset exp to p_success"
         - "\t\tset exp to ( 100.0 / exp )"
         - "\tendif"
-        - "\tif ( p_success > calcinator )"
-        - "\t\tset p_success to calcinator"
+        - "\tif ( p_success > alembic )"
+        - "\t\tset p_success to alembic"
         - "\tendif"
-        - "\tif ( rrandom100 >= p_success )"
+        - "\tif ( temp >= p_success )"
         - "\t\tset in to 0"
         - "\tendif"
         - "\tif ( in > 1 )"
         - "\t\tset tempi to ( lk + random25 )"
         - "\t\tset in to ( tempi - 32 )"
+        - "\t\tif ( in > mortar )"
+        - "\t\t\tset in to mortar"
+        - "\t\tendif"
+        - "\t\tif ( rrandom100 < calcinator )"
+        - "\t\t\tset in to in + 20"
+        - "\t\tendif"
         - "\telse"
         - "\t\tset in to -1"
-        - "\tendif"
-        - "\tif ( in > mortar )"
-        - "\t\tset in to mortar"
         - "\tendif"
         - "\tset state to 4"
         - "\treturn"
@@ -2118,39 +2056,32 @@
         - "\t\tset retort to -20"
         - "\tendif"
         - ""
-        - "\tif ( GetItemCount apparatus_g_alembic_01 > 0 )"
-        - "\t\tset alembic_up to 5"
-        - "\t\tset alembic_down to 3"
-        - "\telseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
-        - "\t\tset alembic_up to 4"
-        - "\t\tset alembic_down to 4"
-        - "\telseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
-        - "\t\tset alembic_up to 3"
-        - "\t\tset alembic_down to 5"
-        - "\telseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
-        - "\t\tset alembic_up to 2"
-        - "\t\tset alembic_down to 6"
-        - "\telseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
-        - "\t\tset alembic_up to 1"
-        - "\t\tset alembic_down to 7"
-        - "\telseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
-        - "\t\tset alembic_up to 1"
-        - "\t\tset alembic_down to 7"
+        - "\tif ( GetItemCount apparatus_g_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 82"
+        - "\telseif ( GetItemCount apparatus_m_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 68"
+        - "\telseif ( GetItemCount apparatus_j_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 54"
+        - "\telseif ( GetItemCount apparatus_a_calcinator_01 > 0 )"
+        - "\t\tset calcinator to 40"
         - "\telse"
-        - "\t\tset alembic_up to 0"
-        - "\t\tset alembic_down to 8"
+        - "\t\tset calcinator to 12"
         - "\tendif"
         - ""
-        - "\tif ( GetItemCount apparatus_g_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 100"
-        - "\telseif ( GetItemCount apparatus_m_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 95"
-        - "\telseif ( GetItemCount apparatus_j_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 80"
-        - "\telseif ( GetItemCount apparatus_a_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 65"
+        - "\tif ( GetItemCount apparatus_g_alembic_01 > 0 )"
+        - "\t\tset alembic to 100"
+        - "\telseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
+        - "\t\tset alembic to 90"
+        - "\telseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
+        - "\t\tset alembic to 80"
+        - "\telseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
+        - "\t\tset alembic to 70"
+        - "\telseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
+        - "\t\tset alembic to 60"
+        - "\telseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
+        - "\t\tset alembic to 60"
         - "\telse"
-        - "\t\tset calcinator to 50"
+        - "\t\tset alembic to 50"
         - "\tendif"
         - "\tset state to 3"
         - "\treturn"
