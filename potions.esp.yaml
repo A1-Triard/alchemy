@@ -329,7 +329,7 @@
     - FNAM: Зелье воспоминания
     - ALDT:
         weight: 0.5
-        value: 130
+        value: 200
         auto_calculate_value: false
     - ENAM:
         index: Recall

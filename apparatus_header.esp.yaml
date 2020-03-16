@@ -1706,10 +1706,10 @@
           shorts: 11
           longs: 5
           floats: 2
-        data_size: 1830
-        var_table_size: 119
+        data_size: 1932
+        var_table_size: 121
     - SCVR:
-        - parts
+        - potions
         - random25
         - rrandom100
         - in
@@ -1727,11 +1727,11 @@
         - tempi
         - tempf
         - exp
-    - SCDT: eJx1lN+P0kAQx3cLhfYgSsx5xvhrztwTF7y2FKzJQXIxxicT9eHCG6lcT8H2aCgm8sebODO7QEmXF7I785mZne9Maci6C0VTwGgEg4a0XsPkVQeyJzf+7XD6ZXl3k85+Jdnm09+cCM+WyFrgveycMvExTmcaCabFzJWubMizXcYQeUl8Q0oHirqAa8rx+TEH68DvSWFB0JSPEHI1FHg6MnD2xnBr7JeMw60xLBmjrXHYlFIfI1caK/u2NLV7L4UN95YQLzoGL+dqs/3rcj1fPnyzAasIrc/ggoXwd0L027KRp/EmWdmSM09+dxBOuQjGVdwRuy3txrQN4cDkvHMnPOrNwhuaIIQrvNUOfCWSFcUsWry0JtQ19KDnSGvrIw1Tu+Rj1AG0UYWmrJX8Q+W3tT+iFzA94PslSYP3E8AfwAbhsnQvTtS9jo3hXeAD0YEzG4NPj0fBcSI8SbJe88qx0WtKi482eQQf2xT0zqMxwRUJLls6WdEihMvQkX1tVmw80vG4KZiVPI5azTGtAragX2rxS9Hhcl/9AHpcQKGFq3PYfNTFcRIoZ+Fon1rHwCNR1CLWRRN6PvjQJZl4V0K1K8FuV2hqAJN/HVg+jfM8XsXrP8X05zRbrtbxaur5WJ7m7Io69e+Y6MxA1/CzMMILIzw0w7ERDj3Vn7vV1NjBKllj7D7yhD6VI+83sceeX2VZ5QF0j7RQDXB4LB50VR/agKPrcjcXKsnzcjcz/O+bP8SYaZ/IIZXpP6sakJkCbiUpHRkDFkcDBqExID4aoMfDZz/gjs5V+Fm5ozhNsh/z2b6d1m7FqnhmwmvwwUwvzHRkpmMz/Z7oN4o+LdNFPs+TQ5bX961in1XZdTHfxAe4GjydB97u4+zTxynlfwX8clY=
+    - SCDT: eJx1lN+L2kAQx3ej0cQTKuXao/THzZV78rAmMVoL58FRSp8KbR+Kb5J6XqtNzmAs1D++cDOzmxhx8yK7M5/vzM6P2JB1F7KmgMkEhg1pvYHp6w4kT2/9H6PZl/XdbTz/vUh2n/6lRHi2RNYC71XnlImPUTzXSDDL5q50ZUOeFxFD5CXxDSkdyOoCrinG5ycs1sLvi8yCoCnPEHI1FFCmBirHzt4Y5sZRyTjKjWHJOM6Ng6aU+hi4dKqLFmS2ADRBH+s9YcXNBHzP04/1cwwdaIUeC2vCgelF5054VAzKapQIGcEyrE4iDlcEG+rDoKam3kthw70lxMuOwcux2mz/ut4u1w/fbEoj9BSGl9xuv2j3oC0baRztFhtbcuTpnw7CMSdB3ZF7zG5Lu7lRRZV4s6gsbFQI/cMOHJI8N4yiRxTXhLqG2DtHWrmPJhXbJR+jDqCNMjRlreQfKb+t/WN6AdNDvnOb8d4C/AEsEK5K96yl7nUsDO8CH4gOmrMaMzYcJ8L7QtZrXmw2ek1p8dEmj+Bjm0TvPBoT9KnhOH0VLDshhNPQkX1t7hgulNLjgmBU8jjqA7ihVcAS9Estfik6XK5rEEBPrZdK4OoYNh91cr16jvappQ88aopa97poQs/Hbezy6tKuhGpXgmJXaGoA0/8dWD+L0jTaRNu/2ezXLFlvttFm5vmYnubsijrV75joxEDX8OMzwisjPDLDkREOPVWfm/fUWMFmsUXtXtmiT6Xi/Sa26vnHLHd5CN2KEo4FDo/Fg66qQxtwdF2u5lIFeVGuZo7/sMuHCCPtAznU5cAxCZJKwWhsFKwqBcPQKIgqBfl46OwHXNGFkj8vVxTFi+Tncr7XnhQrdownJrwGH8z0ykyPzXRkpt8Tfa7o0zKdpct0ccjy+r5V7Nkxu82Wu+gAVx2i89ArPs4BfZxSPgL9oX9L
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
-        - short parts
+        - short potions
         - long alchemy
         - long luck
         - short random25
@@ -1758,26 +1758,35 @@
         - endif
         - ""
         - if ( state == 4 )
-        - "\tset parts to 0"
+        - "\tset potions to 0"
         - "\tif ( in < 0 )"
         - "\t\tset A1V6_AlchemyRes to 2"
         - "\telse"
         - "\t\tif ( in < 20 )"
-        - "\t\t\tset parts to 2"
+        - "\t\t\tset temp to 8"
         - "\t\telseif ( in < 40 )"
-        - "\t\t\tset parts to 3"
+        - "\t\t\tset temp to 6"
         - "\t\telseif ( in < 60 )"
-        - "\t\t\tset parts to 4"
+        - "\t\t\tset temp to 4"
         - "\t\telseif ( in < 80 )"
-        - "\t\t\tset parts to 6"
+        - "\t\t\tset temp to 3"
         - "\t\telse"
-        - "\t\t\tset parts to 8"
+        - "\t\t\tset temp to 2"
+        - "\t\tendif"
+        - "\t\tset in to ( pin / temp )"
+        - "\t\tif ( in >= 100 )"
+        - "\t\t\tset potions to 1"
+        - "\t\t\tset in to ( in - 100 )"
+        - "\t\tendif"
+        - "\t\tset rrandom100 to ( Random 100 )"
+        - "\t\tif ( rrandom100 < in )"
+        - "\t\t\tset potions to ( potions + 1 )"
         - "\t\tendif"
         - "\t\tset A1V6_AlchemyRes to 1"
         - "\t\tset A1V6_ModAlchemyExp.Value to exp"
         - "\t\tStartScript A1V6_ModAlchemyExp"
         - "\tendif"
-        - "\tset A1V6_PotionQ to parts"
+        - "\tset A1V6_PotionQ to potions"
         - "\tset state to 5"
         - "\treturn"
         - endif
@@ -1828,7 +1837,7 @@
         - "\t\t\tset in to mortar"
         - "\t\tendif"
         - "\t\tif ( rrandom100 < calcinator )"
-        - "\t\t\tset in to in + 20"
+        - "\t\t\tset in to ( in + 20 )"
         - "\t\tendif"
         - "\telse"
         - "\t\tset in to -1"
@@ -1865,13 +1874,13 @@
         - "\tif ( GetItemCount apparatus_g_calcinator_01 > 0 )"
         - "\t\tset calcinator to 82"
         - "\telseif ( GetItemCount apparatus_m_calcinator_01 > 0 )"
-        - "\t\tset calcin_up to 68"
+        - "\t\tset calcinator to 68"
         - "\telseif ( GetItemCount apparatus_j_calcinator_01 > 0 )"
-        - "\t\tset calcin_up to 54"
+        - "\t\tset calcinator to 54"
         - "\telseif ( GetItemCount apparatus_a_calcinator_01 > 0 )"
-        - "\t\tset calcin_up to 40"
+        - "\t\tset calcinator to 40"
         - "\telse"
-        - "\t\tset calcin_up to 12"
+        - "\t\tset calcinator to 12"
         - "\tendif"
         - ""
         - "\tif ( GetItemCount apparatus_g_alembic_01 > 0 )"
@@ -2022,7 +2031,7 @@
         - "\t\t\tset in to mortar"
         - "\t\tendif"
         - "\t\tif ( rrandom100 < calcinator )"
-        - "\t\t\tset in to in + 20"
+        - "\t\t\tset in to ( in + 20 )"
         - "\t\tendif"
         - "\telse"
         - "\t\tset in to -1"

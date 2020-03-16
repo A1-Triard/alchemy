@@ -4,6 +4,7 @@
       description:
       - Модифицирует некоторые существующие и добавляет новые зелья. Вспомогательный
         плагин для A1_Alchemy_V6_Apparatus.esp
+      - ''
       - Версия для использования с MagicMarker
       records: 321
       type: ESP
@@ -327,7 +328,7 @@
   - FNAM: Зелье воспоминания
   - ALDT:
       auto_calculate_value: false
-      value: 130
+      value: 200
       weight: 0.5
   - ENAM:
       area: 0
