@@ -917,6 +917,7 @@ def gen_potions(icons_set):
     with open('potions_header.esp.yaml', 'r', encoding='utf-8') as f:
         esp_header = yaml.load(f, Loader=yaml.FullLoader)
 
+    esp_header[0]['TES3'][0]['HEDR']['description'].append('')
     esp_header[0]['TES3'][0]['HEDR']['description'].append('Версия для использования без MagicMarker' if icons_set == 'std' else 'Версия для использования с MagicMarker')
     esp_header[0]['TES3'][0]['HEDR']['records'] = len(esp_header) + len(potions) + len(potions_1_8) - 1
 
@@ -975,6 +976,7 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
     with open('apparatus_header.esp.yaml', 'r', encoding='utf-8') as f:
         esp_header = yaml.load(f, Loader=yaml.FullLoader)
 
+    esp_header[0]['TES3'][0]['HEDR']['description'].append('')
     esp_header[0]['TES3'][0]['HEDR']['description'].append('Версия для использования без EVA.esp' if ingrs_set == 'std' else 'Версия для использования с EVA.esp')
     esp_header[0]['TES3'][0]['HEDR']['records'] = len(esp_header) + len(add_items) + len(check_scripts) + len(add_scripts) + len(del_scripts) + len(level_books) - 1
 
