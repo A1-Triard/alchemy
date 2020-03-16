@@ -4565,7 +4565,7 @@
         value: 0
         is_key: false
     - SCRI: A1V6_RoadBagAlchItem_1_sc
-    - ITEX: "m\\Tx_clothbolt_02.tga"
+    - ITEX: "m\\a1_alchemy_chest.dds"
 - CONT:
     - NAME: A1V6_RoadBagAlchCont_1
     - MODL: "o\\contain_chest10.nif"
@@ -4582,7 +4582,7 @@
         value: 0
         is_key: false
     - SCRI: A1V6_RoadBagIncpItem_1_sc
-    - ITEX: "m\\Tx_clothbolt_02.tga"
+    - ITEX: "m\\a1_alchemy_chest.dds"
 - CONT:
     - NAME: A1V6_RoadBagAlchCont_2
     - MODL: "o\\contain_chest10.nif"
@@ -4606,7 +4606,7 @@
         value: 0
         is_key: false
     - SCRI: A1V6_RoadBagAlchItem_2_sc
-    - ITEX: "m\\Tx_clothbolt_02.tga"
+    - ITEX: "m\\a1_alchemy_chest.dds"
 - MISC:
     - NAME: A1V6_RoadBagAlchItem_3
     - MODL: "o\\contain_chest10.nif"
@@ -4616,7 +4616,7 @@
         value: 0
         is_key: false
     - SCRI: A1V6_RoadBagAlchItem_3_sc
-    - ITEX: "m\\Tx_clothbolt_02.tga"
+    - ITEX: "m\\a1_alchemy_chest.dds"
 - CONT:
     - NAME: A1V6_RoadBagIncpCont_2
     - MODL: "o\\contain_chest10.nif"
@@ -4640,7 +4640,7 @@
         value: 0
         is_key: false
     - SCRI: A1V6_RoadBagIncpItem_2_sc
-    - ITEX: "m\\Tx_clothbolt_02.tga"
+    - ITEX: "m\\a1_alchemy_chest.dds"
 - MISC:
     - NAME: A1V6_RoadBagIncpItem_3
     - MODL: "o\\contain_chest10.nif"
@@ -4650,4 +4650,4 @@
         value: 0
         is_key: false
     - SCRI: A1V6_RoadBagIncpItem_3_sc
-    - ITEX: "m\\Tx_clothbolt_02.tga"
+    - ITEX: "m\\a1_alchemy_chest.dds"
