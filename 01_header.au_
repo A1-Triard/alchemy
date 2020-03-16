@@ -23,7 +23,7 @@ $tr = ControlListView("Data Files", "", 0x420, "FindItem", "Tribunal.esm", 0)
 _GUICtrlListView_ClickItem($list, $tr, "left", False, 2)
 $bl = ControlListView("Data Files", "", 0x420, "FindItem", "Bloodmoon.esm", 0)
 _GUICtrlListView_ClickItem($list, $bl, "left", False, 2)
-$pt = ControlListView("Data Files", "", 0x420, "FindItem", "A1_Alchemy_Potions.esp", 0)
+$pt = ControlListView("Data Files", "", 0x420, "FindItem", "alchemy_potions.esp", 0)
 _GUICtrlListView_ClickItem($list, $pt, "left", False, 2)
 If $ingrs_set == "std" Then
     $pl = ControlListView("Data Files", "", 0x420, "FindItem", "alchemy_std.esp", 0)

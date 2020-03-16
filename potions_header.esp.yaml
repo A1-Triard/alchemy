@@ -1,0 +1,14 @@
+- TES3:
+    - HEDR:
+        version: 1067869798
+        type: ESP
+        author: A1
+        description:
+          - Модифицирует некоторые существующие и добавляет новые зелья. Вспомогательный плагин для A1_Alchemy_V6_Apparatus.esp
+        records: 0
+    - MAST: Morrowind.esm
+    - DATA: 79764287
+    - MAST: Tribunal.esm
+    - DATA: 6616539
+    - MAST: Bloodmoon.esm
+    - DATA: 11799703
