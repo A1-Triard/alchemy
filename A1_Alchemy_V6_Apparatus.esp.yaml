@@ -15271,7 +15271,7 @@
           shorts: 11
           longs: 5
           floats: 2
-        data_size: 1932
+        data_size: 2179
         var_table_size: 121
     - SCVR:
         - potions
@@ -15292,7 +15292,7 @@
         - tempi
         - tempf
         - exp
-    - SCDT: eJx1lN+L2kAQx3ej0cQTKuXao/THzZV78rAmMVoL58FRSp8KbR+Kb5J6XqtNzmAs1D++cDOzmxhx8yK7M5/vzM6P2JB1F7KmgMkEhg1pvYHp6w4kT2/9H6PZl/XdbTz/vUh2n/6lRHi2RNYC71XnlImPUTzXSDDL5q50ZUOeFxFD5CXxDSkdyOoCrinG5ycs1sLvi8yCoCnPEHI1FFCmBirHzt4Y5sZRyTjKjWHJOM6Ng6aU+hi4dKqLFmS2ADRBH+s9YcXNBHzP04/1cwwdaIUeC2vCgelF5054VAzKapQIGcEyrE4iDlcEG+rDoKam3kthw70lxMuOwcux2mz/ut4u1w/fbEoj9BSGl9xuv2j3oC0baRztFhtbcuTpnw7CMSdB3ZF7zG5Lu7lRRZV4s6gsbFQI/cMOHJI8N4yiRxTXhLqG2DtHWrmPJhXbJR+jDqCNMjRlreQfKb+t/WN6AdNDvnOb8d4C/AEsEK5K96yl7nUsDO8CH4gOmrMaMzYcJ8L7QtZrXmw2ek1p8dEmj+Bjm0TvPBoT9KnhOH0VLDshhNPQkX1t7hgulNLjgmBU8jjqA7ihVcAS9Estfik6XK5rEEBPrZdK4OoYNh91cr16jvappQ88aopa97poQs/Hbezy6tKuhGpXgmJXaGoA0/8dWD+L0jTaRNu/2ezXLFlvttFm5vmYnubsijrV75joxEDX8OMzwisjPDLDkREOPVWfm/fUWMFmsUXtXtmiT6Xi/Sa26vnHLHd5CN2KEo4FDo/Fg66qQxtwdF2u5lIFeVGuZo7/sMuHCCPtAznU5cAxCZJKwWhsFKwqBcPQKIgqBfl46OwHXNGFkj8vVxTFi+Tncr7XnhQrdownJrwGH8z0ykyPzXRkpt8Tfa7o0zKdpct0ccjy+r5V7Nkxu82Wu+gAVx2i89ArPs4BfZxSPgL9oX9L
+    - SCDT: eJx1VW1rGkEQvj09vTNCTUgbSl8yKflkMNl7zQWSQAilnwptPxS/ydWY1vSM4llo/lP/YqEzs3t61jUQ2Z15nnl23rQh6h4UTQuuriBuCPst9N90YLJ3439NBh+ndzf58Mdo8vT+94wQ0hGItUG+7uwz4jbLhxoSDIqhJzzREIfLiBHiBeEbQrhQ1C24pBgfnjFZE7+MChuCpjhAkKdBASk1kJm6K2NUGpOKMSmNUcWYlsawKYQ+Bh6d6lYLCscCNMEZ5rvDjOsr8KXUj/VLGDrQCj0m1iwX+kedO0tSMkirkRBiLKZhdgLhcEJgQ34Y1FTUe2E5cG9b1quOwcux2mz/NF2Mp4+fHZKxdBfiYy737bLcYVs0Znn2NJo7giP3f3YQnLMI8jbcKbtt7eZCLbPEm01pYaEiOFuvwDqS+4ZRdIvymqWuEdbOFXbpo07lTsXHUBfQRgpNUav4E+V3tD+lFzA65juXGe8twA/ABOGkci9aeOcu5dylnu+Tdp0m0RUNT5vD8rGhZEtPlwXPFh/3qCwgT2UUX/hpmKSkgiYP+n92dcnwcxd8//Q8CmQSxszosZgqKuq1tB6PGD+Sxsqo2GI+/Xf1C1DdT2WMf0nFrkL8r8XDjrc6eWk0BErTeCtpnDMcRF4Tsl7yPrNRNoXNR4c8Fh/bRDqVNJ1wxsF2dLBihyCsSkf2tXlQcI8Uv+Bak8dVe39NG4Cd0w2yuWHo8LidYQA9tVVKwNMxHD5qcb1xrvapXQ8kzYLa8rrVxFbjEnZ5Y2lFIrUiwXJFaFgB+n87MH2ezWbZPFv8KgbfB5PpfJHNB9JHeRpvTxXRNaEnBnQNv3OM4AcjODGDMyM4kio/r6ypMYP5aIHcFbNF3xBb3m/Cbnv+JparHEN3SwqbBJfbIqGr8tAGbF2XszlWQV5WsxniD8v4McNIq0AuVTlwTYTJVkKSGgkPWwlxZCRkWwlle+jsB5zRkaK/qGaU5aPJt/Fwxd1ZjtgmfGKC1+DCjH4wo1MzOjOjzwl9qND7VXQxG89G61ge33cKe7CJXRTjp2wNripE51gulzOk5RTiH1h8nhY=
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
@@ -15380,7 +15380,26 @@
         - "\tset lk to ( lk + alchemy )"
         - "\tset lk to ( lk + retort )"
         - ""
-        - "\tset p_success to lk"
+        - "\tif ( lk < -110 )"
+        - "\t\tset p_success to 0"
+        - "\telseif ( lk < 30 )"
+        - "\t\tset lk to ( 30 - lk )"
+        - "\t\tset tempf to lk"
+        - "\t\tset tempf to ( tempf + 0.045918368 )"
+        - "\t\tset tempf to ( GetSquareRoot tempf )"
+        - "\t\tset tempf to ( 11.7420635 - tempf )"
+        - "\t\tset p_success to tempf"
+        - "\telseif ( lk < 100 )"
+        - "\t\tset lk to ( 100 - lk )"
+        - "\t\tset tempf to lk"
+        - "\t\tset tempf to ( tempf * tempf )"
+        - "\t\tset tempf to ( 0.018055556 * tempf )"
+        - "\t\tset tempf to ( 100 - tempf )"
+        - "\t\tset p_success to tempf"
+        - "\telse"
+        - "\t\tset p_success to 100"
+        - "\tendif"
+        - ""
         - "\tif ( p_success > 100 )"
         - "\t\tset exp to 1"
         - "\telseif ( p_success <= 0 )"
@@ -15476,7 +15495,7 @@
           shorts: 10
           longs: 5
           floats: 2
-        data_size: 1834
+        data_size: 2081
         var_table_size: 117
     - SCVR:
         - quality
@@ -15496,7 +15515,7 @@
         - tempi
         - tempf
         - exp
-    - SCDT: eJx1lN9v2kAMx+8CIUmHNjR1nab9cqc+tep6CQkFqSBV07SnSdseJt5QRukGSwoiTBp//KTZvgOCuLygs/2xfV+fQ0PWAygaAvp9SBrSeQPD1y3In96G3zujz/O722z8a5KvP/5dEKFciawD6lXrmIkPaTY2SDIqxoEMZEOebCvGyEviG1L6UNQF3FCNT0842SR+mxQORJ58jFBgoEiZzNDfOeONMyo5Oxtnu+TsbpyxJ6U5JoG0dg5daZN7L4UL944QL1uWKNdqsv/LfDWdP3x1AbsIM5/kjAcRbgfRbsrGIkvXk6UrufLwdwvhjJtg3kG4y2HHhLGsK3wYnrbuhCJtDlroghiu0KrtxUokTxSrmOFlNaHNWMGlL51NjGaYuaUYoz5kuoMna6V4R8ddE+/SDZhO2L6g0aB9BPgDKBAuSnYRaLuOwtAWeEEM4JsNIKTL48A3b07eG145dipPOnx0KSL42KSk94qeCa5o4PKRKVYcEcJt6MixJk9s0Df5uClYlSK+Xs0BrQJKMDd1+KYYCFhXO4JLbqDRwjc1XD6a5vgSOM7CMzG9jpGioehFrAsPLkMI4ZzGxLsS612JtrtCrwYw/NeC+bN0sUiX6epPMfo5yufLVbocqRDb0zv7oga9nm+Dcyt8bYdnVjixw6kVbve0PL8kr0LFcrLCArv0gD6XChE2VlVoOGT5KgmcV+g4TPD57grOtRjjwOfTas50kRdlNWP8/5s+pFhpV8jDgXTpL+owIa9M6HStCbPKhCS2JqSVCbHSsugcRqzoVKeflBWl2ST/MR3vco9EnT4z34bnNhy30k7P7HTXTqd2+prot5o+LtPFYrqY7LMdYt9p9vkhuyqm63QP1xOic6K2H2ibPlAp/wNdvXN/
+    - SCDT: eJx1VG1v2kAMzgUCCUUbrbpO097cqZ+oaC+vDVJbqaqmfZq07cPEN5RRutGFggiT1v+0vzhptu+AdFwqFfns5/Fz9tlpiLoHRcOCiwuIG8J+A4PXHZjuXflfk+HH2c1VPvoxnj68/z0nhHQEYm2Qrzr7jLjO8pGGxMNi5AlPNMTBOmOEeEH4hhAuFHULzinHh6dM1sQv48KGoCmeIMjToEBqpu9unNHKGZScycoZlpzpyhk1hdBm7Amjsu8IU7m3wnLg1raslx1DlHO12f9ptpzM7j87gCqW7k98xI24XjcibIvGPM8exgtHcObBzw6CcxZB3lY45bCtw5jWsVwYHHZuLEm12XhCF0Rwiqfao1gJyR3FLLp5ec1Sx0hCzxX2KkY9zJ1SjKEu5EqhKWqleKLijo6ndANGx3w+ptbguQX4A1ggHJfOhYdnvNUOn86h5/ukXacZcUXD0+5wddlQsqen24K2xeYetQXkiYzivp+GSUoq6PJg8GdXtwx/d8H3T86iQCZhzIwei6mmol5L6/lS6kuiZVZsMZ/+u/oGqO6nMsa/pORXKf7X4jHEU52iNBoCpXFUL5U0ztlq1Ml7zpvGTtkUNpsORSw220Q6kTSdcMrJdnSyokUQViWTY20elMsLzS+41xRx1UZe0gbgy+kHsvnBMODxc4YB9FhAQQtX53DY1OIFN7Fo6pjawkDSLKj9q1tNfGrwoUvTwSsSqRUJ1itCwwow+NuB2bNsPs8W2fJXMfw+nM4Wy2wxlD7K03i7Vg36fdcEnhrBZ2bwnREcm8GZERz2VXluqbyKKhbjJSbY0D36SlQUYcLKihq2sXyVGLoVdWwTXL67hK4qRjvw+VQ1RyrJi3I1I/zsT+4zzLRJ1MSGpPRl3iZMKwlJaiTcVRLiyEjIKgmRVGWR7Qdc0aGiH5QryvLx9NtktOG21K66JvjUBMepNKPvzOjUjM7M6DNCv1Xo/TK6mE/m48fYhLDvFPb5NnZZTB6yR3DVIbJjuV7QkBZUiH8wG5JK
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -15574,7 +15593,26 @@
         - "\tset lk to ( lk + alchemy )"
         - "\tset lk to ( lk + retort )"
         - ""
-        - "\tset p_success to lk"
+        - "\tif ( lk < -110 )"
+        - "\t\tset p_success to 0"
+        - "\telseif ( lk < 30 )"
+        - "\t\tset lk to ( 30 - lk )"
+        - "\t\tset tempf to lk"
+        - "\t\tset tempf to ( tempf + 0.045918368 )"
+        - "\t\tset tempf to ( GetSquareRoot tempf )"
+        - "\t\tset tempf to ( 11.7420635 - tempf )"
+        - "\t\tset p_success to tempf"
+        - "\telseif ( lk < 100 )"
+        - "\t\tset lk to ( 100 - lk )"
+        - "\t\tset tempf to lk"
+        - "\t\tset tempf to ( tempf * tempf )"
+        - "\t\tset tempf to ( 0.018055556 * tempf )"
+        - "\t\tset tempf to ( 100 - tempf )"
+        - "\t\tset p_success to tempf"
+        - "\telse"
+        - "\t\tset p_success to 100"
+        - "\tendif"
+        - ""
         - "\tif ( p_success > 100 )"
         - "\t\tset exp to 1"
         - "\telseif ( p_success <= 0 )"
