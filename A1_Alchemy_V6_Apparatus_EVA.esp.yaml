@@ -25831,7 +25831,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_0
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 0
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25845,7 +25845,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_1
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 1
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25859,7 +25859,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_2
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 2
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25873,7 +25873,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_3
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 3
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25887,7 +25887,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_4
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 4
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25901,7 +25901,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_5
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 5
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25915,7 +25915,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_6
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 6
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25929,7 +25929,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_7
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 7
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25943,7 +25943,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_8
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 8
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25957,7 +25957,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_9
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 9
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25971,7 +25971,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_10
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 10
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25985,7 +25985,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_11
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 11
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -25999,7 +25999,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_12
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 12
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26013,7 +26013,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_13
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 13
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26027,7 +26027,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_14
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 14
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26041,7 +26041,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_15
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 15
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26055,7 +26055,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_16
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 16
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26069,7 +26069,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_17
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 17
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26083,7 +26083,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_18
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 18
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26097,7 +26097,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_19
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 19
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26111,7 +26111,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_20
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 20
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26125,7 +26125,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_21
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 21
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26139,7 +26139,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_22
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 22
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26153,7 +26153,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_23
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 23
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26167,7 +26167,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_24
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 24
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26181,7 +26181,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_25
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 25
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26195,7 +26195,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_26
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 26
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26209,7 +26209,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_27
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 27
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26223,7 +26223,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_28
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 28
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26237,7 +26237,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_29
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 29
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26251,7 +26251,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_30
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 30
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26265,7 +26265,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_31
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 31
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26279,7 +26279,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_32
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 32
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26293,7 +26293,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_33
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 33
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26307,7 +26307,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_34
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 34
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26321,7 +26321,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_35
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 35
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26335,7 +26335,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_36
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 36
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26349,7 +26349,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_37
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 37
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26363,7 +26363,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_38
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 38
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26377,7 +26377,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_39
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 39
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26391,7 +26391,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_40
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 40
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26405,7 +26405,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_41
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 41
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26419,7 +26419,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_42
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 42
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26433,7 +26433,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_43
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 43
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26447,7 +26447,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_44
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 44
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26461,7 +26461,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_45
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 45
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26475,7 +26475,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_46
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 46
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26489,7 +26489,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_47
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 47
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26503,7 +26503,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_48
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 48
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26517,7 +26517,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_49
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 49
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26531,7 +26531,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_50
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 50
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26545,7 +26545,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_51
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 51
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26559,7 +26559,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_52
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 52
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26573,7 +26573,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_53
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 53
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26587,7 +26587,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_54
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 54
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26601,7 +26601,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_55
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 55
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26615,7 +26615,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_56
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 56
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26629,7 +26629,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_57
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 57
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26643,7 +26643,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_58
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 58
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26657,7 +26657,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_59
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 59
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26671,7 +26671,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_60
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 60
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26685,7 +26685,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_61
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 61
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26699,7 +26699,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_62
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 62
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26713,7 +26713,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_63
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 63
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26727,7 +26727,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_64
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 64
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26741,7 +26741,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_65
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 65
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26755,7 +26755,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_66
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 66
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26769,7 +26769,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_67
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 67
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26783,7 +26783,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_68
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 68
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26797,7 +26797,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_69
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 69
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26811,7 +26811,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_70
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 70
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26825,7 +26825,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_71
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 71
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26839,7 +26839,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_72
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 72
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26853,7 +26853,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_73
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 73
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26867,7 +26867,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_74
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 74
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26881,7 +26881,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_75
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 75
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26895,7 +26895,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_76
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 76
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26909,7 +26909,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_77
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 77
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26923,7 +26923,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_78
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 78
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26937,7 +26937,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_79
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 79
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26951,7 +26951,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_80
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 80
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26965,7 +26965,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_81
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 81
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26979,7 +26979,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_82
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 82
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -26993,7 +26993,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_83
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 83
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27007,7 +27007,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_84
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 84
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27021,7 +27021,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_85
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 85
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27035,7 +27035,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_86
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 86
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27049,7 +27049,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_87
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 87
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27063,7 +27063,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_88
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 88
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27077,7 +27077,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_89
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 89
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27091,7 +27091,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_90
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 90
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27105,7 +27105,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_91
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 91
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27119,7 +27119,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_92
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 92
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27133,7 +27133,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_93
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 93
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27147,7 +27147,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_94
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 94
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27161,7 +27161,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_95
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 95
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27175,7 +27175,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_96
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 96
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27189,7 +27189,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_97
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 97
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27203,7 +27203,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_98
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 98
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
@@ -27217,7 +27217,7 @@
 - BOOK:
     - NAME: A1V6_AlchemyPlus_99
     - MODL: "m\\Text_Scroll_01.NIF"
-    - FNAM: msg 99
+    - FNAM: Навык алхимии вырос
     - BKDT:
         weight: 0.0
         value: 0
