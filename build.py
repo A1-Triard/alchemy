@@ -46,76 +46,76 @@ negative_effects = [
     'StuntedMagicka',
 ]
 
-Potion2 = namedtuple('Potion2', ['id_1_16', 'id_1', 'id_base', 'difficulty'])
-Potion5 = namedtuple('Potion5', ['id_broken_1_8', 'id_cheap_1_8', 'id_standard_1_8', 'id_qualitative_1_8', 'id_exclusive_1_8', 'id_broken_1', 'id_cheap_1', 'id_standard_1', 'id_qualitative_1', 'id_exclusive_1', 'id_base'])
+Potion2 = namedtuple('Potion2', ['id_1', 'id_base', 'difficulty'])
+Potion5 = namedtuple('Potion5', ['id_broken_1', 'id_cheap_1', 'id_standard_1', 'id_qualitative_1', 'id_exclusive_1', 'id_base'])
 
 Kind = namedtuple('Kind', ['name', 'effect', 'potion'])
 
 kinds = [
-    Kind('RestoreHealth', 'RestoreHealth', Potion5('p_restore_health_b_A1_8', 'p_restore_health_c_A1_8', 'p_restore_health_s_A1_8', 'p_restore_health_q_A1_8', 'p_restore_health_e_A1_8', 'p_restore_health_b', 'p_restore_health_c', 'p_restore_health_s', 'p_restore_health_q', 'p_restore_health_e', 'restore_health')),
-    Kind('RestoreFatig', 'RestoreFatigue', Potion5('p_restore_fatigue_b_A1_8', 'p_restore_fatigue_c_A1_8', 'p_restore_fatigue_s_A1_8', 'p_restore_fatigue_q_A1_8', 'p_restore_fatigue_e_A1_8', 'p_restore_fatigue_b', 'p_restore_fatigue_c', 'p_restore_fatigue_s', 'p_restore_fatigue_q', 'p_restore_fatigue_e', 'restore_fatigue')),
-    Kind('RestoreMagic', 'RestoreSpellPoints', Potion5('p_restore_magicka_b_A1_8', 'p_restore_magicka_c_A1_8', 'p_restore_magicka_s_A1_8', 'p_restore_magicka_q_A1_8', 'p_restore_magicka_e_A1_8', 'p_restore_magicka_b', 'p_restore_magicka_c', 'p_restore_magicka_s', 'p_restore_magicka_q', 'p_restore_magicka_e', 'restore_magicka')),
-    Kind('WaterWalk', 'WaterWalking', Potion5('p_water_walking_b_A1_8', 'p_water_walking_c_A1_8', 'p_water_walking_s_A1_8', 'p_water_walking_q_A1_8', 'p_water_walking_e_A1_8', 'p_water_walking_b_A1', 'p_water_walking_c_A1', 'p_water_walking_s', 'p_water_walking_q_A1', 'p_water_walking_e_A1', 'water_walking')),
-    Kind('WaterBrf', 'WaterBreathing', Potion5('p_water_breathing_b_A1_8', 'p_water_breathing_c_A1_8', 'p_water_breathing_s_A1_8', 'p_water_breathing_q_A1_8', 'p_water_breathing_e_A1_8', 'p_water_breathing_b_A1', 'p_water_breathing_c_A1', 'p_water_breathing_s', 'p_water_breathing_q_A1', 'p_water_breathing_e_A1', 'water_breathing')),
-    Kind('Levitate', 'Levitate', Potion5('p_levitation_b_A1_8', 'p_levitation_c_A1_8', 'p_levitation_s_A1_8', 'p_levitation_q_A1_8', 'p_levitation_e_A1_8', 'p_levitation_b', 'p_levitation_c', 'p_levitation_s', 'p_levitation_q', 'p_levitation_e', 'levitation')),
-    Kind('Tele', 'Telekinesis', Potion5('p_telekinesis_b_A1_8', 'p_telekinesis_c_A1_8', 'p_telekinesis_s_A1_8', 'p_telekinesis_q_A1_8', 'p_telekinesis_e_A1_8', 'p_telekinesis_b_A1', 'p_telekinesis_c_A1', 'p_telekinesis_s', 'p_telekinesis_q_A1', 'p_telekinesis_e_A1', 'telekinesis')),
-    Kind('Blight', 'CureBlightDisease', Potion2('p_cure_blight_s_A1_16', 'p_cure_blight_s', 'cure_blight', 200)),
-    Kind('Cure', 'CureCommonDisease', Potion2('p_cure_common_s_A1_16', 'p_cure_common_s', 'cure_common', 400)),
-    Kind('DetKey', 'DetectKey', Potion5('p_detect_key_b_A1_8', 'p_detect_key_c_A1_8', 'p_detect_key_s_A1_8', 'p_detect_key_q_A1_8', 'p_detect_key_e_A1_8', 'p_detect_key_b_A1', 'p_detect_key_c_A1', 'p_detect_key_s', 'p_detect_key_q_A1', 'p_detect_key_e_A1', 'detect_key')),
-    Kind('Poison', 'CurePoison', Potion2('p_cure_poison_s_A1_16', 'p_cure_poison_s', 'cure_poison', 400)),
-    Kind('Feather', 'Feather', Potion5('p_feather_b_A1_8', 'p_feather_c_A1_8', 'p_feather_s_A1_8', 'p_feather_q_A1_8', 'p_feather_e_A1_8', 'p_feather_b', 'p_feather_c', 'p_feather_s_A1', 'p_feather_q', 'p_feather_e', 'feather')),
-    Kind('FireResist', 'ResistFire', Potion5('p_fire_resistance_b_A1_8', 'p_fire_resistance_c_A1_8', '"p_fire resistance_s_A1_8"', 'p_fire_resistance_q_A1_8', 'p_fire_resistance_e_A1_8', 'p_fire_resistance_b', 'p_fire_resistance_c', '"p_fire resistance_s"', 'p_fire_resistance_q', 'p_fire_resistance_e', 'fire_resistance')),
-    Kind('RestPers', ('RestoreAttribute', 'Personality'), Potion5('p_restore_personality_b_A1_8', 'p_restore_personality_c_A1_8', 'p_restore_personality_s_A1_8', 'p_restore_personality_q_A1_8', 'p_restore_personality_e_A1_8', 'p_restore_personality_b', 'p_restore_personality_c', 'p_restore_personality_s', 'p_restore_personality_q', 'p_restore_personality_e', 'restore_personality')),
-    Kind('FortMagic', 'FortifySpellpoints', Potion5('p_fortify_magicka_b_A1_8', 'p_fortify_magicka_c_A1_8', 'p_fortify_magicka_s_A1_8', 'p_fortify_magicka_q_A1_8', 'p_fortify_magicka_e_A1_8', 'p_fortify_magicka_b', 'p_fortify_magicka_c', 'p_fortify_magicka_s', 'p_fortify_magicka_q', 'p_fortify_magicka_e', 'fortify_magicka')),
-    Kind('NightEye', 'NightEye', Potion5('"p_night-eye_b_A1_8"', '"p_night-eye_c_A1_8"', '"p_night-eye_s_A1_8"', '"p_night-eye_q_A1_8"', '"p_night-eye_e_A1_8"', '"p_night-eye_b"', '"p_night-eye_c"', '"p_night-eye_s"', '"p_night-eye_q"', '"p_night-eye_e"', 'night-eye')),
-    Kind('DetCreature', 'DetectAnimal', Potion5('p_detect_creatures_b_A1_8', 'p_detect_creatures_c_A1_8', 'p_detect_creatures_s_A1_8', 'p_detect_creatures_q_A1_8', 'p_detect_creatures_e_A1_8', 'p_detect_creatures_b_A1', 'p_detect_creatures_c_A1', 'p_detect_creatures_s', 'p_detect_creatures_q_A1', 'p_detect_creatures_e_A1', 'detect_creatures')),
-    Kind('Para', 'CureParalyzation', Potion2('p_cure_paralyzation_s_A1_16', 'p_cure_paralyzation_s', 'cure_paralyzation', 400)),
-    Kind('DetEnch', 'DetectEnchantment', Potion5('p_detect_enchantment_b_A1_8', 'p_detect_enchantment_c_A1_8', 'p_detect_enchantment_s_A1_8', 'p_detect_enchantment_q_A1_8', 'p_detect_enchantment_e_A1_8', 'p_detect_enchantment_b_A1', 'p_detect_enchantment_c_A1', 'p_detect_enchantment_s', 'p_detect_enchantment_q_A1', 'p_detect_enchantment_e_A1', 'detect_enchantment')),
-    Kind('Dispel', 'Dispel', Potion5('p_dispel_b_A1_8', 'p_dispel_c_A1_8', 'p_dispel_s_A1_8', 'p_dispel_q_A1_8', 'p_dispel_e_A1_8', 'p_dispel_b_A1', 'p_dispel_c_A1', 'p_dispel_s', 'p_dispel_q_A1', 'p_dispel_e_A1', 'dispel')),
-    Kind('FireSh', 'FireShield', Potion5('p_fire_shield_b_A1_8', 'p_fire_shield_c_A1_8', 'p_fire_shield_s_A1_8', 'p_fire_shield_q_A1_8', 'p_fire_shield_e_A1_8', 'p_fire_shield_b', 'p_fire_shield_c', 'p_fire_shield_s', 'p_fire_shield_q', 'p_fire_shield_e', 'fire_shield')),
-    Kind('FortAgil', ('FortifyAttribute', 'Agility'), Potion5('p_fortify_agility_b_A1_8', 'p_fortify_agility_c_A1_8', 'p_fortify_agility_s_A1_8', 'p_fortify_agility_q_A1_8', 'p_fortify_agility_e_A1_8', 'p_fortify_agility_b', 'p_fortify_agility_c', 'p_fortify_agility_s', 'p_fortify_agility_q', 'p_fortify_agility_e', 'fortify_agility')),
-    Kind('FortAttack', 'FortifyAttackBonus', Potion5('p_fortify_attack_b_A1_8', 'p_fortify_attack_c_A1_8', 'p_fortify_attack_s_A1_8', 'p_fortify_attack_q_A1_8', 'p_fortify_attack_e_A1_8', 'p_fortify_attack_b_A1', 'p_fortify_attack_c_A1', 'p_fortify_attack_s_A1', 'p_fortify_attack_q_A1', 'p_fortify_attack_e', 'fortify_attack')),
-    Kind('FortEndur', ('FortifyAttribute', 'Endurance'), Potion5('p_fortify_endurance_b_A1_8', 'p_fortify_endurance_c_A1_8', 'p_fortify_endurance_s_A1_8', 'p_fortify_endurance_q_A1_8', 'p_fortify_endurance_e_A1_8', 'p_fortify_endurance_b', 'p_fortify_endurance_c', 'p_fortify_endurance_s', 'p_fortify_endurance_q', 'p_fortify_endurance_e', 'fortify_endurance')),
-    Kind('FortFatig', 'FortifyFatigue', Potion5('p_fortify_fatigue_b_A1_8', 'p_fortify_fatigue_c_A1_8', 'p_fortify_fatigue_s_A1_8', 'p_fortify_fatigue_q_A1_8', 'p_fortify_fatigue_e_A1_8', 'p_fortify_fatigue_b', 'p_fortify_fatigue_c', 'p_fortify_fatigue_s', 'p_fortify_fatigue_q', 'p_fortify_fatigue_e', 'fortify_fatigue')),
-    Kind('FortHealth', 'FortifyHealth', Potion5('p_fortify_health_b_A1_8', 'p_fortify_health_c_A1_8', 'p_fortify_health_s_A1_8', 'p_fortify_health_q_A1_8', 'p_fortify_health_e_A1_8', 'p_fortify_health_b', 'p_fortify_health_c', 'p_fortify_health_s', 'p_fortify_health_q', 'p_fortify_health_e', 'fortify_health')),
-    Kind('FortIntel', ('FortifyAttribute', 'Intellegence'), Potion5('p_fortify_intelligence_b_A1_8', 'p_fortify_intelligence_c_A1_8', 'p_fortify_intelligence_s_A1_8', 'p_fortify_intelligence_q_A1_8', 'p_fortify_intelligence_e_A1_8', 'p_fortify_intelligence_b', 'p_fortify_intelligence_c', 'p_fortify_intelligence_s', 'p_fortify_intelligence_q', 'p_fortify_intelligence_e', 'fortify_intelligence')),
-    Kind('FortLuck', ('FortifyAttribute', 'Luck'), Potion5('p_fortify_luck_b_A1_8', 'p_fortify_luck_c_A1_8', 'p_fortify_luck_s_A1_8', 'p_fortify_luck_q_A1_8', 'p_fortify_luck_e_A1_8', 'p_fortify_luck_b', 'p_fortify_luck_c', 'p_fortify_luck_s', 'p_fortify_luck_q', 'p_fortify_luck_e', 'fortify_luck')),
-    Kind('FortPers', ('FortifyAttribute', 'Personality'), Potion5('p_fortify_personality_b_A1_8', 'p_fortify_personality_c_A1_8', 'p_fortify_personality_s_A1_8', 'p_fortify_personality_q_A1_8', 'p_fortify_personality_e_A1_8', 'p_fortify_personality_b', 'p_fortify_personality_c', 'p_fortify_personality_s', 'p_fortify_personality_q', 'p_fortify_personality_e', 'fortify_personality')),
-    Kind('FortSpeed', ('FortifyAttribute', 'Speed'), Potion5('p_fortify_speed_b_A1_8', 'p_fortify_speed_c_A1_8', 'p_fortify_speed_s_A1_8', 'p_fortify_speed_q_A1_8', 'p_fortify_speed_e_A1_8', 'p_fortify_speed_b', 'p_fortify_speed_c', 'p_fortify_speed_s', 'p_fortify_speed_q', 'p_fortify_speed_e', 'fortify_speed')),
-    Kind('FortStr', ('FortifyAttribute', 'Strength'), Potion5('p_fortify_strength_b_A1_8', 'p_fortify_strength_c_A1_8', 'p_fortify_strength_s_A1_8', 'p_fortify_strength_q_A1_8', 'p_fortify_strength_e_A1_8', 'p_fortify_strength_b', 'p_fortify_strength_c', 'p_fortify_strength_s', 'p_fortify_strength_q', 'p_fortify_strength_e', 'fortify_strength')),
-    Kind('FortWill', ('FortifyAttribute', 'Willpower'), Potion5('p_fortify_willpower_b_A1_8', 'p_fortify_willpower_c_A1_8', 'p_fortify_willpower_s_A1_8', 'p_fortify_willpower_q_A1_8', 'p_fortify_willpower_e_A1_8', 'p_fortify_willpower_b', 'p_fortify_willpower_c', 'p_fortify_willpower_s', 'p_fortify_willpower_q', 'p_fortify_willpower_e', 'fortify_willpower')),
-    Kind('FrostResist', 'ResistFrost', Potion5('p_frost_resistance_b_A1_8', 'p_frost_resistance_c_A1_8', 'p_frost_resistance_s_A1_8', 'p_frost_resistance_q_A1_8', 'p_frost_resistance_e_A1_8', 'p_frost_resistance_b', 'p_frost_resistance_c', 'p_frost_resistance_s', 'p_frost_resistance_q', 'p_frost_resistance_e', 'frost_resistance')),
-    Kind('FrostSh', 'FrostShield', Potion5('p_frost_shield_b_A1_8', 'p_frost_shield_c_A1_8', 'p_frost_shield_s_A1_8', 'p_frost_shield_q_A1_8', 'p_frost_shield_e_A1_8', 'p_frost_shield_b', 'p_frost_shield_c', 'p_frost_shield_s', 'p_frost_shield_q', 'p_frost_shield_e', 'frost_shield')),
-    Kind('Invis', 'Invisibility', Potion5('p_invisibility_b_A1_8', 'p_invisibility_c_A1_8', 'p_invisibility_s_A1_8', 'p_invisibility_q_A1_8', 'p_invisibility_e_A1_8', 'p_invisibility_b', 'p_invisibility_c', 'p_invisibility_s', 'p_invisibility_q', 'p_invisibility_e', 'invisibility')),
-    Kind('LightSh', 'LightningShield', Potion5('"p_lightning shield_b_A1_8"', '"p_lightning shield_c_A1_8"', '"p_lightning shield_s_A1_8"', '"p_lightning shield_q_A1_8"', '"p_lightning shield_e_A1_8"', '"p_lightning shield_b"', '"p_lightning shield_c"', '"p_lightning shield_s"', '"p_lightning shield_q"', '"p_lightning shield_e"', 'lightning_shield')),
-    Kind('MagicResist', 'ResistMagicka', Potion5('p_magicka_resistance_b_A1_8', 'p_magicka_resistance_c_A1_8', 'p_magicka_resistance_s_A1_8', 'p_magicka_resistance_q_A1_8', 'p_magicka_resistance_e_A1_8', 'p_magicka_resistance_b', 'p_magicka_resistance_c', 'p_magicka_resistance_s', 'p_magicka_resistance_q', 'p_magicka_resistance_e', 'magicka_resistance')),
-    Kind('PoisonResist', 'ResistPoison', Potion5('p_poison_resistance_b_A1_8', 'p_poison_resistance_c_A1_8', 'p_poison_resistance_s_A1_8', 'p_poison_resistance_q_A1_8', 'p_poison_resistance_e_A1_8', 'p_poison_resistance_b', 'p_poison_resistance_c', 'p_poison_resistance_s', 'p_poison_resistance_q', 'p_poison_resistance_e', 'poison_resistance')),
-    Kind('Reflect', 'Reflect', Potion5('p_reflection_b_A1_8', 'p_reflection_c_A1_8', 'p_reflection_s_A1_8', 'p_reflection_q_A1_8', 'p_reflection_e_A1_8', 'p_reflection_b', 'p_reflection_c', 'p_reflection_s', 'p_reflection_q', 'p_reflection_e', 'reflection')),
-    Kind('RestoreAgility', ('RestoreAttribute', 'Agility'), Potion5('p_restore_agility_b_A1_8', 'p_restore_agility_c_A1_8', 'p_restore_agility_s_A1_8', 'p_restore_agility_q_A1_8', 'p_restore_agility_e_A1_8', 'p_restore_agility_b', 'p_restore_agility_c', 'p_restore_agility_s', 'p_restore_agility_q', 'p_restore_agility_e', 'restore_agility')),
-    Kind('RestoreEndur', ('RestoreAttribute', 'Endurance'), Potion5('p_restore_endurance_b_A1_8', 'p_restore_endurance_c_A1_8', 'p_restore_endurance_s_A1_8', 'p_restore_endurance_q_A1_8', 'p_restore_endurance_e_A1_8', 'p_restore_endurance_b', 'p_restore_endurance_c', 'p_restore_endurance_s', 'p_restore_endurance_q', 'p_restore_endurance_e', 'restore_endurance')),
-    Kind('RestoreIntel', ('RestoreAttribute', 'Intellegence'), Potion5('p_restore_intelligence_b_A1_8', 'p_restore_intelligence_c_A1_8', 'p_restore_intelligence_s_A1_8', 'p_restore_intelligence_q_A1_8', 'p_restore_intelligence_e_A1_8', 'p_restore_intelligence_b', 'p_restore_intelligence_c', 'p_restore_intelligence_s', 'p_restore_intelligence_q', 'p_restore_intelligence_e', 'restore_intelligence')),
-    Kind('RestoreLuck', ('RestoreAttribute', 'Luck'), Potion5('p_restore_luck_b_A1_8', 'p_restore_luck_c_A1_8', 'p_restore_luck_s_A1_8', 'p_restore_luck_q_A1_8', 'p_restore_luck_e_A1_8', 'p_restore_luck_b', 'p_restore_luck_c', 'p_restore_luck_s', 'p_restore_luck_q', 'p_restore_luck_e', 'restore_luck')),
-    Kind('RestoreSpeed', ('RestoreAttribute', 'Speed'), Potion5('p_restore_speed_b_A1_8', 'p_restore_speed_c_A1_8', 'p_restore_speed_s_A1_8', 'p_restore_speed_q_A1_8', 'p_restore_speed_e_A1_8', 'p_restore_speed_b', 'p_restore_speed_c', 'p_restore_speed_s', 'p_restore_speed_q', 'p_restore_speed_e', 'restore_speed')),
-    Kind('RestoreStr', ('RestoreAttribute', 'Strength'), Potion5('p_restore_strength_b_A1_8', 'p_restore_strength_c_A1_8', 'p_restore_strength_s_A1_8', 'p_restore_strength_q_A1_8', 'p_restore_strength_e_A1_8', 'p_restore_strength_b', 'p_restore_strength_c', 'p_restore_strength_s', 'p_restore_strength_q', 'p_restore_strength_e', 'restore_strength')),
-    Kind('RestoreWill', ('RestoreAttribute', 'Willpower'), Potion5('p_restore_willpower_b_A1_8', 'p_restore_willpower_c_A1_8', 'p_restore_willpower_s_A1_8', 'p_restore_willpower_q_A1_8', 'p_restore_willpower_e_A1_8', 'p_restore_willpower_b', 'p_restore_willpower_c', 'p_restore_willpower_s', 'p_restore_willpower_q', 'p_restore_willpower_e', 'restore_willpower')),
-    Kind('SpellAbs', 'SpellAbsorption', Potion5('p_spell_absorption_b_A1_8', 'p_spell_absorption_c_A1_8', 'p_spell_absorption_s_A1_8', 'p_spell_absorption_q_A1_8', 'p_spell_absorption_e_A1_8', 'p_spell_absorption_b', 'p_spell_absorption_c', 'p_spell_absorption_s', 'p_spell_absorption_q', 'p_spell_absorption_e', 'spell_absorption')),
-    Kind('SwitfSwim', 'SwiftSwim', Potion5('p_swift_swim_b_A1_8', 'p_swift_swim_c_A1_8', 'p_swift_swim_s_A1_8', 'p_swift_swim_q_A1_8', 'p_swift_swim_e_A1_8', 'p_swift_swim_b', 'p_swift_swim_c', 'p_swift_swim_s_A1', 'p_swift_swim_q', 'p_swift_swim_e', 'swift_swim')),
-    Kind('Mark', 'Mark', Potion2('p_mark_s_A1_16', 'p_mark_s', 'mark', 400)),
-    Kind('Recall', 'Recall', Potion2('p_recall_s_A1_16', 'p_recall_s', 'recall', 100)),
-    Kind('ResCom', 'ResistCommonDisease', Potion5('p_disease_resistance_b_A1_8', 'p_disease_resistance_c_A1_8', 'p_disease_resistance_s_A1_8', 'p_disease_resistance_q_A1_8', 'p_disease_resistance_e_A1_8', 'p_disease_resistance_b', 'p_disease_resistance_c', 'p_disease_resistance_s', 'p_disease_resistance_q', 'p_disease_resistance_e', 'disease_resistance')),
-    Kind('Shield', 'Shield', Potion5('p_silence_b_A1_8', 'p_silence_c_A1_8', 'p_silence_s_A1_8', 'p_silence_q_A1_8', 'p_silence_e_A1_8', 'p_silence_b', 'p_silence_c', 'p_silence_s', 'p_silence_q', 'p_silence_e', 'silence')),
+    Kind('RestoreHealth', 'RestoreHealth', Potion5('p_restore_health_b', 'p_restore_health_c', 'p_restore_health_s', 'p_restore_health_q', 'p_restore_health_e', 'restore_health')),
+    Kind('RestoreFatig', 'RestoreFatigue', Potion5('p_restore_fatigue_b', 'p_restore_fatigue_c', 'p_restore_fatigue_s', 'p_restore_fatigue_q', 'p_restore_fatigue_e', 'restore_fatigue')),
+    Kind('RestoreMagic', 'RestoreSpellPoints', Potion5('p_restore_magicka_b', 'p_restore_magicka_c', 'p_restore_magicka_s', 'p_restore_magicka_q', 'p_restore_magicka_e', 'restore_magicka')),
+    Kind('WaterWalk', 'WaterWalking', Potion5('p_water_walking_b_A1', 'p_water_walking_c_A1', 'p_water_walking_s', 'p_water_walking_q_A1', 'p_water_walking_e_A1', 'water_walking')),
+    Kind('WaterBrf', 'WaterBreathing', Potion5('p_water_breathing_b_A1', 'p_water_breathing_c_A1', 'p_water_breathing_s', 'p_water_breathing_q_A1', 'p_water_breathing_e_A1', 'water_breathing')),
+    Kind('Levitate', 'Levitate', Potion5('p_levitation_b', 'p_levitation_c', 'p_levitation_s', 'p_levitation_q', 'p_levitation_e', 'levitation')),
+    Kind('Tele', 'Telekinesis', Potion5('p_telekinesis_b_A1', 'p_telekinesis_c_A1', 'p_telekinesis_s', 'p_telekinesis_q_A1', 'p_telekinesis_e_A1', 'telekinesis')),
+    Kind('Blight', 'CureBlightDisease', Potion2('p_cure_blight_s', 'cure_blight', 200)),
+    Kind('Cure', 'CureCommonDisease', Potion2('p_cure_common_s', 'cure_common', 400)),
+    Kind('DetKey', 'DetectKey', Potion5('p_detect_key_b_A1', 'p_detect_key_c_A1', 'p_detect_key_s', 'p_detect_key_q_A1', 'p_detect_key_e_A1', 'detect_key')),
+    Kind('Poison', 'CurePoison', Potion2('p_cure_poison_s', 'cure_poison', 400)),
+    Kind('Feather', 'Feather', Potion5('p_feather_b', 'p_feather_c', 'p_feather_s_A1', 'p_feather_q', 'p_feather_e', 'feather')),
+    Kind('FireResist', 'ResistFire', Potion5('p_fire_resistance_b', 'p_fire_resistance_c', '"p_fire resistance_s"', 'p_fire_resistance_q', 'p_fire_resistance_e', 'fire_resistance')),
+    Kind('RestPers', ('RestoreAttribute', 'Personality'), Potion5('p_restore_personality_b', 'p_restore_personality_c', 'p_restore_personality_s', 'p_restore_personality_q', 'p_restore_personality_e', 'restore_personality')),
+    Kind('FortMagic', 'FortifySpellpoints', Potion5('p_fortify_magicka_b', 'p_fortify_magicka_c', 'p_fortify_magicka_s', 'p_fortify_magicka_q', 'p_fortify_magicka_e', 'fortify_magicka')),
+    Kind('NightEye', 'NightEye', Potion5('"p_night-eye_b"', '"p_night-eye_c"', '"p_night-eye_s"', '"p_night-eye_q"', '"p_night-eye_e"', 'night-eye')),
+    Kind('DetCreature', 'DetectAnimal', Potion5('p_detect_creatures_b_A1', 'p_detect_creatures_c_A1', 'p_detect_creatures_s', 'p_detect_creatures_q_A1', 'p_detect_creatures_e_A1', 'detect_creatures')),
+    Kind('Para', 'CureParalyzation', Potion2('p_cure_paralyzation_s', 'cure_paralyzation', 400)),
+    Kind('DetEnch', 'DetectEnchantment', Potion5('p_detect_enchantment_b_A1', 'p_detect_enchantment_c_A1', 'p_detect_enchantment_s', 'p_detect_enchantment_q_A1', 'p_detect_enchantment_e_A1', 'detect_enchantment')),
+    Kind('Dispel', 'Dispel', Potion5('p_dispel_b_A1', 'p_dispel_c_A1', 'p_dispel_s', 'p_dispel_q_A1', 'p_dispel_e_A1', 'dispel')),
+    Kind('FireSh', 'FireShield', Potion5('p_fire_shield_b', 'p_fire_shield_c', 'p_fire_shield_s', 'p_fire_shield_q', 'p_fire_shield_e', 'fire_shield')),
+    Kind('FortAgil', ('FortifyAttribute', 'Agility'), Potion5('p_fortify_agility_b', 'p_fortify_agility_c', 'p_fortify_agility_s', 'p_fortify_agility_q', 'p_fortify_agility_e', 'fortify_agility')),
+    Kind('FortAttack', 'FortifyAttackBonus', Potion5('p_fortify_attack_b_A1', 'p_fortify_attack_c_A1', 'p_fortify_attack_s_A1', 'p_fortify_attack_q_A1', 'p_fortify_attack_e', 'fortify_attack')),
+    Kind('FortEndur', ('FortifyAttribute', 'Endurance'), Potion5('p_fortify_endurance_b', 'p_fortify_endurance_c', 'p_fortify_endurance_s', 'p_fortify_endurance_q', 'p_fortify_endurance_e', 'fortify_endurance')),
+    Kind('FortFatig', 'FortifyFatigue', Potion5('p_fortify_fatigue_b', 'p_fortify_fatigue_c', 'p_fortify_fatigue_s', 'p_fortify_fatigue_q', 'p_fortify_fatigue_e', 'fortify_fatigue')),
+    Kind('FortHealth', 'FortifyHealth', Potion5('p_fortify_health_b', 'p_fortify_health_c', 'p_fortify_health_s', 'p_fortify_health_q', 'p_fortify_health_e', 'fortify_health')),
+    Kind('FortIntel', ('FortifyAttribute', 'Intellegence'), Potion5('p_fortify_intelligence_b', 'p_fortify_intelligence_c', 'p_fortify_intelligence_s', 'p_fortify_intelligence_q', 'p_fortify_intelligence_e', 'fortify_intelligence')),
+    Kind('FortLuck', ('FortifyAttribute', 'Luck'), Potion5('p_fortify_luck_b', 'p_fortify_luck_c', 'p_fortify_luck_s', 'p_fortify_luck_q', 'p_fortify_luck_e', 'fortify_luck')),
+    Kind('FortPers', ('FortifyAttribute', 'Personality'), Potion5('p_fortify_personality_b', 'p_fortify_personality_c', 'p_fortify_personality_s', 'p_fortify_personality_q', 'p_fortify_personality_e', 'fortify_personality')),
+    Kind('FortSpeed', ('FortifyAttribute', 'Speed'), Potion5('p_fortify_speed_b', 'p_fortify_speed_c', 'p_fortify_speed_s', 'p_fortify_speed_q', 'p_fortify_speed_e', 'fortify_speed')),
+    Kind('FortStr', ('FortifyAttribute', 'Strength'), Potion5('p_fortify_strength_b', 'p_fortify_strength_c', 'p_fortify_strength_s', 'p_fortify_strength_q', 'p_fortify_strength_e', 'fortify_strength')),
+    Kind('FortWill', ('FortifyAttribute', 'Willpower'), Potion5('p_fortify_willpower_b', 'p_fortify_willpower_c', 'p_fortify_willpower_s', 'p_fortify_willpower_q', 'p_fortify_willpower_e', 'fortify_willpower')),
+    Kind('FrostResist', 'ResistFrost', Potion5('p_frost_resistance_b', 'p_frost_resistance_c', 'p_frost_resistance_s', 'p_frost_resistance_q', 'p_frost_resistance_e', 'frost_resistance')),
+    Kind('FrostSh', 'FrostShield', Potion5('p_frost_shield_b', 'p_frost_shield_c', 'p_frost_shield_s', 'p_frost_shield_q', 'p_frost_shield_e', 'frost_shield')),
+    Kind('Invis', 'Invisibility', Potion5('p_invisibility_b', 'p_invisibility_c', 'p_invisibility_s', 'p_invisibility_q', 'p_invisibility_e', 'invisibility')),
+    Kind('LightSh', 'LightningShield', Potion5('"p_lightning shield_b"', '"p_lightning shield_c"', '"p_lightning shield_s"', '"p_lightning shield_q"', '"p_lightning shield_e"', 'lightning_shield')),
+    Kind('MagicResist', 'ResistMagicka', Potion5('p_magicka_resistance_b', 'p_magicka_resistance_c', 'p_magicka_resistance_s', 'p_magicka_resistance_q', 'p_magicka_resistance_e', 'magicka_resistance')),
+    Kind('PoisonResist', 'ResistPoison', Potion5('p_poison_resistance_b', 'p_poison_resistance_c', 'p_poison_resistance_s', 'p_poison_resistance_q', 'p_poison_resistance_e', 'poison_resistance')),
+    Kind('Reflect', 'Reflect', Potion5('p_reflection_b', 'p_reflection_c', 'p_reflection_s', 'p_reflection_q', 'p_reflection_e', 'reflection')),
+    Kind('RestoreAgility', ('RestoreAttribute', 'Agility'), Potion5('p_restore_agility_b', 'p_restore_agility_c', 'p_restore_agility_s', 'p_restore_agility_q', 'p_restore_agility_e', 'restore_agility')),
+    Kind('RestoreEndur', ('RestoreAttribute', 'Endurance'), Potion5('p_restore_endurance_b', 'p_restore_endurance_c', 'p_restore_endurance_s', 'p_restore_endurance_q', 'p_restore_endurance_e', 'restore_endurance')),
+    Kind('RestoreIntel', ('RestoreAttribute', 'Intellegence'), Potion5('p_restore_intelligence_b', 'p_restore_intelligence_c', 'p_restore_intelligence_s', 'p_restore_intelligence_q', 'p_restore_intelligence_e', 'restore_intelligence')),
+    Kind('RestoreLuck', ('RestoreAttribute', 'Luck'), Potion5('p_restore_luck_b', 'p_restore_luck_c', 'p_restore_luck_s', 'p_restore_luck_q', 'p_restore_luck_e', 'restore_luck')),
+    Kind('RestoreSpeed', ('RestoreAttribute', 'Speed'), Potion5('p_restore_speed_b', 'p_restore_speed_c', 'p_restore_speed_s', 'p_restore_speed_q', 'p_restore_speed_e', 'restore_speed')),
+    Kind('RestoreStr', ('RestoreAttribute', 'Strength'), Potion5('p_restore_strength_b', 'p_restore_strength_c', 'p_restore_strength_s', 'p_restore_strength_q', 'p_restore_strength_e', 'restore_strength')),
+    Kind('RestoreWill', ('RestoreAttribute', 'Willpower'), Potion5('p_restore_willpower_b', 'p_restore_willpower_c', 'p_restore_willpower_s', 'p_restore_willpower_q', 'p_restore_willpower_e', 'restore_willpower')),
+    Kind('SpellAbs', 'SpellAbsorption', Potion5('p_spell_absorption_b', 'p_spell_absorption_c', 'p_spell_absorption_s', 'p_spell_absorption_q', 'p_spell_absorption_e', 'spell_absorption')),
+    Kind('SwitfSwim', 'SwiftSwim', Potion5('p_swift_swim_b', 'p_swift_swim_c', 'p_swift_swim_s_A1', 'p_swift_swim_q', 'p_swift_swim_e', 'swift_swim')),
+    Kind('Mark', 'Mark', Potion2('p_mark_s', 'mark', 400)),
+    Kind('Recall', 'Recall', Potion2('p_recall_s', 'recall', 100)),
+    Kind('ResCom', 'ResistCommonDisease', Potion5('p_disease_resistance_b', 'p_disease_resistance_c', 'p_disease_resistance_s', 'p_disease_resistance_q', 'p_disease_resistance_e', 'disease_resistance')),
+    Kind('Shield', 'Shield', Potion5('p_silence_b', 'p_silence_c', 'p_silence_s', 'p_silence_q', 'p_silence_e', 'silence')),
     Kind('Jump', 'Jump', None),
     Kind('SlowFall', 'SlowFall', None),
-    Kind('Chameleon', 'Chameleon', Potion5('p_chameleon_b_A1_8', 'p_chameleon_c_A1_8', 'p_chameleon_s_A1_8', 'p_chameleon_q_A1_8', 'p_chameleon_e_A1_8', 'p_chameleon_b', 'p_chameleon_c', 'p_chameleon_s', 'p_chameleon_q', 'p_chameleon_e', 'chameleon')),
-    Kind('Light', 'Light', Potion5('p_light_b_A1_8', 'p_light_c_A1_8', 'p_light_s_A1_8', 'p_light_q_A1_8', 'p_light_e_A1_8', 'p_light_b', 'p_light_c', 'p_light_s', 'p_light_q', 'p_light_e', 'light')),
+    Kind('Chameleon', 'Chameleon', Potion5('p_chameleon_b', 'p_chameleon_c', 'p_chameleon_s', 'p_chameleon_q', 'p_chameleon_e', 'chameleon')),
+    Kind('Light', 'Light', Potion5('p_light_b', 'p_light_c', 'p_light_s', 'p_light_q', 'p_light_e', 'light')),
     Kind('Sanctuary', 'Sanctuary', None),
     Kind('AInt', 'AlmsiviIntervention', None),
     Kind('FortMult', 'FortifyMagickaMultiplier', None),
-    Kind('ResShock', 'ResistShock', Potion5('p_shock_resistance_b_A1_8', 'p_shock_resistance_c_A1_8', 'p_shock_resistance_s_A1_8', 'p_shock_resistance_q_A1_8', 'p_shock_resistance_e_A1_8', 'p_shock_resistance_b', 'p_shock_resistance_c', 'p_shock_resistance_s', 'p_shock_resistance_q', 'p_shock_resistance_e', 'shock_resistance')),
+    Kind('ResShock', 'ResistShock', Potion5('p_shock_resistance_b', 'p_shock_resistance_c', 'p_shock_resistance_s', 'p_shock_resistance_q', 'p_shock_resistance_e', 'shock_resistance')),
     Kind('ResBlight', 'ResistBlightDisease', None),
     Kind('ResCorpr', 'ResistCorprusDisease', None),
-    Kind('ResWeap', 'ResistNormalWeapons', Potion5('p_burden_b_A1_8', 'p_burden_c_A1_8', 'p_burden_s_A1_8', 'p_burden_q_A1_8', 'p_burden_e_A1_8', 'p_burden_b', 'p_burden_c', 'p_burden_s', 'p_burden_q', 'p_burden_e', 'burden')),
-    Kind('ResPara', 'ResistParalysis', Potion5('p_paralyze_b_A1_8', 'p_paralyze_c_A1_8', 'p_paralyze_s_A1_8', 'p_paralyze_q_A1_8', 'p_paralyze_e_A1_8', 'p_paralyze_b', 'p_paralyze_c', 'p_paralyze_s', 'p_paralyze_q', 'p_paralyze_e', 'paralyze')),
+    Kind('ResWeap', 'ResistNormalWeapons', Potion5('p_burden_b', 'p_burden_c', 'p_burden_s', 'p_burden_q', 'p_burden_e', 'burden')),
+    Kind('ResPara', 'ResistParalysis', Potion5('p_paralyze_b', 'p_paralyze_c', 'p_paralyze_s', 'p_paralyze_q', 'p_paralyze_e', 'paralyze')),
     Kind('Uncurse', 'RemoveCurse', None),
     Kind('Scamp', 'SummonScamp', None),
     Kind('Clfear', 'SummonClannfear', None),
@@ -455,19 +455,14 @@ def gen_check_script(kind, ingrs, index, next_kind):
     if len(pairs) > 1:
         s.append('short pair')
     s.append('')
+    s.append('if ( AddPotion == 1 )')
     if type(kind.potion) == Potion2:
-        s.append('if ( AddPotion == 1 )')
         s.append('	if ( A1V6_PotionQ == 1 )')
         s.append('		player->AddItem ' + kind.potion.id_1 + ', 1')
         s.append('	elseif ( A1V6_PotionQ == 2 )')
         s.append('		player->AddItem ' + kind.potion.id_1 + ', 2')
         s.append('	endif')
-        s.append('endif')
-        s.append('')
-        s.append('set AddPotion to 0')
-        s.append('')
     else:
-        s.append('if ( AddPotion == 1 )')
         s.append('	if ( A1V6_PotionQ == 1 )')
         s.append('		player->AddItem ' + kind.potion.id_broken_1 + ', 1')
         s.append('	elseif ( A1V6_PotionQ == 2 )')
@@ -479,10 +474,9 @@ def gen_check_script(kind, ingrs, index, next_kind):
         s.append('	elseif ( A1V6_PotionQ == 5 )')
         s.append('		player->AddItem ' + kind.potion.id_exclusive_1 + ', 1')
         s.append('	endif')
-        s.append('endif')        
-        s.append('')
-        s.append('set AddPotion to 0')
-        s.append('')
+    s.append('endif')        
+    s.append('')
+    s.append('set AddPotion to 0')
     s.append('')
     line = ''
     if ingrs_15:
