@@ -14031,7 +14031,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L45_detect_key\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_detect_key\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L60_detect_key\" == 1 )"
@@ -14107,7 +14106,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_cure_poison\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_cure_poison\", 1"
@@ -14205,7 +14203,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_feather\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_feather\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L45_feather\" == 1 )"
@@ -14294,7 +14291,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_fire_resistance\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_fire_resistance\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L60_fire_resistance\" == 1 )"
@@ -14366,7 +14362,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L45_restore_personality\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_restore_personality\", 1"
@@ -14445,7 +14440,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_fortify_magicka\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_fortify_magicka\", 1"
@@ -14531,7 +14525,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_night-eye\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_night-eye\", 1"
@@ -14627,7 +14620,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L45_detect_creatures\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_detect_creatures\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L60_detect_creatures\" == 1 )"
@@ -14699,7 +14691,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_cure_paralyzation\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_cure_paralyzation\", 1"
@@ -14778,7 +14769,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L60_detect_enchantment\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L60_detect_enchantment\", 1"
         - endif
@@ -14849,7 +14839,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L15_restore_health\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_restore_health\", 1"
@@ -14956,7 +14945,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_dispel\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_dispel\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L45_dispel\" == 1 )"
@@ -15042,7 +15030,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L45_fire_shield\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_fire_shield\", 1"
@@ -15133,7 +15120,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L15_fortify_agility\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_fortify_agility\", 1"
@@ -15248,7 +15234,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L45_fortify_attack\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_fortify_attack\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L60_fortify_attack\" == 1 )"
@@ -15323,7 +15308,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_fortify_endurance\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_fortify_endurance\", 1"
@@ -15402,7 +15386,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L15_fortify_fatigue\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_fortify_fatigue\", 1"
@@ -15490,7 +15473,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L15_fortify_health\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_fortify_health\", 1"
@@ -15593,7 +15575,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L60_fortify_luck\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L60_fortify_luck\", 1"
         - endif
@@ -15667,7 +15648,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_fortify_personality\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_fortify_personality\", 1"
@@ -15751,7 +15731,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L15_fortify_speed\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_fortify_speed\", 1"
@@ -15847,7 +15826,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L15_restore_fatigue\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_restore_fatigue\", 1"
@@ -15968,7 +15946,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L15_fortify_strength\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_fortify_strength\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L30_fortify_strength\" == 1 )"
@@ -16080,7 +16057,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_fortify_willpower\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_fortify_willpower\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L45_fortify_willpower\" == 1 )"
@@ -16160,7 +16136,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L15_frost_resistance\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_frost_resistance\", 1"
@@ -16254,7 +16229,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_frost_shield\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_frost_shield\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L45_frost_shield\" == 1 )"
@@ -16340,7 +16314,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_invisibility\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_invisibility\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L60_invisibility\" == 1 )"
@@ -16415,7 +16388,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L45_lightning_shield\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_lightning_shield\", 1"
         - endif
@@ -16484,7 +16456,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_magicka_resistance\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_magicka_resistance\", 1"
@@ -16568,7 +16539,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L15_poison_resistance\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_poison_resistance\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L30_poison_resistance\" == 1 )"
@@ -16649,7 +16619,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L45_reflection\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_reflection\", 1"
@@ -16736,7 +16705,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_restore_agility\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_restore_agility\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L45_restore_agility\" == 1 )"
@@ -16813,7 +16781,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L15_restore_magicka\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_restore_magicka\", 1"
@@ -16915,7 +16882,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_restore_endurance\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_restore_endurance\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L45_restore_endurance\" == 1 )"
@@ -17000,7 +16966,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L45_restore_luck\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_restore_luck\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L60_restore_luck\" == 1 )"
@@ -17075,7 +17040,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_restore_speed\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_restore_speed\", 1"
@@ -17159,7 +17123,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L15_restore_strength\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_restore_strength\", 1"
@@ -17257,7 +17220,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_restore_willpower\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_restore_willpower\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L45_restore_willpower\" == 1 )"
@@ -17349,7 +17311,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_spell_absorption\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_spell_absorption\", 1"
@@ -17443,7 +17404,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_swift_swim\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_swift_swim\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L60_swift_swim\" == 1 )"
@@ -17515,7 +17475,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L45_mark\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_mark\", 1"
         - endif
@@ -17557,7 +17516,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L60_recall\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L60_recall\", 1"
@@ -17614,7 +17572,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_disease_resistance\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_disease_resistance\", 1"
@@ -17713,7 +17670,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L15_water_walking\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_water_walking\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L30_water_walking\" == 1 )"
@@ -17803,7 +17759,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L45_silence\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_silence\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L60_silence\" == 1 )"
@@ -17876,7 +17831,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L60_chameleon\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L60_chameleon\", 1"
         - endif
@@ -17940,7 +17894,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L60_light\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L60_light\", 1"
@@ -18011,7 +17964,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_shock_resistance\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_shock_resistance\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L45_shock_resistance\" == 1 )"
@@ -18079,7 +18031,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L15_burden\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L15_burden\", 1"
@@ -18152,7 +18103,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_paralyze\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_paralyze\", 1"
@@ -18241,7 +18191,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_water_breathing\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_water_breathing\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L45_water_breathing\" == 1 )"
@@ -18326,7 +18275,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L30_levitation\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_levitation\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L60_levitation\" == 1 )"
@@ -18406,7 +18354,6 @@
         - ""
         - set AddPotion to 0
         - ""
-        - ""
         - "if ( player->GetItemCount \"A1V6_L45_telekinesis\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_telekinesis\", 1"
         - "elseif ( player->GetItemCount \"A1V6_L60_telekinesis\" == 1 )"
@@ -18473,7 +18420,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L45_cure_blight\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_cure_blight\", 1"
@@ -18550,7 +18496,6 @@
         - endif
         - ""
         - set AddPotion to 0
-        - ""
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_cure_common\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_cure_common\", 1"
