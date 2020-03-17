@@ -685,7 +685,7 @@ def gen_level_book(level):
         'BOOK': [
             {'NAME': 'A1V6_AlchemyPlus_' + str(level)},
             {'MODL': 'm\\Text_Scroll_01.NIF'},
-            {'FNAM': 'msg ' + str(level)},
+            {'FNAM': 'Навык алхимии вырос'},
             {'BKDT': {
                 'weight': 0.0,
                 'value': 0,
