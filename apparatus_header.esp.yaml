@@ -1703,26 +1703,11 @@
     - SCHD:
         name: A1V6_CalcAlchemy2_sc
         vars:
-          shorts: 10
+          shorts: 0
           longs: 0
-          floats: 3
-        data_size: 1890
-        var_table_size: 90
-    - SCVR:
-        - pin
-        - state
-        - calcinator
-        - mortar
-        - retort
-        - alembic
-        - alchemy
-        - luck
-        - intelligence
-        - temp
-        - exp
-        - tempf
-        - delta
-    - SCDT: eJx9lMtv00AQxnft+BUiYVB5idcUtRwIJXbelZpIFUKckIADyi0yeUBC3ERxkMgfj8TMrO0YZd2LtZ79fbMz345ty4oHiSFgMICOLY0XMHruQ3z/OvzWHX9aT69Xk5+zeP/hz4aIwJLIGhA880+YeB+tJinSHCcTT3rSlpBnbGNGfLEFXEFI4iqJLfnxLqtT5ddZYkDTkY9tKTO6ldF99xDsZMFuIdjLgu1C8DILthwp02XTo5UtqpBIARiCRlYRlnmHlcMB1plpwwzHDYzCBSdwhAujU38qApRJlDl0IDKCZS5nDqFOsKZPTKpzdy6FBfgQT33NLueqcfzzerdY33yx6BiRXkfnjH1/m/veqkl7s4r2s60l5wZmHv3yBdeOhxhCHG33edst237N2166zX2iLS666Amo87un+g7YVIe2HWVyveiSxWoLE2FAUNGySlEYKt/RAbRIXSRGr3jkOBg40uCllWbBZY1E7wLyDRqeTP0/XE6NC8A7Tc+1Mc+lI+/lFQ0hqYjMGFpyEpOqNwUTdTWTZj6TpjBxwZXXspHBoErvMhmqSZnneZC6YCvz4oRvifMpnM8NrFB5is8q2cuj1ii8Yx54UxhFitWFb2ACCqqaaQzaagya+RiQBwCjvz6sH0SbTbSNdr+T8Y9xvN7uou04CNEA6qkiKhCGgaujYw1t4velhZdauKeHIy3cCdQXW6E7Z5t1HWxnO9QelBZ1EJR1cEzf0oEO7pd1oIN7aQe07qoWzpT0SbGFCf46FzcR6g9yGq4mnXUsiEsFYUcrWJYL9CdEJQL8v6iGzPxKTpX4YbGfaDWLvy8mB6WduXxMx3q6p6eXerqjpyM93SL6paJPinSyWWxmGvaVYh8ds7tksY/+w5U/Nnubf44t+hyl/AdmqXts
+          floats: 0
+        data_size: 0
+        var_table_size: 0
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
@@ -1819,11 +1804,10 @@
         - "\t\tendif"
         - "\t\tset delta to ( calcinator - alembic )"
         - "\t\tset tempf to ( Random 100 )"
-        - "\t\tMessageBox \"%d %f\" temp tempf"
+        - "\t\tMessageBox \"%f %f\" temp tempf"
         - "\t\tset tempf to ( tempf / 100 )"
         - "\t\tset tempf to ( tempf * delta )"
         - "\t\tset alembic to ( alembic + tempf )"
-        - "\t\tMessageBox \"%d\" alembic"
         - "\tendif"
         - "\tset state to 4"
         - "\treturn"
@@ -1890,25 +1874,11 @@
     - SCHD:
         name: A1V6_CalcAlchemy5_sc
         vars:
-          shorts: 9
+          shorts: 0
           longs: 0
-          floats: 3
-        data_size: 1780
-        var_table_size: 86
-    - SCVR:
-        - state
-        - calcinator
-        - mortar
-        - retort
-        - alembic
-        - alchemy
-        - luck
-        - intelligence
-        - temp
-        - exp
-        - tempf
-        - delta
-    - SCDT: eJx9lN+P0kAQx3cXWigSreY8Y/w1Z+58EM9rgR53CZBcjPHJRH0wvJEKVEF6EIqJ/PEmzsy2pYatL2Q7+/nOj2+n2LLqQCIFDAYQ2FI9h9EzF+IHN/7Xy/HH1fRmOfkxi3fvf6+J8CyJrALvqXvExLtwOUmRYJxMHOlIWx7nGbvIO8TbUmLQEtAHH5N8uMfqVPllliho1+TdAtXxUqlf3weDLNguBHtZsFMIXmfBbk3K9Bg40ljZt6Rp3kgKC/BHPHENt5yryfFPq+18dfvZAqwiUoOCU3biTe5Epynt9TLczTaWjBRmHv10CbapiBLi4PqKr2tl16/4up5e84QNQBwwBi1+dqghtBsuuA5e24JDLfT5Dj/1IamyuoqJMCCoadmgKAxRii5Gcv8SMNrnJeCgV5OKj1aaBY9NEr31yDe4cLTzdRiduFPh0RI0uYHhIKtrYZ7rmryfdzSEpCIyY+jISRR1rwQTLb0lKt8SJSp44M6b/PopvUrT15n04ZzyRJUsD1LnbGXenHAtcTaFs0hhh9rTiMpGJPfYxPwZ88BrTt/gVBRrCVdhAgrqnsmirl6Ddr4G5AHA6I8Lq4fheh1uwu2vZPx9HK8223Az9nw0gGaqiCr4vlc30bGBruDGG+GFEe6Z4dAIB57+hir0ztlm0wSb2Ra1e2WVJvDKJjik/zOBCb4qm8AE99IJ6HypRzjV0sfFESb4Zza/DVG/l9NytanWoSAuFfiBUbAoF5grhCUC/H/RA6n8lZxo8XFxnnA5i7/NJ3ullbl8SMdmumemF2Y6MNOhme4Q/ULTR0U6Wc/XMwP7UrOPDtltMt+F/+DaH4u9zT/HDn2OUv4F+bBtww==
+          floats: 0
+        data_size: 0
+        var_table_size: 0
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -1994,11 +1964,10 @@
         - "\t\tendif"
         - "\t\tset delta to ( calcinator - alembic )"
         - "\t\tset tempf to ( Random 100 )"
-        - "\t\tMessageBox \"%d %f\" temp tempf"
+        - "\t\tMessageBox \"%f %f\" temp tempf"
         - "\t\tset tempf to ( tempf / 100 )"
         - "\t\tset tempf to ( tempf * delta )"
         - "\t\tset alembic to ( alembic + tempf )"
-        - "\t\tMessageBox \"%d\" alembic"
         - "\tendif"
         - "\tset state to 4"
         - "\treturn"

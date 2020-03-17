@@ -828,6 +828,12 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
         au3.write(au3_includes)
         au3.write('\n$ingrs_set = "' + ingrs_set +'"\n\n')
         au3.write(au3_header)
+        au3.write('\n')
+        au3.write('$script = "A1V6_CalcAlchemy2_sc"\n')
+        au3.write(au3_script)
+        au3.write('\n')
+        au3.write('$script = "A1V6_CalcAlchemy5_sc"\n')
+        au3.write(au3_script)
         for script in chain(check_scripts, add_scripts, del_scripts):
             script_name = script['SCPT'][0]['SCHD']['name']
             au3.write('\n')

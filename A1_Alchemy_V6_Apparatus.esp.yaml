@@ -15177,7 +15177,7 @@
           shorts: 10
           longs: 0
           floats: 3
-        data_size: 1890
+        data_size: 1879
         var_table_size: 90
     - SCVR:
         - pin
@@ -15193,7 +15193,7 @@
         - exp
         - tempf
         - delta
-    - SCDT: eJx9lMtv00AQxnft+BUiYVB5idcUtRwIJXbelZpIFUKckIADyi0yeUBC3ERxkMgfj8TMrO0YZd2LtZ79fbMz345ty4oHiSFgMICOLY0XMHruQ3z/OvzWHX9aT69Xk5+zeP/hz4aIwJLIGhA880+YeB+tJinSHCcTT3rSlpBnbGNGfLEFXEFI4iqJLfnxLqtT5ddZYkDTkY9tKTO6ldF99xDsZMFuIdjLgu1C8DILthwp02XTo5UtqpBIARiCRlYRlnmHlcMB1plpwwzHDYzCBSdwhAujU38qApRJlDl0IDKCZS5nDqFOsKZPTKpzdy6FBfgQT33NLueqcfzzerdY33yx6BiRXkfnjH1/m/veqkl7s4r2s60l5wZmHv3yBdeOhxhCHG33edst237N2166zX2iLS666Amo87un+g7YVIe2HWVyveiSxWoLE2FAUNGySlEYKt/RAbRIXSRGr3jkOBg40uCllWbBZY1E7wLyDRqeTP0/XE6NC8A7Tc+1Mc+lI+/lFQ0hqYjMGFpyEpOqNwUTdTWTZj6TpjBxwZXXspHBoErvMhmqSZnneZC6YCvz4oRvifMpnM8NrFB5is8q2cuj1ii8Yx54UxhFitWFb2ACCqqaaQzaagya+RiQBwCjvz6sH0SbTbSNdr+T8Y9xvN7uou04CNEA6qkiKhCGgaujYw1t4velhZdauKeHIy3cCdQXW6E7Z5t1HWxnO9QelBZ1EJR1cEzf0oEO7pd1oIN7aQe07qoWzpT0SbGFCf46FzcR6g9yGq4mnXUsiEsFYUcrWJYL9CdEJQL8v6iGzPxKTpX4YbGfaDWLvy8mB6WduXxMx3q6p6eXerqjpyM93SL6paJPinSyWWxmGvaVYh8ds7tksY/+w5U/Nnubf44t+hyl/AdmqXts
+    - SCDT: eJx9lNuL01AQxs9JmlstGGS94W1Wdn2wrE16X9gWFhGfBPVB+lZit9XWZhuaCvaPF5yZk6SRnuxLOJnz++bMfGcSW9Y8SA0BoxH0bGm8hMkLH+IH1+G3/vTT5uZ6Pfs5j/cf/iREBJZE1oDguX/CxPtoPcuQ9jSdedKTtoQiYxcz4ost4ApCEtdJbMmP91mdKb/OUwPajnxiS5nTnZweuodgLw/2S8FBHuyWgpd5sONImS3bHq1sUYdUCsAQtPKKsMx7rByPsM5cG+Y4bmAULjiBI1yYnPo3IkCZRJlDByIjWOZy5hCaBGv6xKQ6dxdSWIAP8czX7HKuBsc/b3bLze0Xi44R2XX0ztj3ZuF7pyHtZB3t51tLLgzMPPnlC64dDzGEONoe8rZbtf2Gt71sm/tEW1x00RPQ5HdP9R2wqQ5tO8rkZtkli9UWJsKAoKJlnaIwVr6jA2iRukiMXvHIcTBwpMFLK8uCywaJ3gXkG7Q8mfl/uJwGF4B3mp1rY55LR/pFRWNIayI3hpacxKTqTcFEU82kWcykKUxccOWNfGQwqNK7TIZqUhZFHqQu2MqiOOFb4nwB5wsDK1Se4rNO9vKotUrvmAfelkaRYjxdfPdddfft4u6pcYDJXx82D6MkibbR7nc6/TGNN9tdtJ0GIXZNjdREDcIwcHV0rKFN/Ki08EoLD/RwpIV7gfpMa3TR7K2ug+18h9qD0qIOgqoOjuk7OtDBw6oOdPAg64DWfdXCmZI+Lbcww//l8jZC/UFOE9Wms44FcaUg7GkFq2qB/oSoQoA/FdWQWVzJqRI/KvcTrefx9+XsoLRzl4/pWE8P9PRKT/f0dKSnO0S/UvRJmU6TZTLXsK8V+/iY3aXLffQfrvyx2dvic+zQ5yjlP2rhelc=
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
@@ -15290,11 +15290,10 @@
         - "\t\tendif"
         - "\t\tset delta to ( calcinator - alembic )"
         - "\t\tset tempf to ( Random 100 )"
-        - "\t\tMessageBox \"%d %f\" temp tempf"
+        - "\t\tMessageBox \"%f %f\" temp tempf"
         - "\t\tset tempf to ( tempf / 100 )"
         - "\t\tset tempf to ( tempf * delta )"
         - "\t\tset alembic to ( alembic + tempf )"
-        - "\t\tMessageBox \"%d\" alembic"
         - "\tendif"
         - "\tset state to 4"
         - "\treturn"
@@ -15364,7 +15363,7 @@
           shorts: 9
           longs: 0
           floats: 3
-        data_size: 1780
+        data_size: 1769
         var_table_size: 86
     - SCVR:
         - state
@@ -15379,7 +15378,7 @@
         - exp
         - tempf
         - delta
-    - SCDT: eJx9lN+P0kAQx3cXWigSreY8Y/w1Z+58EM9rgR53CZBcjPHJRH0wvJEKVEF6EIqJ/PEmzsy2pYatL2Q7+/nOj2+n2LLqQCIFDAYQ2FI9h9EzF+IHN/7Xy/HH1fRmOfkxi3fvf6+J8CyJrALvqXvExLtwOUmRYJxMHOlIWx7nGbvIO8TbUmLQEtAHH5N8uMfqVPllliho1+TdAtXxUqlf3weDLNguBHtZsFMIXmfBbk3K9Bg40ljZt6Rp3kgKC/BHPHENt5yryfFPq+18dfvZAqwiUoOCU3biTe5Epynt9TLczTaWjBRmHv10CbapiBLi4PqKr2tl16/4up5e84QNQBwwBi1+dqghtBsuuA5e24JDLfT5Dj/1IamyuoqJMCCoadmgKAxRii5Gcv8SMNrnJeCgV5OKj1aaBY9NEr31yDe4cLTzdRiduFPh0RI0uYHhIKtrYZ7rmryfdzSEpCIyY+jISRR1rwQTLb0lKt8SJSp44M6b/PopvUrT15n04ZzyRJUsD1LnbGXenHAtcTaFs0hhh9rTiMpGJPfYxPwZ88BrTt/gVBRrCVdhAgrqnsmirl6Ddr4G5AHA6I8Lq4fheh1uwu2vZPx9HK8223Az9nw0gGaqiCr4vlc30bGBruDGG+GFEe6Z4dAIB57+hir0ztlm0wSb2Ra1e2WVJvDKJjik/zOBCb4qm8AE99IJ6HypRzjV0sfFESb4Zza/DVG/l9NytanWoSAuFfiBUbAoF5grhCUC/H/RA6n8lZxo8XFxnnA5i7/NJ3ullbl8SMdmumemF2Y6MNOhme4Q/ULTR0U6Wc/XMwP7UrOPDtltMt+F/+DaH4u9zT/HDn2OUv4F+bBtww==
+    - SCDT: eJx9lNuP0kAUxmemtFAk2ph1jfF21uz6IFm3BbrsJkCyMcYnE/XB8EYq2ypIl4ZiIn+8ieecXqhh6kszPfP7zuWbaS3ZsCGVAsZj8C2pXsD0uQPxwxvv6+Xs4/r2ZjX/Eca7978TIlxTIqvAfeYcMfEuWM1zxJ+lc1va0pLHZcYB8jbxlpQYNAWMwMMkHx6wOld+CVMFvaa8X6H6bi71WvugXwR7leCwCPYrwesiOGhKmS99W2ore6bUzRtJYQI+xFNHs8u5Ohz/tN4u1nefTcAqIjfIP2UnuqUT/Y60klWwCzemjBRmnv50CLaoiBLiYPuKt5t12695u5Vv84RtQBwwBl1+t6khtBsuuA5uW4JDXfT5Hr+NIG2wuoGJMCCoadmmKExQii5Gcn8IGB3xJeCg25SKl2aeBZcdEr11yTe4sDPnWzA9cW6FS5egww1MxkVdE/NcN6VTdjSB1BCFMbTkJIq6V4KJbnZLVHlLlDBwwZ13+PgpvcrTt5j04JzyREaRB6lztrJsTjimOIvgLFLYYeZpRGUjkrtsYvmOeeANp29zKop1uVHyZZCdfa88exocYPrHgfWjIEmCTbD9lc6+z+L1ZhtsZq6HU9MghmiA57ktHR1raAOvuRZeauGhHg60sO9mH45BB83e6ibYhFvU7pUNmsCtm+CQ/s8EOviqbgIdPMwnoPVlNsJpJn1SHWGOf7DFXYD6vZxuVI9qHQriWoHnawXLeoG+QlAjwJ9KNpAqj+QkEx9X5wlWYfxtMd8rzcLlQzrW00M9vdTTvp4O9HSf6JcZfVSl02SRhBr2VcY+PmS36WIX/INn/pjsbfk59ulzlPIvlr5srw==
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -15465,11 +15464,10 @@
         - "\t\tendif"
         - "\t\tset delta to ( calcinator - alembic )"
         - "\t\tset tempf to ( Random 100 )"
-        - "\t\tMessageBox \"%d %f\" temp tempf"
+        - "\t\tMessageBox \"%f %f\" temp tempf"
         - "\t\tset tempf to ( tempf / 100 )"
         - "\t\tset tempf to ( tempf * delta )"
         - "\t\tset alembic to ( alembic + tempf )"
-        - "\t\tMessageBox \"%d\" alembic"
         - "\tendif"
         - "\tset state to 4"
         - "\treturn"
