@@ -121,14 +121,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 442
+        data_size: 412
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kM1KA0EQhLf2TxZERhREROmDDzAT0FuEEMGDd8ltiJPBiLvusqOHfVAfR0jPzhLye+pD1Vdd3RlcEsWkcqQFuTii8ZhGGaqriXp71JPp0povJfWz/Xm1nXbGwbtvxGXQS7O0Vde7WMzACTHJexTYDOR0EM1uBVWBm85LM7APzHmPHOBRgYALxtOAs5T6XJ5+vTxF3pTzzrY5smua/Quqzz6/P1q70NUvN5GKnrZcyV1wXQyud6NdU7dWN/Viy/ondoIQbWiHcERDK1X0tROujXVtfxHPw2f3R/GzX873VKZOgCNv9ouAFdBUaSA=
+    - SCDT: eJx1kM1Kw0AUhXPSJBIQjSiIiHIXPsBMQXcVSgUX7qW7oU4HW5o0IdMu8qB9nELvdELp7+rCnPOdOffGsJ0gJJkgSsmGAfV61I1RPPbl74fqDyZGz6RQX2bxYxpltYVzP2cPXs/1xBTN1sViDE4ISbwhxX4gp4No+JJR4bnBKNct+86c84gW7qbw+C3jkcdZilwuT/e9uEZS5aPG1AniJxquMypvpvP/2oxVseQmQtLngavz6l33retPK1uVtVFVOT6wrrKjIAR72jkcQdtKptvaIdfGrrbbiOf33cna/H4FXDikiwI2yYhgzw==
     - SCTX:
         - Begin A1V6_AAdd10_DetKey_45
         - ""
@@ -167,7 +167,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -183,7 +182,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 821
+        data_size: 791
         var_table_size: 35
     - SCVR:
         - in
@@ -191,7 +190,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNkl9LwzAQwHvd2q0g0qEg4h/y4AdoKvo2YUzwwXfZW6htsMNmLY0+9IP6cQQvTWzD1umeQsj97nd3OQ/k2HEJ9WEcEDlyyHxOYg/E2YK+3LPFMufpO43YI/945g2TqQQVfRGe6vcizblo2ih89AAzuCS6gQDshJgdCFldhURobpkUqWHvkFMxkYHjADQeIe5pHJ88lRdP15yqjOgI/KpIGl5j/kuy+g5JOVtv3mqesWydiHKTsYiShw6gAViIv4UkMmdNIgzigzslSBlceWkHf4W7EDgTACPCJlQLU2zBbVuwS/XPtffYpBCfOLyDpFuEbbxVRuX0eyd+QZfN8rvX2n9isr2mTFZlzVlVZnvEQ6Hg/ConnVJ9dNAq1WVgXP23gDO1YuP/R/vXHHQdo74Os0x4Dm9cu/S450+znVek0LZnw5UI4Aewjrmd
+    - SCDT: eJyNkk1LxDAQhjtx221BpIuCiB/k4N22orcVlhU8eJe9hdoGu9hsS6OH/lB/juCkiW3YD91TaDPP+2QmcUGOHEJjD0YBlQcOnU5p4oI4ncUv92w2L3j2HkfskX8885bJTIKqPg9P9H6ZFVy0XRVuuoAJhEbXEIAdiOlA6eIypEJz87TMDHuHnKqJDJwEoPEbxF2N45arcnElZlXHiA7Bq8u05Q3mX9DFd0iryXL11vCc5ctUVKucRTF96IE4AAvx1pBUFqxNhUE8ID5FyuDKG/fwV7gJgTMGMCJsQrXgYwuka8E+qnemvUcmQnzi8PaSrhG28VYZldMbnHgFfZrlJ1faf2zSXjMm66rhrK7yHeJtpeD8Kse9Ul100CnVx5ZxDdcCjm/VJv+P9q856HOQ4RzmMeH6NNl4cfgf83a8YRUF8AM5GrFM
     - SCTX:
         - Begin A1V6_AAdd10_DetKey_60
         - ""
@@ -265,7 +264,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -281,7 +279,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1053
+        data_size: 1023
         var_table_size: 35
     - SCVR:
         - in
@@ -289,7 +287,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJydU8FKw0AQzaxN7IJgxIoHUffgB+ymxYNQofTg1ZP0FtK4NNW0kaQi+VA/R3CmWdNV0xI9LWHmvTcvM8+FouMwoTzocFHsOWI4FIELi9ORergOR+NEx89KhffZvMiWYREXQN1nfq+qp3GiF+W6C4suIAMT8go42ITIDkJMzn2xqHDjKI0NNkAc9UgDDjhU8BuEuxUcSy7x4svMS2PIA/Be0qjUOfJfismHL7LefDnL9SOSRiucKo/eQqnEbY1RHCyUJyrUiUHNkuw1DRMd5SsD84B1BSINBcmrmuDdbwaCsw9gBNEPuTlEN2ztRu7QL+J8Pg2fdJqWf9P/DrT1+5bh7m7B4L+CgS04IMNk2dtYxmOoSS377KKa5tiQ0rb0NFuWm5391G9qBedLkteSdHJ8LUkfFkHjgYDTtdqDFgu2+/vtFtLiL/I6OKy+fAoFvs3JwVx0xEDKrXUKN+b57uhXFVlxqC1JpkEAPgGqe/ws
+    - SCDT: eJydk89Kw0AQxjNpExsQjFjxIOocfIBsWgQPFUoPXj1JbyGNS1PNH0kqkgf1cQRns2uyaizR0xJmft83X2bXgnJomMhsGDpYDgyczdC3ID2Zs/urYL6IefTEWHCXb8o8C8qoBNF96o5lPYlinlZ1FxUtIAUTvUtwQBckdUBcnrmYSm4RJpFifeJEj6dg3wGJXxNuSZxKltCl01SnGMPbB/s5CStekP4FLt9dzMebbF3wBxINtzRVEb4GHsObhmEOaJSNkjpW1DrOX5Ig5mGxVZgN5giJVBLCnjUCb243CMYegDKkPCLNAaUx6zTeDv8yKjar4JEnSfU3/6+g7j/RAo92G/r/NfR1w6kILCLbbWS6DI2oFt88l9McKVGxLb7Ks6rd2Xf/rlYwPi2dxlJcOae2FB+aQOcFAWOktfs9Fqz3T/otpMdflCkGbQr1KOjsfjk0wRCnHv2p28MfdeLI9pe3KqwAPgBj2/Pa
     - SCTX:
         - Begin A1V6_AAdd11_Poison_30
         - ""
@@ -373,7 +371,6 @@
         - if ( add == 1 )
         - "\tset state to 1"
         - "\tset A1V6_CalcAlchemy2_sc.pin to 400"
-        - "\tset A1V6_CalcAlchemy2_sc.in to 2"
         - "\tset A1V6_CalcAlchemy2 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -389,7 +386,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1205
+        data_size: 1175
         var_table_size: 35
     - SCVR:
         - in
@@ -397,7 +394,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJydlMFOg0AQhhksWKKJqDUeTHUPPgDQ6q0mTQ9ePZneNhQ3pQrFAKbhQX0cE2fZdbtVWtHThux8/z8zzKwFRccwiW9DxyHFnkFGIxJYkJ6P/cdbOp7ELHrxffqQLYpsSYuoAB594fbEfRLFLK3qKLy0ABVM4l2DA7ogqgMh075LUsFNwiSSbIAcj/EkHDgg8AnilsDxyuK6eJry5Gl4h2C/JmHFctS/ItMPl2S9xXKesycUDUvMKg9X1PPJnWJ8BzTKJoI6k9Q8zt4SGrMwLyVmg9klSEoJbu8rgXe3GQRjH0AaBpphF+y+MDyRXB6WNGVhS7cGSrcaOHXjjrBxZt04b0epRZQvZvSZJUn1t1I3Qd1/uFnqLsPgv4aBbnjDC+Yl2+uSce6UqFa+eSmyOVUtXFE2y5bVejy++zeFgvFleaAs+XQ7tSX/0AQaZxGMrhYetJglPX7w2zTowcN2f69Fyx210KbaSL6seDZvNO5rhww9b+s9f3Twnbk//nGLqpjUlheGJwLwCekAIl8=
+    - SCDT: eJydlMFOg0AQhhlasEQTUWs8mOoefACg1VtNag9ePZneNlvclCoUAzUND+rjmDjLrnSrWLGnDdn5/n/+YcCCvG2YxLeh7ZC8ZZDhkAQWJGcj//GGjsYRD198nz6k8zxd0DzMQVSfu115H4cRT4qyCi8tQAWTeFfggC6I6kDIpOeSRHJjFoeKDZATNZ6CAwckfoe4JXG8soQunqY6RRveAdivMSt4hvqXZPLhkrQ7X8wy/oSibIldZWxFPZ/cVozvgEbZRFKnippF6VtMI86ypcJsMDsESSUh7P1K4N2tB8HYA1CGgWbYAbsnDY8Vl7ElTThr6FZD6VZ9pxzcIQ7OLAfnbYmah9l8Sp95HBf/i7oJ6v6DzajbDINdDQPd8FoEFpHtdWTcu0pUi29eyG5OqhGuKJ+mi2K9Ht/960rB+LLcryzFdjulpXjQBGp3EYyOVh402CW9vv/XNujFg2Zvr8HIZeTWOrL6WPGs/6KxgzYZeDjW+6Mf98ih7S//EGEF8AkpVBoN
     - SCTX:
         - Begin A1V6_AAdd11_Poison_45
         - ""
@@ -490,7 +487,6 @@
         - if ( add == 1 )
         - "\tset state to 1"
         - "\tset A1V6_CalcAlchemy2_sc.pin to 400"
-        - "\tset A1V6_CalcAlchemy2_sc.in to 2"
         - "\tset A1V6_CalcAlchemy2 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -506,7 +502,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1478
+        data_size: 1448
         var_table_size: 35
     - SCVR:
         - in
@@ -514,7 +510,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJydlE1Pg0AQhhksCImJVaseTHVN/AFAPzzVpOnBq4mJ6Y0AkoLyYaBN0x/qzzFxFrawKLToiZCZ531ndmdHgrQjiESXoaOS9EAgkwkxJAgvp/rL2JzOPNd513XzKfbTODJTJwWafdXt5fHA8dxwk2VhUAJUEIl2ByrwgqgOhMz7XRLm3MwKHMYayNEcjcGGCjn+jLiU4xiSqC5+RfalZWhHIH8E1sZNUP+GzL+6JO750SJxX1HUWmJVibU2NZ08FIxeMArAbc5cMMYOLGwj8LGuqEphUZyXTHLunHELL14FpudayZJhMogKQZJJiBXjz249CMIhADMccIYKyP3c8JRxibU0Q9dq6VZD8VZDNTvuYzxuMTtubUerqZP4tvnmBsHmb61WQd5/VG11l6HxX0ODNxzThmnLSn3L13kFZ8WxrU3XjqOWDddhvPv91l0u3fGtFJJcJeLPa49jO1mlXjmbjVddZoKwNSxvmL5HNTOkPxxf+3pAULh0g0tveDhVYNBi8Pn84b7R5ZNHLUaNzx+3m5S996kWG04sVhTdXvitX3G4wDpkqGmNcbqFcfE+nvyKoiqW1LByaSEA37YKZ3Y=
+    - SCDT: eJydlMtOg0AUhjlYEBITq1ZdmOqY+ABAL65q0nTh1rgw3RGKpKBcDLRp+qA+jolnmCkMSlt0Rcj83/nPbUaBrCXJxFShpZPsQCKjEbEUiC7H5svQHk98z303TfspCbIktjM3A6q+anfYeej6XrTOVXioAEaQiXEHOogBMToQMu22ScS4iRO6nLWQoxqDw5YODH9GXGE4Hik0Ln5l/qVpGEegfoTO2ksx/g2ZfrVJ0gnieeq9YlBngVmlzso2TPJQMGbBaAC3jLngzCx0sIwwwLziKoVJCV4qYdw55+Z+sgxt33PSBcdUkDWCJA8hV4w/2/UgSIcA3LAnGGqgdpnhKedSZ2FHntPQrYYSrfp63u5jbLect9vYUWrmpsHMfvPCcP23Uqug6D+olrrL0PqvoSUaDmnBtGStvuRrlsFZ0baV7c2SuGHBdZjofr9xV0t3vCtFSCET+efYk2SWLjO/3M2toy6VIG0MywnT+6jnhvRH4GtvD0iaILcE+ZaLUwV6DRZf1Pf3ra4oHjRYNVE/bLYpe+fJOnpQdpS/Xvitf+LQv0X6Bg7t8eTXOXJouuVRpVYA39wUXyQ=
     - SCTX:
         - Begin A1V6_AAdd11_Poison_60
         - ""
@@ -623,7 +619,6 @@
         - if ( add == 1 )
         - "\tset state to 1"
         - "\tset A1V6_CalcAlchemy2_sc.pin to 400"
-        - "\tset A1V6_CalcAlchemy2_sc.in to 2"
         - "\tset A1V6_CalcAlchemy2 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -639,14 +634,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 439
+        data_size: 409
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kEtqw0AQRFX6BUEIY8giIQn0IgfQCJKdA8aQ3CB4NyjKYBlLtpHshQ7q4xjcoxmMv6tedL3qqo7QBp5PMkaYUOt7NBxSFqF+GsnfTzUal7qYy0x963xd6ka1RQsjfxGPVlAVpa67XsbLCGzhU/qOBMeObA+iyZug2nLjvCoc+8Gc0aQOzhJYXDAeWpxXofHlac6n94hXVd7pJkb0TJOdoOXDbDFt9L9qNn+dSiV9naiCV6saOFXp+pwJt+LMBt7R7hKG5xLJpI8ccGQcIps2PK9X7gvxp38GF1um7oAbLzaHgD0Pgmce
+    - SCDT: eJx1kM1qwkAUhXNikhIobYQuWtrCXfgAmYDuFETQNxB3Q4yDEROVRBd5UB9H8I4ziD+4Gpj7fWfOHR91y3FJBPBCql2H+n1KfJTfQzHtyeEoV9laJHKs0n2uKllnNTT+G30ZoMhyVTYXjIc+OMKluIMQt4kcD6LZf0Sl8UZpkVm3y55mYisnIYz+ybpndB55OpdP/Xz8jmBXpI2qAvg/NDtFtP1YbZaVWsjqMG9kLGhwR7X+DNW2VG73eQCP0UMMnJvZswzHNhLhpbLLlXGtrLfhc9J+Wpnv34AXn6ijgDNE9l7N
     - SCTX:
         - Begin A1V6_AAdd12_Feather_30
         - ""
@@ -685,7 +680,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -701,7 +695,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 655
+        data_size: 625
         var_table_size: 35
     - SCVR:
         - in
@@ -709,7 +703,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFktFKwzAUhnuyploQ6cALRYVzsQdoCno3YQz0DWR3pdZgxVal6S76oD6O4DlJaMvm2FUI+b///5McCSYMBKoIwhjNLMDlEjMJzeVKPd/nq3Wlyw+V5Y+66Crd5qY0wPLr5MIJ6rLSTW9ldCiBLASmC4hh6kj2gLi5TbBx3LqoS8/eEcea1MNZDA5fEC4dTkeSfWkVfuUa6RlE33XR65b8r3Dzm+DX+fvnW6tf83b70uepwodBrWKY6KMbp597feVv6JAIxCkS5XEOVQP8k+xDEJwA+CC6AfePqL+w/ckuHOwmHcROB1Nuu67WY+1DuaMQAg7jODnE8WvHNo43E3znbWznI7dy3rPR2/8Srf9/pR0nmqCn+d4pURR4YHQ4COAP+zySmA==
+    - SCDT: eJyFktFKwzAUhntiUy2IdOCFosIBfYCmoHcTxkDfQHZXagxWbFWa7qIP6uMMdk4T2rIxdhXa/N///yeJBBsGAlUEYYz2JMD5HDMJ9dVCvT3li2Vp9LfK8hdTtKVpcqstsPwmuXSCSpem7noZbUogC4HpA8QwdSR7QFzdJVg7bllU2rOPxLEm9XAWg8PvCZcOpy3JvrQKv3KN9Byiv6roTEP+17jaJPh78fXz2ZiPvFm/d3mq8HlQqxgm+ujW6WdeX/oJHRKBOEOiPM6haoD/k30IglMAH0QTcP+I+ou+P9mFg92kg9jpYPW6bSsz1j6UOwoh4DCOk0Mcn3bcx/HHBN85m77zkamctxi9/S3R+jrbu0r6T5YHHgdbAWwBF1CKRw==
     - SCTX:
         - Begin A1V6_AAdd12_Feather_45
         - ""
@@ -771,7 +765,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -787,14 +780,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 464
+        data_size: 434
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kc1KAzEUhefMnwy4iFDcFPEKPsCkorsKpaB7F9JdiGN0BjO1TGbTB/VxBG8mg1TbrrK433duTpLBJVFMMkdakIsjms9plqGdLuTznVosa1N9yBv10HTmybjG9cpVDt6YiklgbFWbdjuQPMzAKTGV1yiwG8obQLS6ENQGb6ltNbq37HmmHOVZgaAL1tOg8yj1uXz69eUp8o3VW9PlyK5o9S3o87xZv3fmVb1YzVfR6742nSol3f+hk8tAT0b6jaupjem1/c9+iSOJiHaYgzmIxnvKYiiScBH8FvEd+Tz8EENN/oLHs70pWyfAkYf3i4Af6CpxMA==
+    - SCDT: eJx1kM1Kw0AUhXPSJBIQjFDcFPEKPkCmorsKpaB7F9LdMMbRBCdtyWTTB+3jFHqnE0p/VwMz33fmnhvD9oKQRIIoJRsGNBrRMEY9GIuvVzmelLr4F8/yvWr0p7aVbaUtLJwxyPqeMUWp6+WW5McYnBJS/oQU+6H8A4im9xnV3psoU3TuC3uOyTt5mMLrN6xHXuenyOXy6b7Pr5EsjFrqJkH8SNN1RvO7avbX6B/5bRSPomZtqRuZC3o7oHsPnu539C9XkwvdKnPMrrILiQj2mLM5CLo5RbotEnIR7Iq4jnx+3J4sgu+vgAurdVHABu9daN8=
     - SCTX:
         - Begin A1V6_AAdd13_FireResist_30
         - ""
@@ -833,7 +826,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -849,7 +841,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 692
+        data_size: 662
         var_table_size: 35
     - SCVR:
         - in
@@ -857,7 +849,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNksFKw0AQhjNpNhrwEKF6KeIIfYBsRW8VSkHvHqS3ZY2rCW7aks2lD+rjCM5m1zRoCj0ty873//PvDAMTBSHyGKIEzSjA+RxnDKrJgr/ci8WyUPknvxWPZa2elSlNI0xuwBKTdOxqdF6oatdW0iMDUgkxm0ICfVFyAMTVVYqV45ZS5569I87WZB6eJeDwKeHM4fTErC6doT9tG9kZxFstd6om/Rtcfae4uSzXH7V6E69aUkty3RSqFhnHh47iCfS4GB134bn3emNzSt0Yj8UQniKRXsI2wDuBr3QYhOAEwBtSIpsnpjxhm4cko06y10t47XoZ/0rSx4utaqTeJ/hrP1gLgbW0pqwztTNIWlN76Skc+LE2wRE5nc9o7+PnSOfwsNudozV7Ov/3ShSZHlguawTwA3iqoe0=
+    - SCDT: eJyNksFKw0AQhjNrNhrwEKF6KeKIPkC2orcKpaB3D9LbssbVBDdtyebSB/VxBGezaxq0BU9DsvP9//w7y8HGEUORQJyiPYhwOsUJh3o8E893cjYvdfEhbuRD1egnbSvbSltYcMQ4G/keU5S63nSddMiBVBjm15DCUJQcAHFxnmHtubkyRWBviXM9eYAnKXj8inDucTriTpcqC9WNkR9DsjZqoxvSv8TFV4ars2r53uhX+WIUjaSWbakbmQu87ymRwoBL0HOngXtrVi6nMq0NWALsCIkMEm4A0Qt8ZrtBiA4BgiElcnkSysO6PCQZ95KDWdiFn2X0I0kXL9e6VWab4Lf9zl6InKUz5b2p20HambqPgcKeG+sS/COn92Fbn7BHqo8nf5ZN/0l2z/NxUgDfyHmZnA==
     - SCTX:
         - Begin A1V6_AAdd13_FireResist_60
         - ""
@@ -919,7 +911,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -935,7 +926,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 882
+        data_size: 852
         var_table_size: 35
     - SCVR:
         - in
@@ -943,7 +934,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk89PwjAUx/cKmzTxMCKJMf5qjEcP20BvmBAOXo0Hw61ZRsMWGJIWDvyh/jkmvq7NKDLUU9P0+/l+X99rfVBtj7A4gDZlquWx4ZAlPpQXo/j9iY/Gucjm8YC/CbV+FVJxlSnQ+suwZxSLLBflttLhoQ/oQVh0DxRcS/QHxibXISsNN04XmWUfkdOayMIJBYM/IO4bHI987YsrsasuIzqFYLVIt0Ki/w2bfIXs46xYzqSY8tkmlTwvpoJHMXuukbhGOgB3Bjk/QGaFLNa5gyX/wspUqo1ysD4Fp8TgyoBdC+YiXedC2gIDIB2GlMXJXrGf4SEE3gmADRrQqmUBtoxULUO7dm3n1EBuTQ09a6eytFxxNS+Wuz79jG7UgqcjdSitQ/WYaRWqN45D01DA6zjqxFEfm8c+0f+VMKOoWvRHE80lWrtL2HeIa/NjrX4MfpKX7sEpUhh45HPoIIBv36fWVg==
+    - SCDT: eJyNks9PwjAUx/cqmzTxMCKJMf5qjDcv20BvmBAOXo0Hw61ZRsMWGJIWDvyh/jkmvq7NKA6UU7P1+/m+1+97PqiWR1gcQIsydeKxwYAlPpSXw/jjmQ9HuchmcZ+/C7V6E1JxlSnQ+quwaxTzLBflptLhpQ/oQVj0ABRcS/QHxsY3ISsNN0rnmWWfkNOayMIJBYM/Iu4bHK987YsnsaduIzqDYDlPN0Ki/y0bf4fs87xYTKWY8Ok6lTwvJoJHMXupkbhG2gD3BrloINNCFqvcwZKjsDKVaq0crEfBaTG4NmDHgrlIV7mQtsEASJshZXGy0+xX2ITAOwWwhfq0iizAyEgVGdq1ajunB3JneuhaO5Wl5ZKrWbHY5vS79F4teLqkLkrronrMtCqqPxyHfUMBr+2oE0d9aB67RO9PwoyiiuifEM0jyPYRdg/xfO00lhX/o+WB9ddWAD8KHc4F
     - SCTX:
         - Begin A1V6_AAdd14_RestPers_45
         - ""
@@ -1013,7 +1004,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -1029,7 +1019,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 793
+        data_size: 763
         var_table_size: 35
     - SCVR:
         - in
@@ -1037,7 +1027,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFkk1Lw0AQhjPbJm3AQyqCoC0sIugxqdRbhVLQk1fpLSzp2gY3H2wC0h/qzxGcza7p2g97WsLM877vTMaFqusQGnnQ9WnVceh0SscuZFez6O0xns3XPPmIJvFzIetXtkqTuEoqUMB1cKFbRLLm2aZpxKILKEJoeAs+2JpoAJQuRgHNNDdnIjHsBDnVExp47IPG7xF3NY4lV+niS8yrYoRn4JWCbbhE/SFdfAe0GKT5SvJlzDMumVjGYUSfWiBqgT7AjQYud4AyzXnNmbQwjGQ5eSMNnhuwYqKWacKNlQekTxEzPPlj+xUcoMDpARirB7+Z3cPZSTM76nVbPSsFudMphr96dZHzd1F8chmXvGai2o6+m+FfBhwVQYXotSHU//ObEOrDUtrfNjh9q3ds9R5bdDP+qQ3pRJ1tInMt+B4+qeaw8ZZfBntVpNDxyAkrI4AfZ/q+zg==
+    - SCDT: eJyFkt9LwzAQx3tx7VbwoRNB0A2CCHttK/Ntwhjok6+ytxK6uBXTH6QF2R/qnyN4aWIXN+eejiT3+d73LudC3XMIjTzo+bQ+c+hsRmMX8ut59PqQzBcbnr5H0+SplM0LW2dpUqc1KOAmuNQpIt3wfNsm4qMLKEJoeAc+2JpYAChdjgOaa27BRGrYKXIqJzRw7IPGJ4i7GscnV+liJCYqG+E5eJVgWy5Rf0SXXwEth1mxlnyV8JxLJlZJGNHHDog6YABwq4GrPaDKCt5wJi0MLVmVvLEGLwxYM9HILOWmlAdkQBEzPPlV9jP4gwKnD2BK3ftt7x72TtreUa/X6VkuyES7GP3oNWXB30T5wWVS8YaJetf6vod/GXCUBWWi35lQ/+e3JtTBUjqcNjgDKze2co8Num3/1IS0I7JzZLYF4/PwYKXwHjWPLKmSAvgGVNi2fQ==
     - SCTX:
         - Begin A1V6_AAdd15_FortMagic_30
         - ""
@@ -1103,7 +1093,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -1119,7 +1108,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1126
+        data_size: 1096
         var_table_size: 35
     - SCVR:
         - in
@@ -1127,7 +1116,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJydlF9LwzAUxXvrWlv0YZOBoBsGEXxdu823CWOgT77K3krs4lZM29EWZB/UjyN402Rd9n/4FEru75yTm9tYkNcMk3g21FySnxlkMCC+BfHN0Ht/CoajGQu/vH7wkmbFG51GYZCHOQjgtt6UJTycsXhRFuKmBShiks4DuKBrogEQMm7XSSy5EeWhYvvIiZqOgn0XJD5A3JI4bllCF1dTrSJG5xLsOacLlqF+i4x/6yRtRMk0Y5OAxSyjfBJ0PPJcAV4FOAD3ErjeAOZRwgpGMw3DSJqTfSfBpgI/GOd0kiYJVWY2mA5BUCmYa8Y/9Z0cGOcAyq6r2TkH7fx/2vm6Xc8t2+1gu82y3Xpb7bZ0v1IqOeVFFoXstKPuoHTnvnAW3vbKG8emUtRymI8yR2upWKQJ++TpN8uCOSsoz1c3vZniIAPGMsRFFUKMq1uGEB+a0vZwgeFotb5Wu2+u1onu8cHQy3snXeyxG5DnPVudV/16uO7+P8tXAh+G18bWLlLouOc9EEYAf+fxEXQ=
+    - SCDT: eJydk19LwzAUxXujrS360MlA0A2DCL623eaTE8ZAn3yVvZXYxa2YtqMtyD6oH0cwabIu+z98Cm3u75yTmxsTilMDYd+CUwcXJwbu93FgQnI98N8fw8FwSqMvvxe+ZHn5RiZxFBZRAQK4cZuyhEVTmsyrQr5pAhdB2LsHB3RNbgAYj9ouTiQ3JCxSbI9zosZTcOCAxJ84bkqcb5lCl69IrSKGdwHWjJE5zbl+C49+XZw14nSS03FIE5oTNg49Hz/XgF8DNsCdBK7WgFmc0pKSXMN4JM3JupVgU4EflDEyztKUKDMLkI05qBTQivGPu5UD4wxA2XU0O3uvXfBPu0C36zpVu23eblS1W2+r1Zbul0qlIKzM44ged9QtlO7cE87C21p687GpFbUc6EHmaC0Uyyylnyz7pnk4oyVhxfKm11PsZcBYhDivQ4hxdaoQ4kNT2hwuMGytNtBqd83VKtE5PBh6efeoiz10A/K8aHle9fT4+trYeJ/8P9fc8eKFFMAfJUkJIw==
     - SCTX:
         - Begin A1V6_AAdd15_FortMagic_45
         - ""
@@ -1214,7 +1203,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -1230,7 +1218,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1698
+        data_size: 1668
         var_table_size: 35
     - SCVR:
         - in
@@ -1238,7 +1226,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyVlU9L80AQxjPR1AZeXiL4B6nCKuK5qbbqQUFEvHkS8bbEZG1C00STFMkH9eMI7maXONs2NZ6WsM9vntnZmawF+bphErcD6zbJ1wxydUUGFkz3btynEb25DZk/cUf0IRqHxV3JaO7nIPQ9Z0sqYj9k07LS8U0LeAyT9I/BBhySxwdCng8cMpXcrRf7ih1yTmj6Ch7YIPFHjlsS51uWiMtXU60ijf4/6LzFXskyHv+QPH85JN2JknHGAjrxxumsiGgYBYz2XXJdU25NdQFOJNVTVJ6kHx9p/ErfWFzQWRK9zxhCB7+gL8zLGtBTjPYk6ii0xpD+bIW+zhDphzaganSOJLGriMBjQeblNOROhSpHB8wu4awKYmql+XSaUDA2AJTpCJl2F0xnQZm9ZuWkYBL+g+k8ik3PdVMiTbcVGSVJ6rOkaG25HMSGF7rhvjTcxJfR1mwRwkaXdtX4Nm98s2p8Hm6jDoeu19yTOfxX4VjJXrw4bjCdU4GBTmPOlU9p9P5tKpkuBkOkLw6wXR9ADL5dHUB8oBANYwpGFwEDBKyaUJ06baDmh1OnzhC1MJe6dLhEWqekS0etBgoT562mARMXLZoZ6y9/78dVzSOveO3nitV/m6/Lf+7VC8MflfvNhV1OcbeGx0QYAXwDnyO7/A==
+    - SCDT: eJyVldFL6zAUxnty7VzhcqlwVWQKUcTndbqpDwoi4psvgvgWahvXsq7VtkP6h/rnCCZLqCebnfUpbP1+35ecnNPaUKxZhHodWHNo8ceiFxd0YMN058p7GLGr64gHE2/E7uJxVN5UnBVBAVLfc/8rRRJEfFrNdeKhDcKD0P4hOIAthT9Q+rjn0qnirv0k0OxQcFLT1/DAAYXfC9xWuHhkS1+xEr3KbfT/Qucl8SueC/99+vjh0mwrTsc5D9nEH2ezMmZRHHLW9+hlTXk11QU4UlRPU0Wavb1lyTN74UnJZmn8OuMIHfyAPnE/b0CPMdpTqKvRGkP6kxX6eodIP3QAVaNzoIhtTYQ+D3O/YJFIKnU5OkC6VLDahBileXebULDWAXToCIV2l0JnYZU/59Wk5Ar+RegiikNPzVCqQjc1GadpFvC0bB35PYgDz8zAXRW4gS+jbdgyhIPOnXnjO6Lxybzxhd16bYeul+yoPfzTdrziT36SNIQuqMBCpyEL5dMas3+bSmaKwZLblwfYrA8gB9+ZH0D+QBYNYwpWFwEDBKyaUJM6bqAWh9OkThC1NJemdPiNtN6SKR21GihMnLaaBkyctWhmrD//uR9XNY+6YvJ1xfq9LdbbjaWXu/hf+DV8LqQVwCfdE7Or
     - SCTX:
         - Begin A1V6_AAdd16_NightEye_60
         - ""
@@ -1348,7 +1336,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -1364,14 +1351,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 461
+        data_size: 431
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kMtqwzAQRT1+FUMXKm1XfTCLfoAVaLtKIbjQPyjZCVcZmlIrNpazyIfmcwIZWSYkxFlpMefc0Z0EbBSEKFOIM7RhgNMpThIwjzP5/aZmxZL0v3xXn9QVLZXduiVltQWnPIg7D1V6SWbTozxMgGNCzF8gg+NUXgGI8yeBxntFWenBfWXPMfkgTzLwumA99jqPYpfLr1ufX0PaVOWG2hSSZ5zvBNa3f6vflhaKdFfzzBqVS/w4QSP06P2A/mhVmqZeV6SaenECb8VYHgRHwHgKBMMfZdaXiLgEHEq4fvyOH6GvyPf/ujmbsnUFcOHobhHAHgf4cRc=
+    - SCDT: eJx1kM9Kw0AQxvOlSSQgGFFP/mEOPkC2oJ4qlAi+gfS2xO1gxawJ2fTQB/VxBGe7QVqsp4Gd3++bnUnhJlFMKkOSk4sjms1omsJezdXLvZ5XKzYf6kE/8VD1XA/rnrUzDl65LM4D1JgV280WlWYKiYmpvEWO3VQZAaLFdUE2eFXdmNG9E88z5ShPcwT9RPQk6NJKfK5UP748RtY19Yb7DOkNLb4Las/eP996Xmo2Qys9Z3Wp6HEPnVBAL0b01ejadu26Yd21yz34qziUh2gHOJyCaPyjyrdLxLIEfpfw+0l9Pv1zBHk/Av45q48CfgASHWjG
     - SCTX:
         - Begin A1V6_AAdd17_DetCreature_45
         - ""
@@ -1410,7 +1397,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -1426,7 +1412,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1021
+        data_size: 991
         var_table_size: 35
     - SCVR:
         - in
@@ -1434,7 +1420,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk81Og0AQxxlasCQmYtSLX5mDDwCtHxdr0tTENzC9bZBupClIA/TQB/VxTJxlF1iRNpw2m5nf/P+zO2NBPjRM9G0YOpgPDJxOcWxBcj3z3x/ZbB7xcO0/sVdezDMeFNuMszzMQSBX7rlMisOIJ7sylYIWUBkTvTtwQK9KEoC4uHExkdw8iEPFPhAncjwFjx2Q+DPhlsQpZIm6dJrqFDa8Y7A3cbDjGdW/xcWPi+nZ6usz40sWxKuCRaslZ56PLzXiO6BB9qWEThT0EadBoQAbzBESo2Ch69fot9tGwDgCUCLUgmhgRA2YZQO6UbtllIdFSrE86afbhenaE6F9QB2l+kVlP2RBskm3MWebdNlDvxvUHdxXDuzGAQ1DXVRzY7bcRGm25hkrtvm6+bZ9Dv4mg1HJOrWsGDunlBWXjkfUhwSMkZY9PvjVeuakz+f0eEBpftCYV/tAZ/fSlMtL+/p2+i9KFInuWVIhBPALAijvGw==
+    - SCDT: eJyNk81Og0AUhbljwZKYiFE3/uUufABo/VmYmjQ18Q1MdxOkE2kK0gBd9EF9HBPvdKYwUtqwmsDc75xzZ+baUPQshoEDPReLIwtHIxzYkN6Mg48nPp7EIloEz/xNlJNchOUqF7yICpDItXehipIoFul6U0qbNpAMQ/8eXDBVyQIQp7cepoqbhEmk2UfiZI2v4YELCn8h3FY4bdlSl1amVxnDPwFnmYRrkZP+HU5/PczO599fuZjxMJmXPJ7PBPcDfK2QwAUDcq4UdKqhzyQLSw04wPpIjIalb1ChP14TAesYQJtQC7KBPjXANg2YQZ1GUBGVGe0VaTffNsz0HkrvA+6o3C+38SMepstslQi+zGYd/NtBM8HDNoFTJ6DHUIkaaVgjTZzlC5HzclUs6mvbl+B/MVhbW7eylc/O3djKj5ZDNB8JWH2jenDwqs3KYZfL6XCAKjyrw+t5oPX9bGdo6D/J7hlDKQXwB0TE5so=
     - SCTX:
         - Begin A1V6_AAdd17_DetCreature_60
         - ""
@@ -1520,7 +1506,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -1536,14 +1521,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 492
+        data_size: 462
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kb1qwzAUhXUdy8XQwYGUDqX0UvoAkimlSwohQ9dOJZtQVNME23GQkiEPmscJ5CoyIX+eNJzvO5Lu5eB6LEKZQJyiixgOh5hzqB9G8vdDjcazwpTyU/1oq5UzDjz7lA1CWplZUW8ODIUcyI9QvEEKp3XUDYiT5wzr4I11ZVo3J88zopXzFILeJz0OOkWx76XTXy/uIVlWelPYBPgrTnYZNo/zxb8t/pRpbDldV1Nlm2alhMSvM7z3EvBBizuj66Vy5XxxyW6zrkpgJ9DNImDtS2V6nAQcv+J/SeftUTjOYnwXojP3g6D1fPevUmq9A+hYjX8IwB7Phnis
+    - SCDT: eJx1kM1Kw0AUhXPyJwEXESouRLyIDzATRNxUKF24dSXdDdMx2JKkKTO66IP6OIJ3OkFqf1azuN937pybwSVRTDJHWpCLIxqPqcrQXU7k26OaTBe1aeSTetVWK2ccPHtdjsK0NYu622wZHmZgPyZxjwK7cZwNotlNSV3wpro1g1ux5xkxyFWBoJesp0HnUepz+fXrxTnydas3tc2R3dHsp6T+arn6sPW7Mr1t5l/tXNm+/1RC0vM/PLkN+GjAndHdWrlmudpnv8tTkYh2oKNBiIafymJbJeEq+KviW/J7/BTMpfQguOrLxcGcvTPgxPH9KuAX9PZwWg==
     - SCTX:
         - Begin A1V6_AAdd18_Para_30
         - ""
@@ -1583,7 +1568,6 @@
         - if ( add == 1 )
         - "\tset state to 1"
         - "\tset A1V6_CalcAlchemy2_sc.pin to 400"
-        - "\tset A1V6_CalcAlchemy2_sc.in to 2"
         - "\tset A1V6_CalcAlchemy2 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -1599,7 +1583,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 831
+        data_size: 801
         var_table_size: 35
     - SCVR:
         - in
@@ -1607,7 +1591,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNkkFLw0AQhTNrkjbgIULFg4iDePGWRBEvFUoPXj1Jb8t2XUzpJilJpfSH+nMEZ5MlxjQFT0uY+d68mTwPKtdhGPvgBlidODidYuJBdj6L3x75bJ4quY6f+KsoBa9kBab3Mpw0VS1Tle3rHip6QDzD6BYC6MqRNiAurkLMGm4utLRsQpzpiSycBNDgd4R7DU4lz+jSy+xrbESn4G+02KuS9G9w8R1icbHKP0r1znO1lSnXSmxTVfIoxucWi1tsfIDtVloXOy7yQ4yMdeb5PVAW5Xr5qZe8LIqtBX1gYyTWirA/s7/CYyg4IwA79D6ob+HTLVh9CxJ1W9GOH3bd+JlY0UqKbMOr9Sr/3aJvYLAXHDPSDB21Q83/C+qh5mNghf61wRl3iGSA6B+6XvpfxwnacLE2HSY49A6ni7Lj4kMUHa2b+FPiX84OqqRKto6k3RgB+AHCBMlQ
+    - SCDT: eJyNksFLwzAUxvuytlvBQ4WJBxGDePDYVhEvE8YOXj3JbiGLwY6m7WgrY3+of47gSxu62nbgKZT3ft/35WscKG2L0NAF26PlxKKLBY0cSC+W4fsTW65iKZLwmb3xgrNSlKB3r/x5M1Uilumh3sGhA8gTGtyBB1051AZK19c+TRtuxZUwbISc3gkMHHnQ4PeIOw2OI0fr4knMqWMEZ+DuFD/IAvVv6frHp/nlNvss5AfLZCVipiSvYlmwIKQvLRa22GyA7bdK5XvGsyGGwTp+bg8UeZFsvtSGFXleGdAFMqPIGhHyx/vbP4WCNQUwpg9e3YWLXZC6CxS1W9FOHnLT5Jkb0VLwdMfKZJsdb9EPMLoLlrbUptPWVP8/rzbVHyNX6LcN1qxDRCNEv+j60v8qpwk3OYYzDwfP8deFKWz6GGADr+eDOXJofOI9ayuAX3JiwP4=
     - SCTX:
         - Begin A1V6_AAdd18_Para_60
         - ""
@@ -1674,7 +1658,6 @@
         - if ( add == 1 )
         - "\tset state to 1"
         - "\tset A1V6_CalcAlchemy2_sc.pin to 400"
-        - "\tset A1V6_CalcAlchemy2_sc.in to 2"
         - "\tset A1V6_CalcAlchemy2 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -1690,7 +1673,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 795
+        data_size: 765
         var_table_size: 35
     - SCVR:
         - in
@@ -1698,7 +1681,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFks9Kw0AQxjPbJm3AQ4QKioh76MFjUlHwUKFUEV9AvC3rurrF/Cm7FemD+jiCs9klTW2KpyHM/L7v28mEYPoBoVkE/ZiaXkCnUzoJoTieZU/XbDZXUnxkN+xOru5LoZgRBuz4aTJyA7lQsljXY9gMASUITccQQ1sR5YHS57OEFo6b81x49go5O5N6eBKDwy8QDx2OrdDqYiW+2hjpAUTLnK+ldvo/Ca2OFuW7lq+s4NqoQmpdfbE0o7cNlDXQcAd6EUytl4qzNy4WvAVhqJZXdO6wkcdU9Vmio+QrbxUBGVIEvQLZsv1OOjkIBgDe7jKuNxDhBki9AVTsN4qtJGTskpw8OsU8rzQvKs3MclFKs3n53wj7AQisubUfNPb2/8W1vf1oyXRvG4Jha37SMb+96Prp/+/HpeptUvmLwdp9VvVp4zU/HO50kULPPWdsjQB+AcKpv0c=
+    - SCDT: eJyFkt9KwzAUxnvi2q3gRYUJioi5GHjbThS8mDCmiC8g3oUYoxn2z0gmsgf1cQRPmtB1rmNXhzbn931fTk4IphcQmkXQi6k5COhkQschFCfT7PmGTWdKis/slt3L5UMpFDPCgG0/S4auIRdKFqu6DQ9DQAlC0xHE0FZEeaD05TyhheNmPBeevUbO9qQeHsfg8EvEQ4fjUWh1sRJfbYz0EKJFzldSO/3fhFbH8/JDyzdWcG1UIbWuvlma0bsGyhposAW9CqZWC8XZOxdz3oIwVMsrunDY0GOq+irRUfKlt4qADCiCXoFs2P4knRwEfQBvdxXXE4hwAqSeACr2GsVWEjJySU6fnGKeV5oXlWZmMS+lWd/8f4TdAATW3Nr3G3v7fnFtbz9aMt3ThmDQ6h939G8Our76/vm4VGSdym8M1sejrbXC/6i6Y1GtFMAfoVW29g==
     - SCTX:
         - Begin A1V6_AAdd19_DetEnch_60
         - ""
@@ -1764,7 +1747,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -1780,7 +1762,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 678
+        data_size: 648
         var_table_size: 35
     - SCVR:
         - in
@@ -1788,7 +1770,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNkkFLwzAUx/uyploQrKgXZfIO+wDNQG8Txg569iC7lVKDLWtXSQplH9SPI/jShK5sHewUQt7v/3svCQftewxFAH6IeuLhYoFzDtV0KT5fkuUql9lGJB9SN7WS7zItmzzRmQbDPEZ3tqrMclntulo65EA5DOMZhDCMJQcgrqcRVpZbpWXm2GfiTE3s4HkIFp8Rzi1OR9zk0srcatqIryD4KdOdVJT/hOu/COvbYvut5FfSFtmmzWXaJLHA1x4RIQygAC1076AqVTqvpFJ167AA2CUS6SKMXfQBv9E4CN4FgBPSOGaYgIZh3TAU6feRg17Yg+3l2kUqqYvtvvlD82EZeEZkVLxXmWsPO5XZDOCxS+qaPmM0K5nsJe7daB1/3O6X0cd6uzk6JYqkJz6TEQH8A8o/nMU=
+    - SCDT: eJyNksFKw0AQhjNrNxoQjKgXpTKgD5At6K1C6UHPHqS3EOJiQpNGdgOhD+rjCM5klzTUCp6WZOf7/pndlWAngUAVwiRCexTgfI4zCfV0od4e08Wy0Plapa/ato3RLzqr2iK1uQVmbuJLV1Xlha63fS1tSiCPwOQeIhhrKQMQV9MYa8ctsyr37ANxXJN4eBaBw+8Ilw6nLcleWoVfuY3kFMLPKttqQ/5bXH3H2FyUmw+j39OuzNddobM2TRQ+DYiKYASF6KArD9WZsUWtjWk6j4UgTpBIr+B0NQi+4sMgBMcAPpDG4WFCGkb0w5ByMihHvYhr18uZVxpty82u+f3k/TIIOIij5BDFxx71Ufwxgg8dUt/0P0ZzIWIX4u+N1ufzX5dL/0n7x3NhFcAPtN2UdA==
     - SCTX:
         - Begin A1V6_AAdd1_RestoreHealth_15
         - ""
@@ -1850,7 +1832,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -1866,7 +1847,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1187
+        data_size: 1157
         var_table_size: 35
     - SCVR:
         - in
@@ -1874,7 +1855,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNlN9KwzAUxnvqWlcU1qEiqJMgPkC7P95NGEP02gvZXem6YMvadaSVsQf1cQRPmqwLXae9CiXn933nS09iQNbSdOKa0LJIdqKR8Zj0DUh6E/fjyZtMQxosXe+dZnnK6Bv14zz0siADztzal6IqDkKabIta3DQAdXTiPIIFqix6ACGznk0SwU39OJDsCDle40i4b4HAXxA3BI5bBtfFVZcrb8M5B3Md+1vKUP+ezH5skl5Eq09GF94mCpabkPq557jkuURcCxTIJAK6klDisyxMKGPpRmIm6G2CpJTg7m4p8G3Xg6CdAkhDjMPDdDCMXoRRmzbvhH9XylCU8ONFM+9DSPUdKEHbYD4Io+sKs45WNKc+a2B3DFVNhzwsj9uuj3sjuuhIKUazaNUsbBVRXUc7V3PvitNXyikd6JVzCFK2nH/Fc4+lqTIpx7JXy0HbWZ+V1nzWrcKafygidZMJWlup7jeYLLV+8M80qLXDpr/yz0MXYU/2YeWlxbX+ZhdPDL4qr92DXaTQ7shLwo0AfgHWRhwQ
+    - SCDT: eJyNlN9OgzAUxjk4EKLJWNSYqDON8QFgf7ybyTITvfbC7I4w1ggZjKVglj2oj2Pi6dqxhg3lqoGe3/edr5xiQN7SdOKZ0LJJfqKR0Yj0DEi7Y+/jyR9PIhouPP+d5kXG6BsNkiLy8zAHztw6l6IqCSOabra1uGkA6ujEfQQbVFn0AEKmXYekgpsESSjZIXK8xpVwzwaBvyBuCBy3DK6Lqy5X3oZ7DuYqCTaUof49mf44JLuIl5+Mzv11HC7WEQ0K3/XIc4l4NiiQSQR0JaE0YHmUUsaytcRM0C2CpJTg7l4p8O0cB0E7BZCGGIeHaWMYfRtGbdq8E/4dKUNRIkjmzbwPIdW3rwS1wHwQRtcVZhUvaUED1sCuDlVNBzwsj2sdj3sjumhLKUbzeNksbBVRXYc7V3PvitNXyikd6JVzCDO2mH0lM59lmTIpddmr5aDtrM9Kaz7r9taaPygixyYTNEup7jWYLLW+/880qLWDpp/yz0MXYfV9WHlpcX3tHNxsfI+CNf8KLgXwC9T+E78=
     - SCTX:
         - Begin A1V6_AAdd1_RestoreHealth_30
         - ""
@@ -1969,7 +1950,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -1985,7 +1965,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1732
+        data_size: 1702
         var_table_size: 35
     - SCVR:
         - in
@@ -1993,7 +1973,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNlc1um0AQgBkSKEiV4jT9kdK62lbt3Tixkx5SKcqhzbWVqtwQJquCDAHtYqE8aB4nUgZ2bQ82TvaEbOabb5bZ2XVA7ls2C1zY95ncs9jFBRs7kA8vg3/T8PIq4fE8CP9wWRWC/+ZRViWhjCU0zMfBWxWVxQnP79tYfOkA5rHZ6Bv4QNOiAxi7GQ5YrrirKIs1O0GuiRlpeOyDwmeIOwrHV06TF5+2fjZljF6DW2bRPReY/zO7eRyw4ii9+y/4bVin8bxOeFSFo4D9XCHBCvHWyLVCZM15VS6ysouMKfJFIe+1RUR1+LeKskSkeZc68YFU5zLFvdNcHgmZ5FyIotaYC7bHkNQp7E6tD4N+EKxXAFp4SoQeuN+V8FhzcSFKsZAhLrHEv6SZ9Rmaqid+27ADbJjdNow2xv2kKjnUuThWH2W3ZgVsQ9Q77S75qxJ92GCwYl7xSBjodqFUetYstlmu17/coarijU4lcW5EGnOz9fZQ1H3+gvtYuQ+Wu5PL9M5MvIlQ64+l1V1bcbpX6UgF9kYPcOPMZ4tsFoqiIJO467tvhoO1VB+t1M1Z4rfq5gdJ0jf5YHkkekyjr7eHvht9QqJ3zHsXODWYVxo/MZ00Ck1fmA4ae2a0tSlxbrAXn901qlt7627pUx2f/Ud/ewfhtfPrcOstUqjbcdU0IoAnthCr9Q==
+    - SCDT: eJyNlU1P20AQhj0udm2pEqH0Q6JNta3aexxIoAcqIQ4t1yIhbtZiVtiKja1dRxY/lJ+DxDi7Scb5gD2tYs/zvjOZmbUHasdxWeTDTsjUG4ednrKhB0X/LLoax2fnqUgmUfxfqLqU4p/geZ3GKlHQMl96H3RUnqSieJjF4ksPUMdlg58QApVFD2Dsut9jhebOeZ4YdoRcGzMw8DAEjXPEPY3jK6/VxdM1Z5vG4B34Vc4fhET9b+z6qcfK/ez+TorbuMmSSZMKXseDiP1ZINECCZbIhUZUI0RdTfOqiwwp8l0jn4yL5E18WfM8lVnRpQ5DINn5THMfDVdwqdJCSFk2BvPBDRiSRsLt5PrY2wyC8xbAGB4RwwD8X9rwwHBJKSs5VTGWWOEjZef6Ak2tR+GsYbvYMHfWMNoY/6vOZM9oCcye57d2CaxD1HfcLfmHNvq8wmDGohZcWthtQ6npcVtsW26wudy+zuK9kVK4NzJLhF29GyjqffKK94H23p1Pp1DZvZ3xKkJdf89d/aUrbvdCjmTgrvQAB2dyM81vYlmWZBO3/e+r4eDMrfcX1u1dEs6s2x9EZNPmgxOQ6CGNvlhf+m70IYnesu9d4MhiX2n8yHbTKDR+ZTto7LHVaFPixGIWX5wa3S132S1zq+P5d2/t6sfnKLjlY9JKATwD1NKjpA==
     - SCTX:
         - Begin A1V6_AAdd1_RestoreHealth_60
         - ""
@@ -2117,7 +2097,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -2133,7 +2112,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 672
+        data_size: 642
         var_table_size: 35
     - SCVR:
         - in
@@ -2141,7 +2120,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx9ktFKwzAUhnuyploQrDAYKOJBdjtoC3o3YUwQX0B2F2oNW7FZS6MXfVAfR/CkCV2Z264O4Zzv//Mnh4P2PYZJAH6IeuThfI4pBzVZJG+PYrHcyPwzjcVzoWtZCp1rMNM30dj2y3wjVdtNUZMDKTCMpxDCUJDUAXF1G6Gy3DIrc8c+EGdmYgenIVh8Sji3OLW40aXKXDXXiC8gqMuslQ3p3+HqN8JqXGzXjfwQqqq2Qn+vs0bECT71TBLCgAquLXXpqFpmTemAANg5EuNgY5z06E+0j4B3BuBMKINJEFAC1iUgMb8XG/ize+s/ebViX4XS2SyvlJy9t7uL73sfGwfPGBtr3lubtw87a3MYiBx8qS7FyZRWf7TTd/9G9fDndvtFK/Vy9a9LFNkdWSZjBPAHv5iYgw==
+    - SCDT: eJx9kt9KwzAUh3tiUy0IVhgMFPGg3g7agt5NGBPEF5DdhVrDVmzW0uhFH9THETxpQlf27yq053zfLycJB+17DJMA/BD1iYfTKaYc1HiWvD+J2Xwl8680Fi+FrmUpdK7BdF9HI1sv85VUbddFRQ5kYBg/QAhDIdkBcXETobLcPCtzxz4SZ3piB6chWPyecG5xKnHjpZW51WwjPoegLrNWNuS/xcVfhNWoWC8b+SlUVa2F/llmjYgTfO6ZJIQBFVxZ6sJRtcya0gEBsDMkxsEmOOnR32gbAe8UwIXQDGaCgCZg3QQk83vZIJ/d2fzxm5V9F0pnk7xScvLRbja+nX2oHTwTbKJ5H23OPuyizcdAsvekuimOTmn9bON390br6+XO5dJ/Eh54LkYF8A8qAZAy
     - SCTX:
         - Begin A1V6_AAdd20_Dispel_30
         - ""
@@ -2203,7 +2182,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -2219,7 +2197,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 779
+        data_size: 749
         var_table_size: 35
     - SCVR:
         - in
@@ -2227,7 +2205,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx9kt1Kw0AQhTPbJm1AMEKhooiLCnpTSCJ6V6FUEF9AerckcWmD+SNrL/KgPo7gbHZJ19p4tYQ53zkzk7FBDC1CAweGLhUDi87nNLQhny6Ct0e2WG548hH67DkVFc+YSARI9bk3UfUs2fC8aVVYtAEdCPVvwAXTEN2B0tWFR3PFLaMs0ewDclLjazh0QeF3iNsKx5ItffEl+pVt+EfgVFnU8Br9L+nq26PlJC3WNX9neVkWTGzXUc38gD51TNAxY4BrxZxqJk5YvC3WGa9vBYujghsctmWkOWeKPNZkxaM600EOkDFFRsPkV+iXt4+ANQLQIfduO7mDk5N2cjQbdmZGPrlS+dNXZfaZ5iKaJWXOZ3GzG3g/u08OlgyW0aMuWv4zt42WH4bJwQ2DNTbkoSHvXW47+L+LUS0Ndi3pE8H38B21p4zX+3Lyp4oUxvXcrQwC+AGzfbck
+    - SCDT: eJx9ks9Kw0AQxjNrkzYgGKFQUcRFhZ4KSURvFUoF8QWktyWJSxrMP7L2kAf1cQRns0u6VuNpSGZ+3zczOzaIkUVo4MDIpeLIosslDW0oZqvg9YGt1luevIc+e8pEzXMmEgGy+sKbqnyebHnRdlWYtAEVCPVvwQVTENWB0s2lRwvFraM80ew9crLG13DogsLniNsKx5QtdTESHWUb/jE4dR61vEH9K7r58mg1zcq04W+sqKqSiV0aNcwP6GPPBD0zAbhRzJlm4oTFuzLNeTMXLI5KbnDYluHmnCvyRJM1j5pcGzlAJhQZDZMfpp/eIQLWGECb3Lnd5A5OTrrJUWzUixn+5Fr5z16U2EdWiGiRVAVfxO1+4EPvoXKwpLG0HvfW8s3czlp+GCJ/bhisiVEeGuWDy+0G/3cxqiWyb0mfCMbn0193hP9RcOAypRTAN4ZhrtM=
     - SCTX:
         - Begin A1V6_AAdd20_Dispel_45
         - ""
@@ -2293,7 +2271,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -2309,14 +2286,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 452
+        data_size: 422
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kM1Kw0AUhXPyJwEXoxRcSPEufIBMQHcVSkEfQJDuhjgOppiYMrPKg/o4gncyQapNN3MX53znzrkZXBLFJHOkBbk4otWKqgzd1Vq+3Kv1pjH6o5LqcWfNc6OcdvDua7EIeqsb0w2ji8UMnBBTeYsCh4GcDqLtUlAXuE3d6om9Y857ygmuCgRcMJ4GnKXU5/L068tz5Pu2HozNkS1p+y2ov9x9vlvzpnTfvRprB1VKevjjTG6CczE5XdvX/Pb1/r/3S8ykITrQZzMQTf+TxVgg4QL4LeC78Zw/wFiPz/50caQydQacOLhfBPwAvDZsfg==
+    - SCDT: eJx1kE1qwzAUhD2O7WIo1C2BLkroW/QAlqHdpRAC7QEKJTvhqiIOseMgrXzQHCeQp8iE/G70QDPzSfNi2EEQkkgQpWTDgMZjKmI0zxPx+yEn00qrZSHk18Lon0paZeHcL9nQ67WqdNPtXSzGYEJI+RtSHAOZDqLZKKPG56ZlrfrsO+ecJ+/DRQoff+B45OMsRY7L0z2f3yNZ12WnTYJ4RLNtRu3TYjU3+l+qtvnTxnQyF/R54hy8euewd9q6Lflsy/W5d5NdoSE40q8yEPT/E+m+QMgFcCjguvH8frxYAN/fATdW6lDADlBcZC0=
     - SCTX:
         - Begin A1V6_AAdd21_FireSh_45
         - ""
@@ -2355,7 +2332,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -2371,7 +2347,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 951
+        data_size: 921
         var_table_size: 35
     - SCVR:
         - in
@@ -2379,7 +2355,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk1FLwzAQgHvZWlvwoerQB5lG8Ae03fRtwhjoDxBkbyHWug3bdTQD2Q/15whemtimrsW9NJTcd99dLrFB9C1CQwf6HhU9i04mNLIhu5iGL/dsOlsm8UcUssdVkTwvmYgFyOhLf6D203iZZLsyCjdtwAyEBrfggZkQswOl86FPM8XNeBpr9g45GRNoOPJA4WPEbYXjli3z4kr0KssIjsHZpHyXFJj/is6/fZqfrdaLInljBf9ki5QLwYKQPlRIWCEuwI1CzveQ7WqdC4PCmgyVM1TcqebiPHtNimKnTQ4QlyKmedKwfvktFFhHAFo18srmXWyelM2bTTrXyjzQOd5xKkzwdCsOc7dypn0s7dLv1H4cZJXTqIX8qUWkOcdvzjf1iXf5G7Fg/Uq9SiovjFdK5Y+RoW28YLlGdGREd0y2CYwOGM7/Z6g66NUd6OuMa/udL58dvrSnk71dpNDZ8cakCOAHqWfiZw==
+    - SCDT: eJyNk8FOg0AQhpm1ICQeUBs9mOqa+ABA1VtNmib6ACamt82K2DZCadgmhgf1cUycZVdYLMRe2MDM9/8zO4MNYmARGjow8Kg4sOhkQiMbsvNp+HLPprNlEn9EIXtcFcnzkolYgMy+8IcqnsbLJCurLAzagAqEBjfggSmI6kDpfOTTTHEznsaavUNO5gQajjxQ+BhxW+EYsqUunkSfsozgCJxNysukQP1LOv/2aX66Wi+K5I0V/JMtUi4EC0L6UCNhjbgA1wo520G2q3UuDAprMqyckeJONBfn2WtSFKV2coC4FDHNk5brl99BgXUIoK3GXtW8i82TqnmzSedKOQ+1xjtOhQmebsV+3p2c6X4r3aW/0/jjIGtNoxbypxaR5hyfOd80N97n38oF69fUq03lwniVqXwxFLrGC5ZrZEdGds9k28B4j+H8f4eqA9J0oNcZz6fjnZ3H76ja8xdJKYAfaXraFg==
     - SCTX:
         - Begin A1V6_AAdd21_FireSh_60
         - ""
@@ -2457,7 +2433,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -2473,14 +2448,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 458
+        data_size: 428
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kM1Kw0AUhXPyJwEXI+pCRLkLHyAJ6K5CKOgbSHdDmA5pMWMkExf1PX0cwTuZINWmq1nc7zt3zk1goyCkIkWckQ0DWiyoTGCuquLlQVbLjVavZSmfun6omm0rrbJw/LW48ESrNtrsRo6HCTgjpPwOGfYjOR9EqxtBxnvLulWTe8+eY/JJLjN4XbAee51Hscvl163PT5G+t/VO9ymSW1p9C+rOt29Nr9dSq6HjmTUyL+jxDxqRRy8ndP3Rf3aNNLoe/sNfYi4PwR4wn4Jg+mORjSUiLoHfEq4fv/NHGCvy8Z/PDqZsnQBHju4WAT9wrm8g
+    - SCDT: eJx1kM1Kw0AUhXPSJBIQjKgLEeUufIAkoLsKoaBvIN0NYTqkxYwpmXTRvmcfp9A7nVD6uxqY+51v5twQZuD5lEUIYjK+R8Mh5SH0c5H9fopiNFXyL8/Fd9N2RTWrhZEGln9JHh1Ry6nSyx3HwxDs8Cl9R4xDJftBNH5NSLvcqKxln/3gnGXSPpzHcPE7jgcuzqPAevm0z6e3iOZ1uVRthPCNxpuEmofZf9WqiVCya3hmtEgz+jpCB+TQpx6dLNpVUwmtyu4UXieXfPAOgMsWeP0fs3hXwucS2Jew/fj8uT9bAt/fAFfWalXAFrXFZs8=
     - SCTX:
         - Begin A1V6_AAdd22_FortAgil_15
         - ""
@@ -2519,7 +2494,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -2535,7 +2509,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1332
+        data_size: 1302
         var_table_size: 35
     - SCVR:
         - in
@@ -2543,7 +2517,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJydlM1Og0AUhbm00BJdoNaFMdVZ+ABAW3c1qU30DUx3BCmWRnAahsbU9/RxTLwDUzrUqUQ3TMic79y/yTWAtTWduCa0LcJaGhmPiWdAejFxn279yTSOwlfP8x9olk8Wy8RnIQOuv7R7pSIJ4yjdFDq8NAA9dOLcgAWyJfoDIbO+TdKSmwZJKNgRclzjCNizoMTvETdKHK8M7ounLk6ehnMM5ioJNlGG/ldk9mUTerZ8W2TR3I/CnOIdS33HJXcV4lZIF+C6RHoCeVlmkc+CJGd1xpOZfsmcCiaj9Dlbs7hODGRiL7E4CrL8ndJ5HRlaIFVj7qXGEhrglwYrQZmgdwmCwkGvlfZpKznQOgAi3Mgqemxij/Wix+jYrhylTHRSZnIuHOfr7IMu/DQK8l0B++HVYtB4UB72qArLX4ZVhOU/koVqjqB1JbWnqLc2wrp8IMkV06uLh4pM5MEVrWzud1ltZ9dkqbFG0+uTtK2GN9TcicZ6tlPcjuhA0r8///+lrJzGnxNu7d6U2CR4qtdNsfNwzT2e/LhFCid7YL3xQADfZ0tSqw==
+    - SCDT: eJydlN1OwjAYhvdNNlj0YCoeGIP2wAvYBniGyUKid2A4W+aojLhZ0o4YvE8vx8R2LaPD4aInNKzv836/qQWsY5jIt6HjIHZkoMkEBRbkl6H/dBeF0xQnr0EQPRBahItlFrGEgdBfuX2pyJIU55tSxy8t4B4m8m7BAd2S+wNCs4GLcslN4yxR7JhzQuMpOHBA4iHHLYnzK0v48tNUp0jDOwF7lcUbTLn/NZp9uYicL98WFM8jnBSE37E88nx0XyF+hfQAbiTSV8jLkuKIxVnB6kygMwPJnCmGEvJM1yytE0Od2EssxTEt3gmZ15GRA1o19l5qLCMx/yXxSlE2mD3EQeVg1kr7dBs5MLoAKtzYKXts8x6bZY+5Y6dy1DIxkczkQjnO1/SDLKIcx8WugP3wzWIwRFAR9rgKKzbDKcOKP5pF0xzB6GnqoKHe2gjr8qEmb5heXTxqyEQfXNnK9n7Laru7JmuNtdq2T9MetexQeyda69lOcTuiA0n/vv7/S7lxGn9O2NztlHpJ+Pl4+uO54d/57A48YMIK4Bv+20pa
     - SCTX:
         - Begin A1V6_AAdd22_FortAgil_30
         - ""
@@ -2635,7 +2609,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -2651,7 +2624,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1319
+        data_size: 1289
         var_table_size: 35
     - SCVR:
         - in
@@ -2659,7 +2632,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNlN9KwzAUxnuqrS0Izn+IiBrEB9iqm1cKQ1R8AfGupF3chu0ykg6Z7+njCJ402ZZuHe5mYeT7fV+Sc3o8kNuOS1o+bIdEbjnk/p5EHuSn3dZbJ+4+Dlj6GUXxMxdFtz/MYplKUPqzxpFWZOmA5dNSh5seoIdLmtcQgm2J/kDI+3mD5Jp7pFlq2DZyStM0cBSCxp8Q9zSOW57yxdU1qzpGcxf8cUanTKD/BXn/bRB+OBz1BevFLC047sk8brbIwxxpzZEA4FIjRwb5GAoWS5oVsspENnOumQPDCM4TMZGDKnFjE0sHGzAqii/Oe1XkNgTrNv6Vhk5eNSRTMUzilCYJ7TMD+uAGBFlj4lZu99NYh4KzA2BC21ZoAD7RoceGHPEkwwdhvU0j60E7sBOWpQ2wtG5ZWruE/lI9ZMYp/nI63iy+lrPT71S6yvcX+dimc0/rLO7sLYxnbyK+eT/OGS0WdVu5f60YnFns3jxWfRBhGav+WBZ17QtOYKmjmhtXOrcqv7HkNU1bFd/WnMTu16q6vVG32URns2b5v6b6PbcW72mGB671E6YcczjZXvZXdpHCzDUTTQUB/AHle0Pr
+    - SCDT: eJyNlN9KwzAUxnuqrS0Izn+IiBrEB9iqm1cKY6L4ArK7knZxG7bLSDpkvqePI3iyZFu6dbibhjbf7/uSnNN4IHcdlzR82A2J3HHI4yOJPMjP2433VtzuDFj6GUXxCxdFuz/MYplKUPqL2olWZOmA5dOZDic9QA+X1G8hBNsS/YGQ7mWN5Jrr0Cw1bBM5pakbOApB48+IexrHKU/54uiaUS2jvg/+OKNTJtD/inR/a4QfD0d9wXoxSwuOczKP6w3ytEAaCyQAuNbIiUE+hoLFkmaFLDORzVxq5sgwgvNETOSgTNzZxMrCBoyK4ovzXhm5D8HajX+jobM3DclUDJM4pUlC+8yAPrgBQdaYuKXd/dQ2oeDsAZjQphUagE906KkhRzzJ8EBYb9vIatAObIWz0gZYWndWWruE/ko9ZMYpPjkdbxdfydnpDypd5fvLfGzThae1Fnd+FsazNxHfvB/njBbLuq3tv1IMzjz2YBGrfohwFqteLIuq9gUnsNRRxY5LnVuW31nyiqYti+8rVmL3a1nd3KrbbKK1XbP8X1N9nu7yPM3lgePr4doNg9/RdcOdpawA/gA3xTua
     - SCTX:
         - Begin A1V6_AAdd22_FortAgil_60
         - ""
@@ -2754,7 +2727,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -2770,14 +2742,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 466
+        data_size: 436
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kc1KxDAUhXv6JwUXFdTNIFzBB2gruhuhDCi+gLgLJQ2tTDqVpi7mQX0cwZumyDg/qyzu952bk0QwgedTHiNMyPgeLZdUROgWZf72KMpVq+S6uBfP/TCW41jJtTDSwBqL9NIxWraq204kDyNwik/ZHRLshvIGEL3fpNQ5b1VpObsP7Fkmm+UigdNT1kOn8yi0uXza9dk54k9dbdUQI+Lcn5T6q49NM6haNG3/pUWrqmEUWU5P/+Dg1sHXrzPc61pthFF1o/bp7/R4JLwd5EQQvPmmeTJVCbgK/qrYlnwef4qpKH/Cy8XBlK0z4MTT20XAL9v/cdk=
+    - SCDT: eJx1kN1Kw0AQhXPSJBIQjKDeFGEEHyCJ6F2FUFB8AfFuCZslkW4aycaLPqiPI3S2G0p/rwZ2vu/MzoQwE8+nLEIQk/E9ms0oD9FOi+zzRRTzRslF/iTeun4ohqGUC2GkgTWmyY1jtGxUu9qQ3AzBKT6lj4ixG8oTQPR1n1DrvHmp5eg+s2eZdJTzGE6/Yj1wOrcCm8vVjk8vEf3ocqX6CCHn/ifU3X4v615Vom66Xy0aVfaDSDN63YMnDw6++xjhTldqKYyqanVI/yWnI+HtIGeC4I0/zeLNKj6vgu0qdkuu79dHp+D3C+DMcW0UsAbPYmmI
     - SCTX:
         - Begin A1V6_AAdd23_FortAttack_45
         - ""
@@ -2816,7 +2788,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -2832,7 +2803,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1326
+        data_size: 1296
         var_table_size: 35
     - SCVR:
         - in
@@ -2840,7 +2811,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJydlOtKwzAcxfvv1rqC4IaK4I0gPsDWXfw0YQ71DWTfSmmztawXSVukD+rjCCZN6NLLsPgpjJzfOUl2+tcg6SsqmujQN1DSU9ByiUwNwuvV5GNhrdYedvbmzHqLSfoauRmxEicBBtwML7gkcDwc5oWQbmpATVQ0fgQDZE8aAAht7oYo5NzaDhzBzinHNGMBmwZw/IXiGsfplsZ86aqKlR1jfAr6Z2DnmFD/B7T5GaL4yo92BLuWa2OX2InlYZuk1niCnktsUmKDBpa5OdmSfJ9iTkqYKWOIY5cC86ModnCUNqCpDN1yaCSgrzjYNoCZAdKt9HuOnAtkl9nE8nwXixvpoA4Q5YSBWrnd97ANA+UEQITNpbAB6LW3OFA7n/ip1yHwGCqHLjqGhjZJsuRfoRyVQ5+MolM67ZRadIqa9ktT6cXV2nkinDqeFWA79TA59OjYGepyUFgwiz4ro9nXYBTR7EeLSb27oAwkwmwh6rWtElOJaG9sVT+T9M2yVrXzP+smqxddu9Lp7+UP2zs8rBghdG2fM8W0owPufdTYpRSNPTLXWBDAL4aRUwI=
+    - SCDT: eJydlOtqgzAcxf276ioM1rKNwW6EsQeo9rJPHZSy7Q1Gv4loWqVeRlSGD7rHGSwxwcZLmexT0JzfOUk8RoN0oKjI1GFgoPREQcslsjSIblbmx8JerX3s7q2Z/ZaQ7DX2cmKnbgoMuB1dckno+jgqSiGd1ICaqGjyBAbInjQAENrcj1DEubUTuoKdU45pJgK2DOD4iuIax+mUxnzpqIqRLWNyBvpn6BSYUP9HtPkZoeQ6iHcEe7bnYI84qe1jh2T2xEQvFWZW2LCF5V5BtqTYZ5iTEmbJGOLYlcCCOE5cHGctaCpDdxwaC+grCbctYGaAtCv9gSMXAtnlDrH9wMNiRzqoQ0Q5YaDWdvc96sJAOQUQYXMpbAh64ywO1C4gQeb3CDyGyqGLnqGRQ9I8/VcoR+XQZ6PslE47pZadoqaDylQ6cbWxnhhnrm+H2Ml8TA49OraGphwUFsyiz6to9jcYZTR76DBpdheUoURYHUSztnViKhHdja3rZ5K+Xda6dv5n3WT1om9Xen1efrDq4WDFFULH93HrnqHvqfGRm4tZAfwCFAVKsQ==
     - SCTX:
         - Begin A1V6_AAdd24_FortEndur_30
         - ""
@@ -2932,7 +2903,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -2948,7 +2918,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 677
+        data_size: 647
         var_table_size: 35
     - SCVR:
         - in
@@ -2956,7 +2926,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFks9qg0AQxp2Nayv0YCC99A+dQx5AhfSWQgikb1ByW6xZoo3Goubgg/ZxCp11l400lp6WZeb3ffPtDofGdRhGHrg+NhMHl0uMOZR3q+jtWazWmUwP8UJsqrrdJG2+F03agALug5luKdJMll3fSEUOJMIwnIMPQ00yAMTtY4Cl5tZJkRp2QZzqCQ0c+6DxOeFc41TiSpdOZk41RngD3meRdLIm/SfcfgdYzfLjvpY7kVWn406UMmlFGOGLZSIfBpT3oKmpoZr01LaFNIgH7BqJMriyjiz8FVxC4FwBGCPKoVJ4lIL1KUjOtXKDGRjqGW6tXJ2/iw9ZH7rz6L+9x5vBUabKlltb9fZ+b6suA4nRl+oT/JNRO0zODubn6Bz/3n7JaK9epxdVosjwj3VSRgA/0cab1g==
+    - SCDT: eJyFkk1qwzAQhT1q5NbQhQPppj90oD2AbUh3KYRAeoOSnXAdEbux42I7Cx+0xyl0xhKOaVKyGiTN9948SRLqkSMwdGHkYX3h4GyGkYTidh6+v6j5ItXJNpqqZVk1y7jJNqpOamDgzp+YljxJddF2jXQogUQEBs/gwVCTDABx9eBjYbhFnCeWnRLHPYGFIw8M/kS4NDgdSdalKmzlMYJrcL/yuNUV6T/i6sfHcpLtNpVeq7Tc79aq0HGjghBfeyb0YEC594YaW6pO9k2Ta4u4IK6QKIuzddjD3/4xBM4lgDWiHJzCpRSiS0Fyo15uMINAM8NNL1dlH+pTV9v2MPpf79PN4LAp28relu/e62x5MZA4eVNdgjMZjYM4ONiXo/o2Pnpe2ifJfz4MSwH8Athkk4U=
     - SCTX:
         - Begin A1V6_AAdd25_FortFatig_30
         - ""
@@ -3018,7 +2988,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -3034,7 +3003,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 849
+        data_size: 819
         var_table_size: 35
     - SCVR:
         - in
@@ -3042,7 +3011,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk9FOwjAUhncGGyzxYhi8UYnnwgfYZvAOE0KCb2C4a+ZoANmY6YbJHtTHMfF0rVsjM3LVND3f//+nPXWg6Fs2hi70PSx6Fs5mGDmQXc/Dl0c2X2x5so+mbJmLchmXuw0rkgIkcOOPVUmabHlW1YV06ACJ2BjcgwemJhkA4mriY6a4RZwmmp0SJ2sCDUceKDwg3FE4HTlSl1ZbrzJGcAHuexpXXJD+Ha6+fMzHu8NG8DXb5sfDmmU8LlkQ4lPDhB4YlHurqJGmiuRYlinXiAv2EInSuLQOG/jTP4XAGgBoI+pDdjGkLuy6CzOti8r3qpEQu1f2xsW+Os+7GzT9H6S/TOC2CehNGlEjjT1RaS616EbEH7yMRXtzv+07KsH6MRw0hvLdvdpQbgy+85XAGhrl0f83fcZ9qES9NpGeMlq7R7H+EPQHnkcnp0SR6R+jL40AvgF8FsUN
+    - SCDT: eJyNksFOwkAQhjsrLTTxUAxeVOIcvNvW4A0TQoJvYLhtatkA0oLZFhMe1Mcxcba7thupkdOm3fn+/5+dcaHoOAwjDzo+FmcOjscYu5BfTaKXRz6ZrkS6iUd8tpPlLCnXS16kBSjgOhjokixdifxQFdKlCyTCMLwDH2xNMgDE+TDAXHPTJEsNOyJO1YQGjn3Q+D3hrsbpylW6dDJzqhjhOXjvWXIQkvRvcf4V4G6w3i6lWPDVbr9d8FwkJQ8jfKqZyAeL8m401TdUke7LMhMG8YD1kCiDK+uohj+DYwicLoAxoj5UFz3qglVd2Gk91L6XtYRcv/I3ITeH07zbQdv/QfmrBF6TgGZSi1pp2FCnuTCiS5l8iDKRzcv9tm+pBOfHsFsbqrn7laH6sPjWKYHTs8rj/1/6hPfQiViTyGwZnc/9o1Wk/yT7x3IrKYBvrUu8vA==
     - SCTX:
         - Begin A1V6_AAdd25_FortFatig_45
         - ""
@@ -3116,7 +3085,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -3132,14 +3100,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 464
+        data_size: 434
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kU1qwzAQhf38VwxdqBC6CaVT6AFsQ7NLIQTanqBkJ4Qj6lArCZZTyEF7nEJHlgkJSVZazPe90ZMS2CgIqUgRZ2TDgKZTKhOY8az4nMjZvNbVdzmRb5u2+9Cq6WppKwtnjMXIM01Va7PvSR4m4JSQ8mdkOA7lDSBaPAgy3purphrcF/Yckw9ymcHrgvXY6zyKXS6fbn1+i3TbqL1uUySPtPgTtBmt1l+tXsp6Z9RaGq06mRf0esJGT569H9gfZbarVsvlzp7Rv+JiIoIj4koOguGeRdYXibgIDkVcRz4vP0Rfk7/g/e5sytYNcOXh3SLgHxflcZc=
+    - SCDT: eJx1kNFqwkAQRXNjkhIoNAXpi5ROoR+QBOqbBRHafoH4tixxMWJWJRsFP9TPEZx1gyjq08DOOXd2JoTpeD5lEYKYjO/RYEB5CN0bZuO+GI5KVSzyvvhd1c2/klVTClMYWKOXdB1TFaXSuxPJzRCc4lP6hRiXoTwBRJP3hLTzRrIqWvebPcukrZzHcPoL64HTuRXYXK52fPqMaF3JnaojhB80OSS06s6Xs1pNRbnRcim0ko1IM/q5Yjufjn1r2a3U63mtxHRjbuh9cjcR3gXxIAde+88sPi3i8yI4L2J35Pr3enMIfn8CHpzWRgFHEwZpRg==
     - SCTX:
         - Begin A1V6_AAdd26_FortHealth_15
         - ""
@@ -3178,7 +3146,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -3194,7 +3161,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 615
+        data_size: 585
         var_table_size: 35
     - SCVR:
         - in
@@ -3202,7 +3169,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1ktFKwzAUhnuyZa7gRYXpzRSP4AO0BXc3YQzUJ5DdhdAFO9Z0o+mEPaiPI3iSxtphd3VIz/n+P396OJhhwDAZwTBEMwhwPseUg54ukveZWCxzlW3TmXjZVfWbkkWdC5MZsMQ0mjQzRZYrfXST1ORAKgzjRwihK0oOgLi6i1A33FIWmWefiLMzsYfTEBr8lnDe4NTiVpcq89VeI76E0b6QR1WR/j2uviPcTTblR6XWIj9oWQqtZC3iBJ9bJmmZsbuTZa49Y3JZbEWlzKY8hVIXZ4x0sF87tuyhkbjxEp9S7zeVEuuD6RizE+Ov6Mw0BKFLzik5ax8udLb20FHojQnBBUBnqD/Xr8vgz8U/PdX+/+PWhDbj9epflygyPbMP1gjgBxorkkM=
+    - SCDT: eJx1kdFKwzAUhnviMlfwosL0pohH8AHagrubMAbqE8juQuiCLWu60XTCHtTHETxpY81wuzok+b//z59wMKOAYTqGUYjmIsD5HDMOOl6k7zOxWBYq32Qz8bJt2jclq7YQJjdgiTia9poqL5Q+dEo65EAuDJNHCME3pQRAXN1FqHtuKavcsU/EWU3i4CyEHo8J5z1OR9z60mRu2mskVzDeVfKgGvK/x9V3hNtpWX80ai2KvZa10Eq2IknxeWDSgZl0d7LMjWNMIauNaJQp62Mo6+pMkBZ214tlD73FrbP4lHpXNkqs98YLZkfBX9EZNQRh15xTczY8XNjF2oXncLImBJcAnuh0r98U9pfinp7m6/W//6F9sj3z49YK4AdAUYny
     - SCTX:
         - Begin A1V6_AAdd26_FortHealth_30
         - ""
@@ -3256,7 +3223,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -3272,7 +3238,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 781
+        data_size: 751
         var_table_size: 35
     - SCVR:
         - in
@@ -3280,7 +3246,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFks9qwkAQxjPRRAM9RLC92NIt9NBjklJvFkRo+wTF27LErRGzRrLa4oP2cQqd/UO6VsXTEmZ+3/fNZAKQbc8naQjtiMiWR0YjkgUgBuP0fUjHk4Lny2xIX6p688ZZuSmozCUoYhD3TU+ZF1zsdCcWA0AVnyT3EIErig5AyPQmJsJwE1bmln1CTvUkFs4iMPgD4oHBsRQoXXx9+6oYyQWE65LteI36t2T6E5Oqv1jNaz6jxVawFRWcbWiSkueGSRumqzMp5tIysmDlktZcLlb7EGZyrMJrg/U+qmpGl19MMMrnc5pkCgnB7xKkLO7veX7HhxB4HQBr9Bjp0UMc3dejo1y7kXMy+Hcmw5WN/snEelFzOttKZ+D/5ie6wVO2yrjTGKtfFmlj9eFoHF0weF2nPXPaj+9Wz3xmKyZR6y+RPRB8j1+RPma839feQRUpNDxxtcoI4BdX67ib
+    - SCDT: eJyFktFKwzAUhnvi2q3gRQfTmylGELxtK+5uwhioTyC7C6GL61izjqZT9qA+juBJE2rmNrwKbc73//85OT6ojkdoEkAnpOrMo+MxTX2Qw0nyNmKTaS6yVTpiz2VVvwpe1DlTmQJNDKOBqSmyXMhdU4mXPqAKofEdhOCKogNQOruOqDTclBeZZR+R0zWxhdMQDH6PuG9wvPK1Lp7EnjpGfA7BpuA7UaH+DZ19R7QcLNeLSsxZvpV8zaTgNYsT+tQyScv0mkyaubCMynmxYpVQy/U+hJkcq+DKYP33spyz1SeXnInFgsWpRgIgPYqUxcme51d0CIHXBbBGD2HTeoCtk6Z1lOu0ck4GcmsyXNroH1xulpVg861yGv5rfqIaPG2rjbutsX6ysDHWH47G0QGD13PKU6f8+Gybnv+ZiklEfhPZBcHzpX+wRfgfJU/spZYC+AH+0LBK
     - SCTX:
         - Begin A1V6_AAdd26_FortHealth_60
         - ""
@@ -3346,7 +3312,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -3362,7 +3327,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 833
+        data_size: 803
         var_table_size: 35
     - SCVR:
         - in
@@ -3370,7 +3335,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk19LwzAUxXu7da7gQ0VBVJQg873t/PM0YQz0xWfZW+i6sJa1diQtsg/qxxG8aWqXbt3YU0hyfif3nt5aILqGSbwedG0iOgYZjYhvQXo19j6f6XgSsXDpv9C3jOcfRbikIhQg9TfOhVIkYcTSdanDSwvQwyTuAGzQLdEfCJneOiRV3CRIwop9Qk5q3Ar2bVD4AHFL4XhlSV9czWqVZbin0FslwZpx9H8g01+HZNfx14KzOQ0zvuKFoN+MrfBIUNcjrzXp1WQf4E6R5xW5KAJOo3jOmoivI/cKudxBFjGP80jDhkdhacBFITTssQywT3AjT7VGzS0TbHQ5K5IZ5VmWb0o2G13+OPvkYNhl2jambdYfyy4flhvN4kC0YPQ1yNegtlSb6mFLlduBgnECcFCnEvzvprPpphorXNtnr/wBcObfz3ZukcJn98y6fAjgDxem0vI=
+    - SCDT: eJyNkktLw0AUhXPHpjbgIqIgKsrgY5+kPlYVSkE3rqW7IU2HJjQxZSZB+kP9OYJ3MjGd9IWrYe6c7+Tek2uD7FiE+l3oOFQeWHQwoIEN2fnQ/3hiw1HMo3nwzF5zUbyX0ZzJSILSX7qnWpFGMc+WlQ4fbUAPQr07cMC0RH+gdHzl0kxzozCNavYROaXxajhwQOO3iNsaxydb+eJJ6lO14R1Bd5GGSy7Q/56Of1yaXySfM8GnLMrFQpSSfXG+wJJknk9fGtJvyB7AtSZPanJWhoLFyZS3kcBEbjRytoHMEpEUsYH1/4VloZClNLCHKsAexYuqGoOSNRMcdD4p0wkTeV6sWiatKb/dXXKwnCptB9Mmzc9yqg+ri2GxJ1qwegYUGNC2VNvq/pYu1wMF6xBgr04n+DcNWU1TrxWeb8cbu4d1NN6xzcoK4Ben9sqh
     - SCTX:
         - Begin A1V6_AAdd27_FortLuck_60
         - ""
@@ -3432,7 +3397,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -3448,14 +3412,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 464
+        data_size: 434
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kc1Kw0AUhXPyJwEXI6ggIlzBB0gCipsKpaBbV9LdUOPYhCZpmemmD9rHKfROJpT+bmYW9/vOzJmJYALPpyxGmJDxPRoMKI/QPAyznzc5HJWqmOXv8nOul99KG2kKA8s/iltH1EWpmlXH8TACZ/iUviDBfiTng2j8JKhx3mhSF737yp5l0l7OEzhdsB46nUehzeXdHp9eI17Uk5XSMaJnGm8Eze+rdqrVn+RFtbKuOLuVaUYfB3RAjr7r6ZlWppT/1a/Sx/BaXIiEt8ecD4LX3zRLuioBV8Guim3J+/mn6IryF3zdnEzZugIuPL09CNgCtKVxSA==
+    - SCDT: eJx1kE1rwkAQhvPGJCVQaAptoZTCFPoDkkBLLxZE0Ksn8bZoXE0wibLrxR/qzxGcdYP4edmBned9dmd86JbjUhLAC0m7DrXblPqo3jvJ8Fd0urnMFumf6C3VeiCVFjrTMPxH9GKJMstltTlw3PTBDpfib4Q4VbIfRKPPiCqb647LrMn+cM4wcRNOQ9j4E8c9G+eWZ7xczfPxI4JVOd5IFcD/otEuouVbUc+VnAo+ZC3Kgt21iBP6P6NbZOnXhl4oqXMxKyZSXcLb6I4SzglzWwSn+WkSHkZxeRQcRzFTcu0/X62C7x+AO8s1KmAPuQZo9w==
     - SCTX:
         - Begin A1V6_AAdd28_FortPers_30
         - ""
@@ -3494,7 +3458,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -3510,7 +3473,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 706
+        data_size: 676
         var_table_size: 35
     - SCVR:
         - in
@@ -3518,7 +3481,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNkkFLw0AQhTNpNxrwEEEFUWGEgtckoHipUAp69SS9LTFuTegmKbsB6Q/15wjOZpc0aCtesoSd7817O8NAjz0fkwDGIeqRh9Mppgyq81nycsdn80Lkq/SePzaqfRZKc51rMPUX0YmtkHkhqk1XR5cMSMPHeAIhDCVJHxAXVxFWlptnMnfsLXGmJnZwGoLFJ4Qzi9MVM7p0+u40NuIjCNYy2whF+te4+IqwOSvrdyXeOH1EzWVJPWoeJ/jQU0kIAy5Ay506bqWELviyfBXKYQH4h0ikkzAGkl7gM9oNgncA4BpSIpMnoDx+l4ckx73kwIt/Y71cOkndNrVYyuaDJNeizaTeJvlp408GPGPBmGC9CTOTsDNhfgZKe16wS/SP3LbPaNvHzZXO3cPvNpCW7un41y1R1HTPsplGAN9Ak6fC
+    - SCDT: eJyNksFKxDAQhjuxrRY8VFBBVBhR8NoWFC8rLAt69SR7C7Vmbdm0XZKC7IP6OIKTJnSLuuKloc183/zTJADtewzTEPwI9Y6HkwlmAdQn0/T5lk9npSiW2R1/aFX3JJTmutBg6k/jQ1shi1LU676ONgMgB8PkCiIYK8kPiPPzGGvLzXJZOPaGOFOTODiLwOKXhAcWp63AeGllbjUxkn0IVzJfC0X+C5x/xtgeV82bEq+cHqLhsqIeDU9SvB+oNIIRF6Lljhy3VEKXfFG9COWwENgeEukUJkA6CD7i30HwdgFcQ5rIzBPSPKyfh5T+oBxlYdc2y5lT6q5txEK276RciS6XejPJ9xh/MuCZCCZEMIQwZxL1IczLyLTlD/YT/WNu24dt+rhzpfXx4Mfh03fSbrlORgXwBeFNn3E=
     - SCTX:
         - Begin A1V6_AAdd28_FortPers_60
         - ""
@@ -3580,7 +3543,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -3596,14 +3558,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 459
+        data_size: 429
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kM1Kw0AUhXPyJwEXI3SliHfhAyQBBRcVSkFxLUh3Q0iHVkw6ZUaRPKiPI/ROkpb+pKtZ3O87d86NYAPPpyxGmJD1PRqPKY9QX0+yj0c5mS5V+ZU/yRdtvt/XSs2lLS2ccCNGHVKVS1U3LcjDCBziU3qPBPuZvABEs1tBdedNi6rs3Qf2HJP2cp6g0wXrYafzKHS5/Lr16SXidVU0ysSI7mj2L0iP3lYLwz+sVTHXv9I0SqYZPR+wwZb97FmtV9L+LApzzP6JwTx4+8RQCrz+j1nSlgi4BHYlXD9+h4/QVuTrv16dTNm6AM4c3S0CNg8Wb1Y=
+    - SCDT: eJx1kMtqwkAUhvPHJCVQaAquWkrPog+QBFrowoIILV0L4m4IcVAxcWRGkTyojyN4xkTxuhqY833/ufgwLcelJIAXknEd6nQo9VG+dJPBl+j2JjKfpd/iV+llfyHlSJjcwAqvUbtGinwiy2oPctEHh7gUfyDEaSY3ANHwLaKy9npZkTfuJ3uWiRs5DVHrT6x7tc4lz+bya9vHjwgWRVZJHcB/p+E2ItX+n481T1jKbKTWQldSxAn9nLGtAzttWKXmwqzGmb5kN9HNPDinxK0UOM2MSbhfwuUlcFzC7sfv3/PVEfj/AbhzVhsF7ABN2WcF
     - SCTX:
         - Begin A1V6_AAdd29_FortSpeed_15
         - ""
@@ -3642,7 +3604,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -3658,7 +3619,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1178
+        data_size: 1148
         var_table_size: 35
     - SCVR:
         - in
@@ -3666,7 +3627,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNlF1rwjAUhnuq7Sxs0IEMNhnLQHat9QO8cCDCxq4Hw7vQadRiP1xbEX/ofs5gJ03s0mk3r0LIed435yMxIKlqOmmbULVIUtHIcEgcA4KbUfutT0fjJZuunAF9iuL0dc3YjCbTBDjQsOsixJ8uWbDLAvHQABTRSasJFqiaaACETG5tEghu7PpTyfaQ4zEtCTsWCHyAuCFwPDK4Lq66XPk1Wudgrn13x2LUvyeTL5tEV164iPGmK3cRbVKPLr0Zo602ecypdk7VAB4E1ZBUEkbbbeTP6Zr5Kd2E3seGKajzD/rO3LgE7ahoQ6C2RHNHJb5rgZKdeSeI+osgAubOoi2Nd/vcTNBrBEGpoBfy/LSPcqCdAUi7nmJXA7Mp7K4lFnpxupz7O5qkrr9KTvMsh1XjvpU128Rm61mzUbaayyol0PclkEULoiikyWaBFc/be5D2sVjQuCU3vchN+YBamSnfKAol4wRaTQEcBfhrkopUp4T6PURFqqtQB/NTDO2dNAAndkxUrPJTMflccT3+prOfBT+T58uDU6TQuOQP4UYA3/UfLKM=
+    - SCDT: eJyNlFtLwzAYhvvVta6gUEEEHWKE4fXaHdCLCWOgeC3I7kLtsrWsh9kDoz/UnyOYNFlN3aq7Cm2+533zHRIN0paiIkuHloHSIwWNx8jWILyaWG8jPJl6xF3ZD/gpTrLXNSFznLopMKBjnvOQwPVIWJSBdFMDKqKiXhcMkDWpASA0uzZRyLmpE7iCHVKOxfQEbBvA8XuKaxynWxrTpasqVnaM3gno68ApSEL1b9Hsy0TxhR8tE3rSlbOM88zHnj8nuGehx4qyKqoNcMepjqDSKN5s4mCB1yTIcB75HzmRUPsf9J04SQPal9EOR02BVo5S/MAAKTv9hhPnL5wIiTOPNzgptrnpoLYRBYWCWsvz09zLgXIMIOyGkl0b9C63uxRY5CeZtwgKnGZOsEoP82yGZeORUTZbp81Wy2ZT2VYlK5VA3ZZAFC2M4win+ZJWvGrvTtr7YkFhlsz0tDJlA2qUpuxDUmgYJ1DaEmBLwF+TVKf6DdTvIapTA4namZ966PCgATiwY7xi6k/FxHWl6/PZzp2m/6l0wyvBpAC+AQKUJFI=
     - SCTX:
         - Begin A1V6_AAdd29_FortSpeed_30
         - ""
@@ -3749,7 +3710,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -3765,7 +3725,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1279
+        data_size: 1249
         var_table_size: 35
     - SCVR:
         - in
@@ -3773,7 +3733,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNlF9LwzAUxXvrWlcQrKCCDjGC+LxVN/FhggiKz4LsLdQtW8v6ZzYdYx/UjyN402Q1davuKZSc3z3pySEW8IZhko4NDYfwHYP0+8SzID596Lz16MNjwIZT744+pVn+OmNsRPmQgwBa7qGURMOAxctCiJsW4BCTtC/BAX0mGgAhgzOXxJJ79KOhYrvICU1bwZ4DEu8jbkkctywxF1dTreIY7T2wZ5G/ZBnOvyCDL5ekx2EyyfCkU3+SzvOQBuGI0XaH3JdUp6SaAFeSaimKJ+likUZjOmNRTudJ+DFnGur9g74zP6tBr3W0JVFXoaWjpr/R9UTqj1ZWgR9NacZ4mFR/reuAFol9LrHDF4nFzB+lC5otV4HYYDYJgmqCWQnn093IgbELoOx6ml0T7Etpd6KwJMzyYBwtKc/xuHw7z3pYN751iobY2BCzaAiObZRjtQjMVQQquThNE8rnE7ymMri1396kBUNYCtP90lS02ilMxYc2oaaDYDQ1wNOAv+pXpa5rqN/Nq1I3GrVWuqq0q0k3962q721VmC1vWCa885OwehNw3fxwFM8XvljPB2u7SKFxzUMljAC+AV4tSKU=
+    - SCDT: eJyNlF9LwzAUxXvrWlcQrKCCDjGC+LxVNxFUGAPFZ0H2FuqWrWX9M5uOsQ/qxxG8WbKaulX3FNqe3znpzSEW8JphkpYNNYfwHYM8PBDPgvi023rr0G4vYIOJd0ef0ix/nTI2pHzAQQAN91BKokHA4sVSiB8tQBOTNC/BAd0TA4CQ/plLYsn1/Gig2DZyQtNUsOeAxO8RtySOnyzhi6upVrGN5h7Y08hfsAz9L0j/yyXpcZiMM9zpxB+nszykQThktNkijwXVKqg6wJWkGoriSTqfp9GITlmU01kSfsyYhnr/oO/MzyrQax1tSNRVaJGo6W90PZH6o1VU4EcTmjEeJuVfazugjcQ+l9jhi8Ri5g/TOc0Wq4HYYNYJgsrBLA3n093IgbELoOI6Wlwd7EsZd6KwJMzyYBQtKM9xu3y7zGpYD751lg2xsSHmsiFoWytstRGYqxGoycVpmlA+G+MxFYNb++1NWjBEpAjdL0JFq51lqHjQHCo6CEZdAzwN+Kt+Zeq6gvrdvDJ1o1FrpStL25p0c9/K+s5WhdnyhOWEzZ8JqzsB1+eDtYsD36N1xVUkrAC+ASLFQFQ=
     - SCTX:
         - Begin A1V6_AAdd29_FortSpeed_60
         - ""
@@ -3860,7 +3820,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -3876,7 +3835,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1886
+        data_size: 1856
         var_table_size: 35
     - SCVR:
         - in
@@ -3884,7 +3843,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJydlVFP2zAQx3MpyRJp0soG0rTBZml7nZSktMADkxDSpr3sAQnEm+Wmpi1NCCRBqB+Uj4OEE7vppQ048BRF/v/vd/bZdxZkG4ZJfBs2XJJ1DHJ0RAIL4p1j/3xAj08mPJwF9JRneZLyPyyfjmkWZlBYvna3pCgKJzyel1KxaIEIYxLvJ7iAowoEEHKx2yWx9J2wKFTevvAVGk+ZAxek/VbYLWkXS1YRV3xN9S3S8N6DfROxOU9F/C/k4rFLkg/T63HKR3SYcjaink9+V3K/kjsA36V8a0VOz/7/C5AnaOnpIU/PBZSYvSNdm5dJMqKzexYzysdj6pUYG0yHCJeym7U0H7rrJjDeASjQHgI5YP+QoM8qvQkLZxH/FSU04uxSHYWG96wXY/tuWR9H1Mcs6+O12a7/lu3WuIOC+wJ5V5I/qj1kLMrTacjboRtcmL2vYX+T7E8qSpiyIY05y9vBm2yYfqChr1zMSXJ3PXoFvtGH+Yca/qLmizMM7/I8annw66YluUN8b4G2l2jRWqqIKA2TyDS2q4jpdEiveDqbLxvBKr5ZDMYCu11hiybmltjiB4VYbTlgOEgZNBx0rdvU5T2NvFeX72maBdb22z10bBloHifW7uteExYfaG8/Vh+2uqyaSyXr2VnWUw0c8W2eSuV0FAPx7+baqnAJ4DNTsAABPAGIwMDN
+    - SCDT: eJydlUFP2zAUx/MCyRJp0soG0rTBZmm7TkpSWuDAJIQE4sIBCcTNclPTliYEJUGoH5SPg4QTu+lLG3DgZCX+/9/v2c9+tiBbN0zi27DukmzNIIeHJLAg3j7yr/r06HjMw2lAL3iWJyk/YflkRLMwg8Lys7MpRVE45vGslIpJC0QYk3h/wQUcVSCAkOudDoml75hFofL2hK/QeMocuCDt98JuSbuYsoq4YjTVWKThfQb7PmIznor4P8j1c4ckXyZ3o5QP6SDlbEg9n/yv5H4ldwB+S/nmkpxenp8FyBO09HSRp+sCSszelq6NmyQZ0ukjixnloxH1SowNpkOES9nNWppPnVUTGJ8AFGgXgRyw/0jQd5XemIXTiP+LEhpxdqO2QsN71YuxPbesjyPqY5b18dos1//IcmvcfsF9g7wjyV/VGjIW5ekk5O3QDS7M3tOwf0n2NxUlTNmAxpzl7eBNNkzf19CXDuY4ebgbvgPf6MP8Aw1/XvP5HoYPeR613PhV04K8RnxvjrYXaNFaqogoDZPINLaqiOlkQG95Op0tGsEyvlkMxhy7VWGLJuaW2OIDhVhuOWA4SBk0bHSt29TlXY28W5fvapoF1vbaXXRs6WsuJ9bu6W4TFu9rTz9WH7Q6rJpDJetpLuqpHhwxnm6svErivwj5yjtXhAJ4ATV5uHw=
     - SCTX:
         - Begin A1V6_AAdd2_RestoreFatig_15
         - ""
@@ -4023,7 +3982,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -4039,7 +3997,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 2060
+        data_size: 2030
         var_table_size: 35
     - SCVR:
         - in
@@ -4047,7 +4005,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJydlUFv0zAUx/vSJSQIiQ6GQLCBJbgiJenabYchTZNAXDgggXaz3MRrSpIFJZmmHviYfBwknNhNX9oMp5ysyP//+z3n2e+ZUOwNDOJZsOeQYjgg5+fENyE9vPC+T+nFZcSD2KdfeVFmOf/IysWcFkEBleXV6ECKkiDi6bKWik0TRBiDuO/AARxVIICQq6MRSaXvkiWB8k6Er9K4yuw7IO2/hN2UdrFlVnHFaqi1SsN9BNbPhC15LuK/JFd/RiR7vLiZ5zyks5yzkLoe+dDIvUZuA7yR8oMNOf325bOPPH5Pzxh5xg6gxKxD6dq/zrKQxncsZZTP59StMRYYNhEuZTdaaf4ebZtg8ABAgY4RyAbrrQS9UOlFLIgT/j7JaMLZtfoVGt69XoydOHV9bFEfo66P2+e43v8ct8WdVtx/kI8k+Yk6Q8GSMl8EvB+6w4XZJxr2a8l+qqIEOZvRlLOyH7zLhumnO9KjLOZ3nIc70pEN08809I1nEWW3N+EOh+/0rflD4rmaBFZXblXC4LYsk5513za10N4Kba3RorM1EVEaBpFpPGsi5osZ/cHzeLnuQ5v4bjEMVtjnDbbqoU6NrT5QiM2OBwMbKf2OP91qdm35WCMft+XHml6FtZN+fQZbppregLUnuseMxafax4fVZ9rHItQPm9q4vS635g7K8g/X5VfjUazdM7Se5WJ8f9rf2hUuAbxnZlcggL8gfeoj
+    - SCDT: eJydlVFv0zAUhXuzJSQIiQ6GQLCBJXhFStK12x6GNE0C8cIDEmhvlpt4TUmyoCTTVIm/yc9Bwond9KbN5nRPUZtzzneda1+bUOwODOJZsOuQYmdAzs6Ib0J6cO79nNDzi4gHsU+/86LMcv6ZlfMZLYICKsub4b4UJUHE00UtFS9NEDEGcT+AAzhVIICQy8MhSaXvgiWB8o6Fr9K4yuw7IO1/hN2UdvHKrHLF01DPqgz3CVi/E7bguch/TS7/DUn2dH49y3lIpzlnIXU98qmRe43cBngn5ftrcvrj21cfefyenhHyjBxAhVkH0rV3lWUhjW9ZyiifzahbYywwbCJcym60yvw73DTB4BGAAh0hkA3Wewl6pcqLWBAn/GOS0YSzK/UpNLw7vRg7dur+2KI/Rt0ft89yvYcst8WdVNx7yIeS/EytoWBJmc8D3g/d4cLsYw37rWQ/VylBzqY05azsB++yYfrJlvQoi/kt5+GWdGTD9FMNfe1YRNnNdbjF4jt9K/4O8VxNAcstt2xhcFOWSc++b5paaG+JtlZoMdmaRFSGQWQZL5rEfD6lv3geL1ZzaB3fLYbBEvuywVYz1Kmx1Q8UsT7xYGAjpd/xpVvDri0faeSjtvxIM6uwdtxvzmDLRDMbsPZYd5ix+ER7+LD6VHtYhPpx0xu31+bW7EHZfmPVfnU9iueXvY07VPwvIu+4lasogP/0GuHS
     - SCTX:
         - Begin A1V6_AAdd2_RestoreFatig_30
         - ""
@@ -4198,7 +4156,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -4214,14 +4171,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 459
+        data_size: 429
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kM1Kw0AUhXPyJwEXESoIIt6FDzCp6K5CKegDCNLdMCRDU5q0MlPRPqiPI3gnE6XadDWL+33nzrkJbBSEVKSIM7JhQJMJjRO0F9Pi5V5OZ7UuV7dCPm7M9nlrpC0tHH6ZjzzQlLVudx3GwwQcEZK4QYb9RI4H0fwqp9Z7M9WUvXvHnmNEL48zeD1nPfY6j2KXy69bL06RvjZqp02K5JrmXzltRsv1wuhKVka/LWr5rj6kKOjhDxuRZ89/WKUro6RdLdf/4c98MBDBHjEcg6D/ZZF1NSKugd8ariG/w2foSvL1n84OpmydAEfO7hYB39X5b1E=
+    - SCDT: eJx1kN9KwzAUxvt1baUgWGGCIOK58AHSid5NGAN9AEF2F0Ib1rF2k2Sie1AfR9jJ0o39vQrk/L5f8p0YthOElCeIUrJhQP0+9WI0t4P880UOhpUupk9Cvs3N4mNhpC0sHH6XdT1QF5VulmuMhzFYEZJ4RIpdI+tBNLrPqPG5oaqLNvvMOceINtxL4eNXHI98nEeR8/LpnheXSL5qtdQmQfxAo/+M5t3JbGx0KUujv8eV/FG/UuT0usd2yLM3G1bp0ihpp5PZIfyXnRQi2CFOaxC0v8zTdY2Qa2BbwzXk8/36aA18fwGcWaxTASsVX2cA
     - SCTX:
         - Begin A1V6_AAdd30_FortStr_15
         - ""
@@ -4260,7 +4217,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -4276,7 +4232,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1381
+        data_size: 1351
         var_table_size: 35
     - SCVR:
         - in
@@ -4284,7 +4240,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyVlN9KwzAUxnvqWldQ6GCKMMUIPkC7f3cTxkDZtSK7C3EN3Vi7jbRT53v6OILJknXRdbZelZLz+74vJ8mxIKkYJvJtqDgoOTJQr4eaFsQXff+5i/uDCR3PWh6+X7D0MWU4GScgyhtuXRZE4wmN15syvmgBlzCRdwsO6IpcHhAaXbkoltyARGPFdjgnajwFNx2Q+BPHLYnzJUvo8q+pviKGdwL2MiJryrj+DRp9uWhxPpyHjAY4XEQBneOEBiHFno/uMsp3QOPsa8nVp5ILGF2FE/xG3hVlg1lFHFQKwt/P+E83lwPjGEDZ8f2I3VT5bszNbvTUNpLuZ1sVQgNGcDKbzsvZ54O6f0v4/5HgUiaoKSGSTPCaxOXc9yHduV3gvD0xJfJK4uWUURyskrSc/QFSz9ApyPC7/yv2sQhxTEn6z/7/APUE3W0Ce5eAv41MVEtjNmQaV4m+UMLwkkbpAfO9OjC2ZqeZmXh7zsZM/OjdG+a+FDCqGtAsvup6eavE1dTr2wWXSa/tlDz5Eqcje3S065GaPfybP6A2Q5LPxYfa3iqnuOmBgSiMAL4B1U9HeQ==
+    - SCDT: eJyVlN1KwzAYhvvVta6g0MEUYYoRvIB2f2cTxkDZ8UB2FuIaurF2G2mnzvv0cgSTJe2i22w9Cm2+533ffPmxIKkYJvJtqDgoOTFQr4eaFsRXff+5i/uDKZ3MWx5+XLJ0lDKcTBIQ5Q23LguiyZTGm20Zn7SAS5jIuwcHdEUuDwiNb1wUS25AooliO5wTNZ6Cmw5IfMRxS+J8yhK6fDTVKGJ4Z2CvIrKhjOvfofGXi5aXw0XIaIDDZRTQBU5oEFLs+eghp3wHNM6+lVx9JrmA0XU4xW/kXVE2mFXEQaUg/P2c/3QPcmCcAig7vh6xmipfjbldjZ7aRtL9IlMhNGAEJ/PZopz9YVD3bwn/PxJcywQ1JUSSKd6QuJz7PqQ7twucsx1TIq8kXs0YxcE6ScvZHyH1DJ2CDL/7v2YfyxDHlKT/7P8PUE/QzRLYuwT8buSiWhqzIdO4SvSFEoZXNEqPmO/VgZGZnedm4u45WzPxoXdvePCmgFHVgGbxUdfLWyWOpl7fLjhMem2n5M6X2B3ZI3PXI/X28PGptvdA8f9c9siTJ6QAvgG8pz8o
     - SCTX:
         - Begin A1V6_AAdd30_FortStr_30
         - ""
@@ -4394,7 +4350,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -4410,7 +4365,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1569
+        data_size: 1539
         var_table_size: 35
     - SCVR:
         - in
@@ -4418,7 +4373,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyVlNFKwzAUhnuqrSuIdKCiqBjBB+g2N71REEHxWhAvhBDX0A3bbaatOt/TxxFMm2w73TpXr0LJ/53/5zTnWBCvGyZp2LDukHjNIJeXpGlBtHfdeOzQ65se7762PHo7FMlDImjcjSGTH7jbShB2ezwa5zJ5aYEsYRLvFBzAFWV5IOTpyCWR4m5Y2NVsW3KZxtNw0wGFP0vcUri8srK68jT1mcXwNsEehWzMhax/Qp5+XDLcvR8Egvs0GIY+H9CY+wGnXoNcTanGlKoB7Ctqq68oPuYvLAyRuonVRKl3imqaDvpvKUdQywEUzT5W2LbGfMHToEc/2KcOZoNZIxLUFcxCyG+3lANjA0DbnTl5w2qyYWbeMNwYey60z7gvGI1f+4Nq9uUg9m9n/n8kOFQJ6roQi3t0zKJq7osQdu6scJ48Cl3knUWjvuDUT+Okmv0SEmc4X5Fhvv+p+BoGNOIs+Wf/CyBOcDFJYM8SyPGbFkVpzAOVxtVFXzgTdMTDZIn5gg6MiVl9apaNt5ObZR+4e/elwwhGDQFNBMzNYVHYKmlKcQSL+rPVM4Tl7QpvHus7K14p1p5XfFIVfrtq/tqs+XpvyrN8ueYLXu70u/rCraSk6ZJlnhkB/AI653uC
+    - SCDT: eJyVlF9LwzAUxXurrSuIdKCiqBjBD9BtbvqiIIKyZ0EGPoRsDd1Yu820Vef39OMIpku23e6Pq09l6/mdc7jNjQXxtmGSig3bDom3DHJ7S6oWREf3lZcGvX/o8k6/5tHHoUieE0HjTgyZ/MTdV4Kw0+XReCKTLy2QFibxLsEB7CjtgZDWmUsixT2wsKPZuuQyjafhqgMKf5W4pXD5ysp85dPUz6yGtwv2KGRjLqT/BWn9uGR42BwEgvs0GIY+H9CY+wGnXoXczajKjCoBHCtqr6coPuZtFoZIXcVqotQHeTVNB723lCOo5gCqZp8rbF9jvuBp0KUf7FMXs8EsEQlqBzNX8ttdyYGxA6DjrpzJwEpyYOZkYHgw9kJpn3FfMBr3e4Ni8atBnF/P8v9ocKoalLURi7t0zKJi6csQTm5sSJ4eCm3yzqJRT3Dqp3FSLH4NiTtcb+iwOP9UfA0DGnGW/HP+ORA3uJk2sOcN5PrNTFEb80S1cbVpmzNBRzxM1oQv6cCYhpVnYdl6O5Ow7AeeXnPlMoJRQkAVAQt7mBfWVgwlv4J5/dXmHcLyeoEzj/WNDacUa68LHqkCn10N35wPX9+b8vlUXrpc5f/Sds11nVkB/AIIG3Mx
     - SCTX:
         - Begin A1V6_AAdd30_FortStr_60
         - ""
@@ -4536,7 +4491,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -4552,7 +4506,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 609
+        data_size: 579
         var_table_size: 35
     - SCVR:
         - in
@@ -4560,7 +4514,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFkk1OwzAQhTNuXRqJRRCwQPxoFhwgMYJdkapKcANgZwVjkVCHoqRSlYNyHCTGP6RBBFiNnHnfexl7ODTjiGE2gXGMzSjC2QwFh+pont1dyfmi0Gp5kcmbVb2+L42RjWrA6o+TA68wqtBV63TU5EAeDNNziKFvSf6A+HCaYOW5RW5UYC+Js5o0wCIGj58Qzj1OLW59qbJQ7W+kuzB5M3mra+//keDqsHx9rvUTmdblo3zRxrQyzfC6g7IOmv4NiR4k3DxTpIP92stlZ95iP1hsSrXcFDpfb1PZt9T3ZEgKUeyG5jQ06+4sdoH20MOHJ4RoB+A/lfiKGW1jwrVTHX4btyC0E7d7P7pEUegvu2CDAD4BZSmPxw==
+    - SCDT: eJyFkU1OwzAQhTOmLo3EIghYoAo0Cw4QG8GuSFUluAGws4KxSKhDUVKpykE5DhLj2KRB9Gc1sv2+9zwzHOpBxFAMYRBjfRDhZIKSQ3k+FY+3ajrLjZ5fC3W/qJZPhbWq1jU4/Tg59Qqrc1M2rY4eOZAHw/QKYuhbkj8gPl8kWHpullkd2BvinCYNsIzB42PCucfpiTtfqixU9430CIafNmtM5f2/E1ycFR9vlXkl06p4Ue/G2kalAu86SHTQaDcke5Bs+xkhHdxtL5ddeouTYLEq9HyVm2y5TmV/Ur+STVKI4rZpTk2zbmZxG+gOPXxzhxAdAuxTyd8Yto4JY6f6cPxvN3RPtlu27awAfgDV24d2
     - SCTX:
         - Begin A1V6_AAdd31_FortWill_30
         - ""
@@ -4614,7 +4568,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -4630,7 +4583,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 769
+        data_size: 739
         var_table_size: 35
     - SCVR:
         - in
@@ -4638,7 +4591,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFks9Kw0AQxjPbJk1AMKIeVJQ5ePCYpOitQinoG6i3kMbFxG6MJIWSB/VxBGf/EFeN7WkI8/2+b2YzLrRjh2HswTjAduTgbIaJC9XJPH64SeeLgueraZze1c36sRQibfMWpP4sPNIKkRe86pSOmi6QB8PoEgKwLckfEJ/OQ6w0t8hEbthr4qQmMnASgMavCHc1Ti1X+lJlpsoxoj3w3kXW8Ub7f4ZYH5dvLw1/JtOmXKavXIgujWK87aG4h/ztUGJBNJSV5Z1qbN9gS1Fna5PiAfORGAOzH4kf4W8EnAmACZkGam+P9mZqbzIb92ZWPrvQ+YfGbFPmq03B+xkGcoek4MhAGTnpI+WfClSk/LAMht8VHN/SJ7v0iVp363PogUbfA5mzoDp8O+qA6WbvD/50iaK4f25VBgF8AS+qs9Q=
+    - SCDT: eJyFksFKxDAQhjux7bYgWFEPKsocBK9tF72tsCzoG6i30q3B1k2ttAtLH9THEZw0IUat62lo83//P5OMB53rMEx8cEPsdhyczTD1oD6eJ/fX2XxR8mI1TbLbpl0/VEJkXdGB1J9Gh0ohipLX/aCjQw/Ig2F8ASHYluQPiI9nEdaKW+Si0OwVcVITazgNQeGXhHsKpyNP+lJluso24l3w30Te81b5f0TYHFWvzy1/ItO2WmYvXIg+ixO8MVBioGA7lFoQNWVl+ScK29PYUjT5Wqf4wAIkRsPsW+J79BMBZwKgQ6bhMLdPc7NhbjJzjZmVz85V/oE221TFalNy08NI7pgUHBkoIycmUr5UOETKD8tg/F7BCSx9+p8+Hcbdeh2qIfbVkF4Lqnf7v3aH/pPhH9sorQA+AWX6q4M=
     - SCTX:
         - Begin A1V6_AAdd31_FortWill_45
         - ""
@@ -4704,7 +4657,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -4720,7 +4672,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 890
+        data_size: 860
         var_table_size: 35
     - SCVR:
         - in
@@ -4728,7 +4680,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk19LwzAUxXuztVtBtIoK/hlE8FVoO/Rtwhjou4LsrdQa1mK6adMp/aB+HMGbJsx0rrKnUHJ+55ybNDaIrkVo4EDXpaJj0dGIhjbk5+Pg6SYaT1KWvA7D6K5YiPKBiUyUkUgESOTMO1QinqQsr2opbtqANoT6l+CC6YoRQOl04NFccZOYJ5q9Rk5qfA2HLij8CnFb4bhlS19ciV5lDX8HnDceV6xA/ws6/fbo4jibzwr2EhXxZ/RYxjwtsjzyA3q7ooIV1Qc4VdSeptIF51VTjn2MGGeggAMNzIr4g5VxoRkHSJ8ipnnSiPvyNlBg9QB01NCtB3dxcFIPjn69lZ/RgpyoFrvaj1XsOea8JXVNBZZxAIQqp6OmJlrOs/clazHcLAZL1m8OIC/erQeQH4ZFyzWB1TeA0ADWb6ipHG5xyP+diOrd+e2tf0ZcN/+x9cvBx3K//2cXKUxreSEyCOAHTyDX1Q==
+    - SCDT: eJyNk19LwzAUxXvj2q0gWkUF/wwi+OhD26FvE8ZA3xVkb6XWsBbTTZtO6Qf14wjeNKGmcxWfQpvzO/fc3MQG0bMIDRzouVRsWXQ8pqEN+dkkeLyOJtOUJS+jMLotlqK8ZyITZSQSARI59Q6UiCcpy6taips2oA2h/gW4YLpiCaB0NvRorrhpzBPNXiEnNb6GQxcUfom4rXDcsqUvrkSvMoa/Dc4rjytWoP85nX15dHmULeYFe46K+CN6KGOeFlke+QG9aaigoQYAJ4ra1VS65LxqyzGPUcYZKmBfA/MifmdlXGjGATKgiGmetMp9ehsosPoAutTIrRt3sXFSN45+/cbPSEGOVYod7ccq9hRz3lF1TQWWcQCEKqfDtiZaLbK3Fesw3CwGS8ZvNyAH79YNyA/DomNMYA0MIDSA9Qm1laN/HPJfJ6Jyk5/c+jLierf368bif/TreAPSCuAbTKDPhA==
     - SCTX:
         - Begin A1V6_AAdd32_FrostResist_15
         - ""
@@ -4799,7 +4751,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -4815,7 +4766,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1095
+        data_size: 1065
         var_table_size: 35
     - SCVR:
         - in
@@ -4823,7 +4774,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNlN9KwzAUh3vqWlcUN0UF/wwi+ABtt3k3YQz0XkF2V7oa1mK6adspfVAfR/CkiV1aO7arMHK+8+W3nNSAtKXpxDGhZZF0TyOjEXENiK/HzsudN56ENHjru95DskyzJ5pGaealQQocueqeiiIWhDTOi1LcNADb6MS+BQvUrqgAQqa9LokFN/FZINkhcrzGlrBrgcBHiBsCxy2D98VVlys/hn0I5jvzc5pg/xsy/emS5Xm0mCf01Uv8L+8581mYRLFnO+S+pJySagNcCqojqXDJWF4tx/MoGrMngBMJzBP/k2Z+IhkT9DZBTPJ6RffdbaBA2weQqr5VBO9gcL0IrgY0L4T5SPagOZ35jO1grRGqcaCEa4NJhOKsCnirRfSxojuYmkFVOOQReUhzHRInpWyqBNZrNzpjPg4Zi3BqFusrqh9hQzVof+KDUsyn0irE/EdDj9oMgdZWAFcB6uNTrexvmwC1eLDl4nb4t0XOvXVO+bJwbX5+xWcAX/7j8b9dpFC64blzEcAvCDAGzQ==
+    - SCDT: eJyNk99OgzAYxflQcETj0KiJf5bUxAcAtnnlTJYleq+J2R1h2Axi2RSYhgf1cUz8SisruGW7aoDvd04PPTUg29V04pqwa5FsRyODAfEMSK6G7sutPxxFNHzrev5DOs/yJ5rFWe5nYQYcubRPxBALI5oU5Sh+NABldOLcgAWqKloAIeOOTRLBjQIWSraPHJ9xJOxZIPA7xA2B4yeD6+Kqy5VvwzkA850FBU1R/5qMf2wyP4tn05S++mnw5T/nAYvSOPEdl9xXlFtRLYALQbUlFc0ZK+rjuB/FxuwI4FgC0zT4pHmQSsYEvUUQk7xes/u2V1Cg7QFIq65VBm9jcL0MrgY0z4XzodSgBZ0EjG3h2iBUx54SrgUmERandcBfzOKPBd3CaTWoGvZ5RB7SXIbEplSiSmC9caITFmDJWIytmS2PqLmFNdOg/RnvV8a8lVZpzB9WaDQ6BFpLATwFaNanPtnd1AB1uLfh4Lb42yKnvswpbxauj0f/rh++R9k1F5pLAfwChTv+bQ==
     - SCTX:
         - Begin A1V6_AAdd32_FrostResist_30
         - ""
@@ -4910,7 +4861,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -4926,7 +4876,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1350
+        data_size: 1320
         var_table_size: 35
     - SCVR:
         - in
@@ -4934,7 +4884,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNlF1LwzAUhnuqrSuIzk/wO4I/YOvcvFIQQcFLBfEuZDPaYrZpUpX9UH+O4EkTt7R2bFeh5H3Om+S8PQGoRc8nzRAWI6IWPHJ+TuIA+vuXzYcOvbxKeO+1FdNrOVTZHVepyqjqKdDIXn3TiEQv4f1RLsXNALCMTxonEIFbFS2AkMeDOukb7oqJnmXbyGlNw8JxBAa/RTwwOG4Fui6uvl31MRrLEL4JNuIS6x+Tx586GW6ngxfJn6hkX/Q+YyKRaZ82muRiTDXHVA1g11CrlkqGQoyK8tiVHxr5hpV3h0xSwVmWcOkgrQick4UHBlq30ItknzxD0NiE4NcIYpb3Cyf8rldQ4C0BWKtTx6oG4ZGx2rTQcyo5VUxkaj6zSs61a0d5a1axNX7eGrcF4Y5xX7FV+Ih3mRBz+JYI17FTvCAxFltFgH4M0vcPPodTNeganukr6kuGk0tilsdFnQv7pcx1BcPfQKSY68EkROUjTFGD92c8eV3930S5sf6oqFFKOXg1B4gdoBzworLlKKuyXVSfzoqnK27Pjpcr78xIxRytNI+4MHlEO1hwrZ4++RTEwXez9m8XKTSdMu20EcAvhl1Kvg==
+    - SCDT: eJyNlF1LwzAUhnuqrSuIzk/wO4I/YOvcvFIQQfFWQbwL2YxrMds06ZT9UH+O4MkSt7R2bFeh7fucNyfnbQJQy55P6iEsR0QteeTyksQB9A6v608ten2T8M5bI6a3cqCyB65SlVHVUaCRg+q2EYlOwnujsRQ/BoBlfFI7gwjcqmgBhDwfVUnPcDdMdCzbRE5rahaOIzD4PeKBwfFToOvi6ttVb6O2CuG7YCMusf4pef6pksFu2u9K/kIl+6KPGROJTHu0VidXE6o+oSoA+4Zat1QyEGKUl8eu/NjIt6y8PWCSCs6yhEsHaUTg7Cw8MtCmhbqSffIMQWMTgl8hiFnez+3wu1pCgbcCYK3OHasKhCfGattCr6nkVDGRqcXMSjnXrhmNR7OOo/HHo3FHEO4Z9zVbhY94mwmxgG+BcB1b+QaJsdjJA3TYTz+GfAGnctA1vNAt6ibDaZOY5UlRp2G/kLm2YPgbiBRz3Z+GqLiFGWrw/oynp6v/m2hsrB9KahRSDl7FAWIHKAY8r2w4yrJs59Xn8+Lpipvz4+XKW3NSscAozSH600O0Fwuudxv/bh98j2Vn3Ge6FMAvC8JCbQ==
     - SCTX:
         - Begin A1V6_AAdd32_FrostResist_45
         - ""
@@ -5034,7 +4984,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5050,14 +4999,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 453
+        data_size: 423
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kN1Kw0AQhXPyJwHBFQRFEQbxAZIWvatQCvoAgvRuCXFxi5tGsoWSB/VxBGezofT3ai/m+87smQQ2CkIqUsQZ2TCgyYRGCeqbafHxLKczrarv8Vi+to1dvWtpKwuH34krD5hKq7rrMR4m4IiQ8kdk2E7keBDN7wXV3puVphrcJ/Yckw/yKIPXBeux13kUu1x+3fr8HOmPKTvVpkgeaP4nqLleLL9a9SnXC2OatSyXK61amRf0soNHtx6/GHDdGNPtY7/iVBqCLWg/A8HwvyLrC0RcAJsCrhu/xw/Q1+O7v10eTNk6A04c3C0C/gH4a21I
+    - SCDT: eJx1kO1qwjAUhvvWtqMwsIPBxsbgMHYBrbL9cyDCdgGC+C+UGoyYWmkE6YV6OYInpogf+CuQ87xP8p4QpuP5lEUIYjK+R4MB9UKUr8Ns8iOGIyWLZb8v/urKbMZKmMLA4u/JswN0oWTZHDEehmCFT+kXYpwbWQ+i6UdCpcuNcl202W/OWSZtw70YLt7leODiPAqsl0/7fPqIaK3zRtYRwk+a7hOqXhareS1nYrvQutqKfLVRshZpRr8XeOfN4d0WV5XWzTW2S+7Z4J1B1w547f+y+FjA5wI4FbDd+Px/ulkA3z8Ad1ZqVcABdOVk9w==
     - SCTX:
         - Begin A1V6_AAdd33_FrostSh_30
         - ""
@@ -5096,7 +5045,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5112,7 +5060,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1025
+        data_size: 995
         var_table_size: 35
     - SCVR:
         - in
@@ -5120,7 +5068,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk+1KwzAUhnu6ta4g2KGi+EUQL6Af6i8njIFegCD7F2rXrWPpKs2g7EK9HMGTJuuC67S/Qsh53vc9SY4FvGuYxLeh6xDeMchgQAILsvOh//5Ih6M0iRdhSF+KnK/eUspjDqL80j2RBSxOk2xdleGhBShhEu8OHNAVUR4IGV+7JJPcKGKxYh+QEzWeggMHJP6EuCVxPLKELq6mWkUM7xDsTxatkwL1r8j42yV5f5rnE7oooyyiyWxGvYA814DvgIbYNxI5ni9nRTKhRVTS5CNfrqnnC8gGs0eQUwLC2a/xL7cJA+MAQJlhI6KNHrZhVm3ocW0ivU+VyFRcMOURW/F27s2g7h8K/z8S3MoEZ0qonDOWlzRartKkaJdhH6qnuN+ksLcp8GvUsloi80ImOlKyac7Y5i0a3H+XgbGxcmor8fGcykpsNHj3m4DR02qDfx9arw7bPUyrq5MtdLYtqLnAtXl4qgHGmX3t75wihbZ7hlUYAfwAp+fwTg==
+    - SCDT: eJyNk+1KwzAUhnvqWlcQ7FBR/CKIF9AP9Y9MGAO9AEH2L9SuW8fSRZpB2YV6OYInS9YFt7n+Cm3O877vSXIcEC3LJqELLY+IA4t0uyRyoLjohR9PtNfPs3Qax/S15GL+nlORCpDlV/6pKmBpnhWLZRluOoASNgnuwQNTEeWBkMGNTwrF9ROWavYROVkTaDjyQOHPiDsKxy1H6uJq61XGCI7A/WLJIitR/5oMfnzCOyPOh3RaJUVCs/GYBhF5qYHQAwNxbxVyMpmNy2xIy6Si2SefLWgQSsgFu02Q0wLSOazxb38bBtYhgDbDRmQbbWzDXrZhxnWJ8j7TIiN5wFQkbC6auW8HTf9Y+v+T4E4lONdC1YQxXtFkNs+zslmGXaiZ4mGVwl2nwKdRyxqJ7EuV6FjL5pyx1V1scf9bBtbKyqut5MPzllbyw4A3nwlYbaM22nvRZnXc7GIaHZ1qwV63oOcC17fOxvDgfxTeMY5SCuAXxoHn/Q==
     - SCTX:
         - Begin A1V6_AAdd33_FrostSh_45
         - ""
@@ -5206,7 +5154,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5222,7 +5169,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 794
+        data_size: 764
         var_table_size: 35
     - SCVR:
         - in
@@ -5230,7 +5177,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFks9Kw0AQxjPbJm3AQ4oiiFX2UNBj0qq3CqUH6QtIb0uarja4+UM2KH1QH0dwNrvErW31tAkzv++b/XZckF2H0MiDrk9lx6HTKR27kJ3PoucHNptvePI2uWOL/D2VTCYSVPNlcKbLItnwbNs0YdEFFCA0HIEPth6KA6XLq4BmmpvHIjHsPXKqJzTw2AeN3yLuahxLrtLFk5hTjRGegFeKeMsr1L+hy6+AFsM0f634mq3SuuYVfvKclbyOhWRhRB9bNmrZPsC1Zk8N+1GIF7mKc76L4GSWoTfU0MBA6zTOinxtEA9InyJlcLLj+BnsQ+D0AIzRxG8C8DAA0gSAct1WzpqBjPQMFwstJ0RRoWDFZJnm3Lrxb//jADjKXNn3Wnv1fH5jr34smT/DBqdvYWMLO5Rzc/9/EtJzdX7mMiuD5+G9ajYbl/lpsFdFCg2P7LEyAvgGSP6+Uw==
+    - SCDT: eJyFks9Kw0AQxjNrkzbgIUURxCp7KPSatOqtQulB+gLS25Imqw1u/pANSh/UxxGczS5xa62eNsnM7/tmv4wLsucQGnnQ86k8ceh8Tqcu5BeL6OmeLZZbnrzObtmqeMskk4kE1XwVnOuySLY837VNWHQBBQgNx+CDrYfiQOn6OqC55paxSAx7h5zqCQ089UHjE8RdjWPJVbp4EnOqMcJT8CoR73iN+hO6/gxoOcqKl5qnbJM1Da/xkRes4k0sJAsj+tCxUccOAG40e2bY91I8y01c8H0EJ7MMvZGGhgZKszgvi9QgHpABRcrgZM/xIziEwOkDGKOZ3wbgYQCkDQDlep2cNQMZ6xkuV1pOiLJGwZrJKiu4deOf/scBcJS5su939ur3+a29erFk/gwbnIGFTS3st5zb+/+TkJ6LfM9lVgbPx+HBXuF3lDyyqUoK4AtEQbYC
     - SCTX:
         - Begin A1V6_AAdd34_Invis_30
         - ""
@@ -5296,7 +5243,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5312,7 +5258,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 915
+        data_size: 885
         var_table_size: 35
     - SCVR:
         - in
@@ -5320,7 +5266,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFk89Kw0AQxjNpExvwkKIIYtU9FATxkKTVW4XSg/QFpLeQpqsNJpuajUof1McRnM0ucdM/9rQJM7/vm53ZsYC3DZP4NrQdwlsGGY1IYEF2NvafH8LxZEnjt8EwnLLPhIc85iCSL9xTGU7jJc3WVRIGLUABk3h9cEDXQ3EgZHbpkkxykyiNFXuPnMjxFBw4IPE7xC2JY8gSunia6hRleMdgr9JoTQvUvyGzH5fkvYS9FnQRzpOypAV+UhauaBmlPPR88lizfs12AK4ke6LYrzx94fOI0SYS6MitRK4VUhY0KjdsP1jyruEDB7R67Z4U6CqBRRJlOVsoRxvMDkFK4Waj4G93GwLjCEAZDZ2qfzb2z6z6h3LtWk6rwezLGs6nUi5N8wIFi5CvEka1hm367wfAEObC3qntxfSdyl78aDL/zgqMjoYFGrZrTM3sgZZ9aEJV5w70Vt6o9Xcj9Vbx3P2gq5XCLXrqbkWRQsM9CySMAH4BYE3jxQ==
+    - SCDT: eJyFk8FOg0AQhpm1YEk80GhMjFX30MREL0Crt5o0PZi+gOmNULpaIiyVRU0f1McxcZbd4La19jTAzPf/szOLDaJlERo40HKpOLDocEhDG/LTUfB0H43GC5a89gfRhH+kIhKJAFl87p2odJYsWL6qizBpAwoQ6vfABVMPxYHS6YVHc8WN4yzR7B1yssbXcOiCwm8RtxWOKVvqYiQ6yjb8I3CWWbxiJepf0+m3R4tuyl9KNo9maVWxEh8Zj5asijMR+QF9aNigYdsAl4o91uxnkT2LWczZOhKayI1CrjRSlSyuNmzfefpm4H0XjH6drhLoaIF5GucFn2tHB0ibIqVxstbwl7cNgXUIoI0Gbj0/B+dH6vmhXKuRM3ogPdXD2UTJZVlRomAZiWXKmTGwTf/dAFjSXNq7jb3cvlvbyxdD5t9dgdU2sNDA/lrTenXfqN63oXpye2arTkR+T6TvKsbHztaFxu8oueMXkVIAP/dw23Q=
     - SCTX:
         - Begin A1V6_AAdd34_Invis_60
         - ""
@@ -5390,7 +5336,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5406,7 +5351,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 691
+        data_size: 661
         var_table_size: 35
     - SCVR:
         - in
@@ -5414,7 +5359,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNksFKw0AQhjPbbDTgIaKiIMogfYCkUm8VSg9evAnS25LE0JQmpiTx0Af1cQRnsts0tCn0tISZ7//nz4yEyrYEBg7YLlYDCycTHEnI76bB54uaztIkXj2P1ftykdYfqariCrj93rvWDVmcJvmmaaOiBJIQ6A/Bha4iyQPi/MHDXHOzMIsNOyaOe3wDj1zQ+JBwqXEqSdalV5iXx/AvwFln4SYpSf8R538eFlfL70WZfKm4DCOVJ2Gt/ABfWyRwoQM5Txq63UJFuYp+skiVRbEFHRDnSKwRYf+glfj1jqFgnQEYU4rEgRwKJJpAJGq3op15BOp5boxoRSnWlKIOs12M/Qn6m8FiU7aVrS2vwW1s+aMj0ffTmgAnBdU2g52N2SS9/etuTo6u7O3yoEoU2R45LzYC+AdzdaFM
+    - SCDT: eJyNksFKw0AQhjNrNhrwEFFREGVQHyCp1FuF0oMXb4L0tiQxNKWJKdl46IP6OIIz2W0abAs9LcnO9/37ZyNBu47AyAPXR33k4GiEAwnl9Tj6eFbjSZ6li6ehepvP8uY9VzrVwOM3wYUZKNI8K1ftGG1KIIXA8BF86BtJD4jT2wBLw03iIrXskDieCS088MHgD4RLg9OWZC+twq58jPAUvGURr7Ka/Hc4/Q2wOp9/zersU6V1nKgyixsVRvjSIZEPPci7N9DVGqrqRfJdJKquqjXogThBYq2E86NO8RPsQ8E5BrChVIkLeVRItIVI6nbS3nkEmvNcWqmmFktq0cTFpsb/E+weBodDOVZ2sXwNfhvLDz3Fro/WFjioqIkRmxh7k7S+nm1dN70n8Z4fiFUAf9YgmPs=
     - SCTX:
         - Begin A1V6_AAdd35_LightSh_45
         - ""
@@ -5476,7 +5421,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5492,7 +5436,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 608
+        data_size: 578
         var_table_size: 35
     - SCVR:
         - in
@@ -5500,7 +5444,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFkr9OwzAQxnNuXRqJIYhuFLiBB0iC6FakqgMTCwPqZpnUaiKcFNVd+qA8DhLnP6RBBJhOzn2/78vZx8EMI4bZCIYxmkGE8znmHOrpInueicWyVMXr7Uw8yk1VPClTmb0whQGLXCQTL9JFqeqDk1KTA9kwTG8ghq4rRQDi6jLB2nNLqYvA3hFnNWmA8xg8PiWce5xa3PpSZaHa30hPYfSm5UHtyP8aVx8JbidVs9mptXhRWsv1tmmkSDO8b5msZcZ/MnmHyd00Y6SD/dpJZVfe4Tw4SFMKI/XeHEPZt9D3pE8KUexG5jQya28sdoH20MF754PoBOAfUf4VMjiGhCun2v8ubj9oJR7OfnSJosxf9sAGAXwCysiO3w==
+    - SCDT: eJyFkT1PwzAQhnOmLo3EEES38nEDPyAJoluRqg5MLAyom2Vcq4lwUlR36Q/l5yBxjk0aRD+mk+33eV/fHQfbixhmfejFaM8inEww51BdT7O3sZjOCq0+HsbiRS5L9aptaTfCKgsOGSVDLzKq0NW2kdIjB7JhmN5DDF1XigDE+U2Cledm0qjAPhLnNGmA8xg8PiKce5yeuPOlykJ130gvoP9p5Favyf8O598JroZlvVzrhXjXxsjFqq6lSDN8apmsZQZHmbzD5E03A6SDu+2kslvvcBUcpC2ElWZjd6HsT+hXsk8KUdy0zKll1k4sbgLdoYPv7Q+ic4ATovw3hO1CwsipPl/+2wvdk+uBTTsrgB9WvYaO
     - SCTX:
         - Begin A1V6_AAdd36_MagicResist_30
         - ""
@@ -5554,7 +5498,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5570,14 +5513,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 464
+        data_size: 434
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kc1qAjEUhefOXxnoIqWlm2K5hT7AjKXtyoK46LZ0Ie5CiMEJZhwxI+KD+jiCN5NBFHWVxf2+c3OSBGwUhFikEGdowwAHA+wnUPWGxfiLD0elkvOPb/5Xa1sv/pXVtuFWWnDOC3vylJGlqrYtS8MEKCfE/B0yOI2lHYA46TGsvDcSRnbuJ3mOyTu5n4HXGemx12kUu1w63fr8HtKlEVu1SiF5w8meYf2sF7OVmvL5RlSCy3XTGMXzAn/O6OjV048dLYxueKmnF+iO3QiE4IS5FgNBd8sia2tEVAOONVxDOq8/Q1uSvuD34WJK1h3AjWd3iwAOn7BxfQ==
+    - SCDT: eJx1kMFKw0AQhvOnSSQgGFG8SGUEHyCpqKcKpQev4kF6W5btYpZuGulGpA/q4wjOdoO0tD0N7HzfPzuTwg2imKoMSU4ujmg8plGKZjip3h/FZFprtbh/Eq+tce3yTTvjOuGUg3eui8tAWVXrZr1huZmCc2Iq75BjO5ZngGg2LKgJ3lRa1bsP7Hmm7OVRjqCfsZ4EnVuJz+Xqx5enyD6tXOtVhvSWZr8FtVdm+bHSc7H4lo0U6qvrrBZlRc879OAm0Bc9La3pRG3me+hPcSQQ0RZzKAZR/8sq36wR8xr4X8NvyPXlfO8M/H4CHDmsjwL+AJ3faSw=
     - SCTX:
         - Begin A1V6_AAdd37_PoisonResist_30
         - ""
@@ -5616,7 +5559,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5632,7 +5574,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 684
+        data_size: 654
         var_table_size: 35
     - SCVR:
         - in
@@ -5640,7 +5582,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFks9KxDAQhzvZplrwUP/gRSoj7AO0K+pphWUPXsWD7C2EbrBl2600FdkH9XEEJ02sRbt4aSiZ7/fNJOGgfY9hGoAfop54OJ/jjEMVL9LnW7FY5irbXN+Jx7rQ9fZJ6UK3QmcaDHMRndmqMstVtetqaZMD5TBMphDCMJYcgLiKI6wst5Rl5tgb4kxN4uBZCBafEs4tTlvc5NLK3GraSI4geC3lTjWUf4Wrzwjr82L70qi12LzLSorsrW1LJZIU73sqDWHABZeWO3WcLItW5MX6GwqAHSJxLsDo0x7/iMYw8A4AnIymMbMENAvrZqFAvw8c9MFi28eJC2xkKypFn7733+qRSvCMzgh5LzRnH3ZC8zPg95xU1/2/E1rL5Mfibo/W8Svu3ho9r4fjP7tEkXLPkzIigC9et55Q
+    - SCDT: eJyFks1KxDAUhXtjUy24qD+4kcoVfYB2RF2NMMzCrbiQ2YXQCbZMO5WmIvOgPo7gTRNrmR9m00uT+51zTxIO2vcYpgH4IeoDD8djHHGo4kn69iAm01xli7tH8VIXul6+Kl3oVuhMg2Euo3PbVWa5qlZdL21yIB2GyS2EMJQlD0CcxRFWlpvKMnPsPXGmJ3HwKASL3xDOLU5b3OhSZa6aMZJjCD5KuVIN6V/j7CfC+qJYvjdqLhZfspIi+2zbUokkxaeeSkMYcMGV5c4cJ8uiFXkx/4MCYEdInBMw9mmPf0fbMPAOAZwZpTFZAsrCuiwk6PeCgzlYbOc4dYKNbEWl6NPPvm69pRM8Y2cMeW9ozj7sDM3PgN9xUt30exNaF/bv4m6P6vPJxhXTOonueDRGCuAXGwWV/w==
     - SCTX:
         - Begin A1V6_AAdd37_PoisonResist_60
         - ""
@@ -5702,7 +5644,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5718,14 +5659,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 451
+        data_size: 421
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kL1qw0AQhDX6C4IUZ3ARSEK2yANIDglpHDAu0qcI7g5xukTGOstYduEH9eMYvKcTxr/VFvPN7OxGaALPpyxGmFDjezQc0iCCeRhlvx9yNC61mr19yh/9V2m1ko1qYPFH0XdApUptNi3GYgSO8Cl9RYLjRI4H0eRZkHG+cV6pzvvOPsuknXmQwNkF20NnZym0uTzt+vQe8aLKN3oZI3qiyU5Q3ZvO/5e6kMU0N/W8kGlGXydg8OLAfgeW9Zoxo/PVObsVl2HwjuSrEfC6dlnS1g+4Pg717WU8r5/fHsdf/+5dqOy6A2682y4C9l10a/g=
+    - SCDT: eJx1kM1qwkAUhXNikhIoNIKLQlt6F32AxNLiRkFcuHch7oYwGY2YMWJ04YP6OIJ3nCD+rgbmfuebc8dH1XBcSgJ4IVWuQ90utX3o934y/hf9Qa7k4rcjRmpaKLkRlaxg8I+oZYFC5krvThgPfbDCpfgHIS6NrAfR5CsibXODtJB19o9zhonrcDuEjb9x3LNxHnnGy6d5Pn5FsCrSnVoH8D9pcoiobM6Xs7XKRDZPdbnMRJxQ7wpsfFuwVYN5uWVMq3Rzy+6jexmci/FDBZy6XRKe6rtcH+f6ZjM+h8279fn+BXjyoUYFHAEBUGOn
     - SCTX:
         - Begin A1V6_AAdd38_Reflect_45
         - ""
@@ -5764,7 +5705,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5780,7 +5720,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 853
+        data_size: 823
         var_table_size: 35
     - SCVR:
         - in
@@ -5788,7 +5728,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk0FPgzAUx3lssJF4YGaHJbrYRD8AsGi8zGTZwbsHsxupUIVIwQA78EH9OCa+0gqNY9lOTdP3+///r+2zoBobJvFtGDukGhlkvSaBBXyx8V8fws02YdHn6jF8Ye8Zi+qwiioQ5VfuXBZkUcJ405bhoQUoYRLvDhzQFVEeCNktXcIlt6VZpNh75ESNp+DAAYl7iFsSxyNL6OJqqlXE8C7A/spow0rUvya7H5cUszT/KFkcxinlRR6Hnk+eOsB3QEPspUQuFRIV/I2VZaMYG8wpQUzxwtjv6G93gAJjAqCssA3RxBSbMNsm9LD2jXSeK42k2GNUzmh9nvcgp7uvhLvwt3t/fJBOU8ti3sosC6VJY8ppXqd7HhYl6+/vf4aj9WD8mU86c/EBnNZcbDSVw+cCY6rVBmfc+OmLkXFGfRz113Ad/pDtUOAcPM8OTpFCzyMDIIwAfgHggMZf
+    - SCDT: eJyNkkFPg0AQhZm10JJ4oKaHJtq4id6FNhovNWl68O7B9EZWWIXIggF64If6c0ycZVfY2DbtaQM733tvZseGamARGjgwcGl1ZtHlks5tENNV8PoQrtYJjz4Xj+ELf894VIdVVIEsv/QmqiCLEi6atgwvbUAJQv1bcMFURHmgdDPzqFDcmmWRZu+RkzW+hucuKPwOcVvheGVLXTyJPmUM/xycr4w1vET9K7r58WgxTvOPksdhnDJR5HHoB/SpAwIXDMSZKeRCI1Eh3nhZNppxgIwoYpqXxkFHf3t7KLCGANoK25BNjLAJ0jZhhnWulfNEayTFFqMKzurTvPdypvtCukt/p/fHB+k0jSzkRmWZak0WM8HyOt2KsCh5P7//GQ7Wg/VnPuzM5QK4rbn8MFR2nwuskVE7P2Hixwej4pA+jt41PJ/HOwuJ/1H1wIpLKYBf6hO+Dg==
     - SCTX:
         - Begin A1V6_AAdd38_Reflect_60
         - ""
@@ -5862,7 +5802,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5878,14 +5817,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 462
+        data_size: 432
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kb1qw0AQhLX6C4IUl5BUwWSLPIDkkEAKB4SLkDZFcHfI8iKLnKSgc6MH9eMYvKcTxj9ytcXMN3uzF4D2HBeTEPwItevgbIbTAKrnNPl9l+l8Tfnf64f8Ib1pWkqLUpWbTupcg6GexIP1qXxNVde7WQyAk1yMXyCC42DeAoiLicDKcvNM5QP7xpzxxAM8jcDignHf4iz5JpenWR/fQvivso7aEIIJLnYCm/uyLlpayWVTU0WZknGCnydOD63z8ds662apSGpaFXRu3oqROHCO9PEQcIYXJlFfweMKcKhg2vEcP0FfkD/g6+5CZeoG4MrJzSKAPVPvcCw=
+    - SCDT: eJx1kEFLw0AQhfPSJBIQjKInKc7BH5BUFDxUCD2IVw/S25KmQxrcJJLtJT/UnyM42w1StT0N7Hvfm30Twkw8n7IIQUzG92g+p1mI5ibP3h5Uvthw+X73qF7ZbLue86rW9XZQpjSw1HVy6Xy63HAz7NwihpAkn9JbxNgPli0gWk4Tahy3KHQ5svfCWU86wrMYDj8TPHC4SIHNlWnXp6eIPnQxcB8hnNLyK6Huom6rntdq1bXccKFVmtHTL+eEnPPqxTnbbqVZGV5X/Nf8mRyIg7enHw6BN/4wi3cVfKmAnwq2nczn838nkPcT4MhRbRTwDXmgZ9s=
     - SCTX:
         - Begin A1V6_AAdd39_RestoreAgility_30
         - ""
@@ -5924,7 +5863,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -5940,7 +5878,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 652
+        data_size: 622
         var_table_size: 35
     - SCVR:
         - in
@@ -5948,7 +5886,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNksFKw0AQhjNpt23AQxTFgwQH8QGSioKHCqEH8epBeluS7ZIGN4lke8mD+jiCs9mQBkylp2Ez//f/m9lhoKeOi9EMph7qiYOrFS4ZFLdx9PHE4/VOis+HZ/4u9b6qZZzlKt83XAsNhrrxL61OiZ0smlZNTQbk5GJ4Dx4MjSkFEDeBj4Xl1okSHftInNGEHbz0wOIB4czi1GLGl6rbVXON8AxmXyppZE3+AW5+fKwu8jKr5ZanVSkLmSgeRvjSE5Exni+QDubrgHfR8ldvli+rVEmu5TaTBwsTHvXQtz8uBqeXLMC9s77XnVSLOk+5SNI0+c/5mBwcrx0Oo+G4/Wy99ofMYWAxMglw5gAn3N9mTA4Z3dtQHX/AdpdofV7P/3SJotAjC2OCAH4BtmudVQ==
+    - SCDT: eJyNkkFLwzAUx/visq3goYriQYcP8QO0EwUPE8oO4tWD7BbaLHTFtJVml35QP47gS1O6gpvs9Ejy//1e+lIOZuQxjMYw8tGceLhY4JxDcRtHH08iXm6U/Hx4Fu/KbKtaxVmu820jjDRgqevgwuW03KiiadN0yIFMDMN78GEopi6AuJoFWDhumWjZsY/E2UzYwXMfHH5DOHc4HXHrpcq6aq8RnsL4SyeNqsk/w9VPgNV5Xma1Wou0KlWhEi3CCF96IrLiyRRpYXcHPEPHX745vqxSrYRR60ztFLZ51EPfwf4weH1kCuzOea+6qJF1ngqZpGnyn/lQHDy/HQ6n4bB+tn77QXYxUOyZBHgTgCPu73qwXY/ubai+nv15QNon7YFfwqoAfgGQRZUE
     - SCTX:
         - Begin A1V6_AAdd39_RestoreAgility_45
         - ""
@@ -6003,7 +5941,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -6019,7 +5956,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 751
+        data_size: 721
         var_table_size: 35
     - SCVR:
         - in
@@ -6027,7 +5964,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNksFKw0AQhjPbpm3AQ5SKBykdxQdIIgoeKpQexKsH6W3ZpEsb3DQl20se1McRnM2GNMVUesmwmf/7Z3Z2XNB9h2E4gL6HuufgbIaRC9l0Hn4+8/liI5Ovxxf+IfU+L+R8nap0X3KdaDDUrT+2OpVsZFZWakq6QE4MgwfwoG1MVQBxOfExs9xCqKRmn4gzmqCGIw8sfke4a3FKucaXIqujaSO4gMFOiVIW5D/B5Y+P+VW6XRdyxeN8KzMpFA9CfG2IsCFGAFNLjGtCq1zQNxe7YyYyzQxHSAfzt1WToXW4frcO2zxWkmu5WsuDBTsq++13i8Fpdcbure9NLdVJkcY8EXEs/nM+JQfHqwY6pIGy5j286kLm0LLomB44o5Y4aok7BwfOEOCM69qWeoeW6uen2L0j1brShr5d/skSRUVP7KQpBPALxnq4bw==
+    - SCDT: eJyNkkFLwzAUx/viuq3gocrEg4w9xA/QVhQ8TBg7iFcPsltIu7AV03Y0u/SD+nEEX5rSddjJLg1N/r9fXl7igh44DMMhDDzUFw7O5xi5kM0W4eczXyy3Mvl6fOEfUu+LUi42qUr3FdeJBkPd+RObU8lWZlWdpkUXyMQweAAPumLaBRBXUx8zyy2FShr2iTiTCRo48sDiSLhrcVpyjZdG1oymjOAShjslKlmSf4qrHx+L6zTflHLN4yKXmRSKByG+tkTYEmOAmSUmDaFVIehbiN0xE5liRmOkHzPb2ZOhNdy8W0NexEpyLdcbeVCwo22//f4wOJ3K2L313jZRnZRpzBMRx+I/86k4OF7d0BE1lLX34dUHMj8dRU/3wBl3wlEn3Ns4cEYAZxzXlsQOJTXXT+Pb1Z83QvOkPfHqjArgF3K4sB4=
     - SCTX:
         - Begin A1V6_AAdd39_RestoreAgility_60
         - ""
@@ -6086,7 +6023,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -6102,7 +6038,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 989
+        data_size: 959
         var_table_size: 35
     - SCVR:
         - in
@@ -6110,7 +6046,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFk89OwkAQxjuFVho9lIjxIOrG+ABtAW+YEA6evHgw3JqmXaChtKZbJX1QH8fE2e6mLLSE02az8/u++bNjAOtqOnFN6FqEdTQynRLPgO1w5n6++LP5moabkf9BWZHl9D1YxaHPQgYcubMHIigJ13RbVqH4aADK6MR5BgtUVbQAQhb3NtkKbh4koWQnyPEYR8KeBQJ3EDcEjk8G18VTlydPw7kC8ysJSpqj/hNZ/Nkku43TVU4jPwpolAfMX9MgL3zHJa815tZYr4F9R2W+zMtNQQWpYJ6KEYHdSCxO0yykadGARio0FFBfQrssWTaAsQVKVeajQAYS+cniyGdBUjBZkgl6jyAoFfSD8n7tVg60CwBpN7GqXpvYa73qNSp2a0UlE/1BZHItFau8d1kW7Xt7bN4WCho35JaXtSX/HVZlyS+KwKlZgtZTCK+FOB7jITFSiPYJHsaPlfjm8Kp2nu+5qLqzr1r+dzzbl6JaTtzHt37jFSn0PLGE3AjgHzMC9sw=
+    - SCDT: eJyFk09PgzAYxnnrwBE9sDjjwamN8S6wzdtMlh08efFgdiMEuo2MgWnRhQ/qxzGxpQ3rBstOb6Dv73neP60JrGMg7FnQsTE7M/Bkgn0TNoOp9/kSTGcrEq2HwQdhRU7Je7hMooBFDARy6/RlUhqtyKasUvmhCVwGYfcJbNBVuQVgPL9z8EZyszCNFDvmnMhxFezbIPFnjpsS50em0OURqSjKcC/B+krDklCu/4jnfw7Ob5JsSUkcxCGJaciCFQlpEbgefq0xr8a6Dew7LumCluuCSFLDfB3DErtWWJJleUSyogENdWggoZ6Ctnm6aAAjG7SurAeJ9BXykydxwMK0YKolC1AXc1ApoL32fp1WDoxzAGU3tqtZW3zWqJo1V+zUilol6F5WcqUUq7q3eR7vZnto3pYKhjAUlhe1pbgddmUpPjSBY7sEo6sRfgtxuMZ9YqgR7Rvczx9p+c3lVeM8PXPZNdp1re47j2+9xqPg/7nqkWcmpAD+AY7x7ns=
     - SCTX:
         - Begin A1V6_AAdd3_RestoreMagic_15
         - ""
@@ -6184,7 +6120,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -6200,7 +6135,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1857
+        data_size: 1827
         var_table_size: 35
     - SCVR:
         - in
@@ -6208,7 +6143,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJydlcFunDAQhhk2UJB62LSJWqlJa7V9AGCzm+SQSlEOPfXSQ5UbcsCbRQFcGdKIB+3jVKrBzu6wsIHkZCHPN/9vxjO2oNgzTOLbsOeSYmKQiwsSWJAdXfq/FuHl1YpFd7PwJytKLtgPeptEYREVUCMfpgcqKI1WLKuaULlpgUxjEu8ruICzSgkg5Pp4SjLFXdE00uxccnWMp+HABYUnErcULresOq9cTb3WNrzXYP9OacWEzP+ZXP+bEv4uyW8Fi8OYsljQIlwxKsrQ88m3NeavMaeD3ceVWIrqrmSKRFiAMaKwQ40lec4jlpcdaIahIwXta+iBp8sOcOICOpX9SSEHGrlhaUpjnudUH8kG0yES1BnM1vH+Tns5MF4BaLk5knOelAteKBdguYXblNaRpTWb0uIS2sdK/Y3OEvHshglRjTtqD4WVT2vlJ7S3CroUvCjDgqZlMU6+H8QOzgYcbP37PzyJn2Ogl8P65wP6X5T+e52HxjSjeZncZ6Fs/3EedrIbHxPie49G7I0ROS3WiZEp86My9VYnbrrlgfN409HbHvpCwXiUPFxL1jPJbSTrD5Rg1wQBw0FE0ENsD482Meu5Le250Y4/QfHdkdGOnQ/3PA5fDPcsDj8dajMcfDaiKXD8+ag7PO6SqRpPNjXWb4pc+x+e5gGUb973/c6upKTujoeuFgL4D3n+zTA=
+    - SCDT: eJydlUFPnEAUx3koFJIe1lbTJtV20vYDAOuuerCJ8dBTLz003sgIsy4RmGbAGj5oP46JAzPuPhZW0NMEeL///w1v3hsLil3DJL4Nuy4pdgxyfk4CC7LDC//PPLy4XLLodhr+ZkXJBftFb5IoLKICauTTZF8FpdGSZVUTKj9aIGVM4n0HF7CqtABCro4mJFPcJU0jzc4kV8d4Gg5cUPhS4pbC5Ser1pWrqdc6De8t2H9TWjEh9b+Sq4cJ4R+S/EawOIwpiwUtwiWjogw9n/xYYf4KczrYXVyJhahuS6ZIhAUYIwo70FiS5zxiedmBphg6VNCehu55uugAxy6gXdlfFLKvkWuWpjTmeU71lmwwHSJBrWC2tvd/0suB8QZA282QnfOsXfBKuwDbzd2mtI4srdmUFpfQPlLu77RKxLNrJkQ1bqs9FHY+qZ2f8d4o6ELwogwLmpbFOPt+EGdwOpDBxr//x5P4JQn0ctj/bMD/m/L/qHVoTDOal8ldFsr2H5fDVnadxw7xvadE7HUiclqshFFS5meV1Hst3HTLPefxuqM3c+gLBePJ8mBlWc8kt7GsH5DAtgkChoOIoIfYHB5tYtpzWtpzox1/jOK7I6MdOxvueRw+H+5ZHH4y1GY4+HREU+D4s1FneNwhUzU21zXWd4pcf+51Lh75XipvucpqKYBHsxzE3w==
     - SCTX:
         - Begin A1V6_AAdd3_RestoreMagic_30
         - ""
@@ -6339,7 +6274,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -6355,7 +6289,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 786
+        data_size: 756
         var_table_size: 35
     - SCVR:
         - in
@@ -6363,7 +6297,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx9kk9Lw0AQxTPbJm3AQ0RBoVQW9eClkNQ/twqliHj1IL0tabq0xU0i2UTIB/XjCM5mlzS1TU9LmPm992YyNsiuRWjgQNelsmPRyYSObYiH0+DjiU1nax59Pvjsncs8zfhLsiwyJiMJihl457pLRGsel1UvFm1AHUL9W3ChKYseQOl86NFYc7NQRIZ9RE71+AYeu6DxO8RtjWPJVrr4EvOqGP4JOF8iLHmG+ld0/uvR9GyTrDK+ZKss/ObLQubMD+hzjQQ10ge41sjFm0byTSzDUZTGfLQodzEM1fByBhr0jJeMQsGlIRwgfYqQocmO6Y+3x4DVAzA29241uYOTk2pyVOvWao0E5EYnuDTR12mWMLERJVsUYrHN/t+9tR8sZa3Me7W5+mtuZa4+GiqHdgxWv9E9bnS3rbca/PhmdKLONpG5EXwPH1J10XjEr6d7VaTQr+VwlRHAH4DCub0=
+    - SCDT: eJx9kk9Lw0AQxTNrkzbgIaKgUCqLCp4KSf1zq1CKiFcP0tuSpksb3CSSTYR8UD+O4Gx2SVNrelqSnd97b2bHBtmzCA0c6LlUHll0OqUTG5LRLHh/ZLP5hkcf9z5747LIcv6crsqcyUiCYobema4S0YYnVV2LlzagDqH+DbjQlkUPoHQx8miiuXkoIsM+IKdqfANPXND4LeK2xvHKVrp4EnOqGP4xOJ8irHiO+pd08ePR7DRO1zlfsXUefvFVKQvmB/SpQYIGGQBcaeT8VSNFnMhwHGUJHy+rXQxDtbycoQY94yWjUHBpCAfIgCJkaLJj+u3tMWD1AYzNnVt37mDnpO4c1XqNWisBudYJLkz0TZanTMSiYstSLLfZ/7p31oOlrJV5vzFXr+bW5uqjpfLfjMEatKonrequ8daNH56MTkS2icyO4PlysrdI+B8VO1ZTSQH8AgW3sWw=
     - SCTX:
         - Begin A1V6_AAdd40_RestoreEndur_60
         - ""
@@ -6429,7 +6363,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -6445,7 +6378,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 698
+        data_size: 668
         var_table_size: 35
     - SCVR:
         - in
@@ -6453,7 +6386,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNkk9Lw0AQxTNpEw14iKgg+IcBexWSot4qlB68ePIgvS3bdWtKNkZ266Ef1I8jOJtd0qAp9LSEmd978zITgRkGIeYxDBM0gwAnExxHUF1O89cHNp0VUpR3OXuRZl1r+fwlSmaEAYtcpKeuSYlCVpumlYoRkEyI2QgS6KqSBSDOr1KsHDfjSnj2njjbk3l4nIDDR4RHDqdSZHXpDf1rx8iOIP5UfCM16V/j/CfF+mT18a7lGxOaL1gl+ZplOT62SJ5AB4pvHHTuoYKLUslbVTMl+dKTMYSHSLBXsQPkrcZ3upOF4ADA21IoGymmSGETiVSHrWpnohDdRGdetdTSFGy5Wki9DfJ3hP5mCKyptY1aW7uIpLG1Hx2Jvt/WBNgvqfMZbH38Munt33hzeXRsT8f/qkSR744Ls0YAv9+NotM=
+    - SCDT: eJyNkk9Lw0AQxTNrEw14iKgg+IeBehWSot4qlB68ePIgvS3bdWtKNkZ266Ef1I8jOJtd0qAteBqSnd9783Y2BjuIGBYJDFK0exGOxziKob6YFC/3fDItlaxuC/6s7Kox6ulTVtxKCw45z058k5alqtdtKx3GQDIM82tIoa9KFoA4u8yw9txUaBnYO+JcTx7gUQoeHxIee5yOYqdLlYXqxsgPIfnQYq0M6V/h7DvD5nj5/mbUK5dGzHmtxIrnBT50SJFCD0qGHjoLUClkpdWNbrhWYhHIBNgBEhxU3ABFp/GV7WQh2gcIthTKRUooEmsjkeqgU+1NxNBPdBpUK6NsyRfLuTKbIL9H2N4MkTN1tnFn6xaRtrbuoyex7draAP9L6n3Yxicsk+rj0Z+N039S3vGGnBTADxRymoI=
     - SCTX:
         - Begin A1V6_AAdd41_RestoreLuck_60
         - ""
@@ -6515,7 +6448,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -6531,7 +6463,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 611
+        data_size: 581
         var_table_size: 35
     - SCVR:
         - in
@@ -6539,7 +6471,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kk1Lw0AQhjPbbm1AMEIvfhTn0B+QBPVWofQgXhWktyWkqwnNR9kNSH6oP0dwNhvT1LanYTPzvO++m+Gghw7DYARDF/XAwfkcQw75dBG8P4rFMpHx5j4Ur1JXpZJvWynXQscaDHPjTexUFicyr5tZanIgHYb+DFzoy5IHIK6mHuaWW0ZZ3LIPxJkZv4VDFyx+Szi3OLW40aXK2mqu4Z/DaJtFtVSkP8PVj4fl1UvxqeimRaqq5COrha6ibKOFH+BTBwYdOAa4s+CkBXMZrcsvoWq5z4RNpDHSwXztWbNrq3CRWgUldVrsYLZn+O39HwPHbfJyysu653IbI3PooafDgXMG0Js8mubPabBzah+d6vE/06wIbcXz5UGXKPI8sQnGCOAXvJmQcA==
+    - SCDT: eJx1kV9LwzAUxXvjMlcQrLAXHcP7sA/QFvVtwtiD+Kogewuli7asf0ZSkH5QP47gTVO77t/TJcn5nZOTcNADh2EwhIGL+sLB+RxDDvl0EXw8icUykfHmIRRvUlelku9bKddCxxoMM/HGVpXFiczrRkuHHMiHoT8DF/q2lAGIq6mHueWWURa37CNxRuO3cOiCxSeEc4vTETe+NFk7zTX8Kxhus6iWivxnuPr1sLx9Lb4U3bRIVZV8ZrXQVZRttPADfO7AoANHAPcWHLdgLqN1+S1ULfeZsKk0QlqY3V40u7MO16l1UFKnxQ5me4E/3qEMHLfpy6kv657LbYLMooeeLwfOJUBPebLNfxLbJbWPTvPl5uhnaJ9cz/y1sQL4AxmOiB8=
     - SCTX:
         - Begin A1V6_AAdd42_RestoreSpeed_45
         - ""
@@ -6593,7 +6525,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -6609,7 +6540,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 783
+        data_size: 753
         var_table_size: 35
     - SCVR:
         - in
@@ -6617,7 +6548,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFkk1Lw0AQhjPbJm1AMGIvKtU99OAxiR+3CqUH8aogvS0xXU1oPko2UPJD/TmCs9k1TWtKT0OYed73zeyYIPoGoZ4FfZuKnkGnU+qbkI5n3vsjm80jHq7uffbKRZkX/G3N+ZKJUIBkrpyRmkrCiKdVPYtNE1CHUHcCNrRl0QMoXYwdmipuHiShZh+QkzOuhn0bFH6LuKlwbJlSFyvRVcZwT8BaJ0HFC9Sf0MWPQ/OLl+yrwKRZXJTRZ1IxUQbJSjDXo08N6DXgEOBGgSMNpjxY5htWVHyXwVwtO+taUeexoopgw/hHnlUasoAMKXJagOyYfjtdGBgDAG12Z9crsHAFpF4BCvYbwVYOcqlynP4JchFn2+D7vvtjYEgjaTVorORj2bWV/GjBh1cLxrDF+C2mc6v1nx7dhsrV2+bSB4K1+4rqc8YLfj7710UKLQ9crTQC+AXtgLmp
+    - SCDT: eJyFks1Og0AUhbkjUEhMxNiNmuosmrgF/NnVpOnCuNXEdDdBOgopPw1D0vCgPo6Jd5iR0trG1QTmfuccDtcCYRqEBjaYLhVHBp1MaGhBPpoGbw9sOkt4vLwL2QsXdVnx1xXnCyZiAZK59IZqKosTnjftLF5agDqE+mNwoS+LHkDpfOTRXHGzKIs1e4+cnPE1HLqg8BvELYXjlSV18ST6lDH8Y7BXWdTwCvXHdP7t0fL8ufisMGmRVnXykTVM1FG2FMwP6GMHBh3oAFwrcKjBnEeLcs2qhm8zmKtnZ18p6ixVVBWtGX8vi0ZDNhCHIqcFyJbpl7cPA2MAoM1u3bYCGysgbQUoaHaCvRzkQuU4+RXkIi02wXd9d8fAkEbSatBZyZ/ltlbyoQcfrhYMp8eEPWZvq+2X/tuGykU2ufSC4Pl0+meL8D2KHthLKQXwA3TQsVg=
     - SCTX:
         - Begin A1V6_AAdd42_RestoreSpeed_60
         - ""
@@ -6683,7 +6614,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -6699,7 +6629,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 633
+        data_size: 603
         var_table_size: 35
     - SCVR:
         - in
@@ -6707,7 +6637,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx9kk1Lw0AQhjPbbm3AQ4QehFZcUPCaxI9bhdKDeFWQ3pY0XZviJim7KTU/1J8jOJuNaYqtp2F35nnfndmhoLsOYUEPui7THYeNxyykkA4nwdsDn0wTEX/c3fIXoYtciddCcR1rMMTQG9gaGSciLatKTFJAFcL8a3ChLYoOwNjswmOp5aaRjGv2HjlT49dw6ILFR4hTi2OKGl2MpI7mGf4p9NYyKoVC/Rs2+/ZYPlplSyUWHJ+ciXeZb4Xia1FEUnM/YI8NGzRsH+DSsoOaXSixWSZ8G33uM2HVVZ/hwdy23MmVVTh/tgpJrjIuV7Lk842c71TInvOXd7QeHLcaAsUhkGaGbmVtDi2NfzsG5wSgVXywxV+zzs6s/gyMh3+sWhzclaezP1mk0PPIhhgjgB9dVJoD
+    - SCDT: eJx9ks9LwzAUx/viMlfwUGEHoYoBBa9t/XGbMHYQrwqyW+i6uA7TdiQds3+of47gS1O7Dt1OjyTfz/eb9xIKuucQFvah5zJ95LDRiEUUMn8cvj3w8SQVycfdLX8RuiyUeC0V14kGQ/je0GpkkoqsqpV4SAFdCAuuwYWuKSYAY9MLj2WWm8Qyadh75IwmaODIBYv7iFOL4xE1vlhJU801ghPor2RcCYX+N2z67bHifJkvlJhzvHIu3mWxEYqvRBlLzYOQPbZs2LIDgEvLDht2rsR6kfJN/LnLRHVXA4YLs9tJJ1fW4ezZOqSFyrlcyorP1nK2dSE7yV/eXj04bj0EikMg7QzdOtosOh4HOwbnGKAj/rfF3zCyDWseA+vT6Z8Xw3103fMHjBXAD5rZkbI=
     - SCTX:
         - Begin A1V6_AAdd43_RestoreStr_45
         - ""
@@ -6761,7 +6691,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -6777,7 +6706,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1014
+        data_size: 984
         var_table_size: 35
     - SCVR:
         - in
@@ -6785,7 +6714,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFk09PwkAQxTuFVho9YMLBBI2baOK1LeANE8LBeNXEcNuUstKGbYv9E+SD+nFM3O2uZQsFT5tm5/fevpmOAVlb05FjQttCWUtD4zFyDYj6E+f9EU+mAfFXwwF+JVmepOQtT3HmZ8CJfrcnaqgfkGhbVrJLA5iKjux7sEAVZQ6A0OymiyLBTT3qS3bEOF5jS9i1QOA2ww2BsyuD67JTlyd/hn0B5pp6W5Iy/Qc0++mi5DqMlylZYPbkmHzQZENSvCa5RzNsO+ipYp2K7QDcCrYn2UVKimWAN95XnXFPMMuELvDKi0leZwYqcyeYq0OmiMPPgijc0AIlnbnnlvletMbZKoylmwl6BzFQKui1hN/dRg60MwBpN7LKnpus53rZc6bYrhSVl+h/GV6EYpCkMaYh3eJ5Qee77PsvOFoPGrfm5ueVOf9frNKcfygqJ6cLWkfB3Ib4tcHWywcN5bWZ1suHarRj4ywb/P8URPrWLr3cBHY2r0u5tWxRny8PbhnFPI+sJzcC+AXzAv7m
+    - SCDT: eJyFk81Og0AUhblYsEQXmHRhUo2TaOJSoK27mjRdGLeamO4mlI6FdIDKT2of1McxcYYZ6dA/VxPgfufccy9jQN7SdOSa0LJQfqKh4RB5BsTdkfv+iEfjkASLfg+/krxIM/JWZDgPcuBE1+6IGhqEJF5XleyjAUxFR84dWKCKMgdAaHJto1hwY58Gkh0wjtc4EvYsEPgDww2Bs08G12WnLk/ehnMO5pL6a5Ix/Xs0+bFRehUl84zMMGs5IR80XZEML0nh0xw7LnqqWbdm2wA3gu1IdpaRch7ilf/VZLwjzDylM7zwE1I0mZ7K3Armcpcpk+izJArXt0BJZ2655YEfL3G+iBLpZoLeRgyUCnoj4be9lwPtFEDaDaxq5iabuV7NnCm2akWlE/0vw4tQDNMswTSiazwt6XSTfbuDg/WgcWtuflab8//Fqsz5g6JydLugtRXM2xO/sdhmeW9PeWOnzfK+Gu3QOqsB/78FkV7fpJc3gZ3PFzvXhb1nqgcuIJcC+AVby/aV
     - SCTX:
         - Begin A1V6_AAdd43_RestoreStr_60
         - ""
@@ -6859,7 +6788,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -6875,7 +6803,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 789
+        data_size: 759
         var_table_size: 35
     - SCVR:
         - in
@@ -6883,7 +6811,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFkk9Pg0AQxZktUEg8YFJPatyDB4+A1VtNmh68e1BvZMWNRRcxC4nhg/pxTJz9E7pVak8TMvN7b/YxAbS+R2gWgh/TduLRxYLmAdQny+z+uliu1rx8m8+LO952jeQPlRBFW7agkONkZoZEueZ1r0exGQDKEJqeQwyuKloApY+nCa0Nt2KitOwVcmomtXAeg8EvEA8Mjq1A6WIltqo10gMIPwTruTT63wltjqr3F8mfUVRWT8UrF6Iv0ozeDFA2QNH/UO5AuJTjFZ4ZbDZgrMMEJPu0ViGQiCJoFciW7VcyyoE3BbB2l7FOIMQEiE4AFf1B0dmE/Nqkk6xmhWyabvPoXe5bs+ApS2U6HUzVX4u1qfpwFMYzBi9y5vN987l+8P5UzFaTzVb2TrCOH5M+arzj28M/XaTQc8fxKiOAHyy9vFY=
+    - SCDT: eJyFkk9PhDAQxZkKLCQeMFlPauzBxCvg6m1NNnvw7kG9NRUbFy1iConhg/pxTJzShu3+P02g83tv+joBNL5HaBaCH9PmyKPTKc0DqM5n2dMdm80XovicTNijaNpaiedSStYUDWjkLBmbJlksRNX1rXgYAMoQml5BDK4qWgClLxcJrQw357Kw7C1yuie1cB6Dwa8RDwyOR4HWxUps1WOkxxB+S94JZfT/Elqfll/vSryhqCpf2YeQsmNpRu8HKBugaD+UOxAO5XiFlwYbDxhvMQHFf6xVCCSiCFoFsmL7m2zlwBsBWLubuE8gxARInwAq+oOiMwlZm6RVvOJM1XW7vPQu95Ve8LSlNh0NpvrV4t5UfzgK2zMGL3L680P9eX/hw6mYqchyKrsnWB9ONpYJ/6PqjvXUUgD/Y7G0BQ==
     - SCTX:
         - Begin A1V6_AAdd44_RestoreWill_60
         - ""
@@ -6949,7 +6877,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -6965,14 +6892,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 468
+        data_size: 438
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kc1qwkAUhXPyVwJdTMGNlNK78AESqd1ZCC5K14XibkjjUEMnJmRKwQf1cQTvZIIo6moW9/vOzLkTwQSeT1mMMCHjezSf0zRCPc6zr1eZL9aq/H2Zyc9WaZ1/G2lKA8s/ipEjdLlW9bbneBiBM3xKJ0hwGsn5IFo+Caqdtyh0Obgz9iyTDvI0gdMF66HTeRTaXD7t9ek94lYXW9XFiJ5puRfUjKrNT6dW8r+pVtIU+s/INKO3MzaYOHb84Vitm66om06attqoC2EnrobCOyFuR8EbXpslfZ2A6+BYxzbl8/o6+rL8De8PF1O27oAb67cXAQf9qnNC
+    - SCDT: eJx1kMFqwkAURXNjkhIoNAU3Ukrfwg9IpHZnIbgoXQvibohx0ODEhIwIfqifI/jGCaKoq4F559yZ+3zojuNSEsALSbsOjUY08FH20mT6I9LxSubr76GY1FKpdK6FzjUM/xF1LaHylSz3Z46HPjjDpbiPENeRnA+i2WdEpfXGmcpbd8ieYeJWHoSw+hvrntV55JlcPs3z8SuCWmV72QTwv2h2jKjqFptlIxdiVxULoTO11SJO6PeG7fQt2/u3rFJVk5VVI3RdbOSdcIgehsK5Ip5HwWl/m4TnOi7XwaWOacrn3/vdOvj+BXiyYBMFnADGu2rx
     - SCTX:
         - Begin A1V6_AAdd45_SpellAbs_30
         - ""
@@ -7011,7 +6938,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7027,7 +6953,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 798
+        data_size: 768
         var_table_size: 35
     - SCVR:
         - in
@@ -7035,7 +6961,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNkkFLw0AQhTPbJm3AQ4QiFBFX6MFjUq23CqUH8SxIb0tMVhvcNCEbhf5Qf47gbHaNiU2gpyHMfO+9nYwNcmgRGjgwdKkcWHS5pHMb0ukqeL5jq/WWR++3C/aUcyFWL5LJSIKaP/cmekJEW57uqzls2oAahPozcKEpifpA6ebCo6nm1qGIDLtATs34Bp67oPFrxG2NY8tWuliJqSqGfwJOLsI9L1D/km6+PZpNkt1bwWP2mSUxk6EoJfMDel8zQc2MD5jXpOAs52Uo2gxGajg5V5o6+3UK01yB8YcsDecAGVNEjQZp+X55PSRYIwBjeeNWO3BwB6TaAWoOa81GGjLTaaaPWlOIrAjTrGAyT3a88fj/IfoBsJS5sh/V9uoPupW9+mjIdO4brHFjfN4x3lp19fBj9qNTDf5SmZvB2n1Y1XXjQT+cHnSRQteeQ1ZGAD9++8An
+    - SCDT: eJyNkkFLw0AQhTNrkzbgIUIRiogrFLwm0XqrEHoQz4L0tsRktcFNE7JR6A/15wjOZteY2AY8DcnO997b2bFBjixCAwdGLpVHFl0uaWhDPouCp1sWrTY8ebtZsMeSCxE9SyYTCar/zJvqDpFseL5r+vDQBtQg1J+DC11J1AdK1+cezTW3ikVi2AVyqsc3cOiCxq8QtzWOR7bSxUpMVTH8Y3BKEe94hfoXdP3l0WKabV8rnrKPIkuZjEUtmR/Qu5YJWmayx7xkFWclr2PRZzBSx8m51NTpj1OclwpM32VtOAfIhCJqNEjP99MbIMEaAxjLa7eZgYMzIM0MUHPUanbSkLlOM3vQmkIUVZwXFZNltuWdy/8NMQyApcyV/bi1Vy/oNvbqoyNzcN5gTTrt4YH23qibi/9nPjoV+U1ldgbr/cneYuF/1B1YVSUF8A1DZbfW
     - SCTX:
         - Begin A1V6_AAdd45_SpellAbs_45
         - ""
@@ -7101,7 +7027,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7117,7 +7042,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 856
+        data_size: 826
         var_table_size: 35
     - SCVR:
         - in
@@ -7125,7 +7050,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk89Kw0AQxjNpkzbgIYJ6sAgr+ABJ1N4qlB7EsyDelrhZ05g/lawgeVAfR3A2uyZrm2IvWcLOb75vZnYcEGPLJqELY4+IkUUWCxI5UJ4vw6c5Xa7WnOU3c/r4mX284qekggmQwMw/USEFW/OyaQPx0gFMYpPgCjwwc6IAEPJ84ZNScau4YJq9RU7GBBqOPFB4gLijcLxyZF48bX1KG8ERuO9F3PBa5f/2yeY0q9KaJzSJeVLHVORZRYOQ3HVQ6IGBuTOF+RoTLC640IQL9pQgpGkpHXbsl7/DgDUB0DJYhixiikXYbRGmWXfLrGB19kLfeJ03h0kPg6b+tdSXDtzeAY6kS2q4sS+Vm7MHlTTdFAmvqOBJyvvebVvYEw3Wr/CkE5bj91ph+TNQxt9hgTU14qN/O35AX5SjUe9IPzY8h19kuxe4CvfHO7dIoeieDZBCAD8oKMcR
+    - SCDT: eJyNks1KxDAUhXvjtNOCiwrqwkGI4N626uxGGGYhrgVxF2obO7U/I40gfVAfR/CmiW2cH5xNQ5P7nXNucm0QI4vQ0IGRR8WBRWczGtlQnc3DpymbL5Y8KW6m7PEz/3jFT8VEIkACE/9YlZTJkldtV4iHNqAIocEleGBqogFQ+nzu00pxi7hMNHuLnKwJNBx5oPArxG2F45EtdXElepUxgkNw3su45Y3S//bp6iSvs4anLI152sRMFHnNgpDe9VDogYE5E4X5GhNJXHKhCQeISxHStLQOe/bL32DAGgNoG2xDNuFiE6RrwgzrrIUVSZO/sDfeFO1+1ttB0/9a+ssEzpAAn6QXNdKQC5Xm9EGJZqsy5TUTPM34cHfrEXZUg/VrPO6N5fN7nbH82dLG38cCyzXqo39vfI97UYnIkEgPG673RxsTifsou2PGpRTADxzevsA=
     - SCTX:
         - Begin A1V6_AAdd46_SwitfSwim_60
         - ""
@@ -7199,7 +7124,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7215,7 +7139,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 912
+        data_size: 882
         var_table_size: 35
     - SCVR:
         - in
@@ -7223,7 +7147,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFk0FPwjAUx/cGQxY9jMToAU1qYozHbYCeMCEcvHsw3Jo5KlvYGFII4YP6cUx8XevoHINT077/7/X1//os4E3DJF4LmjbhDYMMh8S3IL0eee9PdDSOWDjvP9M3xsdZSnnIQai7zqWMJ2HE0l2uwqAFmMEk7j3YoCfE7EDI5NYhqeTGQRIqdoCc0LgK9m2Q+CPilsQxZIm8uJpqFWW4F9BaJsGOrTD/HZn8OCS7ihezFZvSeTDLNuuYRvGUUdcjLwXlFVQb4EFSXUXxRbbdZsknXbJkTTeL+GvDNNQ/gX6wYFWD9nS0K1FHoQWm6ftH9EWFmn6QO94muBGnmjPmjaQ7ig54RHdBujfFLJny7VSFYNh5S86xJWbRUTu/TGw0uMZ/MNoa4GvAMevLVK+G+u96meprVMVwMM4ADgiKQv5e3ti/XP1TXA9/5nyecIReO5UoUnhfzfCIiwB+AaN06Ak=
+    - SCDT: eJyFk8FPwjAUxvcqQxY9jMToAU1qYvS6DdATJoSDdw+GWzNHZQsbQwoh/KH+OSa+rnUU5+DUtO/7fXv9XmeDaFiE+k1oOFScWHQwoIEN2dXQf3tkw1HMo1nvib1yMcozJiIBUt1xL1Q9jWKebQsVFm1AB0K9O3DANER3oHR849JMcaMwjTTbR05qPA0HDij8AXFb4ViypS+uRK+yDe8cmos03PIl+t/S8bdL88tkPl3yCZuF03y9SlicTDjzfPpcUn5JtQDuFdXRlJjnm02efrAFT1dsPU8+19xAgyPoOw+XNWjXRDsKdTVaYoa+d0Bfdmjo+0XiLYobeWokQ64V3dZ0KGK2DbNdKGQvlC+3KgTLKUZyhiMh5USd4mNyY8A1+YPVMoDAAA5Fv091a6i/qe9TPYOqBA7WKcA/grKR35uT3c31O8X1pV15zHiOjjW/h7QC+AG6o9+4
     - SCTX:
         - Begin A1V6_AAdd47_ResCom_45
         - ""
@@ -7289,7 +7213,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7305,7 +7228,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1232
+        data_size: 1202
         var_table_size: 35
     - SCVR:
         - in
@@ -7313,7 +7236,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyVlE1Lw0AQhjOxiQ0ITUEUrMIK4jlJv04VSw/ePUhvS0zXJjQfNWkp/aH+HMHd7DbdtE2KpyXM+8w7zExGg6yhqMjWoWGg7EJBoxFyNIhux/bHAI8nPvEWvSF+J9kkiXDmZcDUHfOax0PPJ9E2V9GgBjSDiqwnMEBOSLMDQtMHE0Wcm7ihJ9g+5ZjGErBjAMdfKa5xnIY0lpe+qnhZGdYV6MvQ3ZKU5n9E018TJTdBPE/JDC/cebJeBdgPZgRbNnopKLugmgDPnOoIKouTzSYJv/CShCu8joPvNZFQ5wz6Sdy0Au3KaIejpkALTNL3avRFhZK+b4DUDf2OEy1BLKlDKNqgg9pElBGwWmrJj3mIgHIJIEwGRj6ZJp2Mmk/GqvFMSRbE//PcIbLnkHkyV33vSnerSCdVoN7zCtoinZv5eOtG+/Ef+h4LQdnZtQo7tr1Gbsc+JLxi10BpSoAjAXVrVqa6FdThhpWpnkQdLVdZ2j8hLUoqSwfntqN2krybF/tuiv+cvqePQX6P6Al6ax9FKUXtKo4PMwL4A4jeMHU=
+    - SCDT: eJyVlM1Og0AUhbkoCIlJaWI0sZqMiXEN9G9VTdOFexemuwnSsZDyU6FN0wf1cUycYaZ0aIXG1QTmfOfc3HtBg/xcUZGjw7mJ8jMFjUbI1SC+GTvvAzyeBMRf9Ib4jeSTNMa5nwNTd6wrfh/5AYm3hYpeakAdVGQ/ggmyIXUHhKb3Foo5N/EiX7B9yjGNLWDXBI6/UFzjOL3SmC89VXGyMuxL0JeRtyUZ9X9A0x8LpddhMs/IDC+8ebpehTgIZwTbDnouKaekDIAnTnUElSfpZpNGn3hJohVeJ+HXmkioewL9IF5Wg3ZltMNRS6AlJul7DfqyQknfN0Hqhn7LiZYgljQhEm3QQTUQZQSsVlrybR0ioFwAiJCBWUzGoJNRi8nYDZkZycPkf5k7RM4cskyWqu9T6W6VdlIF6h2voC3svDzAWy/ej/8w91gIyi6uVcax7TWLOPYg4TW7BoohAa4ENK1ZlerWUIcbVqV6EnW0XFVp/w9pWVJVOji1HY2T5N1U990U3zk9X9tHPwP6nhrW/F6YFcAvI28oJA==
     - SCTX:
         - Begin A1V6_AAdd47_ResCom_60
         - ""
@@ -7403,7 +7326,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7419,7 +7341,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 624
+        data_size: 594
         var_table_size: 35
     - SCVR:
         - in
@@ -7427,7 +7349,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx9ksFKw0AQhjPbbm3AQ4TSixVHELwmQcVLhdKDF8/S2xLTpQkmG03SQx/UxxGcza7piq2HMGxmvv/fmR0OzdBjGI1g6GMz8HA+x5hDOV1EL/discxk+nb7IJ7zTdaKJm1AF58HE5Mu0kyWu66IkhxIgGF4DT64eiQOiKuLAEvDLZMitewdcbomtHDsg8FnhHODU4prXYrMRn2N8BRG70WykzXpX+LqK8BqkqtNLddCf0VODkqEET72TNQzY4Abw8ws81pU1VrkSlWpVK3YqvxjKx027roaIx30X8edXRmlaa+U0EAS1Way3vuzX/6fwZFq8PxuAJwGwPr5+Z2tPjgKB7sF7wTAKfq3vR+zwd7MPgTFw6/V7QutyNPZnyxR5H1kO7QRwDcwjJaw
+    - SCDT: eJx9kcFKw0AQhjNrtzbgIULppYojCF6ToOKlQunBi2fpbYnp0gSTjSbpoQ/q4wjOZtd0xbaHZdid+f5/Z4ZDM/AYRkMY+NiceDibYcyhnMyj1wcxX2Qyfb97FC/5OmtFkzagi6fB2KSLNJPltiuiJAcSYBjegA+uHokD4vIywNJwi6RILXtPnK4JLRz7YPAp4dzglOJalyKzUX8jPIPhR5FsZU36V7j8DrAa52pdy5XQp8jJQYkwwqeeiXpmBHBrmAvLvBVVtRK5UlUqVSs2Kv/cSIeNu65GSBf96riza6M06ZUSGkii2kzWO3/2x/8rOFANnt8NgNMAWD8/v7PVF0dhb7fgnQI4RUfb+zVjOzO7CIrP5/+2Re+kfmD/WgrgB9HPjl8=
     - SCTX:
         - Begin A1V6_AAdd48_Light_60
         - ""
@@ -7481,7 +7403,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7497,14 +7418,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 458
+        data_size: 428
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kM1Kw0AUhXPyJwEXI+pCRLkLHyApKrioULpwryDdDeM4GGnSlkw3fdA+TqF3MqH0J13N4n7fuXNuAhsFIRUp4oxsGNBwSIME9d2o+H6Vo3Fp9PT5TX4a+1XO9VRabeH4e3HjiUqXpl61HA8TcEZI+RMy7EdyPogmD4Jq741VpTv3hT3H5J08yOB1wXrsdR7FLpdftz6/RLqo1Mo0KZJHmmwEza//Z3+N+ZW6UT+yNmop84LeD9CIPHrboZbZBbNLVR3Da9GXh2AP6E9B0P2xyNoSEZfAroTrx2//EdqKfPyPq5MpWxfAmaO7RcAWMAVusw==
+    - SCDT: eJx1kM1qwkAUhXNikhIoNKXtopSWu+gDJNIWulAQF+4VxN0wjoMRE5WMGx/UxxG84wTxdzUw9zvfzLkhTMPzKYsQxGR8j1otaoYo3zvZ8E90urlW859/0ddmkC/VXBhlYPmP5NURhcp1uTlwPAzBDp/Sb8Q4VbIfRKPPhEqX68pC1dlfzlkmrcPNGC7+xPHAxXkUWC+f9vn0EdGqkBtdRQi/aLRLaPkyW0wrPRGqkmNRarkWaUbtM7RBDn2rUcPsitm1LC7hbXLLB+8EuG2BV/8xiw8lfC6BYwnbj8/e89US+P4BuLNWqwL2geJmYg==
     - SCTX:
         - Begin A1V6_AAdd49_ResShock_45
         - ""
@@ -7543,7 +7464,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7559,14 +7479,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 456
+        data_size: 426
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kM1Kw0AUhXPyJwEXo+hCpHAXPkBS1F2F0oVvYLsbxulgSydNyNhFH9THEbyTCdJiXM3ift+5c24Gl0QxVTnSglwc0WxG0wz13bx6e5bzxcbo3aNcqk/TLZXdSacdPH8vbgJh9cbUx57jYQbOiKl8QIHTSM4H0WoiqA7eQlk9uE/seaYc5GmBoAvW06DzKPW5/Pr15SXy1qqj6XJkE1p9C2qut/uPzqylbtpuuz84WVb0ckYmFMjbgXzXUtVtc7BGts36DP4SI3GITubjIYiGH1ZFXyHhCvit4NvxO36CviCf/vXqz5StC+Cfk/tFwA9Tj29t
+    - SCDT: eJx1kMFqwkAURXNjkhIoNC3tohThLfoBibTdWRAX/YPqbhjHQcWJCRld+KF+juAbJ4iirgbmnXtm7othO0FIRYIoJRsG1O9TL0b5Pij+f8RgONdq+SVGcq2bkTRLYZWF4z+yV08YNdfl9sjxMAY7Qso/keJcyX4QjbsZlT43lEa12W/OOSZvw70UPv7E8cjHeRQ5L5/u+fwRSW3kVjcJ4i6N9xlVL4vVrNFToaq6Waw2VuQF/V6QHfLkW0tOlJBlXW2MFnU1vYB32Q0dgrP5bQmC9odFeqwQcgWcKrh2fP49X62A7x+AO0t1KuAAj6JnHA==
     - SCTX:
         - Begin A1V6_AAdd4_WaterWalk_15
         - ""
@@ -7605,7 +7525,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7621,7 +7540,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 669
+        data_size: 639
         var_table_size: 35
     - SCVR:
         - in
@@ -7629,7 +7548,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx9ksFOwzAMhutsKVTiUBAc0DTJhz1AOwG3IU078AZstyhkEZuWrlXDDntQHgcJpwml0rqdrMj+/t+OzcEOI4Z5DMME7SDC2QynHIrHef7+IuaLjVa7J7GUX7peSrMTVllw9aP03lcYtdHFsamjJAfSYJhNIIGuJOkD4mqcYuG5hTQqsM/EuZoswNMEPD4hnHucUtzpUmQhujayG4grI4+6Jv0xrn5SLO+2+89ar4Uqq3q7P1iR5fjaEnkCHSYeeSYNjFXS6D8iBnaNBAXa+eYt+52eMBBdAQQbmsFNENMErJmA1IatWqcDhr6Dh6D2oYQsqvJgtKjK9Rnr/mKInKmz5a2t+/eksXWPjkTPLzX9Xx7Qyw/+5cPKKPbvtTkuuqe325MsUeR35o6cEcAvTQuZaw==
+    - SCDT: eJx9kt9KwzAUh3tiUy14UUUvZAwO6AO0Q72bMHbhG7jdhZgFN5aupXEXe1AfR/CkiV1hf65Cm/N9v3OScLBxxLBIIE7RXkQ4HuOIQ/kwKT5exWS61Gr9LGbyWzczadbCKguufpDd+QqjlrrctXW0yYEcDPMnSKGvJD8gzocZlp6bSqMC+0Kcq8kDPErB44+Ec4/TFndeWllYXRv5NSS1kTvdkH+I898Mq9vV5qvRC6GqullttlbkBb51RJFCj0kGnskCY5U0+p9IgF0hQYF2uUXH/mQHDESXACGGZnATJDQBaycgW9zZeh0w9B3cB9unErKsq63Roq4WJ6KPF0PkQl0s72LduadtrPvoKY6cUtv/+QG9nu314cpofb85uFf6T8YTL8WpAP4AnDqRGg==
     - SCTX:
         - Begin A1V6_AAdd4_WaterWalk_30
         - ""
@@ -7691,7 +7610,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7707,7 +7625,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 772
+        data_size: 742
         var_table_size: 35
     - SCVR:
         - in
@@ -7715,7 +7633,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx9ks1Kw0AUhXOnTdqAiygqSClcwYXLpP7sKpQufAPb3TBOB1uaNCFpkD6ojyN4JzPGlCauhjDnO+fcyXWh6DsMIw/6PhY9B6dTnLiQ3Myit2c+m6+V3D7yhdirfCHiLS9kAVo/Ci6NIpZrlRwqHV26QB4MwzvwoWlJ/oC4HAeYGG4uYmnZJ+K0JrTwxAeD3xPuGpyuXO1LJ7OnrhGegZfF4qBy8h/j8jvA9GKz+8jViss0yze7suBhhC81EdXEEODWENeW2H6KRHBZ7vexOqaoUiPJGxkusFwhRax+czxgQyTI0uwo8ys4YcAZANiYB7+a26O5WTU3ufVrt0YDhqbBlXV7l1wkWVpS7yxddUS3i8HRoTp2UMfqv+VXsfqjYdHytuAMG+JJQ9zxrNXA/7+I6dP762M3g8729al2mNb29fzklijK61hXHQTwA2XQtkQ=
+    - SCDT: eJx9kl9LwzAUxXvj2q3gQxUVZAyuIPjazj9vE8Ye/AZubyFmwY21a+kfZB/UjyN408TasXVPoc35nXNuEheKnsMw8qDnY3Hm4GSCYxeS22n0/sKns5WSmyc+F6XK5yLe8EIWoPXD4MooYrlSya7W0aYL5MEwvAcf2pbkD4iLUYCJ4WYilpZ9Jk5rQguPfTD4A+GuwWnL1b60MrvqGuE5eFksdion/xEufgJML9fbz1wtuUyzfL2tCh5G+NoQUUMMAO4McWOJzZdIBJdVWcZqn6JKrSRvaLjAcoUUsfrL8YANkCBLs73M7+CAAacPYGMe/Xpuj+Zm9dzk1mvcWg0YmgbX1u1DcpFkaUW9s3TZEX1cDI4O1bH9Jlbfll/H6o+WxZGzBWfQEo9b4o5jrQc+fSKmD/vvY18GrW8XB8+H/pNjx4PUVgC/Uv2t8w==
     - SCTX:
         - Begin A1V6_AAdd4_WaterWalk_45
         - ""
@@ -7781,7 +7699,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7797,14 +7714,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 471
+        data_size: 441
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kU1LAzEQhnf2SxY8RBAsiDCo10K2UG8VSg/iTTxIbyEbg1tMurLRw/5Qf47gZLNIbbunHOZ53uTNZOCSKMYyh7RAF0e4WOAsAztZli93YrmqtXqfc/Gs3ZNspXDKgccv2XkAjKq17XqMhhlQRIz8FgrYTaR4QFxfMbTBW0mjBndOnmf4IM8KCDojPQ06jVKfS6e/np9C/mFkp9scshtc/zBsJo/bt1a/irppt8JsTCeqL1MJXuL9Pz65DvzFwH9urJNT1Vg9rbp9/JuNxkK0Q42FQTS8uCz6SglVgr9Kvi2dx7+kL0ybeDg7mJJ1AjCyAn8RwC+dF3MP
+    - SCDT: eJx1kM9rwjAUx/tq21EYrIPBhDF4bLsKqeBuDsTD2G3sMLyFNAurmFhp9NA/1D9H8MUU8Qc9BfI+30/yfTHYXhBinkCUog0DHI9xGIPpT/Lfdz6ZlkouRoz/KPstasGttODwp+zBA1qWyjQHjIYxkCJE9gYpnBpJD4iz5wyNz02Flm12RDnHsDY8TMHH7yge+TiNIuel0z3PbiFZadGoOoH4FWe7DKv+1/K/Vn+8rOol13Pd8GKjC85y/Djjey+ef2z59dxYMZCVUYOiucS3WacWghOqSwZB++M8PVQKqRIcK7m2dH7eX62E7m8AOpbsVAB7bB5qvg==
     - SCTX:
         - Begin A1V6_AAdd50_ResPara_30
         - ""
@@ -7843,7 +7760,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7859,7 +7775,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 697
+        data_size: 667
         var_table_size: 35
     - SCVR:
         - in
@@ -7867,7 +7783,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNkkFLw0AQhTNpNxrwEFGwIMqgvRaSQr1VKD2IN/EgvS1JXExx04Rsi+SH+nMEZ7NLGrSBnpYw8703LzMM1NBxMfJg6KMaODif45RBPlpEbw98scxE+jkL+atQL3EVc5Uq0O3XwaVpkGkm8rppoyIDknAxHIMPXUWSB8TVTYC54ZaxTC07I073hBae+mDwMeHM4FRiWpde1756jPAMvFLGtahI/x5XPwEWo+fNRyXeeVZUGy7XsubJTiY8jPCx5SIfOqR3Z8grS27XuYonaZGLSVJb0AP3FIm1InqIqJX4DvpQcE4ArCnl0qk8SuU2qUh02Ip25nFvzTwXVlR9CbEtd7Lch/jrf6gVHG2oLVlrqffgN5b6oyPQ+9eaBEclNV6DvZfdJ72Hl94cHt3a0/m/KlFk23Nk2gjgF54johU=
+    - SCDT: eJyNksFKw0AQhjNrEg14iChYEGWwXgtJod4qlB7Em3iQ3pYkLqa4aUK2RfKgPo7gbHZJgxroaUl2vu+fycQD5ToMYx/cANWRg/M5Tj0oRov49Z4vlrnIPmYRfxHqOakTrjIFuvwqvDAFMstF0bRldOkBKRhGdxBA30h6QFxdh1gYbpnIzLIz4nRNZOFpAAYfE+4ZnK487aWT2VO3EZ2CX8mkETX5x7j6DrEcPW3ea/HG87LecLmWDU93MuVRjA8dFwfQI/1bQ15acrsuVDLJykJM0saCPrATJNZKdBNxp/gKh1BwjgFsKM2lp/JpKtZORVK3k/b6YTemn3MrVZ9CbKudrPZD/M7/rxQcHagjvS5S7yFoI/VDTzD41doJDprUZLF9lt0nnY9nf5ZO70k88BtpFcAP6TqZxA==
     - SCTX:
         - Begin A1V6_AAdd50_ResPara_45
         - ""
@@ -7929,7 +7845,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -7945,7 +7860,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 669
+        data_size: 639
         var_table_size: 35
     - SCVR:
         - in
@@ -7953,7 +7868,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx9ks9qwzAMxiM3zhYYLIUdyv6AYL0OkkJ366DrYW+w9WZM5i6jzlrs9dAH3eMMJscmDe3akzDS7/skSxxsHDEsEohTtL0IJxMccagH0+L1UUxnlSqXY/Emv5V5NgthSwuu/Ca78gW6rFS9bcooyYEkGOZDSKGrSPKAOL/LsPbcTOoysGPiXE0e4FEKHh8Szj1OKe50KbIQXRv5BSRrLbfKkP4tzn8zXPU/vz6MehdmY+1GS5EX+NQCRQodJLn2yGVA1koaHYAE2DkSE2DnWrToT7aPQHQGEExoANd+Qu2zpn0Si1uxjj+79/6DIFbJcqnVg14JreRi1/m++dF6iJy1M+etufv6tDF3j47K4Uc1Q5wc0ov3duJhZxT/X2xzXHRPL/2DLFFkd+SQnBHAH0wgl9c=
+    - SCDT: eJx9kt9qwjAUh3uyplthsAq7kP2BA+520AruzoHzYm+weRdCF9dhOiWZFz7oHkfwpAm1KHoV2pzv+52ThIONI4ZFAnGK9iLC8RiHHOr+pPh4EZNppcrFSHzKP2XezFzY0oIrv89ufYEuK1VvmjLa5EAKhvkTpNA1kh4QZ48Z1p6bSl0GdkScq8kDPEzB4wPCucdpizsvrSysro38GpKVlhtlyP+As22Gy97P77dRX8KsrV1rKfICX1ugSKGDJHceuQnISkmjA5AAu0JiAuxSixb9zw4RiC4BQggN4NpPqH3WtE+yuJV18tnA5/eDrJLlQqtnvRRayfm+88Pwk/UQuWgXzttwd/RpE+4+Opbjg2qGODukl7O9PNwZre+9o4ul/yQ88VScCmAHyqaPhg==
     - SCTX:
         - Begin A1V6_AAdd5_WaterBrf_45
         - ""
@@ -8015,7 +7930,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -8031,7 +7945,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 772
+        data_size: 742
         var_table_size: 35
     - SCVR:
         - in
@@ -8039,7 +7953,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx9kt1Kw0AQhTPbJE1AMAWR4g+s6IU3QhKpdxVqL3wD7d2yxK2RbGzJD9IH9XEEZ7NLmrbGqyXM+c6ZmYwDpW0RGrlg+7QcWHQ6pbED+XgWvTyw2TwVSTZhr7wSxVOxZGVSgpKfBydaIJNU5JtGhkUH0ILQ8AZ86DqiPVC6uAxorrk5l4lhJ8gpTWjg2AeN3yLuaBxLjvLFl5hXtREegbuWfCMK9L+gi5+ArkYfn++FeGNFXZa15CyM6GMLRC3gAVxp4NQA2RfPOUvqqpJil8KOOkHumeaODbcWvJAGcIF4FBkDk53I72AfAWsIYELu/WZoF4cmzdBoZrdmnXxyrfPHxizlSSbFnVwxKfhy2/l+eK8eLBWtwodtuPphfhOuPjouh+sFy+to4462Z7PN1P9uRXcz2HZjTgPfv++nuWE82+fRQRUpjOu5VxUE8AsNl7Sw
+    - SCDT: eJx9kl1LwzAUhnvi2rUg2IHI8AMiCl4JbWXeTZi78B/o7kKomZWmbvQD2Q/15wieNKHLNupVaPM+73vOyXGhGjiExh4MAlodOXQ6pYkLxXgWvz6y2TwTaT5hb7wW5XO5ZFVagZJfhKdaINNMFJtWhpcuoAWh0S0EYDuiPVC6uAppobk5l6lhJ8gpTWTgJACN3yHuahyvXOWLJzGnKiM6Bm8t+UaU6H9JF78hXY0+vz5K8c7KpqoayVkU06cOiDvAB7jWwJkB8m9ecJY2dS3FLoUVWUHeueZODLcWvJQG8ID4FBkDk53In3AfAWcIYEIegrZpD5smbdNoNujMrHxyo/PHxizjaS7FvVwxKfhyW/l+eK8eHBWtwodduHqwoA1XH5bL4XjB8S1tYml7Jtt2/e9UdDVkW41ZDTxfRgf7g//RsGcjlRXAHyobrF8=
     - SCTX:
         - Begin A1V6_AAdd5_WaterBrf_60
         - ""
@@ -8105,7 +8019,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -8121,7 +8034,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 862
+        data_size: 832
         var_table_size: 35
     - SCVR:
         - in
@@ -8129,7 +8042,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk9FKwzAUhnu6tVvBi4pTBFEj+ADtxN1NGLsQwWvZXYhZdMPWlrRz7EF9HMGTJrbBddCrEHK+//9PkuNB0XdcEvvQD0jRc8h0SsYepOez+GVCZ/OV4B8T+iy+1iUrBS14Aar8IhzpgoSvRLqryvDQA5RwSXQLAdiKKA+ELC5DkmpuzhJu2HvkVE1k4HEAGo8Q9zSOR57SxdU1q4oRHYGfJ2wnJOrfkMVPSLKz9ee7FEsqGReS5skmFQWNYvJQU3EAFudfa25kuFKylFGZZaWhfHCHBEGjoPzjmv8OWzlwBgDGDvtR3QyxG7fqxk7tE+1+alReOeXZktG3JNsK2cG+HbT975S/SuA3CfBtalErjXul05w8adFiK0SZb5K8ucD//m2l4PxZDmpL9QOCylJtLIED7wXO0ALGnS68w7XoWL0mlvl0uLb/zGo6cCAej/dOkULTA5OgjAB+AfGDy88=
+    - SCDT: eJyNksFLwzAUxvvi2q3goeIUQdQI3m0n7jZh7CCCZ9ktxCy6YWtL2jn2h/rnCL4ssQuug55Cm/f7vu+9PB/KjkdoEkAnpOWBR0cjOvAhOxsnL0M2nsyl+BiyZ/m1qHglWSlK0OXnUd8UpGIus/WmDC99QAlC4xsIwVVEeaB0ehHRzHATngrL3iOna2ILD0Iw+C3ivsHxyte6eBJ76hjxIQRFytdSof41nf5END9dfL4rOWOKC6lYkS4zWbI4oQ81lYTgcMGV4fqWqxTPOFN5XlkqANKjCFoF7Z/U/HfUyIHXBbB22I/upofdkE03buqAGvcTq/IqmMhnnL2l+UqqFvbNoOt/p/11gmCbAN+mFnXSkEuT5vjJiJYrKatimRbbAf73byoF78+yW1vqDQg3lvrDEdjzXuD1HGDQauAtxmJikW0su3R4Ph7tbCb+R9k9u66lAH4BV+3Dfg==
     - SCTX:
         - Begin A1V6_AAdd6_Levitate_30
         - ""
@@ -8203,7 +8116,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -8219,14 +8131,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 447
+        data_size: 417
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx1kLtqw0AQRXX1CoIUm0cXHKbIB2gNSSoHjIv8QAjuFkUeIpGVHSw3/lB/jsGz0mL8rLaYc+7emQRtFISkU8QZtWFAoxENEzSPY/39ZsaTisu/d/PFlk1btnDok/JDW1bcrDtEhglEDyl/QYbDNIkG0XSgyIdOClt691U8x+ReHmbodSV63Osyil2uvO77/Bbpvy3WvEyRPNN0q2jxUM9/lzwzha1XpqpnbHJNH0doNOjRe4/+LObccGFPyY26FIbgALgQgcC301lXP5L62Nd3m+n9TU/W75aTi3/enU3FugGunNt9BOwA2T5qUQ==
+    - SCDT: eJx1kMuKwkAQRXNjkiEwMJnHbnCoxXxAIqgrBXHhD4i4a2IsTLCjYtz4oX6OYLVpxOeqoevc07faR9VwXEoCeCFVrkO9HrV8lD+DZNJRg2HO2bKrxqxZVVkFg/5GdqiznMv9GZGhD4m7FP8jxLVN1CCaNiOy0mGqM5ttS84wsQ23QtTxD4l7dVxGnvHKaZ6P3xFsdLrnbQD/j6bHiNbfxWqx5blKdbFTeTFnFSfUv0EbzRr9suhsveKSU31PHqJnMjhXwBMFHNsuCc/1XamPS32zmZyjz4f15f4NePGhRgWcAK6sYgA=
     - SCTX:
         - Begin A1V6_AAdd7_Tele_45
         - ""
@@ -8265,7 +8177,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -8281,7 +8192,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 664
+        data_size: 634
         var_table_size: 35
     - SCVR:
         - in
@@ -8289,7 +8200,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFksFKw0AQhjPbbjTgIVVvWplDHyBbUE8VSg++gEhvS0wXE9y00sRDH9THEZxJhhjaSk/LMvP9//y7o6EaBgpNCMMIq0GAsxlONZTXc/P6YOeL3GUfj/bFeWerrAJuvYml6LPclbumhYoaCFeYTCCCvhpJA+JyHKOILlKfCXtPHPckAk8jaPEJ4brFqaRZl04lJ4+RXED46dOd25L+HS5/YtxcFev3rVvZ1Be1zYuVs4nBpw4xEfSgcNxClwK9bdaudKkXJgR1joQJz9amo7/jIxQEZwBiRUE4RkgxVBOD9IadXm8KddtOMRK9Kvuqa98bfN/4sBECNmM73dnxo0eNHV96+LEnagY/la11GPw5yJeZbln2/rXZK1ql59FBlShy/GeP2AjgF0Jeli4=
+    - SCDT: eJyFksFKw0AQhjNrNhrwkKo3rQzoAyQF9VSh9OALiPS2xHQxwU0rTTz0QX0cwZlkiIut9DQkM9//z7+7GpowUJhFEMbYHAU4neJEQ30xy17uzWxe2uL9wTxbZ01TNMCjl4k0XVHaetuNUFMD4QrTW4jBVyNpQFyMExTRee4KYe+I45lU4EkMPX5DuO5xamnWpaqk8hrpKUQfLt/aDelf4+I7wfV5tXrb2KXJXdWaslpak2b4OCBZDB4UjXvoTKDX9crWNnfCRKBOkDDh2Tob6K9kDwXBMYBYURCOEVEM1cUgvXDQ87ZQV/0WI9Fris+2dd7if413ByFgM7bTgx0fetzZ8YeH7zuibvFD2XoH9esgV0b1abRzr/SfNP95KSwF8APys43d
     - SCTX:
         - Begin A1V6_AAdd7_Tele_60
         - ""
@@ -8351,7 +8262,6 @@
         - endif
         - if ( add == 1 )
         - "\tset state to 1"
-        - "\tset A1V6_CalcAlchemy5_sc.in to 2"
         - "\tset A1V6_CalcAlchemy5 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -8367,7 +8277,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 638
+        data_size: 608
         var_table_size: 35
     - SCVR:
         - in
@@ -8375,7 +8285,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFks9OwzAMxuvQjFXiUMSfCxrygQdIc0BchjR24A0Qt6iUaC2kgJpd+qA8DhJOE7qiddvJSu3f99muOdg4YphNIE7QHkU4n6PkUF8usqdbtViWuni/Uw+mWpVrZQsLrvgqPfdpU5S6brsiSnIgAYbiBhIY6pE4ID7PUqw9t8xNEVhJnKsRAZYJeHxGOPc4pbjTpchCdG2IE5h8mbzVjdf/SfHzovpYNfqVRJvqRb1pY1olMrzvoayHpvshOYBkN88U6eG+DnzZtZc4CxK5LZXNzdpuXNk/1+90rBSipBua09Cs31nSGbrHAB+fEKJjgENV8s8m3tiEtVMc/ze0+RilEDvz7nroYB5Pt7KkSk3tuBXXCMAvffmXXQ==
+    - SCDT: eJyFkk1OwzAQhTNuXBqJRRA/G340Cw7geIHYFKl0wQ0QOysEqwk4gOJuclCOg8Q4NmkQabsa2TPfe362Odg4YphNIU7QTiKcz1FyqM8W2eONWixLXbzdqntTrcq1soUFN3yenvi2KUpdt90QNTmQAENxDQkM9UgcEJ8uU6w9t8xNEVhJnJsRAZYJePyCcO5xanGnS5WF6o4hDmH6afJWN17/O8WP0+p91egXEm2qZ/WqjWmVyPCuh7Iemu2G5ACSXZ4Z0sLtDnzZlZc4DhK5LZXNzdpuXNkf1690bBSipAvNKTTr7yzpDN1igI8nhOgAYN+U/LWZbGzCtVMdfxs6QYxSUJCHo3994sh2y29wVgA/Ce2PCw==
     - SCTX:
         - Begin A1V6_AAdd8_Blight_45
         - ""
@@ -8430,7 +8340,6 @@
         - if ( add == 1 )
         - "\tset state to 1"
         - "\tset A1V6_CalcAlchemy2_sc.pin to 200"
-        - "\tset A1V6_CalcAlchemy2_sc.in to 2"
         - "\tset A1V6_CalcAlchemy2 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -8446,7 +8355,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 715
+        data_size: 685
         var_table_size: 35
     - SCVR:
         - in
@@ -8454,7 +8363,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNks9Kw0AQxjNrEg14iPjnIsoIet8tInioUHLwDaS3JSRLG5pGyVqhD+rjCM4kyxpqAz2FMPP7Zr79JgIbBgJVDGGC9ijA6RQnEawvZurtSc+ypSlWzzrbtEbbwgK3XqeuWBdLs952LVSMgHCB8h4SGKqRNCDOb1J0olleF46dEMc90sGTBHr8gfCox6kUsS59hfvyGvIU4o8635qW9G9x/pPi+3nVLFpT6kWbf5lyYz+1VPjiEZXAAIqxhy4dVOambHNtV1XjsBjECRLpJHi68gLf6X4QgmMAN5DssJmYzIjODEmGXnKwi7jrd7nyBoxpdF3RIzV/HnYXGOmGgMfy4MgP5hCSbjD/DDT2PVln4QCjiU9a+Kg4ReXvZydqCjLERylH63yKdH2vZ/+qpEpLjZweLwLwC7fqprI=
+    - SCDT: eJyNks9Kw0AQxjPbbDTgIeKfiygj9AGyRQQPFUoOvoH0toRkaUPTKFkr9EF9HMGZZNmG2kJPyzLz+775dlaCDQOBKoIwRjsKcDrFiYT19Uy9P+tZtjTF6kVnm9ZoW1jg1rvEFetiadbbroWKEggXmI4hhqEaSQPi/D5BJ5rldeHYCXHckzp4EkOPjwmXPU4lybp0CnfyGOkFRJ91vjUt6T/g/DfBj6uqWbSm1Is2/zblxn7pVOGrR1QMAyjCHrpxUJmbss21XVWNwyIQ50ikk2B35QV+ksMgBGcAzpDicJiIwoguDEmGXnIwi3jsZ7n1AYxpdF3RIzW7DPsDHOmGgG3ZWHpjXkLcGfNloHHoyboIJwTtTUY7E7dF5f/P3qrJP8SnlLK8Xf6rE0e2Rz4XWwH8AXd7nmA=
     - SCTX:
         - Begin A1V6_AAdd9_Cure_30
         - ""
@@ -8517,7 +8426,6 @@
         - if ( add == 1 )
         - "\tset state to 1"
         - "\tset A1V6_CalcAlchemy2_sc.pin to 400"
-        - "\tset A1V6_CalcAlchemy2_sc.in to 2"
         - "\tset A1V6_CalcAlchemy2 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -8533,7 +8441,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1284
+        data_size: 1254
         var_table_size: 35
     - SCVR:
         - in
@@ -8541,7 +8449,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNlNtOg0AQhhksWBJNaqx64Wk1Jt4CPSRe1KRpjG9gerdB2LSkFBRamz6oj2PiLGzpUqFyQYDMfPP/mZ0dDZKGohJLh4ZBkgOFDAbE1mDeHlpvfTocTZk7e6KjZcxo4ibAUy9bIhi4UzZfpykY1ABxlZgPYIBcDUsDIePrFhFFR07gCtZGjueYArYNyPAXxLUMx5DG6+JbFW9uwzwC/SNw1izG+jdk/NMi0akfTmLm0UnsfDFvmSyoaZHnHLFypAlwmyFtgfAn8NFUWGRsmXnMmCvBvAdR5FE/DCOXhQu6DP3PJZPYjgGSSZ1k9JmgPYd5sUOTmb+R1EFtEiRFCbVg+btVDoJyCCAEu0bavCY2T02bJzdJ32mSO41mbMXwq5Z6GSZr97j2HvW7TP08PyKGrS50/B8DFaTsob/xoG894CjmVSU/6n3m50JUXflBEK2oEy6mLN6OwK6JqnRQNtLHuTQffCOV5j8lrZTHFJSmlG1L2aUTWkzvSOl7h7OIdWsMl5zfqzMOdU7MyFeEmt9xfv2tfPHs7AjcAA3SNc3KON9huLZeT/5EsSq6qthZ3AjAL0xZO3Y=
+    - SCDT: eJyNlM1Og0AUhblYsCSa1Fh14d9oTNwC/Ulc1KSpiW9gupsgTFpSCgrFpg/q45h4B6Z0qLSyIAOZ+91zcuYyGiQNRSWWDg2DJAcKGQyIrcG8PbTe+nQ4mjJ39kRHacxo4ibASy9bYjNwp2y+ykpwUwPEVWI+gAFyN2wNhIyvW0Q0HTmBK1gbOV5jCtg2IMdfENdyHLc03hdXVazchnkE+kfgrFiM/W/I+KdFolM/nMTMo5PY+WJemiyoaZHnArEKpAlwmyNtgfAn8NFUWGZsmXnMmSvBvAdR5FE/DCOXhQuahv5nyiS2Y4BkUic5fSZoz2Fe7NBk5q8ldVCbBEnRQi1Z/m5Vg6AcAgjBrpGF18Tw1Cw8OSR9KyR3Gs3YkuFbLfUqTNbuce096ne5+nlxRAyjLiX+j4EdpOyhv/agbzzgKBZdJT/qfe7nQnRd+kEQLakTLqYs3ozAtold5aCspY8LaT74RibNPyqilMcUlKZUbUvVlRNaLu9I5XuHs4x1awyXXN+rMw51TixP6mCTlPj9reLi2boj0ECDdE08kdeTP/vIoe6OW4lLAfwCm20zJA==
     - SCTX:
         - Begin A1V6_AAdd9_Cure_45
         - ""
@@ -8636,7 +8544,6 @@
         - if ( add == 1 )
         - "\tset state to 1"
         - "\tset A1V6_CalcAlchemy2_sc.pin to 400"
-        - "\tset A1V6_CalcAlchemy2_sc.in to 2"
         - "\tset A1V6_CalcAlchemy2 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -8652,7 +8559,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1729
+        data_size: 1699
         var_table_size: 35
     - SCVR:
         - in
@@ -8660,7 +8567,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJylld9Oo0AUxjlYsCSb3W7W3c1m/TMaE28Ba40Xmphe+AbGxIsJwsSSUlAoNj6oj2Pimc5AB4SWxAsCZL7fOR/nHGYMyHqaThwTehbJtjRyeUlcA2Y7187tiF6PJ8yfXtBxnjKa+Rlw6f+BXIz8CZu9LiW4aADiOrGPwQI1GoYGQu72BkQGHXuRL1kXOa6xJexaIPB7xA2B45LB4+Jdl3duw/4G5lPkvbIU4++Tu/cBSX6F8WPKAvqYei8syLM5tR1yVSJOifQBDgSyIxF+RSGaiquMqzIngtmVzEOUJAEN4zjxWTyneRw+50xhT1X2n2C/S3aWY9EqmYYWKJ9kEqH/LfWBx4LUo9k0LAyaoPcJkjKEXvnAt0EzCNo2gEx4Zi1L3cdS68tSqyU1ayX1J8mULRg+dcrehKm5Rzz3muyHIvufsqEMG1PpzwYDLaTq4bzwYK484OCWURU/+pHw81dGXYRRlCyoF88nLF21sW6iTQ5akfpHmZr/JtYyNX9pKKU61KD1FbWrqBvnuSo/VeRrR7mKDRWsNsVV4VmHKVT1oy5z06W1oqTbjRNltP9/impr066wrgabu1CMSNH9L1ntuhl1tLxhEurWe6vBlXu3U54atQ0et+8eGdp26zo/gPDMufn5aRWjYu9bDhxuBOAD/mW3Lw==
+    - SCDT: eJylld9Oo0AUxjm0YEk2u92suxvjv9GYeAtYa7zQxPTCNzDGmwnCxJJSUCg2PqiPY+KZzkAHpC2JFwTIfL9zPs45MxiQdTWdOCZ0LZJ1NHJ1RVwDpts3zt2Q3ozGzJ9c0lGeMpr5GXDpbl8uRv6YTd8WElw0AHGd2CdggRoNQwMh9/t9IoOOvMiXrIsc19gSdi0Q+APihsBxyeBx8a7LO7dh/wDzOfLeWIrxD8j9R58kf8L4KWUBfUq9Vxbk2YzaDrkuEadEegCHAtmWCL+iEE3FVcZVmVPB7EnmMUqSgIZxnPgsntE8Dl9yprBnKrsj2J+SneZYtEqmgQXKJ5lE6P9KfeCxIPVoNgkLgyboPYKkDKFXPvC93wyCtgUgE55bi1L3sNT6otRqSc1aSf1xMmFzhk+tsjdhau4hz70m+5HI/q9sKMPGVPqzwcAKUvVwUXgwlx5wcMuoih/9WPj5L6POwyhK5tSLZ2OWLttYN7FKDlqR+leZmm8Ta5GavzSUUh1q0HqK2lXUjfNclZ8p8rWjXMUGClab4qrwvMUUqvphm7lp01pR0q3GiTJW7z9F1dl0KqyrweYuFCNSdP9bVtseRi0tb5iEuvXOcnDl2e2Uf43aAY9t7pKBjRvk9veXdeSwuyt+KTwVwCfLPK7d
     - SCTX:
         - Begin A1V6_AAdd9_Cure_60
         - ""
@@ -8777,7 +8684,6 @@
         - if ( add == 1 )
         - "\tset state to 1"
         - "\tset A1V6_CalcAlchemy2_sc.pin to 400"
-        - "\tset A1V6_CalcAlchemy2_sc.in to 2"
         - "\tset A1V6_CalcAlchemy2 to 1"
         - else
         - "\tStartScript A1V6_AlchemyCheck_sc"
@@ -14017,7 +13923,7 @@
         - calcinatorY
         - retortX
         - retortY
-    - SCDT: eJytVU1u00AUnnE8dpykxCVFTRUhzSKL0qpguw11JRcU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/bsMCRYrt733vd96bJ2Gi0KmA6ANqaBIuKLR7odLdXaoT3Km19Vf3e+3x2J7Y3vvpk49eTxeo9mURoyZW4CdhIdb+oTZ9qFAMIO1cractPLXfOXsnxxPntYAIBhan6nS9GVoL3X9XfYJAdSaogxsZMYEBDlZoZ9E3/Mh2+223/8YZnbXCoGclEDLBo6UZvDftT0vgQWuouUI/mTxfxpW+jCt8Gdf5MgJfZcie+tmDDUgX2JcqhEBp949KT5fStdzznFFPD9id5bTw8XBqH7kOOy49rGNDbWRIjt33hh9sz4EAZFwAYhH5Cm4B+YlMCT8ABTdxEYvRIegSxlGwehCswVgsj4SIATUToZo5RciqmiKqmGdCyfxErmwv/ZKdPOaBDDCq0U41TexC7wyEHMEBExRyBIeorHbBFjwOQBMeh8BjbAkt02wg7ZNj1+HCKoU/2tq+a+y0tk16r2YSyGUAuRhmzSz474IVozqgYoD6BhS6qdGBiOgafMrwacAn4Z8lpFIIynexQUFK1xM6JK0TmCgzHYHrrKd0jIyfVmSikvAzq0PSOoGJhYSfdGxbsZ8iKsWGE+LApMLEoY251bgxU42NudWozlRjY83i/eb654KjNyGDhd24S2Ik1ETWHWuenZL5WzxXc2cSo2sHks2VyNq7CbPCZkpCyTFiT4mN33Jwn2K4JAm7T1sgYYOpyxgHrxobLyE1Xs+KNfOClMyfRBq79pkzQbct3pQ8ATGV/j6w5ZT+WylMElmFh/lFINFbIYUNMpgUFetbwmocQ/2/eYiPjmdBZCjcTeoGtd00tS1ty9R2/qmEX+VsURw5v0vy0GR6q5D6Z3keK9/OqhVfxC5JXsiJnuCXNaGujBBrFkVhr8FWSGlpfFkXo2Yr8nV0/VIQgm6E7bGSuSVjGlsQJfMXYQ0thJFxv/wrWvAViECMIhB5eJ2Kb3n/dOLZky6hcK+gDHoAqOKjCzwK1xkdDfuMXJqFGbvsw2q0a4cntnfqW6/kSpjOQsLvcwdAj/FvzKCMW/XR7J4BAeyVhnorjb9wvJfjns5rACPfrfP1yFZdetcyCsZ/AaDFtSU=
+    - SCDT: eJytVU1u00AUnnE8dpymxCVFTRUhzSKL0qpguw11JRcU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/TsMCRYrt733vd96bJ2Gi0ImA6ANqaBIuKLRzqdK9PaoT3K629Ff3u63RyB7b3vvJk49eVxeo9mUJowZW4CdhIdb+oTZ8qFAMIO1CraUtPLXfOfunJ2PntYAIBhan6nSjEVoL3X9XfYJAdSaogRsZMYEBDlZpe8k3/Mh2ey2398YZnjfDoKclEDLBw+UpvDvpTTB40OpqrtBPJs+XMdOXMcOXwXwJM3wZga8FyJ762YMNSBfYVyqEQGnnj0rPltO13PecYVcP2O2VtPDxYGIfuw47Lj2sY12tZ0iO3fMGH2zPgQBkXABiEfkKbgH5iUwIPwAFN3ARi9Eh6BLGUbB6EKzBWCyPhIgBVROhqjlByKqYIiqb50LJ/ERmtpd+xU4e80D6GFVpu5ImdqB3+kKO4JAJCjmCI7SgdsAWPA5BEx5HwGNsCa3QbCCt0xPX4cIKhT/a3Llr7DZ3THqvahLIpQ+5GGbVLPjvghWjOqBigPoGFLql0b6I6Dp8yvBpwCfhnyWkUgjKd7FJQUo3EjokrROYWGA6AtfZSOkYGT/NyEQ54Wdah6R1AhOLCT/p2LZjP0VUig0nxIFJhYlDG3OrcWOqGptzq1GZqsbmusX7zfXPBUdvQgYLu3GPxEioiaw71jw7JfO3eKHmziRG1w4kmyuRtXcDZoXNlISSY8SeEhu/leA+xXBJEnafNkHCBlOXMQ5eNTZeQmq8nhWr5iUpmT+JNHLtc2eMblu8KXkCYir9A2DLKf23UpgksgoP84tAordCCutnMCkq1reE1TiG2n/zEB8dz4LIULib1A1qu2Vq29q2qe3+Uwm/ytmiOHJ+l+ShyfTWIPXP8jxWvp01K76IXZK8kBM9wS9rQl0ZIdYsisJeg62Q0tL4si5GzVbk6+j6pSAE3QjbYzVzS8Y0tiBK5i/CGloII+N++Ve04MsQgRhFIPLw2mXf8sHZ2LPHHULhXkEZ9BBQxUcXeRSuMzwe9Bi5NA0z9oIPq9GuHZza3plvvZwrYTqLCb/PHQA9xr8xhTJuxUezewYEsFfq6q00/sLxXo66Oq8BjHynxtcjW3XpXcsoGP8FEi+1FA==
     - SCTX:
         - Begin A1V6_ApparatusCont_1_sc
         - ""
@@ -14286,7 +14192,7 @@
         - calcinatorY
         - retortX
         - retortY
-    - SCDT: eJytVU1u00AUnnE8dpykxCVFTRUhzSKL0qpguw11JRcU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/bsMCRYrt733vd96bJ2Gi0KmA6ANqaBIuKLR7odLdXaoT3Km19Vf3e+3x2J7Y3vvpk49ezxCo9mURoyZW4CdhIdb+oTZ9qFAMIO1cractPLXfOXsnxxPntYAIBhan6nS9GVoL3X9XfYJAdSaogxsZMYEBDlZoZ9E3/Mh2+223/8YZnbXCoGclEDLBo6UZvDftT0vgQWuouUI/mTxfxpW+jCt8Gdf5MgJfZcie+tmDDUgX2JcqhEBp949KT5fStdzznFHPCNid5bTw8XBqH7kOOy49rGNDbWRIjt33hh9sz4EAZFwAYhH5Cm4B+YlMCT8ABTdxEYvRIegSxlGwehCswVgsj4SIATUToZo5RciqmiKqmGdCyfxErmwv/ZKdPOaBDDCq0U41TexC7wyEHMEBExRyBIeorHbBFjwOQBMeh8BjbAkt02wg7ZNj1+HCKoU/2tq+a+y0tk16r2YSyGUAuRhmzSz474IVozqgYoD6BhS6qdGBiOgafMrwacAn4Z8lpFIIynexQUFK1xM6JK0TmCgzHYHrrKd0jIyfVmSikvAzq0PSOoGJhYSfdGxbsZ8iKsWGE+LApMLEoY251bgxU42NudWozlRjY83i/eb654KjNyGDhd24S2Ik1ETWHWuenZL5WzxXc2cSo2sHks2VyNq7CbPCZkpCyTFiT4mN33Jwn2K4JAm7T1sgYYOpyxgHrxobLyE1Xs+KNfOClMyfRBq79pkzQbct3pQ8ATGV/j6w5ZT+WylMElmFh/lFINFbIYUNMpgUFetbwmocQ/2/eYiPjmdBZCjcTeoGtd00tS1ty9R2/qmEX+VsURw5v0vy0GR6q5D6Z3keK9/OqhVfxC5JXsiJnuCXNaGujBBrFkVhr8FWSGlpfFkXo2Yr8nV0/VIQgm6E7bGSuSVjGlsQJfMXYQ0thJFxv/wrWvAViECMIhB5eJ2Kb3n/dOLZky6hcK+gDHoAqOKjCzwK1xkdDfuMXJqFGbvsw2q0a4cntnfqW6/kSpjOQsLvcwdAj/FvzKCMW/XR7J4BAeyVhnorjb9wvJfjnsFrACPfrfP1yFZdetcyCsZ/AclTtSw=
+    - SCDT: eJytVU1u00AUnnE8dpymxCVFTRUhzSKL0qpguw11JRcU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/TsMCRYrt733vd96bJ2Gi0ImA6ANqaBIuKLRzqdK9PaoT3K629Ff3u63RyB7b3vvJk49e1xCo9mUJowZW4CdhIdb+oTZ8qFAMIO1CraUtPLXfOfunJ2PntYAIBhan6nSjEVoL3X9XfYJAdSaogRsZMYEBDlZpe8k3/Mh2ey2398YZnjfDoKclEDLBw+UpvDvpTTB40OpqrtBPJs+XMdOXMcOXwXwJM3wZga8FyJ762YMNSBfYVyqEQGnnj0rPltO13PecYdcI2O2VtPDxYGIfuw47Lj2sY12tZ0iO3fMGH2zPgQBkXABiEfkKbgH5iUwIPwAFN3ARi9Eh6BLGUbB6EKzBWCyPhIgBVROhqjlByKqYIiqb50LJ/ERmtpd+xU4e80D6GFVpu5ImdqB3+kKO4JAJCjmCI7SgdsAWPA5BEx5HwGNsCa3QbCCt0xPX4cIKhT/a3Llr7DZ3THqvahLIpQ+5GGbVLPjvghWjOqBigPoGFLql0b6I6Dp8yvBpwCfhnyWkUgjKd7FJQUo3EjokrROYWGA6AtfZSOkYGT/NyEQ54Wdah6R1AhOLCT/p2LZjP0VUig0nxIFJhYlDG3OrcWOqGptzq1GZqsbmusX7zfXPBUdvQgYLu3GPxEioiaw71jw7JfO3eKHmziRG1w4kmyuRtXcDZoXNlISSY8SeEhu/leA+xXBJEnafNkHCBlOXMQ5eNTZeQmq8nhWr5iUpmT+JNHLtc2eMblu8KXkCYir9A2DLKf23UpgksgoP84tAordCCutnMCkq1reE1TiG2n/zEB8dz4LIULib1A1qu2Vq29q2qe3+Uwm/ytmiOHJ+l+ShyfTWIPXP8jxWvp01K76IXZK8kBM9wS9rQl0ZIdYsisJeg62Q0tL4si5GzVbk6+j6pSAE3QjbYzVzS8Y0tiBK5i/CGloII+N++Ve04MsQgRhFIPLw2mXf8sHZ2LPHHULhXkEZ9BBQxUcXeRSuMzwe9Bi5NA0z9oIPq9GuHZza3plvvZwrYTqLCb/PHQA9xr8xhTJuxUezewYEsFfq6q00/sLxXo66Bq8BjHynxtcjW3XpXcsoGP8FOr21Gw==
     - SCTX:
         - Begin A1V6_ApparatusCont_2_sc
         - ""
@@ -14555,7 +14461,7 @@
         - calcinatorY
         - retortX
         - retortY
-    - SCDT: eJytVU1u00AUnnE8dpymxCVFTRUhzSKL0qpgOw11JRcU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/bsMCRYrt733vd96bJ2Gi0KmA6ANqaBIuKLR7odLdXaoT3Km29Vf3e+3x2J7Y3vvpk49erylQ7csSRg2swE/CQqz9Q234UKEYQNq5WktbeGq/c/ZOjifOawERDCxO1elGI7QWuv+u+gSB6kxQAzcyYgIDHKzSzpJv+JHt9ttu/40zOmuFQc9KIGSCR8szeG/an5bAg1ZXc4V+Mnm+jCt9GVf4Mq7zZQS+FiB76mcPNiBdYF+qEAKl3T8qPV1O13LPc0a9ZsDurKSFj4dT+8h12HHpYR3raj1Dcuy+N/xgew4EIOMCEIvIV3ALyE9kSvgBKLiBi1iMDkGXMI6C1YNgDcZieSREDKiaCFXNKUJWxRRR2TwTSuYncmV76Zfs5DEPZIBRlXYqaWIXemcg5AgOmKCQIzhEC2oXbMHjADThcQg8xpbQCs0G0j45dh0urFD4o63tu8ZOa9uk96omgVwGkIthVs2C/y5YMaoDKgaob0ChTY0ORETX4VOGTwM+Cf8sIZVCUL6LTQpSupHQIWmdwMQC0xG4zkZKx8j4aUUmygk/szokrROYWEz4Sce2FfspolJsOCEOTCpMHNqYW40bM9XYnFuNykw1Ntct3m+ufy44ehMyWNiNuyRGQk1k3bHm2SmZv8VzNXcmMbp2INlciay9GzArbKYklBwj9pTY+K0E9ymGS5Kw+7QFEjaYuoxx8Kqx8RJS4/WsWDUvSMn8SaSxa585E3Tb4k3JExBT6e8DW07pv5XCJJFVeJhfBBK9FVLYIINJUbG+JazGMdT+m4f46HgWRIbC3aRuUNumqW1pW6a2808l/Cpni+LI+V2ShybTW4PUP8vzWPl21qz4InZJ8kJO9AS/rAl1ZYRYsygKew22QkpL48u6GDVbka+j65eCEHQjbI/VzC0Z09iCKJm/CGtoIYyM++Vf0YIvQwRiFIHIw+uUfcv7pxPPnnQJhXsFZdADQBUfXeRRuM7oaNhn5NIszNgLPqxGu3Z4YnunvvVyroTpLCb8PncA9Bj/xgzKuBUfze4ZEMBeqau30vgLx3s57jV5DWDkuzW+HtmqS+9aRsH4L/HhtTM=
+    - SCDT: eJytVU1u00AUnnE8dpykxCVFTRUhzSKL0qpgOw11pRQU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/TsMCRYrt733vd96bJ2Gi0KmA6ANqaBLOKbR7qdK9PaoT3Km09Vf3e+3x2JpY7vvpk49uryFQ7csyRnWswE/CQqT9Q617UC7vQ9qFWk1aeGq9s/dPTyb2awERDCxO1elmPbAWuP+uegSB6kxQBTcyYgIDHKzRzrJn+JHl9NtO/409Om8GQc9KIGSCRyszeG/an2LwoNXUTKGXTJYvY64vY44vg/kS5vgyfF9FyJ562YMNSBfYVyqEQGn3j0rPVpK13HftUa/hszurSeHj4dQ6dmx2XHpQx5paS5Fsq+8OP1iuDQHIOAfEPPIUnBzyEpkSfgAKruM8FsND0CWMw2B1P1iDsVgeMREDKiZCFXOKUKtsiqhkngsF8xOZ2176FTt5zAMZYFShnXKS2IXeGQgZgkMmyGUIjlBR7YIteByCJjyOgMfYElql6UDapyeOzYVlCn+0uXPX2G3umPRexSSQywByMcyKmfPehVaE6oCKPuoZUGhDowMR0Q34lOHTgE/CPwtIpRCU52KLgpRuxnRIUsc3UWQ6AtfZTOgYKT/N0EQp5mdWhyR1fBNLMT/J2LYjP3lUiAzHxL5JhYkDGwurcWOmGlsLq1GeqcbWRov3m+OdCw7fhBQWdOMeiZBAE7XutBbZKZi/xQs1cyYxunYg2VyJrL3rMCtspiQUHyP2lNj4rfr3KYZLkrD7tAkSNpi6jLH/qrHxEhLj9SxfMS9JwfxJpLFjndsTdLvFm5InICbSPwC2nNB/KwVJolbuYXYRSPiWS2CDFCaFxfoWsxrFUP1vHqKj41kQGQp3kzp+bRumtq1tm9ruP5Xwq5wuii1nd0kWGk9vHVL/LC9iZdtZb0UXsUPiF3KsJ/hlTagjI8SaRVHYq78VEloaX9b5sNnyfB1dvxQEvxthe6ylbsmIxhZEwfxFWEMLQWTcL/8KF3wJIhDDCEQeXqfkWT44m7jWpEso3CsohR4CqnjoEo/CsUfHwz4jF2Zhxi56sBru2uGp5Z551kuZEqazFPP73AbQZfwbMyjjlj00vWdAAHulpt5K4i9s9+W41+A1gJHvVvl6ZKsuuWsZBeO/Y0u1Ig==
     - SCTX:
         - Begin A1V6_ApparatusCont_3_sc
         - ""
@@ -15268,18 +15174,13 @@
     - SCHD:
         name: A1V6_CalcAlchemy2_sc
         vars:
-          shorts: 11
-          longs: 5
-          floats: 2
-        data_size: 2179
-        var_table_size: 121
+          shorts: 10
+          longs: 0
+          floats: 3
+        data_size: 1890
+        var_table_size: 90
     - SCVR:
-        - potions
-        - random25
-        - rrandom100
-        - in
         - pin
-        - temp
         - state
         - calcinator
         - mortar
@@ -15287,33 +15188,28 @@
         - alembic
         - alchemy
         - luck
-        - lk
-        - p_success
-        - tempi
-        - tempf
+        - intelligence
+        - temp
         - exp
-    - SCDT: eJx1VW1rGkEQvj09vTNCTUgbSl8yKflkMNl7zQWSQAilnwptPxS/ydWY1vSM4llo/lP/YqEzs3t61jUQ2Z15nnl23rQh6h4UTQuuriBuCPst9N90YLJ3439NBh+ndzf58Mdo8vT+94wQ0hGItUG+7uwz4jbLhxoSDIqhJzzREIfLiBHiBeEbQrhQ1C24pBgfnjFZE7+MChuCpjhAkKdBASk1kJm6K2NUGpOKMSmNUcWYlsawKYQ+Bh6d6lYLCscCNMEZ5rvDjOsr8KXUj/VLGDrQCj0m1iwX+kedO0tSMkirkRBiLKZhdgLhcEJgQ34Y1FTUe2E5cG9b1quOwcux2mz/NF2Mp4+fHZKxdBfiYy737bLcYVs0Znn2NJo7giP3f3YQnLMI8jbcKbtt7eZCLbPEm01pYaEiOFuvwDqS+4ZRdIvymqWuEdbOFXbpo07lTsXHUBfQRgpNUav4E+V3tD+lFzA65juXGe8twA/ABOGkci9aeOcu5dylnu+Tdp0m0RUNT5vD8rGhZEtPlwXPFh/3qCwgT2UUX/hpmKSkgiYP+n92dcnwcxd8//Q8CmQSxszosZgqKuq1tB6PGD+Sxsqo2GI+/Xf1C1DdT2WMf0nFrkL8r8XDjrc6eWk0BErTeCtpnDMcRF4Tsl7yPrNRNoXNR4c8Fh/bRDqVNJ1wxsF2dLBihyCsSkf2tXlQcI8Uv+Bak8dVe39NG4Cd0w2yuWHo8LidYQA9tVVKwNMxHD5qcb1xrvapXQ8kzYLa8rrVxFbjEnZ5Y2lFIrUiwXJFaFgB+n87MH2ezWbZPFv8KgbfB5PpfJHNB9JHeRpvTxXRNaEnBnQNv3OM4AcjODGDMyM4kio/r6ypMYP5aIHcFbNF3xBb3m/Cbnv+JparHEN3SwqbBJfbIqGr8tAGbF2XszlWQV5WsxniD8v4McNIq0AuVTlwTYTJVkKSGgkPWwlxZCRkWwlle+jsB5zRkaK/qGaU5aPJt/Fwxd1ZjtgmfGKC1+DCjH4wo1MzOjOjzwl9qND7VXQxG89G61ge33cKe7CJXRTjp2wNripE51gulzOk5RTiH1h8nhY=
+        - tempf
+        - delta
+    - SCDT: eJx9lMtv00AQxnft+BUiYVB5idcUtRwIJXbelZpIFUKckIADyi0yeUBC3ERxkMgfj8TMrO0YZd2LtZ79fbMz345ty4oHiSFgMICOLY0XMHruQ3z/OvzWHX9aT69Xk5+zeP/hz4aIwJLIGhA880+YeB+tJinSHCcTT3rSlpBnbGNGfLEFXEFI4iqJLfnxLqtT5ddZYkDTkY9tKTO6ldF99xDsZMFuIdjLgu1C8DILthwp02XTo5UtqpBIARiCRlYRlnmHlcMB1plpwwzHDYzCBSdwhAujU38qApRJlDl0IDKCZS5nDqFOsKZPTKpzdy6FBfgQT33NLueqcfzzerdY33yx6BiRXkfnjH1/m/veqkl7s4r2s60l5wZmHv3yBdeOhxhCHG33edst237N2166zX2iLS666Amo87un+g7YVIe2HWVyveiSxWoLE2FAUNGySlEYKt/RAbRIXSRGr3jkOBg40uCllWbBZY1E7wLyDRqeTP0/XE6NC8A7Tc+1Mc+lI+/lFQ0hqYjMGFpyEpOqNwUTdTWTZj6TpjBxwZXXspHBoErvMhmqSZnneZC6YCvz4oRvifMpnM8NrFB5is8q2cuj1ii8Yx54UxhFitWFb2ACCqqaaQzaagya+RiQBwCjvz6sH0SbTbSNdr+T8Y9xvN7uou04CNEA6qkiKhCGgaujYw1t4velhZdauKeHIy3cCdQXW6E7Z5t1HWxnO9QelBZ1EJR1cEzf0oEO7pd1oIN7aQe07qoWzpT0SbGFCf46FzcR6g9yGq4mnXUsiEsFYUcrWJYL9CdEJQL8v6iGzPxKTpX4YbGfaDWLvy8mB6WduXxMx3q6p6eXerqjpyM93SL6paJPinSyWWxmGvaVYh8ds7tksY/+w5U/Nnubf44t+hyl/AdmqXts
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
-        - short potions
-        - long alchemy
-        - long luck
-        - short random25
-        - short rrandom100
-        - short in
         - short pin
-        - long lk
-        - long p_success
-        - short temp
-        - float tempf
-        - long tempi
         - short state
         - short calcinator
         - short mortar
         - short retort
         - short alembic
         - float exp
+        - float tempf
+        - float delta
+        - short alchemy
+        - short luck
+        - short intelligence
+        - short temp
         - ""
         - if ( state == 5 )
         - "\tif ( ScriptRunning A1V6_ModAlchemyExp == 0 )"
@@ -15323,35 +15219,36 @@
         - endif
         - ""
         - if ( state == 4 )
-        - "\tset potions to 0"
-        - "\tif ( in < 0 )"
+        - "\tif ( alembic < 10 )"
+        - "\t\tset temp to 0"
         - "\t\tset A1V6_AlchemyRes to 2"
         - "\telse"
-        - "\t\tif ( in < 20 )"
+        - "\t\tif ( alembic < 30 )"
         - "\t\t\tset temp to 8"
-        - "\t\telseif ( in < 40 )"
+        - "\t\telseif ( alembic < 50 )"
         - "\t\t\tset temp to 6"
-        - "\t\telseif ( in < 60 )"
+        - "\t\telseif ( alembic < 70 )"
         - "\t\t\tset temp to 4"
-        - "\t\telseif ( in < 80 )"
+        - "\t\telseif ( alembic < 90 )"
         - "\t\t\tset temp to 3"
         - "\t\telse"
         - "\t\t\tset temp to 2"
         - "\t\tendif"
-        - "\t\tset in to ( pin / temp )"
-        - "\t\tif ( in >= 100 )"
-        - "\t\t\tset potions to 1"
-        - "\t\t\tset in to ( in - 100 )"
+        - "\t\tset alembic to ( pin / temp )"
+        - "\t\tset temp to 0"
+        - "\t\tif ( alembic >= 100 )"
+        - "\t\t\tset temp to 1"
+        - "\t\t\tset alembic to ( alembic - 100 )"
         - "\t\tendif"
-        - "\t\tset rrandom100 to ( Random 100 )"
-        - "\t\tif ( rrandom100 < in )"
-        - "\t\t\tset potions to ( potions + 1 )"
+        - "\t\tset alchemy to ( Random 100 )"
+        - "\t\tif ( alchemy < alembic )"
+        - "\t\t\tset temp to ( temp + 1 )"
         - "\t\tendif"
         - "\t\tset A1V6_AlchemyRes to 1"
         - "\t\tset A1V6_ModAlchemyExp.Value to exp"
         - "\t\tStartScript A1V6_ModAlchemyExp"
         - "\tendif"
-        - "\tset A1V6_PotionQ to potions"
+        - "\tset A1V6_PotionQ to temp"
         - "\tset state to 5"
         - "\treturn"
         - endif
@@ -15361,70 +15258,43 @@
         - "\tset alchemy to tempf"
         - "\tset tempf to ( player->GetLuck )"
         - "\tset luck to tempf"
-        - "\tset temp to ( Random 100 )"
-        - "\tset random25 to ( temp / 4 )"
-        - "\tset rrandom100 to ( Random 100 )"
-        - "\tset temp to ( Random 100 )"
-        - ""
-        - "\tif ( luck < 40 )"
-        - "\t\tset lk to ( luck - 40 )"
-        - "\telseif ( luck < 60 )"
-        - "\t\tset tempi to ( luck - 40 )"
-        - "\t\tset lk to ( tempi / 4 )"
-        - "\telse"
-        - "\t\tset tempi to ( luck - 60 )"
-        - "\t\tset tempi to ( tempi / 8 )"
-        - "\t\tset lk to ( 5 + tempi )"
+        - "\tset tempf to ( player->GetIntelligence )"
+        - "\tset intelligence to tempf"
+        - "\tset temp to ( luck + intelligence )"
+        - "\tset temp to ( temp / 10 )"
+        - "\tset alchemy to ( alchemy + temp )"
+        - "\tif ( alchemy < retort )"
+        - "\t\tset retort to alchemy"
         - "\tendif"
-        - ""
-        - "\tset lk to ( lk + alchemy )"
-        - "\tset lk to ( lk + retort )"
-        - ""
-        - "\tif ( lk < -110 )"
-        - "\t\tset p_success to 0"
-        - "\telseif ( lk < 30 )"
-        - "\t\tset lk to ( 30 - lk )"
-        - "\t\tset tempf to lk"
-        - "\t\tset tempf to ( tempf + 0.045918368 )"
-        - "\t\tset tempf to ( GetSquareRoot tempf )"
-        - "\t\tset tempf to ( 11.7420635 - tempf )"
-        - "\t\tset p_success to tempf"
-        - "\telseif ( lk < 100 )"
-        - "\t\tset lk to ( 100 - lk )"
-        - "\t\tset tempf to lk"
-        - "\t\tset tempf to ( tempf * tempf )"
-        - "\t\tset tempf to ( 0.018055556 * tempf )"
-        - "\t\tset tempf to ( 100 - tempf )"
-        - "\t\tset p_success to tempf"
-        - "\telse"
-        - "\t\tset p_success to 100"
-        - "\tendif"
-        - ""
-        - "\tif ( p_success > 100 )"
+        - "\tif ( retort > 100 )"
         - "\t\tset exp to 1"
-        - "\telseif ( p_success <= 0 )"
+        - "\telseif ( retort <= 0 )"
         - "\t\tset exp to 0"
         - "\telse"
-        - "\t\tset exp to p_success"
+        - "\t\tset exp to retort"
         - "\t\tset exp to ( 100.0 / exp )"
         - "\tendif"
-        - "\tif ( p_success > alembic )"
-        - "\t\tset p_success to alembic"
-        - "\tendif"
-        - "\tif ( temp >= p_success )"
-        - "\t\tset in to 0"
-        - "\tendif"
-        - "\tif ( in > 1 )"
-        - "\t\tset tempi to ( lk + random25 )"
-        - "\t\tset in to ( tempi - 32 )"
-        - "\t\tif ( in > mortar )"
-        - "\t\t\tset in to mortar"
+        - "\t\tset temp to ( Random 100 )"
+        - "\t\tif ( temp >= retort )"
+        - "\t\t\tset alembic to 9"
+        - "\t\telse"
+        - "\t\tif ( alchemy > mortar )"
+        - "\t\t\tset alchemy to mortar"
         - "\t\tendif"
-        - "\t\tif ( rrandom100 < calcinator )"
-        - "\t\t\tset in to ( in + 20 )"
+        - "\t\tset calcinator to ( calcinator + alchemy )"
+        - "\t\tif ( calcinator < 30 )"
+        - "\t\t\tset calcinator to 30"
         - "\t\tendif"
-        - "\telse"
-        - "\t\tset in to -1"
+        - "\t\tif ( alembic >= calcinator )"
+        - "\t\t\tset alembic to calcinator - 1"
+        - "\t\tendif"
+        - "\t\tset delta to ( calcinator - alembic )"
+        - "\t\tset tempf to ( Random 100 )"
+        - "\t\tMessageBox \"%d %f\" temp tempf"
+        - "\t\tset tempf to ( tempf / 100 )"
+        - "\t\tset tempf to ( tempf * delta )"
+        - "\t\tset alembic to ( alembic + tempf )"
+        - "\t\tMessageBox \"%d\" alembic"
         - "\tendif"
         - "\tset state to 4"
         - "\treturn"
@@ -15432,77 +15302,71 @@
         - ""
         - if ( state == 0 )
         - "\tif ( GetItemCount apparatus_g_mortar_01 > 0 )"
-        - "\t\tset mortar to 100"
+        - "\t\tset mortar to 110"
         - "\telseif ( GetItemCount apparatus_m_mortar_01 > 0 )"
-        - "\t\tset mortar to 80"
+        - "\t\tset mortar to 90"
         - "\telseif ( GetItemCount apparatus_j_mortar_01 > 0 )"
-        - "\t\tset mortar to 60"
+        - "\t\tset mortar to 70"
         - "\telseif ( GetItemCount apparatus_a_mortar_01 > 0 )"
-        - "\t\tset mortar to 40"
+        - "\t\tset mortar to 50"
         - "\telse"
         - "\t\tset mortar to 0"
         - "\tendif"
         - ""
         - "\tif ( GetItemCount apparatus_g_retort_01 > 0 )"
-        - "\t\tset retort to 5"
+        - "\t\tset retort to 100"
         - "\telseif ( GetItemCount apparatus_m_retort_01 > 0 )"
-        - "\t\tset retort to 0"
+        - "\t\tset retort to 90"
         - "\telseif ( GetItemCount apparatus_j_retort_01 > 0 )"
-        - "\t\tset retort to -5"
+        - "\t\tset retort to 80"
         - "\telseif ( GetItemCount apparatus_a_retort_01 > 0 )"
-        - "\t\tset retort to -10"
+        - "\t\tset retort to 70"
         - "\telse"
-        - "\t\tset retort to -20"
+        - "\t\tset retort to 60"
         - "\tendif"
         - ""
         - "\tif ( GetItemCount apparatus_g_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 82"
+        - "\t\tset calcinator to 20"
         - "\telseif ( GetItemCount apparatus_m_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 68"
+        - "\t\tset calcinator to 15"
         - "\telseif ( GetItemCount apparatus_j_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 54"
+        - "\t\tset calcinator to 10"
         - "\telseif ( GetItemCount apparatus_a_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 40"
+        - "\t\tset calcinator to 5"
         - "\telse"
-        - "\t\tset calcinator to 12"
+        - "\t\tset calcinator to 0"
         - "\tendif"
         - ""
         - "\tif ( GetItemCount apparatus_g_alembic_01 > 0 )"
-        - "\t\tset alembic to 100"
-        - "\telseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
         - "\t\tset alembic to 90"
-        - "\telseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
-        - "\t\tset alembic to 80"
-        - "\telseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
+        - "\telseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
         - "\t\tset alembic to 70"
-        - "\telseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
-        - "\t\tset alembic to 60"
-        - "\telseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
-        - "\t\tset alembic to 60"
-        - "\telse"
+        - "\telseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
         - "\t\tset alembic to 50"
+        - "\telseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
+        - "\t\tset alembic to 30"
+        - "\telseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
+        - "\t\tset alembic to 30"
+        - "\telseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
+        - "\t\tset alembic to 30"
+        - "\telse"
+        - "\t\tset alembic to 10"
         - "\tendif"
         - "\tset state to 3"
         - "\treturn"
         - endif
         - ""
         - End
-        - ""
 - SCPT:
     - SCHD:
         name: A1V6_CalcAlchemy5_sc
         vars:
-          shorts: 10
-          longs: 5
-          floats: 2
-        data_size: 2081
-        var_table_size: 117
+          shorts: 9
+          longs: 0
+          floats: 3
+        data_size: 1780
+        var_table_size: 86
     - SCVR:
-        - quality
-        - random25
-        - rrandom100
-        - in
-        - temp
         - state
         - calcinator
         - mortar
@@ -15510,32 +15374,27 @@
         - alembic
         - alchemy
         - luck
-        - lk
-        - p_success
-        - tempi
-        - tempf
+        - intelligence
+        - temp
         - exp
-    - SCDT: eJx1VG1v2kAMzgUCCUUbrbpO097cqZ+oaC+vDVJbqaqmfZq07cPEN5RRutGFggiT1v+0vzhptu+AdFwqFfns5/Fz9tlpiLoHRcOCiwuIG8J+A4PXHZjuXflfk+HH2c1VPvoxnj68/z0nhHQEYm2Qrzr7jLjO8pGGxMNi5AlPNMTBOmOEeEH4hhAuFHULzinHh6dM1sQv48KGoCmeIMjToEBqpu9unNHKGZScycoZlpzpyhk1hdBm7Amjsu8IU7m3wnLg1raslx1DlHO12f9ptpzM7j87gCqW7k98xI24XjcibIvGPM8exgtHcObBzw6CcxZB3lY45bCtw5jWsVwYHHZuLEm12XhCF0Rwiqfao1gJyR3FLLp5ec1Sx0hCzxX2KkY9zJ1SjKEu5EqhKWqleKLijo6ndANGx3w+ptbguQX4A1ggHJfOhYdnvNUOn86h5/ukXacZcUXD0+5wddlQsqen24K2xeYetQXkiYzivp+GSUoq6PJg8GdXtwx/d8H3T86iQCZhzIwei6mmol5L6/lS6kuiZVZsMZ/+u/oGqO6nMsa/pORXKf7X4jHEU52iNBoCpXFUL5U0ztlq1Ml7zpvGTtkUNpsORSw220Q6kTSdcMrJdnSyokUQViWTY20elMsLzS+41xRx1UZe0gbgy+kHsvnBMODxc4YB9FhAQQtX53DY1OIFN7Fo6pjawkDSLKj9q1tNfGrwoUvTwSsSqRUJ1itCwwow+NuB2bNsPs8W2fJXMfw+nM4Wy2wxlD7K03i7Vg36fdcEnhrBZ2bwnREcm8GZERz2VXluqbyKKhbjJSbY0D36SlQUYcLKihq2sXyVGLoVdWwTXL67hK4qRjvw+VQ1RyrJi3I1I/zsT+4zzLRJ1MSGpPRl3iZMKwlJaiTcVRLiyEjIKgmRVGWR7Qdc0aGiH5QryvLx9NtktOG21K66JvjUBMepNKPvzOjUjM7M6DNCv1Xo/TK6mE/m48fYhLDvFPb5NnZZTB6yR3DVIbJjuV7QkBZUiH8wG5JK
+        - tempf
+        - delta
+    - SCDT: eJx9lN+P0kAQx3cXWigSreY8Y/w1Z+58EM9rgR53CZBcjPHJRH0wvJEKVEF6EIqJ/PEmzsy2pYatL2Q7+/nOj2+n2LLqQCIFDAYQ2FI9h9EzF+IHN/7Xy/HH1fRmOfkxi3fvf6+J8CyJrALvqXvExLtwOUmRYJxMHOlIWx7nGbvIO8TbUmLQEtAHH5N8uMfqVPllliho1+TdAtXxUqlf3weDLNguBHtZsFMIXmfBbk3K9Bg40ljZt6Rp3kgKC/BHPHENt5yryfFPq+18dfvZAqwiUoOCU3biTe5Epynt9TLczTaWjBRmHv10CbapiBLi4PqKr2tl16/4up5e84QNQBwwBi1+dqghtBsuuA5e24JDLfT5Dj/1IamyuoqJMCCoadmgKAxRii5Gcv8SMNrnJeCgV5OKj1aaBY9NEr31yDe4cLTzdRiduFPh0RI0uYHhIKtrYZ7rmryfdzSEpCIyY+jISRR1rwQTLb0lKt8SJSp44M6b/PopvUrT15n04ZzyRJUsD1LnbGXenHAtcTaFs0hhh9rTiMpGJPfYxPwZ88BrTt/gVBRrCVdhAgrqnsmirl6Ddr4G5AHA6I8Lq4fheh1uwu2vZPx9HK8223Az9nw0gGaqiCr4vlc30bGBruDGG+GFEe6Z4dAIB57+hir0ztlm0wSb2Ra1e2WVJvDKJjik/zOBCb4qm8AE99IJ6HypRzjV0sfFESb4Zza/DVG/l9NytanWoSAuFfiBUbAoF5grhCUC/H/RA6n8lZxo8XFxnnA5i7/NJ3ullbl8SMdmumemF2Y6MNOhme4Q/ULTR0U6Wc/XMwP7UrOPDtltMt+F/+DaH4u9zT/HDn2OUv4F+bBtww==
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
-        - short quality
-        - long alchemy
-        - long luck
-        - short random25
-        - short rrandom100
-        - short in
-        - long lk
-        - long p_success
-        - short temp
-        - float tempf
-        - long tempi
         - short state
         - short calcinator
         - short mortar
         - short retort
         - short alembic
         - float exp
+        - float tempf
+        - float delta
+        - short alchemy
+        - short luck
+        - short intelligence
+        - short temp
         - ""
         - if ( state == 5 )
         - "\tif ( ScriptRunning A1V6_ModAlchemyExp == 0 )"
@@ -15545,26 +15404,26 @@
         - endif
         - ""
         - if ( state == 4 )
-        - "\tset quality to 0"
-        - "\tif ( in < 0 )"
+        - "\tset temp to 0"
+        - "\tif ( alembic < 10 )"
         - "\t\tset A1V6_AlchemyRes to 2"
         - "\telse"
-        - "\t\tif ( in < 20 )"
-        - "\t\t\tset quality to 1"
-        - "\t\telseif ( in < 40 )"
-        - "\t\t\tset quality to 2"
-        - "\t\telseif ( in < 60 )"
-        - "\t\t\tset quality to 3"
-        - "\t\telseif ( in < 80 )"
-        - "\t\t\tset quality to 4"
+        - "\t\tif ( alembic < 30 )"
+        - "\t\t\tset temp to 1"
+        - "\t\telseif ( alembic < 50 )"
+        - "\t\t\tset temp to 2"
+        - "\t\telseif ( alembic < 70 )"
+        - "\t\t\tset temp to 3"
+        - "\t\telseif ( alembic < 90 )"
+        - "\t\t\tset temp to 4"
         - "\t\telse"
-        - "\t\t\tset quality to 5"
+        - "\t\t\tset temp to 5"
         - "\t\tendif"
         - "\t\tset A1V6_AlchemyRes to 1"
         - "\t\tset A1V6_ModAlchemyExp.Value to exp"
         - "\t\tStartScript A1V6_ModAlchemyExp"
         - "\tendif"
-        - "\tset A1V6_PotionQ to quality"
+        - "\tset A1V6_PotionQ to temp"
         - "\tset state to 5"
         - "\treturn"
         - endif
@@ -15574,70 +15433,43 @@
         - "\tset alchemy to tempf"
         - "\tset tempf to ( player->GetLuck )"
         - "\tset luck to tempf"
-        - "\tset temp to ( Random 100 )"
-        - "\tset random25 to ( temp / 4 )"
-        - "\tset rrandom100 to ( Random 100 )"
-        - "\tset temp to ( Random 100 )"
-        - ""
-        - "\tif ( luck < 40 )"
-        - "\t\tset lk to ( luck - 40 )"
-        - "\telseif ( luck < 60 )"
-        - "\t\tset tempi to ( luck - 40 )"
-        - "\t\tset lk to ( tempi / 4 )"
-        - "\telse"
-        - "\t\tset tempi to ( luck - 60 )"
-        - "\t\tset tempi to ( tempi / 8 )"
-        - "\t\tset lk to ( 5 + tempi )"
+        - "\tset tempf to ( player->GetIntelligence )"
+        - "\tset intelligence to tempf"
+        - "\tset temp to ( luck + intelligence )"
+        - "\tset temp to ( temp / 10 )"
+        - "\tset alchemy to ( alchemy + temp )"
+        - "\tif ( alchemy < retort )"
+        - "\t\tset retort to alchemy"
         - "\tendif"
-        - ""
-        - "\tset lk to ( lk + alchemy )"
-        - "\tset lk to ( lk + retort )"
-        - ""
-        - "\tif ( lk < -110 )"
-        - "\t\tset p_success to 0"
-        - "\telseif ( lk < 30 )"
-        - "\t\tset lk to ( 30 - lk )"
-        - "\t\tset tempf to lk"
-        - "\t\tset tempf to ( tempf + 0.045918368 )"
-        - "\t\tset tempf to ( GetSquareRoot tempf )"
-        - "\t\tset tempf to ( 11.7420635 - tempf )"
-        - "\t\tset p_success to tempf"
-        - "\telseif ( lk < 100 )"
-        - "\t\tset lk to ( 100 - lk )"
-        - "\t\tset tempf to lk"
-        - "\t\tset tempf to ( tempf * tempf )"
-        - "\t\tset tempf to ( 0.018055556 * tempf )"
-        - "\t\tset tempf to ( 100 - tempf )"
-        - "\t\tset p_success to tempf"
-        - "\telse"
-        - "\t\tset p_success to 100"
-        - "\tendif"
-        - ""
-        - "\tif ( p_success > 100 )"
+        - "\tif ( retort > 100 )"
         - "\t\tset exp to 1"
-        - "\telseif ( p_success <= 0 )"
+        - "\telseif ( retort <= 0 )"
         - "\t\tset exp to 0"
         - "\telse"
-        - "\t\tset exp to p_success"
+        - "\t\tset exp to retort"
         - "\t\tset exp to ( 100.0 / exp )"
         - "\tendif"
-        - "\tif ( p_success > alembic )"
-        - "\t\tset p_success to alembic"
-        - "\tendif"
-        - "\tif ( temp >= p_success )"
-        - "\t\tset in to 0"
-        - "\tendif"
-        - "\tif ( in > 1 )"
-        - "\t\tset tempi to ( lk + random25 )"
-        - "\t\tset in to ( tempi - 32 )"
-        - "\t\tif ( in > mortar )"
-        - "\t\t\tset in to mortar"
+        - "\t\tset temp to ( Random 100 )"
+        - "\t\tif ( temp >= retort )"
+        - "\t\t\tset alembic to 9"
+        - "\t\telse"
+        - "\t\tif ( alchemy > mortar )"
+        - "\t\t\tset alchemy to mortar"
         - "\t\tendif"
-        - "\t\tif ( rrandom100 < calcinator )"
-        - "\t\t\tset in to ( in + 20 )"
+        - "\t\tset calcinator to ( calcinator + alchemy )"
+        - "\t\tif ( calcinator < 30 )"
+        - "\t\t\tset calcinator to 30"
         - "\t\tendif"
-        - "\telse"
-        - "\t\tset in to -1"
+        - "\t\tif ( alembic >= calcinator )"
+        - "\t\t\tset alembic to calcinator - 1"
+        - "\t\tendif"
+        - "\t\tset delta to ( calcinator - alembic )"
+        - "\t\tset tempf to ( Random 100 )"
+        - "\t\tMessageBox \"%d %f\" temp tempf"
+        - "\t\tset tempf to ( tempf / 100 )"
+        - "\t\tset tempf to ( tempf * delta )"
+        - "\t\tset alembic to ( alembic + tempf )"
+        - "\t\tMessageBox \"%d\" alembic"
         - "\tendif"
         - "\tset state to 4"
         - "\treturn"
@@ -15645,55 +15477,55 @@
         - ""
         - if ( state == 0 )
         - "\tif ( GetItemCount apparatus_g_mortar_01 > 0 )"
-        - "\t\tset mortar to 99"
+        - "\t\tset mortar to 110"
         - "\telseif ( GetItemCount apparatus_m_mortar_01 > 0 )"
-        - "\t\tset mortar to 79"
+        - "\t\tset mortar to 90"
         - "\telseif ( GetItemCount apparatus_j_mortar_01 > 0 )"
-        - "\t\tset mortar to 59"
+        - "\t\tset mortar to 70"
         - "\telseif ( GetItemCount apparatus_a_mortar_01 > 0 )"
-        - "\t\tset mortar to 39"
+        - "\t\tset mortar to 50"
         - "\telse"
-        - "\t\tset mortar to -1"
+        - "\t\tset mortar to 0"
         - "\tendif"
         - ""
         - "\tif ( GetItemCount apparatus_g_retort_01 > 0 )"
-        - "\t\tset retort to 5"
+        - "\t\tset retort to 100"
         - "\telseif ( GetItemCount apparatus_m_retort_01 > 0 )"
-        - "\t\tset retort to 0"
+        - "\t\tset retort to 90"
         - "\telseif ( GetItemCount apparatus_j_retort_01 > 0 )"
-        - "\t\tset retort to -5"
+        - "\t\tset retort to 80"
         - "\telseif ( GetItemCount apparatus_a_retort_01 > 0 )"
-        - "\t\tset retort to -10"
+        - "\t\tset retort to 70"
         - "\telse"
-        - "\t\tset retort to -20"
+        - "\t\tset retort to 60"
         - "\tendif"
         - ""
         - "\tif ( GetItemCount apparatus_g_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 82"
+        - "\t\tset calcinator to 20"
         - "\telseif ( GetItemCount apparatus_m_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 68"
+        - "\t\tset calcinator to 15"
         - "\telseif ( GetItemCount apparatus_j_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 54"
+        - "\t\tset calcinator to 10"
         - "\telseif ( GetItemCount apparatus_a_calcinator_01 > 0 )"
-        - "\t\tset calcinator to 40"
+        - "\t\tset calcinator to 5"
         - "\telse"
-        - "\t\tset calcinator to 12"
+        - "\t\tset calcinator to 0"
         - "\tendif"
         - ""
         - "\tif ( GetItemCount apparatus_g_alembic_01 > 0 )"
-        - "\t\tset alembic to 100"
-        - "\telseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
         - "\t\tset alembic to 90"
-        - "\telseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
-        - "\t\tset alembic to 80"
-        - "\telseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
+        - "\telseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
         - "\t\tset alembic to 70"
-        - "\telseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
-        - "\t\tset alembic to 60"
-        - "\telseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
-        - "\t\tset alembic to 60"
-        - "\telse"
+        - "\telseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
         - "\t\tset alembic to 50"
+        - "\telseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
+        - "\t\tset alembic to 30"
+        - "\telseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
+        - "\t\tset alembic to 30"
+        - "\telseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
+        - "\t\tset alembic to 30"
+        - "\telse"
+        - "\t\tset alembic to 10"
         - "\tendif"
         - "\tset state to 3"
         - "\treturn"

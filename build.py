@@ -414,7 +414,6 @@ def gen_add_script(kind, ingrs, level, index):
     s.append('	set state to 1')
     if type(kind.potion) == Potion2:
         s.append('	set A1V6_CalcAlchemy2_sc.pin to ' + str(kind.potion.difficulty))
-    s.append('	set A1V6_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + '_sc.in to 2')
     s.append('	set A1V6_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + ' to 1')
     s.append('else')
     s.append('	StartScript A1V6_AlchemyCheck_sc')
