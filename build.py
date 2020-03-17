@@ -726,9 +726,6 @@ def find_mfr():
                     pass
        
 def gen_potions(icons_set):
-    with open('potions_1_8.esp.yaml', 'r', encoding='utf-8') as f:
-        potions_1_8 = yaml.load(f, Loader=yaml.FullLoader)
-
     with open('potions.esp.yaml', 'r', encoding='utf-8') as f:
         potions = yaml.load(f, Loader=yaml.FullLoader)
     
@@ -745,12 +742,11 @@ def gen_potions(icons_set):
 
     esp_header[0]['TES3'][0]['HEDR']['description'].append('')
     esp_header[0]['TES3'][0]['HEDR']['description'].append('Версия для использования без MagicMarker' if icons_set == 'std' else 'Версия для использования с MagicMarker')
-    esp_header[0]['TES3'][0]['HEDR']['records'] = len(esp_header) + len(potions) + len(potions_1_8) - 1
+    esp_header[0]['TES3'][0]['HEDR']['records'] = len(esp_header) + len(potions) - 1
 
     with open('A1_Alchemy_Potions' + ('_MM' if icons_set == 'mm' else '') + '.esp.yaml', 'w', encoding='utf-8') as esp:
         yaml.dump(esp_header, esp, allow_unicode=True)
         yaml.dump(potions, esp, allow_unicode=True)
-        yaml.dump(potions_1_8, esp, allow_unicode=True)
 
 def run_au3(path):
     command = winreg.QueryValue(HKEY_CLASSES_ROOT, 'AutoIt3XScript\\Shell\\Run\\Command')
