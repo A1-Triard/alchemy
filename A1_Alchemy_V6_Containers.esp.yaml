@@ -3597,7 +3597,7 @@
         value: 0
         is_key: false
     - SCRI: A1V6_RoadBagIngrItem_1_sc
-    - ITEX: "m\\a1_alchemy_sack.dds"
+    - ITEX: "m\\a1_alchemy_ingr.dds"
 - MISC:
     - NAME: A1V6_RoadBagIngrItem_2
     - MODL: "o\\contain_com_sack_02.nif"
@@ -3607,7 +3607,7 @@
         value: 0
         is_key: false
     - SCRI: A1V6_RoadBagIngrItem_2_sc
-    - ITEX: "m\\a1_alchemy_sack.dds"
+    - ITEX: "m\\a1_alchemy_ingr.dds"
 - MISC:
     - NAME: A1V6_RoadBagIngrItem_3
     - MODL: "o\\contain_com_sack_02.nif"
@@ -3617,7 +3617,7 @@
         value: 0
         is_key: false
     - SCRI: A1V6_RoadBagIngrItem_3_sc
-    - ITEX: "m\\a1_alchemy_sack.dds"
+    - ITEX: "m\\a1_alchemy_ingr.dds"
 - MISC:
     - NAME: A1V6_RoadBagMiscItem_1
     - MODL: "o\\contain_com_sack_02.nif"
