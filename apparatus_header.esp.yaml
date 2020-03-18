@@ -1936,8 +1936,10 @@
         - "\tset temp to ( luck + intelligence )"
         - "\tset temp to ( temp / 10 )"
         - "\tset alchemy to ( alchemy + temp )"
-        - "\tif ( alchemy < retort )"
+        - "\tif ( alchemy <= retort )"
         - "\t\tset retort to alchemy"
+        - "\telseif ( GetJournalIndex A1_AlchRetort < 10 )"
+        - "\t\tJournal A1_AlchRetort 10"
         - "\tendif"
         - "\tif ( retort > 100 )"
         - "\t\tset exp to 1"
@@ -3292,3 +3294,18 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - ITEX: "n\\tx_bittergreen_petal_01.dds"
+- DIAL:
+    - NAME: A1_AlchRetort
+    - DATA: Journal
+- INFO:
+    - INAM: "2091323223566931083"
+    - PNAM: ""
+    - NNAM: ""
+    - DATA:
+        dialog_type: Journal
+        disp_index: 10
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - NAME: "Сегодня я понял, что мне нужна реторта."

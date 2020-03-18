@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования с EVA.esp
-        records: 591
+        records: 593
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -21647,7 +21647,7 @@
           shorts: 9
           longs: 0
           floats: 3
-        data_size: 1752
+        data_size: 1802
         var_table_size: 86
     - SCVR:
         - state
@@ -21662,7 +21662,7 @@
         - exp
         - tempf
         - delta
-    - SCDT: eJx9lNuP0kAUxmcGWigStzHrGuPtrNn4sGTdFuiymwDJxhifTNQHwxsZ2aIgXRqKifzxJp5zeqGGqS9k5szvO5dvptiy7kAiBYxGENhSvYTJCxeiR7f+16vpx/Xd7Wr2I4x273/HRHiWRFaB99w9ZuKdXs0yJJgmM0c60pYnRcY+8g7xtpQYtAQMwcckH45YnSm/hImCbkM+LFE9L5P6zX0wyIPdUnCQB3ul4E0e7DekzJaBI42VfUua5p1LYQH+iGeu4ZRztTn+ab1drO8/W4BVRGZQcMZOnBdO9NrSjld6F24sOVeYefLTJdimIkqIg+NrPm5UHb/h42Z2zBO2AHHAGHR471BDaDdcch08tgWHOujzA94NIamzuo6JMCCoadmiKIxRii7O5f4SMDrkR8BBryEVL60sCy7bJHrrkW9w6aTON2Fy6t4Jjx5BmxsYj/K6Fua5acijoqMxJDWRG0NLTqKoeyWY6KSvRBWvRIkaLrjzNl8/pVdZ+iaTPlxQnnktz4PUBVtZNMe7FrlJI5BnxR5lcM7ZWqykWIf7Ihv66VV3i6umOQEmf1xYP9ZxrDd6+yuZfp9G681Wb6aej0NS3zVRB9/3miY6MtA1fNVGeGmEB2ZYG+HAS7+TGt0rW2maYBNuUbtX1mkCr2qCQ/o/E5jg66oJTPAgm4DWV+kIZ6n0aXmEGf5hLe416vdyekBdqnUoiCoFfmAULKsF5gq6QoD/IelAqriS01R8Up5Hr8Lo22K2V1q5y4d0ZKYHZnpppgMzrc10j+hXKX1cppN4EYcG9nXKPjlkt8lip//BU38s9rb4HHv0OUr5Fzu3anw=
+    - SCDT: eJx9lFtv00AQhXd9SxwCtVApqrhNUcUDodRO6qaVmkgRQjwhQR9Q3iKTOJAQN1YcJPIf4SehMjO+xFXWvETr2e/M7jm7G0saNiRSQK8HviW15zB85kD0cOB9OR99XE4Gi/H3MNq8/xUT4ZoSWQ3cp84+E++CxThD/FEytqUtLXlQdDxD3ibekhKLpoAr8LDJhz1WZ8rrMNGgXZMPSlTHzaRefVv082K7VOzmxU6peJkXz2pSZkPflsqVPVOq/E6lMAF/xBNHMcu9mlz/tFzPljefTcBVRBaQf8xJvCmS6DSlFS+CTbgy5VTDzsMfDsEWLaIJsTN9wdO1qulXPF3PptlhAxAHrEGLv23aEMYNp7wOTluCSy3MuclfVz1IDJYb2AkrAjM8hOEfByb3Bx7HdB2ul6s1H9xv526xIW5vyaZsUBvoI4K5T+X22AxeIy+6Nanx0MyWxWGTRG9dShpO7fSs6jA8cibCddON4pb7xUZN7HNZk3s4dY899CHRRR4lDbmJRn41wUQrvVdaca80oeOAd97kC0Pttax9nUkPTqjPVM/7IHXC4Reb468G5U8WKOXiG2Xwmrs1WEm1Fu+LYjhLL0e7uBzkE2D414HloyCOg1Ww/pmMvo0izDhYjVwPTdK+dWGA57l1FR0paB3fgRKeK+GuGg6UsO+mL0unc+UoVQ5WfE+2SoMcuFUOdun/OFDBF1UOVHA3c0Dj89TCcSo9LFsY41/c7CZA/VZOF6hNa+0KokqB5ysF82qBeoWgQoD/OqkhrTiSo1R8UPYTLMLo62y8VZp5yrt0pKa7anqupn01HajpDtEvUnq/TCfxLA4V7MuUfbzLrpPZJriDp/mYnG3xHDv0HKX8B0xSeiU=
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -21721,8 +21721,10 @@
         - "\tset temp to ( luck + intelligence )"
         - "\tset temp to ( temp / 10 )"
         - "\tset alchemy to ( alchemy + temp )"
-        - "\tif ( alchemy < retort )"
+        - "\tif ( alchemy <= retort )"
         - "\t\tset retort to alchemy"
+        - "\telseif ( GetJournalIndex A1_AlchRetort < 10 )"
+        - "\t\tJournal A1_AlchRetort 10"
         - "\tendif"
         - "\tif ( retort > 100 )"
         - "\t\tset exp to 1"
@@ -27228,3 +27230,18 @@
     - TEXT:
         - "<DIV ALIGN=\"LEFT\"><FONT COLOR=\"000000\" SIZE=\"3\" FACE=\"Magic Cards\"><BR>Ваш навык алхимии вырос.<BR>"
         - ""
+- DIAL:
+    - NAME: A1_AlchRetort
+    - DATA: Journal
+- INFO:
+    - INAM: "2091323223566931083"
+    - PNAM: ""
+    - NNAM: ""
+    - DATA:
+        dialog_type: Journal
+        disp_index: 10
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - NAME: "Сегодня я понял, что мне нужна реторта."
