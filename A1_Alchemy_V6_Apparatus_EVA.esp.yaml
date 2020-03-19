@@ -22727,7 +22727,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJydlE1v00AQhnft+CMlgIVKUSUQU1RxqNV2N9+VSKSIQ09cekC5RSY1kBDTKE4P+Y/wk1CZ2fVXlE2FuG1mnpnZ991xXP6mDqnFYDCApss5/nAZfICWcHjqMwv6fhns5MFuJdjLg+1K8CoPtjzOs2OzTieXHUDKGWAILh3+lTOHahgeLdYAKcSFAIxS8joYyc/dyWgx/R4nm0/3i7UDSDGXW0/UoOGACrL+nbw7JjAK5+XothrtMR/GJ8EtEwKVYgePrqqHI+arO0kICb5+Xh19E6cOZQm0sJ94HRyq/MdoMc2Y5iSdnvI6d3lYOCob3F0uok28ypSOfwSsGrMo1t+O2RR7HzBVcqS8EBeShAPmIIQzCJUah3JoRs3PpEjDvfEJ/unSvKGbDCB1lE6HHsZjDF/1GMa/A7h9OpKq8U28vlutaZ74FWwHD9jDQ51ndpZeN5S1w6K3i9e58viz4hmGkNZUhlTRUTWx6TVRMhGhXk67WE6b2XjIr66XAYO6va9ICefUB53L+iB1rmwtLqd+vVAmk8Fn2QJeVnaJciHNsfPtluK/jNb7aOlPQbveLlaFbAIY/wng7mW0XEaraH2fTr5NEnQ1Wk2ERI9Ido3VQErhm+jEQNv4LRrhuRHumeHICHeEx22jFc3Hd80kdKUWqBzgkFCxT+gu/YhQE9zfJ9QE94R+Ozp39c6d6tLjqoQpip39jLC+LKc1bdKs3YJkb4HsGAvm+wvME6I9BfhnqQXRUes50cVHVT3RIk6+zKZlpZu7vEsnZrpnpudmumOmIzPdIvqtpg+rdLqcLWMD+06zr3bZdTrbRFu49sdV3tbz71bS/nL+F0CJiPA=
+    - SCDT: eJyNlE1v00AQhnft+CMlgIVKUSUQU1RxqNV2N9+VSKSIQ09cekC5RSY1kBDTKE4P+Y/wk1CZ2fVXlE3htpl5Zmbfd8dx+Zs6pBaDwQCaLuf4w2XwAVrC4anPLOj7ZbCTB7uVYC8PtivBqzzY8jjPjs06nVx2AClngCG4dPhXzhyqYXi0WAOkEBcCMErJ62AkP3cno8X0e5xsPt0v1g4gxVxuPVGDhgMqyPp38u6YwCicl6PbarTHfBifBLdMCFSKHTy6qh6OmK/uJCEk+Pp5dfRNnDqUJdDCfuJ1cKjyH6PFNGOak3R6yuvc5WHhqGxwd7mINvEqUzr+EbBqzKJYfztmU+x9wFTJkfJCXEgSDpiDEM4gVGocyqEZNT+TIg33xif4r0vzhm4ygNRROh16GI8xfNVjGP8O4PbpSKrGN/H6brWmeeJXsB08YA8PdZ7ZWXrdUNYOi94uXufK48+KZxhCWlMZUkVH1cSm10TJRIR6Oe1iOW1m4yG/ul4GDOr2viIlnFMfdC7rg9S5srW4nPr1QplMBp9lC3hZ2SXKhTTHzrdbCqPR7X8YrffR0p+Cdr1drArZBDD+E8Ddy2i5jFbR+j6dfJsk6Gq0mgiJHpHsGquBlMI30YmBtvFbNMJzI9wzw5ER7giP20Yrmo/vmknoSi1QOcAhoWKf0F36EaEmuL9PqAnuCf12dO7qnTvVpcdVCVMUO/sZYX1ZTmvapFm7BcneAtkxFsz3F5gnRHsK8M9SC6Kj1nOii4+qeqJFnHyZTctKN3d5l07MdM9Mz810x0xHZrpF9FtNH1bpdDlbxgb2nWZf7bLrdLaJtnDtj6u8reffraT95fwvRHKI8Q==
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
@@ -22813,7 +22813,7 @@
         - "\tendif"
         - ""
         - "\tif ( alembic < 10 )"
-        - "\t\tset A1V6_AlchemyRes to 3"
+        - "\t\tset A1V6_AlchemyRes to 4"
         - "\t\tset state to 0"
         - "\t\tStopScript A1V6_CalcAlchemy2_sc"
         - "\telse"
@@ -22902,7 +22902,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJydlEFv00AQhXfs2IlDAQuVokpITFHFoVHDboKTVCKVIg49cekB5RYtqQsJMY1i95D/CD8Jldnd2HGUdYW4WOvZ783ue5nYhzDAFBgOh9jxAejFY/gRu9yDtM4cjBrbYpQXe6ViPy/2S8WLvDioA2yWFwGtrsKR+NKbjBbT73Gy/ny/yGoo2kRfPS9vXMeph6RipAXS8tfhod7/JBfTDRNN0ukpBOBDq7AgDsBfLuQ6XnlwC8zD8Y+QlWuOqg12a66qvQuZlhwhPZC3BRKLtIctPMMW3cMnjPaYD7UG0hvZFJZ7O9j9p0vDgWkyxLSmfdaoP1UYxXiM498h3jwdCd34Os7uVpk6j/8Kd4tN9vAQmIQbOD4Jbxjnpned4WXR21P51+EZbT3Rx15i6uod5UotdROHNZEemmiZaXCKaXCYS4v86p5p72zaNzQp8Fz1uS36EHWuYy0up99e6JBVwGfkibc5vtddmlqh9lrqHDcfJ8H/K2gze4roBGBS/1CMiooJcfwnxLuXcrmUK5ndp5Nvk4RSlasJF5SRsu0ymlDBGzY6sdAuDb8Vnlvhvh2WVjjidXCtUXQenzWb0ZUeoO0BNWWUVxndpx8xaoMHVUZtcJ+b306te2bmTo30uGxhSmZnPyXpt3I1ph111r4gqRSIyCqYVwvsJ8gKAX1HjSG1NH5OjPio7Ecu4uTrbLpVennK+3Rip/t2em6nIzst7XRX0W8MfVim0+VsGVvYt4Z9tc9m6Wwtd3CTj6ezDfL/rVDzC/AXlJN4MQ==
+    - SCDT: eJyNlEFv2kAQhXdsbDBNW6tKU0Wq1EkV9RAUugsxEKlEQj3k1EsOFTe0JU4LxQ3C5MB/bH9SlczuYmPEOsnFWs9+b3bfY7APYYApMOz3seUD0IvH8Au2uQdplTkY1TbFKCt2CsVuVuwWiudZsVcFWC/PA1pdhgPxvTMazMa/4mT17W62rKBoEn35urhxFacekoqRFkjL34f7ev+rnI3XTDRKx8cQgA+N3ILYA38+k6t44cENMA+Hv0NWrDmq1tuuuar2KWRacoD0QN4USCzSHjbwBBt0D58w2mM+VGpIb2RTWO7tYPtZl4Y906SPaUX7rFB/qjCK8RCH/0K8fjkQuvFVvLxdLNV5/G+4Xayz+/vAJFzD4VF4zTg3vasML/Lensq/Cq9o64U+9gJTV+8oV2qpmzisjvTQRMNMg5NPg8NcWmRX90x7Z92+pkmBp6rPTd6HqFMda345/fZGh6wCPiFPvMnxs+5S1wq111DnuNk4CW4N+uyJoM3sKaIVgEn9LB8VFRPi8H+It2/lfC4XcnmXjn6OEkpVLkZcUEbKtstoQgWv2ejEQrs0/FZ4aoW7dlha4YhXwbVG0Xp81mxGF3qANgdUlFFeZnSXfsSoDe6VGbXBXW5+O7XumJk7NtLDooUxmZ38kaTfyNWYttRZu4KkVCAiq2BaLrCfIEsE9B01htTS+Dky4oOiHzmLkx+T8UbpZSnv0omd7trpqZ2O7LS0021FfzD0fpFO55N5bGE/GvbdLrtMJyu5hZt8PJ1tkP1vhZpfgAeYfHgy
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -22974,7 +22974,7 @@
         - "\tendif"
         - ""
         - "\tif ( alembic < 10 )"
-        - "\t\tset A1V6_AlchemyRes to 3"
+        - "\t\tset A1V6_AlchemyRes to 4"
         - "\t\tset state to 0"
         - "\t\tStopScript A1V6_CalcAlchemy5_sc"
         - "\telse"
