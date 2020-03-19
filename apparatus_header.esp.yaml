@@ -25,8 +25,8 @@
     - FNAM: s
     - FLTV: 0.0
 - GLOB:
-    - NAME: A1V6_PotionQ
-    - FNAM: s
+    - NAME: A1V6_AlchemyMult
+    - FNAM: f
     - FLTV: 0.0
 - GLOB:
     - NAME: A1V6_AlchemyExp
@@ -1711,87 +1711,71 @@
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
-        - short pin
+        - short Difficulty
         - short state
         - short calcinator
         - short mortar
         - short retort
         - short alembic
-        - float exp
-        - float tempf
-        - float delta
         - short alchemy
-        - short luck
-        - short intelligence
+        - float tempf1
+        - float tempf2
+        - float tempf3
         - short temp
         - ""
-        - if ( state == 5 )
-        - "\tif ( ScriptRunning A1V6_ModAlchemyExp == 0 )"
-        - "\t\tset state to 0"
-        - "\t\tStopScript A1V6_CalcAlchemy2_sc"
-        - "\tendif"
-        - endif
-        - ""
-        - if ( state == 4 )
-        - "\tif ( alembic < 10 )"
-        - "\t\tset temp to 0"
-        - "\t\tset A1V6_AlchemyRes to 2"
+        - if ( state == 2 )
+        - "\tif ( alembic < 30 )"
+        - "\t\tset temp to 8"
+        - "\telseif ( alembic < 50 )"
+        - "\t\tset temp to 6"
+        - "\telseif ( alembic < 70 )"
+        - "\t\tset temp to 4"
+        - "\telseif ( alembic < 90 )"
+        - "\t\tset temp to 3"
         - "\telse"
-        - "\t\tif ( alembic < 30 )"
-        - "\t\t\tset temp to 8"
-        - "\t\telseif ( alembic < 50 )"
-        - "\t\t\tset temp to 6"
-        - "\t\telseif ( alembic < 70 )"
-        - "\t\t\tset temp to 4"
-        - "\t\telseif ( alembic < 90 )"
-        - "\t\t\tset temp to 3"
-        - "\t\telse"
-        - "\t\t\tset temp to 2"
-        - "\t\tendif"
-        - "\t\tset alembic to ( pin / temp )"
-        - "\t\tset temp to 0"
-        - "\t\tif ( alembic >= 100 )"
-        - "\t\t\tset temp to 1"
-        - "\t\t\tset alembic to ( alembic - 100 )"
-        - "\t\tendif"
-        - "\t\tset alchemy to ( Random 100 )"
-        - "\t\tif ( alchemy < alembic )"
-        - "\t\t\tset temp to ( temp + 1 )"
-        - "\t\tendif"
-        - "\t\tset A1V6_AlchemyRes to 1"
-        - "\t\tset A1V6_ModAlchemyExp.Value to exp"
-        - "\t\tStartScript A1V6_ModAlchemyExp"
+        - "\t\tset temp to 2"
         - "\tendif"
-        - "\tset A1V6_PotionQ to temp"
-        - "\tset state to 5"
+        - "\tset alembic to ( Difficulty / temp )"
+        - "\tset tempf1 to alembic"
+        - "\tset tempf2 to ( 100.0 / tempf1 )"
+        - "\tset A1V6_AlchemyMult to tempf2"
+        - "\tif ( alembic >= 100 )"
+        - "\t\tset temp to 5"
+        - "\t\tset alembic to ( alembic - 100 )"
+        - "\telse"
+        - "\t\tset temp to 4"
+        - "\tendif"
+        - "\tset alchemy to ( Random 100 )"
+        - "\tif ( alchemy < alembic )"
+        - "\t\tset temp to ( temp + 1 )"
+        - "\tendif"
+        - "\tset A1V6_AlchemyRes to temp"
+        - "\tset state to 0"
+        - "\tStopScript A1V6_CalcAlchemy2_sc"
         - "\treturn"
         - endif
         - ""
-        - if ( state == 3 )
-        - "\tset tempf to ( player->GetAlchemy )"
-        - "\tset alchemy to tempf"
-        - "\tset tempf to ( player->GetLuck )"
-        - "\tset luck to tempf"
-        - "\tset tempf to ( player->GetIntelligence )"
-        - "\tset intelligence to tempf"
-        - "\tset temp to ( luck + intelligence )"
-        - "\tset temp to ( temp / 10 )"
-        - "\tset alchemy to ( alchemy + temp )"
-        - "\tif ( alchemy < retort )"
+        - if ( state == 1 )
+        - "\tset tempf1 to ( player->GetAlchemy )"
+        - "\tset tempf2 to ( player->GetLuck )"
+        - "\tset tempf3 to ( player->GetIntelligence )"
+        - "\tset tempf1 to ( tempf1 + 0.1 * ( tempf2 + tempf3 ) )"
+        - "\tset alchemy to tempf1"
+        - "\tif ( alchemy < 1 )"
+        - "\t\tset A1V6_AlchemyRes to 3"
+        - "\t\tset state to 0"
+        - "\t\tStopScript A1V6_CalcAlchemy2_sc"
+        - "\t\treturn"
+        - "\tendif"
+        - "\tif ( alchemy <= retort )"
         - "\t\tset retort to alchemy"
+        - "\telseif ( GetJournalIndex A1_AlchRetort < 10 )"
+        - "\t\tJournal A1_AlchRetort 10"
         - "\tendif"
-        - "\tif ( retort > 100 )"
-        - "\t\tset exp to 1"
-        - "\telseif ( retort <= 0 )"
-        - "\t\tset exp to 0"
+        - "\tset temp to ( Random 100 )"
+        - "\tif ( temp >= retort )"
+        - "\t\tset alembic to 9"
         - "\telse"
-        - "\t\tset exp to retort"
-        - "\t\tset exp to ( 100.0 / exp )"
-        - "\tendif"
-        - "\t\tset temp to ( Random 100 )"
-        - "\t\tif ( temp >= retort )"
-        - "\t\t\tset alembic to 9"
-        - "\t\telse"
         - "\t\tif ( alchemy > mortar )"
         - "\t\t\tset alchemy to mortar"
         - "\t\tendif"
@@ -1800,15 +1784,21 @@
         - "\t\t\tset calcinator to 30"
         - "\t\tendif"
         - "\t\tif ( alembic >= calcinator )"
-        - "\t\t\tset alembic to calcinator - 1"
+        - "\t\t\tset alembic to ( calcinator - 1 )"
         - "\t\tendif"
-        - "\t\tset delta to ( calcinator - alembic )"
-        - "\t\tset tempf to ( Random 100 )"
-        - "\t\tset tempf to ( tempf / 100 )"
-        - "\t\tset tempf to ( tempf * delta )"
-        - "\t\tset alembic to ( alembic + tempf )"
+        - "\t\tset tempf2 to ( calcinator - alembic )"
+        - "\t\tset tempf1 to ( Random 100 )"
+        - "\t\tset tempf1 to ( tempf1 * tempf2 / 100.0 )"
+        - "\t\tset alembic to ( alembic + tempf1 )"
         - "\tendif"
-        - "\tset state to 4"
+        - ""
+        - "\tif ( alembic < 10 )"
+        - "\t\tset A1V6_AlchemyRes to 3"
+        - "\t\tset state to 0"
+        - "\t\tStopScript A1V6_CalcAlchemy2_sc"
+        - "\telse"
+        - "\t\tset state to 2"
+        - "\tendif"
         - "\treturn"
         - endif
         - ""
@@ -1822,7 +1812,9 @@
         - "\telseif ( GetItemCount apparatus_a_mortar_01 > 0 )"
         - "\t\tset mortar to 50"
         - "\telse"
-        - "\t\tset mortar to 0"
+        - "\t\tset A1V6_AlchemyRes to 2"
+        - "\t\tStopScript A1V6_CalcAlchemy2_sc"
+        - "\t\treturn"
         - "\tendif"
         - ""
         - "\tif ( GetItemCount apparatus_g_retort_01 > 0 )"
@@ -1864,7 +1856,8 @@
         - "\telse"
         - "\t\tset alembic to 10"
         - "\tendif"
-        - "\tset state to 3"
+        - ""
+        - "\tset state to 1"
         - "\treturn"
         - endif
         - ""
@@ -1886,73 +1879,52 @@
         - short mortar
         - short retort
         - short alembic
-        - float exp
-        - float tempf
-        - float delta
         - short alchemy
-        - short luck
-        - short intelligence
+        - float tempf1
+        - float tempf2
+        - float tempf3
         - short temp
         - ""
-        - if ( state == 5 )
-        - "\tif ( ScriptRunning A1V6_ModAlchemyExp == 0 )"
-        - "\t\tset state to 0"
-        - "\t\tStopScript A1V6_CalcAlchemy5_sc"
-        - "\tendif"
-        - endif
-        - ""
-        - if ( state == 4 )
-        - "\tset temp to 0"
-        - "\tif ( alembic < 10 )"
-        - "\t\tset A1V6_AlchemyRes to 2"
+        - if ( state == 2 )
+        - "\tif ( alembic < 30 )"
+        - "\t\tset temp to 5"
+        - "\telseif ( alembic < 50 )"
+        - "\t\tset temp to 6"
+        - "\telseif ( alembic < 70 )"
+        - "\t\tset temp to 7"
+        - "\telseif ( alembic < 90 )"
+        - "\t\tset temp to 8"
         - "\telse"
-        - "\t\tif ( alembic < 30 )"
-        - "\t\t\tset temp to 1"
-        - "\t\telseif ( alembic < 50 )"
-        - "\t\t\tset temp to 2"
-        - "\t\telseif ( alembic < 70 )"
-        - "\t\t\tset temp to 3"
-        - "\t\telseif ( alembic < 90 )"
-        - "\t\t\tset temp to 4"
-        - "\t\telse"
-        - "\t\t\tset temp to 5"
-        - "\t\tendif"
-        - "\t\tset A1V6_AlchemyRes to 1"
-        - "\t\tset A1V6_ModAlchemyExp.Value to exp"
-        - "\t\tStartScript A1V6_ModAlchemyExp"
+        - "\t\tset temp to 9"
         - "\tendif"
-        - "\tset A1V6_PotionQ to temp"
-        - "\tset state to 5"
+        - "\tset A1V6_AlchemyMult to 1.0"
+        - "\tset A1V6_AlchemyRes to temp"
+        - "\tset state to 0"
+        - "\tStopScript A1V6_CalcAlchemy5_sc"
         - "\treturn"
         - endif
         - ""
-        - if ( state == 3 )
-        - "\tset tempf to ( player->GetAlchemy )"
-        - "\tset alchemy to tempf"
-        - "\tset tempf to ( player->GetLuck )"
-        - "\tset luck to tempf"
-        - "\tset tempf to ( player->GetIntelligence )"
-        - "\tset intelligence to tempf"
-        - "\tset temp to ( luck + intelligence )"
-        - "\tset temp to ( temp / 10 )"
-        - "\tset alchemy to ( alchemy + temp )"
+        - if ( state == 1 )
+        - "\tset tempf1 to ( player->GetAlchemy )"
+        - "\tset tempf2 to ( player->GetLuck )"
+        - "\tset tempf3 to ( player->GetIntelligence )"
+        - "\tset tempf1 to ( tempf1 + 0.1 * ( tempf2 + tempf3 ) )"
+        - "\tset alchemy to tempf1"
+        - "\tif ( alchemy < 1 )"
+        - "\t\tset A1V6_AlchemyRes to 3"
+        - "\t\tset state to 0"
+        - "\t\tStopScript A1V6_CalcAlchemy5_sc"
+        - "\t\treturn"
+        - "\tendif"
         - "\tif ( alchemy <= retort )"
         - "\t\tset retort to alchemy"
         - "\telseif ( GetJournalIndex A1_AlchRetort < 10 )"
         - "\t\tJournal A1_AlchRetort 10"
         - "\tendif"
-        - "\tif ( retort > 100 )"
-        - "\t\tset exp to 1"
-        - "\telseif ( retort <= 0 )"
-        - "\t\tset exp to 0"
+        - "\tset temp to ( Random 100 )"
+        - "\tif ( temp >= retort )"
+        - "\t\tset alembic to 9"
         - "\telse"
-        - "\t\tset exp to retort"
-        - "\t\tset exp to ( 100.0 / exp )"
-        - "\tendif"
-        - "\t\tset temp to ( Random 100 )"
-        - "\t\tif ( temp >= retort )"
-        - "\t\t\tset alembic to 9"
-        - "\t\telse"
         - "\t\tif ( alchemy > mortar )"
         - "\t\t\tset alchemy to mortar"
         - "\t\tendif"
@@ -1961,15 +1933,21 @@
         - "\t\t\tset calcinator to 30"
         - "\t\tendif"
         - "\t\tif ( alembic >= calcinator )"
-        - "\t\t\tset alembic to calcinator - 1"
+        - "\t\t\tset alembic to ( calcinator - 1 )"
         - "\t\tendif"
-        - "\t\tset delta to ( calcinator - alembic )"
-        - "\t\tset tempf to ( Random 100 )"
-        - "\t\tset tempf to ( tempf / 100 )"
-        - "\t\tset tempf to ( tempf * delta )"
-        - "\t\tset alembic to ( alembic + tempf )"
+        - "\t\tset tempf2 to ( calcinator - alembic )"
+        - "\t\tset tempf1 to ( Random 100 )"
+        - "\t\tset tempf1 to ( tempf1 * tempf2 / 100.0 )"
+        - "\t\tset alembic to ( alembic + tempf1 )"
         - "\tendif"
-        - "\tset state to 4"
+        - ""
+        - "\tif ( alembic < 10 )"
+        - "\t\tset A1V6_AlchemyRes to 3"
+        - "\t\tset state to 0"
+        - "\t\tStopScript A1V6_CalcAlchemy5_sc"
+        - "\telse"
+        - "\t\tset state to 2"
+        - "\tendif"
         - "\treturn"
         - endif
         - ""
@@ -1983,7 +1961,9 @@
         - "\telseif ( GetItemCount apparatus_a_mortar_01 > 0 )"
         - "\t\tset mortar to 50"
         - "\telse"
-        - "\t\tset mortar to 0"
+        - "\t\tset A1V6_AlchemyRes to 2"
+        - "\t\tStopScript A1V6_CalcAlchemy5_sc"
+        - "\t\treturn"
         - "\tendif"
         - ""
         - "\tif ( GetItemCount apparatus_g_retort_01 > 0 )"
@@ -2025,7 +2005,8 @@
         - "\telse"
         - "\t\tset alembic to 10"
         - "\tendif"
-        - "\tset state to 3"
+        - ""
+        - "\tset state to 1"
         - "\treturn"
         - endif
         - ""
@@ -2224,29 +2205,28 @@
         vars:
           shorts: 0
           longs: 0
-          floats: 5
-        data_size: 370
-        var_table_size: 32
-    - SCVR:
-        - Value
-        - alch1
-        - alch2
-        - tempf1
-        - tempf2
-    - SCDT: eJxtj09Lw0AQxWdSN6VVdFE8iIrv4kWhJAc9mUpRCR6EnsRbCHVDS7e1JCr25mfzk4TiIfin6EEQenFjixZaBgZm5vcebwRHC1SGWzlAxIQ9wZGgNfgrNffyMKjpRlN1+mcPPRJj0DQYAvuCZxiRX8nm5Y1ZPaoeXMeZo7Lg2FzYhr/uhzoJgpNmGJ+q+6Aeq0R1b+F5OcDGU04r6/ouwVHuuSnHlufdxuRW4iIXl9ju6bCvYpPcIoGrtqS/XUcSPR5PI4UJYrO1CDOhCiMjS5aTdkvrOGwliuQOPaXfeE8Hoxekr1/ZW5ZhMPoYfuJ5iN2KE+VGVOK8tuTqb66Lm+v/b5l/APW+Yu4=
+          floats: 0
+        data_size: 0
+        var_table_size: 0
     - SCTX:
         - Begin A1V6_ModAlchemyExp
         - ""
-        - float Value
-        - float alch1
-        - float alch2
+        - float alchemy
         - float tempf1
         - float tempf2
         - ""
-        - set tempf1 to ( 1.5 * Value )
+        - set alchemy to ( player->GetAlchemy )
+        - set tempf1 to ( player->GetLuck )
+        - set tempf2 to ( player->GetIntelligence )
+        - set tempf1 to ( alchemy + 0.1 * ( tempf1 + tempf2 ) )
+        - if ( tempf1 < 2 )
+        - "\tset tempf1 to 2"
+        - endif
+        - set tempf2 to A1V6_AlchemyMult
+        - set tempf1 to ( 200.0 * tempf2 / tempf1 )
         - set tempf2 to A1V6_AlchemyExp
-        - set tempf1 to ( tempf1 + tempf2 )
-        - set A1V6_AlchemyExp to tempf1
+        - set tempf2 to ( tempf2 + tempf1 )
+        - set A1V6_AlchemyExp to tempf2
         - if ( A1V6_AlchemyExp >= 100 )
         - "\tset A1V6_AlchemyExp to 0"
         - "\tif ( Gals__CharDev_Present == 0 )"
@@ -2254,12 +2234,11 @@
         - "\t\t\tStartScript A1V6_IncAlchemy"
         - "\t\tendif"
         - "\telse"
-        - "\t\tset alch1 to ( player->GetAlchemy )"
         - "\t\tplayer->ModAlchemy 1"
-        - "\t\tset alch2 to ( player->GetAlchemy )"
-        - "\t\tif ( alch2 > alch1 )"
+        - "\t\tset tempf1 to ( player->GetAlchemy )"
+        - "\t\tif ( tempf1 > alchemy )"
         - "\t\t\tPlaySound skillraise"
-        - "\t\t\tMessageBox \"Ваш навык алхимии вырос до %.0f\", alch2"
+        - "\t\t\tMessageBox \"Ваш навык алхимии вырос до %.0f\", tempf1"
         - "\t\tendif"
         - "\tendif"
         - endif
