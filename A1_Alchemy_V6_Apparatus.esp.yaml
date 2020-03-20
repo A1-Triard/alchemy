@@ -15386,12 +15386,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 513
+        data_size: 607
         var_table_size: 17
     - SCVR:
         - OnPCAdd
         - OnPCDrop
-    - SCDT: eJyNkDuqwkAUhs8fcO6dS+COaGdzChdgDNhZRBF1AzLahBTBxkfQCLomt6OV1u5CcDJCxBekG+Z/8J1fwJGsz4rbbfb2ZVAdEgI/ktcg+1mCeTnccCGSWbSLVwJg1lfFy2rgjVphkCTRKko362Eaz8OmDeXmo/poAkkULPSLFPpZYQbuGnAnB3cy8BL6/88RLVj/KU3vytgq4w/KxCoTykGMpfJsCRbTWWxsrrFdXjG7y0UaeiCiQYfInFzj13xvm97ne2x9+Dbf77cCv0iBneukJIAb/RyG6A==
+    - SCDT: eJyNkT2qwkAUhe8JZHzzEN48tLO5hQswBuwsooi6ARltQopg40/QCLomt6OV1u5CcBIkaFRMN8w59/DdcwUsyfqsuN1mZ/8PqkNCoCR5DUo/bZiXxY0yRDQLduFKAMz6qnhZ9ZxRy/eiKFgF8WY9jMO530yHMvNRvTWBJAoGukUC3SQwAVcG3MrArQTcRv/veUQL1r9K06syTpXxG2WSKhPKQIyl8mzxFtNZaGxlY7vkMbvLRew7IKJBh+hh99K3Mh+bt78V1TBl1jhP1tvG+azDp8P8fApwiwTcDyFxUhLADb2XoRs=
     - SCTX:
         - Begin A1V6_ApparatusItem_1_sc
         - ""
@@ -15415,15 +15415,19 @@
         - ""
         - if ( OnPCDrop == 1 )
         - "\tset OnPCDrop to 0"
-        - "\tset A1V6_ApparatusX to GetPos X"
-        - "\tset A1V6_ApparatusY to GetPos Y"
-        - "\tset A1V6_ApparatusZ to GetPos Z"
+        - "\tset A1V6_ApparatusX to ( GetPos X )"
+        - "\tset A1V6_ApparatusY to ( GetPos Y )"
+        - "\tset A1V6_ApparatusZ to ( GetPos Z )"
         - "\tset A1V6_ApparatusAngle to ( player -> GetAngle Z )"
         - "\tPlaceAtPC \"A1V6_ApparatusCont_1\" 1, 50, 0"
-        - "\tif ( A1V6_ApparatusExt_2 == 0 )"
-        - "\t\tplayer->AddItem A1V6_ApparatusItem_2, 1"
-        - "\telseif ( A1V6_ApparatusExt_3 == 0 )"
-        - "\t\tplayer->AddItem A1V6_ApparatusItem_3, 1"
+        - "\tif ( player->GetItemCount A1V6_ApparatusItem_2 == 0 )"
+        - "\t\tif ( player->GetItemCount A1V6_ApparatusItem_3 == 0 )"
+        - "\t\t\tif ( A1V6_ApparatusExt_2 == 0 )"
+        - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_2, 1"
+        - "\t\t\telseif ( A1V6_ApparatusExt_3 == 0 )"
+        - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_3, 1"
+        - "\t\t\tendif"
+        - "\t\tendif"
         - "\tendif"
         - "\tDisable"
         - endif
@@ -15436,12 +15440,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 513
+        data_size: 607
         var_table_size: 17
     - SCVR:
         - OnPCAdd
         - OnPCDrop
-    - SCDT: eJyNkDuqwkAUhs8fcO6dS+COaGdzChdgDNhZRBF1AzLahBTBxkfQCLomt6OV1u5CcDJCxBekG+Z/8J1fwJGsz4rbbfb2ZVAdEgI/ktcg+1mCeTnccCGSWbSLVwJg1lfFy2rgjVphkCTRKko362Eaz0PPhnLzUX00gSQKFvpFCv2sMAN3DbiTgzsZeAn9/+eIFqz/lKZ3ZWyV8QdlYpUJ5SDGUnm2BIvpLDY219gur5jd5SINmyCiQYfInFzj13xvm97ne2x9+Dbf77cCv0iBneukJIAb+beG5Q==
+    - SCDT: eJyNkT2qwkAUhe8JZHzzEN48tLO5hQswBuwsooi6ARltQopg40/QCLomt6OV1u5CcBIkaFRMN8w59/DdcwUsyfqsuN1mZ/8PqkNCoCR5DUo/bZiXxY0yRDQLduFKAMz6qnhZ9ZxRy/eiKFgF8WY9jMO576RDmfmo3ppAEgUD3SKBbhKYgCsDbmXgVgJuo//3PKIF61+l6VUZp8r4jTJJlQllIMZSebZ4i+ksNLaysV3ymN3lIvabIKJBh+hh99K3Mh+bt78V1TBl1jhP1tvG+azDp8P8fApwiwTcDyFxUhLADbkLoRc=
     - SCTX:
         - Begin A1V6_ApparatusItem_2_sc
         - ""
@@ -15465,15 +15469,19 @@
         - ""
         - if ( OnPCDrop == 1 )
         - "\tset OnPCDrop to 0"
-        - "\tset A1V6_ApparatusX to GetPos X"
-        - "\tset A1V6_ApparatusY to GetPos Y"
-        - "\tset A1V6_ApparatusZ to GetPos Z"
+        - "\tset A1V6_ApparatusX to ( GetPos X )"
+        - "\tset A1V6_ApparatusY to ( GetPos Y )"
+        - "\tset A1V6_ApparatusZ to ( GetPos Z )"
         - "\tset A1V6_ApparatusAngle to ( player -> GetAngle Z )"
         - "\tPlaceAtPC \"A1V6_ApparatusCont_2\" 1, 50, 0"
-        - "\tif ( A1V6_ApparatusExt_1 == 0 )"
-        - "\t\tplayer->AddItem A1V6_ApparatusItem_1, 1"
-        - "\telseif ( A1V6_ApparatusExt_3 == 0 )"
-        - "\t\tplayer->AddItem A1V6_ApparatusItem_3, 1"
+        - "\tif ( player->GetItemCount A1V6_ApparatusItem_1 == 0 )"
+        - "\t\tif ( player->GetItemCount A1V6_ApparatusItem_3 == 0 )"
+        - "\t\t\tif ( A1V6_ApparatusExt_1 == 0 )"
+        - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_1, 1"
+        - "\t\t\telseif ( A1V6_ApparatusExt_3 == 0 )"
+        - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_3, 1"
+        - "\t\t\tendif"
+        - "\t\tendif"
         - "\tendif"
         - "\tDisable"
         - endif
@@ -15486,12 +15494,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 513
+        data_size: 607
         var_table_size: 17
     - SCVR:
         - OnPCAdd
         - OnPCDrop
-    - SCDT: eJyNkDuqwkAUhs8fcO6dS+COaGdzChdgIthZRBF1AzLahBTBxkfQCLomt6OV1u5CcDJCxBekG+Z/8J1fwJGsz4rbbfb2ZVAdEgI/ktcg+1mCeTnccCGSWbSLVwJg1lfFy2rgjVphkCTRKko362Eaz0PPhnLzUX00gSQKFvpFCv2sMAN3DbiTgzsZeAn9/+eIFqz/lKZ3ZWyV8QdlYpUJ5SDGUnm2BIvpLDY219gur5jd5SINmyCiQYfInFzj13xvm97ne2x9+Dbf77cCv0iBneukJIAb93aG4g==
+    - SCDT: eJyNkT2qwkAUhe8JZHzzEN48tLO5hQswEewsooi6ARltQopg40/QCLomt6OV1u5CcBIkaFRMN8w59/DdcwUsyfqsuN1mZ/8PqkNCoCR5DUo/bZiXxY0yRDQLduFKAMz6qnhZ9ZxRy/eiKFgF8WY9jMO576RDmfmo3ppAEgUD3SKBbhKYgCsDbmXgVgJuo//3PKIF61+l6VUZp8r4jTJJlQllIMZSebZ4i+ksNLaysV3ymN3lIvabIKJBh+hh99K3Mh+bt78V1TBl1jhP1tvG+azDp8P8fApwiwTcDyFxUhLADbXQoRM=
     - SCTX:
         - Begin A1V6_ApparatusItem_3_sc
         - ""
@@ -15515,15 +15523,19 @@
         - ""
         - if ( OnPCDrop == 1 )
         - "\tset OnPCDrop to 0"
-        - "\tset A1V6_ApparatusX to GetPos X"
-        - "\tset A1V6_ApparatusY to GetPos Y"
-        - "\tset A1V6_ApparatusZ to GetPos Z"
+        - "\tset A1V6_ApparatusX to ( GetPos X )"
+        - "\tset A1V6_ApparatusY to ( GetPos Y )"
+        - "\tset A1V6_ApparatusZ to ( GetPos Z )"
         - "\tset A1V6_ApparatusAngle to ( player -> GetAngle Z )"
         - "\tPlaceAtPC \"A1V6_ApparatusCont_3\" 1, 50, 0"
-        - "\tif ( A1V6_ApparatusExt_1 == 0 )"
-        - "\t\tplayer->AddItem A1V6_ApparatusItem_1, 1"
-        - "\telseif ( A1V6_ApparatusExt_2 == 0 )"
-        - "\t\tplayer->AddItem A1V6_ApparatusItem_2, 1"
+        - "\tif ( player->GetItemCount A1V6_ApparatusItem_1 == 0 )"
+        - "\t\tif ( player->GetItemCount A1V6_ApparatusItem_2 == 0 )"
+        - "\t\t\tif ( A1V6_ApparatusExt_1 == 0 )"
+        - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_1, 1"
+        - "\t\t\telseif ( A1V6_ApparatusExt_2 == 0 )"
+        - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_2, 1"
+        - "\t\t\tendif"
+        - "\t\tendif"
         - "\tendif"
         - "\tDisable"
         - endif
