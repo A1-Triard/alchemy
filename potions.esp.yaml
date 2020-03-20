@@ -396,9 +396,9 @@
         magnitude_max: 10
 - ALCH:
     - NAME: p_detect_key_s
+    - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Grape.nif"
     - TEXT: "m\\K_Fresh_Grape.dds"
-    - MODL: "m\\misc_potion_standard_01.nif"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Det_Key.dds"
     - FNAM: Стандартное зелье обнар. ключа

@@ -341,7 +341,7 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_key_s
-  - MODL: m\K_Fresh_Grape.nif
+  - MODL: m\misc_potion_standard_01.nif
   - TEXT: m\tx_potion_standard_01.dds
   - FNAM: Стандартное зелье обнар. ключа
   - ALDT:

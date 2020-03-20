@@ -341,8 +341,8 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_key_s
+  - MODL: m\K_Fresh_Grape.nif
   - TEXT: m\K_Fresh_Grape.dds
-  - MODL: m\misc_potion_standard_01.nif
   - FNAM: Найти ключ стандартное
   - ALDT:
       auto_calculate_value: false
