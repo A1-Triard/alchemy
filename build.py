@@ -788,24 +788,25 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
     add_scripts = []
     check_scripts = []
     del_scripts = []
-    useful_kinds = []
-    for (i, kind) in enumerate(kinds):
+    next_useful_kind = None
+    for (i, kind) in reversed(list(enumerate(kinds))):
         index = i + 1
         kind_ingrs = filter_and_group_ingredients(ingrs.values(), kind)
         is_useful = False
-        for level in [15, 30, 45, 60]:
+        for level in reversed([15, 30, 45, 60]):
             level_ingrs = ingrs_filter_level(kind_ingrs, level, kind)
             if not ingrs_empty(level_ingrs):
                 is_useful = True
                 add_items.append(gen_add_item(kind, index, level))
                 add_scripts.append(gen_add_script(kind, level_ingrs, level, index))
         if is_useful:
-            useful_kinds.append((index, kind, kind_ingrs))
-    for i in range(0, len(useful_kinds)):
-        (index, kind, kind_ingrs) = useful_kinds[i]
-        next_kind = useful_kinds[i + 1] if i < len(useful_kinds) - 1 else None
-        check_scripts.append(gen_check_script(kind, kind_ingrs, index, next_kind))
-        del_scripts.append(gen_del_script(kind, kind_ingrs, index, next_kind))
+            check_scripts.append(gen_check_script(kind, kind_ingrs, index, next_useful_kind))
+            del_scripts.append(gen_del_script(kind, kind_ingrs, index, next_useful_kind))
+            next_useful_kind = (index, kind)
+    add_items.reverse()
+    add_scripts.reverse()
+    check_scripts.reverse()
+    del_scripts.reverse()
 
     level_books = []
     for level in range(0, 100):
