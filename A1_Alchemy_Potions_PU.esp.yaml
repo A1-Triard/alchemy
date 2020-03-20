@@ -5,7 +5,7 @@
       - Модифицирует некоторые существующие и добавляет новые зелья. Вспомогательный
         плагин для A1_Alchemy_V6_Apparatus.esp
       - ''
-      - Стандартная версия
+      - Версия для Potion Upgrade
       records: 58
       type: ESP
       version: 1067869798
@@ -17,9 +17,9 @@
   - DATA: 11799703
 - ALCH:
   - NAME: p_burden_s
-  - MODL: m\Misc_Potion_Standard_01.NIF
-  - TEXT: m\Tx_potion_standard_01.tga
-  - FNAM: Станд. зелье даэдра
+  - MODL: m\K_Fresh_Aqua.nif
+  - TEXT: m\K_Fresh_Aqua.dds
+  - FNAM: Даэдра стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -35,9 +35,9 @@
       skill: ~
 - ALCH:
   - NAME: p_paralyze_s
-  - MODL: m\Misc_Potion_Standard_01.nif
-  - TEXT: m\Tx_potion_standard_01.tga
-  - FNAM: Станд. сопротивление параличу
+  - MODL: m\K_Fresh_Aqua.nif
+  - TEXT: m\K_Fresh_Aqua.dds
+  - FNAM: Сопротивление параличу станд.
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -53,9 +53,9 @@
       skill: ~
 - ALCH:
   - NAME: p_silence_s
-  - MODL: m\Misc_Potion_Standard_01.nif
-  - TEXT: m\Tx_potion_standard_01.tga
-  - FNAM: Стандартное зелье щита
+  - MODL: m\K_Fresh_Crush.nif
+  - TEXT: m\K_Fresh_Crush.dds
+  - FNAM: Щит стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -71,9 +71,9 @@
       skill: ~
 - ALCH:
   - NAME: p_burden_c
-  - MODL: m\Misc_Potion_Cheap_01.nif
-  - TEXT: m\Tx_potion_cheap_01.tga
-  - FNAM: Деш. зелье даэдра
+  - MODL: m\K_Cheap_Aqua.nif
+  - TEXT: m\K_Cheap_Aqua.dds
+  - FNAM: Даэдра дешевое
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -89,9 +89,9 @@
       skill: ~
 - ALCH:
   - NAME: p_burden_b
-  - MODL: m\Misc_Potion_Bargain_01.nif
-  - TEXT: m\Tx_potion_bargain_01.tga
-  - FNAM: Уцен. зелье даэдра
+  - MODL: m\K_Bargain_Aqua.nif
+  - TEXT: m\K_Bargain_Aqua.dds
+  - FNAM: Даэдра уцененное
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -107,9 +107,9 @@
       skill: ~
 - ALCH:
   - NAME: p_burden_q
-  - MODL: m\Misc_Potion_Quality_01.nif
-  - TEXT: m\Tx_potion_quality_01.tga
-  - FNAM: Качеств. зелье даэдра
+  - MODL: m\K_Quality_Aqua.nif
+  - TEXT: m\K_Quality_Aqua.dds
+  - FNAM: Даэдра качественное
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -125,9 +125,9 @@
       skill: ~
 - ALCH:
   - NAME: p_burden_e
-  - MODL: m\Misc_Potion_Exclusive_01.nif
-  - TEXT: m\Tx_potion_exclusive_01.tga
-  - FNAM: Экскл. зелье даэдра
+  - MODL: m\K_Exclusive_Aqua.nif
+  - TEXT: m\K_Exclusive_Aqua.dds
+  - FNAM: Даэдра эксклюзивное
   - ALDT:
       auto_calculate_value: false
       value: 175
@@ -143,9 +143,9 @@
       skill: ~
 - ALCH:
   - NAME: p_paralyze_c
-  - MODL: m\Misc_Potion_Cheap_01.nif
-  - TEXT: m\Tx_potion_cheap_01.tga
-  - FNAM: Дешевое сопротивление параличу
+  - MODL: m\K_Cheap_Aqua.nif
+  - TEXT: m\K_Cheap_Aqua.dds
+  - FNAM: Cопротивление параличу дешевое
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -161,9 +161,9 @@
       skill: ~
 - ALCH:
   - NAME: p_paralyze_b
-  - MODL: m\Misc_Potion_Bargain_01.nif
-  - TEXT: m\Tx_potion_bargain_01.tga
-  - FNAM: Уцененное сопротивл. параличу
+  - MODL: m\K_Bargain_Aqua.nif
+  - TEXT: m\K_Bargain_Aqua.dds
+  - FNAM: Сопротивление параличу уценен.
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -179,9 +179,9 @@
       skill: ~
 - ALCH:
   - NAME: p_paralyze_e
-  - MODL: m\Misc_Potion_Exclusive_01.nif
-  - TEXT: m\Tx_potion_exclusive_01.tga
-  - FNAM: Экскл. сопротивление параличу
+  - MODL: m\K_Exclusive_Aqua.nif
+  - TEXT: m\K_Exclusive_Aqua.dds
+  - FNAM: Сопротивление параличу экскл.
   - ALDT:
       auto_calculate_value: false
       value: 175
@@ -197,9 +197,9 @@
       skill: ~
 - ALCH:
   - NAME: p_paralyze_q
-  - MODL: m\Misc_Potion_Quality_01.nif
-  - TEXT: m\Tx_potion_quality_01.tga
-  - FNAM: Качественное сопрот. параличу
+  - MODL: m\K_Quality_Aqua.nif
+  - TEXT: m\K_Quality_Aqua.dds
+  - FNAM: Сопротивление параличу качест.
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -215,9 +215,9 @@
       skill: ~
 - ALCH:
   - NAME: p_silence_c
-  - MODL: m\Misc_Potion_Cheap_01.nif
-  - TEXT: m\Tx_potion_cheap_01.tga
-  - FNAM: Дешевое зелье щита
+  - MODL: m\K_Cheap_Crush.nif
+  - TEXT: m\K_Cheap_Crush.dds
+  - FNAM: Щит дешевое
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -233,9 +233,9 @@
       skill: ~
 - ALCH:
   - NAME: p_silence_b
-  - MODL: m\Misc_Potion_Bargain_01.nif
-  - TEXT: m\Tx_potion_bargain_01.tga
-  - FNAM: Уцененное зелье щита
+  - MODL: m\K_Bargain_Crush.nif
+  - TEXT: m\K_Bargain_Crush.tga
+  - FNAM: Щит уцененное
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -251,9 +251,9 @@
       skill: ~
 - ALCH:
   - NAME: p_silence_q
-  - MODL: m\Misc_Potion_Quality_01.nif
-  - TEXT: m\Tx_potion_quality_01.tga
-  - FNAM: Качественное зелье щита
+  - MODL: m\K_Quality_Crush.nif
+  - TEXT: m\K_Quality_Crush.dds
+  - FNAM: Щит качественное
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -269,9 +269,9 @@
       skill: ~
 - ALCH:
   - NAME: p_silence_e
-  - MODL: m\Misc_Potion_Exclusive_01.nif
-  - TEXT: m\Tx_potion_exclusive_01.tga
-  - FNAM: Эксклюзивное зелье щита
+  - MODL: m\K_Exclusive_Crush.nif
+  - TEXT: m\K_Exclusive_Crush.dds
+  - FNAM: Щит эксклюзивное
   - ALDT:
       auto_calculate_value: false
       value: 175
@@ -287,9 +287,9 @@
       skill: ~
 - ALCH:
   - NAME: p_cure_blight_s
-  - MODL: m\misc_potion_fresh_01.nif
-  - TEXT: m\tx_potion_fresh_01.dds
-  - FNAM: Зелье лечения моровых болезней
+  - MODL: m\K_Fresh_Aqua.nif
+  - TEXT: m\K_Fresh_Aqua.dds
+  - FNAM: Излечить моровую болезнь
   - ALDT:
       auto_calculate_value: false
       value: 130
@@ -305,9 +305,9 @@
       skill: ~
 - ALCH:
   - NAME: p_recall_s
-  - MODL: m\Misc_Potion_Fresh_01.nif
-  - TEXT: m\Tx_potion_fresh_01.tga
-  - FNAM: Зелье воспоминания
+  - MODL: m\K_Fresh_Grape.nif
+  - TEXT: m\K_Fresh_Grape.dds
+  - FNAM: Возврат
   - ALDT:
       auto_calculate_value: false
       value: 200
@@ -323,9 +323,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_creatures_s
-  - MODL: m\misc_potion_standard_01.nif
-  - TEXT: m\tx_potion_standard_01.dds
-  - FNAM: Станд. зелье обнаруж. существ
+  - MODL: m\K_Fresh_Grape.nif
+  - TEXT: m\K_Fresh_Grape.dds
+  - FNAM: Обнаружить сущность стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -341,9 +341,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_key_s
-  - MODL: m\K_Fresh_Grape.nif
-  - TEXT: m\tx_potion_standard_01.dds
-  - FNAM: Стандартное зелье обнар. ключа
+  - TEXT: m\K_Fresh_Grape.dds
+  - MODL: m\misc_potion_standard_01.nif
+  - FNAM: Найти ключ стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -359,9 +359,9 @@
       skill: ~
 - ALCH:
   - NAME: p_dispel_s
-  - MODL: m\misc_potion_standard_01.nif
-  - TEXT: m\tx_potion_standard_01.dds
-  - FNAM: Стандартное зелье развеивания
+  - MODL: m\K_Fresh_Grape.nif
+  - TEXT: m\K_Fresh_Grape.dds
+  - FNAM: Развеять стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -377,9 +377,9 @@
       skill: ~
 - ALCH:
   - NAME: p_telekinesis_s
-  - MODL: m\misc_potion_standard_01.nif
-  - TEXT: m\tx_potion_standard_01.dds
-  - FNAM: Стандартное зелье телекинеза
+  - MODL: m\K_Fresh_7up.nif
+  - TEXT: m\K_Fresh_7up.dds
+  - FNAM: Телекинез стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -395,9 +395,9 @@
       skill: ~
 - ALCH:
   - NAME: p_water_breathing_s
-  - MODL: m\misc_potion_standard_01.nif
-  - TEXT: m\tx_potion_standard_01.dds
-  - FNAM: Стандарт. зелье водного дыхания
+  - MODL: m\K_Fresh_Crush.nif
+  - TEXT: m\K_Fresh_Crush.dds
+  - FNAM: Водное дыхание стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -413,9 +413,9 @@
       skill: ~
 - ALCH:
   - NAME: p_water_walking_s
-  - MODL: m\misc_potion_standard_01.nif
-  - TEXT: m\tx_potion_standard_01.dds
-  - FNAM: Станд. зелье хождения по воде
+  - MODL: m\K_Fresh_Crush.nif
+  - TEXT: m\K_Fresh_Crush.dds
+  - FNAM: Хождение по воде стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -431,9 +431,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_enchantment_s
-  - MODL: m\misc_potion_standard_01.nif
-  - TEXT: m\tx_potion_standard_01.dds
-  - FNAM: Стандартное зелье обнаруж. чар
+  - MODL: m\K_Fresh_Grape.nif
+  - TEXT: m\K_Fresh_Grape.dds
+  - FNAM: Обнаружить чары стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -449,9 +449,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_creatures_b_A1
-  - MODL: m\misc_potion_bargain_01.nif
-  - TEXT: m\tx_potion_bargain_01.dds
-  - FNAM: Уцененн. зелье обнаруж. существ
+  - MODL: m\K_Bargain_Grape.nif
+  - TEXT: m\K_Bargain_Grape.dds
+  - FNAM: Обнаружить сущность уцененное
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -467,9 +467,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_creatures_c_A1
-  - MODL: m\misc_potion_cheap_01.nif
-  - TEXT: m\tx_potion_cheap_01.dds
-  - FNAM: Дешевое зелье обнаруж. существ
+  - MODL: m\K_Cheap_Grape.nif
+  - TEXT: m\K_Cheap_Grape.dds
+  - FNAM: Обнаружить сущность дешевое
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -485,9 +485,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_creatures_e_A1
-  - MODL: m\misc_potion_exclusive_01.nif
-  - TEXT: m\tx_potion_exclusive_01.dds
-  - FNAM: Эксклюз. зелье обнаруж. существ
+  - MODL: m\K_Exclusive_Grape.nif
+  - TEXT: m\K_Exclusive_Grape.dds
+  - FNAM: Обнаружить сущность эксклюзив.
   - ALDT:
       auto_calculate_value: false
       value: 175
@@ -503,9 +503,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_creatures_q_A1
-  - MODL: m\misc_potion_quality_01.nif
-  - TEXT: m\tx_potion_quality_01.dds
-  - FNAM: Качеств. зелье обнаруж. существ
+  - MODL: m\K_Quality_Grape.nif
+  - TEXT: m\K_Quality_Grape.dds
+  - FNAM: Обнаружить сущность качествен.
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -521,9 +521,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_enchantment_b_A1
-  - MODL: m\misc_potion_bargain_01.nif
-  - TEXT: m\tx_potion_bargain_01.dds
-  - FNAM: Уцененное зелье обнаружения чар
+  - MODL: m\K_Bargain_Grape.nif
+  - TEXT: m\K_Bargain_Grape.dds
+  - FNAM: Обнаружить чары уцененное
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -539,9 +539,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_enchantment_c_A1
-  - MODL: m\misc_potion_cheap_01.nif
-  - TEXT: m\tx_potion_cheap_01.dds
-  - FNAM: Дешевое зелье обнаружения чар
+  - MODL: m\K_Cheap_Grape.nif
+  - TEXT: m\K_Cheap_Grape.dds
+  - FNAM: Обнаружить чары дешевое
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -557,9 +557,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_enchantment_e_A1
-  - MODL: m\misc_potion_exclusive_01.nif
-  - TEXT: m\tx_potion_exclusive_01.dds
-  - FNAM: Эксклюзивное зелье обнаруж. чар
+  - MODL: m\K_Exclusive_Grape.nif
+  - TEXT: m\K_Exclusive_Grape.dds
+  - FNAM: Обнаружить чары эксклюзивное
   - ALDT:
       auto_calculate_value: false
       value: 175
@@ -575,9 +575,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_enchantment_q_A1
-  - MODL: m\misc_potion_quality_01.nif
-  - TEXT: m\tx_potion_quality_01.dds
-  - FNAM: Качественное зелье обнаруж. чар
+  - MODL: m\K_Quality_Grape.nif
+  - TEXT: m\K_Quality_Grape.dds
+  - FNAM: Обнаружить чары качественное
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -593,9 +593,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_key_b_A1
-  - MODL: m\misc_potion_bargain_01.nif
-  - TEXT: m\tx_potion_bargain_01.dds
-  - FNAM: Уцененное зелье обнаруж. ключа
+  - MODL: m\K_Bargain_Grape.nif
+  - TEXT: m\K_Bargain_Grape.dds
+  - FNAM: Найти ключ уцененное
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -611,9 +611,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_key_c_A1
-  - MODL: m\misc_potion_cheap_01.nif
-  - TEXT: m\tx_potion_cheap_01.dds
-  - FNAM: Дешевое зелье обнаружения ключа
+  - MODL: m\K_Cheap_Grape.nif
+  - TEXT: m\K_Cheap_Grape.dds
+  - FNAM: Найти ключ дешевое
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -629,9 +629,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_key_e_A1
-  - MODL: m\misc_potion_exclusive_01.nif
-  - TEXT: m\tx_potion_exclusive_01.dds
-  - FNAM: Эксклюзивное зелье обнар. ключа
+  - MODL: m\K_Exclusive_Grape.nif
+  - TEXT: m\K_Exclusive_Grape.dds
+  - FNAM: Найти ключ эксклюзивное
   - ALDT:
       auto_calculate_value: false
       value: 175
@@ -647,9 +647,9 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_key_q_A1
-  - MODL: m\misc_potion_quality_01.nif
-  - TEXT: m\tx_potion_quality_01.dds
-  - FNAM: Качественное зелье обнар. ключа
+  - MODL: m\K_Quality_Grape.nif
+  - TEXT: m\K_Quality_Grape.dds
+  - FNAM: Найти ключ качественное
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -665,9 +665,9 @@
       skill: ~
 - ALCH:
   - NAME: p_dispel_q_A1
-  - MODL: m\misc_potion_quality_01.nif
-  - TEXT: m\tx_potion_quality_01.dds
-  - FNAM: Качественное зелье развеивания
+  - MODL: m\K_Quality_Grape.nif
+  - TEXT: m\K_Quality_Grape.dds
+  - FNAM: Развеять качественное
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -683,9 +683,9 @@
       skill: ~
 - ALCH:
   - NAME: p_dispel_e_A1
-  - MODL: m\misc_potion_exclusive_01.nif
-  - TEXT: m\tx_potion_exclusive_01.dds
-  - FNAM: Эксклюзивное зелье развеивания
+  - MODL: m\K_Exclusive_Grape.nif
+  - TEXT: m\K_Exclusive_Grape.dds
+  - FNAM: Развеять эксклюзивное
   - ALDT:
       auto_calculate_value: false
       value: 175
@@ -701,9 +701,9 @@
       skill: ~
 - ALCH:
   - NAME: p_dispel_c_A1
-  - MODL: m\misc_potion_cheap_01.nif
-  - TEXT: m\tx_potion_cheap_01.dds
-  - FNAM: Дешевое зелье развеивания
+  - MODL: m\K_Cheap_Grape.nif
+  - TEXT: m\K_Cheap_Grape.dds
+  - FNAM: Развеять дешевое
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -719,9 +719,9 @@
       skill: ~
 - ALCH:
   - NAME: p_dispel_b_A1
-  - MODL: m\misc_potion_bargain_01.nif
-  - TEXT: m\tx_potion_bargain_01.dds
-  - FNAM: Уцененное зелье развеивания
+  - MODL: m\K_Bargain_Grape.nif
+  - TEXT: m\K_Bargain_Grape.dds
+  - FNAM: Развеять уцененное
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -737,9 +737,9 @@
       skill: ~
 - ALCH:
   - NAME: p_feather_s_A1
-  - MODL: m\misc_potion_standard_01.nif
-  - TEXT: m\tx_potion_standard_01.dds
-  - FNAM: Стандартное зелье пера
+  - MODL: m\K_Fresh_Crush.nif
+  - TEXT: m\K_Fresh_Crush.dds
+  - FNAM: Перо стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -755,9 +755,9 @@
       skill: ~
 - ALCH:
   - NAME: p_fortify_attack_b_A1
-  - MODL: m\misc_potion_bargain_01.nif
-  - TEXT: m\tx_potion_bargain_01.dds
-  - FNAM: Уцененное улучшение атаки
+  - MODL: m\K_Bargain_Aqua.nif
+  - TEXT: m\K_Bargain_Aqua.tga
+  - FNAM: Увеличить атаку уцененное
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -773,9 +773,9 @@
       skill: ~
 - ALCH:
   - NAME: p_fortify_attack_c_A1
-  - MODL: m\misc_potion_cheap_01.nif
-  - TEXT: m\tx_potion_cheap_01.dds
-  - FNAM: Дешевое улучшение атаки
+  - MODL: m\K_Cheap_Aqua.nif
+  - TEXT: m\K_Cheap_Aqua.tga
+  - FNAM: Увеличить атаку дешевое
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -791,9 +791,9 @@
       skill: ~
 - ALCH:
   - NAME: p_fortify_attack_s_A1
-  - MODL: m\misc_potion_standard_01.nif
-  - TEXT: m\tx_potion_standard_01.dds
-  - FNAM: Стандартное улучшение атаки
+  - MODL: m\K_Fresh_Aqua.nif
+  - TEXT: m\K_Fresh_Aqua.tga
+  - FNAM: Увеличить атаку стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -809,9 +809,9 @@
       skill: ~
 - ALCH:
   - NAME: p_fortify_attack_q_A1
-  - MODL: m\misc_potion_quality_01.nif
-  - TEXT: m\tx_potion_quality_01.dds
-  - FNAM: Качественное улучшение атаки
+  - MODL: m\K_Quality_Aqua.nif
+  - TEXT: m\K_Quality_Aqua.tga
+  - FNAM: Увеличить атаку качественное
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -827,9 +827,9 @@
       skill: ~
 - ALCH:
   - NAME: p_swift_swim_s_A1
-  - MODL: m\misc_potion_standard_01.nif
-  - TEXT: m\tx_potion_standard_01.dds
-  - FNAM: Стандарт. зелье быстроплавания
+  - MODL: m\K_Fresh_Crush.nif
+  - TEXT: m\K_Fresh_Crush.dds
+  - FNAM: Быстрое плавание стандартное
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -845,9 +845,9 @@
       skill: ~
 - ALCH:
   - NAME: p_telekinesis_c_A1
-  - MODL: m\misc_potion_cheap_01.nif
-  - TEXT: m\tx_potion_cheap_01.dds
-  - FNAM: Дешевое зелье телекинеза
+  - MODL: m\K_Cheap_7up.nif
+  - TEXT: m\K_Cheap_7up.dds
+  - FNAM: Телекинез дешевое
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -863,9 +863,9 @@
       skill: ~
 - ALCH:
   - NAME: p_telekinesis_b_A1
-  - MODL: m\misc_potion_bargain_01.nif
-  - TEXT: m\tx_potion_bargain_01.dds
-  - FNAM: Уцененное зелье телекинеза
+  - MODL: m\K_Bargain_7up.nif
+  - TEXT: m\K_Bargain_7up.dds
+  - FNAM: Телекинез уцененное
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -881,9 +881,9 @@
       skill: ~
 - ALCH:
   - NAME: p_telekinesis_q_A1
-  - MODL: m\misc_potion_quality_01.nif
-  - TEXT: m\tx_potion_quality_01.dds
-  - FNAM: Качественное зелье телекинеза
+  - MODL: m\K_Quality_7up.nif
+  - TEXT: m\K_Quality_7up.dds
+  - FNAM: Телекинез качественное
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -899,9 +899,9 @@
       skill: ~
 - ALCH:
   - NAME: p_telekinesis_e_A1
-  - MODL: m\misc_potion_exclusive_01.nif
-  - TEXT: m\tx_potion_exclusive_01.dds
-  - FNAM: Эксклюзивное зелье телекинеза
+  - MODL: m\K_Exclusive_7up.nif
+  - TEXT: m\K_Exclusive_7up.dds
+  - FNAM: Телекинез эксклюзивное
   - ALDT:
       auto_calculate_value: false
       value: 175
@@ -917,9 +917,9 @@
       skill: ~
 - ALCH:
   - NAME: p_water_breathing_q_A1
-  - MODL: m\misc_potion_quality_01.nif
-  - TEXT: m\tx_potion_quality_01.dds
-  - FNAM: Качеств. зелье водного дыхания
+  - MODL: m\K_Quality_Crush.nif
+  - TEXT: m\K_Quality_Crush.dds
+  - FNAM: Водное дыхание качественное
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -935,9 +935,9 @@
       skill: ~
 - ALCH:
   - NAME: p_water_breathing_e_A1
-  - MODL: m\misc_potion_exclusive_01.nif
-  - TEXT: m\tx_potion_exclusive_01.dds
-  - FNAM: Экскл. зелье водного дыхания
+  - MODL: m\K_Exclusive_Crush.nif
+  - TEXT: m\K_Exclusive_Crush.dds
+  - FNAM: Водное дыхание эксклюзивное
   - ALDT:
       auto_calculate_value: false
       value: 175
@@ -953,9 +953,9 @@
       skill: ~
 - ALCH:
   - NAME: p_water_breathing_c_A1
-  - MODL: m\misc_potion_cheap_01.nif
-  - TEXT: m\tx_potion_cheap_01.dds
-  - FNAM: Дешевое зелье водного дыхания
+  - MODL: m\K_Cheap_Crush.nif
+  - TEXT: m\K_Cheap_Crush.dds
+  - FNAM: Водное дыхание дешевое
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -971,9 +971,9 @@
       skill: ~
 - ALCH:
   - NAME: p_water_breathing_b_A1
-  - MODL: m\misc_potion_bargain_01.nif
-  - TEXT: m\tx_potion_bargain_01.dds
-  - FNAM: Уцененное зелье водного дыхания
+  - MODL: m\K_Bargain_Crush.nif
+  - TEXT: m\K_Bargain_Crush.dds
+  - FNAM: Водное дыхание уцененное
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -989,9 +989,9 @@
       skill: ~
 - ALCH:
   - NAME: p_water_walking_b_A1
-  - MODL: m\misc_potion_bargain_01.nif
-  - TEXT: m\tx_potion_bargain_01.dds
-  - FNAM: Уцен. зелье хождения по воде
+  - MODL: m\K_Bargain_Crush.nif
+  - TEXT: m\K_Bargain_Crush.dds
+  - FNAM: Хождение по воде уцененное
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -1007,9 +1007,9 @@
       skill: ~
 - ALCH:
   - NAME: p_water_walking_c_A1
-  - MODL: m\misc_potion_cheap_01.nif
-  - TEXT: m\tx_potion_cheap_01.dds
-  - FNAM: Дешевое зелье хождения по воде
+  - MODL: m\K_Cheap_Crush.nif
+  - TEXT: m\K_Cheap_Crush.dds
+  - FNAM: Хождение по воде дешевое
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -1025,9 +1025,9 @@
       skill: ~
 - ALCH:
   - NAME: p_water_walking_e_A1
-  - MODL: m\misc_potion_exclusive_01.nif
-  - TEXT: m\tx_potion_exclusive_01.dds
-  - FNAM: Экскл. зелье хождения по воде
+  - MODL: m\K_Exclusive_Crush.nif
+  - TEXT: m\K_Exclusive_Crush.dds
+  - FNAM: Хождение по воде эксклюзивное
   - ALDT:
       auto_calculate_value: false
       value: 175
@@ -1043,9 +1043,9 @@
       skill: ~
 - ALCH:
   - NAME: p_water_walking_q_A1
-  - MODL: m\misc_potion_quality_01.nif
-  - TEXT: m\tx_potion_quality_01.dds
-  - FNAM: Качеств. зелье хождения по воде
+  - MODL: m\K_Quality_Crush.nif
+  - TEXT: m\K_Quality_Crush.dds
+  - FNAM: Хождение по воде качественное
   - ALDT:
       auto_calculate_value: false
       value: 80

@@ -5,8 +5,8 @@
       - Модифицирует некоторые существующие и добавляет новые зелья. Вспомогательный
         плагин для A1_Alchemy_V6_Apparatus.esp
       - ''
-      - Версия для использования с MagicMarker
-      records: 59
+      - Версия для MagicMarker
+      records: 58
       type: ESP
       version: 1067869798
   - MAST: Morrowind.esm
@@ -47,24 +47,6 @@
       attribute: ~
       duration: 30
       index: ResistParalysis
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_restore_personality_s
-  - MODL: m\Misc_Potion_Standard_01.nif
-  - TEXT: m\Pm_Sta_Res_Att.dds
-  - FNAM: Станд. восст. привлекательности
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: Personality
-      duration: 0
-      index: RestoreAttribute
       magnitude_max: 10
       magnitude_min: 10
       range: Self
@@ -359,7 +341,7 @@
       skill: ~
 - ALCH:
   - NAME: p_detect_key_s
-  - MODL: m\misc_potion_standard_01.nif
+  - MODL: m\K_Fresh_Grape.nif
   - TEXT: m\Pm_Sta_Det_Key.dds
   - FNAM: Стандартное зелье обнар. ключа
   - ALDT:

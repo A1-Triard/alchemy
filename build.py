@@ -729,26 +729,40 @@ def find_mfr():
                 except FileNotFoundError:
                     pass
        
-def gen_potions(icons_set):
+def gen_potions(icon, model, name, suffix, description):
     with open('potions.esp.yaml', 'r', encoding='utf-8') as f:
         potions = yaml.load(f, Loader=yaml.FullLoader)
     
-    icon_remove = 0 if icons_set == 'mm' else 1    
     for potion in potions:
         icons = [i for i, x in enumerate(potion['ALCH']) if 'TEXT' in x]
-        if len(icons) != 2:
+        if len(icons) != 3:
             print('Error in potions.esp.yaml')
             sys.exit(1)
-        del potion['ALCH'][icons[icon_remove]]
+        for i in filter(lambda x: x != icon, range(2, -1, -1)):
+            del potion['ALCH'][icons[i]]
+
+        models = [i for i, x in enumerate(potion['ALCH']) if 'MODL' in x]
+        if len(models) != 2:
+            print('Error in potions.esp.yaml')
+            sys.exit(1)
+        for i in filter(lambda x: x != model, range(1, -1, -1)):
+            del potion['ALCH'][models[i]]
+
+        names = [i for i, x in enumerate(potion['ALCH']) if 'FNAM' in x]
+        if len(names) != 2:
+            print('Error in potions.esp.yaml')
+            sys.exit(1)
+        for i in filter(lambda x: x != name, range(1, -1, -1)):
+            del potion['ALCH'][names[i]]
 
     with open('potions_header.esp.yaml', 'r', encoding='utf-8') as f:
         esp_header = yaml.load(f, Loader=yaml.FullLoader)
 
     esp_header[0]['TES3'][0]['HEDR']['description'].append('')
-    esp_header[0]['TES3'][0]['HEDR']['description'].append('Версия для использования без MagicMarker' if icons_set == 'std' else 'Версия для использования с MagicMarker')
+    esp_header[0]['TES3'][0]['HEDR']['description'].append(description)
     esp_header[0]['TES3'][0]['HEDR']['records'] = len(esp_header) + len(potions) - 1
 
-    with open('A1_Alchemy_Potions' + ('_MM' if icons_set == 'mm' else '') + '.esp.yaml', 'w', encoding='utf-8') as esp:
+    with open('A1_Alchemy_Potions' + suffix + '.esp.yaml', 'w', encoding='utf-8') as esp:
         yaml.dump(esp_header, esp, allow_unicode=True)
         yaml.dump(potions, esp, allow_unicode=True)
 
@@ -877,21 +891,24 @@ def main():
     prepare_text('Readme', 'ar/')
     prepare_text('Versions', 'ar/')
     copytree('Screenshots', 'ar/Screenshots')
-    gen_potions('std')
+    gen_potions(1, 0, 0, '', 'Стандартная версия')
     copyfile('A1_Alchemy_Potions.esp.yaml', mfr + 'alchemy_potions.esp.yaml')
     assembly_plugin(mfr + 'alchemy_potions.esp', 2014, 8, 3, 18, 53, 0)
     gen_apparatus('eva', mfr, 2097, 9, 1, 0, 0, 0)
     gen_apparatus('std', mfr, 2014, 8, 10, 18, 53, 0)
     remove(mfr + 'alchemy_potions.esp')
-    gen_potions('mm')
+    gen_potions(2, 0, 0, '_MM', 'Версия для MagicMarker')
+    gen_potions(0, 1, 1, '_PU', 'Версия для Potion Upgrade')
     copyfile('A1_Alchemy_Potions.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions.esp.yaml')
     copyfile('A1_Alchemy_Potions_MM.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions_MM.esp.yaml')
+    copyfile('A1_Alchemy_Potions_PU.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions_PU.esp.yaml')
     copyfile('A1_Alchemy_V6_Apparatus.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus.esp.yaml')
     copyfile('A1_Alchemy_V6_Apparatus_EVA.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus_EVA.esp.yaml')
     assembly_plugin('ar/Data Files/A1_Alchemy_V6_Apparatus.esp', 2014, 8, 10, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_V6_Apparatus_EVA.esp', 2097, 9, 1, 0, 0, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions.esp', 2014, 8, 3, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_MM.esp', 2014, 8, 3, 18, 53, 0)
+    assembly_plugin('ar/Data Files/A1_Alchemy_Potions_PU.esp', 2014, 8, 3, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_DaeCursed.esp', 2014, 8, 2, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_V6_Containers.esp', 2014, 8, 15, 18, 53, 0)
     make_archive('A1_Alchemy_1.0', 'zip', 'ar')
