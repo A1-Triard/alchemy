@@ -237,6 +237,22 @@ def ingrs_empty(ingrs):
     (groups, pairs) = ingrs
     return len(groups) < 2 and not pairs
 
+def ingrs_equals(ingrs1,ingrs2):
+    (groups1, pairs1) = ingrs1
+    (groups2, pairs2) = ingrs2
+    if len(groups1) != len(groups2) or len(pairs1) != len(pairs2):
+        return False
+    for (g1, g2) in zip(groups1, groups2):
+        if len(g1) != len(g2):
+            return False
+        for (i1, i2) in zip(g1, g2):
+            if i1.name != i2.name:
+                return False
+    for (p1, p2) in zip(pairs1, pairs2):
+        if p1[0].name != p2[0].name or p1[1].name != p2[1].name:
+            return False
+    return True
+
 def groups_has_ingrs_with_level(groups, level, kind):
     if not list(filter(lambda i: ingr_level(i, kind) == level, chain.from_iterable(groups))):
         return False
@@ -261,7 +277,6 @@ def gen_script(name, lines):
 def gen_add_script(kind, ingrs, level, index):
     (groups, pairs) = ingrs
     add_name = 'A1V6_AAdd' + str(index) + '_' + kind.name + '_' + str(level)
-    check_name = 'A1V6_ACheck' + str(index) + '_' + kind.name + '_sc'
     s = []
     s.append('Begin ' + add_name)
     s.append('')
@@ -775,6 +790,7 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
     morrowind_ingrs = { i.name: i for i in load_ingredients('ingredients/Morrowind.esm.yaml') }
     tribunal_ingrs = { i.name: i for i in load_ingredients('ingredients/Tribunal.esm.yaml') }
     bloodmoon_ingrs = { i.name: i for i in load_ingredients('ingredients/Bloodmoon.esm.yaml') }
+    ap_ingrs = { i.name: i for i in load_ingredients('ingredients/AlterationPrecise.esp.yaml') }
 
     ingrs = morrowind_ingrs.copy()
     ingrs.update(tribunal_ingrs)
@@ -783,8 +799,12 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
     if ingrs_set == 'eva':
         eva_ingrs = { i.name: i for i in load_ingredients('ingredients/EVA.ESP.yaml') }
         ingrs.update(eva_ingrs)
+    
+    ingrs_ext = ingrs.copy()
+    ingrs_ext.update(ap_ingrs)
 
     add_items = []
+    add_items_ext = []
     add_scripts = []
     check_scripts = []
     del_scripts = []
@@ -792,18 +812,24 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
     for (i, kind) in reversed(list(enumerate(kinds))):
         index = i + 1
         kind_ingrs = filter_and_group_ingredients(ingrs.values(), kind)
+        kind_ingrs_ext = filter_and_group_ingredients(ingrs_ext.values(), kind)
         is_useful = False
         for level in reversed([15, 30, 45, 60]):
             level_ingrs = ingrs_filter_level(kind_ingrs, level, kind)
+            level_ingrs_ext = ingrs_filter_level(kind_ingrs_ext, level, kind)
             if not ingrs_empty(level_ingrs):
                 is_useful = True
                 add_items.append(gen_add_item(kind, index, level))
                 add_scripts.append(gen_add_script(kind, level_ingrs, level, index))
+            elif not ingrs_empty(level_ingrs_ext):
+                add_items_ext.append(gen_add_item(kind, index, level))
+#            if not ingrs_equals(level_ingrs, level_ingrs_ext):
         if is_useful:
             check_scripts.append(gen_check_script(kind, kind_ingrs, index, next_useful_kind))
             del_scripts.append(gen_del_script(kind, kind_ingrs, index, next_useful_kind))
             next_useful_kind = (index, kind)
     add_items.reverse()
+    add_items_ext.reverse()
     add_scripts.reverse()
     check_scripts.reverse()
     del_scripts.reverse()
@@ -826,6 +852,9 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
         yaml.dump(check_scripts, esp, allow_unicode=True)
         yaml.dump(del_scripts, esp, allow_unicode=True)
         yaml.dump(level_books, esp, allow_unicode=True)
+
+    with open('A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '_Ext.esp.yaml', 'w', encoding='utf-8') as esp:
+        yaml.dump(add_items_ext, esp, allow_unicode=True)
 
     assembly_plugin(mfr + 'alchemy_' + ingrs_set + '.esp', year, month, day, hour, minute, second)
 

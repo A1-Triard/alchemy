@@ -1,0 +1,21 @@
+- INGR:
+  - NAME: A1V6_L30_fire_shield
+  - MODL: m\misc_com_bottle_05.nif
+  - FNAM: ' Создать'
+  - IRDT:
+      effect_1_attribute: ~
+      effect_1_index: ~
+      effect_1_skill: ~
+      effect_2_attribute: ~
+      effect_2_index: FireShield
+      effect_2_skill: ~
+      effect_3_attribute: ~
+      effect_3_index: ~
+      effect_3_skill: ~
+      effect_4_attribute: ~
+      effect_4_index: ~
+      effect_4_skill: ~
+      value: 0
+      weight: 0.0
+  - SCRI: A1V6_AAdd21_FireSh_30
+  - ITEX: k\magic_alchemy.dds
