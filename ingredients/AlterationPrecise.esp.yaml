@@ -1,0 +1,20 @@
+- INGR:
+    - NAME: rvr_ashes_corpse_01
+    - MODL: "n\\Ingred_Vampire_Dust_01.nif"
+    - FNAM: Прах
+    - IRDT:
+        weight: 0.8
+        value: 1
+        effect_1_index: RestoreSpellPoints
+        effect_2_index: FireShield
+        effect_3_index: SpellAbsorption
+        effect_4_index: Paralyze
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "n\\Tx_vampire_dust_01.tga"

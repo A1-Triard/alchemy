@@ -1779,14 +1779,16 @@
         - "\t\tif ( alchemy > mortar )"
         - "\t\t\tset alchemy to mortar"
         - "\t\tendif"
-        - "\t\tset calcinator to ( calcinator + alchemy )"
-        - "\t\tif ( calcinator < 30 )"
-        - "\t\t\tset calcinator to 30"
+        - "\t\tset calcinator to ( calcinator + alchemy - 1 )"
+        - "\t\tif ( calcinator < 29 )"
+        - "\t\t\tset calcinator to 29"
         - "\t\tendif"
         - "\t\tif ( alembic >= calcinator )"
-        - "\t\t\tset alembic to ( calcinator - 1 )"
+        - "\t\t\tset alembic to calcinator"
+        - "\t\telseif ( GetJournalIndex A1_AlchAlembic < 10 )"
+        - "\t\t\tJournal A1_AlchAlembic 10"
         - "\t\tendif"
-        - "\t\tset tempf2 to ( calcinator - alembic )"
+        - "\t\tset tempf2 to ( calcinator + 1 - alembic )"
         - "\t\tset tempf1 to ( Random 100 )"
         - "\t\tset tempf1 to ( tempf1 * tempf2 / 100.0 )"
         - "\t\tset alembic to ( alembic + tempf1 )"
@@ -1928,14 +1930,16 @@
         - "\t\tif ( alchemy > mortar )"
         - "\t\t\tset alchemy to mortar"
         - "\t\tendif"
-        - "\t\tset calcinator to ( calcinator + alchemy )"
-        - "\t\tif ( calcinator < 30 )"
-        - "\t\t\tset calcinator to 30"
+        - "\t\tset calcinator to ( calcinator + alchemy - 1 )"
+        - "\t\tif ( calcinator < 29 )"
+        - "\t\t\tset calcinator to 29"
         - "\t\tendif"
         - "\t\tif ( alembic >= calcinator )"
-        - "\t\t\tset alembic to ( calcinator - 1 )"
+        - "\t\t\tset alembic to calcinator"
+        - "\t\telseif ( GetJournalIndex A1_AlchAlembic < 10 )"
+        - "\t\t\tJournal A1_AlchAlembic 10"
         - "\t\tendif"
-        - "\t\tset tempf2 to ( calcinator - alembic )"
+        - "\t\tset tempf2 to ( calcinator + 1 - alembic )"
         - "\t\tset tempf1 to ( Random 100 )"
         - "\t\tset tempf1 to ( tempf1 * tempf2 / 100.0 )"
         - "\t\tset alembic to ( alembic + tempf1 )"
@@ -3288,3 +3292,18 @@
         pc_rank: ~
         padding: 0
     - NAME: "Сегодня я понял, что мне нужна реторта."
+- DIAL:
+    - NAME: A1_AlchAlembic
+    - DATA: Journal
+- INFO:
+    - INAM: "171836544114738525"
+    - PNAM: ""
+    - NNAM: ""
+    - DATA:
+        dialog_type: Journal
+        disp_index: 10
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - NAME: "Сегодня я понял, что мне нужен перегонный куб."

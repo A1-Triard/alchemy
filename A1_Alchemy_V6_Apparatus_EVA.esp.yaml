@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования с EVA.esp
-        records: 593
+        records: 596
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -22889,7 +22889,7 @@
           shorts: 7
           longs: 0
           floats: 3
-        data_size: 1702
+        data_size: 1750
         var_table_size: 73
     - SCVR:
         - state
@@ -22902,7 +22902,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNlEFv2kAQhXdsbDBNW6tKU0Wq1EkV9RAUugsxEKlEQj3k1EsOFTe0JU4LxQ3C5MB/bH9SlczuYmPEOsnFWs9+b3bfY7APYYApMOz3seUD0IvH8Au2uQdplTkY1TbFKCt2CsVuVuwWiudZsVcFWC/PA1pdhgPxvTMazMa/4mT17W62rKBoEn35urhxFacekoqRFkjL34f7ev+rnI3XTDRKx8cQgA+N3ILYA38+k6t44cENMA+Hv0NWrDmq1tuuuar2KWRacoD0QN4USCzSHjbwBBt0D58w2mM+VGpIb2RTWO7tYPtZl4Y906SPaUX7rFB/qjCK8RCH/0K8fjkQuvFVvLxdLNV5/G+4Xayz+/vAJFzD4VF4zTg3vasML/Lensq/Cq9o64U+9gJTV+8oV2qpmzisjvTQRMNMg5NPg8NcWmRX90x7Z92+pkmBp6rPTd6HqFMda345/fZGh6wCPiFPvMnxs+5S1wq111DnuNk4CW4N+uyJoM3sKaIVgEn9LB8VFRPi8H+It2/lfC4XcnmXjn6OEkpVLkZcUEbKtstoQgWv2ejEQrs0/FZ4aoW7dlha4YhXwbVG0Xp81mxGF3qANgdUlFFeZnSXfsSoDe6VGbXBXW5+O7XumJk7NtLDooUxmZ38kaTfyNWYttRZu4KkVCAiq2BaLrCfIEsE9B01htTS+Dky4oOiHzmLkx+T8UbpZSnv0omd7trpqZ2O7LS0021FfzD0fpFO55N5bGE/GvbdLrtMJyu5hZt8PJ1tkP1vhZpfgAeYfHgy
+    - SCDT: eJyNVE1v2kAQ3bGxwTRtrSqlilSpkyrqIQi6CzEfUomEesiplxwqbmhLnBaKG4TJgf/Y/qQqnd3FYMQ6zcUaz7w3M29mbB/CAFNgOBhgywegF4/hJ2xzD9IyczCq7JxR5uzknN3M2c05+5mzVwbYmP2ArKtwKL52xsP55EecrL/cz1clFE1CX73MB67j1ENiMeICcfnb8FjHP8v5ZIOJxunkDALwobGVII7AX8zlOl56cAvMw9HPkOV9jvL19n2u8n0ImabUkB7ImwIJixTDOp5jnfrwCUYx5kOpgvRGMoWlbwfbT2oajkySAaYlrbNE+cnDaIwnOPoT4s3zodCJr+PV3XKl6vHf4b6zyh4eAjPhCo5OwxvGucldZni5ze2p+ZchpNAzXfYSU1dHlCpl6iQOe4H00Ig6CmyYi3CU1lZfA1wysvY9U8LZlPC0Se3XTPtV3WmcfJtONr3nPFnjt1lNQRVVxoZew1aMfnull6IWck55eJPjR12xqhkqVlc9udn5CW5dzMV/FmNuVSFaAZgtXWxPS40VcfQ3xLvXcrGQS7m6T8ffxwltQS7HXNBM1dW7jC5a8IoNnVjQLn0sVvDMCu7awdIKjngZXOsoWo/fpk3oUh/crkBJCeVFQg/Rjwi1gXtFQm3gLje7U3aHawlnhnqSlzAhsdNfkvg7uj5pVeuQkBQSRGQlzIoJ9gqygED/XSNImUbPqSHX8nqk+ZZ2TC+b8iE6saO7dvTMjo7saGlHtxX6nUEf59HpYrqILdj3BvvmELtKp2u5Bzfz8fRsg+y7Fep+Af4BOjuFsQ==
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -22960,14 +22960,16 @@
         - "\t\tif ( alchemy > mortar )"
         - "\t\t\tset alchemy to mortar"
         - "\t\tendif"
-        - "\t\tset calcinator to ( calcinator + alchemy )"
-        - "\t\tif ( calcinator < 30 )"
-        - "\t\t\tset calcinator to 30"
+        - "\t\tset calcinator to ( calcinator + alchemy - 1 )"
+        - "\t\tif ( calcinator < 29 )"
+        - "\t\t\tset calcinator to 29"
         - "\t\tendif"
         - "\t\tif ( alembic >= calcinator )"
-        - "\t\t\tset alembic to ( calcinator - 1 )"
+        - "\t\t\tset alembic to calcinator"
+        - "\t\telseif ( GetJournalIndex A1_Alembic < 10 )"
+        - "\t\t\tJournal A1_Alembic 10"
         - "\t\tendif"
-        - "\t\tset tempf2 to ( calcinator - alembic )"
+        - "\t\tset tempf2 to ( calcinator + 1 - alembic )"
         - "\t\tset tempf1 to ( Random 100 )"
         - "\t\tset tempf1 to ( tempf1 * tempf2 / 100.0 )"
         - "\t\tset alembic to ( alembic + tempf1 )"
@@ -28476,3 +28478,23 @@
         pc_rank: ~
         padding: 0
     - NAME: "Сегодня я понял, что мне нужна реторта."
+- DIAL:
+    - NAME: A1_Alembic
+    - DATA: Journal
+- INFO:
+    - INAM: "171836544114738525"
+    - PNAM: ""
+    - NNAM: ""
+    - DATA:
+        dialog_type: Journal
+        disp_index: 10
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - NAME: "Сегодня я понял, что мне нужен перегонный куб."
+- DIAL:
+    - META: DELETED
+    - NAME: ""
+    - DATA: 4
+    - DELE: 0
