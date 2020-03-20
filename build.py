@@ -605,7 +605,7 @@ def gen_check_script(kind, ingrs, index, next_kind):
         s.append('endif')
         s.append('set A1V6_AlchemyRes to 0')
     else:
-        s.append('StartScript A1V6_ACheck' + str(index + 1) + '_' + next_kind.name + '_sc')
+        s.append('StartScript A1V6_ACheck' + str(next_kind[0]) + '_' + next_kind[1].name + '_sc')
     s.append('')
     s.append('End')
     return gen_script(check_name, s)
@@ -642,7 +642,7 @@ def gen_del_script(kind, ingrs, index, next_kind):
     if next_kind == None:
         s.append('StartScript A1V6_ADelPlus')
     else:
-        s.append('StartScript A1V6_ADel' + str(index + 1) + '_' + next_kind.name + '_sc')
+        s.append('StartScript A1V6_ADel' + str(next_kind[0]) + '_' + next_kind[1].name + '_sc')
     s.append('')
     s.append('End')
     return gen_script(del_name, s)
@@ -789,8 +789,8 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
     check_scripts = []
     del_scripts = []
     useful_kinds = []
-    index = 1
-    for kind in kinds:
+    for (i, kind) in enumerate(kinds):
+        index = i + 1
         kind_ingrs = filter_and_group_ingredients(ingrs.values(), kind)
         is_useful = False
         for level in [15, 30, 45, 60]:
@@ -800,12 +800,10 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
                 add_items.append(gen_add_item(kind, index, level))
                 add_scripts.append(gen_add_script(kind, level_ingrs, level, index))
         if is_useful:
-            useful_kinds.append((kind, kind_ingrs))
-            index += 1
+            useful_kinds.append((index, kind, kind_ingrs))
     for i in range(0, len(useful_kinds)):
-        index = i + 1
-        (kind, kind_ingrs) = useful_kinds[i]
-        next_kind = useful_kinds[i + 1][0] if i < len(useful_kinds) - 1 else None
+        (index, kind, kind_ingrs) = useful_kinds[i]
+        next_kind = useful_kinds[i + 1] if i < len(useful_kinds) - 1 else None
         check_scripts.append(gen_check_script(kind, kind_ingrs, index, next_kind))
         del_scripts.append(gen_del_script(kind, kind_ingrs, index, next_kind))
 
