@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования без EVA.esp
-        records: 509
+        records: 511
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -15845,7 +15845,7 @@
           shorts: 8
           longs: 0
           floats: 3
-        data_size: 1845
+        data_size: 1901
         var_table_size: 84
     - SCVR:
         - Difficulty
@@ -15859,7 +15859,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNlE1v00AQhnft+CMlgIVKUSUQU1RxqNV2N9+VSKSIQ09cekC5RSY1kBDTKE4P+Y/wk1CZ2fVXlE3htpl5Zmbfd8dx+Zs6pBaDwQCaLuf4w2XwAVrC4anPLOj7ZbCTB7uVYC8PtivBqzzY8jjPjs06nVx2AClngCG4dPhXzhyqYXi0WAOkEBcCMErJ62AkP3cno8X0e5xsPt0v1g4gxVxuPVGDhgMqyPp38u6YwCicl6PbarTHfBifBLdMCFSKHTy6qh6OmK/uJCEk+Pp5dfRNnDqUJdDCfuJ1cKjyH6PFNGOak3R6yuvc5WHhqGxwd7mINvEqUzr+EbBqzKJYfztmU+x9wFTJkfJCXEgSDpiDEM4gVGocyqEZNT+TIg33xif4r0vzhm4ygNRROh16GI8xfNVjGP8O4PbpSKrGN/H6brWmeeJXsB08YA8PdZ7ZWXrdUNYOi94uXufK48+KZxhCWlMZUkVH1cSm10TJRIR6Oe1iOW1m4yG/ul4GDOr2viIlnFMfdC7rg9S5srW4nPr1QplMBp9lC3hZ2SXKhTTHzrdbCqPR7X8YrffR0p+Cdr1drArZBDD+E8Ddy2i5jFbR+j6dfJsk6Gq0mgiJHpHsGquBlMI30YmBtvFbNMJzI9wzw5ER7giP20Yrmo/vmknoSi1QOcAhoWKf0F36EaEmuL9PqAnuCf12dO7qnTvVpcdVCVMUO/sZYX1ZTmvapFm7BcneAtkxFsz3F5gnRHsK8M9SC6Kj1nOii4+qeqJFnHyZTctKN3d5l07MdM9Mz810x0xHZrpF9FtNH1bpdDlbxgb2nWZf7bLrdLaJtnDtj6u8reffraT95fwvRHKI8Q==
+    - SCDT: eJyNVEtv00AQ3rXjR0ooFipFRSCmqOLQKO1u3pFIpIhDT1x6QLlFJjWQENMoTg/5j/CTUJnZtWOHbEov0fibbx7fzGxc/qYMicWg34e6yzl+uAw+QEM4PPGZBV0/B1sZ2C6AnQxsFsBeBjY8zlOzXibLZQeQcAYIwaXDv3LmUAxD02IVkEJcCECUnFfBUH5uj4fzyfcoXn+6m68cQBZzufVEFRr0KSDN38qyowNRqOWlm6q0x3wYnQY3TAhUihk8alUXR5qvepJQJfLVs2Lp6yhxyEtEC/OJ18GR8n8M55OUUx8nkzNe5i6vbSYqK9xdzMN1tEyVjn4ErIhZhHW3MZuw9wFTIcdqFuJCknBAH1ThHKpKjUM+HEbJT6VIQ9+4gkc1zSs6SR8SR+l0aDEeY7jVExj9DuDm6VCqxNfR6na5onriV7ANHrD7+zJPx5nPuqJGO9jkdrGdnseDzRoGkJSUh1SRqZLY7BDwRzGquJmaPlCbtNZ7imCjkbWvDwJBXcJRJrb/Srd/mHY6nEfxl+kk7f8fNBOA09a18R5U5ppax0aU+nqulkOLOU8P97Jwg+SrUm929iqkMC6o+Z8F6Tu29BPS22puTozGCzD6E8Dti3CxCJfh6i4ZfxvHuI1wORYSZ0svpMRKIKXwTezYwLbxDRvJMyO5YyaHRnJLeNw2jqL+8I2ahC7V4eUFHBIq9gndZT8g1ETu7hNqIneE3h3ZbaEknOnQk6KECYqd/gwxPg9Xp021dgPivQGyZQyY7Q8wVwj3BOCfrBZEptZzqoOPi3pC/ZbySDeb8i47NrM7ZvbMzG6Z2aGZ3SD2W80+KrKTxXQRGbjvNPflLneVTNfhFl3Px1WzLWfvVtL9cv4XI92ZbA==
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
@@ -15931,14 +15931,16 @@
         - "\t\tif ( alchemy > mortar )"
         - "\t\t\tset alchemy to mortar"
         - "\t\tendif"
-        - "\t\tset calcinator to ( calcinator + alchemy )"
-        - "\t\tif ( calcinator < 30 )"
-        - "\t\t\tset calcinator to 30"
+        - "\t\tset calcinator to ( calcinator + alchemy - 1 )"
+        - "\t\tif ( calcinator < 29 )"
+        - "\t\t\tset calcinator to 29"
         - "\t\tendif"
         - "\t\tif ( alembic >= calcinator )"
-        - "\t\t\tset alembic to ( calcinator - 1 )"
+        - "\t\t\tset alembic to calcinator"
+        - "\t\telseif ( GetJournalIndex A1_AlchAlembic < 10 )"
+        - "\t\t\tJournal A1_AlchAlembic 10"
         - "\t\tendif"
-        - "\t\tset tempf2 to ( calcinator - alembic )"
+        - "\t\tset tempf2 to ( calcinator + 1 - alembic )"
         - "\t\tset tempf1 to ( Random 100 )"
         - "\t\tset tempf1 to ( tempf1 * tempf2 / 100.0 )"
         - "\t\tset alembic to ( alembic + tempf1 )"
@@ -16021,7 +16023,7 @@
           shorts: 7
           longs: 0
           floats: 3
-        data_size: 1702
+        data_size: 1758
         var_table_size: 73
     - SCVR:
         - state
@@ -16034,7 +16036,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNlEFv2kAQhXdsbDBNW6tKU0Wq1EkV9RAUugsxEKlEQj3k1EsOFTe0JU4LxQ3C5MB/bH9SlczuYmPEOsnFWs9+b3bfY7APYYApMOz3seUD0IvH8Au2uQdplTkY1TbFKCt2CsVuVuwWiudZsVcFWC/PA1pdhgPxvTMazMa/4mT17W62rKBoEn35urhxFacekoqRFkjL34f7ev+rnI3XTDRKx8cQgA+N3ILYA38+k6t44cENMA+Hv0NWrDmq1tuuuar2KWRacoD0QN4USCzSHjbwBBt0D58w2mM+VGpIb2RTWO7tYPtZl4Y906SPaUX7rFB/qjCK8RCH/0K8fjkQuvFVvLxdLNV5/G+4Xayz+/vAJFzD4VF4zTg3vasML/Lensq/Cq9o64U+9gJTV+8oV2qpmzisjvTQRMNMg5NPg8NcWmRX90x7Z92+pkmBp6rPTd6HqFMda345/fZGh6wCPiFPvMnxs+5S1wq111DnuNk4CW4N+uyJoM3sKaIVgEn9LB8VFRPi8H+It2/lfC4XcnmXjn6OEkpVLkZcUEbKtstoQgWv2ejEQrs0/FZ4aoW7dlha4YhXwbVG0Xp81mxGF3qANgdUlFFeZnSXfsSoDe6VGbXBXW5+O7XumJk7NtLDooUxmZ38kaTfyNWYttRZu4KkVCAiq2BaLrCfIEsE9B01htTS+Dky4oOiHzmLkx+T8UbpZSnv0omd7trpqZ2O7LS0021FfzD0fpFO55N5bGE/GvbdLrtMJyu5hZt8PJ1tkP1vhZpfgAeYfHgy
+    - SCDT: eJyNVE1v00AQ3bFjJy6lWKgUFSExRRWHRgm7SZ0PiVSKOPTEpQeUW7SkLiTENIrTQ/4j/CRUZnfjxCHrthdrPPPezLyZsX0IA0yBYa+HDR+AXjyGn7DJPUjLzMGosnFGmbOVc7YzZzvn7GbOThlgZXYDsi7DvvjaGvanox9xsvxyN12UUNQJffkiH7iKUw+JxYgLxOVvw0Md/yynoxUmGqajUwjAh9pagtgHfzaVy3juwQ0wDwc/Q5b3OcrX2fa5yvchZJpyhPRAXhdIWKQYVvEMq9SHTzCKMR9KFaQ3kiksfTvYfFLTsG+S9DAtaZ0lyk8eRmM8xsGfEK+f94VOfBUvbucLVY//Drede+z+PjATruDgJLxmnJvcZYYX69yemn8ZQgo902UvMHV1RKlSpk7isAOkh0ZUUWDNXISjtDa6GuCSkbXvmRLOqoSnTWr/jWn/YNVpfxon38ajVf//eTMBN1ltQZVV5ppex1qUfnupl6MWc0a5eJ3jR115TzNUrKp6c7MzFNy6oPNHFmRuViEaAZhtna9PTI0XcfA3xNtXcjaTc7m4S4ffhwltQ86HXNBs1fW7jC5b8IoNnVjQLn00VvDECm7bwdIKjngZXOsoGg/fqE3oXB/epkBJCeVFQnfRDwi1gTtFQm3gNje7U3aLawmnhnqclzAiseNfkvgbuj5tVWuXkBQSRGQlTIoJ9gqygED/XyNImUbPiSEf5fVI8y1tmF425V10Yke37eiJHR3Z0dKObir0O4M+zKPT2XgWW7DvDfb1LnaRjpdyC27m4+nZBtl3K9T9AvwD0zeIrQ==
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -16092,14 +16094,16 @@
         - "\t\tif ( alchemy > mortar )"
         - "\t\t\tset alchemy to mortar"
         - "\t\tendif"
-        - "\t\tset calcinator to ( calcinator + alchemy )"
-        - "\t\tif ( calcinator < 30 )"
-        - "\t\t\tset calcinator to 30"
+        - "\t\tset calcinator to ( calcinator + alchemy - 1 )"
+        - "\t\tif ( calcinator < 29 )"
+        - "\t\t\tset calcinator to 29"
         - "\t\tendif"
         - "\t\tif ( alembic >= calcinator )"
-        - "\t\t\tset alembic to ( calcinator - 1 )"
+        - "\t\t\tset alembic to calcinator"
+        - "\t\telseif ( GetJournalIndex A1_AlchAlembic < 10 )"
+        - "\t\t\tJournal A1_AlchAlembic 10"
         - "\t\tendif"
-        - "\t\tset tempf2 to ( calcinator - alembic )"
+        - "\t\tset tempf2 to ( calcinator + 1 - alembic )"
         - "\t\tset tempf1 to ( Random 100 )"
         - "\t\tset tempf1 to ( tempf1 * tempf2 / 100.0 )"
         - "\t\tset alembic to ( alembic + tempf1 )"
@@ -20816,6 +20820,21 @@
     - TEXT:
         - "<DIV ALIGN=\"LEFT\"><FONT COLOR=\"000000\" SIZE=\"3\" FACE=\"Magic Cards\"><BR>Ваш навык алхимии вырос.<BR>"
         - ""
+- DIAL:
+    - NAME: A1_AlchAlembic
+    - DATA: Journal
+- INFO:
+    - INAM: "171836544114738525"
+    - PNAM: ""
+    - NNAM: ""
+    - DATA:
+        dialog_type: Journal
+        disp_index: 10
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - NAME: "Сегодня я понял, что мне нужен перегонный куб."
 - DIAL:
     - NAME: A1_AlchRetort
     - DATA: Journal
