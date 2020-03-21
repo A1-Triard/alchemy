@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования с EVA.esp
-        records: 586
+        records: 584
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -48,14 +48,6 @@
     - FLTV: 0.0
 - GLOB:
     - NAME: A1V6_ApparatusZ
-    - FNAM: f
-    - FLTV: 0.0
-- GLOB:
-    - NAME: A1V6_MortarX
-    - FNAM: f
-    - FLTV: 0.0
-- GLOB:
-    - NAME: A1V6_MortarY
     - FNAM: f
     - FLTV: 0.0
 - GLOB:
@@ -19864,9 +19856,9 @@
         vars:
           shorts: 8
           longs: 7
-          floats: 15
-        data_size: 2454
-        var_table_size: 246
+          floats: 13
+        data_size: 2348
+        var_table_size: 230
     - SCVR:
         - doOnce
         - doDisable
@@ -19890,15 +19882,13 @@
         - aSin
         - tempFloat
         - tempFloat2
-        - mortarX
-        - mortarY
         - alembicX
         - alembicY
         - calcinatorX
         - calcinatorY
         - retortX
         - retortY
-    - SCDT: eJytVU1u00AUnnE8dpymxCVFTRUhzSKL0qpguw11JRcU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/TsMCRYrt733vd96bJ2Gi0ImA6ANqaBIuKLRzqdK9PaoT3K629Ff3u63RyB7b3vvJk49eVxeo9mUJowZW4CdhIdb+oTZ8qFAMIO1CraUtPLXfOfunJ2PntYAIBhan6nSjEVoL3X9XfYJAdSaogRsZMYEBDlZpe8k3/Mh2ey2398YZnjfDoKclEDLBw+UpvDvpTTB40OpqrtBPJs+XMdOXMcOXwXwJM3wZga8FyJ762YMNSBfYVyqEQGnnj0rPltO13PecYVcP2O2VtPDxYGIfuw47Lj2sY12tZ0iO3fMGH2zPgQBkXABiEfkKbgH5iUwIPwAFN3ARi9Eh6BLGUbB6EKzBWCyPhIgBVROhqjlByKqYIiqb50LJ/ERmtpd+xU4e80D6GFVpu5ImdqB3+kKO4JAJCjmCI7SgdsAWPA5BEx5HwGNsCa3QbCCt0xPX4cIKhT/a3Llr7DZ3THqvahLIpQ+5GGbVLPjvghWjOqBigPoGFLql0b6I6Dp8yvBpwCfhnyWkUgjKd7FJQUo3EjokrROYWGA6AtfZSOkYGT/NyEQ54Wdah6R1AhOLCT/p2LZjP0VUig0nxIFJhYlDG3OrcWOqGptzq1GZqsbmusX7zfXPBUdvQgYLu3GPxEioiaw71jw7JfO3eKHmziRG1w4kmyuRtXcDZoXNlISSY8SeEhu/leA+xXBJEnafNkHCBlOXMQ5eNTZeQmq8nhWr5iUpmT+JNHLtc2eMblu8KXkCYir9A2DLKf23UpgksgoP84tAordCCutnMCkq1reE1TiG2n/zEB8dz4LIULib1A1qu2Vq29q2qe3+Uwm/ytmiOHJ+l+ShyfTWIPXP8jxWvp01K76IXZK8kBM9wS9rQl0ZIdYsisJeg62Q0tL4si5GzVbk6+j6pSAE3QjbYzVzS8Y0tiBK5i/CGloII+N++Ve04MsQgRhFIPLw2mXf8sHZ2LPHHULhXkEZ9BBQxUcXeRSuMzwe9Bi5NA0z9oIPq9GuHZza3plvvZwrYTqLCb/PHQA9xr8xhTJuxUezewYEsFfq6q00/sLxXo66Oq8BjHynxtcjW3XpXcsoGP8FEi+1FA==
+    - SCDT: eJytVctu00AUnbE9dpykikuKmipCmkUkSkvBdhvqSi4Q8Yi6BYHSbiI3OCXCaaPEPPoLfARLNuzgI/iBrgD1TxDc8diO7TgNCxQpnjn3eWbuvSNjotKJgOh9auoyFlXa+aXR/X1qENyutoyX97qt0cgZO/7byZMPftcQqP5lGaMGVuEnY2Fq/VNrBJBYCCH9QqulPTx13rgHpydj95WACAYtrmrQzUbkLQr/QwsUBGowQQ3CKIgJTAiwRtvLgeNHjtdreb3X7vC8GSU9K4GUCR6uzODdSW+CIYJe13KFAZm8WObcWOacWCaLJcyJZYaxSsCeBuzBB9AF7UsNUqC081ujZyvpszzw3WHXCLXbq2nh48HEOfZcdl1GdI51rZ5Rcp2eP3jn+C4koGARFAsoMPBEFBCZEH4BKm7gApbiSzBkjONkjTBZk2kxHgkRA6oWQlVrgpBdsSRUts6FovWQzC0v45LdPOaJ9DGq0nYlrdiB2ukLOYJDJhBzBEeopHXAF3wOwRI+R6DHtGW0SrOJtE5PPJcLKxT+aHP3jrnX3LXo3apFgEsfuJhW1RKDtWBPUQNQKUQDByrd1mlfQnQDtgpsTdgSvi0gjUJSQYgtClK6mbAhaZvQhcpsBG6zmbIxM3GasYtiIs6sDUnbhC5KiTizueXzKc/w2VrIZ2mGz9aGzSvGC04Wxyshg0X19EeaIpElsm/Zi/wUrW/ShZbbVRhd2VKsMyRWoA2odtYVMko2AvvKrIFWw4mIYcwRNhGbIGGtZSgYh0udNYiQapDlQtX6RIrWZyKPPOfcHaMbNi8rTkBK0a+AtpKyvy1HJJEtPsg/BBKvxBTWz2ByfFgfE16nOdT+W4Tp1XEW32U4uGvUC89229J39B1L3/unI3yvZA/lppJfJXlokt46UO8qi7Ty/azb01HqkeRITdQEH7eEegpCrFhUlS3DuZ6y0vlzW4iLrcAflKvHuhBWI8z/tcycm6qxEV+0vhJW0EKUGY/Ld/ETXYQMpDgDiafXXuKePXd4POh1CIXZhrLwIcBqAGvxCzg4dfyzMTMo5kqYTSmQlAPJMxdAn+mXZ1CmuxSg2ekPApj2de16Gn/u+i9GXYPzgjbu1PijxR6g9AvIVDD+C/FqogM=
     - SCTX:
         - Begin A1V6_ApparatusCont_1_sc
         - ""
@@ -20125,9 +20115,9 @@
         vars:
           shorts: 8
           longs: 7
-          floats: 15
-        data_size: 2454
-        var_table_size: 246
+          floats: 13
+        data_size: 2348
+        var_table_size: 230
     - SCVR:
         - doOnce
         - doDisable
@@ -20151,17 +20141,15 @@
         - aSin
         - tempFloat
         - tempFloat2
-        - mortarX
-        - mortarY
         - alembicX
         - alembicY
         - calcinatorX
         - calcinatorY
         - retortX
         - retortY
-    - SCDT: eJytVU1u00AUnnE8dpymxCVFTRUhzSKL0qpguw11JRcU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/TsMCRYrt733vd96bJ2Gi0ImA6ANqaBIuKLRzqdK9PaoT3K629Ff3u63RyB7b3vvJk49e1xCo9mUJowZW4CdhIdb+oTZ8qFAMIO1CraUtPLXfOfunJ2PntYAIBhan6nSjEVoL3X9XfYJAdSaogRsZMYEBDlZpe8k3/Mh2ey2398YZnjfDoKclEDLBw+UpvDvpTTB40OpqrtBPJs+XMdOXMcOXwXwJM3wZga8FyJ762YMNSBfYVyqEQGnnj0rPltO13PecYdcI2O2VtPDxYGIfuw47Lj2sY12tZ0iO3fMGH2zPgQBkXABiEfkKbgH5iUwIPwAFN3ARi9Eh6BLGUbB6EKzBWCyPhIgBVROhqjlByKqYIiqb50LJ/ERmtpd+xU4e80D6GFVpu5ImdqB3+kKO4JAJCjmCI7SgdsAWPA5BEx5HwGNsCa3QbCCt0xPX4cIKhT/a3Llr7DZ3THqvahLIpQ+5GGbVLPjvghWjOqBigPoGFLql0b6I6Dp8yvBpwCfhnyWkUgjKd7FJQUo3EjokrROYWGA6AtfZSOkYGT/NyEQ54Wdah6R1AhOLCT/p2LZjP0VUig0nxIFJhYlDG3OrcWOqGptzq1GZqsbmusX7zfXPBUdvQgYLu3GPxEioiaw71jw7JfO3eKHmziRG1w4kmyuRtXcDZoXNlISSY8SeEhu/leA+xXBJEnafNkHCBlOXMQ5eNTZeQmq8nhWr5iUpmT+JNHLtc2eMblu8KXkCYir9A2DLKf23UpgksgoP84tAordCCutnMCkq1reE1TiG2n/zEB8dz4LIULib1A1qu2Vq29q2qe3+Uwm/ytmiOHJ+l+ShyfTWIPXP8jxWvp01K76IXZK8kBM9wS9rQl0ZIdYsisJeg62Q0tL4si5GzVbk6+j6pSAE3QjbYzVzS8Y0tiBK5i/CGloII+N++Ve04MsQgRhFIPLw2mXf8sHZ2LPHHULhXkEZ9BBQxUcXeRSuMzwe9Bi5NA0z9oIPq9GuHZza3plvvZwrYTqLCb/PHQA9xr8xhTJuxUezewYEsFfq6q00/sLxXo66Bq8BjHynxtcjW3XpXcsoGP8FOr21Gw==
+    - SCDT: eJytVctu00AUnbE9dpykikuKmipCmkUkSkvBdhvqSi4Q8Yi6BYHSbiI3OCXCaaPEPPoLfARLNuzgI/iBrgD1TxDc8diO7TgNCxQpnjn3eWbuvSNjotKJgOh9auoyFlXa+aXR/X1qENyutoyX97qt0cgZO/7byZMPftcUqP5lGaMGVuEnY2Fq/VNrBJBYCCH9QqulPTx13rgHpydj95WACAYtrmrQzUbkLQr/QwsUBGowQQ3CKIgJTAiwRtvLgeNHjtdreb3X7vC8GSU9K4GUCR6uzODdSW+CIYJe13KFAZm8WObcWOacWCaLJcyJZYaxSsCeBuzBB9AF7UsNUqC081ujZyvpszzw3WHXDLXbq2nh48HEOfZcdl1GdI51rZ5Rcp2eP3jn+C4koGARFAsoMPBEFBCZEH4BKm7gApbiSzBkjONkjTBZk2kxHgkRA6oWQlVrgpBdsSRUts6FovWQzC0v45LdPOaJ9DGq0nYlrdiB2ukLOYJDJhBzBEeopHXAF3wOwRI+R6DHtGW0SrOJtE5PPJcLKxT+aHP3jrnX3LXo3apFgEsfuJhW1RKDtWBPUQNQKUQDByrd1mlfQnQDtgpsTdgSvi0gjUJSQYgtClK6mbAhaZvQhcpsBG6zmbIxM3GasYtiIs6sDUnbhC5KiTizueXzKc/w2VrIZ2mGz9aGzSvGC04Wxyshg0X19EeaIpElsm/Zi/wUrW/ShZbbVRhd2VKsMyRWoA2odtYVMko2AvvKrIFWw4mIYcwRNhGbIGGtZSgYh0udNYiQapDlQtX6RIrWZyKPPOfcHaMbNi8rTkBK0a+AtpKyvy1HJJEtPsg/BBKvxBTWz2ByfFgfE16nOdT+W4Tp1XEW32U4uGvUC89229J39B1L3/unI3yvZA/lppJfJXlokt46UO8qi7Ty/azb01HqkeRITdQEH7eEegpCrFhUlS3DuZ6y0vlzW4iLrcAflKvHuhBWI8z/tcycm6qxEV+0vhJW0EKUGY/Ld/ETXYQMpDgDiafXXuKePXd4POh1CIXZhrLwIcBqAGvxCzg4dfyzMTMo5kqYTSmQlAPJMxdAn+mXZ1CmuxSg2ekPApj2de16Gn/u+i9GXZPzgjbu1PijxR6g9AvIVDD+CxgHogo=
     - SCTX:
-        - Begin A1V6_ApparatusCont_1_sc
+        - Begin A1V6_ApparatusCont_2_sc
         - ""
         - short doOnce
         - short doDisable
@@ -20386,9 +20374,9 @@
         vars:
           shorts: 8
           longs: 7
-          floats: 15
-        data_size: 2454
-        var_table_size: 246
+          floats: 13
+        data_size: 2348
+        var_table_size: 230
     - SCVR:
         - doOnce
         - doDisable
@@ -20412,17 +20400,15 @@
         - aSin
         - tempFloat
         - tempFloat2
-        - mortarX
-        - mortarY
         - alembicX
         - alembicY
         - calcinatorX
         - calcinatorY
         - retortX
         - retortY
-    - SCDT: eJytVU1u00AUnnE8dpykxCVFTRUhzSKL0qpgOw11pRQU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/TsMCRYrt733vd96bJ2Gi0KmA6ANqaBLOKbR7qdK9PaoT3Km09Vf3e+3x2JpY7vvpk49uryFQ7csyRnWswE/CQqT9Q617UC7vQ9qFWk1aeGq9s/dPTyb2awERDCxO1elmPbAWuP+uegSB6kxQBTcyYgIDHKzRzrJn+JHl9NtO/409Om8GQc9KIGSCRyszeG/an2LwoNXUTKGXTJYvY64vY44vg/kS5vgyfF9FyJ562YMNSBfYVyqEQGn3j0rPVpK13HftUa/hszurSeHj4dQ6dmx2XHpQx5paS5Fsq+8OP1iuDQHIOAfEPPIUnBzyEpkSfgAKruM8FsND0CWMw2B1P1iDsVgeMREDKiZCFXOKUKtsiqhkngsF8xOZ2176FTt5zAMZYFShnXKS2IXeGQgZgkMmyGUIjlBR7YIteByCJjyOgMfYElql6UDapyeOzYVlCn+0uXPX2G3umPRexSSQywByMcyKmfPehVaE6oCKPuoZUGhDowMR0Q34lOHTgE/CPwtIpRCU52KLgpRuxnRIUsc3UWQ6AtfZTOgYKT/N0EQp5mdWhyR1fBNLMT/J2LYjP3lUiAzHxL5JhYkDGwurcWOmGlsLq1GeqcbWRov3m+OdCw7fhBQWdOMeiZBAE7XutBbZKZi/xQs1cyYxunYg2VyJrL3rMCtspiQUHyP2lNj4rfr3KYZLkrD7tAkSNpi6jLH/qrHxEhLj9SxfMS9JwfxJpLFjndsTdLvFm5InICbSPwC2nNB/KwVJolbuYXYRSPiWS2CDFCaFxfoWsxrFUP1vHqKj41kQGQp3kzp+bRumtq1tm9ruP5Xwq5wuii1nd0kWGk9vHVL/LC9iZdtZb0UXsUPiF3KsJ/hlTagjI8SaRVHYq78VEloaX9b5sNnyfB1dvxQEvxthe6ylbsmIxhZEwfxFWEMLQWTcL/8KF3wJIhDDCEQeXqfkWT44m7jWpEso3CsohR4CqnjoEo/CsUfHwz4jF2Zhxi56sBru2uGp5Z551kuZEqazFPP73AbQZfwbMyjjlj00vWdAAHulpt5K4i9s9+W41+A1gJHvVvl6ZKsuuWsZBeO/Y0u1Ig==
+    - SCDT: eJytVctu00AUnbE9dpykikuKmipCmkUkSkvBdhrqSi4Q8Yi6BYHSbiI3OCXCaaPEPPoLfARLNuzgI/iBrgD1TxDc8diO7TgtCxQpnjn3eWbuvSNjotKpgOh9auoyFlXa/aXRvT1qENypto2X93rt8diZOP7b6ZMPfq8pUP3LMkYNrMJPxsLM+qfWCCCxEEL6uVZLe3jqvHH3T44n7isBEQxaXNWgm43IWxT+hxYoCNRgghqEURATmBBgjXaWA8ePHK/f9vqv3dFZK0p6XgIpEzxamcN70/4UQwS9ruUKAzJ5scyFscwFsUwWS1gQywxjlYA9DdiDD6AL2hcapEBp97dGT1fSZ7nvu6NeM9TurKaFj4dT58hz2XUZ0TnWtXpGyXX6/vCd47uQgIJFUCygwMATUUBkSvgFqLiBC1iKL8GQMY6TNcJkTabFeCREDKhaCFWtKUJ2xZJQ2ToTitZDsrC8jAt285gnMsCoSjuVtGIXamcg5AgOmEDMERyiktYFX/A5AEv4HIIe05bRKs0m0j459lwurFD4o62dO+Zua8eid6sWAS4D4GJaVUsM1oI9Qw1ApRANHKi0qdOBhOgGbBXYmrAlfFtAGoWkghBbFKR0M2FD0jahC5XZCNxmM2VjZuK0YhfFRJx5G5K2CV2UEnHmc8vnU57js3Uln6U5PlsbNq8YLzhZHK+EDBbV0x9phkSWyL5lX+WnaH2TzrXcrsLo0pZinSGxAm1AtbOukFGyEdhXZg20Gk5EDGOOsInYAglrLUPBOFzqrEGEVIMsF6rWJ1K0PhN57Dln7gTdsHlZcQJSin4FtJWU/W05Iols8UH+IZB4JaawQQaT48P6mPA6y6H23yLMro6z+C7DwV2jXni2TUvf1rctffefjvC9kj2Um0p+leShSXrrQL2nXKWV72fdno1SjyRHaqIm+Lgl1FMQYsWiqmwZzvWUlc6f20JcbAX+oFw+1oWwGmH+r2Xm3EyNjfii9ZWwghaizHhcvouf6CJkIMUZSDy9zhL37Lmjo2G/SyjMNpSFDwBWA1iLX8DhieOfTphBMVfCbEqBpBxInrkA+ky/PIcy3aUAzU5/EMC0r2vX0/hz138x7jU5L2jjbo0/WuwBSr+ATAXjvz6VohE=
     - SCTX:
-        - Begin A1V6_ApparatusCont_1_sc
+        - Begin A1V6_ApparatusCont_3_sc
         - ""
         - short doOnce
         - short doDisable

@@ -7,7 +7,13 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования без EVA.esp
-        records: 503
+        records: 500
+    - MAST: Morrowind.esm
+    - DATA: 79764287
+    - MAST: Tribunal.esm
+    - DATA: 6616539
+    - MAST: Bloodmoon.esm
+    - DATA: 11799703
 - GLOB:
     - NAME: Gals__CharDev_Present
     - FNAM: s
@@ -42,14 +48,6 @@
     - FLTV: 0.0
 - GLOB:
     - NAME: A1V6_ApparatusZ
-    - FNAM: f
-    - FLTV: 0.0
-- GLOB:
-    - NAME: A1V6_MortarX
-    - FNAM: f
-    - FLTV: 0.0
-- GLOB:
-    - NAME: A1V6_MortarY
     - FNAM: f
     - FLTV: 0.0
 - GLOB:
@@ -19779,8 +19777,8 @@
     - DATA: Journal
 - INFO:
     - INAM: "171836544114738525"
-    - PNAM: "\u0000"
-    - NNAM: "\u0000"
+    - PNAM: ""
+    - NNAM: ""
     - DATA:
         dialog_type: Journal
         disp_index: 10
@@ -19794,8 +19792,8 @@
     - DATA: Journal
 - INFO:
     - INAM: "2091323223566931083"
-    - PNAM: "\u0000"
-    - NNAM: "\u0000"
+    - PNAM: ""
+    - NNAM: ""
     - DATA:
         dialog_type: Journal
         disp_index: 10
