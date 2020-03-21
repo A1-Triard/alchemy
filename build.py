@@ -278,156 +278,6 @@ def gen_add_script(kind, ingrs, level, index):
     s.append('')
     s.append('set PCSkipEquip to 1')
     s.append('')
-    s.append('if ( state == 2 )')
-    s.append('	StartScript A1V6_AlchemyCheck_sc')
-    s.append('	set state to 0')
-    s.append('	if ( A1V6_AlchemyRes < 4 )')
-    s.append('		return')
-    s.append('	endif')
-    s.append('')
-    s.append('	set add to 0')
-    s.append('')
-    if groups:
-        s.append('	set in to 0')
-        n_in = 0;
-        for g in range(0, len(groups)):
-            if g == 1 and g == len(groups) - 1:
-                s.append('	if ( in > 0 )')
-            elif g == len(groups) - 1:
-                s.append('	if ( add == 0 )')
-                s.append('		if ( in > 0 )')
-            elif g > 1:
-                s.append('	if ( add == 0 )')
-            for i in range(0, len(groups[g])):
-                n_in += 1
-                if g == 0 and i == 0:
-                    s.append('	if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                    s.append('		set in to 1')
-                elif g == 0:
-                    s.append('	elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                    s.append('		set in to ' + str(n_in) + '')
-                elif g == 1 and i == 0 and g == len(groups) - 1:
-                    s.append('		if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                    s.append('			set add to 1')
-                    s.append('			player->RemoveItem "' + groups[g][i].name + '", 1')
-                elif g == 1 and g == len(groups) - 1:
-                    s.append('		elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                    s.append('			set add to 1')
-                    s.append('			player->RemoveItem "' + groups[g][i].name + '", 1')
-                elif g == 1 and i == 0:
-                    s.append('	if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                    s.append('		if ( in > 0 )')
-                    s.append('			set add to 1')
-                    s.append('			player->RemoveItem "' + groups[g][i].name + '", 1')
-                    s.append('		else')
-                    s.append('			set in to ' + str(n_in) + '')
-                    s.append('		endif')
-                elif g == 1:
-                    s.append('	elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                    s.append('		if ( in > 0 )')
-                    s.append('			set add to 1')
-                    s.append('			player->RemoveItem "' + groups[g][i].name + '", 1')
-                    s.append('		else')
-                    s.append('			set in to ' + str(n_in) + '')
-                    s.append('		endif')
-                elif i == 0 and g == len(groups) - 1:
-                    s.append('			if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                    s.append('				set add to 1')
-                    s.append('				player->RemoveItem "' + groups[g][i].name + '", 1')
-                elif i == 0:
-                    s.append('		if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                    s.append('			if ( in > 0 )')
-                    s.append('				set add to 1')
-                    s.append('				player->RemoveItem "' + groups[g][i].name + '", 1')
-                    s.append('			else')
-                    s.append('				set in to ' + str(n_in) + '')
-                    s.append('			endif')
-                elif g == len(groups) - 1:
-                    s.append('			elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                    s.append('				set add to 1')
-                    s.append('				player->RemoveItem "' + groups[g][i].name + '", 1')
-                else:
-                    s.append('		elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                    s.append('			if ( in > 0 )')
-                    s.append('				set add to 1')
-                    s.append('				player->RemoveItem "' + groups[g][i].name + '", 1')
-                    s.append('			else')
-                    s.append('				set in to ' + str(n_in) + '')
-                    s.append('			endif')
-            if g == 1 and g == len(groups) - 1:
-                s.append('		endif')
-            elif g == len(groups) - 1:
-                s.append('			endif')
-                s.append('		endif')
-            elif g > 1:
-                s.append('		endif')
-            s.append('	endif')
-        s.append('	if ( add == 1 )')
-        max_in = n_in
-        n_in = 0
-        if max_in == 2:
-            s.append('		player->RemoveItem "' + groups[1][0].name + '", 1')
-        else:
-            for g in range(0, len(groups)):
-                for i in range(0, len(groups[g])):
-                    n_in += 1
-                    if n_in == 1:
-                        s.append('		if ( in == 1 )')
-                    elif n_in == max_in - 1:
-                        s.append('		else')
-                    elif n_in != max_in:
-                        s.append('		elseif ( in == ' + str(n_in) + ' )')
-                    if n_in != max_in:
-                        s.append('			player->RemoveItem "' + groups[g][i].name + '", 1')
-            s.append('		endif')
-        s.append('	endif')
-    n_pair = 0
-    for p in pairs:
-        n_pair += 1
-        if not groups and n_pair == 1:
-            s.append('	if ( player->GetItemCount "' + p[0].name + '" > 0 )')
-            s.append('		if ( player->GetItemCount "' + p[1].name + '" > 0 )')
-            s.append('			player->RemoveItem "' + p[0].name + '", 1')
-            s.append('			player->RemoveItem "' + p[1].name + '", 1')
-            s.append('			set add to 1')
-            s.append('		endif')
-            s.append('	endif')
-        else:
-            s.append('	if ( add == 0 )')
-            s.append('		if ( player->GetItemCount "' + p[0].name + '" > 0 )')
-            s.append('			if ( player->GetItemCount "' + p[1].name + '" > 0 )')
-            s.append('				player->RemoveItem "' + p[0].name + '", 1')
-            s.append('				player->RemoveItem "' + p[1].name + '", 1')
-            s.append('				set add to 1')
-            s.append('			endif')
-            s.append('		endif')
-            s.append('	endif')
-    s.append('')
-    s.append('	if ( add == 0 )')
-    s.append('		set A1V6_AlchemyRes to 1')
-    s.append('		return')
-    s.append('	endif')
-    if type(kind.potion) == Potion2:
-        s.append('	if ( A1V6_AlchemyRes == 5 )')
-        s.append('		player->AddItem ' + kind.potion.id_1 + ', 1')
-        s.append('	else')
-        s.append('		player->AddItem ' + kind.potion.id_1 + ', 2')
-        s.append('	endif')
-    else:
-        s.append('	if ( A1V6_AlchemyRes == 5 )')
-        s.append('		player->AddItem ' + kind.potion.id_broken_1 + ', 1')
-        s.append('	elseif ( A1V6_AlchemyRes == 6 )')
-        s.append('		player->AddItem ' + kind.potion.id_cheap_1 + ', 1')
-        s.append('	elseif ( A1V6_AlchemyRes == 7 )')
-        s.append('		player->AddItem ' + kind.potion.id_standard_1 + ', 1')
-        s.append('	elseif ( A1V6_AlchemyRes == 8 )')
-        s.append('		player->AddItem ' + kind.potion.id_qualitative_1 + ', 1')
-        s.append('	else')
-        s.append('		player->AddItem ' + kind.potion.id_exclusive_1 + ', 1')
-        s.append('	endif')
-    s.append('	return')
-    s.append('endif')
-    s.append('')
     s.append('if ( state == 1 )')
     s.append('	if ( A1V6_AlchemyRes != 0 )')
     s.append('		if ( ScriptRunning A1V6_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + '_sc == 0 )')
@@ -437,16 +287,165 @@ def gen_add_script(kind, ingrs, level, index):
     s.append('	return')
     s.append('endif')
     s.append('')
-    s.append('if ( OnPCEquip == 1 )')
-    s.append('set OnPCEquip to 0')
+    s.append('if ( state == 0 )')
+    s.append('	if ( OnPCEquip == 1 )')
+    s.append('		set OnPCEquip to 0')
     s.append('')
     if type(kind.potion) == Potion2:
-        s.append('set A1V6_CalcAlchemy2_sc.Difficulty to ' + str(kind.potion.difficulty))
-    s.append('set A1V6_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + ' to 1')
-    s.append('set A1V6_AlchemyRes to 0')
-    s.append('set state to 1')
-    s.append('')
+        s.append('		set A1V6_CalcAlchemy2_sc.Difficulty to ' + str(kind.potion.difficulty))
+    s.append('		set A1V6_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + ' to 1')
+    s.append('		set A1V6_AlchemyRes to 0')
+    s.append('		set state to 1')
+    s.append('	endif')
+    s.append('	return')
     s.append('endif')
+    s.append('')
+    s.append('StartScript A1V6_AlchemyCheck_sc')
+    s.append('set state to 0')
+    s.append('if ( A1V6_AlchemyRes < 4 )')
+    s.append('	return')
+    s.append('endif')
+    s.append('')
+    s.append('set add to 0')
+    s.append('')
+    if groups:
+        s.append('set in to 0')
+        n_in = 0;
+        for g in range(0, len(groups)):
+            if g == 1 and g == len(groups) - 1:
+                s.append('if ( in > 0 )')
+            elif g == len(groups) - 1:
+                s.append('if ( add == 0 )')
+                s.append('	if ( in > 0 )')
+            elif g > 1:
+                s.append('if ( add == 0 )')
+            for i in range(0, len(groups[g])):
+                n_in += 1
+                if g == 0 and i == 0:
+                    s.append('if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    s.append('	set in to 1')
+                elif g == 0:
+                    s.append('elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    s.append('	set in to ' + str(n_in) + '')
+                elif g == 1 and i == 0 and g == len(groups) - 1:
+                    s.append('	if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    s.append('		set add to 1')
+                    s.append('		player->RemoveItem "' + groups[g][i].name + '", 1')
+                elif g == 1 and g == len(groups) - 1:
+                    s.append('	elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    s.append('		set add to 1')
+                    s.append('		player->RemoveItem "' + groups[g][i].name + '", 1')
+                elif g == 1 and i == 0:
+                    s.append('if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    s.append('	if ( in > 0 )')
+                    s.append('		set add to 1')
+                    s.append('		player->RemoveItem "' + groups[g][i].name + '", 1')
+                    s.append('	else')
+                    s.append('		set in to ' + str(n_in) + '')
+                    s.append('	endif')
+                elif g == 1:
+                    s.append('elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    s.append('	if ( in > 0 )')
+                    s.append('		set add to 1')
+                    s.append('		player->RemoveItem "' + groups[g][i].name + '", 1')
+                    s.append('	else')
+                    s.append('		set in to ' + str(n_in) + '')
+                    s.append('	endif')
+                elif i == 0 and g == len(groups) - 1:
+                    s.append('		if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    s.append('			set add to 1')
+                    s.append('			player->RemoveItem "' + groups[g][i].name + '", 1')
+                elif i == 0:
+                    s.append('	if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    s.append('		if ( in > 0 )')
+                    s.append('			set add to 1')
+                    s.append('			player->RemoveItem "' + groups[g][i].name + '", 1')
+                    s.append('		else')
+                    s.append('			set in to ' + str(n_in) + '')
+                    s.append('		endif')
+                elif g == len(groups) - 1:
+                    s.append('		elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    s.append('			set add to 1')
+                    s.append('			player->RemoveItem "' + groups[g][i].name + '", 1')
+                else:
+                    s.append('	elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    s.append('		if ( in > 0 )')
+                    s.append('			set add to 1')
+                    s.append('			player->RemoveItem "' + groups[g][i].name + '", 1')
+                    s.append('		else')
+                    s.append('			set in to ' + str(n_in) + '')
+                    s.append('		endif')
+            if g == 1 and g == len(groups) - 1:
+                s.append('	endif')
+            elif g == len(groups) - 1:
+                s.append('		endif')
+                s.append('	endif')
+            elif g > 1:
+                s.append('	endif')
+            s.append('endif')
+        s.append('if ( add == 1 )')
+        max_in = n_in
+        n_in = 0
+        if max_in == 2:
+            s.append('	player->RemoveItem "' + groups[1][0].name + '", 1')
+        else:
+            for g in range(0, len(groups)):
+                for i in range(0, len(groups[g])):
+                    n_in += 1
+                    if n_in == 1:
+                        s.append('	if ( in == 1 )')
+                    elif n_in == max_in - 1:
+                        s.append('	else')
+                    elif n_in != max_in:
+                        s.append('	elseif ( in == ' + str(n_in) + ' )')
+                    if n_in != max_in:
+                        s.append('		player->RemoveItem "' + groups[g][i].name + '", 1')
+            s.append('	endif')
+        s.append('endif')
+    n_pair = 0
+    for p in pairs:
+        n_pair += 1
+        if not groups and n_pair == 1:
+            s.append('if ( player->GetItemCount "' + p[0].name + '" > 0 )')
+            s.append('	if ( player->GetItemCount "' + p[1].name + '" > 0 )')
+            s.append('		player->RemoveItem "' + p[0].name + '", 1')
+            s.append('		player->RemoveItem "' + p[1].name + '", 1')
+            s.append('		set add to 1')
+            s.append('	endif')
+            s.append('endif')
+        else:
+            s.append('if ( add == 0 )')
+            s.append('	if ( player->GetItemCount "' + p[0].name + '" > 0 )')
+            s.append('		if ( player->GetItemCount "' + p[1].name + '" > 0 )')
+            s.append('			player->RemoveItem "' + p[0].name + '", 1')
+            s.append('			player->RemoveItem "' + p[1].name + '", 1')
+            s.append('			set add to 1')
+            s.append('		endif')
+            s.append('	endif')
+            s.append('endif')
+    s.append('')
+    s.append('if ( add == 0 )')
+    s.append('	set A1V6_AlchemyRes to 1')
+    s.append('	return')
+    s.append('endif')
+    if type(kind.potion) == Potion2:
+        s.append('if ( A1V6_AlchemyRes == 5 )')
+        s.append('	player->AddItem ' + kind.potion.id_1 + ', 1')
+        s.append('else')
+        s.append('	player->AddItem ' + kind.potion.id_1 + ', 2')
+        s.append('endif')
+    else:
+        s.append('if ( A1V6_AlchemyRes == 5 )')
+        s.append('	player->AddItem ' + kind.potion.id_broken_1 + ', 1')
+        s.append('elseif ( A1V6_AlchemyRes == 6 )')
+        s.append('	player->AddItem ' + kind.potion.id_cheap_1 + ', 1')
+        s.append('elseif ( A1V6_AlchemyRes == 7 )')
+        s.append('	player->AddItem ' + kind.potion.id_standard_1 + ', 1')
+        s.append('elseif ( A1V6_AlchemyRes == 8 )')
+        s.append('	player->AddItem ' + kind.potion.id_qualitative_1 + ', 1')
+        s.append('else')
+        s.append('	player->AddItem ' + kind.potion.id_exclusive_1 + ', 1')
+        s.append('endif')
     s.append('')
     s.append('End')
     return gen_script(add_name, s)

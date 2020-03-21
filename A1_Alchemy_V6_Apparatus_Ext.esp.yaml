@@ -19,82 +19,6 @@
     - ''
     - set PCSkipEquip to 1
     - ''
-    - if ( state == 2 )
-    - "\tStartScript A1V6_AlchemyCheck_sc"
-    - "\tset state to 0"
-    - "\tif ( A1V6_AlchemyRes < 4 )"
-    - "\t\treturn"
-    - "\tendif"
-    - ''
-    - "\tset add to 0"
-    - ''
-    - "\tset in to 0"
-    - "\tif ( player->GetItemCount \"ingred_wolf_heart\" > 0 )"
-    - "\t\tset in to 1"
-    - "\telseif ( player->GetItemCount \"ingred_innocent_heart\" > 0 )"
-    - "\t\tset in to 2"
-    - "\telseif ( player->GetItemCount \"ingred_daedras_heart_01\" > 0 )"
-    - "\t\tset in to 3"
-    - "\telseif ( player->GetItemCount \"ingred_udyrfrykte_heart\" > 0 )"
-    - "\t\tset in to 4"
-    - "\tendif"
-    - "\tif ( player->GetItemCount \"rvr_ashes_corpse_01\" > 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tset add to 1"
-    - "\t\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
-    - "\t\telse"
-    - "\t\t\tset in to 5"
-    - "\t\tendif"
-    - "\telseif ( player->GetItemCount \"ingred_void_salts_01\" > 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tset add to 1"
-    - "\t\t\tplayer->RemoveItem \"ingred_void_salts_01\", 1"
-    - "\t\telse"
-    - "\t\t\tset in to 6"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tif ( player->GetItemCount \"ingred_heartwood_01\" > 0 )"
-    - "\t\t\t\tset add to 1"
-    - "\t\t\t\tplayer->RemoveItem \"ingred_heartwood_01\", 1"
-    - "\t\t\tendif"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 1 )"
-    - "\t\tif ( in == 1 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_wolf_heart\", 1"
-    - "\t\telseif ( in == 2 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_innocent_heart\", 1"
-    - "\t\telseif ( in == 3 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_daedras_heart_01\", 1"
-    - "\t\telseif ( in == 4 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_udyrfrykte_heart\", 1"
-    - "\t\telseif ( in == 5 )"
-    - "\t\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
-    - "\t\telse"
-    - "\t\t\tplayer->RemoveItem \"ingred_void_salts_01\", 1"
-    - "\t\tendif"
-    - "\tendif"
-    - ''
-    - "\tif ( add == 0 )"
-    - "\t\tset A1V6_AlchemyRes to 1"
-    - "\t\treturn"
-    - "\tendif"
-    - "\tif ( A1V6_AlchemyRes == 5 )"
-    - "\t\tplayer->AddItem p_restore_magicka_b, 1"
-    - "\telseif ( A1V6_AlchemyRes == 6 )"
-    - "\t\tplayer->AddItem p_restore_magicka_c, 1"
-    - "\telseif ( A1V6_AlchemyRes == 7 )"
-    - "\t\tplayer->AddItem p_restore_magicka_s, 1"
-    - "\telseif ( A1V6_AlchemyRes == 8 )"
-    - "\t\tplayer->AddItem p_restore_magicka_q, 1"
-    - "\telse"
-    - "\t\tplayer->AddItem p_restore_magicka_e, 1"
-    - "\tendif"
-    - "\treturn"
-    - endif
-    - ''
     - if ( state == 1 )
     - "\tif ( A1V6_AlchemyRes != 0 )"
     - "\t\tif ( ScriptRunning A1V6_CalcAlchemy5_sc == 0 )"
@@ -104,13 +28,88 @@
     - "\treturn"
     - endif
     - ''
-    - if ( OnPCEquip == 1 )
-    - set OnPCEquip to 0
+    - if ( state == 0 )
+    - "\tif ( OnPCEquip == 1 )"
+    - "\t\tset OnPCEquip to 0"
     - ''
-    - set A1V6_CalcAlchemy5 to 1
-    - set A1V6_AlchemyRes to 0
-    - set state to 1
+    - "\t\tset A1V6_CalcAlchemy5 to 1"
+    - "\t\tset A1V6_AlchemyRes to 0"
+    - "\t\tset state to 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
     - ''
+    - StartScript A1V6_AlchemyCheck_sc
+    - set state to 0
+    - if ( A1V6_AlchemyRes < 4 )
+    - "\treturn"
+    - endif
+    - ''
+    - set add to 0
+    - ''
+    - set in to 0
+    - if ( player->GetItemCount "ingred_wolf_heart" > 0 )
+    - "\tset in to 1"
+    - elseif ( player->GetItemCount "ingred_innocent_heart" > 0 )
+    - "\tset in to 2"
+    - elseif ( player->GetItemCount "ingred_daedras_heart_01" > 0 )
+    - "\tset in to 3"
+    - elseif ( player->GetItemCount "ingred_udyrfrykte_heart" > 0 )
+    - "\tset in to 4"
+    - endif
+    - if ( player->GetItemCount "rvr_ashes_corpse_01" > 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tset add to 1"
+    - "\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
+    - "\telse"
+    - "\t\tset in to 5"
+    - "\tendif"
+    - elseif ( player->GetItemCount "ingred_void_salts_01" > 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tset add to 1"
+    - "\t\tplayer->RemoveItem \"ingred_void_salts_01\", 1"
+    - "\telse"
+    - "\t\tset in to 6"
+    - "\tendif"
+    - endif
+    - if ( add == 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tif ( player->GetItemCount \"ingred_heartwood_01\" > 0 )"
+    - "\t\t\tset add to 1"
+    - "\t\t\tplayer->RemoveItem \"ingred_heartwood_01\", 1"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - if ( add == 1 )
+    - "\tif ( in == 1 )"
+    - "\t\tplayer->RemoveItem \"ingred_wolf_heart\", 1"
+    - "\telseif ( in == 2 )"
+    - "\t\tplayer->RemoveItem \"ingred_innocent_heart\", 1"
+    - "\telseif ( in == 3 )"
+    - "\t\tplayer->RemoveItem \"ingred_daedras_heart_01\", 1"
+    - "\telseif ( in == 4 )"
+    - "\t\tplayer->RemoveItem \"ingred_udyrfrykte_heart\", 1"
+    - "\telseif ( in == 5 )"
+    - "\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
+    - "\telse"
+    - "\t\tplayer->RemoveItem \"ingred_void_salts_01\", 1"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( add == 0 )
+    - "\tset A1V6_AlchemyRes to 1"
+    - "\treturn"
+    - endif
+    - if ( A1V6_AlchemyRes == 5 )
+    - "\tplayer->AddItem p_restore_magicka_b, 1"
+    - elseif ( A1V6_AlchemyRes == 6 )
+    - "\tplayer->AddItem p_restore_magicka_c, 1"
+    - elseif ( A1V6_AlchemyRes == 7 )
+    - "\tplayer->AddItem p_restore_magicka_s, 1"
+    - elseif ( A1V6_AlchemyRes == 8 )
+    - "\tplayer->AddItem p_restore_magicka_q, 1"
+    - else
+    - "\tplayer->AddItem p_restore_magicka_e, 1"
     - endif
     - ''
     - End
@@ -135,118 +134,6 @@
     - ''
     - set PCSkipEquip to 1
     - ''
-    - if ( state == 2 )
-    - "\tStartScript A1V6_AlchemyCheck_sc"
-    - "\tset state to 0"
-    - "\tif ( A1V6_AlchemyRes < 4 )"
-    - "\t\treturn"
-    - "\tendif"
-    - ''
-    - "\tset add to 0"
-    - ''
-    - "\tset in to 0"
-    - "\tif ( player->GetItemCount \"ingred_wolf_heart\" > 0 )"
-    - "\t\tset in to 1"
-    - "\telseif ( player->GetItemCount \"ingred_heartwood_01\" > 0 )"
-    - "\t\tset in to 2"
-    - "\telseif ( player->GetItemCount \"rvr_ashes_corpse_01\" > 0 )"
-    - "\t\tset in to 3"
-    - "\telseif ( player->GetItemCount \"ingred_void_salts_01\" > 0 )"
-    - "\t\tset in to 4"
-    - "\telseif ( player->GetItemCount \"ingred_innocent_heart\" > 0 )"
-    - "\t\tset in to 5"
-    - "\telseif ( player->GetItemCount \"ingred_daedras_heart_01\" > 0 )"
-    - "\t\tset in to 6"
-    - "\telseif ( player->GetItemCount \"ingred_udyrfrykte_heart\" > 0 )"
-    - "\t\tset in to 7"
-    - "\tendif"
-    - "\tif ( player->GetItemCount \"ingred_belladonna_01\" > 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tset add to 1"
-    - "\t\t\tplayer->RemoveItem \"ingred_belladonna_01\", 1"
-    - "\t\telse"
-    - "\t\t\tset in to 8"
-    - "\t\tendif"
-    - "\telseif ( player->GetItemCount \"ingred_belladonna_02\" > 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tset add to 1"
-    - "\t\t\tplayer->RemoveItem \"ingred_belladonna_02\", 1"
-    - "\t\telse"
-    - "\t\t\tset in to 9"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 0 )"
-    - "\t\tif ( player->GetItemCount \"ingred_comberry_01\" > 0 )"
-    - "\t\t\tif ( in > 0 )"
-    - "\t\t\t\tset add to 1"
-    - "\t\t\t\tplayer->RemoveItem \"ingred_comberry_01\", 1"
-    - "\t\t\telse"
-    - "\t\t\t\tset in to 10"
-    - "\t\t\tendif"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 0 )"
-    - "\t\tif ( player->GetItemCount \"ingred_frost_salts_01\" > 0 )"
-    - "\t\t\tif ( in > 0 )"
-    - "\t\t\t\tset add to 1"
-    - "\t\t\t\tplayer->RemoveItem \"ingred_frost_salts_01\", 1"
-    - "\t\t\telse"
-    - "\t\t\t\tset in to 11"
-    - "\t\t\tendif"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tif ( player->GetItemCount \"ingred_adamantium_ore_01\" > 0 )"
-    - "\t\t\t\tset add to 1"
-    - "\t\t\t\tplayer->RemoveItem \"ingred_adamantium_ore_01\", 1"
-    - "\t\t\tendif"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 1 )"
-    - "\t\tif ( in == 1 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_wolf_heart\", 1"
-    - "\t\telseif ( in == 2 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_heartwood_01\", 1"
-    - "\t\telseif ( in == 3 )"
-    - "\t\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
-    - "\t\telseif ( in == 4 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_void_salts_01\", 1"
-    - "\t\telseif ( in == 5 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_innocent_heart\", 1"
-    - "\t\telseif ( in == 6 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_daedras_heart_01\", 1"
-    - "\t\telseif ( in == 7 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_udyrfrykte_heart\", 1"
-    - "\t\telseif ( in == 8 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_belladonna_01\", 1"
-    - "\t\telseif ( in == 9 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_belladonna_02\", 1"
-    - "\t\telseif ( in == 10 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_comberry_01\", 1"
-    - "\t\telse"
-    - "\t\t\tplayer->RemoveItem \"ingred_frost_salts_01\", 1"
-    - "\t\tendif"
-    - "\tendif"
-    - ''
-    - "\tif ( add == 0 )"
-    - "\t\tset A1V6_AlchemyRes to 1"
-    - "\t\treturn"
-    - "\tendif"
-    - "\tif ( A1V6_AlchemyRes == 5 )"
-    - "\t\tplayer->AddItem p_restore_magicka_b, 1"
-    - "\telseif ( A1V6_AlchemyRes == 6 )"
-    - "\t\tplayer->AddItem p_restore_magicka_c, 1"
-    - "\telseif ( A1V6_AlchemyRes == 7 )"
-    - "\t\tplayer->AddItem p_restore_magicka_s, 1"
-    - "\telseif ( A1V6_AlchemyRes == 8 )"
-    - "\t\tplayer->AddItem p_restore_magicka_q, 1"
-    - "\telse"
-    - "\t\tplayer->AddItem p_restore_magicka_e, 1"
-    - "\tendif"
-    - "\treturn"
-    - endif
-    - ''
     - if ( state == 1 )
     - "\tif ( A1V6_AlchemyRes != 0 )"
     - "\t\tif ( ScriptRunning A1V6_CalcAlchemy5_sc == 0 )"
@@ -256,13 +143,124 @@
     - "\treturn"
     - endif
     - ''
-    - if ( OnPCEquip == 1 )
-    - set OnPCEquip to 0
+    - if ( state == 0 )
+    - "\tif ( OnPCEquip == 1 )"
+    - "\t\tset OnPCEquip to 0"
     - ''
-    - set A1V6_CalcAlchemy5 to 1
-    - set A1V6_AlchemyRes to 0
-    - set state to 1
+    - "\t\tset A1V6_CalcAlchemy5 to 1"
+    - "\t\tset A1V6_AlchemyRes to 0"
+    - "\t\tset state to 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
     - ''
+    - StartScript A1V6_AlchemyCheck_sc
+    - set state to 0
+    - if ( A1V6_AlchemyRes < 4 )
+    - "\treturn"
+    - endif
+    - ''
+    - set add to 0
+    - ''
+    - set in to 0
+    - if ( player->GetItemCount "ingred_wolf_heart" > 0 )
+    - "\tset in to 1"
+    - elseif ( player->GetItemCount "ingred_heartwood_01" > 0 )
+    - "\tset in to 2"
+    - elseif ( player->GetItemCount "rvr_ashes_corpse_01" > 0 )
+    - "\tset in to 3"
+    - elseif ( player->GetItemCount "ingred_void_salts_01" > 0 )
+    - "\tset in to 4"
+    - elseif ( player->GetItemCount "ingred_innocent_heart" > 0 )
+    - "\tset in to 5"
+    - elseif ( player->GetItemCount "ingred_daedras_heart_01" > 0 )
+    - "\tset in to 6"
+    - elseif ( player->GetItemCount "ingred_udyrfrykte_heart" > 0 )
+    - "\tset in to 7"
+    - endif
+    - if ( player->GetItemCount "ingred_belladonna_01" > 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tset add to 1"
+    - "\t\tplayer->RemoveItem \"ingred_belladonna_01\", 1"
+    - "\telse"
+    - "\t\tset in to 8"
+    - "\tendif"
+    - elseif ( player->GetItemCount "ingred_belladonna_02" > 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tset add to 1"
+    - "\t\tplayer->RemoveItem \"ingred_belladonna_02\", 1"
+    - "\telse"
+    - "\t\tset in to 9"
+    - "\tendif"
+    - endif
+    - if ( add == 0 )
+    - "\tif ( player->GetItemCount \"ingred_comberry_01\" > 0 )"
+    - "\t\tif ( in > 0 )"
+    - "\t\t\tset add to 1"
+    - "\t\t\tplayer->RemoveItem \"ingred_comberry_01\", 1"
+    - "\t\telse"
+    - "\t\t\tset in to 10"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - if ( add == 0 )
+    - "\tif ( player->GetItemCount \"ingred_frost_salts_01\" > 0 )"
+    - "\t\tif ( in > 0 )"
+    - "\t\t\tset add to 1"
+    - "\t\t\tplayer->RemoveItem \"ingred_frost_salts_01\", 1"
+    - "\t\telse"
+    - "\t\t\tset in to 11"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - if ( add == 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tif ( player->GetItemCount \"ingred_adamantium_ore_01\" > 0 )"
+    - "\t\t\tset add to 1"
+    - "\t\t\tplayer->RemoveItem \"ingred_adamantium_ore_01\", 1"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - if ( add == 1 )
+    - "\tif ( in == 1 )"
+    - "\t\tplayer->RemoveItem \"ingred_wolf_heart\", 1"
+    - "\telseif ( in == 2 )"
+    - "\t\tplayer->RemoveItem \"ingred_heartwood_01\", 1"
+    - "\telseif ( in == 3 )"
+    - "\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
+    - "\telseif ( in == 4 )"
+    - "\t\tplayer->RemoveItem \"ingred_void_salts_01\", 1"
+    - "\telseif ( in == 5 )"
+    - "\t\tplayer->RemoveItem \"ingred_innocent_heart\", 1"
+    - "\telseif ( in == 6 )"
+    - "\t\tplayer->RemoveItem \"ingred_daedras_heart_01\", 1"
+    - "\telseif ( in == 7 )"
+    - "\t\tplayer->RemoveItem \"ingred_udyrfrykte_heart\", 1"
+    - "\telseif ( in == 8 )"
+    - "\t\tplayer->RemoveItem \"ingred_belladonna_01\", 1"
+    - "\telseif ( in == 9 )"
+    - "\t\tplayer->RemoveItem \"ingred_belladonna_02\", 1"
+    - "\telseif ( in == 10 )"
+    - "\t\tplayer->RemoveItem \"ingred_comberry_01\", 1"
+    - "\telse"
+    - "\t\tplayer->RemoveItem \"ingred_frost_salts_01\", 1"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( add == 0 )
+    - "\tset A1V6_AlchemyRes to 1"
+    - "\treturn"
+    - endif
+    - if ( A1V6_AlchemyRes == 5 )
+    - "\tplayer->AddItem p_restore_magicka_b, 1"
+    - elseif ( A1V6_AlchemyRes == 6 )
+    - "\tplayer->AddItem p_restore_magicka_c, 1"
+    - elseif ( A1V6_AlchemyRes == 7 )
+    - "\tplayer->AddItem p_restore_magicka_s, 1"
+    - elseif ( A1V6_AlchemyRes == 8 )
+    - "\tplayer->AddItem p_restore_magicka_q, 1"
+    - else
+    - "\tplayer->AddItem p_restore_magicka_e, 1"
     - endif
     - ''
     - End
@@ -287,61 +285,6 @@
     - ''
     - set PCSkipEquip to 1
     - ''
-    - if ( state == 2 )
-    - "\tStartScript A1V6_AlchemyCheck_sc"
-    - "\tset state to 0"
-    - "\tif ( A1V6_AlchemyRes < 4 )"
-    - "\t\treturn"
-    - "\tendif"
-    - ''
-    - "\tset add to 0"
-    - ''
-    - "\tset in to 0"
-    - "\tif ( player->GetItemCount \"ingred_comberry_01\" > 0 )"
-    - "\t\tset in to 1"
-    - "\tendif"
-    - "\tif ( player->GetItemCount \"rvr_ashes_corpse_01\" > 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tset add to 1"
-    - "\t\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
-    - "\t\telse"
-    - "\t\t\tset in to 2"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tif ( player->GetItemCount \"ingred_sload_soap_01\" > 0 )"
-    - "\t\t\t\tset add to 1"
-    - "\t\t\t\tplayer->RemoveItem \"ingred_sload_soap_01\", 1"
-    - "\t\t\tendif"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 1 )"
-    - "\t\tif ( in == 1 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_comberry_01\", 1"
-    - "\t\telse"
-    - "\t\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
-    - "\t\tendif"
-    - "\tendif"
-    - ''
-    - "\tif ( add == 0 )"
-    - "\t\tset A1V6_AlchemyRes to 1"
-    - "\t\treturn"
-    - "\tendif"
-    - "\tif ( A1V6_AlchemyRes == 5 )"
-    - "\t\tplayer->AddItem p_fire_shield_b, 1"
-    - "\telseif ( A1V6_AlchemyRes == 6 )"
-    - "\t\tplayer->AddItem p_fire_shield_c, 1"
-    - "\telseif ( A1V6_AlchemyRes == 7 )"
-    - "\t\tplayer->AddItem p_fire_shield_s, 1"
-    - "\telseif ( A1V6_AlchemyRes == 8 )"
-    - "\t\tplayer->AddItem p_fire_shield_q, 1"
-    - "\telse"
-    - "\t\tplayer->AddItem p_fire_shield_e, 1"
-    - "\tendif"
-    - "\treturn"
-    - endif
-    - ''
     - if ( state == 1 )
     - "\tif ( A1V6_AlchemyRes != 0 )"
     - "\t\tif ( ScriptRunning A1V6_CalcAlchemy5_sc == 0 )"
@@ -351,13 +294,67 @@
     - "\treturn"
     - endif
     - ''
-    - if ( OnPCEquip == 1 )
-    - set OnPCEquip to 0
+    - if ( state == 0 )
+    - "\tif ( OnPCEquip == 1 )"
+    - "\t\tset OnPCEquip to 0"
     - ''
-    - set A1V6_CalcAlchemy5 to 1
-    - set A1V6_AlchemyRes to 0
-    - set state to 1
+    - "\t\tset A1V6_CalcAlchemy5 to 1"
+    - "\t\tset A1V6_AlchemyRes to 0"
+    - "\t\tset state to 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
     - ''
+    - StartScript A1V6_AlchemyCheck_sc
+    - set state to 0
+    - if ( A1V6_AlchemyRes < 4 )
+    - "\treturn"
+    - endif
+    - ''
+    - set add to 0
+    - ''
+    - set in to 0
+    - if ( player->GetItemCount "ingred_comberry_01" > 0 )
+    - "\tset in to 1"
+    - endif
+    - if ( player->GetItemCount "rvr_ashes_corpse_01" > 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tset add to 1"
+    - "\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
+    - "\telse"
+    - "\t\tset in to 2"
+    - "\tendif"
+    - endif
+    - if ( add == 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tif ( player->GetItemCount \"ingred_sload_soap_01\" > 0 )"
+    - "\t\t\tset add to 1"
+    - "\t\t\tplayer->RemoveItem \"ingred_sload_soap_01\", 1"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - if ( add == 1 )
+    - "\tif ( in == 1 )"
+    - "\t\tplayer->RemoveItem \"ingred_comberry_01\", 1"
+    - "\telse"
+    - "\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( add == 0 )
+    - "\tset A1V6_AlchemyRes to 1"
+    - "\treturn"
+    - endif
+    - if ( A1V6_AlchemyRes == 5 )
+    - "\tplayer->AddItem p_fire_shield_b, 1"
+    - elseif ( A1V6_AlchemyRes == 6 )
+    - "\tplayer->AddItem p_fire_shield_c, 1"
+    - elseif ( A1V6_AlchemyRes == 7 )
+    - "\tplayer->AddItem p_fire_shield_s, 1"
+    - elseif ( A1V6_AlchemyRes == 8 )
+    - "\tplayer->AddItem p_fire_shield_q, 1"
+    - else
+    - "\tplayer->AddItem p_fire_shield_e, 1"
     - endif
     - ''
     - End
@@ -382,78 +379,6 @@
     - ''
     - set PCSkipEquip to 1
     - ''
-    - if ( state == 2 )
-    - "\tStartScript A1V6_AlchemyCheck_sc"
-    - "\tset state to 0"
-    - "\tif ( A1V6_AlchemyRes < 4 )"
-    - "\t\treturn"
-    - "\tendif"
-    - ''
-    - "\tset add to 0"
-    - ''
-    - "\tset in to 0"
-    - "\tif ( player->GetItemCount \"rvr_ashes_corpse_01\" > 0 )"
-    - "\t\tset in to 1"
-    - "\telseif ( player->GetItemCount \"ingred_comberry_01\" > 0 )"
-    - "\t\tset in to 2"
-    - "\telseif ( player->GetItemCount \"ingred_sload_soap_01\" > 0 )"
-    - "\t\tset in to 3"
-    - "\tendif"
-    - "\tif ( player->GetItemCount \"ingred_raw_glass_01\" > 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tset add to 1"
-    - "\t\t\tplayer->RemoveItem \"ingred_raw_glass_01\", 1"
-    - "\t\telse"
-    - "\t\t\tset in to 4"
-    - "\t\tendif"
-    - "\telseif ( player->GetItemCount \"ingred_raw_glass_tinos\" > 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tset add to 1"
-    - "\t\t\tplayer->RemoveItem \"ingred_raw_glass_tinos\", 1"
-    - "\t\telse"
-    - "\t\t\tset in to 5"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tif ( player->GetItemCount \"ingred_fire_salts_01\" > 0 )"
-    - "\t\t\t\tset add to 1"
-    - "\t\t\t\tplayer->RemoveItem \"ingred_fire_salts_01\", 1"
-    - "\t\t\tendif"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 1 )"
-    - "\t\tif ( in == 1 )"
-    - "\t\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
-    - "\t\telseif ( in == 2 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_comberry_01\", 1"
-    - "\t\telseif ( in == 3 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_sload_soap_01\", 1"
-    - "\t\telseif ( in == 4 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_raw_glass_01\", 1"
-    - "\t\telse"
-    - "\t\t\tplayer->RemoveItem \"ingred_raw_glass_tinos\", 1"
-    - "\t\tendif"
-    - "\tendif"
-    - ''
-    - "\tif ( add == 0 )"
-    - "\t\tset A1V6_AlchemyRes to 1"
-    - "\t\treturn"
-    - "\tendif"
-    - "\tif ( A1V6_AlchemyRes == 5 )"
-    - "\t\tplayer->AddItem p_fire_shield_b, 1"
-    - "\telseif ( A1V6_AlchemyRes == 6 )"
-    - "\t\tplayer->AddItem p_fire_shield_c, 1"
-    - "\telseif ( A1V6_AlchemyRes == 7 )"
-    - "\t\tplayer->AddItem p_fire_shield_s, 1"
-    - "\telseif ( A1V6_AlchemyRes == 8 )"
-    - "\t\tplayer->AddItem p_fire_shield_q, 1"
-    - "\telse"
-    - "\t\tplayer->AddItem p_fire_shield_e, 1"
-    - "\tendif"
-    - "\treturn"
-    - endif
-    - ''
     - if ( state == 1 )
     - "\tif ( A1V6_AlchemyRes != 0 )"
     - "\t\tif ( ScriptRunning A1V6_CalcAlchemy5_sc == 0 )"
@@ -463,13 +388,84 @@
     - "\treturn"
     - endif
     - ''
-    - if ( OnPCEquip == 1 )
-    - set OnPCEquip to 0
+    - if ( state == 0 )
+    - "\tif ( OnPCEquip == 1 )"
+    - "\t\tset OnPCEquip to 0"
     - ''
-    - set A1V6_CalcAlchemy5 to 1
-    - set A1V6_AlchemyRes to 0
-    - set state to 1
+    - "\t\tset A1V6_CalcAlchemy5 to 1"
+    - "\t\tset A1V6_AlchemyRes to 0"
+    - "\t\tset state to 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
     - ''
+    - StartScript A1V6_AlchemyCheck_sc
+    - set state to 0
+    - if ( A1V6_AlchemyRes < 4 )
+    - "\treturn"
+    - endif
+    - ''
+    - set add to 0
+    - ''
+    - set in to 0
+    - if ( player->GetItemCount "rvr_ashes_corpse_01" > 0 )
+    - "\tset in to 1"
+    - elseif ( player->GetItemCount "ingred_comberry_01" > 0 )
+    - "\tset in to 2"
+    - elseif ( player->GetItemCount "ingred_sload_soap_01" > 0 )
+    - "\tset in to 3"
+    - endif
+    - if ( player->GetItemCount "ingred_raw_glass_01" > 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tset add to 1"
+    - "\t\tplayer->RemoveItem \"ingred_raw_glass_01\", 1"
+    - "\telse"
+    - "\t\tset in to 4"
+    - "\tendif"
+    - elseif ( player->GetItemCount "ingred_raw_glass_tinos" > 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tset add to 1"
+    - "\t\tplayer->RemoveItem \"ingred_raw_glass_tinos\", 1"
+    - "\telse"
+    - "\t\tset in to 5"
+    - "\tendif"
+    - endif
+    - if ( add == 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tif ( player->GetItemCount \"ingred_fire_salts_01\" > 0 )"
+    - "\t\t\tset add to 1"
+    - "\t\t\tplayer->RemoveItem \"ingred_fire_salts_01\", 1"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - if ( add == 1 )
+    - "\tif ( in == 1 )"
+    - "\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
+    - "\telseif ( in == 2 )"
+    - "\t\tplayer->RemoveItem \"ingred_comberry_01\", 1"
+    - "\telseif ( in == 3 )"
+    - "\t\tplayer->RemoveItem \"ingred_sload_soap_01\", 1"
+    - "\telseif ( in == 4 )"
+    - "\t\tplayer->RemoveItem \"ingred_raw_glass_01\", 1"
+    - "\telse"
+    - "\t\tplayer->RemoveItem \"ingred_raw_glass_tinos\", 1"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( add == 0 )
+    - "\tset A1V6_AlchemyRes to 1"
+    - "\treturn"
+    - endif
+    - if ( A1V6_AlchemyRes == 5 )
+    - "\tplayer->AddItem p_fire_shield_b, 1"
+    - elseif ( A1V6_AlchemyRes == 6 )
+    - "\tplayer->AddItem p_fire_shield_c, 1"
+    - elseif ( A1V6_AlchemyRes == 7 )
+    - "\tplayer->AddItem p_fire_shield_s, 1"
+    - elseif ( A1V6_AlchemyRes == 8 )
+    - "\tplayer->AddItem p_fire_shield_q, 1"
+    - else
+    - "\tplayer->AddItem p_fire_shield_e, 1"
     - endif
     - ''
     - End
@@ -494,69 +490,6 @@
     - ''
     - set PCSkipEquip to 1
     - ''
-    - if ( state == 2 )
-    - "\tStartScript A1V6_AlchemyCheck_sc"
-    - "\tset state to 0"
-    - "\tif ( A1V6_AlchemyRes < 4 )"
-    - "\t\treturn"
-    - "\tendif"
-    - ''
-    - "\tset add to 0"
-    - ''
-    - "\tset in to 0"
-    - "\tif ( player->GetItemCount \"ingred_void_salts_01\" > 0 )"
-    - "\t\tset in to 1"
-    - "\telseif ( player->GetItemCount \"rvr_ashes_corpse_01\" > 0 )"
-    - "\t\tset in to 2"
-    - "\telseif ( player->GetItemCount \"ingred_fire_petal_01\" > 0 )"
-    - "\t\tset in to 3"
-    - "\tendif"
-    - "\tif ( player->GetItemCount \"ingred_vampire_dust_01\" > 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tset add to 1"
-    - "\t\t\tplayer->RemoveItem \"ingred_vampire_dust_01\", 1"
-    - "\t\telse"
-    - "\t\t\tset in to 4"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 0 )"
-    - "\t\tif ( in > 0 )"
-    - "\t\t\tif ( player->GetItemCount \"Ingred_lloramor_spines_01\" > 0 )"
-    - "\t\t\t\tset add to 1"
-    - "\t\t\t\tplayer->RemoveItem \"Ingred_lloramor_spines_01\", 1"
-    - "\t\t\tendif"
-    - "\t\tendif"
-    - "\tendif"
-    - "\tif ( add == 1 )"
-    - "\t\tif ( in == 1 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_void_salts_01\", 1"
-    - "\t\telseif ( in == 2 )"
-    - "\t\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
-    - "\t\telseif ( in == 3 )"
-    - "\t\t\tplayer->RemoveItem \"ingred_fire_petal_01\", 1"
-    - "\t\telse"
-    - "\t\t\tplayer->RemoveItem \"ingred_vampire_dust_01\", 1"
-    - "\t\tendif"
-    - "\tendif"
-    - ''
-    - "\tif ( add == 0 )"
-    - "\t\tset A1V6_AlchemyRes to 1"
-    - "\t\treturn"
-    - "\tendif"
-    - "\tif ( A1V6_AlchemyRes == 5 )"
-    - "\t\tplayer->AddItem p_spell_absorption_b, 1"
-    - "\telseif ( A1V6_AlchemyRes == 6 )"
-    - "\t\tplayer->AddItem p_spell_absorption_c, 1"
-    - "\telseif ( A1V6_AlchemyRes == 7 )"
-    - "\t\tplayer->AddItem p_spell_absorption_s, 1"
-    - "\telseif ( A1V6_AlchemyRes == 8 )"
-    - "\t\tplayer->AddItem p_spell_absorption_q, 1"
-    - "\telse"
-    - "\t\tplayer->AddItem p_spell_absorption_e, 1"
-    - "\tendif"
-    - "\treturn"
-    - endif
-    - ''
     - if ( state == 1 )
     - "\tif ( A1V6_AlchemyRes != 0 )"
     - "\t\tif ( ScriptRunning A1V6_CalcAlchemy5_sc == 0 )"
@@ -566,13 +499,75 @@
     - "\treturn"
     - endif
     - ''
-    - if ( OnPCEquip == 1 )
-    - set OnPCEquip to 0
+    - if ( state == 0 )
+    - "\tif ( OnPCEquip == 1 )"
+    - "\t\tset OnPCEquip to 0"
     - ''
-    - set A1V6_CalcAlchemy5 to 1
-    - set A1V6_AlchemyRes to 0
-    - set state to 1
+    - "\t\tset A1V6_CalcAlchemy5 to 1"
+    - "\t\tset A1V6_AlchemyRes to 0"
+    - "\t\tset state to 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
     - ''
+    - StartScript A1V6_AlchemyCheck_sc
+    - set state to 0
+    - if ( A1V6_AlchemyRes < 4 )
+    - "\treturn"
+    - endif
+    - ''
+    - set add to 0
+    - ''
+    - set in to 0
+    - if ( player->GetItemCount "ingred_void_salts_01" > 0 )
+    - "\tset in to 1"
+    - elseif ( player->GetItemCount "rvr_ashes_corpse_01" > 0 )
+    - "\tset in to 2"
+    - elseif ( player->GetItemCount "ingred_fire_petal_01" > 0 )
+    - "\tset in to 3"
+    - endif
+    - if ( player->GetItemCount "ingred_vampire_dust_01" > 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tset add to 1"
+    - "\t\tplayer->RemoveItem \"ingred_vampire_dust_01\", 1"
+    - "\telse"
+    - "\t\tset in to 4"
+    - "\tendif"
+    - endif
+    - if ( add == 0 )
+    - "\tif ( in > 0 )"
+    - "\t\tif ( player->GetItemCount \"Ingred_lloramor_spines_01\" > 0 )"
+    - "\t\t\tset add to 1"
+    - "\t\t\tplayer->RemoveItem \"Ingred_lloramor_spines_01\", 1"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - if ( add == 1 )
+    - "\tif ( in == 1 )"
+    - "\t\tplayer->RemoveItem \"ingred_void_salts_01\", 1"
+    - "\telseif ( in == 2 )"
+    - "\t\tplayer->RemoveItem \"rvr_ashes_corpse_01\", 1"
+    - "\telseif ( in == 3 )"
+    - "\t\tplayer->RemoveItem \"ingred_fire_petal_01\", 1"
+    - "\telse"
+    - "\t\tplayer->RemoveItem \"ingred_vampire_dust_01\", 1"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( add == 0 )
+    - "\tset A1V6_AlchemyRes to 1"
+    - "\treturn"
+    - endif
+    - if ( A1V6_AlchemyRes == 5 )
+    - "\tplayer->AddItem p_spell_absorption_b, 1"
+    - elseif ( A1V6_AlchemyRes == 6 )
+    - "\tplayer->AddItem p_spell_absorption_c, 1"
+    - elseif ( A1V6_AlchemyRes == 7 )
+    - "\tplayer->AddItem p_spell_absorption_s, 1"
+    - elseif ( A1V6_AlchemyRes == 8 )
+    - "\tplayer->AddItem p_spell_absorption_q, 1"
+    - else
+    - "\tplayer->AddItem p_spell_absorption_e, 1"
     - endif
     - ''
     - End
