@@ -10518,33 +10518,22 @@
     - SCHD:
         name: A1V6_ACheck23_FortAttack_sc
         vars:
-          shorts: 1
+          shorts: 0
           longs: 0
           floats: 0
-        data_size: 310
-        var_table_size: 5
-    - SCVR:
-        - in45
-    - SCDT: eJx9js0KglAQhZ0iSXDhpoJscaMXULN2BhIFQetoN4hef1A0rteF71mPE3RRw1rUcub75sxRQb5lXk2ZDLAi16dGiplrXrZ4tjcYFownYY0e556fEschpvr2H9ovDyQFRlCCNCCG2scPSRs/SfKI0QCjuKgyjKnHOBom2X3JsGzl6amTiyygOZY0iGhndy8sBRQQB2MiRrHvG97/NlxoekPdfUz91FrjUShug7H0dW3+Se2GHvKgYgICvAAZalfa
+        data_size: 280
+        var_table_size: 0
+    - SCDT: eJx9zs0KgkAUhuEOgSC4mE0F2WKiG9CydgYSBUHraHcYnPEHxYlxXHifdTlBokUS1Pp9+PgsMK45q4UyABb08iBUTgL3vMGTt8ZIKp1GNTKtWZhR36eu9fZ38svBwATrMzuk3ewoLWIlOMaJrHJMBFMaHZduqdPDMO/w+PjCMueiwFLwWHzr298HJsyI3fZgl4gwW67w0KCgBViGNpn2q9fWfcEr1USAJx2XVOM=
     - SCTX:
         - Begin A1V6_ACheck23_FortAttack_sc
-        - ""
-        - short in45
         - ""
         - "if ( player->GetItemCount \"A1V6_L45_fortify_attack\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_fortify_attack\", 1"
         - endif
-        - ""
-        - set in45 to 0
-        - ""
         - "if ( player->GetItemCount \"ingred_ghoul_heart_01\" > 0 )"
         - "\tif ( player->GetItemCount \"Ingred_golden_sedge_01\" > 0 )"
-        - "\t\tset in45 to 2"
+        - "\t\tplayer->AddItem \"A1V6_L45_fortify_attack\", 1"
         - "\tendif"
-        - endif
-        - ""
-        - if ( in45 > 1 )
-        - "\tplayer->AddItem \"A1V6_L45_fortify_attack\", 1"
         - endif
         - ""
         - StopScript A1V6_ACheck23_FortAttack_sc
@@ -12143,33 +12132,22 @@
     - SCHD:
         name: A1V6_ACheck60_ResShock_sc
         vars:
-          shorts: 1
+          shorts: 0
           longs: 0
           floats: 0
-        data_size: 309
-        var_table_size: 5
-    - SCVR:
-        - in45
-    - SCDT: eJyFzk0LgkAQBmCnSBI8CBEURcylu4Z5M5CuHaIgui3btqRoKrte+p/1c4K23LAO0XHmfebDBrPM6IULE2CK+7uDxTDydgFZ+XMi44KlRHCZyIrmjGMYome/J27ObwmGBR2QYLTQtZsT7Ul9opfkJ8GPhAl6IGdOK+J6uPiigDXtayqVLZWtaKax3j+zwALlu6hK1W8evP55cKzzaBlzlgYu2XC5fTnJRs7gM/Of2ZoKqiKABwdUV2I=
+        data_size: 279
+        var_table_size: 0
+    - SCDT: eJyFzkELgkAQhuGGQBA8CBEUReylu4J5M5CuHaIgug3TNqRoKrte+p/1c4IsjSQIz+8zH2OBUaR0ZWUAzMXhYYt8HLp7H9feAnWUywQV61iXlEkWQSBc63Nxt/9L6Jlgfaf7s3p6EGdnxSeUio54YSrRccVSOC0KoqbDhurKFpUtKf3Ft44HTJg2IlxFLBPfwS3r3VtqObFH7ea92oYUVQngCf5eVGs=
     - SCTX:
         - Begin A1V6_ACheck60_ResShock_sc
-        - ""
-        - short in45
         - ""
         - "if ( player->GetItemCount \"A1V6_L45_shock_resistance\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_shock_resistance\", 1"
         - endif
-        - ""
-        - set in45 to 0
-        - ""
         - "if ( player->GetItemCount \"ingred_crab_meat_01\" > 0 )"
         - "\tif ( player->GetItemCount \"ingred_scrap_metal_01\" > 0 )"
-        - "\t\tset in45 to 2"
+        - "\t\tplayer->AddItem \"A1V6_L45_shock_resistance\", 1"
         - "\tendif"
-        - endif
-        - ""
-        - if ( in45 > 1 )
-        - "\tplayer->AddItem \"A1V6_L45_shock_resistance\", 1"
         - endif
         - ""
         - StopScript A1V6_ACheck60_ResShock_sc

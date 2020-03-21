@@ -17588,33 +17588,22 @@
     - SCHD:
         name: A1V6_ACheck49_Mark_sc
         vars:
-          shorts: 1
+          shorts: 0
           longs: 0
           floats: 0
-        data_size: 258
-        var_table_size: 5
-    - SCVR:
-        - in45
-    - SCDT: eJxtjsEKgkAURX1FkmAxm4iwxfsEDQ1aGEjb2rSIdo9hGDIcS5QI/7M+J2gywwSX797DedcGM1O8lLkJMMPji+F1FHmHJW39gFKeJxiG6Nk/6snaLRgWDKAAo4eu3aj6tWrMFZ2pEDzNSJYS1y0KnC/FKiq+XU4yJ6H4/cPV1oUFFmh0iPrUeTPl0TFlziZVFm1iKRJ/RTtd6P8Om/7lgUt7KbhSugF4A3WxQwY=
+        data_size: 228
+        var_table_size: 0
+    - SCDT: eJxtjcEKgkAURXsEgjDFbCLCFvMJChq0MJC2tWkR7R6P4ZHhWDIR4X/W5wQNVqTg9p7DPQK8ylDN1gOYqcNLqssoi/YL3MQJlmQLlaYqEj/rKbsUBj6I/8XwezEmgye8aior5JrVSoUtC4KPJRsrv52PbFEbune8R0/Kh7mcNGu2zlkX8RK3DrlSIKetPQlxx5qMcQTgDRSxQA8=
     - SCTX:
         - Begin A1V6_ACheck49_Mark_sc
-        - ""
-        - short in45
         - ""
         - "if ( player->GetItemCount \"A1V6_L45_mark\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_mark\", 1"
         - endif
-        - ""
-        - set in45 to 0
-        - ""
         - "if ( player->GetItemCount \"al_i_scamp_eye\" > 0 )"
         - "\tif ( player->GetItemCount \"al_i_hunger_claw\" > 0 )"
-        - "\t\tset in45 to 2"
+        - "\t\tplayer->AddItem \"A1V6_L45_mark\", 1"
         - "\tendif"
-        - endif
-        - ""
-        - if ( in45 > 1 )
-        - "\tplayer->AddItem \"A1V6_L45_mark\", 1"
         - endif
         - ""
         - StopScript A1V6_ACheck49_Mark_sc
@@ -17698,33 +17687,22 @@
     - SCHD:
         name: A1V6_ACheck50_Recall_sc
         vars:
-          shorts: 1
+          shorts: 0
           longs: 0
           floats: 0
-        data_size: 278
-        var_table_size: 5
-    - SCVR:
-        - in60
-    - SCDT: eJxtjkELgkAUhHtFkiAkdPBgxNIv0CBvBuK1U4fotmzbIxe3rF0L+p/1c4I2LcTo+OabmTcOWCfJbqgsAJ9sni4phkm4jugyCqhCzqQkcUxC5+t7uL8cOjb0QUOnSwKnqetN6rqROO4V7ui2YIpKZGWGiixaVpjWVo9JKuj5IniuhbyiMqGylPi2fz7MbLDBJAbEnEZvht3/Dhu7XqUmaYY8nwd0VSGqud8moSE6LQ6GALwAq49LUA==
+        data_size: 248
+        var_table_size: 0
+    - SCDT: eJxtjcEKgkAURXsEgiAktHBhxNAX6CJ3BuK2VYto95imRw6+skYL+s/6nKBBiTLa3nPuvR44J5Y3Mg5AKDZPX1SjLF4nuEwiNKQks0hTEXtv7+H/chi44H1mhtNuZqyPe0M73FbSIJNsCjJiIaIvFWadGkhGjeeLVmWt+UrGlpqGqaff/x67MPGDNs/yglQ5j3DVQqxV2CexJXVeHSwBeAGUskhZ
     - SCTX:
         - Begin A1V6_ACheck50_Recall_sc
-        - ""
-        - short in60
         - ""
         - "if ( player->GetItemCount \"A1V6_L60_recall\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L60_recall\", 1"
         - endif
-        - ""
-        - set in60 to 0
-        - ""
         - "if ( player->GetItemCount \"ingred_boar_leather\" > 0 )"
         - "\tif ( player->GetItemCount \"al_i_quicksilver_bottle\" > 0 )"
-        - "\t\tset in60 to 2"
+        - "\t\tplayer->AddItem \"A1V6_L60_recall\", 1"
         - "\tendif"
-        - endif
-        - ""
-        - if ( in60 > 1 )
-        - "\tplayer->AddItem \"A1V6_L60_recall\", 1"
         - endif
         - ""
         - StopScript A1V6_ACheck50_Recall_sc

@@ -473,109 +473,118 @@ def gen_check_script(kind, ingrs, index, next_kind):
         print('has error')
         sys.exit(11)
     if has_15 != ingrs_15 or has_30 != ingrs_30 or has_45 != ingrs_45 or has_60 != ingrs_60:
-        print(kind.name)
-        print(has_15, ingrs_15)
+        print('ingrs error')
         sys.exit(12)
     check_name = 'A1V6_ACheck' + str(index) + '_' + kind.name + '_sc'
     s = []
     s.append('Begin ' + check_name)
     s.append('')
-    if has_15:
-        s.append('short in15')
-    if has_30:
-        s.append('short in30')
-    if has_45:
-        s.append('short in45')
-    if has_60:
-        s.append('short in60')
-    s.append('')
-    line = ''
-    if has_15:
-        s.append('if ( player->GetItemCount "A1V6_L15_' + kind.potion.id_base + '" == 1 )')
-        s.append('	player->RemoveItem "A1V6_L15_' + kind.potion.id_base + '", 1')
-        line = 'else' if ingrs_30 or ingrs_45 or ingrs_60 else ''
-    if has_30:
-        s.append(line + 'if ( player->GetItemCount "A1V6_L30_' + kind.potion.id_base + '" == 1 )')
-        s.append('	player->RemoveItem "A1V6_L30_' + kind.potion.id_base + '", 1')
-        line = 'else' if ingrs_45 or ingrs_60 else ''
-    if has_45:
-        s.append(line + 'if ( player->GetItemCount "A1V6_L45_' + kind.potion.id_base + '" == 1 )')
-        s.append('	player->RemoveItem "A1V6_L45_' + kind.potion.id_base + '", 1')
-        line = 'else' if ingrs_60 else ''
-    if has_60:
-        s.append(line + 'if ( player->GetItemCount "A1V6_L60_' + kind.potion.id_base + '" == 1 )')
-        s.append('	player->RemoveItem "A1V6_L60_' + kind.potion.id_base + '", 1')
-    s.append('endif')
-    s.append('')
-    if has_15:
-        s.append('set in15 to 0')
-    if has_30:
-        s.append('set in30 to 0')
-    if has_45:
-        s.append('set in45 to 0')
-    if has_60:
-        s.append('set in60 to 0')
-    s.append('')
-    line = ''
-    if groups:
-        was_level = [ False, False, False, False ]
-        for g in range(0, len(groups)):
-            group_has_level = [ False, False, False, False ]
-            for i in range(0, len(groups[g])):
-                if i == 0:
-                    s.append('if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                else:
-                    s.append('elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
-                level = ingr_level(groups[g][i], kind)
-                level_index = level // 15 - 1
-                if was_level[level_index]:
-                    s.append('	set in' + str(level) + ' to ( in' + str(level) + ' + 1 )')
-                else:
-                    group_has_level[level_index] = True
-                    s.append('	set in' + str(level) + ' to 1')
-            s.append('endif')
-            for level_index in range(0, 4):
-                was_level[level_index] = was_level[level_index] or group_has_level[level_index]
+    if not groups and len(pairs) == 1:
+        s.append('if ( player->GetItemCount "A1V6_L' + str(pair_level(pairs[0], kind)) + '_' + kind.potion.id_base + '" == 1 )')
+        s.append('	player->RemoveItem "A1V6_L' + str(pair_level(pairs[0], kind)) + '_' + kind.potion.id_base + '", 1')
+        s.append('endif')
+        s.append('if ( player->GetItemCount "' + pairs[0][0].name + '" > 0 )')
+        s.append('	if ( player->GetItemCount "' + pairs[0][1].name + '" > 0 )')
+        s.append('		player->AddItem "A1V6_L' + str(pair_level(pairs[0], kind)) + '_' + kind.potion.id_base + '", 1')
+        s.append('	endif')
+        s.append('endif')
+    else:
+        if has_15:
+            s.append('short in15')
+        if has_30:
+            s.append('short in30')
+        if has_45:
+            s.append('short in45')
+        if has_60:
+            s.append('short in60')
         s.append('')
-        if groups_30 and groups_15:
-            s.append('set in30 to ( in30 + in15 )')
-        if groups_45:
-            if groups_30:
-                s.append('set in45 to ( in45 + in30 )')
-            elif groups_15:
-                s.append('set in45 to ( in45 + in15 )')
-        if groups_60:
+        line = ''
+        if has_15:
+            s.append('if ( player->GetItemCount "A1V6_L15_' + kind.potion.id_base + '" == 1 )')
+            s.append('	player->RemoveItem "A1V6_L15_' + kind.potion.id_base + '", 1')
+            line = 'else' if ingrs_30 or ingrs_45 or ingrs_60 else ''
+        if has_30:
+            s.append(line + 'if ( player->GetItemCount "A1V6_L30_' + kind.potion.id_base + '" == 1 )')
+            s.append('	player->RemoveItem "A1V6_L30_' + kind.potion.id_base + '", 1')
+            line = 'else' if ingrs_45 or ingrs_60 else ''
+        if has_45:
+            s.append(line + 'if ( player->GetItemCount "A1V6_L45_' + kind.potion.id_base + '" == 1 )')
+            s.append('	player->RemoveItem "A1V6_L45_' + kind.potion.id_base + '", 1')
+            line = 'else' if ingrs_60 else ''
+        if has_60:
+            s.append(line + 'if ( player->GetItemCount "A1V6_L60_' + kind.potion.id_base + '" == 1 )')
+            s.append('	player->RemoveItem "A1V6_L60_' + kind.potion.id_base + '", 1')
+        s.append('endif')
+        s.append('')
+        if has_15:
+            s.append('set in15 to 0')
+        if has_30:
+            s.append('set in30 to 0')
+        if has_45:
+            s.append('set in45 to 0')
+        if has_60:
+            s.append('set in60 to 0')
+        s.append('')
+        line = ''
+        if groups:
+            was_level = [ False, False, False, False ]
+            for g in range(0, len(groups)):
+                group_has_level = [ False, False, False, False ]
+                for i in range(0, len(groups[g])):
+                    if i == 0:
+                        s.append('if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    else:
+                        s.append('elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
+                    level = ingr_level(groups[g][i], kind)
+                    level_index = level // 15 - 1
+                    if was_level[level_index]:
+                        s.append('	set in' + str(level) + ' to ( in' + str(level) + ' + 1 )')
+                    else:
+                        group_has_level[level_index] = True
+                        s.append('	set in' + str(level) + ' to 1')
+                s.append('endif')
+                for level_index in range(0, 4):
+                    was_level[level_index] = was_level[level_index] or group_has_level[level_index]
+            s.append('')
+            if groups_30 and groups_15:
+                s.append('set in30 to ( in30 + in15 )')
             if groups_45:
-                s.append('set in60 to ( in60 + in45 )')
-            elif groups_30:
-                s.append('set in60 to ( in60 + in30 )')
-            elif groups_15:
-                s.append('set in60 to ( in60 + in15 )')
-        s.append('')
-    if pairs:
-        for p in pairs:
-            s.append('if ( player->GetItemCount "' + p[0].name + '" > 0 )')
-            s.append('	if ( player->GetItemCount "' + p[1].name + '" > 0 )')
-            s.append('		set in' + str(pair_level(p, kind)) + ' to 2')
-            s.append('	endif')
-            s.append('endif')
-        s.append('')
-    if has_15:
-        s.append('if ( in15 > 1 )')
-        s.append('	player->AddItem "A1V6_L15_' + kind.potion.id_base + '", 1')
-        line = 'else' if has_30 or has_45 or has_60 else ''
-    if has_30:
-        s.append(line + 'if ( in30 > 1 )')
-        s.append('	player->AddItem "A1V6_L30_' + kind.potion.id_base + '", 1')
-        line = 'else' if has_45 or has_60 else ''
-    if has_45:
-        s.append(line + 'if ( in45 > 1 )')
-        s.append('	player->AddItem "A1V6_L45_' + kind.potion.id_base + '", 1')
-        line = 'else' if has_60 else ''
-    if has_60:
-        s.append(line + 'if ( in60 > 1 )')
-        s.append('	player->AddItem "A1V6_L60_' + kind.potion.id_base + '", 1')
-    s.append('endif')
+                if groups_30:
+                    s.append('set in45 to ( in45 + in30 )')
+                elif groups_15:
+                    s.append('set in45 to ( in45 + in15 )')
+            if groups_60:
+                if groups_45:
+                    s.append('set in60 to ( in60 + in45 )')
+                elif groups_30:
+                    s.append('set in60 to ( in60 + in30 )')
+                elif groups_15:
+                    s.append('set in60 to ( in60 + in15 )')
+            s.append('')
+        if pairs:
+            for p in pairs:
+                s.append('if ( player->GetItemCount "' + p[0].name + '" > 0 )')
+                s.append('	if ( player->GetItemCount "' + p[1].name + '" > 0 )')
+                s.append('		set in' + str(pair_level(p, kind)) + ' to 2')
+                s.append('	endif')
+                s.append('endif')
+            s.append('')
+        if has_15:
+            s.append('if ( in15 > 1 )')
+            s.append('	player->AddItem "A1V6_L15_' + kind.potion.id_base + '", 1')
+            line = 'else' if has_30 or has_45 or has_60 else ''
+        if has_30:
+            s.append(line + 'if ( in30 > 1 )')
+            s.append('	player->AddItem "A1V6_L30_' + kind.potion.id_base + '", 1')
+            line = 'else' if has_45 or has_60 else ''
+        if has_45:
+            s.append(line + 'if ( in45 > 1 )')
+            s.append('	player->AddItem "A1V6_L45_' + kind.potion.id_base + '", 1')
+            line = 'else' if has_60 else ''
+        if has_60:
+            s.append(line + 'if ( in60 > 1 )')
+            s.append('	player->AddItem "A1V6_L60_' + kind.potion.id_base + '", 1')
+        s.append('endif')
     s.append('')
     s.append('StopScript ' + check_name)
     if next_kind == None:
