@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования без EVA.esp
-        records: 511
+        records: 517
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -14569,20 +14569,22 @@
     - SCHD:
         name: A1V6_ApparatusItem_1_sc
         vars:
-          shorts: 2
+          shorts: 3
           longs: 0
           floats: 0
-        data_size: 607
-        var_table_size: 17
+        data_size: 979
+        var_table_size: 26
     - SCVR:
         - OnPCAdd
         - OnPCDrop
-    - SCDT: eJyNkT2qwkAUhe8JZHzzEN48tLO5hQswBuwsooi6ARltQopg40/QCLomt6OV1u5CcBIkaFRMN8w59/DdcwUsyfqsuN1mZ/8PqkNCoCR5DUo/bZiXxY0yRDQLduFKAMz6qnhZ9ZxRy/eiKFgF8WY9jMO530yHMvNRvTWBJAoGukUC3SQwAVcG3MrArQTcRv/veUQL1r9K06syTpXxG2WSKhPKQIyl8mzxFtNZaGxlY7vkMbvLRew7IKJBh+hh99K3Mh+bt78V1TBl1jhP1tvG+azDp8P8fApwiwTcDyFxUhLADb2XoRs=
+        - rollback
+    - SCDT: eJyVk8FKw0AQhmdSmrhSMKIeRJA5+ACJAW8Vooj6ApL2EvYQCtI0IY2gz+Rb+Az1pIdeLKVYStujCG5CjaZN2uS27Pzzzb+7/8ooMbLeVarXSX/eRThBhjIqjLoI8WYVxUoirYay3+ZPTiAjElnfKnn7pn53Zpu+zwMePnRvQ8e1T+OmRPyqZooQGBYEGkWARgSMjB8L41JiXIqMV/F6J91iyWRtqxasVhpxpZFRacaVJiRGhGQvLTE7rbYjZDUhE8MrObd2wH8b7JbtekHIA1vT6Zy0QepsonrpdUJbRwC4uYC/0VtZLHctyy3Ful/L4qVYvBRLQWlxdTqoh/DS/6TxfDD+oulsPhn1aUiTj+lsOIJ0gNimRP5/CGVT2jTxWCJHFUhHr5cZPWFdnPuIltNw9Rguj+7lfYZcgFEEsAg/wzeVIeIP2KoUUA==
     - SCTX:
         - Begin A1V6_ApparatusItem_1_sc
         - ""
         - short OnPCAdd
         - short OnPCDrop
+        - short rollback
         - ""
         - if ( GetDisabled == 1 )
         - "\tSetDelete 1"
@@ -14605,10 +14607,24 @@
         - "\tset A1V6_ApparatusY to ( GetPos Y )"
         - "\tset A1V6_ApparatusZ to ( GetPos Z )"
         - "\tset A1V6_ApparatusAngle to ( player -> GetAngle Z )"
-        - "\tPlaceAtPC \"A1V6_ApparatusCont_1\" 1, 50, 0"
+        - "\tset rollback to 0"
+        - "\tif ( player->GetItemCount apparatus_g_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_g_Cont_1\" 1, 50, 0"
+        - "\telseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_m_Cont_1\" 1, 50, 0"
+        - "\telseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_1\" 1, 50, 0"
+        - "\telseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_1\" 1, 50, 0"
+        - "\telse"
+        - "\t\tset rollback to 1"
+        - "\t\tMessageBox \"Вам нужны ступка и пестик\""
+        - "\tendif"
         - "\tif ( player->GetItemCount A1V6_ApparatusItem_2 == 0 )"
         - "\t\tif ( player->GetItemCount A1V6_ApparatusItem_3 == 0 )"
-        - "\t\t\tif ( A1V6_ApparatusExt_2 == 0 )"
+        - "\t\t\tif ( rollback == 1 )"
+        - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_1, 1"
+        - "\t\t\telseif ( A1V6_ApparatusExt_2 == 0 )"
         - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_2, 1"
         - "\t\t\telseif ( A1V6_ApparatusExt_3 == 0 )"
         - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_3, 1"
@@ -14623,20 +14639,22 @@
     - SCHD:
         name: A1V6_ApparatusItem_2_sc
         vars:
-          shorts: 2
+          shorts: 3
           longs: 0
           floats: 0
-        data_size: 607
-        var_table_size: 17
+        data_size: 979
+        var_table_size: 26
     - SCVR:
         - OnPCAdd
         - OnPCDrop
-    - SCDT: eJyNkT2qwkAUhe8JZHzzEN48tLO5hQswBuwsooi6ARltQopg40/QCLomt6OV1u5CcBIkaFRMN8w59/DdcwUsyfqsuN1mZ/8PqkNCoCR5DUo/bZiXxY0yRDQLduFKAMz6qnhZ9ZxRy/eiKFgF8WY9jMO576RDmfmo3ppAEgUD3SKBbhKYgCsDbmXgVgJuo//3PKIF61+l6VUZp8r4jTJJlQllIMZSebZ4i+ksNLaysV3ymN3lIvabIKJBh+hh99K3Mh+bt78V1TBl1jhP1tvG+azDp8P8fApwiwTcDyFxUhLADbkLoRc=
+        - rollback
+    - SCDT: eJyVk8FKw0AQhmdSmrhSMKIeRJA5+ACJAW8Vooj6ApL2EvYQCtI0IY2gz+Rb+Az1pIdeLKVYStujCG5CjaZN2uS27Pzzzb+7/8ooMbLeVarXSX/eRThBhjIqjLoI8WYVxUoirYay3+ZPTiAjElnfKnn7pn53Zpu+zwMePnRvQ8e19bgpEb+qmSIEhgWBRhGgEQEj48fCuJQYlyLjVbzeSbdYMlnbqgWrlUZcaWRUmnGlCYkRIdlLS8xOq+0IWU3IxPBKzq0d8N8Gu2W7XhDywNZ0OidtkDqbqF56ndA+RQC4uYC/0VtZLHctyy3Ful/L4qVYvBRLQWlxdTqoh/DS/6TxfDD+oulsPhn1aUiTj+lsOIJ0gNimRP5/CGVT2jTxWCJHFUhHr5cZPWFdnPuIltNw9Rguj+7lfYZcgFEEsAg/wzeVIeIP158UUA==
     - SCTX:
         - Begin A1V6_ApparatusItem_2_sc
         - ""
         - short OnPCAdd
         - short OnPCDrop
+        - short rollback
         - ""
         - if ( GetDisabled == 1 )
         - "\tSetDelete 1"
@@ -14659,10 +14677,24 @@
         - "\tset A1V6_ApparatusY to ( GetPos Y )"
         - "\tset A1V6_ApparatusZ to ( GetPos Z )"
         - "\tset A1V6_ApparatusAngle to ( player -> GetAngle Z )"
-        - "\tPlaceAtPC \"A1V6_ApparatusCont_2\" 1, 50, 0"
+        - "\tset rollback to 0"
+        - "\tif ( player->GetItemCount apparatus_g_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_g_Cont_2\" 1, 50, 0"
+        - "\telseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_m_Cont_2\" 1, 50, 0"
+        - "\telseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_2\" 1, 50, 0"
+        - "\telseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_2\" 1, 50, 0"
+        - "\telse"
+        - "\t\tset rollback to 1"
+        - "\t\tMessageBox \"Вам нужны ступка и пестик\""
+        - "\tendif"
         - "\tif ( player->GetItemCount A1V6_ApparatusItem_1 == 0 )"
         - "\t\tif ( player->GetItemCount A1V6_ApparatusItem_3 == 0 )"
-        - "\t\t\tif ( A1V6_ApparatusExt_1 == 0 )"
+        - "\t\t\tif ( rollback == 1 )"
+        - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_2, 1"
+        - "\t\t\telseif ( A1V6_ApparatusExt_1 == 0 )"
         - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_1, 1"
         - "\t\t\telseif ( A1V6_ApparatusExt_3 == 0 )"
         - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_3, 1"
@@ -14677,20 +14709,22 @@
     - SCHD:
         name: A1V6_ApparatusItem_3_sc
         vars:
-          shorts: 2
+          shorts: 3
           longs: 0
           floats: 0
-        data_size: 607
-        var_table_size: 17
+        data_size: 979
+        var_table_size: 26
     - SCVR:
         - OnPCAdd
         - OnPCDrop
-    - SCDT: eJyNkT2qwkAUhe8JZHzzEN48tLO5hQswEewsooi6ARltQopg40/QCLomt6OV1u5CcBIkaFRMN8w59/DdcwUsyfqsuN1mZ/8PqkNCoCR5DUo/bZiXxY0yRDQLduFKAMz6qnhZ9ZxRy/eiKFgF8WY9jMO576RDmfmo3ppAEgUD3SKBbhKYgCsDbmXgVgJuo//3PKIF61+l6VUZp8r4jTJJlQllIMZSebZ4i+ksNLaysV3ymN3lIvabIKJBh+hh99K3Mh+bt78V1TBl1jhP1tvG+azDp8P8fApwiwTcDyFxUhLADbXQoRM=
+        - rollback
+    - SCDT: eJyVk8FKw0AQhmdSmrhSMKIeRJA5+ABJBG8Vooj6ApL2EvYQCtI0IY2gz+Rb+Az1pIdeLKVYStujCG5CjaZN2uS27Pzzzb+7/8ooMbLeVarXSX/eRThBhjIqjLoI8WYVxUoirYay3+ZPTiAjElnfKnn7pn53Zpu+zwMePnRvQ8e19bgpEb+qmSIEhgWBRhGgEQEj48fCuJQYlyLjVbzeSbdYMlnbqgWrlUZcaWRUmnGlCYkRIdlLS8xOq+0IWU3IxPBKzq0d8N8Gu2W7XhDywNZ0OidtkDqbqF56ndA+RQC4uYC/0VtZLHctyy3Ful/L4qVYvBRLQWlxdTqoh/DS/6TxfDD+oulsPhn1aUiTj+lsOIJ0gNimRP5/CGVT2jTxWCJHFUhHr5cZPWFdnPuIltNw9Rguj+7lfYZcgFEEsAg/wzeVIeIP1+UUUA==
     - SCTX:
         - Begin A1V6_ApparatusItem_3_sc
         - ""
         - short OnPCAdd
         - short OnPCDrop
+        - short rollback
         - ""
         - if ( GetDisabled == 1 )
         - "\tSetDelete 1"
@@ -14713,10 +14747,24 @@
         - "\tset A1V6_ApparatusY to ( GetPos Y )"
         - "\tset A1V6_ApparatusZ to ( GetPos Z )"
         - "\tset A1V6_ApparatusAngle to ( player -> GetAngle Z )"
-        - "\tPlaceAtPC \"A1V6_ApparatusCont_3\" 1, 50, 0"
+        - "\tset rollback to 0"
+        - "\tif ( player->GetItemCount apparatus_g_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_g_Cont_3\" 1, 50, 0"
+        - "\telseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_m_Cont_3\" 1, 50, 0"
+        - "\telseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_3\" 1, 50, 0"
+        - "\telseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )"
+        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_3\" 1, 50, 0"
+        - "\telse"
+        - "\t\tset rollback to 1"
+        - "\t\tMessageBox \"Вам нужны ступка и пестик\""
+        - "\tendif"
         - "\tif ( player->GetItemCount A1V6_ApparatusItem_1 == 0 )"
         - "\t\tif ( player->GetItemCount A1V6_ApparatusItem_2 == 0 )"
-        - "\t\t\tif ( A1V6_ApparatusExt_1 == 0 )"
+        - "\t\t\tif ( rollback == 1 )"
+        - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_3, 1"
+        - "\t\t\telseif ( A1V6_ApparatusExt_1 == 0 )"
         - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_1, 1"
         - "\t\t\telseif ( A1V6_ApparatusExt_2 == 0 )"
         - "\t\t\t\tplayer->AddItem A1V6_ApparatusItem_2, 1"
@@ -16585,29 +16633,71 @@
         value: 480
     - ITEX: "m\\Tx_retort_03.tga"
 - CONT:
-    - NAME: A1V6_ApparatusCont_1
-    - MODL: "m\\misc_potion_fresh_01.nif"
+    - NAME: A1V6_Appara_a_Cont_1
+    - MODL: "m\\Misc_mortarpestle_01.NIF"
     - FNAM: Алхимическая установка
     - CNDT: 10000.0
     - FLAG: ""
     - SCRI: A1V6_ApparatusCont_1_sc
 - CONT:
-    - NAME: A1V6_ApparatusCont_2
-    - MODL: "m\\misc_potion_fresh_01.nif"
+    - NAME: A1V6_Appara_m_Cont_1
+    - MODL: "m\\Misc_mortarpestle_M_01.nif"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_1_sc
+- CONT:
+    - NAME: A1V6_Appara_g_Cont_1
+    - MODL: "m\\Misc_mortarpestle_G_01.nif"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_1_sc
+- CONT:
+    - NAME: A1V6_Appara_a_Cont_2
+    - MODL: "m\\Misc_mortarpestle_01.NIF"
     - FNAM: Алхимическая установка
     - CNDT: 10000.0
     - FLAG: ""
     - SCRI: A1V6_ApparatusCont_2_sc
 - CONT:
-    - NAME: A1V6_ApparatusCont_3
-    - MODL: "m\\misc_potion_fresh_01.nif"
+    - NAME: A1V6_Appara_m_Cont_2
+    - MODL: "m\\Misc_mortarpestle_M_01.nif"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_2_sc
+- CONT:
+    - NAME: A1V6_Appara_g_Cont_2
+    - MODL: "m\\Misc_mortarpestle_G_01.nif"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_2_sc
+- CONT:
+    - NAME: A1V6_Appara_a_Cont_3
+    - MODL: "m\\Misc_mortarpestle_01.NIF"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_3_sc
+- CONT:
+    - NAME: A1V6_Appara_m_Cont_3
+    - MODL: "m\\Misc_mortarpestle_M_01.nif"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_3_sc
+- CONT:
+    - NAME: A1V6_Appara_g_Cont_3
+    - MODL: "m\\Misc_mortarpestle_G_01.nif"
     - FNAM: Алхимическая установка
     - CNDT: 10000.0
     - FLAG: ""
     - SCRI: A1V6_ApparatusCont_3_sc
 - MISC:
     - NAME: A1V6_ApparatusItem_1
-    - MODL: "m\\misc_potion_fresh_01.nif"
+    - MODL: "m\\Misc_mortarpestle_G_01.nif"
     - FNAM: Алхимическая установка
     - MCDT:
         weight: 0.0
@@ -16617,7 +16707,7 @@
     - ITEX: "m\\a1_alchemy_item.dds"
 - MISC:
     - NAME: A1V6_ApparatusItem_2
-    - MODL: "m\\misc_potion_fresh_01.nif"
+    - MODL: "m\\Misc_mortarpestle_G_01.nif"
     - FNAM: Алхимическая установка
     - MCDT:
         weight: 0.0
@@ -16627,7 +16717,7 @@
     - ITEX: "m\\a1_alchemy_item.dds"
 - MISC:
     - NAME: A1V6_ApparatusItem_3
-    - MODL: "m\\misc_potion_fresh_01.nif"
+    - MODL: "m\\Misc_mortarpestle_G_01.nif"
     - FNAM: Алхимическая установка
     - MCDT:
         weight: 0.0
