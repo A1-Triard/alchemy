@@ -2,3 +2,4 @@ improve:
 
 A1V6_ACheck3_RestoreMagic_sc - replace some `set in15 to ( in15 + 1 )` with `set in15 to 1`
 add scripts - place all ingredients with small level in one group
+исправить ошибку, когда из трёх ингредиентов два пары конфликтные, а третья - разрешённая
