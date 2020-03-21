@@ -603,11 +603,11 @@
     - if ( player->GetItemCount "ingred_wolf_heart" > 0 )
     - "\tset in15 to 1"
     - elseif ( player->GetItemCount "ingred_innocent_heart" > 0 )
-    - "\tset in15 to ( in15 + 1 )"
+    - "\tset in15 to 1"
     - elseif ( player->GetItemCount "ingred_daedras_heart_01" > 0 )
-    - "\tset in15 to ( in15 + 1 )"
+    - "\tset in15 to 1"
     - elseif ( player->GetItemCount "ingred_udyrfrykte_heart" > 0 )
-    - "\tset in15 to ( in15 + 1 )"
+    - "\tset in15 to 1"
     - endif
     - if ( player->GetItemCount "rvr_ashes_corpse_01" > 0 )
     - "\tset in15 to ( in15 + 1 )"
@@ -617,7 +617,7 @@
     - if ( player->GetItemCount "ingred_belladonna_01" > 0 )
     - "\tset in30 to 1"
     - elseif ( player->GetItemCount "ingred_belladonna_02" > 0 )
-    - "\tset in30 to ( in30 + 1 )"
+    - "\tset in30 to 1"
     - endif
     - if ( player->GetItemCount "ingred_comberry_01" > 0 )
     - "\tset in30 to ( in30 + 1 )"
@@ -673,7 +673,7 @@
     - if ( player->GetItemCount "ingred_raw_glass_01" > 0 )
     - "\tset in60 to 1"
     - elseif ( player->GetItemCount "ingred_raw_glass_tinos" > 0 )
-    - "\tset in60 to ( in60 + 1 )"
+    - "\tset in60 to 1"
     - endif
     - if ( player->GetItemCount "ingred_comberry_01" > 0 )
     - "\tset in45 to 1"
@@ -732,7 +732,7 @@
     - elseif ( player->GetItemCount "rvr_ashes_corpse_01" > 0 )
     - "\tset in45 to 1"
     - elseif ( player->GetItemCount "ingred_fire_petal_01" > 0 )
-    - "\tset in45 to ( in45 + 1 )"
+    - "\tset in45 to 1"
     - endif
     - if ( player->GetItemCount "ingred_vampire_dust_01" > 0 )
     - "\tset in45 to ( in45 + 1 )"

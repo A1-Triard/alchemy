@@ -512,6 +512,7 @@ def gen_check_script(kind, ingrs, index, next_kind):
         s.append('')
         was_level = [ False, False, False, False ]
         for g in range(0, len(groups)):
+            group_has_level = [ False, False, False, False ]
             for i in range(0, len(groups[g])):
                 if i == 0:
                     s.append('if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
@@ -522,9 +523,11 @@ def gen_check_script(kind, ingrs, index, next_kind):
                 if was_level[level_index]:
                     s.append('	set in' + str(level) + ' to ( in' + str(level) + ' + 1 )')
                 else:
-                    was_level[level_index] = True
+                    group_has_level[level_index] = True
                     s.append('	set in' + str(level) + ' to 1')
             s.append('endif')
+            for level_index in range(0, 4):
+                was_level[level_index] = was_level[level_index] or group_has_level[level_index]
         s.append('')
         if groups_30 and groups_15:
             s.append('set in30 to ( in30 + in15 )')

@@ -9955,12 +9955,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 530
+        data_size: 518
         var_table_size: 10
     - SCVR:
         - in15
         - in45
-    - SCDT: eJyNkE1rAjEQhh2homUPW1oobZd26KngxYD2piCFnlooPZTeQljDJqi7yyQe/J/tzxGMGz8ignqZYZj3mXdmImiUEzGX1AB4wd9FjEUyZD+v/KPb4ySNLUjyUpIpcjHRdo79PrJoA/3HR8VQa8EFGKjVseNyfZWjwPDRG17rPCM54tlMEFd6JHmH4WCL7OyaAM8euT1AMk3aqi3WRBeQYfsseCrIzMwh3IJw3cTjV2tcSWGVpN2yqzvZPvLkkZs1YlIxLbkZ6zw8MbCr6suqduOw7Ub47iB4w9/pryfxXSUZvimZjlmXfzvdl9O4FR7i+7DX4+8F2U+R6dQ1AZaO/49F
+    - SCDT: eJyVkE9LAzEQxXcWLK3sYUVB1EUHT0IvDbTeWiiCJwXxIN5C2IZNaLu7TNJDv6d+HMF00z+BQksvGcK837w3k0CrnomlpBbAE37/pVhlY/b1zN/6A07S2IokryWZqhQzbZc4HCJLNtBvelAMUQfOwEAUY8/VeFWTwPDeG17qsiA54cVCEFd6InmP4WiL7OzaAI8eud5DCk3aqpOxuSCzMCHWgTBi5sGLNaiksErSLiDsIw8euVojJhfzmpupLsO12ugeZNhtLhRH583fjcOuG+G7o2CHn+OXztKbRjJ+UTKfsj7/dLoPp3ER7tLbsDfgrxXZd1Ho3DUB/gFVGI15
     - SCTX:
         - Begin A1V6_ACheck14_RestPers_sc
         - ""
@@ -9977,9 +9977,9 @@
         - "if ( player->GetItemCount \"ingred_guar_hide_01\" > 0 )"
         - "\tset in45 to 1"
         - "elseif ( player->GetItemCount \"ingred_guar_hide_girith\" > 0 )"
-        - "\tset in45 to ( in45 + 1 )"
+        - "\tset in45 to 1"
         - "elseif ( player->GetItemCount \"ingred_guar_hide_marsus\" > 0 )"
-        - "\tset in45 to ( in45 + 1 )"
+        - "\tset in45 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_heather_01\" > 0 )"
         - "\tset in15 to 1"
@@ -10005,13 +10005,13 @@
           shorts: 3
           longs: 0
           floats: 0
-        data_size: 737
+        data_size: 725
         var_table_size: 15
     - SCVR:
         - in15
         - in30
         - in45
-    - SCDT: eJyNks9LwzAUx5cWRzd6qCL4q2IQwUMvjbrdNhiiJ/Uo3kJsX7uyrC1pQfp/6p8jmKZdV+s2vOSRvO/nfd9LYqJ+ylkBoo/QFX77tnByPCOvY/p069IgEXkUFHTJwshbMDyZYGKugC9rqxD1GpXRLXs3+mfZv0LUG6A9lKGehl0ZtTrqZTRbc9iV4X4UhwJ8CksQjPvUJXiqgLIAaXd4WQFHHSCNYsiBiQYzsFwwwc4Atf0uKvywxt+Bc+YncczWlnrXcgdz0zDST9/gd16xBzWbMZ6LyIO1W3kz5DdzXTH2ismTGAKefICgKeSMZ21a+mq1r9oP1b6c3VF9DVVf5ZkjS1fqaWu+z11fw1CEvoXY/Oq2darSs/s5eAsyoo9S81zmaeadWSft5Ji+ROE8fyhA5hD6AUCVw9k=
+    - SCDT: eJyNks9LwzAUx5sWxyY9VBH8VTGI4KGXVt1uGwzRk3oUbyG2r11Z1pa0IP0/9c8RTJPOxc4NL3kk7/t53/eS2KhXMFoD7yF0iV+/HJwfTYOXEXm88Umc8yqNa7KgSRrOKR6PcWAvgU9noxAZP6p+t+zt8J9l14XIGKAdVCLDxL6IZhutJtraHK4y3EuzhENEYAGcsoj4AZ5IoCkQ6B1eKOCwAxRpBhVQrmMDpDudK/CgBd+AMRrlWUZXZlbXbAtzrTO/nc4Utd9SJWUVT0NY+ZjrzJVi3CVT5RnELH8HTgqoKCt1uo/FggPsyTs2jV25F0NjT3Yk9pYhzzxRWqkn2mQf275DXxLWBuLvl3adE5me3s0gnAdD8iA0T02elOGpc6wnR+Q5TWbVfQ0ih9A3/kvCDQ==
     - SCTX:
         - Begin A1V6_ACheck15_FortMagic_sc
         - ""
@@ -10032,12 +10032,12 @@
         - "if ( player->GetItemCount \"ingred_emerald_01\" > 0 )"
         - "\tset in15 to 1"
         - "elseif ( player->GetItemCount \"ingred_emerald_pinetear\" > 0 )"
-        - "\tset in15 to ( in15 + 1 )"
+        - "\tset in15 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_belladonna_01\" > 0 )"
         - "\tset in45 to 1"
         - "elseif ( player->GetItemCount \"ingred_belladonna_02\" > 0 )"
-        - "\tset in45 to ( in45 + 1 )"
+        - "\tset in45 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_saltrice_01\" > 0 )"
         - "\tset in30 to 1"
@@ -10066,12 +10066,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 855
+        data_size: 825
         var_table_size: 10
     - SCVR:
         - in30
         - in60
-    - SCDT: eJyVkkFLw0AQhTsFSytFoqBSWmT14KUIzSWeWijVm3gUb8s2mSYhYVM3G0r+p/4cwSS7xiQaq5csZN733swwQ+htQ5ai6AFckOd3g0QnS/PJog/WjHLf9eQNpkjmc2IOP6Vvxg8S6AzgAGLodMkse7v5O6yYj5W54XNXoEPXyATdYijJotR/JfS/6XdRuKnr+yT7EJNMq9Slos40FTA3SqRPPd9BOjN/Z68VO9ZszKNd2SVNuP+S4L8NyrZbDQZQ3dJEWRxXp/ayJvaMTRR2qjGf88hGLv+CXin0XKMOQ0ewWJF7V9aAEycVG5EGEtuS69OOFH6k8eyK1iwMNQXNi2gMqdX1xUIeBTqqiD4sovN/0yxRNbKoGL+2HfPEGBWF5cpDOzAt+phX71OksT02JtXaLb1DuRLIZCLyMsAHXBTipw==
+    - SCDT: eJyVksFLwzAUxpeBY5MhVVAZLRI9eBlCe6mnDcb0Jh7FW8jat7a0pDNNGf0/9c8RbJvYZXOV7ZJA3vd733sfGaLeKqEF8B5CN/j928Dpxcx5c8mLaxMWBaF4gALwZIKd4a/0y9gjQZ0BOkEZ6nSxXd7d6h5qzU3Z3IhYwMEnC6CcrCAReNroNw79P/p1miz/1d9K/ZXSxzRIcxGRMPKB2E4bdS8pU1EZS9fNZCRn0UcOR6DNkHvQAdLTsCR8rm8Xlsab9fq4PLCDx7onltilwiLGUg+YOAS9k+i1Qn0KPqeZJPWADoFzv+BLXsQC2py3tx1J/Ezh5W9Z0CRRFNoNdmdJpd6OFMlIa9PT2rR8wuPSS44w1Vp+tn1XyxjVhdk8BC92XPJaVZ8LIJlnGpZeeyRPIOYcqMh5VUboB4xd3io=
     - SCTX:
         - Begin A1V6_ACheck16_NightEye_sc
         - ""
@@ -10088,13 +10088,13 @@
         - "if ( player->GetItemCount \"ingred_bear_pelt\" > 0 )"
         - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_wolf_pelt\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_kagouti_hide_01\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_snowbear_pelt_unique\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_snowwolf_pelt_unique\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_wolf_heart\" > 0 )"
         - "\tset in60 to ( in60 + 1 )"
@@ -10108,7 +10108,7 @@
         - "if ( player->GetItemCount \"ingred_eyeball\" > 0 )"
         - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_eyeball_unique\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - endif
         - ""
         - set in60 to ( in60 + in30 )
@@ -10188,13 +10188,13 @@
           shorts: 3
           longs: 0
           floats: 0
-        data_size: 628
+        data_size: 622
         var_table_size: 15
     - SCVR:
         - in15
         - in30
         - in60
-    - SCDT: eJyNkcFKw0AQhrstlrTkkIOiqODgwUsuWYSghxaKevPgSbwN23UxIetu2KSU+pz6OIKbTW3T0JZeZpZhvn/+2fFJP5dsIUyfkBt4+w1An0/oa4zPtxHymRGYM8Pk4ouVqVYwGgH1/5GfYE8r6az6vLZ0fLh0vFV6QI5IQTpdiGzuLnOvyn5jn+t66GmqPox4RyVKnqAUrEyEwYjCeIXRptcWNk+l1HNkqo15YANQCAekOfWqxo+XeMHZZ45Flqo1Wzmmm1RrKNcmm87kFI3W5RokNegkhmAD2BKEzs7Q2alqodXz3Gvc2Ox7/7U8x/R2MLvOcBmcuIbJQyJ4Ru/wxTbYnS+Cs2b9Hh9F+aTs9xeckD+Lqqov
+    - SCDT: eJyNkc9LwzAUx/taHJ300IOiqGDw4GWXFqHoYYOh3jx4Em+PLAZbGpOSdoz5d+qfIxjTuYXuB7vkJY/v5/vey4ugVwk657oHcE1ef2KizsbpS4ZPNwmyqeZYUU3F/JM2hZJkOCRp9I98xzuk4C11Ydc6298622jdhwOowfNJYqK/iMFfjJx5rtqiJ4V81/wNJW9YjoLTJucak5SMlljq9trBZoUQaoZUbsD64Na7bMGjBVgz+lFhXRZyRfnrVKccU7qcTMUEtVLNCoQWtBaHxBzEpMjANmLegWdzA+MX2tvImelr955CywRbmG0LuIiPrWB8n3NWprf4bARm5vP41M3f4QNvHqX5+JoB/AJUv6lI
     - SCTX:
         - Begin A1V6_ACheck18_Para_sc
         - ""
@@ -10215,7 +10215,7 @@
         - "if ( player->GetItemCount \"ingred_netch_leather_01\" > 0 )"
         - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_willow_anther_01\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_scamp_skin_01\" > 0 )"
         - "\tset in30 to 1"
@@ -10292,13 +10292,13 @@
           shorts: 3
           longs: 0
           floats: 0
-        data_size: 1104
+        data_size: 1092
         var_table_size: 15
     - SCVR:
         - in15
         - in30
         - in60
-    - SCDT: eJyNk1FLwzAUhZcOxzYGVkWFuUlUfNrLqri3DYYgCj4piG8h68Ia1q0lySj+T/05gmmSbrHrRl8a0nu/c25PkxaoxSH+IqwGwA38/HVhdD72Pgbo1XtAjHARMYICgkMRwOEQeq2s/8fd1Qcq66Z6XvS+X050q2+f6KCk6GBbtAEOAAcVB/bl6pi1mq4tK5hLbXdClzNGpiih/jyRCgL1PThSSCrh2RNmyItGeEKIiFdhvEGqeeRKI2fGheEEvQscBowubKoO5QN6sNcA9owdTR8ZmiwIw+F0Azp5u2uTYQ6I6ZIIgtkak35OgR/U+KnBF5jxQEqwKLFTkTBQsO18q9G2Qf2IxWzFkYxIms94iY9ta4XDLCrC6bLQ9j/W1dixwbg8A4z6pIRhLiw58nyyCieIRZGwM7bCUvum2qfD9JR8U8mn73pSVY85sv7L955bVVeAswMouDEaqO4ACm9Dx+2q6vgxIP7cQ2+641k1IO5fuB2rfpfVn7CgM1kG4A/RqCe3
+    - SCDT: eJyNk19LwzAUxZcWxzYGVkWFuUlUfNrLqri3DYYgCj4piG8h68Ia1q0lySh+T/04gmmSuqz7Q18a0nt/59yckCaoJhH+IqwKwA38/PVgfD7yP/ro1X9AjHARM4JCgiMRwsEA+s28/8fb1Qcq/021ouh9r5zoRt8+0X5J0f6maB0cAA4qDuzJ1TGrm61NK5hLbXdCF1NGJiilwSyVCgL1fDhUSCbh2xPmyItGeEqISJZRskLcInKlkTPjwnCK3gWOQkbnBaoO7OnamjsyHJkThqPJCnGKRtcmvQKQ0AURBDMbW3eCGjw14BwzHkqYxamdRA3KD/Rh1/a81WjLoEHMErbkSMYibafcPqDkXcWvm7e0wmEeD+F0sdV2Heto7NhgXN47owEpYViISY48Gy+jMWJxLOx0Je4YXO0bap8N01XyDSWf/etKVT3m0LqR7z0vqaYAZwew5ZVowN0BbH0Bba+jqqPHkAQzH73pjmfVgHhw4bWt+l1ef8KCTmUZgD8WXSXq
     - SCTX:
         - Begin A1V6_ACheck1_RestoreHealth_sc
         - ""
@@ -10323,12 +10323,12 @@
         - "elseif ( player->GetItemCount \"Ingred_sweetpulp_01\" > 0 )"
         - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_raw_Stalhrim_01\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_emerald_01\" > 0 )"
         - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_emerald_pinetear\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_marshmerrow_01\" > 0 )"
         - "\tset in15 to ( in15 + 1 )"
@@ -10423,12 +10423,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 627
+        data_size: 621
         var_table_size: 10
     - SCVR:
         - in45
         - in60
-    - SCDT: eJyNkU9LwzAYxvsWHJ30UFQU8d/reZdm6G4bFGEnb4J4C7GLbTEuIynIvqd+HMG0qTXdVtglgTzP73neJCEMVoKtuRoAIL78RChPEvI8oY939/StUJzqvOBigdMpkvDP/B3tNIHXOoLNuEm8R1zXBN4QDkCD52Nsdr/aQ2fea1twXCwzxRdUsU+aCaY1jQnOWoS4M91a5HQLKYul1C0VoFmQ4GgIbuGVpY8aOpUfr1yp9X9fNSrpMjfNKzSMvR4TZWfKnr4NVgvJzCrZym00LDRsnXVYZ1VnIxNh1ZnzCl99fxfUbr/Hvf01l9FZLSUPOU/fx4TOjf6UU51eROeuMqZzqcokK4TRAH4BmRKktA==
+    - SCDT: eJyNkU9Lw0AQxTMBSyo5BBVF/Deee8kW7a2FIPTkTRBvy5quyeLaLbsB6ffUjyO4zca6bdrSyw7se783M0wMnZlkc647AIgvPwmqk4w8D+jj3T19E5pTUwouJzgcIon/zN/JRhMES0e0HjdI94hbNUHQhQMwEISY2houauzNe+0aHItpofmEavZJC8mMoSnB0RIh/ky3DjltIZWYKuNTXfBbXTnuqOFy9fHKtZ7/d4I2c9Ps3zBuMSarlfkitA8S7O1kjVTMvorN/I6WhYatsw7rrMVfz0Y4deTt/7XtalHtDre420e5TM5qKXsoef7eJ3Rs9aeSmvwiOfeVPh0rXWWFkFYD+AWSE6PO
     - SCTX:
         - Begin A1V6_ACheck21_FireSh_sc
         - ""
@@ -10447,7 +10447,7 @@
         - "if ( player->GetItemCount \"ingred_raw_glass_01\" > 0 )"
         - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_raw_glass_tinos\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_comberry_01\" > 0 )"
         - "\tset in45 to 1"
@@ -10478,13 +10478,13 @@
           shorts: 3
           longs: 0
           floats: 0
-        data_size: 988
+        data_size: 976
         var_table_size: 15
     - SCVR:
         - in15
         - in30
         - in60
-    - SCDT: eJyVkltLwzAYhpcWxzZ2UTygMg9BvNvNuuHuNhiCIHgt3oW0TQ+sW0aSIfV36s8RTJPqYm1HvUkg7/e83yFfH7Q3Kc4IawNwC18+HUjPFu7zFD25dyikTCRhhnCUpInI4GwG3f438OHUBoLWT1SnbDsZNbT9G7jPdtrUdlph2wUHgIOWBUfytorbzu++MZ4rnfAoWUeMBIj4gkqNr9DIhXOF5BauWeOlRg4LhFHqsS2Pd4RVJq41cVwQYcII4jgV3GQ6UB7QhcMuMAuEmj151OyaeqmESRCRHWyXE95o6LSAuM8SD/nY8/BvTOa0K3KWhhITzMQrpUGDckut8pRieVK8+UerBRts2RuN0IpgYf6GhEEBK7OeMsvfhqqnnuopfxtKTx09N8bzvm/FO4qwaoiq7dWEXUNUL+aFc67kxX1M/OV4jB5kzELq8qcGzsDUJloTAvtLqQLwBdeQCVo=
+    - SCDT: eJyNkltrwjAUx03LRIcPZRe24S5h7M0Xq8w3BRkMBnseewtpG9tiNZJERvc5t48zWJpUjbWVvuSQnPP7n0tOBzRXCU4JawLwBD//HEivp+7HCL27z2hGmYhnKcJhnMQiheMxdDsb4NepDASNbVSrKDvs15Q9DDwmO6orOyqRbYMTwEHDgn1prdzame0Y47nXCc/jZchIgIgvqPTxBeq7cKKQTMI1a7zTyFmOMEo9tubRjrCKxIMmLnJiFjOCOE4ELzBtYJYGNXX5pqkl9RKJkSAkO8wupnrU0FUOcZ/FHvKx5+EDbD9bYRARwUx8URqYJbagPKALe/tooT2eUCxPilc12E2TORus2TcN0YJgYf6AhEEOK7FTJZa99VQ38m431FtPauroiTGYn2Nr3VKEVUGUbawm7AqifBlvnRvlnr5ExJ8PBuhVxkylX/5R1+mavqH2CYH9ufQC8A/cPgeN
     - SCTX:
         - Begin A1V6_ACheck22_FortAgil_sc
         - ""
@@ -10509,12 +10509,12 @@
         - "elseif ( player->GetItemCount \"ingred_roobrush_01\" > 0 )"
         - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_fire_salts_01\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - endif
         - "if ( player->GetItemCount \"Ingred_noble_sedge_01\" > 0 )"
         - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"Ingred_scrib_cabbage_01\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_heartwood_01\" > 0 )"
         - "\tset in30 to ( in30 + 1 )"
@@ -10577,12 +10577,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 709
+        data_size: 691
         var_table_size: 10
     - SCVR:
         - in15
         - in30
-    - SCDT: eJyd0s9LwzAUB/C9gmOTHiYigg4JHrzs0vrrtsEQd/Is3kJoX5uwmsprivT/1D9HMG2qrQMd89JA3/vkm/Diw/AlExXSEOCCPX1MWH6yDB9v+cNVwJOcjEoqjjouSegI2XzOQv+LvE/+aIXBGPaggIHHArt69er3wqYu7EDplDDmr3mWcImCDFt8gy5qBMAcOGqB0jqPUJsNNGL2w0I269NzR49bGguMSRRO8iDcCZdxRQlVa4O/JY+hf88zxw9bnpaCuFQx7prbwVSRMvKf+FlQURbbDr3BNZpI8gyFkUjdwevZhs2UvcF+s5H9xWbWu20XvQG+bXsr07ZheScxWl9e85Xtuq87eBGd/izeNMWVMCq1RYBPJ6C/eA==
+    - SCDT: eJyd0s9LwzAUB/C9gWOTHSYigg4JHrzs0vrrtsEQd/Is3kJoXpuwmsprivT/1D9HMGuq7RxU8dJA3/u8bxIyhsFLKkqkAcAFe/qYsOxkGT7e8oergMcZWR2XHI0sSJgI2XzOwvEXeZ90tEJvBHuQQ6/PArf2N+u4FTb1YQfaJISSv2ZpzBUKsmzxDZqoIQDz4KgG2pgsQmO70blHxzWSAiWJ3BsehH9khSwppnJtcTdtBO1TnXl4WMOkEMSVltjOGjL3YSGbdSQ2MNGkrfonfhaUF/ku3t70D27QRoqnKKxCajYO/rTVoP1qkPvFZs77sYvWFb799jKmdcPyTmG0vrzmK9d1v+ngeXS6XbypiithdeKKAJ9aArzG
     - SCTX:
         - Begin A1V6_ACheck24_FortEndur_sc
         - ""
@@ -10599,11 +10599,11 @@
         - "if ( player->GetItemCount \"ingred_wolf_heart\" > 0 )"
         - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_innocent_heart\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_daedras_heart_01\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_udyrfrykte_heart\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_guar_hide_01\" > 0 )"
         - "\tset in30 to ( in30 + 1 )"
@@ -10746,12 +10746,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 518
+        data_size: 506
         var_table_size: 10
     - SCVR:
         - in30
         - in60
-    - SCDT: eJyNkE9Lw0AQxTsBSys5BETEP8goeOol8VD00EIRPPXgSbwNabpNlkQ3zGaRfk/9OILbjdq1Fellh9k3v3n7NoRuXaVLwV2AC3z6iFAdTpLHIU2HMS0UN3KxpMpkJY5GmITf0+/R31PQ6cMeaOgEGNsarGroWVy1FifyJWcxp0xxzUbTqxC1vdIUJzh25GrD2q4HcN6SB19kblKmQs7FGgk2kcsWOdpCcsmyKX6wHtoDExzsBD+nrI3ehvvgB93AbdByZqoZsVKN/2QPd/2+6218HNgtrTr2Yr398/Fn0bHTJneFyMrrG7q3A1Mrks5Of2u3TnsQrK0G8AkJmYr9
+    - SCDT: eJyVkE1Lw0AQhjMBSys5BETED2QUPPWSeCh6aKEInnrwJN6GNN0mS6IbZrNI/6f+HMHtRulaRehlh513npl5J4JeU2crwT2AC3z6iFEdTtPHEc1GCS0Vt3K5otrkFY7HmEbf1e/x31UQDGAPNAQhJjaG6xh5I666ESfypWCxoFxxw0bTqxCNTWlKUpw4ct1hM64PcN6RB19kYTKmUi7EBgm3kcsOOfqFFJJlW+6MPWesjfaxAfjmtkBrrpqbek6sVOuv2Uf7YIpDd6sw2Hd/axmHtkunTryd3v459ll87LTpXSny6vqG7m3BzIqk89Of2q3THgRrqwF8ArQziTE=
     - SCTX:
         - Begin A1V6_ACheck28_FortLuck_sc
         - ""
@@ -10770,9 +10770,9 @@
         - "elseif ( player->GetItemCount \"ingred_guar_hide_01\" > 0 )"
         - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_guar_hide_girith\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_guar_hide_marsus\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_corkbulb_root_01\" > 0 )"
         - "\tset in60 to ( in60 + 1 )"
@@ -10849,12 +10849,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 1063
+        data_size: 1051
         var_table_size: 10
     - SCVR:
         - in15
         - in30
-    - SCDT: eJyVk19LwzAUxZeBY5OB8x+ITg3o2xCaDX3bYAiCoD4Iim+XrL1ra7tFso6x76kfR7Bt2lI7O7OXBHrP757T3KRJah8+X6KsEXJJ375bVBwN2esNPLBrkDgLhEQY88C150j7fcqaKfDVKhWSSqaqF9v2DM22q0JSaZAtMiOVKjXCvRrtzVz+Y2W0405tiRaMJHILDEYHsTzCWD7XuZIfFOTw8nTfzZg6DRfKaEeT7K2SDZIP2Vbs7lgIC7wFn3BA2wbjH8uL5BATS4ebno9XvgAf+Tj/kxvaaoOJ8cycB4GPGuCpAvdSkPuBdE0d8kyR+wlpOsLDBWJultHo2XpI8hFMkAcafoVxOmI+tXRZqtjD7HikO4J3lN6yBI7Tb9Nwib91wh6qOsjdzs91b6seE9US4u9n02614/Lw1kHT68KzktxFijD0ya9yLy0/cts1wzIhP3j1FTc=
+    - SCDT: eJydk19LwzAUxZeCY5OB8x+ITg3o2xDaDX3bYAiCoD4Iim+XrL1ra7tFso6x76kfR7Bt2ho7K8GXBHrP757Tm6RF6m8hW6GoE3JOXz7blB+MrOcruLMuQeA84gJhwiLfXSAdDKjVyoGPdqWQ1ApVo9y2b2q2XReSWpNskDmpGdSMdyPZW0r+Q2m05c9cgQ6MBTIHTIsOU3mCWWquUynfK8nh6eG29w+mrzJNogbrSGp7wrkDwZJNGaDrgvlt06DxQi3aVc3OssFlZh6zgxAvQg4hson6YwWtZ6sNZsZzexFFIWqAxxLcyUEWRsK3dcgTSe5mpO3xAJeIyvkZ63MtQ4KNYYos0vArHaTHFzNHl6WS3S/GI/wxvKIIVhVwmn6Txkv6rRv3kNWhcrve/3pPjZQwKojfn0qn3UnLo2sP7aAHj1Jykyji0Ec/yv28fM9c347LhHwBLqATbQ==
     - SCTX:
         - Begin A1V6_ACheck2_RestoreFatig_sc
         - ""
@@ -10873,9 +10873,9 @@
         - "if ( player->GetItemCount \"ingred_bread_01\" > 0 )"
         - "\tset in15 to 1"
         - "elseif ( player->GetItemCount \"ingred_bread_01_UNI2\" > 0 )"
-        - "\tset in15 to ( in15 + 1 )"
+        - "\tset in15 to 1"
         - "elseif ( player->GetItemCount \"ingred_bread_01_UNI3\" > 0 )"
-        - "\tset in15 to ( in15 + 1 )"
+        - "\tset in15 to 1"
         - endif
         - "if ( player->GetItemCount \"food_kwama_egg_02\" > 0 )"
         - "\tset in15 to ( in15 + 1 )"
@@ -10923,13 +10923,13 @@
           shorts: 3
           longs: 0
           floats: 0
-        data_size: 981
+        data_size: 963
         var_table_size: 15
     - SCVR:
         - in15
         - in30
         - in60
-    - SCDT: eJyVkkFLwzAUx5cNxyY79KCiTjCKeNllQdxtgyEIgjdBvIW6pmtY19SkpfR76scRTJOshq6Veumjef//7728vBHox6GbE94H4Bq+fTuQnSzR6ww/o3vsM55QP8ciJsSD8zlEo538y2mQgU6pGVSRd9NWyKrsL+SsHXK2hxyCAyBApwunMnZN7BVxZI1krIs5NFpz4uGMhT6OSZjARelDdnNXpjmj37hrliYUB9QjeIpK1wDKD0RwYntvtXdsvCJi2TtxuaqH04h+pOTfgLLhVgCoAcc7QOCGG8yJoNFv88WI0BDYQ7rUtqMnbdsS12MZ5rl1ZVAd1I32nBlPRHkS+KF8nUTWFLWzqi9qet0yFmGRruW8rKLSC4xXsQ4VqzibqKvI/15HnU0kUqsXVqOfzVs+UPpug35/hbW+16Cv288L51wllw8BWW0k8VEqXoosFquxc2onkU4mXKYA+AGyrgnf
+    - SCDT: eJyVkkFLwzAUx5cNxyY79KCiTjCKeNllQdxtgyEIgjdBvIW6pmto19SkpfR76scRTJOshm7V7dJH8/6//3t5eQPQTSK3ILwLwDV8+3YgO5mj1wl+RvfYZzylfoFFQogHp1OIBmv5l9MgA61K06tb3o13sqzL/rKc7GY52bDsgwMgQKsNxzK2TeyUcWCNZKiLOTRecuLhnEU+TkiUwlnFIbu5K9Oc0YfukmUpxQH1CB6jJupWU0NDiZjl78TlqhLOYvqRkT3Qqsl/UKjR4zUauFGIORE0/m21HAjqA3sklxo7etLYirgeyzEvrAuCeqkbzZwZJqY8DfxIvkUqawp7Mj0oPxDB0faiptcVYzEW2VLOyCoqWWBY5XWovMqzkbqK/O+01NlIWmr1zGr0s3mne0rfbtBvLqzWdxr027bxwjlXyflDQBahdHyUipcyi8Vi6JzaSaSTKZcpAH4AVAAHLQ==
     - SCTX:
         - Begin A1V6_ACheck30_FortSpeed_sc
         - ""
@@ -10952,11 +10952,11 @@
         - "if ( player->GetItemCount \"ingred_wolf_pelt\" > 0 )"
         - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_kagouti_hide_01\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_snowbear_pelt_unique\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_snowwolf_pelt_unique\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_shalk_resin_01\" > 0 )"
         - "\tset in60 to 1"
         - endif
@@ -10991,13 +10991,13 @@
           shorts: 3
           longs: 0
           floats: 0
-        data_size: 1049
+        data_size: 1043
         var_table_size: 15
     - SCVR:
         - in15
         - in30
         - in60
-    - SCDT: eJyNk0FLwzAUx5cOxzaGVFBxbGA8eNplcbjbBkMQBG+CegvZ+taWde1MWrV+Tv04gmmT1a60Y5eG9P1///fy8tJBjY3HYuANhK7x66+Jg+6MPI/pI7mly4CH7jKmIuTg26GDJxNMOlvix6xWolomaxaNR8NDjUuU+4zHBxuPy4xb6AgJVDPwUK6GXuvJ2sk16UqlPH/wbQ4WtQPPAp8KsGygQ4KnGU3yhXYVdewqCmKYM8/T6npRjZX6bFdNI999iyCDmlh+MMGDFsoX2FOwqeE5ME434IVZaZIzSri+4k40x4RDY7bOn6kCvFTgqQYtDpHt0A/2+c8mXSW7VOGMFgOLMypWrp/HZEpUkrIIR/wrsOkaWHhAvdsb1PA7W29cDtJEVNHpvp3uk3IGafvbafuTfwNpqgqd5u7xe+/zaKaIUYGUDr5C6hVIxUj3zYs0PrtzYLEaEXovRU8hp2LR06gO3aShF1cOmlgg9AfVbRpo
+    - SCDT: eJyNk0FLwzAYhpcVxyZDKqg4NjAePO2yOtxtgyEIgjdBvYVs/daWde1MWrX+Tv05glmSzay2Y5eGNO/zfm+SL01UW4Y0A1ZD6Aq//Ng4bo2dpwF5cG7ILGZJMMsITxhEXuLj4RA7zTXxbZcrUWUjq+eN+719jQuUu4wHexsPiowb6ABxVKninhirerRWY9M4pEtV8uw+8hi4xItDFyLCwfWA9Bw82tCOGbSlqKNAUZDBhIahVlt5NVbq0201SaPgNQUTaiAzWlthtsYmQBlZQphsQtWx+GAHd7e5juKONUe5TzK6MHdTAl4o8ESDLoPU88k7/fhj0f+Yud25FFxGCZ8HkYmJkqigZB5O2WfskQXQZI+867vT8BtdLAMGwoSX0XJ+KOerOF158GJuVeS/rjBVQUfGDX7tfBh1iVRLkMKWV4hVgpQ0c8c+l+vjWx+m875D7oToMWGET9sa1UvXcuk5EC3Gpwj9ArQ1GYE=
     - SCTX:
         - Begin A1V6_ACheck31_FortStr_sc
         - ""
@@ -11022,7 +11022,7 @@
         - "elseif ( player->GetItemCount \"ingred_eyeball\" > 0 )"
         - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_eyeball_unique\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_bear_pelt\" > 0 )"
         - "\tset in30 to ( in30 + 1 )"
@@ -11065,13 +11065,13 @@
           shorts: 3
           longs: 0
           floats: 0
-        data_size: 623
+        data_size: 617
         var_table_size: 15
     - SCVR:
         - in15
         - in30
         - in45
-    - SCDT: eJyNkU1LwzAYx/u0ODopWBAPziHPyUsvzareNhjCTp48qLew1czFBTOSQun31I8jmKZ1RtnKLnny8v/9n5dE0NuIecVUD+AKn79ilIMpebyl91lKl1IVfFnRkguxkSVTOB4jiX6Qz7hDCt5WF/63vr452HqXFLw+HIEGz8fURL+NQR0jpx9skp7x91fFXqjOFV/QNyZERVOCEwvVJsSttAsabaEQzYIEkz64GQcNfNLCCyHnxW+uukDyF7hsgNMWKHm+LlfMhfwGsrtjNIvNnFg7cw48e5cYr9DuJk47H90fFFom2MPsm/wwPreC6d2K5etsRGdG9WQUZlYX8dB9y+hMSV08MM11YZ4BvgHUpaji
+    - SCDT: eJyNkUFLwzAUx/taHJ0ULIgH55B38rJLu6q3DYawkycP6i1sNXNxwYykUPo99eMIvqVVg9vKLnlJ3v/3f3kvEXTWclZx3QG4wuevGFVvkj7esvssYQulC7GoWCmkXKuSaxyNMI1+kM+4RQrery78b319c7D1Lil4XTgCA56PCUW/icEmRk4/WBc9E++vmr8wk2sxZ29cyoolKY4ttDFJ3Ze2QUMX6oJbq1djJw02l2pW/FUJtoHLGjhtgFLkq3LJXcivIbs7RlqQCuPA2tE58OzdgLxCuxs7jXy0f01omWAPs2/m/fjcCiZ3S56vsiGbkuqJFDSli7jv5jI21coUD9wIU1Aa4Buox6f9
     - SCTX:
         - Begin A1V6_ACheck32_FortWill_sc
         - ""
@@ -11092,7 +11092,7 @@
         - "if ( player->GetItemCount \"ingred_scrib_jelly_01\" > 0 )"
         - "\tset in15 to 1"
         - "elseif ( player->GetItemCount \"ingred_scrib_jelly_02\" > 0 )"
-        - "\tset in15 to ( in15 + 1 )"
+        - "\tset in15 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_bloat_01\" > 0 )"
         - "\tset in45 to 1"
@@ -11121,13 +11121,13 @@
           shorts: 3
           longs: 0
           floats: 0
-        data_size: 985
+        data_size: 979
         var_table_size: 15
     - SCVR:
         - in15
         - in30
         - in45
-    - SCDT: eJyNks9PwjAUx+kWCRCii78iiloPnrjQgN4gISaePElivDVlPthC3bQdGv5P/XNM3NoqBTfk0i5738/3fff26qj8wtkcRBmhS/z45eG4MSAP1/SOXNGxiGVCBchQJizyAfd6mNR/iE+vWIlKv7LKqnGnvalxjnKdcXfjxN28xFW0hSQqObid3o653eyuW0M61i13wmgi4IkGMedz2ia4r+QZTuyEF1p+aOSCvdNhwnggwmebquD0wAS3bPZMs3uGHcVMUA4sCUAYMEtHqsjO19DQtoFgDiPG+fpGWDMHywydReHrDP6iyw1PNbxr4Ilgb5CkSf/7unPN7RtuHAqgkvFELkg3I92cnitTHXHmTykP/QCiBe3o4ainGk4PlaKlfGvKN3vXSu10vr715z7W7nZFIU4Bkru1GnELkIJ9bHpNVR/cBOBPOx16m4nulYZK/8Q7sstdXR4GaQmhb6eNCrU=
+    - SCDT: eJyNks9PwjAUx+kWCRCii78iiloPnrjQgN4gISaePElivDVlPthC3bQdGv5P/XNM3NoKBTfCpV32vp/3/fbl1VH5jbM5iDJC1/j5x8NxY0CebukDuaFjEcuECpChTFjkA+71MKn/Ed9esRKVFrLKeuNOe9vGOcpNjbtbJ+7mJa6iHSRRycHt9HbM7WZ33RrSqbbcC6OJgBcaxJzPaZvgvpJnOLETXmn5sZEL9kmHCeOBCF83UBeaOjDUKGaCcmBJAMIgWS5SRXayhoZ2DQRzGDHOFxYVnB6Y4JZthDVztMrQWRS+z+A/ump4ruF9A08E+4AkTWq9K9f0UnOHhhuHAqhkPJFL0s1IN8dzbZ4jzvwp5aEfQLSkHT0c9VXD6aFStFTfmuqb/Wul7XS+vjX9r41bXVGIU4Dk7qtG3AKkYBObXlPVB3cB+NNOh95nokelodI/807scleXh0FaQugX8bMJ0A==
     - SCTX:
         - Begin A1V6_ACheck33_FrostResist_sc
         - ""
@@ -11150,7 +11150,7 @@
         - "if ( player->GetItemCount \"ingred_holly_01\" > 0 )"
         - "\tset in15 to 1"
         - "elseif ( player->GetItemCount \"ingred_raw_Stalhrim_01\" > 0 )"
-        - "\tset in15 to ( in15 + 1 )"
+        - "\tset in15 to 1"
         - "elseif ( player->GetItemCount \"ingred_boar_leather\" > 0 )"
         - "\tset in45 to 1"
         - endif
@@ -11246,12 +11246,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 650
+        data_size: 644
         var_table_size: 10
     - SCVR:
         - in30
         - in60
-    - SCDT: eJyNkUFLwzAYhpeCo5MeKqIoFo0gCO7SMOxtg+Fp4E0Qb6Fd4/phTGsSlf1P/TmCaVMllha8JKXf+zx5SQI0rni6ZXKM0Dl++ApxebAk9wm9ncUUxBsoyICD3uL5HJPgJ/0Z9qfQ6Dfid4XJv4RJVzhBO0ihkYdjs3v1HjidT+0R+yA2kuX0veSPKksFozHBiwapUeK2urRI1CIZaM2k+WSCVkynXLmsj82CCZ66hitrOGsNWrJUd0yvAl5aSd2ZTJDbOrKCvVaQQ/pcirz33L/ghQWPVxbkvJQGlVRVIJgaEDQddrFZmn9T47HThXMxH4Mv6jdxbyDe815ReNjMljcFWz/NrumqDlC1PgmP3IGhYVPou8KMEPoG4MGwiw==
+    - SCDT: eJyNkcFLwzAUxpeCo5MeKqIoFo0gCO7SMOxtg+Fp4E0Qb6Fd4/owpjWJyv5P/XME06ZKLKvskhfyvt/3vvACNKx4umZyiNA5fvgKcXkwJ/cJvZ3EFMQbKMiAg17j6RST4Ef9GW5WocGvxO8aJlsZJl3DEdpBCg08HJvq1TVwMp/aEfsgVpLl9L3kjypLBaMxwbMGqVHiprq0SNQiGWjNpLkyQSumU67+Ya8se9ayWrJUdzxeBby0eJ2WjJCbN7IGe61BDulzKXJ3oo/NgQke/wUvLHi8sCDnpTSopKoCwVSPQZNhF5ujeRsbH9udOd/66N2l38i9HvmGTUXhYdOb3xRs+TS5potaQNXyJDxyG4aGVaHvCtNC6Bu0n6+m
     - SCTX:
         - Begin A1V6_ACheck35_Invis_sc
         - ""
@@ -11270,7 +11270,7 @@
         - "if ( player->GetItemCount \"ingred_wolfsbane_01\" > 0 )"
         - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_bittergreen_petals_01\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_treated_bittergreen_uniq\" > 0 )"
         - "\tset in60 to 1"
         - endif
@@ -11346,12 +11346,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 412
+        data_size: 406
         var_table_size: 10
     - SCVR:
         - in15
         - in30
-    - SCDT: eJyFjz8LwkAMxZuCUqVDQTf/ZXNw6Smoi4K4KoiDuIWzHlqsV+m5+D314wi2V2071SUh5P3yXmyo3gL+EFEVoI/7t4Nha8F2Y1qNXLryk+9dOEVC+erOpSdwNkNm/5iXU6YFowYVUGCY6MbdTLpdsOuldk1fniJxpIMIAn4MpeTkMpxrJmFzO6uUGWaMhXFBhoMaFP26Kdv4slydSfHgrnK7JCLToU2jjnHRhwYxa+lpXgjz/Pt722lrxWJ5Ft5lNKF1IttqDSmv5XSK6yltQl+FMtsDfABHWG80
+    - SCDT: eJyFjz0LwjAQhr2CotKhoJtftzm4tArqoiCuCuIgbkeswZbWVJou/k/9OYJtqjZTXXIJ9z557kyo3UJ253ENYIjHl4VRZ+UcprSZ2HRlF98NGMVc+jJhwuW4WKBjfpmnVZaFSgOqIKFioJ1WI6umphvkurYvLjE/04mHITtHQjCyHVwqJmMLXb2UGetMA3RTP6daH4pJjyQLE1mIjBxStyamB6b/4Chl6+q11MZ4/N26a3VVYrX2uBtMZrTNYnuVIel2rJ7entMu8mUkfn2ANzd5bk8=
     - SCTX:
         - Begin A1V6_ACheck37_MagicResist_sc
         - ""
@@ -11368,7 +11368,7 @@
         - "if ( player->GetItemCount \"ingred_belladonna_01\" > 0 )"
         - "\tset in15 to 1"
         - "elseif ( player->GetItemCount \"ingred_belladonna_02\" > 0 )"
-        - "\tset in15 to ( in15 + 1 )"
+        - "\tset in15 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_ash_salts_01\" > 0 )"
         - "\tset in30 to 1"
@@ -11498,12 +11498,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 1017
+        data_size: 993
         var_table_size: 10
     - SCVR:
         - in15
         - in30
-    - SCDT: eJyV009PwjAUAHC6RAOGw/wXNaI26o0LE/UGCfGqFw/irXmsBZb9qWmLZN9TP46J21qxmRvBy5qm79f33tq20fZbBCkT2whd49cvF/PjkfdyTx69OyKYVFwwEsMs8EPAgwH22j/g060NRI1VVLO8bb+34bZ/A1GjhbaQRA0H97LRyce2VX9HJ9oNkplglCx5NCVzBkLhYQFy6NmVYQ0ODQiShPssUSXUxNkHe7hr00tNjwylwKgAqSXpef/CC5qKqUhDxeoyt5Dd54XmB4ZPWBQB5UkCv4mdcqtrzM3KZPmcinxn2u4Z6/N4woRI7Ww18lzLfSOL7pac08o/tLbJdx5QIiFScgNbOtep4FKVcW3NV+a6GgwUYkhUsIhJfhWrfTHfKeZ5Qd1sG13a0DqFj3UPplkIp0ZUv4WO2ymWRw9z5od98qxDnvIIIv1T98RaviVjUEyMIQqzNYS+AbRvEAw=
+    - SCDT: eJyN081PwjAUAHC6RAKGw/yKGlEb9caFiXqDhHjViwfx1jzWAss+atoi2f+pf46J21q1jI/ssqbp+/W9dq8tVH+PIGWijtANfvt2MT8Zeq8P5Mm7J4JJxQUjMUwDPwTc72Ov9Qu+3I2BqPYX1Shv2+tW3HY1ENWaaAdJVHNwNxudfGxZ9bd1or0gmQpGyYJHEzJjIBQeFCCHnl0Z1uDIgCBJuM8StR1daXRsEAVGBUhtSNeryOY0FRORhoqtZmsi+1SXGh4aOGZRBJQnCfwnc8rJtphb2yxnOtdq3yifx2MmRGrnaeDsgz3cWZYXWh4YWZxowTm17yOjaA0tlfrBA0okREpWsKX/NxFcqjLeWPO1aUuDgUIMiQrmMclbbr0v5rvFPC+ok22jSxtY9/+57WE0CuFsEOt7vu22i+Xh44z5YY+86JDnPIJI/8w9tZbvyAgUEyOIwmwNoR++ngx3
     - SCTX:
         - Begin A1V6_ACheck3_RestoreMagic_sc
         - ""
@@ -11522,16 +11522,16 @@
         - "if ( player->GetItemCount \"ingred_wolf_heart\" > 0 )"
         - "\tset in15 to 1"
         - "elseif ( player->GetItemCount \"ingred_innocent_heart\" > 0 )"
-        - "\tset in15 to ( in15 + 1 )"
+        - "\tset in15 to 1"
         - "elseif ( player->GetItemCount \"ingred_daedras_heart_01\" > 0 )"
-        - "\tset in15 to ( in15 + 1 )"
+        - "\tset in15 to 1"
         - "elseif ( player->GetItemCount \"ingred_udyrfrykte_heart\" > 0 )"
-        - "\tset in15 to ( in15 + 1 )"
+        - "\tset in15 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_belladonna_01\" > 0 )"
         - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_belladonna_02\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_comberry_01\" > 0 )"
         - "\tset in30 to ( in30 + 1 )"
@@ -11631,12 +11631,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 472
+        data_size: 466
         var_table_size: 10
     - SCVR:
         - in45
         - in60
-    - SCDT: eJyFkEFLAzEQhTsFSyt7CHhQbJVBwUspbFB6a6GIB6EnD+ItZLNDuzTdlWRX2P+pP0cwu2ltPKiXDMN737zJRNB71bIm0wO4wZdPhsX5gj9PxXIaC0O2LAwJytPKyFwRzmbIoz3ywf6wQmcAR2Ch08XY1W5ToyDs0oedZPnKUCpWRr5RWtlSxBzn38ghrA9w5ZHTR4+U2dbKiSq2NEnqEOuje5DjeABh4tDjbJdoldRkD1yzKf9JXHvibBe4LkwudKZrkVQ6+SWx7Y/b3o3EsRvj1Xnwmff/LjdiF61hcb8mtbnj4sm7HhqTW33IRqF+u9eXldo4GeALljR+XA==
+    - SCDT: eJyFkEFLwzAUx/sKjk16KHhQ3JSHgpcxaFB222CIB2EnD+ItpOljK8taSVqh31M/jmDWbC4obJc8wvv/3i8vEXTelWhIdwDu8O07xvJyxl7HfD5OuCZTlZo4FVmtRSEJJxNk0Q75ig9EIejBCRgIQkxsDTc18mTXTnaWFwtNGV9o8UFZbSqeMJz+IntZF+DGIefPDqnytREjWa5plDZ/sB74rr4D463LSKHI7An4T9w64mKrWpa64CpXDU9rlfquLtoDGQ7bbcPgtL3bkTi0Y1x36q3xeezPBvFVG5g9LkmuHhh/camnTcg+vR8P/P79rj+v5cq2AX4AT2x9dg==
     - SCTX:
         - Begin A1V6_ACheck41_RestoreEndur_sc
         - ""
@@ -11653,7 +11653,7 @@
         - "if ( player->GetItemCount \"ingred_gravedust_01\" > 0 )"
         - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"Ingred_timsa-come-by_01\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_scales_01\" > 0 )"
         - "\tset in45 to 1"
@@ -11725,13 +11725,13 @@
           shorts: 3
           longs: 0
           floats: 0
-        data_size: 605
+        data_size: 599
         var_table_size: 15
     - SCVR:
         - in30
         - in45
         - in60
-    - SCDT: eJyNkU9Lw0AQxTMNllQCBhRB659FvOWShbS3FoonwZOCeBtiM9rQmJTdQMn31I8juNlt07UY8JIhee/35mXXh/4qT2oSfYAb9vIdsPJ0xp/H+BCPUJCsSkEoV0Qpm0wY97f2r6DDBk7r8fYjx9G/Ivdt4AzgACQ4PRap2dtMt5m+1f/aLDu5L94FpfhBSVquUdSEEWfTluV2wVvDnG2YIhPV4i2vUVZJvpQ26DH1YJyFA7CXnpuAo8wEqOJZscOazvw3cGWA4y2QrJFey6LeQa6B9NZDvVXlsFAr6t119LdQZZlOU+uXPrvvxdN+t8P/16FfBJdanN0taL6MY3w0jqfGgHI+DIa2Pmr1SigV4Af2KqBX
+    - SCDT: eJyNkU9rwkAQxTOGSiyBBloKrf2zlN68JBC9KUhPhZ5aKL0NqZnWYJrIbkDyPevHEVx3NS7RgJdMdt/7vZnddaE9T6OSeBvgiX2tPJZfj4PPAb6FfeQkipwTijlRzIZDFrg7+9JrsIFVeZx65MA/KbJuA6sDZyDAajFf1ta22pvqGvM/6mZXr9kvpxj/KIrzBfKS0A/YqGIDc8BnzdxsmSzhxfQnLVEUUToTNbADZrtbjV4kGpUjJ9kegEPgQQOXOyBaIH3nWbmHbA2pfudMfpjMYT2lyLVtqb2ezHLU38g4zH/zizjKbzf4j133nXevxPHLlCazMMR37fjYGFBMul7X1PuVXnCpAqwB8qmfcQ==
     - SCTX:
         - Begin A1V6_ACheck44_RestoreSpeed_sc
         - ""
@@ -11752,7 +11752,7 @@
         - "if ( player->GetItemCount \"Ingred_meadow_rye_01\" > 0 )"
         - "\tset in45 to 1"
         - "elseif ( player->GetItemCount \"Ingred_nirthfly_stalks_01\" > 0 )"
-        - "\tset in45 to ( in45 + 1 )"
+        - "\tset in45 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_resin_01\" > 0 )"
         - "\tset in30 to 1"
@@ -11781,14 +11781,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 773
+        data_size: 767
         var_table_size: 20
     - SCVR:
         - in15
         - in30
         - in45
         - in60
-    - SCDT: eJyNkkFPgzAUxymbC1s4cPCgGYlNjPHABRLltiWLJxNPmqi3ho0KhFqwlMx9T/04JpYCo0HRXfravvf7//teaoJJToIdZhMALuDzlwWz05X36KO7q2vEcMEzhlHBGaYRj+FiAT2zJT6t4Uqg7cuMvrDvHir8SyXQpuAIFEDToSui3sRRE8dVNJWeLmtrO6ERw6GQySh+IdkWM5RjHpACuR5cSrbS9NRnn9XsccOGDJdRjLbBe8fo/zBRRkKUBhTzjhn3mfOaOfnJlDR5K/GeM6BYoAedKVB77HkWm+A1R0WaUNVzgG29b2s2zhhFJCE7tC7JuuOr+Xpy8ro2g2KBYlzQkRlxHmnyzpFOM+lU3TnCwJC7pdLxx5//xpDIeAAZ+BG2NZf51U2MN6nQva+LHjgT45hbtpr12+xTQohIA/ANFcnQEw==
+    - SCDT: eJyNkkFPgzAYhingwhYOHDxoRmITYzxwgUS5bcniycSTJuqtYaMCoRYskLn/qT/HxFJAKoru0g/6fs/79mtqgklOgh1mEwDO4OOHBbPjlXfvo5uLS8RwUWYMo6JkmEZlDBcL6Jkd8W6NdwLlq80YGvvuvsa/dAJlCg5AARQVuryqbdXaqtfVlGY6b6LthEYMh9wmo/iJZFvMUI7LgBTI9eBSsLWnJx/7pGEPWzZkuIpitA1ee0b9h4kyEqI0oLjsGX3InDbM0U+moslLhWVuCuTpBmnFJnjOUZEmVE4zIF+gB53vbJd63bBxxigiCdmhdUXWPa81qWLWGeQL5BcFHaHwf00Re45Imomkes/hAYb4Wkqzvv35YgyB6CPIyFuwrbnQV1cx3qTc97ZpuisZv465Zcuq36kPCSFcBuATCC/PKw==
     - SCTX:
         - Begin A1V6_ACheck45_RestoreStr_sc
         - ""
@@ -11815,7 +11815,7 @@
         - "elseif ( player->GetItemCount \"ingred_gold_kanet_01\" > 0 )"
         - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_gold_kanet_unique\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_scamp_skin_01\" > 0 )"
         - "\tset in60 to ( in60 + 1 )"
@@ -11845,12 +11845,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 468
+        data_size: 462
         var_table_size: 10
     - SCVR:
         - in15
         - in60
-    - SCDT: eJyNkEFLw0AQhTMBSys55KAHteCcvPSSFYmnFoJXTwrqbdjWRaPbbpgEQv9n+3MKnSY03VPbyw7svG/evImgV1i9NNwDeMCvTYzuNlMfKb2mCbEpK8eG6tzawtWGcTxGFe2RdXxECsEALqCEIMREarirkWeGrdl1vvhh803ljPMp/Rlrl5QonHTQwa5/HHrsoD7KgwpHA/Ad71v4qoN19WtmrGvf8Dy2Yj3XxM5VB3aXVDWZw+CymSJfOBK4nTnxoqxOXW4YDxtB9iIr/j+l9NaqPkUkm9/FN377md4LOUI2LaUHsAXnYn3V
+    - SCDT: eJyFkEFrwkAQhR2hoiWHHNpDW6Fz6sVLUkp6Ugi99tRC621YddHo6oZJIPg/9ecIjlnUPcXLDuy8772ZCaCTG7XV3AF4w/EhRPucxn8JfScRsS5Ky5qqzJjcVppxOMQ4OCP7sEEKrR7cQQGtNkZS26caeGHowh6zzZz1jIopZxNaamO2FMU4ukDXuG4z9O5DPfCzXh32cMFUudBTVpUf1UV5MMZBI1uyWitia8srCy6xdrmvXeQLBwI7z5G3xO7WzfphvxakXzLi6iOhH6f6F5FM/hI++e1P+s1l/XRSSA/gCJ8cfO8=
     - SCTX:
         - Begin A1V6_ACheck46_RestoreWill_sc
         - ""
@@ -11867,7 +11867,7 @@
         - "if ( player->GetItemCount \"ingred_scrib_jelly_01\" > 0 )"
         - "\tset in60 to 1"
         - "elseif ( player->GetItemCount \"ingred_scrib_jelly_02\" > 0 )"
-        - "\tset in60 to ( in60 + 1 )"
+        - "\tset in60 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_scathecraw_01\" > 0 )"
         - "\tset in60 to ( in60 + 1 )"
@@ -12054,12 +12054,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 836
+        data_size: 812
         var_table_size: 10
     - SCVR:
         - in45
         - in60
-    - SCDT: eJyVkkFPgzAUxymJCzMk4mUmskO96GEXmrjdtmTZ1ZMH462p8IRmDJBCln1P/TgmFqhYF0B3aZO+/+//Xt97NhplMTtAPkLoDj9/Ojh11+RpQR/u5zTgApgAmoPgomCJD3i5xMT+Zj6cIS0yWqF1bL7w/m/eqUXGGJ0hgQwTe/I2q9vW/uI26RyehDkE9AVYTjOIC7yq9RVH9PKO9Ps0fv2tt7A8MMEznbppqImitixMy4LTiAdAPTLM3qqGKFYk6b6tkpYJfyvhZIO27F6DMdK7dN1YXCiLTOaPfwqvmkoGgWoeiQ7IPGZHnmmDXSqMiYge2K6zRfVYTeO8NqreZpJvoittZO9/rJ5VQ2YP1LtSU+eqVqw3EfjbOaGPIDbpjgrfdSZ6RJrwMCpkAKEvUZHimA==
+    - SCDT: eJyVkkFPgzAUx3kkLsyQiJeZyA71ooddIHG7bcmyqycPxltT4QnNGCCFLPue+nFMLFCxLmPTS5v0/X7/vr7UhkGesB0WA4A78vzpkMxd+k8z+nA/pSEXyATSAgUXJUsDJPM58e1v58M5xoLRgdZ++Mz7e/hBFowhnIEAwySe3M16t7W3uO11Dk+jAkP6gqygOSYlWTR87fl6e3v8Nktej/I3LT9S/JpFWVVyGvMQqef3WbdqCMoSabbtOqNVyt8q/IfaNXlAHYI+jetWvlByLu9Mfto0Twr13FNdsIhciE8mv7Vxq10qjYmY7thGH4gUQYlN0HkTVJ9NpN9WF9rL3098MauRzB6p9+uMnauGWK5iDNZTnz6iWGUbKgLXGekVGcKjuJQFgC/JRd8E
     - SCTX:
         - Begin A1V6_ACheck51_ResCom_sc
         - ""
@@ -12078,13 +12078,13 @@
         - "if ( player->GetItemCount \"ingred_bear_pelt\" > 0 )"
         - "\tset in45 to 1"
         - "elseif ( player->GetItemCount \"ingred_wolf_pelt\" > 0 )"
-        - "\tset in45 to ( in45 + 1 )"
+        - "\tset in45 to 1"
         - "elseif ( player->GetItemCount \"ingred_kagouti_hide_01\" > 0 )"
-        - "\tset in45 to ( in45 + 1 )"
+        - "\tset in45 to 1"
         - "elseif ( player->GetItemCount \"ingred_snowbear_pelt_unique\" > 0 )"
-        - "\tset in45 to ( in45 + 1 )"
+        - "\tset in45 to 1"
         - "elseif ( player->GetItemCount \"ingred_snowwolf_pelt_unique\" > 0 )"
-        - "\tset in45 to ( in45 + 1 )"
+        - "\tset in45 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_pearl_01\" > 0 )"
         - "\tset in60 to 1"
@@ -12115,12 +12115,12 @@
           shorts: 2
           longs: 0
           floats: 0
-        data_size: 374
+        data_size: 368
         var_table_size: 10
     - SCVR:
         - in30
         - in60
-    - SCDT: eJxtj82qwjAQhTuFK/VSLl1cBH/AceXCTbPQnYK4daUg7kKNwQRLom1d+J76OIJJ6k8RF5khOfnOnAmhdkiTM89qAC1c3yLUf1OyGtH5KKap3IkCx2Mk4fPbNfqQwavDD+Tg+Rib7tseVky7pem/VLuMb6k9qWSCKxoTnDjGsu8JAUC/ZDoPZpNqvaVSKc24KuhJyeOJv9gATUGCgzpU5/ZKj8bLI2F7mqhC8Ow92aYlLr/v/aIpzmtg8MDdJpVcl2+bd6KGe5zOBGf7oVGtQnPWjpoVwSALni+FNhlyBnAH93JgGg==
+    - SCDT: eJxtj70KwjAUhb0FRaVIBxH8Aa+Tg0s76KYgrk4K4hZqDE1oSbQ/g++pjyOYtmqDOCQ3ycl3zr02NC6Rf2NxA2CAx6eDqrP2DguyXbgkEgFPcblEz/58ezg/MtRaUIcEaha6ulp5tQ3TcWnaFTKI2ZnkKxKUM0lcD1cFk7NVQhNgWjKjN3OKlDoTIaWiTKYkk+KaMZNtgZk4Kenel/ZpSHyZchZXmVbJFac26g21Fc403ixuK6Oj+7+ZR06veFxvOKPhXKu5QhI6dPqGoJEdS/Zc6R4SCvACIY5fNQ==
     - SCTX:
         - Begin A1V6_ACheck56_Light_sc
         - ""
@@ -12137,7 +12137,7 @@
         - "if ( player->GetItemCount \"ingred_red_lichen_01\" > 0 )"
         - "\tset in30 to 1"
         - "elseif ( player->GetItemCount \"ingred_blood_innocent_unique\" > 0 )"
-        - "\tset in30 to ( in30 + 1 )"
+        - "\tset in30 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_black_anther_01\" > 0 )"
         - "\tset in60 to 1"
@@ -12415,11 +12415,11 @@
           shorts: 1
           longs: 0
           floats: 0
-        data_size: 360
+        data_size: 354
         var_table_size: 5
     - SCVR:
         - in45
-    - SCDT: eJx9z00LgkAQBuAmSBQ8CH1ciph7F42KOiiY187RbVBb1FoqXDv4P+vnBJlaLfRxWVjeefad1UE5cT9nqQKAuLkZeOy41npGq8mUwnPKKOBJFGdo22jpz+Gr8XUIGhq0QECjiab++XA3OUQp25II0ySgHeM8J9NCB80avQvU/2j8QioWB1o40kBuHFa4XWNfxCR8ngm5T6KFqG6OtMPl9ycHRq+MXC9m4X5OyzIpduzXpgoW5D2cCAHuEnFf+Q==
+    - SCDT: eJx9j8sKglAQhp0gUXAhdNkUMfs2GhW1UDC3raPdoHZQ61DhsYXvWY8TZGp0oMtmYPjnm2/GAPXMg4JlKgDi9m7iqevZmzmtpzOKLhmjkKdxkqPjoG28hm/m1yFQdGiDAKWFlvG5uJce44ztSERZGtKecV6QZaOLVgO9Bdp/aCJDOsiuUY11GiwQCYmA50I2aVgWtHGsQ0nUnSvZr7/fG5r9KvL8hEWHBa2qpLxu0DB1sCT/yYkI4AFAAl8U
     - SCTX:
         - Begin A1V6_ACheck8_Blight_sc
         - ""
@@ -12434,7 +12434,7 @@
         - "if ( player->GetItemCount \"ingred_scrib_jelly_01\" > 0 )"
         - "\tset in45 to 1"
         - "elseif ( player->GetItemCount \"ingred_scrib_jelly_02\" > 0 )"
-        - "\tset in45 to ( in45 + 1 )"
+        - "\tset in45 to 1"
         - endif
         - "if ( player->GetItemCount \"ingred_ash_salts_01\" > 0 )"
         - "\tset in45 to ( in45 + 1 )"
