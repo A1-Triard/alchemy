@@ -806,14 +806,19 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
     add_items = []
     add_items_ext = []
     add_scripts = []
+    add_scripts_ext = []
     check_scripts = []
+    check_scripts_ext = []
     del_scripts = []
     next_useful_kind = None
+    next_useful_kind_ext = None
     for (i, kind) in reversed(list(enumerate(kinds))):
         index = i + 1
         kind_ingrs = filter_and_group_ingredients(ingrs.values(), kind)
         kind_ingrs_ext = filter_and_group_ingredients(ingrs_ext.values(), kind)
         is_useful = False
+        is_useful_ext = False
+        override_ext = False
         for level in reversed([15, 30, 45, 60]):
             level_ingrs = ingrs_filter_level(kind_ingrs, level, kind)
             level_ingrs_ext = ingrs_filter_level(kind_ingrs_ext, level, kind)
@@ -823,15 +828,25 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
                 add_scripts.append(gen_add_script(kind, level_ingrs, level, index))
             elif not ingrs_empty(level_ingrs_ext):
                 add_items_ext.append(gen_add_item(kind, index, level))
-#            if not ingrs_equals(level_ingrs, level_ingrs_ext):
+            if not ingrs_empty(level_ingrs_ext):
+                is_useful_ext = True
+                if not ingrs_equals(level_ingrs, level_ingrs_ext):
+                    override_ext = True
+                    add_scripts_ext.append(gen_add_script(kind, level_ingrs_ext, level, index))
         if is_useful:
             check_scripts.append(gen_check_script(kind, kind_ingrs, index, next_useful_kind))
             del_scripts.append(gen_del_script(kind, kind_ingrs, index, next_useful_kind))
             next_useful_kind = (index, kind)
+        if override_ext:
+            check_scripts_ext.append(gen_check_script(kind, kind_ingrs_ext, index, next_useful_kind_ext))
+        if is_useful_ext:
+            next_useful_kind_ext = (index, kind)
     add_items.reverse()
     add_items_ext.reverse()
     add_scripts.reverse()
+    add_scripts_ext.reverse()
     check_scripts.reverse()
+    check_scripts_ext.reverse()
     del_scripts.reverse()
 
     level_books = []
@@ -855,6 +870,8 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
 
     with open('A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '_Ext.esp.yaml', 'w', encoding='utf-8') as esp:
         yaml.dump(add_items_ext, esp, allow_unicode=True)
+        yaml.dump(add_scripts_ext, esp, allow_unicode=True)
+        yaml.dump(check_scripts_ext, esp, allow_unicode=True)
 
     assembly_plugin(mfr + 'alchemy_' + ingrs_set + '.esp', year, month, day, hour, minute, second)
 
