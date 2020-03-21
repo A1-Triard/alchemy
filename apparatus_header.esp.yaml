@@ -2568,28 +2568,34 @@
     - SCHD:
         name: A1V6_StartAlchemy
         vars:
-          shorts: 1
+          shorts: 0
           longs: 0
           floats: 0
-        data_size: 79
-        var_table_size: 7
-    - SCVR:
-        - doOnce
-    - SCDT: eJwBTwCw/wYBAgkgcwEAID09IDAFAXMBAAIgMQwBBnBsYXllctQQFEExVjZfQXBwYXJhdHVzSXRlbV8xAQAJARwQEUExVjZfU3RhcnRBbGNoZW15AQGishOb
+        data_size: 0
+        var_table_size: 0
     - SCTX:
         - Begin A1V6_StartAlchemy
         - ""
         - short doOnce
         - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tplayer->AddItem A1V6_ApparatusItem_1, 1"
-        - endif
-        - ""
         - StopScript A1V6_StartAlchemy
         - ""
-        - End
+        - if ( doOnce == 1 )
+        - "\treturn"
+        - endif
+        - set doOnce to 1
+        - if ( player->GetItemCount A1V6_ApparatusItem_1 > 0 )
+        - "\treturn"
+        - endif
+        - if ( player->GetItemCount A1V6_ApparatusItem_2 > 0 )
+        - "\treturn"
+        - endif
+        - if ( player->GetItemCount A1V6_ApparatusItem_3 > 0 )
+        - "\treturn"
+        - endif
+        - player->AddItem A1V6_ApparatusItem_1, 1
         - ""
+        - End
 - SSCR:
     - DATA: "2118625382187888739"
     - NAME: A1V6_StartAlchemy

@@ -15938,25 +15938,34 @@
           shorts: 1
           longs: 0
           floats: 0
-        data_size: 79
+        data_size: 225
         var_table_size: 7
     - SCVR:
         - doOnce
-    - SCDT: eJwBTwCw/wYBAgkgcwEAID09IDAFAXMBAAIgMQwBBnBsYXllctQQFEExVjZfQXBwYXJhdHVzSXRlbV8xAQAJARwQEUExVjZfU3RhcnRBbGNoZW15AQGishOb
+    - SCDT: eJyVzr0KgzAYhWFPoYLQIYWOhX5DL8AouClkdBbETYIEHBRDjIP36e0I/qw66HjgeeF82VvwPCozK40VTVWrdnQBj3o4FMfE//DwxLoexF9wdSNHZVbxo2Jm1H32WmgtjbRDn1rVlpwS8rfuog9u+vDgJ3b6Aw6wAKF/Oq4=
     - SCTX:
         - Begin A1V6_StartAlchemy
         - ""
         - short doOnce
         - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tplayer->AddItem A1V6_ApparatusItem_1, 1"
-        - endif
-        - ""
         - StopScript A1V6_StartAlchemy
         - ""
-        - End
+        - if ( doOnce == 1 )
+        - "\treturn"
+        - endif
+        - set doOnce to 1
+        - if ( player->GetItemCount A1V6_ApparatusItem_1 > 0 )
+        - "\treturn"
+        - endif
+        - if ( player->GetItemCount A1V6_ApparatusItem_2 > 0 )
+        - "\treturn"
+        - endif
+        - if ( player->GetItemCount A1V6_ApparatusItem_3 > 0 )
+        - "\treturn"
+        - endif
+        - "player->AddItem A1V6_ApparatusItem_1, 1"
         - ""
+        - End
 - SSCR:
     - DATA: "2118625382187888739"
     - NAME: A1V6_StartAlchemy

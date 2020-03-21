@@ -3539,24 +3539,46 @@
           shorts: 1
           longs: 0
           floats: 0
-        data_size: 156
+        data_size: 599
         var_table_size: 7
     - SCVR:
         - doOnce
-    - SCDT: eJyFyjELQEAYgGGfUMpgkMlwP8EtNgMmg4Wy6osLde50d4v/6QeRMsr21vt44PhEg0XynKQu3GUTGoC3czyYOsO4oH02tBKnEueCj0tt2DZQsL5MLWb1Z5pVj6/xIQmjZ3YGlamkMLgKpjTABV1qK7Y=
+    - SCDT: eJyVzrEKwjAQxvF+SgsFhw7i5BDEBzAKbh2qUwcXBXEroZZaqI0kWXxPX0fQCqYqmKbcdPC/4zcOhhHdL5OdYkKteaVYUWVCeoBPJBwShoRO4cPFc+sROoB3Kdk1Ex7cCTncA8JHrwdbzo4rlkdleopVdk5ofTr7yPvGfP6bw5gvvvNb8AcBx0c9bey4ykUHts7t2Do3sxuELXtTyLQDW+d2bJ2b2Q3izQYeQjSlRA==
     - SCTX:
         - Begin A1V6_StartContainers
         - ""
         - short doOnce
         - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tplayer->AddItem A1V6_RoadBagAlchItem_1, 1"
-        - "\tplayer->AddItem A1V6_RoadBagIngrItem_1, 1"
-        - "\tplayer->AddItem A1V6_RoadBagMiscItem_1, 1"
+        - StopScript A1V6_StartContainers
+        - ""
+        - if ( doOnce == 1 )
+        - "\treturn"
+        - endif
+        - set doOnce to 1
+        - ""
+        - if ( player->GetItemCount A1V6_RoadBagAlchItem_1 == 0 )
+        - "\tif ( player->GetItemCount A1V6_RoadBagAlchItem_2 == 0 )"
+        - "\t\tif ( player->GetItemCount A1V6_RoadBagAlchItem_3 == 0 )"
+        - "\t\t\tplayer->AddItem A1V6_RoadBagAlchItem_1, 1"
+        - "\t\tendif"
+        - "\tendif"
         - endif
         - ""
-        - StopScript A1V6_StartContainers
+        - if ( player->GetItemCount A1V6_RoadBagIngrItem_1 == 0 )
+        - "\tif ( player->GetItemCount A1V6_RoadBagIngrItem_2 == 0 )"
+        - "\t\tif ( player->GetItemCount A1V6_RoadBagIngrItem_3 == 0 )"
+        - "\t\t\tplayer->AddItem A1V6_RoadBagIngrItem_1, 1"
+        - "\t\tendif"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( player->GetItemCount A1V6_RoadBagMiscItem_1 == 0 )
+        - "\tif ( player->GetItemCount A1V6_RoadBagMiscItem_2 == 0 )"
+        - "\t\tif ( player->GetItemCount A1V6_RoadBagMiscItem_3 == 0 )"
+        - "\t\t\tplayer->AddItem A1V6_RoadBagMiscItem_1, 1"
+        - "\t\tendif"
+        - "\tendif"
+        - endif
         - ""
         - End
 - SSCR:
