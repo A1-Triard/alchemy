@@ -1092,7 +1092,6 @@
   - SCTX:
     - Begin A1V6_ACheck47_SpellAbs_sc
     - ''
-    - short in15
     - short in30
     - short in45
     - short in60
@@ -1105,7 +1104,6 @@
     - "\tplayer->RemoveItem \"A1V6_L60_spell_absorption\", 1"
     - endif
     - ''
-    - set in15 to 0
     - set in30 to 0
     - set in45 to 0
     - set in60 to 0

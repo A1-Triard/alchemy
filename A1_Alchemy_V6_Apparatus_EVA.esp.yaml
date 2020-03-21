@@ -14930,20 +14930,18 @@
     - SCHD:
         name: A1V6_ACheck10_DetKey_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 677
-        var_table_size: 15
+        data_size: 669
+        var_table_size: 10
     - SCVR:
-        - in30
         - in45
         - in60
-    - SCDT: eJyFkcFPgzAUxnkjLmwhBuPBmC3aOxea6G5bsuhND56MtxeEZjQMSige+D/1zzGxlIrgRnbhkX6/731fWhemxT6sWTkFuCVv3x4Rl1v6usLnu3uMWcWiClNWk/WaUPeX/fKOMWB1gPN/2So4vWzAgDWDM5BgTUig5sRMu5lur/ONieH5rmQxvkcoC1EyLERMNp2V9pstWosX7pFjmPNM/ciU54ZvIugM+iHXrePchGQfUYoBNTwc8oMEsSt5hhVjVdI1coj6EEr8oW/Z+i5MTigTrMPsL8pujPZpY8zDTOTxiFE3mOsGqjzxtT7XenPmq31tv03v3j5HntzRsD0CHzzp0rvSyvYhYVFKA3xk1ROrUUaLoULxRXApcqUA/AB2IKsB
+    - SCDT: eJyFkcFrgzAYxf2EFVtkOHYYo2XL3YuBrbcWynbbDjuV3T4yDTVYjRh38P/c/pzBYrSibaWXJOS93/ceiQuTfM8qXkwAHsnnn0fk7YZul/j+9IwRL3lYYsIrsloR6h68v945D1idwTketgwuDxt4wJrCFSiwbBLo3a53t9f1oR0vsl3BI/wKUeWy4JjLiKwNUqO032jeIB7bo0CWiVQfVCKy1l9H0Cn0Q+4b4roNSb/DBAPa+Ldw6h8kyF0hUiw5L+OukUP0Qijxh9yi4W7aHKZirFjaRelqGrQvg5FgqcyiEdA0mJkGujzxjT4zen3n63lNv3Xv3X5GvtoxZnvEfPKVC+/OKJuXmIcJDfCVl2+8QhXOhwrFDymUzLQC8A8j1qnq
     - SCTX:
         - Begin A1V6_ACheck10_DetKey_sc
         - ""
-        - short in30
         - short in45
         - short in60
         - ""
@@ -14953,7 +14951,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_detect_key\", 1"
         - endif
         - ""
-        - set in30 to 0
         - set in45 to 0
         - set in60 to 0
         - ""
@@ -14992,21 +14989,19 @@
     - SCHD:
         name: A1V6_ACheck11_Poison_sc
         vars:
-          shorts: 4
+          shorts: 3
           longs: 0
           floats: 0
-        data_size: 1075
-        var_table_size: 20
+        data_size: 1067
+        var_table_size: 15
     - SCVR:
-        - in15
         - in30
         - in45
         - in60
-    - SCDT: eJyNkz1vwjAQhjGkCFCGqF9U6pc7Z8G0ZQMJVerUoVPV7eQEi6SYBDkgxP9sf06lOo5JTcLXkpNy73Pv3dm2UX3G6YqJOkIYf/46OD4fko8evD12wF8IBrM4TOII9/uY2Gvxj7NVhCq5olEs9/R8RLlN0b5yvWO66xW6a6ITlKBKFXdkrOpY09FKo11ex0UYjQUbwTiIFxwCRsUcOgQP8iLE7PI2g041JOgcpowaRGpHmsg0uteTaSbx6TxgvqBL06eB5QcT7O5zi2NPLJLgn7PKboWxEl+EHnwxzlcH7fah3TK66dvOYJtyCNVe2IrlO5FMbQtzlzFnikkCyicwpdEo9PgaReUB11B+BEtgXhxtH28TfcjQS416nPoT4KEfsMjcqaQtTatqLVVN9oJdNU1LTZP+c5W+pfTpP1eaZN4D495873pODaWu7VAXX0umtnaoy4/hxmmr1PBFXrcJIfCuUvJcr50rM9OFV5beSSFTCP0BjBwVHA==
+    - SCDT: eJyNkz1vwjAQhnGiIkAZon5RqV/uzIJpywYSqtSpQyfU7eQEi6SYBNkgxP9sf06lOo6hJgHKEsu597n37mx7qDrjdMVEFSGMP358nJ4PyLALb49tCBeCwSyNZZrgXg8Tby3+9neKUGWjqBXTPT0fkW5bdChd95jquoXq6ugESVRxcFutjlndbPXKY7iIk7FgIxhH6YJDxKiYQ5vgvoayJMSu7jaHTg0k6BymjFpEZkfqyDa6Nx0ZRoZ0HrFQ0KXtU8PqgwluHXJL00AsZPTHuWW3QlsyFHEAn4zz1b92h9BOGd32beawRznEei5sxTYzUYyzg7nLmTPNyIjyCUxpMooDbtAhKje4hjZHsAQWpMnu9rbRhxy9NGjAaTgBHocRS+yZKto1tM7W0NlULbilu2nobqTZu9le6bN/LWWSe/ete/O17xnVtNrZoy6+klzt7lGXH8GN39ShwYu6bhNC4F2H1Lle+1d2pAOvLLuTQoUQ+gVKIBP5
     - SCTX:
         - Begin A1V6_ACheck11_Poison_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - short in60
@@ -15019,7 +15014,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_cure_poison\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - set in60 to 0
@@ -15142,20 +15136,18 @@
     - SCHD:
         name: A1V6_ACheck13_FireResist_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 559
-        var_table_size: 15
+        data_size: 551
+        var_table_size: 10
     - SCVR:
-        - in15
         - in30
         - in60
-    - SCDT: eJyNkE1LAzEQhnd2sWxlD3tQUSo4grdeNlT21kIRPHkQD+JtiOtoly7bkuTi/9SfU2ia9GPpF71kJnnf500yCbSmlfxl1QJ4wI9ZipProXjP6aWX0XepmBTrUhtZF4z9PopkBfynB40QrF3xdmx+amy+J7YNZ6AhCDGzNVzWaFGTxj/u/IUXZf2j+MunTNnIijKBA8csMkQbmhR66nJFqYk2pGVl9AaLdrF7j10tsc9KFmOStRmx2nCh51x3jnZB+wLsukS7jwJ31rVxsesGjYH8HZtz7IjoALF/hLdpx8nDpxEXY9GjZ+t5cxbSRSe9aaqPZBXzykpbDWAOI3yVsQ==
+    - SCDT: eJyNkE9rwkAQxTOBSiw55NCWFgudQm9eslhyU5BCTz2UHqS3YY2jBkOU3b34PfXjCG42/gmi4mV3dt/7vRkmhMYil0tWDYAP/N9EOH/ui0FCP52YxpliUqwzbWSRMna7KMI9sI4uGsE7uILT2OTW2ORMbBPuQIPnY2xvv7zD2vxvVaOHrJgoHlX0go3MKRbYK5lByYom1CmsqMc9pebakJa50QfMtTrB3ivsaYcNc5nOSBZmyurI7dq56h7tgXYCbLtE+/Y999e2cYGrerVFrK7tN3CEf4E4v7rXqOXk/teU05no0Lf1/DkL6bQVvdTVT7KK+WWlrQawBQb/lKA=
     - SCTX:
         - Begin A1V6_ACheck13_FireResist_sc
         - ""
-        - short in15
         - short in30
         - short in60
         - ""
@@ -15165,7 +15157,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_fire_resistance\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in60 to 0
         - ""
@@ -15196,20 +15187,18 @@
     - SCHD:
         name: A1V6_ACheck14_RestPers_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 739
-        var_table_size: 15
+        data_size: 731
+        var_table_size: 10
     - SCVR:
-        - in15
         - in45
         - in60
-    - SCDT: eJyVkkFLwzAUx/tWHJ30UFEQXdHgSeilgW23DYbgSUE8iLcQ29CGdW1JssO+p34cwZjUGZxTdskjef/f+7+XJIR+W9E1E32Aa/T8HqEmnuOnCbkbjYlgUjWCkZYJ2dS04mqNplOEwy/oLfpTDN5GGfwsP0n3KP+7GLwBHIAEr4dSHXtd9D9j6Mx1YY2PeV0IlpNiRQUpec5IitFsg2K31yuLnG4hBRdclXtjSyrkSrrYANwWLy140oEyo8uWyAWv3R4DpBeEUeJaDi0Z0YpwzQn+QoqK1nlH+dtesSWOOq+SUVUy8W0EFjGWh8ZSH6HEFNN73zNnia5kG5o5d/D634cIDOXvoHa/cxydGcn8pmTZAo/Io9Y9aI2eeRidu7kxuW2EuqcFz3QS4AMjIMs9
+    - SCDT: eJyVkkFLwzAYhpuCo5MeKgqiKxo8Cb00sO22wRA8KYiH4S3ENrRhXVu+ZIf9T/05gllSR3DOsUtCkvf53vdLEqJeW7E1hx5C9/jtK8JNPCPzMX0ajihwqRrgtOUgm5pVQq3xZIJJ+AN9Rv+KkbdVBr/Lj9Mjyv8tRl4fnSCJPB+nevY3c+j0c2MNz0VdAM9psWJAS5FzmhI8NcgGJW7GO4tc7iCFAKHKo7ElA7mSLtZHbsRbC150oMzYsqVyIWo3Y4D1gAlOXMuBJSNWUaE5EO+0qFidd5S/6xVb4qzzKjlTJYet0byLZyxPjaXewokppte+Z/YSXckGmjp38HHoIwSG8vdQ+983jq6MZPZQ8mxBhvRV6160Rvc8iK7dsxF9bEA9s0Jk+hChb0jUyig=
     - SCTX:
         - Begin A1V6_ACheck14_RestPers_sc
         - ""
-        - short in15
         - short in45
         - short in60
         - ""
@@ -15219,7 +15208,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_restore_personality\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in45 to 0
         - set in60 to 0
         - ""
@@ -15256,20 +15244,18 @@
     - SCHD:
         name: A1V6_ACheck15_FortMagic_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 880
-        var_table_size: 15
+        data_size: 872
+        var_table_size: 10
     - SCVR:
-        - in15
         - in30
         - in45
-    - SCDT: eJyNksFPwjAUxilEAmSJ05iggLExJh64MBVukBCjJ/VovDV1vEGlbEvXhOz/1D/HxNIOKNMRL3vp3vd73+uXOqgac5qCqCJ0hd++XRydjr3XAXm67ZEgEpIFKVnQKfPnFA+H2HPWwJdbKESljaqWH3vX/+fY30JUqqMDlKBSGfdULWe1sqqOdY+2MXQpJ4yEIP0Z+QDOUzzacJ694LnRH7NwKmBCEsqlYD6QnmcTdWR7dAxzlDGwAEH5ZIugvMmlAZo5IGZqQaDCxnadLgx4koHv6iZ0EoUh3ZpV8mZ7mBub2XVqGsrRuS0lSeYs3KhrWH2wh7u7TMswh5pJaBwwAfZiBdi1wTrryGUUQsCjJQgSg6Q8scNXM8rZDH1u6LPKCne1R0N7rP511WijHlmBfO57qTVNVAqIvx9hx23p9vh+Bv7c65NHpXle9Unit90zuzkgL2w6kw8pqB5CP0XP6Cg=
+    - SCDT: eJyNksFPwjAUxukSCZAlTmOCAsbGmHjgwlS4QUKMntQj8dbU8QaVsi1dE7L/U/8cE7sWsIAjXNq07/u97/VLXVROOM1AlBG6we8/Ho7Ph/6oR17uOySMhWRhRuZ0woIZxf0+9t0V8O0VClFprapst33oHth2V4hKVXSEUlRycEftTr671vxNY+RRThiJQAZT8gmcZ3ig9Tnn24NdGv0piyYCxiSlXAoWAOn4NlFFtkfLMCdLBuYgKB+vkdGOybUB6ltAwtSAQIWNbTpdGfBsCX6ol9BxHEX0bz5n22wPc2czm051Q7k6t4Uk6YxFa3UFqwX7uL3JNAxzrJmUJiETYA9WgN0arLWKXMYRhDxegCAJSMpTO3zVAy176HNNn1VWuK09atojv2ur1kY9sAL52vdDK5pwCoj/P1/La+jy8HEKwczvkmelec3rJA2a3oVd7JE3NpnKpwxUDaFfy13m8g==
     - SCTX:
         - Begin A1V6_ACheck15_FortMagic_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - ""
@@ -15279,7 +15265,6 @@
         - "\tplayer->RemoveItem \"A1V6_L45_fortify_magicka\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - ""
@@ -15399,20 +15384,18 @@
     - SCHD:
         name: A1V6_ACheck17_DetCreature_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 674
-        var_table_size: 15
+        data_size: 666
+        var_table_size: 10
     - SCVR:
-        - in30
         - in45
         - in60
-    - SCDT: eJyNkcFKw0AQhrsplrQEDEgPapG5eMolC1q9tFDq0YMn8TasyWBCUjdsNgffUx9HcLtJa9Cm7WVmmf//ZmYZjw2KXHyQGjB2DS/fPsjzBX+e4uPNLcakKdIYKRK6UlTCbAbc2xBffreT9bY292/jaXhs4x1O1huyE2aSA6HJTpP76+y1/nJRjzxN398UxfiaS6Ex5DDf2vmQtYGrGjhrAJGnGpM0pjbkggnAIdiLmn2l0crVL8r+z4MaGm8WjFCsClnlhIWMG8w5iCVSZaRQV2XWsahtMwITwKwBgdVHVl/XAtPTta956wKfe0/rWqTfgXQcbeJPrL5YJhRl/A4fSC8bA5bRpT9uy/f4JJQwdcZ+AKg7smg=
+    - SCDT: eJyNkcFKw0AQhrsBS1oCBqQHtchcPOWSBa1eWij16MFT8TasyWBCUjdsNgffUx9HcLtJQ9Cm7WVnmf//ZmZ3PDYscvFJasjYLbz++CAvl3w9w+e7e4xJU6QxUiR0paiE+Ry4tyO+/X4nG7Q292/hWXhq4T1ONhixM2aCA6GJzjZ6nTdc1a3O0493RTG+5VJoDDksWjsfsS5wUwMXDSDyVGOSxtSFXDAHcAgOomZOabRy06Jr9r8f1NBkN2CEYlPIKicsZNx0PI4lUmWkUFdl1jOoLTMGc4AZAwKrj62+zQWmpmtvi87Pfx1cqWsRpwfpWdbUn1p9uUooyvgDPpFeNQYso2t/0pUf8UUoYfKM/QIeJrFT
     - SCTX:
         - Begin A1V6_ACheck17_DetCreature_sc
         - ""
-        - short in30
         - short in45
         - short in60
         - ""
@@ -15422,7 +15405,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_detect_creatures\", 1"
         - endif
         - ""
-        - set in30 to 0
         - set in45 to 0
         - set in60 to 0
         - ""
@@ -15459,20 +15441,18 @@
     - SCHD:
         name: A1V6_ACheck18_Para_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 741
-        var_table_size: 15
+        data_size: 733
+        var_table_size: 10
     - SCVR:
-        - in15
         - in30
         - in60
-    - SCDT: eJyNksFLwzAUxpcNxzZ66EGZqGDw4GWXBaHoYYOh3jx4Em+PNAu2NCYl7Sj179Q/RzBNu66OduzSB4/3+77v9cVBw1jQnOshQrf4/dfF6mJF3jx4uZsD22gOMdVU5F80DZXEiwUmzhb5cQ+Mol49N9qX9o6X9lqlx+gEJajXx3NT+1UdFNVp7HNdmp6G8kPzNSSMfsaQRKGEOcHLmiXNoDclM6UCQmCK6oSDr6QJoLI11xVWWJExapptwcpM8pQFIDhNA653foPeCJsPJnjW5lrBWSiEyoDKTvi/97TEHRta0xR4zusFDdNvYfYsmdKRvxE+aKXSnSUqF7VCEytkWnhmw0xsmKI3M3qlzbLxN78PP4+RZQYdTNfdr9wzO7B6DDiLyD28mgFz2kv3vNl/gCeePktzgoQh9AeOKMcW
+    - SCDT: eJyNkkFLwzAUx5eCYxs99KBMVDB48LLLglD0sMFQbx48DW+PNAu2NCYl7Sj1c+rHEUzTrtbRjl0aCO/3/73XFxcNE0ELrocI3eK3Hw+rixVZ+/ByNwe21RwSqqkoPmkWKYkXC0zcHfLtHShFg6ZutB/tHx/td0aP0QlK0cDBc3M65em25riuZKeRfNd8AymjHwmkcSRhTvDSMiVL2g3eVMyUCoiAKapTDoGSRqzyDdc1VqrIGLVlO7CWSZ6xEASnWcj1n88ZjLD5YIJnXdYaziMhVA5U9sL/3dMKd23TmmbAC94MaBjUwewpmdJxsBUBaKWyRrlG1aA2aGKDzBWe2WYmtpnybmbyKs2y9Te/Dj+LkWWcHqZv31femS1YPYacxeQeXk2BWe2ld96+f4Annj1Ls4KUIfQLyqzF/w==
     - SCTX:
         - Begin A1V6_ACheck18_Para_sc
         - ""
-        - short in15
         - short in30
         - short in60
         - ""
@@ -15482,7 +15462,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_cure_paralyzation\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in60 to 0
         - ""
@@ -15520,26 +15499,23 @@
     - SCHD:
         name: A1V6_ACheck19_DetEnch_sc
         vars:
-          shorts: 2
+          shorts: 1
           longs: 0
           floats: 0
-        data_size: 526
-        var_table_size: 10
+        data_size: 518
+        var_table_size: 5
     - SCVR:
-        - in30
         - in60
-    - SCDT: eJyFkEFLAzEQhZuCpZUe9qCorOAcBA+9bDwUPLRQrAfBs3gbYjo2i9nskqSU/k/9OYLZTbUrUr1kGN775k1myHqVFhuyPcau4OkjgTKd8ccxPowzXJAn6ZGMVML4goyHyQT48It5T/7yss6AHTDHOl3IQu3WddiKgxh3nJulpQUWwjpVkLXlGjMO0waq4V1e/xf0LFFtKiXwRchcbKE6iQ9YOyuNWCI05qhWZkkWpRbrb6IP4QEOo5/cReSOtnGqXJmwKQm/W3EvexnZs/vIal1aUZQWXZUbcnsGNP1h04fPwyjMieq0dYe3f+9+npw2jtmtIvnKb3BO/i5Y0Mk0OWlJ1xnOc1eRDgpjnxSGi+Y=
+    - SCDT: eJyFkMFKAzEQhhuhpZU97EFRWcE5CB562XgoeGihWA+C5+JtiOnYLGazS5JS+p76OIJxo3VFai+BYf5vvskkrFdrsSHbY+wKHt9TqLIpn4/wYZTjgjxJj2SkEsaXZDyMx8CTb+Yt/S/LOgPWZY51DiBPWhqImuPCLC0tsBTWqZKsrdaYc5hA3mXzT+jH0/8DPUlUm1oJfBayEBFqTHzA2q4sYqnQWKBamSVZlFqst0QfwgMchr+5i8gdfelUtTJhUxJ+u+Ju9jKyZ/eR1bqyoqwsurow5HYMaOrDpg6fh2GYE7uT1h1e9977PD1tEtNbRfKF3+CM/F2IoJNZetJqXec4K1xNOnQY+wCV9IrV
     - SCTX:
         - Begin A1V6_ACheck19_DetEnch_sc
         - ""
-        - short in30
         - short in60
         - ""
         - "if ( player->GetItemCount \"A1V6_L60_detect_enchantment\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L60_detect_enchantment\", 1"
         - endif
         - ""
-        - set in30 to 0
         - set in60 to 0
         - ""
         - "if ( player->GetItemCount \"ingred_marshmerrow_01\" > 0 )"
@@ -15656,21 +15632,19 @@
     - SCHD:
         name: A1V6_ACheck20_Dispel_sc
         vars:
-          shorts: 4
+          shorts: 3
           longs: 0
           floats: 0
-        data_size: 805
-        var_table_size: 20
+        data_size: 797
+        var_table_size: 15
     - SCVR:
-        - in15
         - in30
         - in45
         - in60
-    - SCDT: eJyFkt9LAkEQx129REVIKDIyaquHHg7hrh++KUgRBL0F0duwd27e4nl77HqB/2f9OUHr7qan+ePlhpuZz3y/s0wdldOYTKkoI9TC7z8NzPf7/lsHXm49GDCZ0hh3u9iv//V9N1brqDAvVlaH3N1vHzKvbxvS2eGks3BSRXtIokIReyoWbSzZ6MxiPbfwuZE5ZMlQ0AGMOU9AZkMiwPNxbz7Dz1u7MsyxZYIQgiwZxlRcSwhIQi030/SrKK92YpeyZEqJiPNCFaw+2MfuMnZmsAMSAwMuWERENlJGuVhoKbS0Br0w6JFGP4lImIyAf0CaCTaZWtr57/TScM1n43TCxpK0Qz6m7WC6cIwMqL3XtHeVwq42VNOGZjlXS6h/p6BzrppvNu3lHvZrzVVVdGNpQ2Puckyjs6Fx6TpOG02d7T9ENBzdePCoSyDD1nLFhycm6GukKgj9AuSbyaY=
+    - SCDT: eJyFkt9LAkEQx907EhUhocjIqK0eehDhrh++KUgRBL0F0tuwd27e4nl77HqB/2f9OUF7u5uepvZyw87M5zvfOaaOymlM5lSUEWrht+8G5vsDf9iFl1sPRkymNMa9Hvbrv31fjfU6Ki2KlXWRu/vdIov6LpHuP066SydVtIckKjnYU9Gx0c1jvbDouZE/ZMlY0BFMOU9AZmMiwPNxXzO5hl+0dGWYY8sEIQRZMo6puJYQkIRaLp/pV1Fx2oldxpIpJSIuDqpg9cE+bq9iZwY7IDEw4IJFRGQTZZSL5SyFOhvQC4MeafSDiITJCPg7pJlgs7ml3b9OLw3XfDZOZ2wqSSfkU9oJ5gvHQ2RA7b2mvasUbmtDNW1I2rebv92SzrWVvtm0X/ixnxuuqaIbnS2NhYsxje6WxpWrOG00dXbwENFwcuPBoy6BDFurFR+emKCvkaog9APxAciL
     - SCTX:
         - Begin A1V6_ACheck20_Dispel_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - short in60
@@ -15683,7 +15657,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_dispel\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - set in60 to 0
@@ -15726,20 +15699,18 @@
     - SCHD:
         name: A1V6_ACheck21_FireSh_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 816
-        var_table_size: 15
+        data_size: 808
+        var_table_size: 10
     - SCVR:
-        - in30
         - in45
         - in60
-    - SCDT: eJyNkk1PwkAQhlmIBAiHRo3G+LWeuVCi3CBpTDh5MzHeJkO7tBuWLtndxPA/9eeYuLSlLlasl51s533mnc5sn7TXAjdMtQmh9PXTo/I08F/G8HT/AAuuGOiEMxHRyYT6/Z34w/tVRBqlovOz3Hj4j3L7ItLokiOiSaNJhzY2i9jaxr7T901udMLTWLEIFL5BLFBrGPp0WiK+29tdjpxVEMNTqV2qS1yr65w7LrhQruZMqc23U7PK7NpDARxCgWm6YKjAIBcFRGqgCFmkpEnAMGaS0qlD7UF9OvgD1QmKJawwjfhcsDr0tlhZ8Xv5LlCYvVFatlXPaiHRnhLX7nAc3+zey+52AHSQ1e5ltbffBrZkrp46q3s/9PA6mbp1QF19V1feeZYKHhMWLkc+zGz+OQEdXnoXbmYEM6lMEHNhc4R8AXb00sY=
+    - SCDT: eJyNks9rwjAUx01houKhbGNj7Fd29mJl86YgA0+7DWS3x7ONbTA2kgSG/+f25wwW29rFda5eEpL3/bzvy3vpkuZa4IapJiGUvn35VJ5PgtkQXh6fYMEVA51wJiI6GtGguxN/+n+KSKNUtH6nG/aPSLcvIo02OSGaNDzat7u33btOvXe5wRlPY8UiUPgOsUCtoR/QcYkEbk0POXJRQQxPpXapNnGtbnPutOBCuZozpTY/TqTK7MpDARxCgWm6YKjAIBc5NKuDImSRkiYBw5hJSqcWtQsNaO8fVCcolrDCNOJzwerQ+2JUxfPyGaAwe620rFfPaiHRrhLXbnMc3+zcyc62AbSX5e5kubd3PZsyV4+d0X0c+nCtTO0dUFf/041/mYUmzwkLl4MApjb+moAOr/0rNzKAqVRmEnNhY4R8A5150aw=
     - SCTX:
         - Begin A1V6_ACheck21_FireSh_sc
         - ""
-        - short in30
         - short in45
         - short in60
         - ""
@@ -15749,7 +15720,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_fire_shield\", 1"
         - endif
         - ""
-        - set in30 to 0
         - set in45 to 0
         - set in60 to 0
         - ""
@@ -15877,20 +15847,18 @@
     - SCHD:
         name: A1V6_ACheck23_FortAttack_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 665
-        var_table_size: 15
+        data_size: 657
+        var_table_size: 10
     - SCVR:
-        - in30
         - in45
         - in60
-    - SCDT: eJyNkVFLwzAUhZsWRzcKFkSFTSTiY19anXvboAwFwTdBfbuENm1DY1vaTNn/1J8jmKZ1ROfEl1ySe75zbhIHDSpO1rQeIHSOnz5cXB6HwcMM7qZXkJS1YMkaiBAkyvF8jgPnS//u7tIhYyOyf5rO/P+ZbumQMUR7qEGGiX1Zzb5abXW0O5x2cQeEQ/QCj6yp7gXh+ZJUDV4opLUI9AlxhxyyIq1pDGlWrjhklNQC/KCH2rxgiPSkcYftyyQGTUSeK4g4ee0BaxvQRmOttCgSGQKCML6BbCwXHGDvO3rWoUe3/Yglj2kBDY1Tqs8oabOn1X6k9vLG2FPuI+XennnStFMvtMd4++NPbQVYO4Bf/+vEnahuuMxolF9cwo2UhKotH2zijvXuVHWvi3hVyyZCn9zOr9s=
+    - SCDT: eJyNkUFLwzAcxZeCoxsFC6LCJhLx2Eurc7cNylAQvAnT25/Qpm1obEubKfue+nEE06SO6Jzs0pD+3++9l8RB/YqTNa37CF3i508Xl6dhsJzCw+QGkrIWLFkDEYJEOZ7NcOB86z/cXTrU24js36ZTfz/TLR3qDdABalDPwr5crXZ1jO7nOuaIcIhe4Yk11aMgPF+QqsHzFlm2aGA2wxo5ZkVa0xjSrFxxyCipBfiBhlReMEBm0khjhzKJQRORlwoiTt46wNoGjGqslRZFIkNAEMY3kI3lBwfY+4leaPTkvqtY8pgW0NA4pWZHSaOOVvuh2ssTY0+5D5V7+8+Tplo9Ny7j/Z+3tBVg7QD+fKczd6ym4SKjUX51DXdSEqqxvLCxOzKnEzW9LeJVLYcIfQFiGq7G
     - SCTX:
         - Begin A1V6_ACheck23_FortAttack_sc
         - ""
-        - short in30
         - short in45
         - short in60
         - ""
@@ -15900,7 +15868,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_fortify_attack\", 1"
         - endif
         - ""
-        - set in30 to 0
         - set in45 to 0
         - set in60 to 0
         - ""
@@ -15936,26 +15903,23 @@
     - SCHD:
         name: A1V6_ACheck24_FortEndur_sc
         vars:
-          shorts: 2
+          shorts: 1
           longs: 0
           floats: 0
-        data_size: 745
-        var_table_size: 10
+        data_size: 737
+        var_table_size: 5
     - SCVR:
-        - in15
         - in30
-    - SCDT: eJyVkk1LAzEQhjsFSys9rIgItkjw4KWXXb9uLRSxJ8/iLcTN7CZ0m5VsFtn/qT9HMN2sbVqp1ksmZN5n3swwfei8ZqxC3QG4JM+fAcnPptHTHX28DmmSayOTiqLipWYqRjIek6j/jXwEv0ih1YMDKKDVJqGN7WXse2YDZxawjErKlFzYy0uukExW+rVTF+Dc6Y+lSjVympZMUyE50jDahVw45PQHkkotjfg3tmC6KAsf64Hf0tCBRw34lmcJFci0WSFdYg8SkZHvRxx20mBSqTxGZfZBt77KGXLNCkf6g9kHLnmlE13NDe5y3ux2C1doYkEzZEagXnuDG1Nd6LAuZJ/IyPKu7MSb/ftf+zRsBNN7gfH86obOrOphqaBFPNhM3tbJGTMytUmAL/Tmyno=
+    - SCDT: eJyVks9LwzAUxxfBsUkPFRHBDQkevOzS+uu2wRB38jy8hdi8NmFdKq8p0v9T/xzB2NSZTabzEkLe9/O+eV9eQLrPOa8Bu4Rc0Mf3kBan03h+yx6uIpYWaFRaM9CiQq4ToOMxjYMv5C38RUo6fbJPStLZo1HgmQycSchzphjXamkvT4UGOqFRq/926BFy5vRHSmcIgmUVRyaVABbF25Bzh5z8QDKFysh/Y0uOZVX6WJ/4Iw0deNiCL0WeMgkczQrpUXvQmI58P+qw4xZTWhcJaLMLuvFVwUEgLx3pB7MLXIkaU6wXBrY5r0+7gWswiWQ5cCMBV97zNqam0UHTyD7RkeVd24mX/etfezRsBdM7Ccni8prNrOr+U8HKZLBevGmKM25UZouEfADZcMlk
     - SCTX:
         - Begin A1V6_ACheck24_FortEndur_sc
         - ""
-        - short in15
         - short in30
         - ""
         - "if ( player->GetItemCount \"A1V6_L30_fortify_endurance\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L30_fortify_endurance\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - ""
         - "if ( player->GetItemCount \"al_i_animal_bone\" > 0 )"
@@ -16143,26 +16107,23 @@
     - SCHD:
         name: A1V6_ACheck28_FortLuck_sc
         vars:
-          shorts: 2
+          shorts: 1
           longs: 0
           floats: 0
-        data_size: 558
-        var_table_size: 10
+        data_size: 550
+        var_table_size: 5
     - SCVR:
-        - in30
         - in60
-    - SCDT: eJyVkU1LAzEQhjsLllb2sCBS/ECi4KmXXQ9FDy0UwVMPnsTbsN2mu2GjWfJB6f/UnyOYJmrTWgq9JEze95mXmcTQbni+pLINcE1evxIiTsfZywAngxTnQmo2XyI3RU2GQ5LFv+7PZLcLWl04AgWtiKT2jlZ3HETc+ohz9l5KOsNCyEYahQtKG/ukMM3IyJGrDuu4DsCVJ09+yNLkEis2o2sk2kZuPNL7h5RMMl0djL3lUhkVYl0Ih+t5MM45Mlxo1Dnjf+4OsQfJSH+T2QqzC6mnhk9RCqHD0QLc1ceutmsifdvFq6Ngjo89H3SZnDlt/FjRor67xydrmFgRVXGxqT047ZlKZTWAb/RHlWQ=
+    - SCDT: eJyVkU1Lw0AQhjtCSys5BESKH8goeOol8VD00EIRPPXgqXgb0nSbLFndsB+U/k/9OYJrVuvWitDLwuz7PjO8MxF0apGtmeoAXOLTe4zyeJLOhjQdJrSUyvDlmoTNKxyNMI2+3W/x3y5o9aANGloHmERB62vf+pS/FIotKJeqVlbTirHafWlKUhxj0obZJ/kzpgtw4cmjL7KwmaKSL9gG0TvIlUf6O0jBFTfl3thzprTVIdaDMFzfg1EmiNPKkMm42Li76B5McbDN/BrmFlLNrZiTktKE0QK8qQ+b2q0JB66LV8dBjtd/DnMenzTa5L5keXVzSw/OMHUi6fxsW7trtEemtNMAPgB0npRT
     - SCTX:
         - Begin A1V6_ACheck28_FortLuck_sc
         - ""
-        - short in30
         - short in60
         - ""
         - "if ( player->GetItemCount \"A1V6_L60_fortify_luck\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L60_fortify_luck\", 1"
         - endif
         - ""
-        - set in30 to 0
         - set in60 to 0
         - ""
         - "if ( player->GetItemCount \"ingred_corprus_weepings_01\" > 0 )"
@@ -16195,21 +16156,19 @@
     - SCHD:
         name: A1V6_ACheck29_FortPers_sc
         vars:
-          shorts: 4
+          shorts: 3
           longs: 0
           floats: 0
-        data_size: 811
-        var_table_size: 20
+        data_size: 803
+        var_table_size: 15
     - SCVR:
-        - in15
         - in30
         - in45
         - in60
-    - SCDT: eJyVkk1LxDAQhpttXbpSpBeF1T3Ek0IvrR8FD7uwCJ48CIJ4C7GmNmxsS1KQ/k/9OYLTNNbi2pW95CWZ95mZztRD41LQmskxQqf48dPHxWwZPcTk9jwkaSErntakZFIVORW8qvF8jiPvG/rwN5qR1Tnd3+kvLrdI/7d5U/p4m+7jge4naAcpZI1wCDoyaht1GvV645u2DexRQThRCX0tCaMSLzoqmqC+H7f+fZ6/SPZMVpKpjKT8iUkSRgYbrWPHLXZgMDhYTgRPMpCOQ+vciZmP4VRV5CwVxRuUK1lFhfqhnZbW9XcxHBgS4kB/BtxtS78F2gl3x9JvARRxdWTRG/L7f7+Iqyl7gBrafEs5A9TwQmf+VFuW1xlLVmdX5AZ8d+CBjR35h70Y9NvE7kvWTCtB6AvyC+Ez
+    - SCDT: eJyVkk1Lw0AQhrMJllaC5KJQ7WE9KeSS+BHw0EIRPHkQhOJtWePELF2TsBuQ/E/9OYKTTVqDNpVedtid95l3MhOXDArJK1ADQs7p05dH88k8XETs/jJgSa5KkVSsAKXzjEtRVnQ6paG7gj69rWJirZXD3+Wvrncov1m8rXy0S/dRT/cjskc0sWwaYLTb6NTR7Yxt3BgfcMkE0zF/KxhwRWdrKhyRrp42+kORvSp4YUsFOmWJeAbFgrDFyF/stMGOWgwPyJgUcYphxS02cGftXFpOl3kGiczf0a6Akkv94+o0tPHfp3hQLEh98xl4ty3z5hsl3h3LvPloMjSZWWe4H//9GkND2T1U38Ybyumh+hc58cZGMr9NIV5e3LA71D2gBjd24h13cthvnXssoJ5WTMg3G7bgHA==
     - SCTX:
         - Begin A1V6_ACheck29_FortPers_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - short in60
@@ -16222,7 +16181,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_fortify_personality\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - set in60 to 0
@@ -16533,20 +16491,18 @@
     - SCHD:
         name: A1V6_ACheck32_FortWill_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 726
-        var_table_size: 15
+        data_size: 718
+        var_table_size: 10
     - SCVR:
-        - in15
         - in30
         - in45
-    - SCDT: eJyNkk9LwzAYxpsWRycFKyLiLJKTl17aVb1tMISdPHlQbyGrmY0N7UgCpd9TP45gltSZOVe89OVtnt/zvPkTgMGK4ZbwAQBX8PkzhPVolj7eovssQcuaS7psUUMZW9UN4XAygWnwjXyEPVLgbHT+b+vrm39b/yUFzhAcAAEcFyaqul311jWw9gNN6CmtXjl5QSLndIHeCGMtSlI41dDaJLUn7YPGNjQEdtaZwQLMEEWNRBJT1qndXfXIqI+6kAWrsfyZydsFIgMca3tRYFYiXElS4U2GD9UHpjDeBi8NeNIlNTQvm4LYaVuo7g91r3YJYz2N6j1H/4uVo1FPrVN7738Hvma8Pcy+C47Ccy2Y3RUkL7MxmivVk1KoK7kII3stQ3NeC/lABBVSLQPwBR2swmI=
+    - SCDT: eJyNkUFLwzAUx5uCY5OCFRFxFsnJSy/tqt42GMJOnjxMb4+sZjY2tKMJlH5P/TiCaTJLNrbiJeHl/X/v/16ehwYbThpaDRC6w28/Pi7H83j5CM9JBOuykmzdQM0435Q1rfB0imPvD/n2e6TI6XTD/dL3D/8ufUiKnBE6QQI5Lo7U7ba3Z82BjdklKz4q+g4irdgKPinnDUQxnrXQsoVju8M+aGJDI2R7XRnMIxwY1BIkYdyoxQH12KjPtiYrXhLZ9aQH2QMCA5zr8iIjPAdSSFqQzmOI1YFjHO6Ctwa82DrVLM3rjNpuO6iOT3WspsSh7kbFrqPfQlXRqGfWr33173+oGfcIc2yxgX+tBfOnjKZ5MoGFUr0qhVrJjR/YuQQWVSnkCxVMSJVG6BcX5cEw
     - SCTX:
         - Begin A1V6_ACheck32_FortWill_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - ""
@@ -16556,7 +16512,6 @@
         - "\tplayer->RemoveItem \"A1V6_L45_fortify_willpower\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - ""
@@ -16669,20 +16624,18 @@
     - SCHD:
         name: A1V6_ACheck34_FrostSh_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 819
-        var_table_size: 15
+        data_size: 811
+        var_table_size: 10
     - SCVR:
-        - in15
         - in30
         - in45
-    - SCDT: eJyNkt9LwzAQx5cOxzYGVvyJDo2+7qV1m28bDEEQfBPEtyO26RoWm5FM6/5P/XME0zTOOlvcS47kvp/7HrnroMackyWVDYTO8eOni8X+xH+4gru+B5EUagEqZpSHeDTCfudb/eGWq1BtJWmuFxwMNym4pkK1FtpCCtUc7Ono2FjPYqfQ+3FutU04MFBkHjFJwfPx2Mgz3G+hMoAlU0lDiAXnyx/A+Qt0c2DHOCTsLRYvSQh0SS1Sr0YiIUKYpeSZAJ1OwbtcIU2sD+zj3m/wNAd3bXOSpECfRFJosBI9y9E902bAWRRJElAJasaS/1hs52Vt7RwIX6gNjC9y+NDCKeNcpECSRazdCx+rccfi5t42dz0i3DPl26Z89tbTVXP1uLAp75Wr1zTyeoW8ZLG67pHJTa5jGsz6A7jJBPcxqODEPSimhnCbvDKlEwh9AZ2u0fw=
+    - SCDT: eJyNkl9LwzAUxZeCso2BFf+iQ6Ove2nd5tsGQxAE34Th2yW26RoWk5FM676nfhzBNI2jjhb3kpDc8zvnktwO2l1wsqJqF6Er/PztY3k0Cae38NgPIFFSL0GnjPIYj0Y47Pyqv/xqFWqsJc1Nw8FwG8MNFWq00A7SqOHhwOxevndKPZ8VEXuEAwNNFglTFIIQj3P5NMfCFqoCmJgpGkMqOV+tAV0BdAtg3yYI9pHKNxEDXVGHePVIImUM84y8EqCzGQQ3a6SJzYJD3PsLXhTggWtOkQzoixSlBmvRywI9tG1GnCWJIhFVoOdM/Mdi908u1r0/4Uu9RfB1AZ84OGOcywyIWKYmvfSwBkcOt+e2PZsvwj1r37b2+V3PuBbqcWlCPmtHrmnlXo28YqC6/qmtTe5SGs37A7jPBU8p6OjcPy6XhvAg3pk2BYR+AKBi0OE=
     - SCTX:
         - Begin A1V6_ACheck34_FrostSh_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - ""
@@ -16692,7 +16645,6 @@
         - "\tplayer->RemoveItem \"A1V6_L45_frost_shield\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - ""
@@ -16794,26 +16746,23 @@
     - SCHD:
         name: A1V6_ACheck36_LightSh_sc
         vars:
-          shorts: 2
+          shorts: 1
           longs: 0
           floats: 0
-        data_size: 465
-        var_table_size: 10
+        data_size: 457
+        var_table_size: 5
     - SCVR:
-        - in30
         - in45
-    - SCDT: eJyFkE1LAzEQhjsFi5U9LIqoWGUQPPXS4NepheJVLwribchuw25ouilJPPg/9ecITjd2WSmllwzDO888YRLoLY38VK4HcI3vPynas6l4u6en2zsyuihDpauCfKmVmeF4jCJZE9/p9kno9GEPPHS6OOLaXdWkpbqIqkNpSNPC2soHWymyTuGkIUQf2sxlZI7Y4tSMciczWigZaCQaaB/5QYHD/yhG9PgP9cwumQ2sb2DYNF5F7GRttG6efZiMnLXbrHV/UPe8EYe8JaaT1uW+dlxukJ7W+fSxVPn8hgdXQ68lf/w8HbSjB3qWhc5flNc+cAzwC45Ae1Y=
+    - SCDT: eJyFkE1LAzEQhjuCxcoeFkVUrDIInnrZ4NepheJVLwrF25Ddht3QdFOSePB/6s8RHDddWcHSS2B453mfMAn0V0a+K9cHuMLXrxTt6VTM7ujx5paMLqtQ67okX2ll5jgeo0ha4jPdvAm9AeyCh94OZklHcR4VB9KQpqW1tQ+2VmSdwglma0IMoMtcROaQ252aU+FkTkslA2XiF9pDflDg6C+KET1ao57ZFbOB9S08+8d4GbHj1mjdIn8zOTlrN1mbeb+ZuRFH3BLTSediH1suNkxPmnz6UKlicc2LP0svFX/8LB12o3t6kqUunpXXPnAM8A1esHpH
     - SCTX:
         - Begin A1V6_ACheck36_LightSh_sc
         - ""
-        - short in30
         - short in45
         - ""
         - "if ( player->GetItemCount \"A1V6_L45_lightning_shield\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_lightning_shield\", 1"
         - endif
         - ""
-        - set in30 to 0
         - set in45 to 0
         - ""
         - "if ( player->GetItemCount \"al_i_moonstone_ore\" > 0 )"
@@ -16843,20 +16792,18 @@
     - SCHD:
         name: A1V6_ACheck37_MagicResist_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 798
-        var_table_size: 15
+        data_size: 790
+        var_table_size: 10
     - SCVR:
-        - in15
         - in30
         - in45
-    - SCDT: eJyNks1OAjEUhekQCRASJ9GVoHbngg0j/m0gQbaaGBfG3U0tzUwzpSXtYOJ76uOYONP5sRhG2PSm7fnOuW1uD7VWgnww3ULoAr9++1j1Z8HLDTyMR7AkIacxAc0MNwmRlOHJBAe9kvny/9OiRiVs/zW/ut7ffKsWNTroABnU8PAorV5Rm1ntOW86y2OPuAw1WwAxERgiEgOjAE8rNHA7Pc+RYyKAvsOccC3vlWAJm5NVwWQxQQe5QSVVBL0xIchCSUl+k1Bd0hbm0mU2k05y6jDtj0OoxIJJUJpVrbVxuuAADzexfo75FovWMmQaTMzlLq78QcspzWlEBF0vnUgvQ70Ctfuu3afN46G17lrr7GyYOubqqfMXnzsGqW2hZg1UOyADf2AVs3nEaDy+hcdM9mw1YGjfP3Wv7+BJcaNkdY/QDyzb1Zg=
+    - SCDT: eJyNks1OAjEUhbkkEiAkTqIrQe3OBRtG/NtAgmw1MS6Iu5tampmG0pIWTHxPfRwTZzo/KYYRNm3anu+c25vbgcZK0k9uGgBX5O0nILo7CWd3+DQc4JJGgi0oGm6FXVPFOBmNSNgpmO/gPy3USmHzr/nN7eHmO7VQa8ERWKjVySDZ6+ne8f5ykcWdCBUZPkdqY7RUri0OQjJ2SIqGfoWXGXJKJbIPnFJh1KOWfM2ndJUzaUzYAj+ooPKgdy4lnWulaJk0q0zawVz7zHbSWUYdJ/UJjLScc4Xa8LK0JkkWEpL+NtbNsMBh8UZF3KBdCLWPKzroOG0Ei6lkm6UXCSkKOerObXdOiid9Z9121uldP3HM1GOvF197BqjpoHoFVDkYvaDnFJNpzNlieI/PqezVadCybnDuPz/gixZWq/Id4BfwldRk
     - SCTX:
         - Begin A1V6_ACheck37_MagicResist_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - ""
@@ -16866,7 +16813,6 @@
         - "\tplayer->RemoveItem \"A1V6_L45_magicka_resistance\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - ""
@@ -17115,21 +17061,19 @@
     - SCHD:
         name: A1V6_ACheck40_RestoreAgility_sc
         vars:
-          shorts: 4
+          shorts: 3
           longs: 0
           floats: 0
-        data_size: 777
-        var_table_size: 20
+        data_size: 769
+        var_table_size: 15
     - SCVR:
-        - in15
         - in30
         - in45
         - in60
-    - SCDT: eJyNkkFLwzAYhpu2jk56KKIo6FgQb700OHvboIgHwZMH8RbSNtRibEYyD/uf+nME06RzYbZjl3wk3/t870uSEIyWjKypGAFwA19/IsgvMvSS4qfbBAsqV1xQTKqa1as1nM8hCjfAdzQoBM6fKtgdO7s7cOx/4b6x6aFp0560Y3AEJHBcmKjqdtXrqt/W0LqmiTE+qZtK0BLnvKEflDCcILjQRDsJ2VGnhjjtCMk4USsnyy3TuqAxsH2goc4eDdXwnFEsaVnRLebuWl0b6LyDZCHqHBckz4mNecZNDziGaoEqNIx1R+09R5/FOpfa+44+i1WoQHcWlunXvn8QaMIbIPqe2BD+ANH/elfRVLez+zdavM8S/Gw0mZGoW7iMJrYCbRQPTfkpVB+AX9Cv0os=
+    - SCDT: eJyNkcFLwzAUxpsWRyc9FFEUdCyIt14anL1tUMSD4MnD8BbSNtRibEYyD/s/9c8RlibdFrZ27JJH8r7f+z7yAjBYMLKiYgDAA/z4DyG/SdE8wW+PMRZULrmgmJQVq5YrOJ1CFGyAv7BXCJytyt8fO3k6ceyh8NjY5NS0SUfaITgDEjgujFV12+o1NbC+Z2QML6q6FLTAGa/pNyUMxwjOGmLeTEB2xLEhLltCMk7Uycliy2gXNAS2DzTU1auhap4xiiUtSrrDDqzuDXTdQjIXVYZzkmXExlzjpgecQ3VAFRpGuqPurqPfIp1L3T1Hv0UqlK87M8v099j+fU24PUTXag3h9RDdW7sLx7qdPn/S/GsS43ejSY1E/cJtOLIVaKN4qYsfofoArAFOptF0
     - SCTX:
         - Begin A1V6_ACheck40_RestoreAgility_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - short in60
@@ -17142,7 +17086,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_restore_agility\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - set in60 to 0
@@ -17244,20 +17187,18 @@
     - SCHD:
         name: A1V6_ACheck43_RestoreLuck_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 600
-        var_table_size: 15
+        data_size: 592
+        var_table_size: 10
     - SCVR:
-        - in15
         - in45
         - in60
-    - SCDT: eJyNkU1Lw0AQhjMJlrRECIhQsMqIxyAkGHtroXjtSUG8Ddt1a0JWEzbxoL9Tf06h203ahn5ALzvLvs87X+tBp5DsR6gOwC2+LXzMLyfR65Cm8SMpUVa5EiS/eYajEUbemv73D1NgbRB3N+EwPCXhDgVWF86gBMvGUEe7ic4qeq3e+3WpcyYppSov2C+FEY43pqgLbfymxi/Srw8l3okrNqNPwaqtydk3YTNOY8p0nwnN05lQWxvs2+5qW7+xJYxnUtzLnKRg83ZBF/WBEQZmZNvqoT5Qp8TA6D2jr94CndY1t3Frh39HP8U1uHMEP7DygT8w2uQpETyLH+i5BqZap5Jf+ddtOV7LL4XQE5YcYAmig5z9
+    - SCDT: eJyNkc9LwzAUx/sKjm5UKIgwcMoTj0Vose62wfC6k8Lw9shiZkujLWk96N+pf45gmnYzzA685IV8P9/3Kz4MSsnehRoAXOLjd4DF6SJeTWmZ3JISVV0oQfKN5zibYexv6a+gnwJnh3j7CafRfxLuUeAM4QgqcFyMdHSb6Fs9j9sSx0xSRnVRsg+KYpwbuDHFQ7DxixY/yV6flXgirtiaXgSrf03uXxN2Y3SmXPeX0iZbC7WzrXpqXbW2cWdLGc+luJYFScE2dkEP9YExht2oI9QH6pQYGn1k9OYt1Gk9c5tbu/s8+Bmewd0DeM+qJ8HEaIu7VPA8uaH7FlhqnSp+FpzbcrKVH0qhJ6w4wA+DIZvq
     - SCTX:
         - Begin A1V6_ACheck43_RestoreLuck_sc
         - ""
-        - short in15
         - short in45
         - short in60
         - ""
@@ -17267,7 +17208,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_restore_luck\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in45 to 0
         - set in60 to 0
         - ""
@@ -17442,21 +17382,19 @@
     - SCHD:
         name: A1V6_ACheck46_RestoreWill_sc
         vars:
-          shorts: 4
+          shorts: 3
           longs: 0
           floats: 0
-        data_size: 1004
-        var_table_size: 20
+        data_size: 996
+        var_table_size: 15
     - SCVR:
-        - in15
         - in30
         - in45
         - in60
-    - SCDT: eJyNkkFPwjAUx+lAAoSYxegBwdiTl12Y4jxBQrx60kS9vRRoWKVsSzeCfE/9OCZ27cQC28JlL2v/v/f+7/W1UT3iZENFHaEb/P5j4/By7L568HTXB0HjJBQU1ozzKFxTgYdD7Lb/kG+7RIoqW11jP/Xg/ujUedKy1N7xrr1c1010gmJUsXBfRiuL1SzW0tg2RtbVxW3CgcFM0NXch3jBAjzacq5pdke/ZIkvGAfpoEh/rfXnLJgLOoN4ShKfTgVZQ9/NmNST20SmK6ypiy0l2AQ+KOcbE2tg+cEudsyCZejtIbpbt6PhU9Wd9LqMgBKRUdahzyutP1P6gH364SqYmfOz0kpWTqW9uSSCLAmIMEz+G0S6nsrSUlnkEXbUlOV/taLOHNVPS/WTnjkyua45Ml7iq3zTG4qpFjD5K6yZWgFTtJs9u6cE40e5BouBB89a9SZFcuJdu2NeP8BLJJ9uPInlHUK/r7kPgg==
+    - SCDT: eJyNkkFPwjAUx+mIBAgxi9EDgrEnL7swxXmChHj1pAl6eynQsErZlm4E+Z76cUzs2rkU2BYua/b6/73/e6+vgxoRJzsqGgjd4Y9fG4fXE3fqwcvDAASNk1BQ2DLOo3BLBR6NsNv5R37sCimq5brmYerh48mpi6RVqb3Tq/YKq26hMxSjmoUH8rSys56eHWNUPW1qEw4MFoJulj7EKxbgcc65ZpF7+jVLfME4SOcy/a3WX7JgKegC4jlJfDoXZAsDN2PSmtwWMqvCmrrKKcFm8Ek535lYE8sPdrFjGlah98fovm9Xw+eqO1nrOgJKREah4zpvtP5C6QP25YebYGHOD6VOqMDpYC6JIGsCIgyTvMFp5qeytFUWGcKOmrL8t2oq5qh+2qqfNObI5NpzbLzEd/WGNxVjlTDFq6uZeglTtpN9u68Ek2e5BquhB69a9S5FcuI9u2teP8FbJJ9uMovlHUJ/VeAOZA==
     - SCTX:
         - Begin A1V6_ACheck46_RestoreWill_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - short in60
@@ -17469,7 +17407,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_restore_willpower\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - set in60 to 0
@@ -17516,21 +17453,19 @@
     - SCHD:
         name: A1V6_ACheck47_SpellAbs_sc
         vars:
-          shorts: 4
+          shorts: 3
           longs: 0
           floats: 0
-        data_size: 1074
-        var_table_size: 20
+        data_size: 1066
+        var_table_size: 15
     - SCVR:
-        - in15
         - in30
         - in45
         - in60
-    - SCDT: eJyNk89PwjAUxy1DMgiHxV+J4o+a6GkXpoheIJnEg4mJBxLjrRmssMVtXbqB4f/UP8fErh2jzA259CV97/O+3762TVALPWuBaQ2Aa/j+o0FybBpvXfRy20ZRiD0PWaOI0DB2SQB7PWg0l8S3Vl4JdrIyNd+4c7dt44LKTY27WzvuFjmug10QgZ0KbLNYSaOSxmoSm9KwLoT0gRtMKbbRnLg2iiwvjlDbgP2shyHbzTETl2IU4tjyVoySZ1qC0ViRiywfx84iilf1iS+jDmRnV+lQnoWK5xFq+YSyE7sBluyBvNS5APe5lG1hm5LYQXMcED9TUyFboAH1dU0o0EOGmsGAoqcFfp08Yod4NqbZ0RiscFhWvRToUSF685ddFz4T9B737MyCKaYoJsF0hv+zvNRdXqDlh8l92DN5vGu6/EobkC2QDQ/qPN/g+WRP52oNrpbs6UxE5Zm+NOevjb9G5YhSghT+B4FUS5CSl36a5s2Bg8cfnXs0TIrMUYSicUs7kXMPaPjpxhO2+CwJwC+PXB+N
+    - SCDT: eJyNk89PwjAUx+2IBAiHxV+J4o+a6IkLU0QvkEziwcTEAwnx1gxW2GK3Lm3B8H/qn2Ni1w4YsCGXNt17n/f99r21CooRcWaYFQG4hR+/JqSnttVvobf7BuIRJgQ5A05ZJHwawnYbWtU58WPmZ4K9RVppvXDzYdfCGZnbCrd2dtzKclwG+4CDPQM25G4keyHeq6kmXWnJIz8cM+yiKfVdxB0iOGpYsKOYuIaVtrnGjHyGUYSFQ5aMsc7UNGPKJB85ARbejItlfuzLKoO0s5ukGa9ahRDKnIAyeVM/xEt7/Q17lxo8VFKug11GhYemOKTBQq0E5QItWF/VhBo9lqgddhl6meH30TP2KHExW1xNwoaC06rXGj3JRO822VXhC00fKM/eJBxjhgQNxxP8n+W57nyAThDF83An6fau6KqRVqBcoGwerKt4RcV5ci7EZ6kWf6tLkZKKdFJ9/t76WkoKMXKQzHegkUIOkvOHnydxu+vh4WfzEfXiJHvAER/WzLN07An1vnwxkksggwD8AeySHmw=
     - SCTX:
         - Begin A1V6_ACheck47_SpellAbs_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - short in60
@@ -17543,7 +17478,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_spell_absorption\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - set in60 to 0
@@ -17592,20 +17526,18 @@
     - SCHD:
         name: A1V6_ACheck48_SwitfSwim_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 754
-        var_table_size: 15
+        data_size: 746
+        var_table_size: 10
     - SCVR:
-        - in15
         - in30
         - in60
-    - SCDT: eJyNksFLwzAUxpcNRzd2qMgE3dAneNtlRRl62GB4EvQkiLdHbF/b2KyTZDr2f+qfI5imVaJzsst7Ie/7fV/SpsOaz5KvSDUZO4aHDx/me9PgfoQ3Z0PUSxEvijqD8RiCzpf23f9Lw2rfAu+32WgLs9FPsxbbYZrV6jA0vV71RtE7zpmPqhguUWAoeZ7HxFWxWsLEIoVF4J7stEQOLKIlf0nSBalY6BRD/iq4csEWc9N6JeqLPFEUoQ65JI3DoCIa60S/JHZtWKTIhKFOScoKqa8jUCLdKiTiFCmOOhO5m+SBKRDA4F9Yh0o84hOpbLUFfFLC+9clnMxlRDlqihLaQNsbtMEUMN8LBnbetvNib2BMPbuaOP/gbcPz8ay4sUG89jz6/qGdTK9SCrPzC7xbikVsysxcu+d33eEl3nKVmX3GPgGDrMOZ
+    - SCDT: eJyNksFLwzAUxpeBoxs7VGSCbmgEb7usKEMPGwxPgp6E4e0R29c2NuskmZb9n/rnCKZJlThX2eUl5H2/73tp0yWtF8HWKFuEnNLHT58uD2bBfAx3FyNQBY9XZV3QyYQG3W/th79NQxo/Am/TbLyD2fi3WZvsEUUaTTrSa7Ncu86sJ5U9E8AhFCzPY2Sy3BV0WiLzEg3cic4tcmQQJdhrkq5QxlylELI3zqQLtomb1reoz/NEYgQqZAIVjAJLmOk2iIEl9k1YJFGHgUpRiArZEkIt0qtCIoaRZKAynrtJHtWFBnT4L6xCyZ/gGWW23gE+s/DhrYWTpYgwB4VRgjW0uUGH6kL196JD0++Yfnk21Kae2U2df/Be82w8I27WiP88i4F/bDqzmxTD7PIKHgq+inVZ6Gv3/Z7bvIZ7JjN9TsgXpUXCZQ==
     - SCTX:
         - Begin A1V6_ACheck48_SwitfSwim_sc
         - ""
-        - short in15
         - short in30
         - short in60
         - ""
@@ -17615,7 +17547,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_swift_swim\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in60 to 0
         - ""
@@ -17657,25 +17588,33 @@
     - SCHD:
         name: A1V6_ACheck49_Mark_sc
         vars:
-          shorts: 0
+          shorts: 1
           longs: 0
           floats: 0
-        data_size: 228
-        var_table_size: 0
-    - SCDT: eJxtjcEKgkAURXsEgjDFbCLCFvMJChq0MJC2tWkR7R6P4ZHhWDIR4X/W5wQNVqTg9p7DPQK8ylDN1gOYqcNLqssoi/YL3MQJlmQLlaYqEj/rKbsUBj6I/8XwezEmgye8aior5JrVSoUtC4KPJRsrv52PbFEbune8R0/Kh7mcNGu2zlkX8RK3DrlSIKetPQlxx5qMcQTgDRSxQA8=
+        data_size: 258
+        var_table_size: 5
+    - SCVR:
+        - in45
+    - SCDT: eJxtjsEKgkAURX1FkmAxm4iwxfsEDQ1aGEjb2rSIdo9hGDIcS5QI/7M+J2gywwSX797DedcGM1O8lLkJMMPji+F1FHmHJW39gFKeJxiG6Nk/6snaLRgWDKAAo4eu3aj6tWrMFZ2pEDzNSJYS1y0KnC/FKiq+XU4yJ6H4/cPV1oUFFmh0iPrUeTPl0TFlziZVFm1iKRJ/RTtd6P8Om/7lgUt7KbhSugF4A3WxQwY=
     - SCTX:
         - Begin A1V6_ACheck49_Mark_sc
         - ""
+        - short in45
         - ""
         - "if ( player->GetItemCount \"A1V6_L45_mark\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L45_mark\", 1"
         - endif
         - ""
+        - set in45 to 0
         - ""
         - "if ( player->GetItemCount \"al_i_scamp_eye\" > 0 )"
         - "\tif ( player->GetItemCount \"al_i_hunger_claw\" > 0 )"
-        - "\t\tplayer->AddItem \"A1V6_L45_mark\", 1"
+        - "\t\tset in45 to 2"
         - "\tendif"
+        - endif
+        - ""
+        - if ( in45 > 1 )
+        - "\tplayer->AddItem \"A1V6_L45_mark\", 1"
         - endif
         - ""
         - StopScript A1V6_ACheck49_Mark_sc
@@ -17759,25 +17698,33 @@
     - SCHD:
         name: A1V6_ACheck50_Recall_sc
         vars:
-          shorts: 0
+          shorts: 1
           longs: 0
           floats: 0
-        data_size: 248
-        var_table_size: 0
-    - SCDT: eJxtjcEKgkAURXsEgiAktHBhxNAX6CJ3BuK2VYto95imRw6+skYL+s/6nKBBiTLa3nPuvR44J5Y3Mg5AKDZPX1SjLF4nuEwiNKQks0hTEXtv7+H/chi44H1mhtNuZqyPe0M73FbSIJNsCjJiIaIvFWadGkhGjeeLVmWt+UrGlpqGqaff/x67MPGDNs/yglQ5j3DVQqxV2CexJXVeHSwBeAGUskhZ
+        data_size: 278
+        var_table_size: 5
+    - SCVR:
+        - in60
+    - SCDT: eJxtjkELgkAUhHtFkiAkdPBgxNIv0CBvBuK1U4fotmzbIxe3rF0L+p/1c4I2LcTo+OabmTcOWCfJbqgsAJ9sni4phkm4jugyCqhCzqQkcUxC5+t7uL8cOjb0QUOnSwKnqetN6rqROO4V7ui2YIpKZGWGiixaVpjWVo9JKuj5IniuhbyiMqGylPi2fz7MbLDBJAbEnEZvht3/Dhu7XqUmaYY8nwd0VSGqud8moSE6LQ6GALwAq49LUA==
     - SCTX:
         - Begin A1V6_ACheck50_Recall_sc
         - ""
+        - short in60
         - ""
         - "if ( player->GetItemCount \"A1V6_L60_recall\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L60_recall\", 1"
         - endif
         - ""
+        - set in60 to 0
         - ""
         - "if ( player->GetItemCount \"ingred_boar_leather\" > 0 )"
         - "\tif ( player->GetItemCount \"al_i_quicksilver_bottle\" > 0 )"
-        - "\t\tplayer->AddItem \"A1V6_L60_recall\", 1"
+        - "\t\tset in60 to 2"
         - "\tendif"
+        - endif
+        - ""
+        - if ( in60 > 1 )
+        - "\tplayer->AddItem \"A1V6_L60_recall\", 1"
         - endif
         - ""
         - StopScript A1V6_ACheck50_Recall_sc
@@ -17788,21 +17735,19 @@
     - SCHD:
         name: A1V6_ACheck51_ResCom_sc
         vars:
-          shorts: 4
+          shorts: 3
           longs: 0
           floats: 0
-        data_size: 1110
-        var_table_size: 20
+        data_size: 1102
+        var_table_size: 15
     - SCVR:
-        - in15
         - in30
         - in45
         - in60
-    - SCDT: eJyVk0FPwjAUxykgGYTEGRNNhJh60cMuTIUbJISrJ02Mt5eyVdbQbbiOEL6nfhwTu67MgRvIpW9p/7/3f33da6PGgpM1jRoI3eG3bxOHnbH9OoCnhx64TFAiKERUMBGTwKF4OMR2e8N8mfu0qJIJjd3kj/3/Jy/U7ks+OKLyQXHlTXSCBKpUcU/Gqo41HetJbOca10ntTRbMIurClJIIFpTHeJRxdr7cHf0q5O979Tep/kLr52QWLmMGHnMp9Owy6lY3RVMiCFdZZbAM2MeSHoFmRRagTZTvxlUKn2p4IT35b5n1g0DyDkEeMLBcsI2tbWzTRcKBQTiLmA8xpbGnOfTXqJsSZ9qICA/WxM+3UFrVCqyuU/BcWQmP8Dn4JHDZlG/6UE3d1FcLywXLArClkrZU0mTPUvdpqfske5bMbaiTUe4BPg+MlaGgWglUMi4pVC+BSsega14qxXjiUWfet+GZiknog3A62yf38OIxyuXP4iD0A4zeLDo=
+    - SCDT: eJyVk0FPwjAYhu0WySAkzphoIsTUix64MBVukBCunjQh3r6UrbKGbsN1hPA/9eeY2K1lDtxALu26vs/3fnvXNlFtwcmaxjWE7vHbt42j1siZ9OH5sQseE5QICjEVTCQkdCkeDLDT3DBf9j4tOsmF1m7xp97/i5dq9xXvH9F5v7zzOjpFAp0YuCtnQ89mOjcLgbWUrc3CWUw9mFISw4LyBA9zzim2uaNfRfx9r/5W6S+1fk5m0TJh4DOPQtepou50GJoSYbTKO4NlyD6W9Ag0b7IEraNiGtcKPtPwQnry3zbNg0Caf1gELCwH7ODONrZJkXBgEM1iFkBCaeIrboL+GrUVca6NiPBhTYJihNLKKLG6UeBFZiV8wucQkNBjU77JQbtlTw0sBywbwJ2saCMrKvTaTNfye9J3HVnbynaGhR/weeA6WRlkVEAV10RBZgVUefzb9lWmGI196s57DrxQMY4CEG5re+cBXn1GuTwsLkI/zEQrGw==
     - SCTX:
         - Begin A1V6_ACheck51_ResCom_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - short in60
@@ -17815,7 +17760,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_disease_resistance\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - set in60 to 0
@@ -17867,20 +17811,18 @@
     - SCHD:
         name: A1V6_ACheck52_Shield_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 549
-        var_table_size: 15
+        data_size: 541
+        var_table_size: 10
     - SCVR:
-        - in30
         - in45
         - in60
-    - SCDT: eJyFkE1Lw0AQhjMJllRyWLwItsLec8mK6a2F0qs3QbwNazK4wU0iyULp/9SfI7jdxph+0csOO/O873xEMPrUckPNCGDKX38Yr9lSvMzw6THFttBUZcTncy6iP/CbHQHg9dXw0GaWXLD5B8AbwxW04Pk8sdHvYrCN0WDOSddAaixwbbCk8q2RFfFFrxPDgfb4+r0pSjRERnX81l+M4WwHWVp20xpMRKeAY8X9TnHjFLmkvKmNwkzLdT9VyO3DBY/dlr537f7WjMduCvsPPJeLreGOXgw2+Tp1+NCRwRly/7ZTduvSy5Wi7CN9wGdVkM6xzSbsblhJcaXs1prqyhYBfgEw34l3
+    - SCDT: eJyFkMFKw0AQhjMBSyo5BC+CrTD3XLJiemuh9OpNKN6GNRnc4CaRZKH0PfVxBDebWFNr8bLDzHz/vzMTwuRNyz03E4A5Pn1GWEdrsV3Qw31KbaG5yhiXSxThN/gRnQDgHbrBb5tF8o/NDwDeFC6gBc/HxEa/i+FovtlgLDUVtDNUcvncyIpx5fhOJ8aDHPH1S1OUZJiNGvjOX0zh7A+ytOy+NZSIXrGFU8Vtr7hyilxy3tRGUabl7jBVgPZBgfGw3aXLrRnGbgqb+56rxdawp1ejTd7/OnjgSP8MeXzTeXTtyuuN4uw1vaNHVbDOqc1m0c24k9JG2a0115VtAnwBdt2IZA==
     - SCTX:
         - Begin A1V6_ACheck52_Shield_sc
         - ""
-        - short in30
         - short in45
         - short in60
         - ""
@@ -17890,7 +17832,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_silence\", 1"
         - endif
         - ""
-        - set in30 to 0
         - set in45 to 0
         - set in60 to 0
         - ""
@@ -17923,26 +17864,23 @@
     - SCHD:
         name: A1V6_ACheck55_Chameleon_sc
         vars:
-          shorts: 2
+          shorts: 1
           longs: 0
           floats: 0
-        data_size: 367
-        var_table_size: 10
+        data_size: 359
+        var_table_size: 5
     - SCVR:
-        - in45
         - in60
-    - SCDT: eJx1j80KgkAUhbtBkSElBUEWcfdudKE7BXHbOtoNg0wpjj9oBL5nPU7Q5GgZ1GYG5nzfGY4K44LTmpVjgB0eHxrmC986OGTvmCSMaMo4yzN0XbTUDr1rPxAYKDCCCgZDNMU9fN1qr3wty2eUk5hUIU0LwmqG3pu2FOjzuuTnko/5lZUkLz/CBMWBFhrfWrth2Wghp1l2YrQkVRJnrQryr6Zk2pSIJzSEKyu93tLbv6VbTW8CP4hYmNg2CbpUbNtoq34o9PgcXUQA8ARAVl0H
+    - SCDT: eJx1j80KgkAUhbtBkiElBUEWcfdudKE7BXHbWtoNg0wpjj9oBL5nPU7Q4CgZ1GYWc77vzBwNlIrTltUKwBHPLx3LdWBHLjm5FokTmjPOygI9D21tQJ/6DwQmKsyggckULW1UupOlS8pJSpqY5hVhLUMfrZ62VRjzhuRXkk/5ndWkrD/CHMWBNprfWv/3TafFnBbFhdGaNFlaSDXq3+pKFl2JuEJTuLLSHy18/Ft40I0uCMKExZnjkHBIxba9vh2HQk+vyU0EAG+Po1v6
     - SCTX:
         - Begin A1V6_ACheck55_Chameleon_sc
         - ""
-        - short in45
         - short in60
         - ""
         - "if ( player->GetItemCount \"A1V6_L60_chameleon\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L60_chameleon\", 1"
         - endif
         - ""
-        - set in45 to 0
         - set in60 to 0
         - ""
         - "if ( player->GetItemCount \"al_i_scamp_eye\" > 0 )"
@@ -17969,26 +17907,23 @@
     - SCHD:
         name: A1V6_ACheck56_Light_sc
         vars:
-          shorts: 2
+          shorts: 1
           longs: 0
           floats: 0
-        data_size: 487
-        var_table_size: 10
+        data_size: 479
+        var_table_size: 5
     - SCVR:
-        - in30
         - in60
-    - SCDT: eJxtkEtLAzEQxzsLllYWWVAKatF48tDL7sHeWihePSmItyGmaTc0JHU3i/R76scRzKOP9HFIJpP//OaVQnsp6YpXbYAb8vGXEX0xKd6H+DLMUYp5achoRIp0E/abHcjQ6sIZ1NBKSG5t4mwaJb0PSa+Emld8iu5IwUquMC/I2DOO3VXoADwGpr9mPqXWUxRKacaVwUaJr4bHbBfiineBvqQSBTJJlZpxWrnX9xpKjqFNmx6qjVYc9QyXTSXMakt1iL1IQQb77ENge9t2KVsgVabk1W7IPdr75963E5CBTRLUcbSIn1Or7mc9/zl5LjlbPFnVKViz2+w6Eizyyuu3UttOagbwD4lVfeo=
+    - SCDT: eJxtkEFLAzEQhTtCSyuLLCgFteh48tDL7sHeWihePSkUb0NM025oSOomi/R/6s8RzG7smkoPCZm8fC9vJoHeVrGdKHsAV/j6naI5m+eLCT1NMlJyXTicTjFP9s++0n8ydAbQBQudE8ySyOw2mF1IvS7FkuqlJC+EpizHGWZdWNTMn3Mf4D4wo1/mTRmzJKm14UI7qrR8r0TMDiD+8SbQ50yRJK6Y1ivByvr0ESB7BNrHbCDrjBZkVrStSul2LdVHv2GO40P2LrDDNi7jG2LaFaJsmzykm/q0qX0HOPYmQZ1Fg/g8NuJROmwu54+F4JsHr9YKWX6dXkaCR56FfSmMT2I5wA9PxHy+
     - SCTX:
         - Begin A1V6_ACheck56_Light_sc
         - ""
-        - short in30
         - short in60
         - ""
         - "if ( player->GetItemCount \"A1V6_L60_light\" == 1 )"
         - "\tplayer->RemoveItem \"A1V6_L60_light\", 1"
         - endif
         - ""
-        - set in30 to 0
         - set in60 to 0
         - ""
         - "if ( player->GetItemCount \"ingred_red_lichen_01\" > 0 )"
@@ -18020,21 +17955,19 @@
     - SCHD:
         name: A1V6_ACheck5_WaterBrf_sc
         vars:
-          shorts: 4
+          shorts: 3
           longs: 0
           floats: 0
-        data_size: 885
-        var_table_size: 20
+        data_size: 877
+        var_table_size: 15
     - SCVR:
-        - in15
         - in30
         - in45
         - in60
-    - SCDT: eJyNkk1PwkAQhllAUgiJeDF+cFijt8akjdIbJOjVs3qbjGVLm65CdluI/1N/jonb7QIFWsJlp92Z530ns9MlrTnHbyZahNzR978enV2M3VcPXh4cWGLCBHwIhkkYfU3pcEjd7gr47VUWktq6ytqVfRwcKbtfeEjWO7Zbr6TbNjkhktTq1FGxbmLDxGYWu4Ux9XPjM4UKNgGRSplyBMelIw1kQm6x05scODdAvMRPBD9NEs42VGbjtknR6CrnTg03Zyj4BmjsA6vOkEMEE8HSaQgyZJyvEYuqg7rU3gZvzSyNU4h+zNk9nwFnGBQtK3jzFpfaWHJUxmrEQSRD8HERoTAC9bxn/dWh6qBqWtTW0h0tnd3Zehzqv1nTd7ZysHRmVBjsz6H9szTRqCDKVisnmhVE+db0TXr8HDI/HsBbVvIkApD+9VZKKbBFlKi0ShHyD2GS63I=
+    - SCDT: eJyNkk1PwkAQhtk2kkJIxIvxg8MavRETGqU3SNCrZ/Q2GcuWNl2F7LYQ/6f+HBO326UWaAmXnW5nnvedzE6HNJccv5hoEnJH3367dHExcacevDwMYI0JE/AuGCZh9DmnoxF1Oxvgp1tbSBpFlbMr+zg8Una/8JCsd2y3XkW3LXJCJGlYdKCiZaKdxU5pPL3c8Ewhgs1ApFKmHGHg0nEGTDMBt9zhTQ6cGyBe4weCnyYJZwWlbdwWKRtd5dyp4ZYMBf8HrH1g0xlyiGAmWDoPQYaM8wJxqDqoS/vb4K2ZoXEK0Y85u+cL4AyDsmUNb97gUhtLjspYjTaIZAg+riIURoDkPeuvNlUHVdOifS3d1tLS3O3sbjf0v75ycHRmXBrs96G9czRh1RBVK5UTdg1RvS09k548h8yPh/CalTyJAKR/vZVSCmwVJSqtUoT8AX1H6lc=
     - SCTX:
         - Begin A1V6_ACheck5_WaterBrf_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - short in60
@@ -18047,7 +17980,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_water_breathing\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - set in60 to 0
@@ -18192,20 +18124,18 @@
     - SCHD:
         name: A1V6_ACheck64_ResPara_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 974
-        var_table_size: 15
+        data_size: 966
+        var_table_size: 10
     - SCVR:
-        - in15
         - in30
         - in45
-    - SCDT: eJyFk99r01AUx+9NsXazuKs+rGqVgz6WQePq3jYYIiIoiA/i2yXNrm1Y2oQkReOfN5990/egjQtNc0vSB4VV9ObHurqu8yUHzvl+zvebHFLFZVNXXGaVMb4Hb38TMG7sy2926IvtJjUVS9Hdjwx2d0Guniq/kmUFRvNx5fyi1uP/LVpQYLSGr2AbIwmaokpFLaW1upD1Tm6xoehUo0bH0nq0a1h92Jtj8hpeBOpFpgw4VDrGwNFojylOgZSWkfs5cut5v2OxA2q/Z8wxB7pJm/IcqoB4gAyNf9EHObpZoI7Ws5Ut1eixrbZ7hkspLl2AP8zxWoGnb0Z1TXdpe6C3z3icZ842rWebRAsaWbD1LFjaa4iFuc/ewsf/cuEVK5m0tEJ67k51Usv6+0+6TD3cadHXzH4l5tRWheUmPNvIx7raZT1XDNPzNxEpo0884d84Su1WyGREauizP+Rx4iX8Z8RhxMcTHvmRIC8DHyFyGx15Y4imP6ITiJPpZORBABM/ToLRZeR2anl08j38MwwSiMPgl7AUlYs94xSUVoAtiVwzDUcz+vBO0XRE6nkAH6ZDL+TxDGJ+PPSSGRz74cxH6CouSeR6gdgDVWW2jQgR5rkyDE6Vd8nNzPClcVB4Pv1gphdfCiL+D4z/AiB5NwE=
+    - SCDT: eJyFk99r01AUx++NWLtZ3FUfVrXKQR/LoHF1bxsMEREUxIfh2yXNrm1Y2oQkReOfN5990/egjQtNc0vSB4VV9ObHum5dt5dcOOf7+X7PzeFWcMnUFZdZJYwfwvu/BIzbu/LeFn292aCmYim6+5nB9jbIlRPld7KowGjWLp83aj67ymhOgdEKvo5tjCRoiFNKz8rcjPdz6zVFpxo12pbWpR3D6sFOJk8xeQXPA7Vilgw4UNpG39FolylOgUiLyKMcufuq17bYPrU/MuaYfd2kDXkGlUF8QIb6WfRxjq4XqKN1bWVDNbpso+We4jjF8QX4kxyvFnh6M6pruktbfb014/eKa2ZOq5mTKEE9G2w1Gyyt1YVhnrMz99O/Xbi9ciaVlkjP7adGqll993mHqQdbTfqO2W9Fn9qqiFyHl2t5W1c7rOuKZrr2BiIl9IUn/AdHadwSmYxIFX31BzxOvIT/jjgM+WjMIz8S5GXgU0TuoUNvBNHkV3QMcTIZDz0IYOzHSTC8jNxMIw+Pf4b/BkECcRj8EZHi5MJnlILSErApkZum4WhGDz4omo5ILR/Ah8nAC3k8hZgfDbxkCkd+OPURuoGvSeRWgdh9VWW2jQgR4bkyDE6UD8idLPCNsV9kvvhkphtfGES8D4z/A6XdNew=
     - SCTX:
         - Begin A1V6_ACheck64_ResPara_sc
         - ""
-        - short in15
         - short in30
         - short in45
         - ""
@@ -18215,7 +18145,6 @@
         - "\tplayer->RemoveItem \"A1V6_L45_paralyze\", 1"
         - endif
         - ""
-        - set in15 to 0
         - set in30 to 0
         - set in45 to 0
         - ""
@@ -18328,20 +18257,18 @@
     - SCHD:
         name: A1V6_ACheck7_Tele_sc
         vars:
-          shorts: 3
+          shorts: 2
           longs: 0
           floats: 0
-        data_size: 567
-        var_table_size: 15
+        data_size: 559
+        var_table_size: 10
     - SCVR:
-        - in30
         - in45
         - in60
-    - SCDT: eJyNkT1Pw0AMhutUVGnJED7UhYK8Z8lJUFhaqbAyIsR2Cq1pTj1SlFwG/if8HCTcuxBdKZVYzpb9vH4tXwS9N529U9kDQHz6inF9OhOPY3l/eSUNaVqpgipV4WSCIvqBP+M/Iei0RPh73Dj9x7htCDp9OAAOAaYcgyZ2NzHy9h46o8NMSyWrWr/UJU5bVPTBh0cOPlLFsqSFrOa1MZpkKlpJiPygwGRbeO6Ex43weV3QK7Flq4RdswunOWk0mVZG5mrh2QVOZLMB8oM8BxO7yMAusqklPCu02dQ728e+Xwgt3d1D7x551LRmdznNV9fygdt8mbN46JVv5K1Wy9xwA+AbNVOQcg==
+    - SCDT: eJyNkD1Pw0AMhutIVGnJED7UhYK8Z8lJUFhaqbAyoortFFrTnHqkKLkM/E/4OUh1L2l0/ZK62Jb9vLb1BtD+1skP5W0AxPf/EJfXYzEZyNf7B2lI00JlVKgCh0MUwQb+Cw9C0GoIf3fdID5h3TYErQ6cAScPY87eOgfOv73qwHmipZJFqT/LHEcNKjrgwv0KvlDZPKeZLKalMZpkLBqJjxxQYLQtvK2El7XwY5nRF/HJjXIC+8fuKs1VrUm0MjJVM+dcLbJVFzkg78HIPtK1j6x7Ee/ybTVy7Po95r5vae8IvW9uvx6NX1KaLh7lG4/ZmZuw57Sf5LNW89TwAGAFQTmPXw==
     - SCTX:
         - Begin A1V6_ACheck7_Tele_sc
         - ""
-        - short in30
         - short in45
         - short in60
         - ""
@@ -18351,7 +18278,6 @@
         - "\tplayer->RemoveItem \"A1V6_L60_telekinesis\", 1"
         - endif
         - ""
-        - set in30 to 0
         - set in45 to 0
         - set in60 to 0
         - ""
@@ -18448,13 +18374,13 @@
           shorts: 3
           longs: 0
           floats: 0
-        data_size: 1079
+        data_size: 1050
         var_table_size: 15
     - SCVR:
         - in30
         - in45
         - in60
-    - SCDT: eJyNkl1PwjAUhukWEAwxJH4QI9HqjRfcbFFJvICE4J1eG++a2Z2wZaPVfUj4n/pzTOzWCl0FIcvWtX2fc96enjZqvMXeApIGQhi/fHcwPxq7zwPydOMQmidAKJ/NOMPDIXbbv+KvzloRqi0VTTPc7d0O4aqi/8INdnE3MNy1UB2lqGZhR4yWGu1ibGtlOJeJDkM2TcAn08T7AD9PM+K4eFQiRQhX93Ylka5C5mEc8znxWBZAssIsEzuV2IHCZjmNVurCl9tCurMLVQKlL944pAEwPUcTiw92cV/PdC3JniJfY859EjLGKbCM5Cx8z+FvhGp2oy404BHMQfytS15F1d0dK9T3wE88kkYh04sqYLQGvpTwyfI+QBzYPHeFLq3sl1aKtX5ZTTG3a+VaXwSV6pF2H5+berpZqq0NarNlpdreoDY7cg/VtaPaW1pPr8oOLbfdbAsVT09tjycB0OieTApJSs86XW3ZdcgDZI+wEDsI/QDwEh9l
+    - SCDT: eJyNk11PwjAUhukWDTPEkPhBjESrN15ws/pB4gUkBO/02njXzO6ELRut7kPC/9SfY2K3VugGKBdbt/Z9znl7TttCu2+xN4dkFyGMX77bWByOyHOfPt24lOUJUCamU8HxYIBJ61f81V4rQo2FolkPd3u3Rbiq6K9w/W3c9WvuHLSDUtSwsCtHS492MbaMMpypRAchnyTg00nifYCfpxl1CR6WSBGCmN4uFdLRyCyMYzGjHs8CSJaYVcdOFLavsWnOoqW68EUcZDo71yXQ+uKJQxYAN3M0sXxhgntmpitFdjX5Ggvh05BzwYBnNOfhew6rEarZa3VhgYhgBvJrXfIqqnt3pFHfAz/xaBqF3CyqhNEa+ELBx4t+gNxwfd8VurSyV1op5nplNeW/3SjnekZ0+59um0a27/K1gxwkCeVpaHT9c9PNaZZqa4O6fjGU2t6gXj33Xb00GgfAons6LpZTdtruGNPEpQ+QPcJcriD0A+NFFYY=
     - SCTX:
         - Begin A1V6_ACheck9_Cure_sc
         - ""
@@ -18499,18 +18425,18 @@
         - set in45 to ( in45 + in30 )
         - set in60 to ( in60 + in45 )
         - ""
+        - "if ( player->GetItemCount \"ingred_gravedust_01\" > 0 )"
+        - "\tif ( player->GetItemCount \"ingred_willow_anther_01\" > 0 )"
+        - "\t\tset in45 to 2"
+        - "\tendif"
+        - endif
+        - ""
         - if ( in30 > 1 )
         - "\tplayer->AddItem \"A1V6_L30_cure_common\", 1"
         - elseif ( in45 > 1 )
         - "\tplayer->AddItem \"A1V6_L45_cure_common\", 1"
         - elseif ( in60 > 1 )
         - "\tplayer->AddItem \"A1V6_L60_cure_common\", 1"
-        - else
-        - "\tif ( player->GetItemCount \"ingred_gravedust_01\" > 0 )"
-        - "\t\tif ( player->GetItemCount \"ingred_willow_anther_01\" > 0 )"
-        - "\t\t\tplayer->AddItem \"A1V6_L45_cure_common\", 1"
-        - "\t\tendif"
-        - "\tendif"
         - endif
         - ""
         - StopScript A1V6_ACheck9_Cure_sc

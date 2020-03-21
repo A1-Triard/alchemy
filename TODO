@@ -1,3 +1,0 @@
-improve:
-
-A1V6_ACheck3_RestoreMagic_sc - replace some `set in15 to ( in15 + 1 )` with `set in15 to 1`
