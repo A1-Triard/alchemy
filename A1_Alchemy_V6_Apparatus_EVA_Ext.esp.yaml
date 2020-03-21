@@ -1237,3 +1237,27 @@
     - StartScript A1V6_ACheck48_SwitfSwim_sc
     - ''
     - End
+- SCPT:
+  - SCHD:
+      data_size: 0
+      name: A1V6_ADel21_FireSh_sc
+      var_table_size: 0
+      vars:
+        floats: 0
+        longs: 0
+        shorts: 0
+  - SCTX:
+    - Begin A1V6_ADel21_FireSh_sc
+    - ''
+    - if ( player->GetItemCount "A1V6_L30_fire_shield" == 1 )
+    - "\tplayer->RemoveItem \"A1V6_L30_fire_shield\", 1"
+    - elseif ( player->GetItemCount "A1V6_L45_fire_shield" == 1 )
+    - "\tplayer->RemoveItem \"A1V6_L45_fire_shield\", 1"
+    - elseif ( player->GetItemCount "A1V6_L60_fire_shield" == 1 )
+    - "\tplayer->RemoveItem \"A1V6_L60_fire_shield\", 1"
+    - endif
+    - ''
+    - StopScript A1V6_ADel21_FireSh_sc
+    - StartScript A1V6_ADel22_FortAgil_sc
+    - ''
+    - End
