@@ -2234,8 +2234,10 @@
         - if ( A1V6_AlchemyExp >= 100 )
         - "\tset A1V6_AlchemyExp to 0"
         - "\tif ( Gals__CharDev_Present == 0 )"
-        - "\t\tif ( A1V6_AlchemyPlus < 100 )"
-        - "\t\t\tStartScript A1V6_IncAlchemy"
+        - "\t\tif ( alchemy < 100 )"
+        - "\t\t\tif ( A1V6_AlchemyPlus < 100 )"
+        - "\t\t\t\tStartScript A1V6_IncAlchemy"
+        - "\t\t\tendif"
         - "\t\tendif"
         - "\telse"
         - "\t\tplayer->ModAlchemy 1"
