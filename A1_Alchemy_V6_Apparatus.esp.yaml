@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования без EVA.esp
-        records: 517
+        records: 502
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -13566,14 +13566,14 @@
           shorts: 1
           longs: 0
           floats: 3
-        data_size: 226
+        data_size: 211
         var_table_size: 16
     - SCVR:
         - doOnce
         - cx
         - cy
         - cz
-    - SCDT: eJxljcEKgkAQhuc3lBaJVjrUrTl0DdpD3TwIgW8Q6kU0DAQDaeupeqR6mEb3UnSZGb7555sAUJyx5jhms4FCAE/A24FnBHIQa06XiTkdyqTvq1t1f9hja6u6a0ozRl96jMnt6ls2VWxBA9j5kMlj4+MCijidOV3XXOv2nJFg7w/nA57QgtP57/PCLRRLYbPnbagz0VKoc9FIK2RBCsAHkSEppA==
+    - SCDT: eJxljTEKwkAQRedHEllETLDQzik8gNvYpQgIuYFs0oSNRAhECK6eyiPpYZxkGyXVHx7/v4kAxYZjTlPWeyhECAR8PHglIA+x43yT6fOxyvre3u3j6U6ts3XXVHqsvuOxJtvtr2yu2IEGcAghV8A6xBWUcL70uq651e3FkOBggosBz2jN+er/eUmL2IhHopCdRCk9UgC+KDInzw==
     - SCTX:
         - Begin A1V6_Alembic_1_sc
         - ""
@@ -13604,7 +13604,6 @@
         - "\tset cx to A1V6_AlembicX"
         - "\tset cy to A1V6_AlembicY"
         - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
@@ -13618,14 +13617,14 @@
           shorts: 1
           longs: 0
           floats: 3
-        data_size: 226
+        data_size: 211
         var_table_size: 16
     - SCVR:
         - doOnce
         - cx
         - cy
         - cz
-    - SCDT: eJxljcEKglAQRecaSg+JnrSoXbNoG/SC2rkQAv8g1I1oGAgGkvVVfVJ9TKNvU7iZGc7cOeMBihPWHIZsNlDw4Aj4WPAKQBZizfEyMudjHrVtcS8ez+5Ud0XZVPl+iL71EJPb1a9sqrgD9WDnQiaHjYsrKOB4ZnVNdSvrS0KCnRFOezyhBcfz/+eZXSiWwubAW18noiVfp6KRlsmCFIAvkcAppQ==
+    - SCDT: eJxljTEKwkAQRedHEllETLDQzik8gLGwSxEQ9gaySRM2EiEQIbh6Ko+kh3GSbRSrPzz+fxMBig3HnGWcbqEQIRDw9uCZgDzEhvUqT0+HKu97e7P3hzu2ztZdU+3H6isea7Jdf8umih1oALsQcgWchriAEtZzr+uaa92eDQkO/nAx4AktWS9+n5c0i414JArZSZTSIwXgAyjCJ9A=
     - SCTX:
         - Begin A1V6_Alembic_2_sc
         - ""
@@ -13656,7 +13655,6 @@
         - "\tset cx to A1V6_AlembicX"
         - "\tset cy to A1V6_AlembicY"
         - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
@@ -13670,14 +13668,14 @@
           shorts: 1
           longs: 0
           floats: 3
-        data_size: 226
+        data_size: 211
         var_table_size: 16
     - SCVR:
         - doOnce
         - cx
         - cy
         - cz
-    - SCDT: eJxljcEKglAQRecaSg+JnrSoXbNoG/SI2rkQAv8g1I1oGAgGkvVVfVJ9TKNvU7iZGc7cOeMBihPWHIZsNlDw4Aj4WPAKQBZizfEyMudjHrVtcS8ez+5Ud0XZVPl+iL71EJPb1a9sqrgD9WDnQiaHjYsrKOB4ZnVNdSvrS0KCnRFOezyhBcfz/+eZXSiWwubAW18noiVfp6KRlsmCFIAvkl8ppg==
+    - SCDT: eJxljTEKwkAQRedHEllETLDQzik8gEGwSxEQ9gaySRM2EiEQIbh6Ko+kh3GSbRSrPzz+fxMBig3HnGWcbqEQIRDw9uCZgDzEhvUqT0+HKu97e7P3hzu2ztZdU+3H6isea7Jdf8umih1oALsQcgWchriAEtZzr+uaa92eDQkO/nAx4AktWS9+n5c0i414JArZSZTSIwXgAylSJ9E=
     - SCTX:
         - Begin A1V6_Alembic_3_sc
         - ""
@@ -13708,7 +13706,6 @@
         - "\tset cx to A1V6_AlembicX"
         - "\tset cy to A1V6_AlembicY"
         - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
@@ -13795,8 +13792,6 @@
         - float aSin
         - float tempFloat
         - float tempFloat2
-        - float mortarX
-        - float mortarY
         - float alembicX
         - float alembicY
         - float calcinatorX
@@ -13899,10 +13894,6 @@
         - "\tset tempFloat to ( 20 * aSin )"
         - "\tset tempFloat2 to ( 25 * aCos )"
         - "\tset calcinatorY to ( cy - tempFloat + tempFloat2 )"
-        - "\tset tempFloat to ( 40 * aCos )"
-        - "\tset mortarX to ( cx + tempFloat )"
-        - "\tset tempFloat to ( 40 * aSin )"
-        - "\tset mortarY to ( cy - tempFloat )"
         - "\tset tempFloat to ( 30 * aCos )"
         - "\tset tempFloat2 to ( 20 * aSin )"
         - "\tset retortX to ( cx - tempFloat - tempFloat2 )"
@@ -13985,8 +13976,6 @@
         - ""
         - if ( doSetUp == 1 )
         - "\tset doSetUp to 0"
-        - "\tset A1V6_MortarX to mortarX"
-        - "\tset A1V6_MortarY to mortarY"
         - "\tset A1V6_AlembicX to alembicX"
         - "\tset A1V6_AlembicY to alembicY"
         - "\tset A1V6_CalcinatorX to calcinatorX"
@@ -14048,7 +14037,7 @@
         - retortY
     - SCDT: eJytVU1u00AUnnE8dpymxCVFTRUhzSKL0qpguw11JRcU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/TsMCRYrt733vd96bJ2Gi0ImA6ANqaBIuKLRzqdK9PaoT3K629Ff3u63RyB7b3vvJk49e1xCo9mUJowZW4CdhIdb+oTZ8qFAMIO1CraUtPLXfOfunJ2PntYAIBhan6nSjEVoL3X9XfYJAdSaogRsZMYEBDlZpe8k3/Mh2ey2398YZnjfDoKclEDLBw+UpvDvpTTB40OpqrtBPJs+XMdOXMcOXwXwJM3wZga8FyJ762YMNSBfYVyqEQGnnj0rPltO13PecYdcI2O2VtPDxYGIfuw47Lj2sY12tZ0iO3fMGH2zPgQBkXABiEfkKbgH5iUwIPwAFN3ARi9Eh6BLGUbB6EKzBWCyPhIgBVROhqjlByKqYIiqb50LJ/ERmtpd+xU4e80D6GFVpu5ImdqB3+kKO4JAJCjmCI7SgdsAWPA5BEx5HwGNsCa3QbCCt0xPX4cIKhT/a3Llr7DZ3THqvahLIpQ+5GGbVLPjvghWjOqBigPoGFLql0b6I6Dp8yvBpwCfhnyWkUgjKd7FJQUo3EjokrROYWGA6AtfZSOkYGT/NyEQ54Wdah6R1AhOLCT/p2LZjP0VUig0nxIFJhYlDG3OrcWOqGptzq1GZqsbmusX7zfXPBUdvQgYLu3GPxEioiaw71jw7JfO3eKHmziRG1w4kmyuRtXcDZoXNlISSY8SeEhu/leA+xXBJEnafNkHCBlOXMQ5eNTZeQmq8nhWr5iUpmT+JNHLtc2eMblu8KXkCYir9A2DLKf23UpgksgoP84tAordCCutnMCkq1reE1TiG2n/zEB8dz4LIULib1A1qu2Vq29q2qe3+Uwm/ytmiOHJ+l+ShyfTWIPXP8jxWvp01K76IXZK8kBM9wS9rQl0ZIdYsisJeg62Q0tL4si5GzVbk6+j6pSAE3QjbYzVzS8Y0tiBK5i/CGloII+N++Ve04MsQgRhFIPLw2mXf8sHZ2LPHHULhXkEZ9BBQxUcXeRSuMzwe9Bi5NA0z9oIPq9GuHZza3plvvZwrYTqLCb/PHQA9xr8xhTJuxUezewYEsFfq6q00/sLxXo66Bq8BjHynxtcjW3XpXcsoGP8FOr21Gw==
     - SCTX:
-        - Begin A1V6_ApparatusCont_2_sc
+        - Begin A1V6_ApparatusCont_1_sc
         - ""
         - short doOnce
         - short doDisable
@@ -14064,8 +14053,6 @@
         - float aSin
         - float tempFloat
         - float tempFloat2
-        - float mortarX
-        - float mortarY
         - float alembicX
         - float alembicY
         - float calcinatorX
@@ -14168,10 +14155,6 @@
         - "\tset tempFloat to ( 20 * aSin )"
         - "\tset tempFloat2 to ( 25 * aCos )"
         - "\tset calcinatorY to ( cy - tempFloat + tempFloat2 )"
-        - "\tset tempFloat to ( 40 * aCos )"
-        - "\tset mortarX to ( cx + tempFloat )"
-        - "\tset tempFloat to ( 40 * aSin )"
-        - "\tset mortarY to ( cy - tempFloat )"
         - "\tset tempFloat to ( 30 * aCos )"
         - "\tset tempFloat2 to ( 20 * aSin )"
         - "\tset retortX to ( cx - tempFloat - tempFloat2 )"
@@ -14254,8 +14237,6 @@
         - ""
         - if ( doSetUp == 1 )
         - "\tset doSetUp to 0"
-        - "\tset A1V6_MortarX to mortarX"
-        - "\tset A1V6_MortarY to mortarY"
         - "\tset A1V6_AlembicX to alembicX"
         - "\tset A1V6_AlembicY to alembicY"
         - "\tset A1V6_CalcinatorX to calcinatorX"
@@ -14317,7 +14298,7 @@
         - retortY
     - SCDT: eJytVU1u00AUnnE8dpykxCVFTRUhzSKL0qpgOw11pRQU8RN1USGBQGk3kRucEnDaKDGIbrgJJ2DNHThAV1B1xQHgAEi88fg/TsMCRYrt733vd96bJ2Gi0KmA6ANqaBLOKbR7qdK9PaoT3Km09Vf3e+3x2JpY7vvpk49uryFQ7csyRnWswE/CQqT9Q617UC7vQ9qFWk1aeGq9s/dPTyb2awERDCxO1elmPbAWuP+uegSB6kxQBTcyYgIDHKzRzrJn+JHl9NtO/409Om8GQc9KIGSCRyszeG/an2LwoNXUTKGXTJYvY64vY44vg/kS5vgyfF9FyJ562YMNSBfYVyqEQGn3j0rPVpK13HftUa/hszurSeHj4dQ6dmx2XHpQx5paS5Fsq+8OP1iuDQHIOAfEPPIUnBzyEpkSfgAKruM8FsND0CWMw2B1P1iDsVgeMREDKiZCFXOKUKtsiqhkngsF8xOZ2176FTt5zAMZYFShnXKS2IXeGQgZgkMmyGUIjlBR7YIteByCJjyOgMfYElql6UDapyeOzYVlCn+0uXPX2G3umPRexSSQywByMcyKmfPehVaE6oCKPuoZUGhDowMR0Q34lOHTgE/CPwtIpRCU52KLgpRuxnRIUsc3UWQ6AtfZTOgYKT/N0EQp5mdWhyR1fBNLMT/J2LYjP3lUiAzHxL5JhYkDGwurcWOmGlsLq1GeqcbWRov3m+OdCw7fhBQWdOMeiZBAE7XutBbZKZi/xQs1cyYxunYg2VyJrL3rMCtspiQUHyP2lNj4rfr3KYZLkrD7tAkSNpi6jLH/qrHxEhLj9SxfMS9JwfxJpLFjndsTdLvFm5InICbSPwC2nNB/KwVJolbuYXYRSPiWS2CDFCaFxfoWsxrFUP1vHqKj41kQGQp3kzp+bRumtq1tm9ruP5Xwq5wuii1nd0kWGk9vHVL/LC9iZdtZb0UXsUPiF3KsJ/hlTagjI8SaRVHYq78VEloaX9b5sNnyfB1dvxQEvxthe6ylbsmIxhZEwfxFWEMLQWTcL/8KF3wJIhDDCEQeXqfkWT44m7jWpEso3CsohR4CqnjoEo/CsUfHwz4jF2Zhxi56sBru2uGp5Z551kuZEqazFPP73AbQZfwbMyjjlj00vWdAAHulpt5K4i9s9+W41+A1gJHvVvl6ZKsuuWsZBeO/Y0u1Ig==
     - SCTX:
-        - Begin A1V6_ApparatusCont_3_sc
+        - Begin A1V6_ApparatusCont_1_sc
         - ""
         - short doOnce
         - short doDisable
@@ -14333,8 +14314,6 @@
         - float aSin
         - float tempFloat
         - float tempFloat2
-        - float mortarX
-        - float mortarY
         - float alembicX
         - float alembicY
         - float calcinatorX
@@ -14437,10 +14416,6 @@
         - "\tset tempFloat to ( 20 * aSin )"
         - "\tset tempFloat2 to ( 25 * aCos )"
         - "\tset calcinatorY to ( cy - tempFloat + tempFloat2 )"
-        - "\tset tempFloat to ( 40 * aCos )"
-        - "\tset mortarX to ( cx + tempFloat )"
-        - "\tset tempFloat to ( 40 * aSin )"
-        - "\tset mortarY to ( cy - tempFloat )"
         - "\tset tempFloat to ( 30 * aCos )"
         - "\tset tempFloat2 to ( 20 * aSin )"
         - "\tset retortX to ( cx - tempFloat - tempFloat2 )"
@@ -14523,8 +14498,6 @@
         - ""
         - if ( doSetUp == 1 )
         - "\tset doSetUp to 0"
-        - "\tset A1V6_MortarX to mortarX"
-        - "\tset A1V6_MortarY to mortarY"
         - "\tset A1V6_AlembicX to alembicX"
         - "\tset A1V6_AlembicY to alembicY"
         - "\tset A1V6_CalcinatorX to calcinatorX"
@@ -14782,9 +14755,9 @@
           shorts: 0
           longs: 0
           floats: 0
-        data_size: 2736
+        data_size: 2588
         var_table_size: 0
-    - SCDT: eJyd0z9Lw0AYBvA7hGLB4Qb/UBV7Sj9As7hVqJO7KN3CawmSo68NaRz6OdVRKBUyCBbsLtiYWlMv792l8/O85Ed4rsZ5XfakkJ2O9Fq8znd4LRrAOIhrfOtU9r6EHO5DFEEMyePIv/dhEOBd2PfbnryQ7VX7RRAtzp7pKBVHXe/23C/Lg0XO2NUlY6uPbJeR0ImENAktJKxMUk4kRZOUhaQqk8CJBDQJLCSwkM5y0kHxYhSFUeAno3AM/0xULUPRWSqamqpQIGTNXLarX2m/qrSTmYggFQ0C9EdZf3KtHNMovog+DPrhAyTDWBfRxYxlSlNxor29QqX8X+k8dOWhkYd2Hm7CU648ZeQpO09twgNXHhh5YOdBOW99fTIH7hU3EQeLi0THlZcyGJWk4lBb3DIu/186B104SHLQzMGqHOXCUSRHmTmqKgdcOEBywMwBnWNfDy4OILasZ1XS1lNIytazjN3X48BBkoNmDlblKBeOIjnKzFFVOeDCAZIDZg7onDpnQrCnz/nkYzZ9n8i32Xw2nTD2Ko7F3s959/f8OkhuIt/j/BvxWoBy
+    - SCDT: eJyd0zFLw0AUB/C7CsWCww1WqYo9pR+gWdwq1MldlG7hWYLk6LMhjUM/pzoKpUIGwYLdBRujNfHuJZfO/3f8f7m8q3PekAMpZK8nnQ5v8B1eD0Yw9cI63zqRg08hx3sQBBBC9DBx71wYeXjrD92uI89ldz39LIgpzp7oKBaHfefmzDXl3ipn7PKCsXXJtomEViSkSVhCwsokZUVSNEmVkFRlEliRgCZBCQlKSKcpaT97YhL4gedGE38K/0zUWIKis1i0NVVmgJC1U9mufkq7KuNMYiKCWLQI0B8l/+Q6KaaVfRFDGA39e4jGoS6iBxNWURqLY+3tZUbMd6Xz0JaHhTws5+EmPGXLU4U8Vc5Tm/DAlgeFPCjngZmX3z6ZApvZnQi91YlIx5mHEhiVxOJA27if2HxfOgdtOEhysJiDVTnKhqNIjirmqKocsOEAyYFiDuic3PbUTNuDqwMQlmzPekjbnkyS+fSaaTEsmpBsQvsmZdOkyCZl3wQ2TUA25ZIGZ0Kwx4/l7H0xf5vJ18VyMZ8x9iKORPP7R/d/D1550XXgOpx/Af/YUos=
     - SCTX:
         - Begin A1V6_ApparatusSetUp_1
         - ""
@@ -14857,19 +14830,15 @@
         - if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_g_mortar_01, 1"
         - "\tAddItem apparatus_g_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_mortar_e1, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_m_mortar_01, 1"
         - "\tAddItem apparatus_m_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_mortar_e1, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_j_mortar_01, 1"
         - "\tAddItem apparatus_j_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_mortar_e1, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_mortar_01, 1"
         - "\tAddItem apparatus_a_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_mortar_e1, 1, 50, 0"
         - endif
         - ""
         - "MessageBox \"Установка готова\""
@@ -14885,9 +14854,9 @@
           shorts: 0
           longs: 0
           floats: 0
-        data_size: 2736
+        data_size: 2588
         var_table_size: 0
-    - SCDT: eJyd0z9Lw0AYBvA7hGLB4Qb/UBV7Sj9A28GtQp3cRekWXkuQHH1tSOPQz6mOQqmQQbBgd8HG1Jp6ee8unZ/nJT/CcxXOq7Inhex0ZKvBq3yHV8IBjP2owrdOZe9LyOE+hCFEED+OvHsPBj7eBX2v2ZIXsrlqvwiixdkzHSXiqNu6PfeKcr/NGWNXl4ytPrJdREInEtIktJCwNEk5kRRNUhaSKk0CJxLQJLCQwEI6y0gH+YtRGIS+F4+CMfwzUbUURWeJqGuqXIGQ1TPZrn6l/arCTmoigkTUCNAfZf3JNTJMLf8i+jDoBw8QDyNdRBdTlilNxIn29nKV4n+l89CVh0Ye2nm4CU+58pSRp+w8tQkPXHlg5IGdB8W89fXJDLiX30TkLy5iHVdcSmFUkohDbXHLuPh/6Rx04SDJQTMHy3KUC0eRHGXmqLIccOEAyQEzB3SOfT24OIDIsp5VSVtPLilazzJ2X48DB0kOmjlYlqNcOIrkKDNHleWACwdIDpg5oHOqnAnBnj7nk4/Z9H0i32bz2XTC2Ks4Fns/593f82s/vgm9NuffTXmAhQ==
+    - SCDT: eJyd0zFLw0AUB/C7CsWCww1WqYo9pR+g7eBWoU7uonQLzxIkR58NaRz6OdVRKBUyCBbsLtgYrYl3L7l0fv/j/8vlXZXzmhxIIXs92WnxGt/hVX8EUzeo8q0TOfgUcrwHvg8BhA8T586BkYu33tBpd+S5bK/Tz4JIcfZEjyJx2O/cnDmmudvljLHLC8bWJdsmElqRkCZhAQlLk5QVSdEkVUBSpUlgRQKaBAUkKCCdJqT99ImJ7/muE068KfwzUbEYRc8i0dRUqQAhayayXf2UdlXGTGwiBpFoEKA/SvbJtRJMI/0ihjAaevcQjgNdRAdjVt40Esfa20tFzHel89CWh7k8LObhJjxly1O5PFXMU5vwwJYHuTwo5oGZl90+mQDr6Z0I3NWJUMeZQzGMmkTiQNu4n7H5vnQO2nCQ5GA+B8tylA1HkRyVz1FlOWDDAZID+RzQOZntqZi2B1cHICjYnnVI257UJPXpFdNiWDQh2YT2TcqmSZFNyr4JbJqAbMpMapwJwR4/lrP3xfxtJl8Xy8V8xtiLOBL17x/d/z145YbXvtPl/AtPkVKa
     - SCTX:
         - Begin A1V6_ApparatusSetUp_2
         - ""
@@ -14960,19 +14929,15 @@
         - if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_g_mortar_01, 1"
         - "\tAddItem apparatus_g_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_mortar_e2, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_m_mortar_01, 1"
         - "\tAddItem apparatus_m_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_mortar_e2, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_j_mortar_01, 1"
         - "\tAddItem apparatus_j_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_mortar_e2, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_mortar_01, 1"
         - "\tAddItem apparatus_a_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_mortar_e2, 1, 50, 0"
         - endif
         - ""
         - "MessageBox \"Установка готова\""
@@ -14988,9 +14953,9 @@
           shorts: 0
           longs: 0
           floats: 0
-        data_size: 2736
+        data_size: 2588
         var_table_size: 0
-    - SCDT: eJyd081Kw0AUBeAZhGLBxSz8oSp2lD5AS8FdhbpyL0p34VqCZOi1IY2LPqe6FEqFLAQLdi/YmFpTJ3dm0vU5l3yEMxXOq7Inhex0ZKvBq3yHV8IBjP2owrdOZe9LyOE+hCFEED+OvHsPBj7eBX2v2ZIXsrlqvwiixdkzHSXiqNu6PfeKcr/NGWNXl4ytPrJdREInEtIktJCwNEk5kRRNUhaSKk0CJxLQJLCQwEI6y0gH+YtRGIS+F4+CMfwzUbUURWeJqGuqXIGQ1TPZrn6l/arCTmoigkTUCNAfZf3JNTJMLf8i+jDoBw8QDyNdRBdTlilNxIn29nKV4n+l89CVh0Ye2nm4CU+58pSRp+w8tQkPXHlg5IGdB8W89fXJDLiX30TkLy5iHVdcSmFUkohDbXHLuPh/6Rx04SDJQTMHy3KUC0eRHGXmqLIccOEAyQEzB3SOfT24OIDIsp5VSVtPLilazzJ2X48DB0kOmjlYlqNcOIrkKDNHleWACwdIDpg5oHOqnAnBnj7nk4/Z9H0i32bz2XTC2Ks4Fns/593f82s/vgm9NuffqYmAmA==
+    - SCDT: eJyd0zFLw0AUB/C7CsWCww1WqYo9pR+gpeBWoU7uonQLzxIkR58NaRz6OdVRKBUyCBbsLtgYrYl3L7l0fv/j/8vlXZXzmhxIIXs92WnxGt/hVX8EUzeo8q0TOfgUcrwHvg8BhA8T586BkYu33tBpd+S5bK/Tz4JIcfZEjyJx2O/cnDmmudvljLHLC8bWJdsmElqRkCZhAQlLk5QVSdEkVUBSpUlgRQKaBAUkKCCdJqT99ImJ7/muE068KfwzUbEYRc8i0dRUqQAhayayXf2UdlXGTGwiBpFoEKA/SvbJtRJMI/0ihjAaevcQjgNdRAdjVt40Esfa20tFzHel89CWh7k8LObhJjxly1O5PFXMU5vwwJYHuTwo5oGZl90+mQDr6Z0I3NWJUMeZQzGMmkTiQNu4n7H5vnQO2nCQ5GA+B8tylA1HkRyVz1FlOWDDAZID+RzQOZntqZi2B1cHICjYnnVI257UJPXpFdNiWDQh2YT2TcqmSZFNyr4JbJqAbMpMapwJwR4/lrP3xfxtJl8Xy8V8xtiLOBL17x/d/z145YbXvtPl/AufO1Kp
     - SCTX:
         - Begin A1V6_ApparatusSetUp_3
         - ""
@@ -15063,19 +15028,15 @@
         - if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_g_mortar_01, 1"
         - "\tAddItem apparatus_g_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_mortar_e3, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_m_mortar_01, 1"
         - "\tAddItem apparatus_m_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_mortar_e3, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_j_mortar_01, 1"
         - "\tAddItem apparatus_j_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_mortar_e3, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_mortar_01, 1"
         - "\tAddItem apparatus_a_mortar_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_mortar_e3, 1, 50, 0"
         - endif
         - ""
         - "MessageBox \"Установка готова\""
@@ -15432,14 +15393,14 @@
           shorts: 1
           longs: 0
           floats: 3
-        data_size: 232
+        data_size: 217
         var_table_size: 16
     - SCVR:
         - doOnce
         - cx
         - cy
         - cz
-    - SCDT: eJxtjsEKglAQRecaSg8XvSioXbNoG/QWtXMhBf5BqBt5RYEgJWpf1SfVxzTqpsDNzHDPzGE8QHHMmoOAzRoKHhwJPn3wmoL6ECuOFqE57bOwLG1lm2d9zGt7Lq6Z6VbfuluT2+WvbKy4BrXB1oVMDhsXN9CcI93pDra45HfbPKqYhDhDJGnJiGYcTf5fSHugWAqbHW98HYucfJ2ISVoqgBSALxWQLFY=
+    - SCDT: eJxtjj0KwkAQhedFElksXFHQzik8gNvYpQgKuYEkacIqCoGgIRtP5ZH0ME42jYLVG773w0SA4ow1xzGbDRQiBALeA3jOQAPEmtNlYo67Mmka29ru4Q6Vs6f6UhoffWkfk+7qe2ys2IF6sA0hV8AmxBW04FT7ub2tz9XNdvc2I3GCf07eOyOaczr9faGgic5kTSSXqkghOVIAPoQeKoE=
     - SCTX:
         - Begin A1V6_Calcinator_1_sc
         - ""
@@ -15470,7 +15431,6 @@
         - "\tset cx to A1V6_CalcinatorX"
         - "\tset cy to A1V6_CalcinatorY"
         - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
@@ -15484,14 +15444,14 @@
           shorts: 1
           longs: 0
           floats: 3
-        data_size: 232
+        data_size: 217
         var_table_size: 16
     - SCVR:
         - doOnce
         - cx
         - cy
         - cz
-    - SCDT: eJxtjsEKglAQRecaSg8XvSioXbNoG/SC2rmQAv8g1I28okCQErWv6pPqYxp1U9BmZrhn5jAeoDhmzUHAZgkFD44E7z54jkF9iAVHs9Acd1lYlrayzaM+5LU9FZds062+dLcmt/Nv2VBxDWqDtQuZHDYurqApR7rT7W1xzm+2uVcxCXH+kaQlA5pwNPp9Ie2BYilstrzydSxy8nUiJmmpAFIAPhY1LFc=
+    - SCDT: eJxtjj0KwkAQhedFElksXFHQzik8gLGwSxEUcgNJ0oRVFAJBQzaeyiPpYZxsGoVUb/jeDxMAilPWHEUcbqAQwBPw6cFrBuoh1pws4/C0L+K6No1pn/ZYWnOursXORd/axaS7+h0bK7agDmx9yOVx6OMGWnCi3dzBVJfybtpHk5I43pCTdc6I5pxM/1/IaaJTWRPJpCqSS44UgC+EtCqC
     - SCTX:
         - Begin A1V6_Calcinator_2_sc
         - ""
@@ -15522,7 +15482,6 @@
         - "\tset cx to A1V6_CalcinatorX"
         - "\tset cy to A1V6_CalcinatorY"
         - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
@@ -15536,14 +15495,14 @@
           shorts: 1
           longs: 0
           floats: 3
-        data_size: 232
+        data_size: 217
         var_table_size: 16
     - SCVR:
         - doOnce
         - cx
         - cy
         - cz
-    - SCDT: eJxtjsEKglAQRecaSg8XvSioXbNoG/SI2rmQAv8g1I28okCQErWv6pPqYxp1U9BmZrhn5jAeoDhmzUHAZgkFD44E7z54jkF9iAVHs9Acd1lYlrayzaM+5LU9FZds062+dLcmt/Nv2VBxDWqDtQuZHDYurqApR7rT7W1xzm+2uVcxCXH+kaQlA5pwNPp9Ie2BYilstrzydSxy8nUiJmmpAFIAPhbaLFg=
+    - SCDT: eJxtjk0KglAUhe8xNB4NelFQs+6gBSRBMwdS4A5CncgrCgQp8dmqWlItputzUuDoXL7zww0AxSlrjiION1AI4An49OA1A/UQa06WcXjaF3Fdm8a0T3ssrTlX12Lnom/tYtJd/Y6NFVtQB7Y+5PI49HEDLTjRbu5gqkt5N+2jSUkcb8jJOmdEc06m/y/kNNGprIlkUhXJJUcKwBeFSiqD
     - SCTX:
         - Begin A1V6_Calcinator_3_sc
         - ""
@@ -15574,7 +15533,6 @@
         - "\tset cx to A1V6_CalcinatorX"
         - "\tset cy to A1V6_CalcinatorY"
         - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
@@ -15669,175 +15627,19 @@
         - End
 - SCPT:
     - SCHD:
-        name: A1V6_Mortar_1_sc
-        vars:
-          shorts: 1
-          longs: 0
-          floats: 3
-        data_size: 224
-        var_table_size: 16
-    - SCVR:
-        - doOnce
-        - cx
-        - cy
-        - cz
-    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBW/QrUNB6OQqbZdygoIgWNr6VD6SPozp3aJdkvDlz5cIUJyz5iRhs4ZChEDAx4PXDOQhVpwtUnPaV2ld28Z2z/Zwa+35fqmMi761i8nt8lc2VtyCerANIVPAJsQVpDmbON3x0XS2yUloMKRFT0c052z6/7r0C8VS2Ox4E+tcpBTrQizSSlmQAvAFN0gpMA==
-    - SCTX:
-        - Begin A1V6_Mortar_1_sc
-        - ""
-        - short doOnce
-        - float cx
-        - float cy
-        - float cz
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( GetDisabled == 1 )
-        - "\tSetDelete 1"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( A1V6_ApparatusDisable_1 == 1 )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tset cx to A1V6_MortarX"
-        - "\tset cy to A1V6_MortarY"
-        - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
-        - "\tSetPos X cx"
-        - "\tSetPos Y cy"
-        - "\tSetPos Z cz"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1V6_Mortar_2_sc
-        vars:
-          shorts: 1
-          longs: 0
-          floats: 3
-        data_size: 224
-        var_table_size: 16
-    - SCVR:
-        - doOnce
-        - cx
-        - cy
-        - cz
-    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBU/QrUNB6OQqbZdygoIgWNr6VD6SPozp3aIuSfjy50sEKM5Zc5KwWUIhQiDg7cFzAvIQC85mqTnuqrSubWO7R7u/tvZ0O1cbF31pF5Pb+bdsqLgF9WAdQqaATYgLSHM2crrDvelsk5PQ4J8WPR3QlLPx7+vSLxRLYbPlVaxzkVKsC7FIK2VBCsAHN+UpMQ==
-    - SCTX:
-        - Begin A1V6_Mortar_2_sc
-        - ""
-        - short doOnce
-        - float cx
-        - float cy
-        - float cz
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( GetDisabled == 1 )
-        - "\tSetDelete 1"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( A1V6_ApparatusDisable_2 == 1 )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tset cx to A1V6_MortarX"
-        - "\tset cy to A1V6_MortarY"
-        - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
-        - "\tSetPos X cx"
-        - "\tSetPos Y cy"
-        - "\tSetPos Z cz"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1V6_Mortar_3_sc
-        vars:
-          shorts: 1
-          longs: 0
-          floats: 3
-        data_size: 224
-        var_table_size: 16
-    - SCVR:
-        - doOnce
-        - cx
-        - cy
-        - cz
-    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBQ/RrUNB6OQqbZdygoIgWNr6VD6SPozp3aIuSfjy50sEKM5Zc5KwWUIhQiDg7cFzAvIQC85mqTnuqrSubWO7R7u/tvZ0O1cbF31pF5Pb+bdsqLgF9WAdQqaATYgLSHM2crrDvelsk5PQ4J8WPR3QlLPx7+vSLxRLYbPlVaxzkVKsC7FIK2VBCsAHOIIpMg==
-    - SCTX:
-        - Begin A1V6_Mortar_3_sc
-        - ""
-        - short doOnce
-        - float cx
-        - float cy
-        - float cz
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( GetDisabled == 1 )
-        - "\tSetDelete 1"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( A1V6_ApparatusDisable_3 == 1 )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tset cx to A1V6_MortarX"
-        - "\tset cy to A1V6_MortarY"
-        - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
-        - "\tSetPos X cx"
-        - "\tSetPos Y cy"
-        - "\tSetPos Z cz"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
         name: A1V6_Retort_1_sc
         vars:
           shorts: 1
           longs: 0
           floats: 3
-        data_size: 224
+        data_size: 209
         var_table_size: 16
     - SCVR:
         - doOnce
         - cx
         - cy
         - cz
-    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBW/QrUNB6O4gbZdSoYIgWNrzqXwkfRjTu0VdkvDlz5cIUJyz5iRhs4ZChEDA24PnDOQhVpwtUnPaV2nb1l1tH/3h2tfnW1MZF31pF5Pb5bdsrLgHDWAbQqaATYgLSHM2cbpjY++dzUlo8E+LgY5oztn093XpF4qlsNnxJta5SCnWhViklbIgBeADPg4pRg==
+    - SCDT: eJxdjTEKwkAQRedHElkUXLHQzik8gNvYpQgI6S0kSRNWiCAIhux6Ko+kh3GyaTTVHx7/v0kAxQVrTlM2OygkiAR8BvBaggaILefrzJwPdda2trP+6Y43Zy/3pjah+tahJtvNr2yq2IF6sI8hV8QmxhWkOZ8H3anxj84XJDQa07KnE1pxvvh/XdFMF2KRKGUmUUmPFIAv2pQncQ==
     - SCTX:
         - Begin A1V6_Retort_1_sc
         - ""
@@ -15868,7 +15670,6 @@
         - "\tset cx to A1V6_RetortX"
         - "\tset cy to A1V6_RetortY"
         - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
@@ -15882,14 +15683,14 @@
           shorts: 1
           longs: 0
           floats: 3
-        data_size: 224
+        data_size: 209
         var_table_size: 16
     - SCVR:
         - doOnce
         - cx
         - cy
         - cz
-    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBU/QrUNB6O4gbZdSoYIgWNr6VD6SPozp3aJdkvDlz5cAUJyy5ihis4ZCAE/Ax4HXDOQgVpwsYnM+FHFdl03ZPdvjrS0v96rY2ehb25jcLn9lY8UtqAdbHzJ5bHxcQZqTidWdqu7RdCkJ9YY06+mI5pxM/1/nbqFYCps9b0KdipRCnYlFWi4LUgC+PqspRw==
+    - SCDT: eJxdjTEKwkAQRedHElkUXLHQzik8gLGwSxEQ0lvIJk1YIYIgGLLrqTySHsbJplGrPzz+f5MAig1rzjJON1BIEAl4D+A5Bw0Qay6WeXra13nb2s76hztcnT3fmnoXqi8darJdfcvGih2oB9sYckWcxriANBfToDs2/t55Q0Kjf1r2dEQLLma/ryuaaCMWiVJmEpX0SAH4ANsiJ3I=
     - SCTX:
         - Begin A1V6_Retort_2_sc
         - ""
@@ -15920,7 +15721,6 @@
         - "\tset cx to A1V6_RetortX"
         - "\tset cy to A1V6_RetortY"
         - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
@@ -15934,14 +15734,14 @@
           shorts: 1
           longs: 0
           floats: 3
-        data_size: 224
+        data_size: 209
         var_table_size: 16
     - SCVR:
         - doOnce
         - cx
         - cy
         - cz
-    - SCDT: eJxdjbEKwkAMhvNXWjwqeOKgmxlcBQ/RrUNB6O4gbZdSoYIgWNr6VD6SPozp3aJdkvDlz5cAUJyy5ihis4ZCAE/Ax4HXDOQgVpwsYnM+FHFdl03ZPdvjrS0v96rY2ehb25jcLn9lY8UtqAdbHzJ5bHxcQZqTidWdqu7RdCkJ9YY06+mI5pxM/1/nbqFYCps9b0KdipRCnYlFWi4LUgC+P0gpSA==
+    - SCDT: eJxdjTEKwkAQRedHElkUXLHQzik8gEGwSxEQ0lvIJk1YIYIgGLLrqTySHsbJplGrPzz+f5MAig1rzjJON1BIEAl4D+A5Bw0Qay6WeXra13nb2s76hztcnT3fmnoXqi8darJdfcvGih2oB9sYckWcxriANBfToDs2/t55Q0Kjf1r2dEQLLma/ryuaaCMWiVJmEpX0SAH4ANuwJ3M=
     - SCTX:
         - Begin A1V6_Retort_3_sc
         - ""
@@ -15972,7 +15772,6 @@
         - "\tset cx to A1V6_RetortX"
         - "\tset cy to A1V6_RetortY"
         - "\tset cz to A1V6_ApparatusZ"
-        - "\tset cz to ( cz - 15 )"
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
@@ -16061,17 +15860,6 @@
         value: 10
     - ITEX: "m\\Tx_calcinator_01.tga"
 - APPA:
-    - NAME: A1V6_apparatus_a_mortar_e3
-    - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: Ступка и пестик ученика
-    - SCRI: A1V6_Mortar_3_sc
-    - AADT:
-        type: MortarPestle
-        quality: 0.5
-        weight: 5.0
-        value: 100
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
-- APPA:
     - NAME: A1V6_apparatus_a_retort_e3
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
     - FNAM: Реторта ученика
@@ -16127,17 +15915,6 @@
         value: 4000
     - ITEX: "m\\Tx_calcinator_04.tga"
 - APPA:
-    - NAME: A1V6_apparatus_g_mortar_e3
-    - MODL: "m\\Misc_mortarpestle_G_01.nif"
-    - FNAM: Ступка и пестик грандмастера
-    - SCRI: A1V6_Mortar_3_sc
-    - AADT:
-        type: MortarPestle
-        quality: 1.5
-        weight: 2.0
-        value: 4000
-    - ITEX: "m\\Tx_mortarpestle_G_01.tga"
-- APPA:
     - NAME: A1V6_apparatus_g_retort_e3
     - MODL: "m\\Apparatus_G_Retort_01.nif"
     - FNAM: Реторта грандмастера
@@ -16171,17 +15948,6 @@
         value: 40
     - ITEX: "m\\Tx_calcinator_01.tga"
 - APPA:
-    - NAME: A1V6_apparatus_j_mortar_e3
-    - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: Ступка и пестик подмастерья
-    - SCRI: A1V6_Mortar_3_sc
-    - AADT:
-        type: MortarPestle
-        quality: 1.0
-        weight: 4.0
-        value: 400
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
-- APPA:
     - NAME: A1V6_apparatus_j_retort_e3
     - MODL: "m\\Apparatus_J_Retort_01.nif"
     - FNAM: Реторта подмастерья
@@ -16214,17 +15980,6 @@
         weight: 13.0
         value: 240
     - ITEX: "m\\Tx_calcinator_03.tga"
-- APPA:
-    - NAME: A1V6_apparatus_m_mortar_e3
-    - MODL: "m\\Misc_mortarpestle_M_01.nif"
-    - FNAM: Ступка и пестик мастера
-    - SCRI: A1V6_Mortar_3_sc
-    - AADT:
-        type: MortarPestle
-        quality: 1.2
-        weight: 3.0
-        value: 2400
-    - ITEX: "m\\Tx_mortarpestle_M_01.tga"
 - APPA:
     - NAME: A1V6_apparatus_m_retort_e3
     - MODL: "m\\Apparatus_M_Retort_01.nif"
@@ -16302,28 +16057,6 @@
         weight: 8.0
         value: 20
     - ITEX: "m\\Tx_retort_01.tga"
-- APPA:
-    - NAME: A1V6_apparatus_a_mortar_e2
-    - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: Ступка и пестик ученика
-    - SCRI: A1V6_Mortar_2_sc
-    - AADT:
-        type: MortarPestle
-        quality: 0.5
-        weight: 5.0
-        value: 100
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
-- APPA:
-    - NAME: A1V6_apparatus_a_mortar_e1
-    - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: Ступка и пестик ученика
-    - SCRI: A1V6_Mortar_1_sc
-    - AADT:
-        type: MortarPestle
-        quality: 0.5
-        weight: 5.0
-        value: 100
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
 - APPA:
     - NAME: A1V6_apparatus_a_spipe_e2
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
@@ -16413,28 +16146,6 @@
         value: 4000
     - ITEX: "m\\Tx_calcinator_04.tga"
 - APPA:
-    - NAME: A1V6_apparatus_g_mortar_e2
-    - MODL: "m\\Misc_mortarpestle_G_01.nif"
-    - FNAM: Ступка и пестик грандмастера
-    - SCRI: A1V6_Mortar_2_sc
-    - AADT:
-        type: MortarPestle
-        quality: 1.5
-        weight: 2.0
-        value: 4000
-    - ITEX: "m\\Tx_mortarpestle_G_01.tga"
-- APPA:
-    - NAME: A1V6_apparatus_g_mortar_e1
-    - MODL: "m\\Misc_mortarpestle_G_01.nif"
-    - FNAM: Ступка и пестик грандмастера
-    - SCRI: A1V6_Mortar_1_sc
-    - AADT:
-        type: MortarPestle
-        quality: 1.5
-        weight: 2.0
-        value: 4000
-    - ITEX: "m\\Tx_mortarpestle_G_01.tga"
-- APPA:
     - NAME: A1V6_apparatus_g_retort_e2
     - MODL: "m\\Apparatus_G_Retort_01.nif"
     - FNAM: Реторта грандмастера
@@ -16501,28 +16212,6 @@
         value: 40
     - ITEX: "m\\Tx_calcinator_01.tga"
 - APPA:
-    - NAME: A1V6_apparatus_j_mortar_e2
-    - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: Ступка и пестик подмастерья
-    - SCRI: A1V6_Mortar_2_sc
-    - AADT:
-        type: MortarPestle
-        quality: 1.0
-        weight: 4.0
-        value: 400
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
-- APPA:
-    - NAME: A1V6_apparatus_j_mortar_e1
-    - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: Ступка и пестик подмастерья
-    - SCRI: A1V6_Mortar_1_sc
-    - AADT:
-        type: MortarPestle
-        quality: 1.0
-        weight: 4.0
-        value: 400
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
-- APPA:
     - NAME: A1V6_apparatus_j_retort_e2
     - MODL: "m\\Apparatus_J_Retort_01.nif"
     - FNAM: Реторта подмастерья
@@ -16588,28 +16277,6 @@
         weight: 13.0
         value: 240
     - ITEX: "m\\Tx_calcinator_03.tga"
-- APPA:
-    - NAME: A1V6_apparatus_m_mortar_e2
-    - MODL: "m\\Misc_mortarpestle_M_01.nif"
-    - FNAM: Ступка и пестик мастера
-    - SCRI: A1V6_Mortar_2_sc
-    - AADT:
-        type: MortarPestle
-        quality: 1.2
-        weight: 3.0
-        value: 2400
-    - ITEX: "m\\Tx_mortarpestle_M_01.tga"
-- APPA:
-    - NAME: A1V6_apparatus_m_mortar_e1
-    - MODL: "m\\Misc_mortarpestle_M_01.nif"
-    - FNAM: Ступка и пестик мастера
-    - SCRI: A1V6_Mortar_1_sc
-    - AADT:
-        type: MortarPestle
-        quality: 1.2
-        weight: 3.0
-        value: 2400
-    - ITEX: "m\\Tx_mortarpestle_M_01.tga"
 - APPA:
     - NAME: A1V6_apparatus_m_retort_e2
     - MODL: "m\\Apparatus_M_Retort_01.nif"
