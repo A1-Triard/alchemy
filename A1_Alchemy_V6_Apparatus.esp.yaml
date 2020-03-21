@@ -9977,7 +9977,6 @@
         - "\tset in45 to ( in45 + 1 )"
         - endif
         - ""
-        - ""
         - if ( in45 > 1 )
         - "\tplayer->AddItem \"A1V6_L45_restore_personality\", 1"
         - endif
@@ -10091,7 +10090,6 @@
         - "elseif ( player->GetItemCount \"ingred_eyeball_unique\" > 0 )"
         - "\tset in60 to ( in60 + 1 )"
         - endif
-        - ""
         - ""
         - if ( in60 > 1 )
         - "\tplayer->AddItem \"A1V6_L60_night-eye\", 1"
@@ -10243,7 +10241,6 @@
         - "if ( player->GetItemCount \"Ingred_lloramor_spines_01\" > 0 )"
         - "\tset in60 to ( in60 + 1 )"
         - endif
-        - ""
         - ""
         - if ( in60 > 1 )
         - "\tplayer->AddItem \"A1V6_L60_detect_enchantment\", 1"
@@ -10574,7 +10571,6 @@
         - "\tset in30 to ( in30 + 1 )"
         - endif
         - ""
-        - ""
         - if ( in30 > 1 )
         - "\tplayer->AddItem \"A1V6_L30_fortify_endurance\", 1"
         - endif
@@ -10731,7 +10727,6 @@
         - "if ( player->GetItemCount \"ingred_corkbulb_root_01\" > 0 )"
         - "\tset in60 to ( in60 + 1 )"
         - endif
-        - ""
         - ""
         - if ( in60 > 1 )
         - "\tplayer->AddItem \"A1V6_L60_fortify_luck\", 1"
@@ -11271,7 +11266,6 @@
         - "\tset in45 to ( in45 + 1 )"
         - endif
         - ""
-        - ""
         - if ( in45 > 1 )
         - "\tplayer->AddItem \"A1V6_L45_lightning_shield\", 1"
         - endif
@@ -11311,7 +11305,6 @@
         - "if ( player->GetItemCount \"ingred_ash_salts_01\" > 0 )"
         - "\tset in30 to ( in30 + 1 )"
         - endif
-        - ""
         - ""
         - if ( in30 > 1 )
         - "\tplayer->AddItem \"A1V6_L30_magicka_resistance\", 1"
@@ -11588,7 +11581,6 @@
         - "\tset in60 to ( in60 + 1 )"
         - endif
         - ""
-        - ""
         - if ( in60 > 1 )
         - "\tplayer->AddItem \"A1V6_L60_restore_endurance\", 1"
         - endif
@@ -11629,7 +11621,6 @@
         - "if ( player->GetItemCount \"ingred_hackle-lo_leaf_01\" > 0 )"
         - "\tset in60 to ( in60 + 1 )"
         - endif
-        - ""
         - ""
         - if ( in60 > 1 )
         - "\tplayer->AddItem \"A1V6_L60_restore_luck\", 1"
@@ -11782,7 +11773,6 @@
         - "\tset in60 to ( in60 + 1 )"
         - endif
         - ""
-        - ""
         - if ( in60 > 1 )
         - "\tplayer->AddItem \"A1V6_L60_restore_willpower\", 1"
         - endif
@@ -11878,7 +11868,6 @@
         - "if ( player->GetItemCount \"Ingred_golden_sedge_01\" > 0 )"
         - "\tset in60 to ( in60 + 1 )"
         - endif
-        - ""
         - ""
         - if ( in60 > 1 )
         - "\tplayer->AddItem \"A1V6_L60_swift_swim\", 1"
@@ -12040,7 +12029,6 @@
         - "if ( player->GetItemCount \"ingred_black_anther_01\" > 0 )"
         - "\tset in60 to ( in60 + 1 )"
         - endif
-        - ""
         - ""
         - if ( in60 > 1 )
         - "\tplayer->AddItem \"A1V6_L60_light\", 1"
@@ -12231,7 +12219,6 @@
         - "\tset in30 to ( in30 + 1 )"
         - endif
         - ""
-        - ""
         - if ( in30 > 1 )
         - "\tplayer->AddItem \"A1V6_L30_levitation\", 1"
         - endif
@@ -12321,7 +12308,6 @@
         - "if ( player->GetItemCount \"ingred_ash_salts_01\" > 0 )"
         - "\tset in45 to ( in45 + 1 )"
         - endif
-        - ""
         - ""
         - if ( in45 > 1 )
         - "\tplayer->AddItem \"A1V6_L45_cure_blight\", 1"
@@ -15680,13 +15666,13 @@
           shorts: 0
           longs: 0
           floats: 3
-        data_size: 494
+        data_size: 510
         var_table_size: 22
     - SCVR:
         - alchemy
         - tempf1
         - tempf2
-    - SCDT: eJxtUD1Lw0AYvjcl0dSKR/2AouK76NBAvGQQB1MpKsGh0EncQqgpLb3WkrRiN3+bvyQUh+BH0UEQupi7ilYjN93zxfs8BdD63B8FoQpNICpedigpzGGKwA5/YzmB7VEi6Q1MfchMC9MPphwaWEZDA1iUyBHaUqegrYM0r6FLq9bFgVfljVbQHdWGfDDLKqLNmMlkSlm696VjFd2VecfZbZ9IIi+lQmiokNGogiUaLJeyfqw4aDH2j0tBpkFuG9111+eR5520/PA0uPHqYRAFvQE6jhBA6U+LOh9Gadk0c5POIs97jS9OhwXQvhfsUkLujjMjp8NroCzJNhUxKlFoPuq0OQ/9dhQQukPu4w98icfTR4yf3pPnJMHx9HXyhg8T3DVZUwQRHcTbokV5Q+366qcZwCdRPHgo
+    - SCDT: eJxtUUtLw0AQ3klJNLXQpT6gqDgXPbRQNzmIh6ZSVIKHQk/iLYSa0tJtLUkr9uZv85eE4iH4KHoQhF7MbkSr6XG/1+w3kwNtyN2J56vQBqLiVY+S3AKmCOz4L5YR2AElkt7C2IesYmD8wJjDMpawrAGsSqSKptQpaOogzRto07pxeeTUeavj9SeNMR8lWQU0GaswmVKS7kPpWEc7v+g4vxsSSWSlVAjLKqQ0qmCJBvli2o81Cw3GlrgUZBqou2hv2i4PHOe04/pn3q3T9L3AG4zQsoQgk5W9qyIk7lr816nJx0FCbtNkwMWg9c3poMMKaD8b7VNC7k9SS48PoYGyJtvVxDCi0GzQ63Luu93AI3SPPISf+BpO508YPn9EL1GE0/nb7B0fZ7hfYW0RRMQ0HXZoQf6icXP92xTgC7pwed4=
     - SCTX:
         - Begin A1V6_ModAlchemyExp
         - ""
@@ -15709,8 +15695,10 @@
         - if ( A1V6_AlchemyExp >= 100 )
         - "\tset A1V6_AlchemyExp to 0"
         - "\tif ( Gals__CharDev_Present == 0 )"
-        - "\t\tif ( A1V6_AlchemyPlus < 100 )"
-        - "\t\t\tStartScript A1V6_IncAlchemy"
+        - "\t\tif ( alchemy < 100 )"
+        - "\t\t\tif ( A1V6_AlchemyPlus < 100 )"
+        - "\t\t\t\tStartScript A1V6_IncAlchemy"
+        - "\t\t\tendif"
         - "\t\tendif"
         - "\telse"
         - "\t\tplayer->ModAlchemy 1"
