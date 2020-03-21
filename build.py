@@ -457,18 +457,10 @@ def gen_check_script(kind, ingrs, index, next_kind):
     ingrs_30 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 30))
     ingrs_45 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 45))
     ingrs_60 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 60))
-    groups_15 = groups_has_ingrs_with_level(groups, 15, kind)
-    groups_30 = groups_has_ingrs_with_level(groups, 30, kind)
-    groups_45 = groups_has_ingrs_with_level(groups, 45, kind)
-    groups_60 = groups_has_ingrs_with_level(groups, 60, kind)
-    groups_has_15 = len(groups_filter_level(groups, 15, kind)) >= 2
-    groups_has_30 = len(groups_filter_level(groups, 30, kind)) >= 2
-    groups_has_45 = len(groups_filter_level(groups, 45, kind)) >= 2
-    groups_has_60 = len(groups_filter_level(groups, 60, kind)) >= 2
-    has_15 = groups_has_15 or not not pairs_filter_level(pairs, 15, kind)
-    has_30 = groups_has_30 or not not pairs_filter_level(pairs, 30, kind)
-    has_45 = groups_has_45 or not not pairs_filter_level(pairs, 45, kind)
-    has_60 = groups_has_60 or not not pairs_filter_level(pairs, 60, kind)
+    has_15 = len(groups_filter_level(groups, 15, kind)) >= 2 or not not pairs_filter_level(pairs, 15, kind)
+    has_30 = len(groups_filter_level(groups, 30, kind)) >= 2 or not not pairs_filter_level(pairs, 30, kind)
+    has_45 = len(groups_filter_level(groups, 45, kind)) >= 2 or not not pairs_filter_level(pairs, 45, kind)
+    has_60 = len(groups_filter_level(groups, 60, kind)) >= 2 or not not pairs_filter_level(pairs, 60, kind)
     if not has_15 and not has_30 and not has_45 and not has_60:
         print('has error')
         sys.exit(11)
@@ -536,6 +528,15 @@ def gen_check_script(kind, ingrs, index, next_kind):
                     else:
                         s.append('elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
                     level = ingr_level(groups[g][i], kind)
+                    if level == 15 and not has_15:
+                        level = 30
+                    if level == 30 and not has_30:
+                        level = 45
+                    if level == 45 and not has_45:
+                        level = 60
+                    if level == 60 and not has_60:
+                        print('level error')
+                        sys.exit(8)
                     level_index = level // 15 - 1
                     if was_level[level_index]:
                         s.append('	set in' + str(level) + ' to ( in' + str(level) + ' + 1 )')
@@ -546,21 +547,29 @@ def gen_check_script(kind, ingrs, index, next_kind):
                 for level_index in range(0, 4):
                     was_level[level_index] = was_level[level_index] or group_has_level[level_index]
             s.append('')
-            if groups_30 and groups_15:
+            adds = False
+            if has_30 and has_15:
                 s.append('set in30 to ( in30 + in15 )')
-            if groups_45:
-                if groups_30:
+                adds = True
+            if has_45:
+                if has_30:
                     s.append('set in45 to ( in45 + in30 )')
-                elif groups_15:
+                    adds = True
+                elif has_15:
                     s.append('set in45 to ( in45 + in15 )')
-            if groups_60:
-                if groups_45:
+                    adds = True
+            if has_60:
+                if has_45:
                     s.append('set in60 to ( in60 + in45 )')
-                elif groups_30:
+                    adds = True
+                elif has_30:
                     s.append('set in60 to ( in60 + in30 )')
-                elif groups_15:
+                    adds = True
+                elif has_15:
                     s.append('set in60 to ( in60 + in15 )')
-            s.append('')
+                    adds = True
+            if adds:
+                s.append('')
         if pairs:
             for p in pairs:
                 s.append('if ( player->GetItemCount "' + p[0].name + '" > 0 )')

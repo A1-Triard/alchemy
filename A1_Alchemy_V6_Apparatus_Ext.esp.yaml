@@ -677,7 +677,7 @@
     - "\tset in45 to 1"
     - endif
     - if ( player->GetItemCount "rvr_ashes_corpse_01" > 0 )
-    - "\tset in30 to 1"
+    - "\tset in45 to ( in45 + 1 )"
     - endif
     - if ( player->GetItemCount "ingred_fire_salts_01" > 0 )
     - "\tset in60 to ( in60 + 1 )"
@@ -686,7 +686,6 @@
     - "\tset in45 to ( in45 + 1 )"
     - endif
     - ''
-    - set in45 to ( in45 + in30 )
     - set in60 to ( in60 + in45 )
     - ''
     - if ( in45 > 1 )
@@ -734,10 +733,9 @@
     - "\tset in45 to ( in45 + 1 )"
     - endif
     - if ( player->GetItemCount "Ingred_lloramor_spines_01" > 0 )
-    - "\tset in15 to 1"
+    - "\tset in30 to ( in30 + 1 )"
     - endif
     - ''
-    - set in30 to ( in30 + in15 )
     - set in45 to ( in45 + in30 )
     - ''
     - if ( in30 > 1 )

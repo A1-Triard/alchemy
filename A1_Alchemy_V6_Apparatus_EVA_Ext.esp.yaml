@@ -1118,7 +1118,7 @@
     - "\tset in60 to 1"
     - endif
     - if ( player->GetItemCount "Ingred_lloramor_spines_01" > 0 )
-    - "\tset in15 to 1"
+    - "\tset in30 to ( in30 + 1 )"
     - elseif ( player->GetItemCount "al_i_daedroth_venom" > 0 )
     - "\tset in60 to ( in60 + 1 )"
     - endif
@@ -1134,7 +1134,6 @@
     - "\tset in45 to ( in45 + 1 )"
     - endif
     - ''
-    - set in30 to ( in30 + in15 )
     - set in45 to ( in45 + in30 )
     - set in60 to ( in60 + in45 )
     - ''
