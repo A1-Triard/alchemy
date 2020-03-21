@@ -178,8 +178,8 @@ def load_ingredients(path):
             effect_4 = load_ingredient_effect(effects_data['effect_4_index'], effects_data['effect_4_attribute'], effects_data['effect_4_skill'])
             yield Ingredient(name, modl, itex, [effect_1, effect_2, effect_3, effect_4])
 
-def same_group(ingr1, ingr2):
-    return same_ingr(ingr1, ingr2) or list(filter(lambda x: x[0] == x[1] and x[0] != None and effect_value(x[0]) < 0, product(ingr1.effects, ingr2.effects)))
+def same_group(ingr1, ingr2, kind, level):
+    return same_ingr(ingr1, ingr2) or level is not None and ingr_level(ingr1, kind) < level and ingr_level(ingr2, kind) < level or list(filter(lambda x: x[0] == x[1] and x[0] != None and effect_value(x[0]) < 0, product(ingr1.effects, ingr2.effects)))
 
 def pair_level(pair, kind):
     l1 = ingr_level(pair[0], kind)
@@ -189,10 +189,10 @@ def pair_level(pair, kind):
     else:
         return l1
 
-def filter_and_group_ingredients(ingrs, kind):
-    ingrs = list(filter(lambda i: kind.effect in i.effects, ingrs))
+def filter_and_group_ingredients(ingrs, kind, level):
+    ingrs = list(filter(lambda i: ingr_level(i, kind) is not None and (level is None or ingr_level(i, kind) <= level), ingrs))
     links = list(map(lambda i: set([i]), range(0, len(ingrs))))
-    for pair in filter(lambda pair: same_group(ingrs[pair[0]], ingrs[pair[1]]), combinations(range(0, len(ingrs)), 2)):
+    for pair in filter(lambda pair: same_group(ingrs[pair[0]], ingrs[pair[1]], kind, level), combinations(range(0, len(ingrs)), 2)):
         group = links[pair[0]] | links[pair[1]]
         links[pair[0]] = group
         links[pair[1]] = group
@@ -204,7 +204,7 @@ def filter_and_group_ingredients(ingrs, kind):
         else:
             groups.append([i])
     groups.sort(key=len, reverse=True)
-    special_pairs = list(chain.from_iterable(map(lambda group: filter(lambda pair: not same_group(ingrs[pair[0]], ingrs[pair[1]]), combinations(group, 2)), groups)))
+    special_pairs = list(chain.from_iterable(map(lambda group: filter(lambda pair: not same_group(ingrs[pair[0]], ingrs[pair[1]], kind, level), combinations(group, 2)), groups)))
     if len(groups) < 2:
         groups = []
     elif len(groups) == 2 and len(groups[0]) == 1 and len(groups[1]) == 1:
@@ -214,24 +214,6 @@ def filter_and_group_ingredients(ingrs, kind):
         list(map(lambda g: list(sorted(map(lambda i: ingrs[i], g), key=lambda i: ingr_level(i, kind))), groups)),
         list(sorted(map(lambda s: (ingrs[s[0]], ingrs[s[1]]), special_pairs), key=lambda p: pair_level(p, kind)))
     )
-
-def groups_filter_level(groups, level, kind):
-    if not list(filter(lambda g: list(filter(lambda i: ingr_level(i, kind) == level, g)), groups)):
-        return []
-    groups = list(filter(lambda g: g, map(lambda g: list(filter(lambda i: ingr_level(i, kind) <= level, g)), groups)))
-    return [] if len(groups) < 2 else groups
-
-def pairs_filter_level(pairs, level, kind):
-    return list(filter(lambda p: pair_level(p, kind) == level, pairs))
-
-def ingrs_filter_level(ingrs, level, kind):
-    (groups, pairs) = ingrs
-    groups = groups_filter_level(groups, level, kind)
-    pairs = pairs_filter_level(pairs, level, kind)
-    if len(groups) == 2 and len(groups[0]) == 1 and len(groups[1]) == 1:
-        pairs.append((groups[0][0], groups[1][0]))
-        groups = []
-    return (groups, pairs)
 
 def ingrs_empty(ingrs):
     (groups, pairs) = ingrs
@@ -258,8 +240,14 @@ def groups_has_ingrs_with_level(groups, level, kind):
         return False
     return True
 
-def ingrs_has_level(ingrs, level, kind):
-    return not ingrs_empty(ingrs_filter_level(ingrs, level, kind))
+def groups_filter_level(groups, level, kind):
+    if not list(filter(lambda g: list(filter(lambda i: ingr_level(i, kind) == level, g)), groups)):
+        return []
+    groups = list(filter(lambda g: g, map(lambda g: list(filter(lambda i: ingr_level(i, kind) <= level, g)), groups)))
+    return [] if len(groups) < 2 else groups
+
+def pairs_filter_level(pairs, level, kind):
+    return list(filter(lambda p: pair_level(p, kind) == level, pairs))
 
 def gen_script(name, lines):
     return {
@@ -464,11 +452,11 @@ def gen_add_script(kind, ingrs, level, index):
     return gen_script(add_name, s)
 
 def gen_check_script(kind, ingrs, index, next_kind):
-    (groups, pairs) = ingrs
-    ingrs_15 = ingrs_has_level(ingrs, 15, kind)
-    ingrs_30 = ingrs_has_level(ingrs, 30, kind)
-    ingrs_45 = ingrs_has_level(ingrs, 45, kind)
-    ingrs_60 = ingrs_has_level(ingrs, 60, kind)
+    (groups, pairs) = filter_and_group_ingredients(ingrs, kind, None)
+    ingrs_15 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 15))
+    ingrs_30 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 30))
+    ingrs_45 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 45))
+    ingrs_60 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 60))
     groups_15 = groups_has_ingrs_with_level(groups, 15, kind)
     groups_30 = groups_has_ingrs_with_level(groups, 30, kind)
     groups_45 = groups_has_ingrs_with_level(groups, 45, kind)
@@ -626,11 +614,10 @@ def gen_check_script(kind, ingrs, index, next_kind):
     return gen_script(check_name, s)
 
 def gen_del_script(kind, ingrs, index, next_kind):
-    (groups, pairs) = ingrs
-    ingrs_15 = ingrs_has_level(ingrs, 15, kind)
-    ingrs_30 = ingrs_has_level(ingrs, 30, kind)
-    ingrs_45 = ingrs_has_level(ingrs, 45, kind)
-    ingrs_60 = ingrs_has_level(ingrs, 60, kind)
+    ingrs_15 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 15))
+    ingrs_30 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 30))
+    ingrs_45 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 45))
+    ingrs_60 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 60))
     del_name = 'A1V6_ADel' + str(index) + '_' + kind.name + '_sc'
     s = []
     s.append('Begin ' + del_name)
@@ -803,6 +790,13 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
     ingrs_ext = ingrs.copy()
     ingrs_ext.update(ap_ingrs)
 
+    ingrs = list(ingrs.values())
+    ingrs.sort(key=lambda x: x.name)
+    ingrs.sort(key=lambda x: len(x.name))
+    ingrs_ext = list(ingrs_ext.values())
+    ingrs_ext.sort(key=lambda x: x.name)
+    ingrs_ext.sort(key=lambda x: len(x.name))
+
     add_items = []
     add_items_ext = []
     add_scripts = []
@@ -815,15 +809,13 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
     next_useful_kind_ext = None
     for (i, kind) in reversed(list(enumerate(kinds))):
         index = i + 1
-        kind_ingrs = filter_and_group_ingredients(ingrs.values(), kind)
-        kind_ingrs_ext = filter_and_group_ingredients(ingrs_ext.values(), kind)
         is_useful = False
         is_useful_ext = False
         override_ext = False
         override_ext_del = False
         for level in reversed([15, 30, 45, 60]):
-            level_ingrs = ingrs_filter_level(kind_ingrs, level, kind)
-            level_ingrs_ext = ingrs_filter_level(kind_ingrs_ext, level, kind)
+            level_ingrs = filter_and_group_ingredients(ingrs, kind, level)
+            level_ingrs_ext = filter_and_group_ingredients(ingrs_ext, kind, level)
             if not ingrs_empty(level_ingrs):
                 is_useful = True
                 add_items.append(gen_add_item(kind, index, level))
@@ -837,12 +829,13 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
                     override_ext = True
                     add_scripts_ext.append(gen_add_script(kind, level_ingrs_ext, level, index))
         if is_useful:
-            check_scripts.append(gen_check_script(kind, kind_ingrs, index, next_useful_kind))
-            del_scripts.append(gen_del_script(kind, kind_ingrs, index, next_useful_kind))
-        if override_ext or next_useful_kind is None and next_useful_kind_ext is not None or next_useful_kind is not None and next_useful_kind_ext is None or next_useful_kind is not None and next_useful_kind_ext is not None and next_useful_kind[0] != next_useful_kind_ext[0]:
-            check_scripts_ext.append(gen_check_script(kind, kind_ingrs_ext, index, next_useful_kind_ext))
-        if override_ext_del or next_useful_kind is None and next_useful_kind_ext is not None or next_useful_kind is not None and next_useful_kind_ext is None or next_useful_kind is not None and next_useful_kind_ext is not None and next_useful_kind[0] != next_useful_kind_ext[0]:
-            del_scripts_ext.append(gen_del_script(kind, kind_ingrs_ext, index, next_useful_kind_ext))
+            check_scripts.append(gen_check_script(kind, ingrs, index, next_useful_kind))
+            del_scripts.append(gen_del_script(kind, ingrs, index, next_useful_kind))
+        override_base = next_useful_kind is None and next_useful_kind_ext is not None or next_useful_kind is not None and next_useful_kind_ext is None or next_useful_kind is not None and next_useful_kind_ext is not None and next_useful_kind[0] != next_useful_kind_ext[0]
+        if override_ext or override_base:
+            check_scripts_ext.append(gen_check_script(kind, ingrs_ext, index, next_useful_kind_ext))
+        if override_ext_del or override_base:
+            del_scripts_ext.append(gen_del_script(kind, ingrs_ext, index, next_useful_kind_ext))
         if is_useful:
             next_useful_kind = (index, kind)
         if is_useful_ext:
