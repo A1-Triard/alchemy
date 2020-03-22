@@ -113,7 +113,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 936
+        data_size: 924
         var_table_size: 35
     - SCVR:
         - in
@@ -121,7 +121,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFksFOwkAURfsGWmhisESiMUTzTPwAagRdiAlhwd6FYTeBMgFCa2tbF/ynfo6JbzrNWGmLi6aZzD333nkzJiRNg6FrgWVj0jBwPJaLxgXOTifu64hPfG8jgv2LSPBmjAMLAHF+5WDQy7anC9/LJUOeeBIfmEBGDO9ssOGWPgta2psMmrQwVRApTVISMeuW7JjcL7Vg2t9V7n2nV5RMN8LbUZNcJAufV5zlCe8lTCqmCiQg/ydgRf5iL2LCLnH+7WDY2b6tY7HiwQf5Dlx81moqUNBbfaV3Fj7f8nAdbwOeCpFuJGEBayNBOS0zXc1+OSUGjBZAHpPNUd0P0zPUboUG7Fo1OMsbLz2eRGEseBSuaoKrpGDIQBlp6kh6EmBnkXJRMDiYTtb7+MGUNfs9TeUlu+rhQNU7JGioMz6dbsRXIhVeyndiz5d8Qi3ateSolvT+IR8KZOcPmRzDHmsD37PA4sAOFSJT2ADwA6bm4kA=
+    - SCDT: eJx9klFPwjAUhXcLGywxOCPRGKK5Jv4AZgR9EBPCA+8+GN4aGA0QNjfX+cD/1J9j4u261AkbD8vS9HznnN7WBtm0GPoOOC7KhoWjkVo0LnF6OvbfhnwcBmsR7V6FxNsR9h0AxNm1h1E3357Mw6CQDLgMFN63gYwY3rvgwh19DrSMNxk0aWHrIFLapCRienZgx9T+QQtm/H3t3vO6ZclkLYItNSlEqvBFxVme8UHBpGK6gAT1PwEnCec7kRJ2hbMfD+PO5n2ViiWPPsm37+OLUVOBkt7pab03D/mGx6t0E/FMiGytCAdYGwkqaJXpG/bbO2DAagEUMfkc9f0wM0PjVmrAbnSD86LxIuAyiVPBk3hZE1wlBUsFqkjbRNKTADePVIuSwd508t7HD6at2d9pKi/Z1w8Hqt4hQQOT8eV1Er4UmQgyvhU7vgCrXYsNa7HgGPZYi8lj2FMt9vF/TvvbQk0J4Bcd7N7w
     - SCTX:
         - Begin A1V6_AAdd10_DetKey_45
         - ""
@@ -195,15 +195,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_detect_key_b_A1, 1"
+        - "\tplayer->AddItem p_detect_key_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_detect_key_c_A1, 1"
+        - "\tplayer->AddItem p_detect_key_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_detect_key_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_detect_key_q_A1, 1"
+        - "\tplayer->AddItem p_detect_key_q, 1"
         - else
-        - "\tplayer->AddItem p_detect_key_e_A1, 1"
+        - "\tplayer->AddItem p_detect_key_e, 1"
         - endif
         - ""
         - End
@@ -214,7 +214,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1286
+        data_size: 1274
         var_table_size: 35
     - SCVR:
         - in
@@ -222,7 +222,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFk81OwkAUhXsHKDQaLJFoDGrGxAeg/OlCTAgL9i4Mu0lpJ9BAKTK44D31cUy806llSkEWTTvpd+45c+9MCUTRINQxwbSoKBi035eLwjUdXQyc9x4bLLwZD7dvXNCHPm2aAJSO72wa1uPfQ3fhJUiXCU/KmyXAQoS2LLDgER8TymltLFDERUkZIVlCEhWjWq4ckf9zKUha31HVG3ZdR4Yz7s0xSQLJwFcH9vJCO1KMFFEBBMj3OZirhbvla5Td0PGPTaNqsJyuuc/CT6zbdOhrSjspXQFoKNp2Fyxg0XQdhGzD+Wam8S2dv1f8ZVJ94jGxitacrSJfk7Qt0CKZGRN3GYT4IebBUipMIBWKokRNMgG/7ZwGjDJAYtOx4jFVcDJEjUl3vVWutSSqK2Zs64ZJL07Y5kW6b1f6Smdz54wHJC2opSB7KfzADaOlv5vIMecdCMaf3Vlqh2cdrNhOLjT53tjBqGhgK9dYbeJZtK2hh4adpTsnJ3ait2p/ZNfOg1fIUdcSDt1yFHVTky+7tmI+33Bvw+Z8yyZsoFpxRNk7qvROKJ80ZTWjFP/Jno8afsSGesf2CR4TFgD8Alx2OcA=
+    - SCDT: eJyFk81OwkAUhXtHKDQaLJFoDGrGxAeg/OlCTAgL9i4Mu0lpJ9BAKTK44D31cUy8w9QypRQWTTuZ891zeu9MEUTBINQxwbSoODNorycXZzd0eNl3PrqsP/emPNy8c0Efe7RhAlA6urdpWNtuD9y5F0s6THgSbxQBCxHatMCCJ3xMKCW1sUABF0VlhMoiKpEYVjPliNzPpCBJfUdVr9s1XTKYcm+GSWKRDHx94F9eaVvCqCIqgAD5vgBzOXc3fIXYLR392jSqBIvJivss/MK6DYe+JWonUZcB6kptu3MWsGiyCkK25nw91fRNXf+g9Fdx9bHHxDJacbaMfA1pWaBFMlMm7iII8UPMgoUkTCBlilBMk1TAHzvDgFECiG3a1nZMZZwMUWPSXe+UazWO6oop27hh3IsTtllI9+1IX+ls7pzxgCQFtRRkL4UfuGG08HcTyXPeCcH4tztP7PCsg7W1kwsN3xs7GGVN2Mw0Vpt4WtrSpIeGnVa3T07sRG/V/5FdOw9eIUddSzh0yxHqJCbfdmXJfL7m3prN+IaNt3FzsG4u5h3DnnMxcQx7ycU+043a3+aySwB/ueU2cA==
     - SCTX:
         - Begin A1V6_AAdd10_DetKey_60
         - ""
@@ -316,15 +316,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_detect_key_b_A1, 1"
+        - "\tplayer->AddItem p_detect_key_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_detect_key_c_A1, 1"
+        - "\tplayer->AddItem p_detect_key_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_detect_key_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_detect_key_q_A1, 1"
+        - "\tplayer->AddItem p_detect_key_q, 1"
         - else
-        - "\tplayer->AddItem p_detect_key_e_A1, 1"
+        - "\tplayer->AddItem p_detect_key_e, 1"
         - endif
         - ""
         - End
@@ -704,7 +704,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 913
+        data_size: 910
         var_table_size: 35
     - SCVR:
         - in
@@ -712,7 +712,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFks1OwkAUhXsHWmg0WAzRGCW5Jj4ANYIuxISwYO/CsJuUOlJi+bGFBe+pj2Pinc5kKFJg0TSTOd85Z+6MDWnZYug74LiYlizsduWidImDs57/1uG9OIzEdP0qUrztYssBQBw2PZw2su1+EIda0uZpKPGWDWTE8N4FF+7oc6BivMmgTAtbBZHSJiURg/qOHZP7Oy2Y8feV+7XXyEv6kQg/qYkWycIXBWd5xgcJk4qpAinI/yk4izhYi4SwKxz+ejivTWbjRLzzZDVa85aPL0ZNBXJ650bp61ofiWAZiUQjDrAqEqVxGeob+MfbhcCqAOigbJLqhpiZorHLdWBN1eE8iPmER6vZmLyW89l4JfYEFyjBknEy0DaB9CTAzQLlIsf/m07W+si5lDfbHKbwln31cqDoIRLUNiHf3smCf2j/EVjVvUynmAkPMY85prZhUt7zD2FPxVFf2/PZ2svmDvAHEwjYqA==
+    - SCDT: eJyFkl9PwjAUxXcrGywaHYZojJJcEz8AM4I+iAnhgXcfDG/NmJURxx83eOB76scx8XZt6pCCD8vS9PzOOb2tC3nFYRh64PmYHzjY7crFwTkOTnrhS4f30jgR0/WzyPG6iy0PAHHYDHDaKLb7URprSZvnscRbLpARw1sffLihz4Oq8SaDCi1cFURKl5REDOpbdkzub7Vgxj9U7pdBoyzpJyJ+pyZaJAufWc7yiHcSJhVTBXKQ/yPwFmm0FhlhFzj8DnB+PJmNM/HKs9VozVshPhk1FSjpvSulr2t9IqJlIjKNeMBqSJTGZWho4K9gGwKnCqCDikmqG2Jmisau1IE1VYfTKOUTnqxmY/JazmfjldgRbFGCI+NkoGsC6UmAXwTKRYn/M52i9T/nUt7s9zDWWw7VywHbQySobUI+g8MFf9P+I3BqO5mOnYn3Mfd2Jt/HPNiZj83hbOwVQwf4AYcV19Q=
     - SCTX:
         - Begin A1V6_AAdd12_Feather_30
         - ""
@@ -790,7 +790,7 @@
         - elseif ( A1V6_AlchemyRes == 6 )
         - "\tplayer->AddItem p_feather_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
-        - "\tplayer->AddItem p_feather_s_A1, 1"
+        - "\tplayer->AddItem p_feather_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
         - "\tplayer->AddItem p_feather_q, 1"
         - else
@@ -805,7 +805,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 933
+        data_size: 930
         var_table_size: 35
     - SCVR:
         - in
@@ -813,7 +813,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx9ks1OwkAUhXsHWmg0WAzRGCW5Jj5Ai4IuxISwYO/CsJuUOlJi+bE/C95TH8fEmbaUKR1ZNM2dOd89Z+6MDlFdI+gYYJgY1TQcDkVRu8TJ2ch5G9BR4PlsuX1lEd4O0TYAEKddC5eddHvsBl4u6dPIE7itA29EsGeCCXf8M6BR9OYN6rzQMyOu1LmSE5N2pR0R+5UUpOjvZN2vrY4sGfvM++RJcpEIfKE4yzM+CJirSBYgAvE/BWMTuFsWcuwKp78WrluL1Txk7zRMZltqO/hSqJ1C3QS4ydTtXO0zN/ZZWAZ6MtDNgHM3oAvqJ6s5V8fr1TxhEnEvpldvIi/EqhSPHBhGXhLHAdsbklLCH6sqBM0sbofsbh7M1EwUEnwwBNCakrCncNmfH7QGgKRQHHgXhBRBbOXNO9lrAtXj5FC/cPm2Tjb0I48wS9P+wwzUjHeMeZSY1p6J6Mg5hj2prb7KAyrtpZMB+APIzOOE
+    - SCDT: eJx9ks9OwkAQhzsrLTQaLYZojJKMiQ/QoqAHMSEcuHsw3JpSV0osf+y2B95TH8fE3bYsW1g5NM12v2/mt7M1gdUMgp4Flo3syMB+XyyOLnF0NvDeev4gDiM6X79Shrd9dC0AxHHbwXkr3x4GcVgiXZ+FQndN4IUIdmyw4Y4/FtRlbV6gxhdm0YiTJie5MWrulSNify8FkfW9ovq101KRYUTDT56khETgC81ZnvFByJwiRQAG4n0C1ioO1jTh2hWOfx1cns4W04S++0k2Wfuuhy+S9iTdALgp6GZJRzRII5pUhY4qtAvhPIj9mR9liymn0+VimlHFuBfTqzWQL8RXJR7ZacjCLE1jum1IKgl/nH0QDFveDtncPNh5M7FQ5J0hgNFQwI6my/b8YNQBFEJz4E0QIoO42pv3ir8JdD8nl7qyy7dzvPI/ygiTPO0/Tk/vhIecR73DDjlPeuerOp3KXj4WgD8cVOKw
     - SCTX:
         - Begin A1V6_AAdd12_Feather_45
         - ""
@@ -887,7 +887,7 @@
         - elseif ( A1V6_AlchemyRes == 6 )
         - "\tplayer->AddItem p_feather_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
-        - "\tplayer->AddItem p_feather_s_A1, 1"
+        - "\tplayer->AddItem p_feather_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
         - "\tplayer->AddItem p_feather_q, 1"
         - else
@@ -902,7 +902,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1347
+        data_size: 1344
         var_table_size: 35
     - SCVR:
         - in
@@ -910,7 +910,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNlMtO6zAQhjOGhkbnAOEiEFcZiQdoSltYUKSKBXsWiJ1lgmmqJqHErVDfEx4HiXEcUpuGwqKqLP/f/HNzaiCXHUIDF1yPyiWHdrvqsLRLb9Z7wV2H9eIwEsn0Vkh60qUNF4DS+yOfJtv59TWPw0LSZjJUeKMGGIjQpgcenOLPhZUyNgZYxkNNG6GyhkokbjbmwhF1P5cFKeMHOvqBv21KriMRDjGTQqQS3qmo5ZK2FIwqohOQoP7/gzuK+VRkiO3R+w+fPq8N0n4mHlk2eZiyRkCvSnVQqusAh1q9UagjwceRyGygaQJHGtjkMRuwaJL2UT1+TvsTYRBnCyxkOBmPY2FbtDwwanC/ashNZMiTERM8U3oXSJ0iUrDEqufd/0aAswJQWLS9fKZ1HCPRMzUd97Xjes4PX3nCWYK9+IPld8T07ChP5erOXHGTynBGBuRYZ7CVhwtjnqZPWAGTw0H6g3OVFJwvy9XSEh8GeLmlOpjdsncEnLohbBrC+fWwtWeGtmIzbHGrIvBsKWxt+5fZLpyD7gOZtb7yXQb6rUPVp8PK4M3/N2JPRQce8jx/YDrVTLiIOTeYtRkjWS9YhF1UW73Y3bHuhOoMwCe5cEef
+    - SCDT: eJyNlMtO4zAUhnMMDY3mQphBM+IqI/EATWkLC4qEWLBngdhZJpimahJK3Ar1PeFxkDiOQ2pTU1hUleX/O/+5OQ2Qqx6hkQ9+QOWKR/t9dVj5Ty/Xz6PrHjtP40Rksysh6UGftnwASm/2QpptltcXPI0rSZfJWOGtBmAgQtsBBHCIPx/W6tgYYBUPDW2EygYqkbjcWAhH1P1CFqSOH+noO+GmKblIRDzCTCqRSvifo5ZT2lEwqohOQIL6/wn+OOUzUSC2RW9eQ/rwe5gPCnHHiuntjLUielaro1rdBNjV6o1KnQg+SURhA20T2NPAH56yIUum+QDVk4d8MBUGcbTEQsbTySQVtkUnAKMG/72G0kTGPBszwQul94E0KSIVS6x6XsIPBHhrAJVFNyhn2sQxEj1T03FbO66X/OiJZ5xl2ItvWH5ETM+e8lSu/twVN6kOZ2RA9nUGf8twccrz/B4rYHI0zD9xdknBe7f8VVviw4CgtFQHs1v2joDXNIRtQ7i4Hrb2yNA6NsMWdxyB50tha7tfzHbpHHQfyLz1zncZ6bcOrk+HlcFz+GPM7qsO3JZ5fsL03Ey8jDl2M3IZc+JmHu3WWHdCtQXgDeC2Rss=
     - SCTX:
         - Begin A1V6_AAdd12_Feather_60
         - ""
@@ -1012,7 +1012,7 @@
         - elseif ( A1V6_AlchemyRes == 6 )
         - "\tplayer->AddItem p_feather_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
-        - "\tplayer->AddItem p_feather_s_A1, 1"
+        - "\tplayer->AddItem p_feather_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
         - "\tplayer->AddItem p_feather_q, 1"
         - else
@@ -1937,14 +1937,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 767
+        data_size: 755
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFkc1Og0AUhbkUqCQmYkS7MJpr4gOAsdWFmJAuundhupvQYWKNIMjQRd9TH8fEy08ITceymMXkfufcM2dMkCNNR98Cy0apaxgE1WU0wcVJ6L/OWJjwtUi3L0LiTYCeBYC4vHIwdevxPEp4i0yZ5JXcM4GMdLyzwYZbOhaMO28yMOhiNIuINIgkxeJ0z06v5nsp9M7fb9wvHbePzNeCf1CSFqoCXyje8oT3lZgoqKhjsPIk2orCAvMal78OZmfvn2+FiJngZUYzmTLPx+cddIQNet6iK86iNM82iWB5Fu/AP47KD7QeoHYBrc3o23WVOrUHWtuzoh2/aRxUH0iiabfw25nkLBYl5WG8EFG5KYRkKxZSqqN/9bMBPR/QP/T0rkIvD4kfB5Z/1cvHAAOcqDkbAP4AmyXJfg==
+    - SCDT: eJyFkc1Kw0AUhefmrwYEI0ZdiHIFHyARW10YoXTRvQvpbkgngxUTEzPpou+pjyN4pwmhpWmzyGK433fm5owNymQGhg44LiqDYRTpg3mJ05Nx+Dbi41QsZLZ6lQpvIwwcAMTZtYeZvx5P4lQ0yJArofXABgoy8N4FF+7oc2DQZlOARQervohIi0gypqc7cYae72xhtPlhnX7l+ZvIZCHFJ23SQHrhi45/ecYHLRMFmjoGp0jjlSwdsG9w9udhfvbx9V7KhEtR5TRTGQ9CfNlCTazR8wadCx5nRb5MJS/yZAv+9brygG0A3SnAmh1Dd12lQe0Ba3ruaCesG4euByRp2F744/kFT2RF+3BRyrhallLxObCjvfKoRxaH5MceWR2Sn3rkb2ADgB5IAnMB4B9QUsYu
     - SCTX:
         - Begin A1V6_AAdd17_DetCreature_45
         - ""
@@ -1997,15 +1997,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_detect_creatures_b_A1, 1"
+        - "\tplayer->AddItem p_detect_creatures_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_detect_creatures_c_A1, 1"
+        - "\tplayer->AddItem p_detect_creatures_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_detect_creatures_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_detect_creatures_q_A1, 1"
+        - "\tplayer->AddItem p_detect_creatures_q, 1"
         - else
-        - "\tplayer->AddItem p_detect_creatures_e_A1, 1"
+        - "\tplayer->AddItem p_detect_creatures_e, 1"
         - endif
         - ""
         - End
@@ -2016,7 +2016,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1250
+        data_size: 1238
         var_table_size: 35
     - SCVR:
         - in
@@ -2024,7 +2024,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk89OwkAQxjsrFJqYUCNKotGsiQ9A+acHMSEcuHsw3DalbIRQbO2WA++pj2PibFvKUlbrgZDNfr/5Zr7pVkFUDEIdE0yLihODDofycNKik8bIeR2wke8t+Hr7wgW9G9K2CUDp9Mam62ZyPXZ9L5P0mfAk3q4CFiK0Y4EF9/gzoZbXxgIVPFRTI1RWUYnE5OyoHJH3R12QvL6TVr+2m6pkvODeCjvJRLLhS80sT7QnYVSRtAEB8v8UzNB3tzxC7JZOv20anC/f3yI+Z9yLA7wTa9Z26HOOODlST6KRyEWGzDzmrsNg43MWBnMFwmgUJ/MqxRo7zA/cOHMxgdQpMhlMDhy/7CICRg0gM+laSfZ1jJuk2auehelcfxmzxXLO/+erw1TvnvSW7ubeHTefl1Q6IYXQFkG04hGLN2K1T7rorxeDsbO1clv8mMFKbOVBM4K6VzDqirqjMTxc6aG+W7aY0gDT5sk+M+0DcNJHBbo3ilA/t/m0WyGb8xhHZF7E3XgTccFmbJQO+gs/KOG9Ev5B4ZsaXvwFP5aYfyTmapZ6HU90FgD8ALO5NzI=
+    - SCDT: eJyNk89Og0AQxpm1pSUxKcaqiUazJj5A6T89WJOmh949mN42FDbSFARZeuh76uOYOAuUAsXioWk2+/3mm/mGbYJoKIQaKqgaFScKnUzk4eSKzjtT423Mpq7lcG/7ygW9n9CeCkDp4lanXje+npmulUpGTFgS7zUBCxHa10CDB/yp0MpqY4EGHpqJESqbqERifnZQjsj7gy5IVt9Iqt/o3bxk5nBrjZ2kItnwZcUsz3QoYVSRpAEB8v8U1MA1tzxE7I4ufnTqn68+3kNuM25FPt4Jj/UM+pIhRoa042gkcpEiS4uZXuBvXM4C385BGE3OSb1OsM4Oc30zSl1UIG2KTAqTguO3XkZAaQGkJgMtzr6NcZMk+7xnaTrTXUXMWdn8f75VWN57KL2lu7p3x81nJXOdkFJojh+ueciijVjvky77V4tB2dlqmS1+zKDFtvJQMUJ+r6C0c+p+hWFxpUX9oG4xtQEmzZN9ZpUPwEgeFVS9UYRGmc2X3g2YzSMckVkhN6NNyAVbxl3/AY9rYOsY/FgDi2PwUw38WYywWsRlhgC/RN8z4g==
     - SCTX:
         - Begin A1V6_AAdd17_DetCreature_60
         - ""
@@ -2114,15 +2114,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_detect_creatures_b_A1, 1"
+        - "\tplayer->AddItem p_detect_creatures_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_detect_creatures_c_A1, 1"
+        - "\tplayer->AddItem p_detect_creatures_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_detect_creatures_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_detect_creatures_q_A1, 1"
+        - "\tplayer->AddItem p_detect_creatures_q, 1"
         - else
-        - "\tplayer->AddItem p_detect_creatures_e_A1, 1"
+        - "\tplayer->AddItem p_detect_creatures_e, 1"
         - endif
         - ""
         - End
@@ -2342,7 +2342,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1278
+        data_size: 1266
         var_table_size: 35
     - SCVR:
         - in
@@ -2350,7 +2350,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFU9tKwzAY7h9dXUGwwlRExAh7gHUnvXDC2MXw1gvxLmRZXIc9zKZj7D31cQSTpnaZ6+xFKaHf6f/+pgbi0ELYs8F2sDiw8GCgDgcXeHwy9F76ZBgwn4frZy7w7QC3bACMX69dHDayzyMasBzSI4IpeqsGUgjhtgMONOVjw1GhLQUO5aGmjSSyJpGSMT7dkUPq+04KVOh7Wv3KbZiQkc/Zu0ySg1Tg85JZHnBXkSUK6QAC1PsY7EVA1zzRc367OD6bR7OET0lIE+GHPEniFWl5+LEgeQWpvkOaMOKvFz4lb5TNqUGS5Rhe9pWmuTQgc+IvoxlPCAvoSjFsQHUsSTkbbVl+uTscsI4AcpuOk/Vfl5Uj3b/peqNdG3lYP15Gck5O03zACudSnuneVe7K3974y/0XmkYW1NRZLp+0ZhDECQ3jhIjFPOJi0/jfEPsJYP3aO4W9/LXByezVwZAp3zJYdQPfLsFvL3gb36ncUnWZegC06a/0Snj6mkHZrZWkXuHz6V4uyJSnnKWER8ynURryKCUTMtTD7lHoVyqwCoU7Q+G8VEH8R7+vDPCRBTBL3YfkGdIBgB+QsEPl
+    - SCDT: eJyFk81OwkAUhXsHKDQxsSaIMcQ4JjwA5U8XYkJYELcujLvJMIyU2B/slBDeUx/HxBmmliKFLppm0vPdc++5nQqIsoGwY4JpYVEy8HCoDqUrPDkfOa8DMvKYy/3NCxf4bojbJgDGbzc29uvbz2PqsUTSJ4IpvF0BWQjhjgUWtORjQjWtLQuU5aGijaSyIpWSmFwclEPq+0EXKK3v6OpNu56VjF3OPmQniUg13MiZ5RH3FCxVSDcgQL3PwFx6dMMjPeePjcPLRTCP+Iz4NBKuz6MoXJO2g59SyEmh2gE0ZcTdLF1K3ilb0Awkw8l4mU2N2dQjC+KugjmPCPPoWhEmoBqWUEKjPctv+4ABowqQ2HStbf41GTnS+Wddb7VrPWnWDVeBnJPTOBmwwDmXy7r3lLvyN3f+cv9pzUwvqKV7uX7WNT0vjKgfRkQsFwEXu8T/N3EcAOPP3krt5a8N1tZeHTJl8rcMRi2j7+To9xe8r+8Wbqk4TD0A2uWXeyUcfc0g79ZKqJ/6fNmNJZnxmLOY8IC5NIh9HsRkuu38CD4oxNkp/L4QF6fwh0L8cz/LYzKu0gT4BY7jQJU=
     - SCTX:
         - Begin A1V6_AAdd19_DetEnch_60
         - ""
@@ -2440,15 +2440,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_detect_enchantment_b_A1, 1"
+        - "\tplayer->AddItem p_detect_enchantment_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_detect_enchantment_c_A1, 1"
+        - "\tplayer->AddItem p_detect_enchantment_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_detect_enchantment_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_detect_enchantment_q_A1, 1"
+        - "\tplayer->AddItem p_detect_enchantment_q, 1"
         - else
-        - "\tplayer->AddItem p_detect_enchantment_e_A1, 1"
+        - "\tplayer->AddItem p_detect_enchantment_e, 1"
         - endif
         - ""
         - End
@@ -2961,7 +2961,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 938
+        data_size: 926
         var_table_size: 35
     - SCVR:
         - in
@@ -2969,7 +2969,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFkkFPwkAQhZmFFmo01IRIojGOxisJNYIexIRwIF49GG6bUjZAbGnt6oH/qT/HxNluszRQ5NA0m5nvvTeza4GsVRh6NtgOymoFBwN1qLZx3Bx6b30+DIOFiNavQuL1ALs2AOLk0sWolZVHfhjkLT0uA4V3LSAhhncOOHBLnw11o00CNTpY2og6LeokYny6I8dUfScFM/qeVr9wW8WW0UIE75Qkb1KBz0pmecJ7BVMX0wEkqP8x2Enor0VK2DlOfl2Mm8vVPBUzngg/DXnXw2fTTgkKgH2lgVYORHG84vJr7qc5ZQNrIIG5gjL2DP/jlnJQqQPkdtlC9UUxs0yjWEjCbnSS9otW/FxG0u8EcSQ60/VmhO0A+9qhooyVtWWs6Y2Ak1mrQ0Fke13ZAIen1PpsM1rp1Xv6OUHZ6ySoZ3y+3ZOEz5YyESGf8iEZNPZS/VIqOEA9FKgjQ8n/kMdSo4/MqLikYlVkVQcA/gAaGuAY
+    - SCDT: eJyFksFPwjAUxvcKG8yYMBMiicb4NF5JmBH0ICaEA/HqwXBrxmiAuLG56mH/p/45JrbrUiYUPBDS9Pt93/feagOvWwR9BxwXec3C4VAeah2ctEb+64COonDJ4vyFcbwaYs8BQJxeeBi3i+txEIWlpE95KPGeDcKI4K0LLtyInwMN7S0M6uJgqyChtIVSEJOTHTsi73daEO3vK/dzr12VjJcsfBNNSpEsfGqY5RHvJCxURBXgIP+PwUmjIGeZwM5w+uNh0lqtFxmb05QFWUR7Pj5puWhQAZxLBbRLIE6SNeWfiyArKQdIEwVYOshgX/PfnpEDqwFQxhULVR+K6GVqx0oTcq2adJ6V48cq5kE3TGLWneWbEbYL7JODJYNltK2jxRsBt4iWh4rJ9rqKAf6fUvmTzWjGT++r5wSm1ymgvs758o5SOl/xlEV0BlZzLzIwIuEh5N6I8EPIgxF5/7ub6hWTGwH4BZ5B3Mg=
     - SCTX:
         - Begin A1V6_AAdd20_Dispel_30
         - ""
@@ -3043,15 +3043,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_dispel_b_A1, 1"
+        - "\tplayer->AddItem p_dispel_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_dispel_c_A1, 1"
+        - "\tplayer->AddItem p_dispel_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_dispel_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_dispel_q_A1, 1"
+        - "\tplayer->AddItem p_dispel_q, 1"
         - else
-        - "\tplayer->AddItem p_dispel_e_A1, 1"
+        - "\tplayer->AddItem p_dispel_e, 1"
         - endif
         - ""
         - End
@@ -3062,7 +3062,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1141
+        data_size: 1129
         var_table_size: 35
     - SCVR:
         - in
@@ -3070,7 +3070,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFk01PwjAcxvevMJjRMCMRo1HrS+KJhPGmBzEhHIhXD4Zbs40GFjaGqxz4nvpxTGzXpRYZcliWps/veZ713xWBFQyEHRNMC7M9A/d6YrFXw8NK33nrkn7oT2m0eqUMX/dwwwTAeHRh46iabg/c0M8kHcJ8gTeKwI0QblpgwR1/TCgpb25Q4IuiDOLKIldyYni0YYfE/kYLpPwd6X5uV3XJYEr9GW+SiUThk5xvecJtAXMVkgUYiPcBmIvQXdGEYzd49G3juPYynyR0TD6CiLl1P45o3VuRhoOfFeYorAxwJrFKILEFdZNwXd7U5VdSXs3kURzPCVtO3GSdaVmgdTMvJXXshiQgcRJM3WQ542ScUAGZgMqYc5kBWuv4ZedhYJQAsrC2lU5N3AikpqYMtR7oVvY4zdp7PvGW80lIk3tGPHdOtxTYqgdDRItwS4Xz6whWGi4Wmsu2yYBR1oimRvwdyrqypSlz55Ge0c5zlP3R7+Hl3mJH/hmQ96NxqKNiPu3DBRkHbEFD4pG+7LyF6uZS/g7qQaP2FcX+Qx5zg97TIP2M9F2a7loA8APRERoe
+    - SCDT: eJyFk09PwjAYxvcWGMyYMCMRo1Hrn8QTCeOfHsSEcCBePRhuzTYaWNgYrnLge+rHMbFdl9nJhodlafr8nvfp+7YVYGUNYUsH3cCspOHhUCxKTTypj6y3ARn57oIG21fK8PUQt3UAjKcXJg4a8fbY9t1E0ifMFXi7AtwI4Y4BBtzxT4dq6s0NynxRkYW4ssKVnJgc7dghsb+TAqX+lnQ/NxuqZLyg7pInSUQi8EnOWZ5wT8BchWQABuJ/CPrat7c04tgNnn6bOGy+rOYRnZEPL2B2yw0D2nK2pG3h5xSzUqwGcCaxuiexNbUjPyvvqPIrKW8k8iAMV4Rt5naUZboGKNn0S0kd2z7xSBh5CzvaLDkZRlRAOqAa5lxigDIZv8w8DLQqQFKsZ8RTEzcCpVNLDZUc6FbmOE3SOy5xNqu5T6N7Rhx7RQsCFOpBE6VFcSMtzq8jGHFxsVBciiYDWk0hOgrxdyhZZVdR5s4j7tG/fZT50W/zcm+xJV8G5D00DvXTMp/mwZrMPLamPnHiwAXIIBdx9yEPuQjbhzzmIu/Z1qhbcUcAfgCdhhbO
     - SCTX:
         - Begin A1V6_AAdd20_Dispel_45
         - ""
@@ -3152,15 +3152,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_dispel_b_A1, 1"
+        - "\tplayer->AddItem p_dispel_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_dispel_c_A1, 1"
+        - "\tplayer->AddItem p_dispel_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_dispel_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_dispel_q_A1, 1"
+        - "\tplayer->AddItem p_dispel_q, 1"
         - else
-        - "\tplayer->AddItem p_dispel_e_A1, 1"
+        - "\tplayer->AddItem p_dispel_e, 1"
         - endif
         - ""
         - End
@@ -3171,7 +3171,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1169
+        data_size: 1157
         var_table_size: 35
     - SCVR:
         - in
@@ -3179,7 +3179,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFk01Lw0AQhjNrGxs/MGJRUdT1AzwJTW3VgxWKB/HqQbwtm7i2wXy5a4X+T/05grvZGDaa6iGEybzPO7OT2SaIhoWwZ4PtYDFn4cFABXMb+GZl6N2fkWEUjFk8vWMC7w9wxwbA+GHHxXE7T1/TKCgkfSIChXeaII0Q7jrgwJF8bJgvvaVBQwZNXUgqm1IpiZvVX3ZI5X91gUp/T7tvu21Tcj1mwbPspBCphtdrznKJewqWKqQbEKDeS2BnEZ0yLrED/PDp4nTjNhlx9khew1jQkyCN2Yk/JR0PX5WYV2ItgC2NrYQayxjlUVXeNeV7Wt4u5HGaJkRMRpRXmVOT2dXMGo1ISFIejimfPEsu5cxAeiZyqJHNoowfEH+SjCLGjwXxaWJyffXHGi0sA/XVGAna1y7reeE3ypNQjEn6RLIJD1+nhQeqTOTDnaEGy8l3Y1GuA/reO3DysiowHGb9ArBaBtE1iJ/TrypPDWXt4KvyniGvmzlY8wCGZuaQv4+MyiN3ajfc07cG6i6hhPplrXd3OSOPochYRHwy1H3PoM5qqeAf6tygFkpK/IVc1BZ6yQuZgzKzLM86APAFf9kozw==
+    - SCDT: eJx9k11LwzAUhnviVlcVrDhUFDV+gFfCOjf1wgnihXjrhXgX0hq3Yr9MnLD/qT9HMGm6krpuF6WkeZ/3nLw9aYJoWAh7NtgOFksWHgzUYmkbP6zfec+X5C4KRiyePDGBjwa4YwNg/LLv4ridb9/TKCgkfSIChXeaII0Q7jrgwKl8bFguvaVBQy6aupBUNqVSEg8bM3ZI7c90gUp/T7vvuW1Tcj9iwbvspBCphrdqznKDewqWKqQbEKDea2BnEZ0wLrFj/PLr4nT7MRly9ko+w1jQ8yCN2bk/IR0P35aYV2ItgF2NrYcayxjlUVXeNeWHWt4u5HGaJkSMh5RXmQuTOdDMJo1ISFIejigfv0su5cxAeiZyopGdoowfEH+cDCPGzwTxaWJyffXHGi0sF+qrEQk60i5beeEvypNQjEj6RrIxDz8nhQeqJPLjzlGD5eSzsSrHAU3nDpy8rFoYDvN+AVgtg+gaxP/0q8oLQ1kbfFXeM+R1mYO1DGBo5oY8PTIqj9ypnXBP3xqou4QS6pe1vt2VjLyGImMR8fOm5yCXtUiwCLmqRcQi5LoW+ajmY27liQD8AZvzJX8=
     - SCTX:
         - Begin A1V6_AAdd20_Dispel_60
         - ""
@@ -3257,15 +3257,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_dispel_b_A1, 1"
+        - "\tplayer->AddItem p_dispel_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_dispel_c_A1, 1"
+        - "\tplayer->AddItem p_dispel_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_dispel_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_dispel_q_A1, 1"
+        - "\tplayer->AddItem p_dispel_q, 1"
         - else
-        - "\tplayer->AddItem p_dispel_e_A1, 1"
+        - "\tplayer->AddItem p_dispel_e, 1"
         - endif
         - ""
         - End
@@ -4065,7 +4065,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 910
+        data_size: 898
         var_table_size: 35
     - SCVR:
         - in
@@ -4073,7 +4073,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFktFOwjAUhncKGywxcSrghdGUxAfYiKAXYkK4IN5qotw1dRRGGGyu04T3xMcx8XSDOcKAi2U57f/9/+lpdZBljVDHAMOksqTRblcVpUs6OO05bx3W811PzJcvQtJml9oGAKXDa4vOa8l2n/vuWtJm0lW4rQMaEdoywYRb/AyoZN5oUMZCT4NQqaMSicHZjh1R+ztdkMzfSd2vrFpe0veEO8NO1iLVcKPgLI/0TsGoImkDEtT/BIzQ50sRIXZDh78WDS64z9xv9j6V4WvM/Vmfh5I+ZYiTIdVkNAqpTxeTSIzYxAu+fOYJHsXMdnJQSw2lXKVYqNVcKmmmFo3ntUXgj8SCSTGaiH8PshX8Y+1Rg2Ym49dx4mRztWAmsarIORSdErQKQE5TfKxNCMlC7MJrc9KnAEUvC6F2FrSy6iEbB1E8HS8Zj2OO9/nBehhU3Ut3DtLuEfr+IC2P0A8H6c+Ezg9yZZ3vqISaIsAfvaDmAQ==
+    - SCDT: eJx9ktFOwjAUhncKGywxcSrihdEcEh9gI4JeiAnhgniriXLX1FEYYbC5ThPeUx/HxHYbc4Sxi2U57f/9/+lpdRB1jaBjgGGiqGk4GKiidoHj46Hz2qdD3/X4avPMBXYGaBsAiJMrC1etZHvEfDeT9KhwFW7rII0Idk0w4UZ+BjRyb2lQl4WeBkmlLpWSGJ/s2RG1v9cFyf2d1P3SahUlI4+7S9lJJlINt0vO8oC3CpYqkjYgQP2PwAh9tuGRxK5x8mthcMZ86n7Rt4UIX2LmL0csFPiYI06ONJPRKOR8sZ5HfErnXvDpU4+zKKa2U4C6aij1JspCrRZSSSe1aD9lFoE/5Wsq+HTO/z3ITvCPdUANmpmMX5cTJ9urBTOJVUXBoeyUoDUACpryY21DSB5il16bkz4FKHtZEurlQd/WaUhnQRQvZhvK4pjJ+3wHrXkQ7VeibhV6V4mKKvS+Ev3YHV6ZhKvJAfwBH5risQ==
     - SCTX:
         - Begin A1V6_AAdd23_FortAttack_45
         - ""
@@ -4139,13 +4139,13 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_fortify_attack_b_A1, 1"
+        - "\tplayer->AddItem p_fortify_attack_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_fortify_attack_c_A1, 1"
+        - "\tplayer->AddItem p_fortify_attack_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
-        - "\tplayer->AddItem p_fortify_attack_s_A1, 1"
+        - "\tplayer->AddItem p_fortify_attack_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_fortify_attack_q_A1, 1"
+        - "\tplayer->AddItem p_fortify_attack_q, 1"
         - else
         - "\tplayer->AddItem p_fortify_attack_e, 1"
         - endif
@@ -4158,7 +4158,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1167
+        data_size: 1155
         var_table_size: 35
     - SCVR:
         - in
@@ -4166,7 +4166,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFk11PwjAUhneqTJaYOL8TjaYm/gDGl16ICeGCeKuJctfUUWChwKRTw//En2Pi6bbMAgMulqXp+5z37TltAdSuRahng+1QtWPRRkMvds5p+6DpvdZZU/oDMZo9C0VvGrRkA1DauXLp6CTebnHpp5IaU77GSwXAQoSWHXDgFj8b9rLaWGAXF4XECJUFVCLRPlwpR/T+SgqS1feS6pfuiSlpDYQ/xCSpSAc+yznLA61qGFUkCaBA//fBDiWfiSli17Tz69LJMZfM/2JvgQpfIi6HLR4q+pghXoYU49Zo5DQY96eiy/qDyadkA8GnESt5BlQ2oZsEOntKoYnsijFTotsXi1TFASOffZFwB5gvwAPzUch8yb81YAMpUmRSmCzk/HGXEbD2AFKTqhNPTN8Gkk0sK2b4E6M/gS4zHvfwpCzigVzjmycFSxtqSyezxAsITmypF0sFlmcBVtFQlw11/hgW9RVDv2YCcXc2di/JT/5blntvveQtQN7TQqiWWczd05D1JtMo6M0YjyKOF/qdNZPka+j6RtrfQt9tpNUW+n4j/RHTZgvn7tGKSuguAvwBklcmJw==
+    - SCDT: eJx9k11LwzAUhnuiqysI1m9QlAz8Aeu+9MIJYxfDWwXdXYhdtpVlW12qsv+pP0fwpC0127pelBLyPud9c05SArVrEerZYDtU7Vi03daLnXPaO+h4Ly3Wkf5YTJdPQtFKm1ZtAEr7Vy6dnsTbXS79VNJkytd4tQRYiNCaAw7c4GfDXlYbC+ziopQYobKESiR6hxvliN7fSEGy+l5S/dI9MSXdsfAnmCQV6cBnOWe5pw0No4okARTo/z7YoeRLsUDsmvZ/XTo/5pL5n+w1UOFzxOWky0NFHzLEy5By3BqNnAaz0UIM2Gg8/5BsLPgiYlXPgGomVEmgs8cUmsuBmDElBiOxStUdMPLZFwl3gPkCPDCfhsyX/EsDNpAyRSaFyUrOH3cdAWsPIDVpOPHE9G0g2cSyYoY/MfoT6DKz2RBPyiIeyC2+eVKwtKG2dDJLvIDgxJZ6sVZgfRZglQ11zVDnj2FVXzf0WyYQd6ewe0l+8t+y3HvrJW8B8p4WQs3M4ts9CtlwvoiC4ZLxKOJ4od/i2FvQViHqF6G3hagqQu8K0ffVtuVJhO4cwB/zASLX
     - SCTX:
         - Begin A1V6_AAdd23_FortAttack_60
         - ""
@@ -4248,13 +4248,13 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_fortify_attack_b_A1, 1"
+        - "\tplayer->AddItem p_fortify_attack_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_fortify_attack_c_A1, 1"
+        - "\tplayer->AddItem p_fortify_attack_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
-        - "\tplayer->AddItem p_fortify_attack_s_A1, 1"
+        - "\tplayer->AddItem p_fortify_attack_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_fortify_attack_q_A1, 1"
+        - "\tplayer->AddItem p_fortify_attack_q, 1"
         - else
         - "\tplayer->AddItem p_fortify_attack_e, 1"
         - endif
@@ -11432,7 +11432,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 879
+        data_size: 876
         var_table_size: 35
     - SCVR:
         - in
@@ -11440,7 +11440,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJx9ks1OwkAUhXsHWmhitESiMf7kmvAAlAi6EBPCgr0Lw24y1sE2DogdlPCe+jgm3mmhKdKy6M/tnO+cO7djg65aDH0HHBd1xcJ+3xSVUxwdDfynHh+oIJTT1aPUeN3HtgOAOL70cNpMlodCBWtJl+vA4G0byIhhxwUXWnQ5UMu8yaBKhZ0GkdImJRGjxo4dM+s7XbDM30/dz71mXjIMZfBGnaxFpuGTgr3c442BScXSBjSY5wE4cyVWMibsCse/Hr4fC8UjHigxm02kiM3bEh8yxM+QOkArRc4SRCvx+RouZDyJdMgD8RWJOAd2zGCqdaTCfM0ls4vUppHYvMSSbLgOpVJrnG3l/ni7QrDcZPA2zZptfiq4SZgpcnDR/sCqAeQ05RvaBLEsqF340/z0IEDRuSKom4V9e4dzrpfRZGHuU/4MVr0U65ViwT7sNoc1tjDNB/4+8q408GN7Zv+XpRkUwB8JzN0q
+    - SCDT: eJx9ks1OwkAUhXsHWmhitESiMf7kmvAAlAi6EBPCgr0Lw24y1sE2DogdlPCe+jgm3mmhKdKy6M/tnO+cO7djg65aDH0HHBd1xcJ+3xSVUxwdDfynHh+oIJTT1aPUeN3HtgOAOL70cNpMlodCBWtJl+vA4G0byIhhxwUXWnQ5UMu8yaBKhZ0GkdImJRGjxo4dM+s7XbDM30/dz71mXjIMZfBGnaxFpuGTgr3c442BScXSBjSY5wE4cyVWMibsCse/Hr4fC8UjHigxm02kiM3bEh8yxM+QOkArRc4SRCvx+RouZDyJdMgD8RWJOAd2zGCqdaTCfM0ls4vUppHYvMSSbLgOpVJrnG3l/ni7QrDcZPA2zZptfiq4SZgpcnDR/sCqAeQ05RvaBLEsqF340/z0IEDRuSKom4V9e4dzrpfRZGHuU/4MVr0U65ViwT7sthTT+7C7Uuxje2D/l6WZEsAfc/LcVg==
     - SCTX:
         - Begin A1V6_AAdd48_SwitfSwim_30
         - ""
@@ -11510,7 +11510,7 @@
         - elseif ( A1V6_AlchemyRes == 6 )
         - "\tplayer->AddItem p_swift_swim_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
-        - "\tplayer->AddItem p_swift_swim_s_A1, 1"
+        - "\tplayer->AddItem p_swift_swim_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
         - "\tplayer->AddItem p_swift_swim_q, 1"
         - else
@@ -11525,7 +11525,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1501
+        data_size: 1498
         var_table_size: 35
     - SCVR:
         - in
@@ -11533,7 +11533,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyVlMtO6zAURXMMDY10H6kuF4R4yEh8QFPawoAiVQwQUwaImWUStwl1A9g81P+Ez0HCjkNwaFKVQR+W9zp7x+fEDZCrDsKBC66H5YqDBwO9WNnE53+HwVWfDHkYs+nskkm8P8BtFwDj610fT9ez7TPKw1zSIzLUeLsBqhDCHQ88OFAfF9aK2qrAqlo0jJFSNpRSEeetuXJI78+lQEX9wFTf9tdtyVnMwolKkot04I2KZznBXQ0rFTIBJOjfX+DeczpjQmF7+Prdx3f/KCcJCTlN0xGjQv97wacFEhRIE+DAIFsZIjl9GsePTIwSGZOQPidUWGDHBncM2MrASDAFEhkzzi3g0AMrnrttED9Jx4JF6okpZ5K0A024gJpYQTmNSjnf/DkGnDWA3KbrZS1rqi4h0zLbFRvX/3mFiLJIUCInSbqcdTVo+/e0//IJZCiSG3LLxGT2swRl0E7Q/0zgfiVQY1sUtdKgfZNm48IUHd/xiKVEsmjM8jgVEWrU4Hwa/y6M1bsIXmasF1aNqrEEp2mpO5a6fiLLzKHFzA9jWdtdPFG2tLfcBCzRJXM+6KsxlVdEYK4dqLrFSnFe/T/3RL4ko0f9PSU3We4arF+LhYuwIwtrlTBJhsEi8rjW8KF8Xt+3mT4ogA8T0nXG
+    - SCDT: eJyVlMlO8zAUhXMNDY30/xDEJMQgI/EATWkLC4qEWCC2LBA7yyRuE+oGsBnU94THQcKOQ3BoUpVFB8vnu+fE98YNkIsOwoELroflgoP7fb1Y2MKXK+fBTY+c8zBm48k1k/igj1suAMa3ez4er2fbF5SHuaRLZKjxVgNUIYTbHnhwqD4uLBW1VYFFtWgYI6VsKKUiLlenyiG9P5UCFfUDU33HX7clFzELRypJLtKBNyue5RR3NKxUyASQoH//gfvI6YQJhe3j208fP6xRThIScpqmA0aF/veGzwokKJAmwKFBtjNEcvoyjJ+ZGCQyJiF9TaiwwLYN7hpwNQMjwRRIZMw4t4AjD6x47o5B/CQdChapJ6acSdIKNOECamIF5TQq5fzwpxhwlgBym46XtaypuoRMy2xXbFw38goRZZGgRI6SdD7ratD272r/+RPIUCR35J6J0eRvCcqgnaD3ncD9SaDGtihqpUEHJs3mlSk6fOARS4lk0ZDlcSoi1KjB+Tb+XxirdxG8zFgvrBpVYwlO01K3LXX9RJaZI4uZHsaytjN7omxpd74JmKNL5nzQT2Mqr4jAXDtQdYuV4rz7y49EviWDZ/09JndZ7hqsV4uFs7DjWkzOwk5qsafyYf3eZvqUAL4AtDN08g==
     - SCTX:
         - Begin A1V6_AAdd48_SwitfSwim_60
         - ""
@@ -11643,7 +11643,7 @@
         - elseif ( A1V6_AlchemyRes == 6 )
         - "\tplayer->AddItem p_swift_swim_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
-        - "\tplayer->AddItem p_swift_swim_s_A1, 1"
+        - "\tplayer->AddItem p_swift_swim_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
         - "\tplayer->AddItem p_swift_swim_q, 1"
         - else
@@ -11732,14 +11732,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 750
+        data_size: 738
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFkUFPg0AQhRkKVBITqUE9mCZj4g8AY6sHMSE99O7B9Lah241tCgVZG9P/qT/HxFkghFqkB0g28703b9+aIHuajr4Flo1S1zAI1KF3hdOz0H8dszDmS5HsXoTEmwA9CwBxNnQwcYvxJIp5hYyY5ErumUBGOt7ZYMMtfRb0a28yMOhglIuINIgkxXRwYKer+UEKvfb3S/drx20ik6Xga0pSQSrwZctdnvBeiYkCRZ2ClcXRTuQWmEOc/TiYnq82b7lYMJ5m+Wqzlczz8XmP7GFJXlTknLMoydJtLFiWLvbgb6fFDrTGvN0EtCqhbxdF6tQdaFXLLd34Zd/Q9nwkGtULvxw3Y5/Rh8jpH69pOZuzkCKd/Csed4n5EfFDQzz4K5Zdyseute/F2j5AFyQKyAaAX4CBwq8=
+    - SCDT: eJx9kc9Kw0AQh3fyrwYEU6l6kMIIPkAitnowQumhdw/S25JuF1uaNDFrkb6nPo7gbBNCS9M9JLDM9/1mdtYFZTMLIw88H5XFMI71wb7BycUoeh/yUSoWMtu+SYV3MYYeAOK0H2DW25XHSSpqZMCV0HroAgVZ+OCDD/f0edBpsinAoYNTNSLSIZKMSfcoztL1oymsJj+q0m+D3j4yXkixoklqSA983XKXF3zUMlGgqXPwijTZytIDt4/TvwDzy+X6o5RzLvKiXK43iocRvh6QNlbkVU3OBE+yIt+kkhf5/AD+DVrigO3V20OA1RNG/m6RFu0OWL3llt1E1b6h7flIGjQNf4Juwb+TL1nSP11Rcz4DdnbSHJpMYTKfTKYymc8m8xNYB8BESGA+APwDffa/Xw==
     - SCTX:
         - Begin A1V6_AAdd4_WaterWalk_15
         - ""
@@ -11792,15 +11792,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_water_walking_b_A1, 1"
+        - "\tplayer->AddItem p_water_walking_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_water_walking_c_A1, 1"
+        - "\tplayer->AddItem p_water_walking_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_water_walking_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_water_walking_q_A1, 1"
+        - "\tplayer->AddItem p_water_walking_q, 1"
         - else
-        - "\tplayer->AddItem p_water_walking_e_A1, 1"
+        - "\tplayer->AddItem p_water_walking_e, 1"
         - endif
         - ""
         - End
@@ -11811,7 +11811,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 891
+        data_size: 879
         var_table_size: 35
     - SCVR:
         - in
@@ -11819,7 +11819,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFksFOwkAQhjsLLTQxsRjUAyEZEx+gJYIexIRw4O7BcNuUZSOEQmtXYnhPfRwTZ9vSrFLh0DbT/b//n51dG1TdYhg44LioahYOh7qoXePkfBS8DPgoEgu53j1LhTdD9B0AxGnXw3U7Wx6HkSgkfa6Exn0byIhhzwUXbulxoFF6k0GdCjsPIqVNSiImrQM7ptcPumClf5C7d7y2KRkvpFhRJ4VIN3xVsZdHvNMwqVjegAL9PQMnicKdTAnr4vTbw/hiuXlN5ZyLOEmXm63ifoBPJRGURDObjCYuC2ImeLhO4m0keRLPDainZ1JvIhX6rxHKOrmFV1goEUbSiGS/Ir+8Ax1YbjZxm4bM9qcJbhalC4Ot2BhYDQBDUr2TfQYrM/zKgwryw4equ0RQvwz69NoJ/wjfZUrvaEWhfMZH1E3zX3hwDBYn4HsDbv2F1THy4VjsWxZrTrBCJDORCwA/2Q7fEA==
+    - SCDT: eJx9ksFugkAQhplVUJImxca2B2MyTfoAYKrtoTYxHrz30Hjb4LqpRhDK1jS+Z/s4TToLSDBQDkCG/b//n51dE1TbYOhZYNmoWgZOp7po3eLicua9TfgsEBsZHl+lwrspuhYA4nLoYNhPl+d+IHLJmCuhcdcEMmI4ssGGe3os6BTeZNCmwsyCSGmSkohFr2LH9HqlC1b4e5n7wOmXJfONFDvqJBfphm9q9vKMDxomFcsaUKC/F2DFgX+UCWFDXP46GF1t9++JXHMRxcl2f1Dc9fClILyC6KaT0cR1TqwE98M4OgSSx9G6BI30TNpdpEL/LYWyQWbh5BZK+IEsRbKzyB+nogPDTidu0pDZ6TTBTqN0UWJrNgZGB6Akqd/JKYMVGW7tQXnZ4UPdXSJoXAR9O72Yf/mfMqF3sKNQvgKj+y85aSJFE/nYRKom8qmJ/DgfXI1C6qEB/AGB6NvA
     - SCTX:
         - Begin A1V6_AAdd4_WaterWalk_30
         - ""
@@ -11885,15 +11885,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_water_walking_b_A1, 1"
+        - "\tplayer->AddItem p_water_walking_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_water_walking_c_A1, 1"
+        - "\tplayer->AddItem p_water_walking_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_water_walking_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_water_walking_q_A1, 1"
+        - "\tplayer->AddItem p_water_walking_q, 1"
         - else
-        - "\tplayer->AddItem p_water_walking_e_A1, 1"
+        - "\tplayer->AddItem p_water_walking_e, 1"
         - endif
         - ""
         - End
@@ -11904,7 +11904,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 994
+        data_size: 982
         var_table_size: 35
     - SCVR:
         - in
@@ -11912,7 +11912,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFksFqwkAQhjOriQYKjcXagwgr9AESW20PtSAevPdQvC1xXaqYmDSriO/ZPk6hu9m4bDXaQxIm+3/z/5mMDbxqIRw44LiYVyw8HMqicocn16PgfUBGEV2weP/GOO4Ose8AYDzteDhu5sfjMKKFpE84lbhvg2iEcM8FF+7F5UBN9xYNqqKwlZFQ2kIpiEnjpB2S5ycpkO4fqO5tr2lKxgtGVyJJIZKBWyXf8oIfJSxUSAXgIJ9X4KRRuGeZwDp4+uPh5Ga5/sjYnNAkzZbrLSd+gF81EWiink9GErcFMaMkjNNkGzGSJnMD6plQW0FeAXEaRuzI5EHOsFrHopBvjZCoq+hWQa92YRwSut1shKnugf4E/fbOqMFy9d9Ch00AN7eVhdGhZChg1Q1xzxCXzwOsGoChOhnAIQ7ScfzSfQjUjkHZygqorz2+vGZKduGGZeIerYQfmZGRCn4GHlyC6T/wkwE3jmF+iXy+ZPuZ25rDKxGxXOQCwC/0VPvl
+    - SCDT: eJx9ksFugkAQhpmtoCRNio21B2OyJn0AsNX2UJsYD957aLxt1nVTjSCU1Rjfs32cJt0F3KwVOQAZ9v/++RnGBlGzEA4ccFwsriw8Gqni6h5Pb8bBx5CMQ7bk0eGdC9wbYd8BwHjW9XDUyo4nNGSFZEAEU7hvgzRCuO+CCw/ycqCuvaVBTRZ23kgqbamUxLR5ZofU+VkKpP2D3L3jtUzJZMnZWiYpRCpwu+RbXvGTgqUK5QEEqOc1OElIDzyVWBfPfj0c3642nylfEBYn6WqzE8QP8JsmAk00ssko4q4g5ozQKIl3ISdJvDCgvgl1csgrIMFoyP81eVQzrDWwLNRbIyTq5XS7oNd7GlHCdtutbKo90EnQH++CGixX/y103ARws7aqMBxKhgJWwxD3DXH5PMCqAxiqswEc4yAdxy/dhyDfMShbWQkNdI9vr5mQPd3yVN7DtexH5lnqC+SwimRV5HMVKarIlyry63RmJQquhgbwB0Mj+JU=
     - SCTX:
         - Begin A1V6_AAdd4_WaterWalk_45
         - ""
@@ -11982,15 +11982,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_water_walking_b_A1, 1"
+        - "\tplayer->AddItem p_water_walking_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_water_walking_c_A1, 1"
+        - "\tplayer->AddItem p_water_walking_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_water_walking_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_water_walking_q_A1, 1"
+        - "\tplayer->AddItem p_water_walking_q, 1"
         - else
-        - "\tplayer->AddItem p_water_walking_e_A1, 1"
+        - "\tplayer->AddItem p_water_walking_e, 1"
         - endif
         - ""
         - End
@@ -12001,7 +12001,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1253
+        data_size: 1241
         var_table_size: 35
     - SCVR:
         - in
@@ -12009,7 +12009,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFk99OwjAUxneqTBY1ToN/EmNSjQ/AENQLMSFeeO+F8a6ptQJhY5OOEHxOfRwTT9dldjDwYluafb/vOz2nrYHadAgNXHA9qjYc2u3qxcYxfdzrBc/XrBeKgYzmT1LR8y5tugCUvpz5NGpkvx94KHJJhymh8WYN0IjQlgceXOLjwlbhjQabuKiZIFTWUInE4/6SHdH/l6oghX9g3E/9hi15GEgxwkpykS74qGIvd7StYVQRU4AC/d0BNwn5XE4QO6MvPz6ND4bj/kS+MREnk+F4qlgzoPcFERREPeuMJg5z4lUwHiXxNJQsid8sqGVDpwbyc0gJHsqFkCtbf270R7l+NOMRZ2KaphhTotoeWNtxTwy3y0M2ZGmc8M9c7gKpUyRylJR29e2XAXC2APKAjpcNVx8cUgy3sLKyyYXJPs6sVMin/UEqJ+9DNWCR5OmK5FVycHSwjt4uovHMgpdF64VlUjE+cOqWuGWJqydX1l9Z+qWhlaVtS7piXlk/13Tb7JP8tbjySgTmmkHVrUWoUwR8+Y2EzTh2E9/hCGtir6xnyl4BX6+DxT/wjQXvL8JqHXm7LvYji7U7VyGSmcgDgF/3xTwn
+    - SCDT: eJx9k99KwzAUxnuiqysqVvEfiBDFB1jnpl44Qbzw3gvxLmRZ3MbatS4dYz6nPo7gSVNq6rpetCX0+33fyTlJA9SmQ2jggutRteHQXk8vNk7o895j8HrDHkMxktHyRSp60aMtF4DSt3OfRofZ7yceilzSZUpovNUANCK07YEHV/i4sFV4o8EmLhomCJUNVCLxvL9iR/T/lSpI4R8Y9zP/0JY8jaSYYCW5SBd8XLGXe9rRMKqIKUCB/u6Am4R8KWeIndO3H5/GB+PpcCYHTMTJbDydK9YK6ENBBAXRzDqjiaOc6AvGoySeh5Il8cCC2jZ0ZiA/h5TgofwXcm3rL4z+ONdPFjziTMzTFGNKVMcDazvuqeF2ecjGLI0T/pnLXSBNikSOktKuvv0yAM4WQB7Q9bLh6oNDiuEWVlY2uTTZJ5mVCvl8OErl7H2sRiySPF2TvE4Ojg7W0dtFNJ5Z8LJovbBMKsYHTtMSty1x9eTK+mtLvzK0srRjSdfMK+tnTbfNPslfiyuvRGCuGVTdWoS6RcCXv5+wBcdu4jucYE2sn9W8hrypI0UdeVtHqjryro78KDesQiF10wB+AUQDONc=
     - SCTX:
         - Begin A1V6_AAdd4_WaterWalk_60
         - ""
@@ -12095,15 +12095,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_water_walking_b_A1, 1"
+        - "\tplayer->AddItem p_water_walking_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_water_walking_c_A1, 1"
+        - "\tplayer->AddItem p_water_walking_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_water_walking_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_water_walking_q_A1, 1"
+        - "\tplayer->AddItem p_water_walking_q, 1"
         - else
-        - "\tplayer->AddItem p_water_walking_e_A1, 1"
+        - "\tplayer->AddItem p_water_walking_e, 1"
         - endif
         - ""
         - End
@@ -12938,14 +12938,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 766
+        data_size: 754
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFkctKw0AUhnNyqwHBFEtFVDhCHyARW10YIXTRvQvpbpjGsQmmWjON0vfUxxE8uRBSkqaLLIb5vv/8OWOA1BQVXRNMC6WqoOdlB+0MZye++zxhfhyEYrV9EhKvPXRMAMT5lY2rQX495XFQImMmg0x3DKAgFW8ssGBEnwm9KpsCdDroxSAidSLJmPUbcWp232ihVvlukX5hD+rINBTBGzUpoazwsOVfHvA2k4mCjDoGcx3zrUhMMC5x/mfjRz96XybihSWplGnMmePi4w6ojQrwnMcsYjLm6TLciOQ1kiEL+FfEkx3h124mglK73p8DStnTtfJ1qrRBUMpdt2zILbYObY9I0rga+mMP1+yb0zS2SATfhNSQLZhPxY726pNuPTig39X006Yuu9z77tGf+egeQDcmcswCgH+0rsk/
+    - SCDT: eJx9kc1Kw0AUhefmrwYEUyyKqHCFPkAitrowQumiexfS3TCNYxNMtWYape+pjyP0pgmhJeksZjHc85175owNymQGBg44LiqDYRgWF/McJyej4GXIR2kUy8X6WSq8CdF3ABCn1x4uetvxWKRRJRlwFRW4bwMZGXjrggt9Og50am8ysOhilYtIaZGSiEm3YWcU80YKo/YPSvdLr7crGccyeqcklagIfNbylke8K2BSQaE6BmeZirXMHLCvcPrv4Wc3+Zhn8pVnuVJ5Krgf4NOe0OyXwguR8oSrVOTzeCWzt0TFPBLficj2gD+v6QhsZ3zYB1iVM3C3dRrUILCq65aGgrJ1aPtEggb10l/vdMl/BG3js0yKVUwJ+QzY0UF2qGcjHXuvZ5WOfdCzX8A6AHqNBOYCwAZo48Xv
     - SCTX:
         - Begin A1V6_AAdd5_WaterBrf_30
         - ""
@@ -12998,15 +12998,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_water_breathing_b_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_water_breathing_c_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_water_breathing_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_water_breathing_q_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_q, 1"
         - else
-        - "\tplayer->AddItem p_water_breathing_e_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_e, 1"
         - endif
         - ""
         - End
@@ -13017,7 +13017,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1249
+        data_size: 1237
         var_table_size: 35
     - SCVR:
         - in
@@ -13025,7 +13025,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyNk0tPwkAUhXtHqTQxsUbj22SMbk2o74WYEBbsXRh2k6EMlDAIdkDD/9SfY+KdTikD5eGiaSY93z3n3tspgNp0CA1ccD2qNhxaLuvDxiGt7VSCtwdWkWEkeuNXoehFmZZcAErr5z7t7Sefq1yGqeSeqVDjpQJgIUJvPPDgCh8XtrLaWGATDwVjhMoCKpGo7ebKEf09l4Jk9QNT/dTftyXVSIRdTJKKdOCDBb080zsNo4qYAAr0exvcgeRjESN2Ruu/Pu3vdt7bsWiyeKTUSHJWCuhLBgQZUAS4MsAxl6zDlOSjdjQUcaujIhbyzw6PLRCHY3m5JwbdSb0GgscydXKBFCkyKUxmXH/8eQScLYDU5NZLpl/EgRMzfdtz0l8StxkLjMtUJKT8h2sesn3vtK92dqfOuPesoJWCXJoUR2kbEQ+7UlzLPpOCt6bDng+wVA/OxNzLzPGHBi8x1we7jdxuwSla2htLu3yts8ztuuWsGaMJT6aTW3gJAnOxYNE9Reg+M/n2Dwbsi2Ni1ogFH0YYiTVYxXS6BH9YjYdr8EcL38vjahX7tNr6I7G2p7hQJhKZBwB/aGc3cw==
+    - SCDT: eJyNk11PwjAYhfdWmSwxcUbjt0mN3powvy/EhHDBvReGu6aMwghFcAUN/1N/jolv1zHK1/BiWZqd5z2np2sB1KZDaOCC61G14dByWS82DmltpxK8PbCKDCPRG78KRS/KtOQCUFo/92lvP/lc5TJMJfdMhRovFQAHEXrjgQdX+Liwlc3GAZu4KBgjVBZQiURtd2Ec0d8XUpBsfmCmn/r7tqQaibCLSVKRDnywZC/P9E7DqCImgAL93gZ3IPlYxIid0fqvT/u7nfd2LJosHik1kpyVAvqSAUEGFAGuDHDMJeswJfmoHQ1F3OqoiIX8s8NjC8RyLC/3xKA7qddA8FimTi6QIkUmhcmM648/j4CzBZCa3HpJ+0UsnJj2bc/J/pK4zVhgXKYiIeU/XBch2/dO+2pnd+qM554NtFKQS5PiKN1GxMOuFNeyz6TgrWnZ8wFW6sGZmHuZOf7Q4CXmemFvY+FswSla2htLu/pYZ5nbdYezpkYTnkybW3oJAnOxYNk9Reg+M/n29wbsi2Ni1ogFH0YYiTWSyCvYh3w2zGMf81mVxz7lsx+z5S3VCF0fwB/yhjQj
     - SCTX:
         - Begin A1V6_AAdd5_WaterBrf_45
         - ""
@@ -13115,15 +13115,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_water_breathing_b_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_water_breathing_c_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_water_breathing_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_water_breathing_q_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_q, 1"
         - else
-        - "\tplayer->AddItem p_water_breathing_e_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_e, 1"
         - endif
         - ""
         - End
@@ -13134,7 +13134,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1208
+        data_size: 1196
         var_table_size: 35
     - SCVR:
         - in
@@ -13142,7 +13142,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFk11PwjAUhncqTBZNnNHgd1IjtyaML70QE8IF914Y7poyCiMUwRUk/E/9OSa265idA7xYlq7v876nZ6d5EDkLYc8G28Fiz8LNplrsneHOUct7bZAW9wM2Wb0wgW+buGwDYNy9cfHkNNpuU+7HkjoRvsLLeZBGCFcccKAkHxv2E29pkJOLvA6SyrxUSqJznLFDaj9TBUr8Pe1+5Z6aknbA/LGsJBapgosbzvKEawqWKqQLEKDeh2DPOF2xUGLXuPvt4unx6G0Ysj4JF0IsOCVlDz8ngJcABYCSBi4oJyMiOF0MgzkLByMREJ9+jGhogBUTvNTgUZw0YzTk6ZyqKV8XFuX0QyZziAgY5wZQM4E7DZzH/gH1x5zd8ynhjA7SQXX1u3IFLBfqq9EPdKtdirHLeEknlPiL+ZyzXw+UasqXu0UNlhMNxoGcBbQeOnCiWLUwHLL9B6tgaCuGdnvr00zVYP52Pa2smZVkGg7WPoCh2Nrh9XlRct7yxtn29H2BTddPQvUk69MtzsiSykOSXsjoPJDJpEdauvwteGM37v+DPxj4SRYXu9jH3dHvUbTZzI0yFskcAPgBIV04yA==
+    - SCDT: eJx9k11PwjAYhfdWGCyaMCLB76REbk0YX3ohJoQL7r0w3DVlFEYogitI+J/6c0xstzE7gV0sS7fznPP2rMuCyBgIOyaYFhYnBu501OLkAvcLXeetTbrc9dh8+8oErnRwzQTAeHBn43kpeN2j3I0kLSJchdeyII0QrltgQVVeJuRib2mQkYtsGCSVWamURL+4Z4fU+70pUOzvhO43dkmX9DzmzuQkkUgNXD6wl2fcVLBUoXAAAep+BuaS0y3zJXaLBz82XhSn7xOfjYi/FmLNKak5+CUGnBjIA1RD4IpyMiWC0/XEWzF/PBUecennlPoaWNfB6xAsRElLRn2ezGno8t1gQc7IZzKHCI9xrgFNHbgPgcvI36PujLMHviCc0XEyqKU+VyaP5UI91fpAldClHLnMNnROibterTj780CJUr7tI2owrOBgnMqzgHaHDqwgVi00h/3+wchr2rqmPV59kmlozP/Wk8qmPsle4WDkADTF0YZ3+0XxfmsHz7YT/i9w6PeTUCvO+rLPl2RD5SbJ0Gd05clkMgxmP8K201k3jX1MZ0Ua+5TOfiQ7PKhhqj6AX5uANXg=
     - SCTX:
         - Begin A1V6_AAdd5_WaterBrf_60
         - ""
@@ -13220,15 +13220,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_water_breathing_b_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_water_breathing_c_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_water_breathing_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_water_breathing_q_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_q, 1"
         - else
-        - "\tplayer->AddItem p_water_breathing_e_A1, 1"
+        - "\tplayer->AddItem p_water_breathing_e, 1"
         - endif
         - ""
         - End
@@ -14032,14 +14032,14 @@
           shorts: 4
           longs: 0
           floats: 0
-        data_size: 736
+        data_size: 724
         var_table_size: 32
     - SCVR:
         - add
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFkc1Kw0AUhXPzMzUgNNaiC6lcwQfIiK0ujBC66N6FdDek6WBCJ2ntdNP31McRnElCSG1iF7MY7nfOuXPGAWkZJlICxEVpGhgE+mJd46wf0vcJC0Wc8Gz/xiXeBegTAMT5yMNsWIynkYgrZMxkrOW+A8rIxAcXXLhXh0Cv9lYGtrrYZZAibUUqxeziyM7U86MtzNqflu433rCJTBMer9QmFaQXvmp5yws+arGiQFPnQDYi2vMtAWeE8x8P14M0/9jyJVusc57xSDCf4usBad2W5GVFRiLdsSRd8r/ot9diBkZj3mYBRrUddYsSTdUbGFXDLb3Qsmto+zolGtdxX95gw3Zc8FWac5lKtmChSjvrlE66pfEJ6VND2j+Uyv90z92Rn0VkD6Ab4QXiAsAvpjS7iA==
+    - SCDT: eJx9kUFPwjAYhvt1W3GJCVOJHgzmM/EHrEbQgzMhHLh7MNyaMRq30A2kXPif+nNMbNmyIGwcdmi+53n77a0H2iEUOQPmo6YEo8genBucdEf8YyhGKkllvn2XGu8jDBkA4rQfYN7bjcexSipkIHRi9dADE0Tx0QcfHszHoFNnmwDXHNzyIkO6hjTG5OIojtr50Ra0zudl+m3Q20fGqUwWZpMKsgtfN/zLKz5Z2VBgqXNgKxVv5ZqB18fpb4DLy6z4XMu5mC0LmctYiZDj2z/SuSvJq4qMVbYRaTaXh+hP0BAGZG/eFAGk2o77uxKp6Q1I1XBDL7zsGpqezkiD+rrvoLsSG6nkIiukzrSYATlr9YbtXnLKe2739Cnvpd37AtIBaJ9LID4A/AHzPbg4
     - SCTX:
         - Begin A1V6_AAdd7_Tele_45
         - ""
@@ -14092,15 +14092,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_telekinesis_b_A1, 1"
+        - "\tplayer->AddItem p_telekinesis_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_telekinesis_c_A1, 1"
+        - "\tplayer->AddItem p_telekinesis_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_telekinesis_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_telekinesis_q_A1, 1"
+        - "\tplayer->AddItem p_telekinesis_q, 1"
         - else
-        - "\tplayer->AddItem p_telekinesis_e_A1, 1"
+        - "\tplayer->AddItem p_telekinesis_e, 1"
         - endif
         - ""
         - End
@@ -14111,7 +14111,7 @@
           shorts: 5
           longs: 0
           floats: 0
-        data_size: 1027
+        data_size: 1015
         var_table_size: 35
     - SCVR:
         - in
@@ -14119,7 +14119,7 @@
         - state
         - PCSkipEquip
         - OnPCEquip
-    - SCDT: eJyFkk9PwjAYxvcWNlg0YSDBg2Jq4gdgKOhBTAgH7h4Mt2aMKgvlj3Qc+J76cUxs11GL2/SwLE2f3/M8fVsbeNlC2HfAcTEvWXgwkIvSOR7Xhv5LnwxZOKfL/TPl+HqAOw4AxpO2h5fNZHsUsDCV9AgPJd6xQRgh3HXBhRvxOVDR3sKgLBa2ChJKWygFMa5n7JDcz7RA2t9X7hde05SM5jRciCapSBZu5ZzlEd9JWKiQKsBB/k/B2bBgT7cCa+PJl4fXjWj1tqUzMl2v6JIGjHR8/KQJXxNVgCtFnKVEwKKYzKMZPUbEXIwYp6WgE+EcEb5jr7utFDuAqljoUxAdZX16physCkBqfusmA5eXifTAtZGRiy5Vbj0ty8NdHDOj6u/ErBAsGXa4X3R4O+AmcXJh4DljBKtqiLuGOG+CySkLJ6B6oJ9j5z4dXz1HyHvdAupp+w+vsSExZXQRrSiPOJmSoepbgPaL0fAf9N5Aa8co/4t7KI58TyLNeWUkNJG4APANTQL5sA==
+    - SCDT: eJx9kk9PwjAYxvdWGCyaMJTgQTGviR+AoaAHMSEcuHsw3JoxqiyUP9Jx4HvqxzGxXccsbuOwLE2f3/M+fdoyiJJF0LPBdlCcWNjvq8XJJY5qA++tRwc8mLHF7pUJvO1j2wZAHLdcXDTi7aHPg0TSpSJQeLsM0ohgxwEH7uRnQyX1lgYluSjrQVJZlkpJjOoZO6L2MylI6u9p9yu3YUqGMxbMZZJEpAI3c87yjA8KliqiAwhQ/zOw19zfsY3EWjj+cXF1Hi4/NmxKJ6slWzCf07aHLynhpUQV4EYTFwnh8zCis3DKDhHZizHGbmroVDqHVGz5+3ajxDaQKkp9ApKDWd+uKQerApCY3ztx4eoySVp4amTMJdd6bj0JK4JtFHEj6v+JWSFYatj+fsn+7YATj1MLA8+pEayqIe4Y4rwG41MWNqBzkL9j5z4dTz9HyHvdEuqm9l9ubU0jxtk8XDIRCjqJwxZwvWIuOMY9FnPiGPdUzH0e1pTZZ6oqgF+v/vZg
     - SCTX:
         - Begin A1V6_AAdd7_Tele_60
         - ""
@@ -14197,15 +14197,15 @@
         - "\treturn"
         - endif
         - if ( A1V6_AlchemyRes == 5 )
-        - "\tplayer->AddItem p_telekinesis_b_A1, 1"
+        - "\tplayer->AddItem p_telekinesis_b, 1"
         - elseif ( A1V6_AlchemyRes == 6 )
-        - "\tplayer->AddItem p_telekinesis_c_A1, 1"
+        - "\tplayer->AddItem p_telekinesis_c, 1"
         - elseif ( A1V6_AlchemyRes == 7 )
         - "\tplayer->AddItem p_telekinesis_s, 1"
         - elseif ( A1V6_AlchemyRes == 8 )
-        - "\tplayer->AddItem p_telekinesis_q_A1, 1"
+        - "\tplayer->AddItem p_telekinesis_q, 1"
         - else
-        - "\tplayer->AddItem p_telekinesis_e_A1, 1"
+        - "\tplayer->AddItem p_telekinesis_e, 1"
         - endif
         - ""
         - End
