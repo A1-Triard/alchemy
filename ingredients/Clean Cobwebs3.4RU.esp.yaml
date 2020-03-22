@@ -1,0 +1,100 @@
+- INGR:
+    - NAME: ingred_cobweb00
+    - MODL: "f\\furn_web00.nif"
+    - FNAM: Паутина с белым пауком
+    - IRDT:
+        weight: 0.05
+        value: 5
+        effect_1_index: DrainFatigue
+        effect_2_index: Paralyze
+        effect_3_index: Telekinesis
+        effect_4_index: FortifyAttackBonus
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: cobweb_white.tga
+- INGR:
+    - NAME: ingred_cobweb10
+    - MODL: "f\\furn_web10.nif"
+    - FNAM: Паутина с красным пауком
+    - IRDT:
+        weight: 0.05
+        value: 5
+        effect_1_index: DrainFatigue
+        effect_2_index: Poison
+        effect_3_index: RemoveCurse
+        effect_4_index: DetectAnimal
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: cobweb_blood.tga
+- INGR:
+    - NAME: ingred_cobweb20
+    - MODL: "f\\furn_web00.nif"
+    - FNAM: Паутина с синим пауком
+    - IRDT:
+        weight: 0.05
+        value: 10
+        effect_1_index: Poison
+        effect_2_index: Reflect
+        effect_3_index: WeaknessToPoison
+        effect_4_index: Levitate
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: cobweb_blue.tga
+- INGR:
+    - NAME: ingred_cobweb30
+    - MODL: "f\\furn_web00.nif"
+    - FNAM: Паутина с лунным пауком
+    - IRDT:
+        weight: 0.05
+        value: 5
+        effect_1_index: FortifyAttribute
+        effect_2_index: DrainAttribute
+        effect_3_index: Sanctuary
+        effect_4_index: DamageFatigue
+        effect_1_skill: Block
+        effect_2_skill: Block
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: Speed
+        effect_2_attribute: Agility
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: cobweb_sugar.tga
+- INGR:
+    - NAME: ingred_cobweb40
+    - MODL: "f\\furn_web00.nif"
+    - FNAM: Паутина с ледяным пауком
+    - IRDT:
+        weight: 2.5
+        value: 15
+        effect_1_index: ResistFrost
+        effect_2_index: ResistCommonDisease
+        effect_3_index: WeaknessToPoison
+        effect_4_index: RestoreSpellPoints
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: cobweb_frost.tga

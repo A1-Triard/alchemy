@@ -1,0 +1,120 @@
+- INGR:
+    - NAME: ingred_bone_01
+    - MODL: "f\\furn_bone_01.nif"
+    - FNAM: Кость
+    - IRDT:
+        weight: 2.0
+        value: 3
+        effect_1_index: RestoreAttribute
+        effect_2_index: Telekinesis
+        effect_3_index: RestoreFatigue
+        effect_4_index: Dispel
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: Agility
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "m\\misc_pop_bone00.dds"
+- INGR:
+    - NAME: ingred_bone_rib_01
+    - MODL: "f\\furn_bone_rib_01.nif"
+    - FNAM: Ребра
+    - IRDT:
+        weight: 4.0
+        value: 3
+        effect_1_index: RestoreAttribute
+        effect_2_index: ResistPoison
+        effect_3_index: RestoreSpellPoints
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: Agility
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Personality
+    - ITEX: "m\\misc_pop_bone00.dds"
+- INGR:
+    - NAME: ingred_bone_skull_01
+    - MODL: "f\\furn_bone_skull_01.nif"
+    - FNAM: Череп
+    - IRDT:
+        weight: 8.0
+        value: 10
+        effect_1_index: RestoreAttribute
+        effect_2_index: ResistParalysis
+        effect_3_index: FortifySpellpoints
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Personality
+    - ITEX: "m\\misc_skull00.dds"
+- INGR:
+    - NAME: xfurn_bone_01
+    - MODL: "f\\furn_bone_01.nif"
+    - FNAM: Кость
+    - IRDT:
+        weight: 2.0
+        value: 3
+        effect_1_index: RestoreAttribute
+        effect_2_index: Telekinesis
+        effect_3_index: RestoreFatigue
+        effect_4_index: Dispel
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: Agility
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: "m\\misc_pop_bone00.dds"
+- INGR:
+    - NAME: xfurn_bone_rib_01
+    - MODL: "f\\furn_bone_rib_01.nif"
+    - FNAM: Ребра
+    - IRDT:
+        weight: 4.0
+        value: 3
+        effect_1_index: RestoreAttribute
+        effect_2_index: ResistPoison
+        effect_3_index: RestoreSpellPoints
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: Agility
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Personality
+    - ITEX: "m\\misc_pop_bone00.dds"
+- INGR:
+    - NAME: xfurn_bone_skull_01
+    - MODL: "f\\furn_bone_skull_01.nif"
+    - FNAM: Череп
+    - IRDT:
+        weight: 8.0
+        value: 10
+        effect_1_index: RestoreAttribute
+        effect_2_index: ResistParalysis
+        effect_3_index: FortifySpellpoints
+        effect_4_index: DrainAttribute
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: Intelligence
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Personality
+    - ITEX: "m\\misc_skull00.dds"

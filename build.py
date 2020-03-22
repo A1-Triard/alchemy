@@ -781,21 +781,22 @@ def run_au3(path):
     subprocess.run(command + ' ' + path, stdout=stdout, stderr=stderr, check=True)
 
 def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
-    morrowind_ingrs = { i.name: i for i in load_ingredients('ingredients/Morrowind.esm.yaml') }
-    tribunal_ingrs = { i.name: i for i in load_ingredients('ingredients/Tribunal.esm.yaml') }
-    bloodmoon_ingrs = { i.name: i for i in load_ingredients('ingredients/Bloodmoon.esm.yaml') }
-    ap_ingrs = { i.name: i for i in load_ingredients('ingredients/AlterationPrecise.esp.yaml') }
-
-    ingrs = morrowind_ingrs.copy()
-    ingrs.update(tribunal_ingrs)
-    ingrs.update(bloodmoon_ingrs)
+    ingrs = { i.name: i for i in load_ingredients('ingredients/Morrowind.esm.yaml') }
+    ingrs.update({ i.name: i for i in load_ingredients('ingredients/Tribunal.esm.yaml') })
+    ingrs.update({ i.name: i for i in load_ingredients('ingredients/Bloodmoon.esm.yaml') })
 
     if ingrs_set == 'eva':
-        eva_ingrs = { i.name: i for i in load_ingredients('ingredients/EVA.ESP.yaml') }
-        ingrs.update(eva_ingrs)
+        ingrs.update({ i.name: i for i in load_ingredients('ingredients/EVA.ESP.yaml') })
     
     ingrs_ext = ingrs.copy()
-    ingrs_ext.update(ap_ingrs)
+    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/AlterationPrecise_1C.esp.yaml') })
+    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Ash_Grasses_20RU.esp.yaml') })
+    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Bones11RU.esp.yaml') })
+    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Cobwebs3.4RU.esp.yaml') })
+    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Ferns_10_unscriptedRU.esp.yaml') })
+    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Grasses_10RU.esp.yaml') })
+    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Lilypads11RU.esp.yaml') })
+    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Swamp_Scums_20_unscriptedRU.esp.yaml') })
 
     ingrs = list(ingrs.values())
     ingrs.sort(key=lambda x: x.name)

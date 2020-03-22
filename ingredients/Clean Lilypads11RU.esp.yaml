@@ -1,0 +1,60 @@
+- INGR:
+    - NAME: ingred_lilypad_01
+    - MODL: "f\\flora_grass_ing_lily_01.nif"
+    - FNAM: Большая водяная лилия
+    - IRDT:
+        weight: 0.1
+        value: 5
+        effect_1_index: RestoreHealth
+        effect_2_index: ResistCommonDisease
+        effect_3_index: SlowFall
+        effect_4_index: DetectEnchantment
+        effect_1_skill: Block
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: Intelligence
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: large.tga
+- INGR:
+    - NAME: ingred_lilypad_02
+    - MODL: "f\\flora_grass_ing_lily_02.nif"
+    - FNAM: Листья водяной лилии
+    - IRDT:
+        weight: 0.1
+        value: 5
+        effect_1_index: RestoreHealth
+        effect_2_index: ResistParalysis
+        effect_3_index: Shield
+        effect_4_index: DivineIntervention
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: greenspotted.tga
+- INGR:
+    - NAME: ingred_lilypad_03
+    - MODL: "f\\flora_grass_ing_lily_03.nif"
+    - FNAM: Красная водяная лилия
+    - IRDT:
+        weight: 0.1
+        value: 5
+        effect_1_index: RestoreHealth
+        effect_2_index: ResistPoison
+        effect_3_index: SpellAbsorption
+        effect_4_index: DetectAnimal
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: redsplit.tga

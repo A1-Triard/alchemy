@@ -1,0 +1,60 @@
+- INGR:
+    - NAME: ingred_swamp_scum_common
+    - MODL: swampscum_01.nif
+    - FNAM: Обычная болотная тина
+    - IRDT:
+        weight: 1.5
+        value: 1
+        effect_1_index: DamageHealth
+        effect_2_index: Chameleon
+        effect_3_index: DetectAnimal
+        effect_4_index: DamageAttribute
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Agility
+    - ITEX: swamp_scum_common.tga
+- INGR:
+    - NAME: ingred_swamp_scum_rare
+    - MODL: swampscum_03.nif
+    - FNAM: Редкая болотная тина
+    - IRDT:
+        weight: 1.5
+        value: 5
+        effect_1_index: RestoreHealth
+        effect_2_index: Chameleon
+        effect_3_index: DetectAnimal
+        effect_4_index: NightEye
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: Block
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: Agility
+    - ITEX: swamp_scum_rare.tga
+- INGR:
+    - NAME: ingred_swamp_scum_green
+    - MODL: swampscum_02.nif
+    - FNAM: Зеленая болотная тина
+    - IRDT:
+        weight: 1.5
+        value: 2
+        effect_1_index: DamageHealth
+        effect_2_index: DetectAnimal
+        effect_3_index: DivineIntervention
+        effect_4_index: Jump
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: swamp_scum_green.tga

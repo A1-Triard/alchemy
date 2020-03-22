@@ -1,0 +1,80 @@
+- INGR:
+    - NAME: ingred_fern_black
+    - MODL: "f\\flora_grass_ing_f_01-02.nif"
+    - FNAM: Черный папоротник
+    - IRDT:
+        weight: 0.1
+        value: 1
+        effect_1_index: RestoreFatigue
+        effect_2_index: Sanctuary
+        effect_3_index: Poison
+        effect_4_index: Mark
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: black_fern.tga
+- INGR:
+    - NAME: ingred_fern_green
+    - MODL: "f\\flora_grass_ing_f_03.nif"
+    - FNAM: Зеленый папоротник
+    - IRDT:
+        weight: 0.1
+        value: 2
+        effect_1_index: RestoreFatigue
+        effect_2_index: Shield
+        effect_3_index: ShockDamage
+        effect_4_index: Recall
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: green_fern.tga
+- INGR:
+    - NAME: ingred_fern_dwemer
+    - MODL: "f\\flora_grass_ing_f_03.nif"
+    - FNAM: Двемерский папоротник
+    - IRDT:
+        weight: 0.1
+        value: 1
+        effect_1_index: ResistParalysis
+        effect_2_index: Sanctuary
+        effect_3_index: RestoreHealth
+        effect_4_index: SummonCenturionSphere
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: green_fern.tga
+- INGR:
+    - NAME: ingred_fern_slough
+    - MODL: "f\\flora_grass_ing_f_01-02.nif"
+    - FNAM: Топный папоротник
+    - IRDT:
+        weight: 0.1
+        value: 1
+        effect_1_index: RestoreFatigue
+        effect_2_index: Sound
+        effect_3_index: ResistBlightDisease
+        effect_4_index: CureBlightDisease
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - ITEX: fern1.tga
