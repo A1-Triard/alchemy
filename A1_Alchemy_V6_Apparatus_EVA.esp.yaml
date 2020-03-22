@@ -19857,7 +19857,7 @@
           shorts: 8
           longs: 7
           floats: 13
-        data_size: 2348
+        data_size: 2353
         var_table_size: 230
     - SCVR:
         - doOnce
@@ -19888,7 +19888,7 @@
         - calcinatorY
         - retortX
         - retortY
-    - SCDT: eJytVctu00AUnbE9dpykikuKmipCmkUkSkvBdhvqSi4Q8Yi6BYHSbiI3OCXCaaPEPPoLfARLNuzgI/iBrgD1TxDc8diO7TgNCxQpnjn3eWbuvSNjotKJgOh9auoyFlXa+aXR/X1qENyutoyX97qt0cgZO/7byZMPftcQqP5lGaMGVuEnY2Fq/VNrBJBYCCH9QqulPTx13rgHpydj95WACAYtrmrQzUbkLQr/QwsUBGowQQ3CKIgJTAiwRtvLgeNHjtdreb3X7vC8GSU9K4GUCR6uzODdSW+CIYJe13KFAZm8WObcWOacWCaLJcyJZYaxSsCeBuzBB9AF7UsNUqC081ujZyvpszzw3WHXCLXbq2nh48HEOfZcdl1GdI51rZ5Rcp2eP3jn+C4koGARFAsoMPBEFBCZEH4BKm7gApbiSzBkjONkjTBZk2kxHgkRA6oWQlVrgpBdsSRUts6FovWQzC0v45LdPOaJ9DGq0nYlrdiB2ukLOYJDJhBzBEeopHXAF3wOwRI+R6DHtGW0SrOJtE5PPJcLKxT+aHP3jrnX3LXo3apFgEsfuJhW1RKDtWBPUQNQKUQDByrd1mlfQnQDtgpsTdgSvi0gjUJSQYgtClK6mbAhaZvQhcpsBG6zmbIxM3GasYtiIs6sDUnbhC5KiTizueXzKc/w2VrIZ2mGz9aGzSvGC04Wxyshg0X19EeaIpElsm/Zi/wUrW/ShZbbVRhd2VKsMyRWoA2odtYVMko2AvvKrIFWw4mIYcwRNhGbIGGtZSgYh0udNYiQapDlQtX6RIrWZyKPPOfcHaMbNi8rTkBK0a+AtpKyvy1HJJEtPsg/BBKvxBTWz2ByfFgfE16nOdT+W4Tp1XEW32U4uGvUC89229J39B1L3/unI3yvZA/lppJfJXlokt46UO8qi7Ty/azb01HqkeRITdQEH7eEegpCrFhUlS3DuZ6y0vlzW4iLrcAflKvHuhBWI8z/tcycm6qxEV+0vhJW0EKUGY/Ld/ETXYQMpDgDiafXXuKePXd4POh1CIXZhrLwIcBqAGvxCzg4dfyzMTMo5kqYTSmQlAPJMxdAn+mXZ1CmuxSg2ekPApj2de16Gn/u+i9GXYPzgjbu1PijxR6g9AvIVDD+C/FqogM=
+    - SCDT: eJytVU1u00AUnrE9dpykqksCTRUhzSKL0lCw3Ya6kguKoETdgkBpN5GbOiXCaaPEICpxBw7BsgeAQ7DsClBvgsQbj+3YjtOyQJHime/9fjPvvZExUelUQPQpNXUZiyrt/tbo3h41CO5U2sbbJ732eOxMHP/DdP+T3zMEql+uYNTAKvxkLMysf2mNABILIaRfabW0h5fOe/fg7HTingiIYNDiqgZtNiJvUfifWqAgUIMJahBGQUxgQoA12lkJHD93vH7b679zRxetKOl5CaRM8Kg6h/em/SmGCHpdyxUGZPJimQtjmQtimSyWsCCWGcYqAXsasAcfQBe0rzVIgdLuH42eV9NneeC7o54RandW08IXw6lz7LnsuozoHOtaPaPkOn1/+NHxXUhAwSIoFlBg4IkoIDIl/AJU3MAFLMWXYMgYx8kaYbIm02I8EiIGVCyEKtYUIXvZklDZuhCK1j5ZWF7GNbt5zBMZYFShneW0YhdqZyDkCA6ZQMwRHKGS1gVf8DkES/gcgR7TltEqzSbSPjv1XC6sUvij2zpt0tbOI3O3tWPRxxWLAKEBEDKtiiUGa8GeoQagUogGXlS6pdOBhOgGbBXYmrAlfFtAGoXMgjibFKS0mbAhaZvQhcpsBG7TTNmYmTit2EUxEWfehqRtQhelRJz53PL5lOf4bN7KZ2mOz+aGzcvGC04Wxyshg0VFJZEZElki+4F9m5+i9V260nJbC6Mb+4q1h8SqtAElz1pDRsluYF+ZddFqOBYxzDrCxmILJKy/DAXjcKmzLhFSXXKvULG+kqJ1SeSx51y4E3Tf5mXFCUgp+lXQVlL2hhyRRLb4LP8QSLwSU9ggg8nxYX1JeJ3lUPtvEWZXx1n8kOHg7lAvPNstS9/Wty1995+O8LOSPZSHSn6V5KFJeutA/US5TSvfz7o9m6ceSc7VRE3wmUuopyDEikVV2TIc7ikrnb+5hbjYCvxVuXm2C2E1wiOwlhl2MzU254vWN8IKWogy43H5Ln6ni5CBFGcg8fQ6S9yz546Oh/0uoTDbUBY+BFgNYC1+Bodnjn8+YQbFXAmzKQWSciB55QLoM/3yHMp0lwI0+wSAAEZ+Xbubxl+7/ptxz+C8oI27Nf5ysVco/QwyFYz/AvCUoh4=
     - SCTX:
         - Begin A1V6_ApparatusCont_1_sc
         - ""
@@ -19993,7 +19993,7 @@
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
         - "\tset tempFloat to A1V6_ApparatusAngle"
-        - "\tset tempFloat to ( tempFloat / 57.29578 )"
+        - "\tset tempFloat to ( ( tempFloat + 40 ) / 57.29578 )"
         - "\tsetx aCos to xCos tempFloat"
         - "\tsetx aSin to xSin tempFloat"
         - "\tset tempFloat to ( 30 * aCos )"
@@ -20116,7 +20116,7 @@
           shorts: 8
           longs: 7
           floats: 13
-        data_size: 2348
+        data_size: 2353
         var_table_size: 230
     - SCVR:
         - doOnce
@@ -20147,7 +20147,7 @@
         - calcinatorY
         - retortX
         - retortY
-    - SCDT: eJytVctu00AUnbE9dpykikuKmipCmkUkSkvBdhvqSi4Q8Yi6BYHSbiI3OCXCaaPEPPoLfARLNuzgI/iBrgD1TxDc8diO7TgNCxQpnjn3eWbuvSNjotKJgOh9auoyFlXa+aXR/X1qENyutoyX97qt0cgZO/7byZMPftcUqP5lGaMGVuEnY2Fq/VNrBJBYCCH9QqulPTx13rgHpydj95WACAYtrmrQzUbkLQr/QwsUBGowQQ3CKIgJTAiwRtvLgeNHjtdreb3X7vC8GSU9K4GUCR6uzODdSW+CIYJe13KFAZm8WObcWOacWCaLJcyJZYaxSsCeBuzBB9AF7UsNUqC081ujZyvpszzw3WHXDLXbq2nh48HEOfZcdl1GdI51rZ5Rcp2eP3jn+C4koGARFAsoMPBEFBCZEH4BKm7gApbiSzBkjONkjTBZk2kxHgkRA6oWQlVrgpBdsSRUts6FovWQzC0v45LdPOaJ9DGq0nYlrdiB2ukLOYJDJhBzBEeopHXAF3wOwRI+R6DHtGW0SrOJtE5PPJcLKxT+aHP3jrnX3LXo3apFgEsfuJhW1RKDtWBPUQNQKUQDByrd1mlfQnQDtgpsTdgSvi0gjUJSQYgtClK6mbAhaZvQhcpsBG6zmbIxM3GasYtiIs6sDUnbhC5KiTizueXzKc/w2VrIZ2mGz9aGzSvGC04Wxyshg0X19EeaIpElsm/Zi/wUrW/ShZbbVRhd2VKsMyRWoA2odtYVMko2AvvKrIFWw4mIYcwRNhGbIGGtZSgYh0udNYiQapDlQtX6RIrWZyKPPOfcHaMbNi8rTkBK0a+AtpKyvy1HJJEtPsg/BBKvxBTWz2ByfFgfE16nOdT+W4Tp1XEW32U4uGvUC89229J39B1L3/unI3yvZA/lppJfJXlokt46UO8qi7Ty/azb01HqkeRITdQEH7eEegpCrFhUlS3DuZ6y0vlzW4iLrcAflKvHuhBWI8z/tcycm6qxEV+0vhJW0EKUGY/Ld/ETXYQMpDgDiafXXuKePXd4POh1CIXZhrLwIcBqAGvxCzg4dfyzMTMo5kqYTSmQlAPJMxdAn+mXZ1CmuxSg2ekPApj2de16Gn/u+i9GXZPzgjbu1PijxR6g9AvIVDD+CxgHogo=
+    - SCDT: eJytVU1u00AUnrE9dpykqksCTRUhzSKL0lCw3Ya6kguKoETdgkBpN5GbOiXCaaPEICpxBw7BsgeAQ7DsClBvgsQbj+3YjtOyQJHime/9fjPvvZExUelUQPQpNXUZiyrt/tbo3h41CO5U2sbbJ732eOxMHP/DdP+T3zMFql+uYNTAKvxkLMysf2mNABILIaRfabW0h5fOe/fg7HTingiIYNDiqgZtNiJvUfifWqAgUIMJahBGQUxgQoA12lkJHD93vH7b679zRxetKOl5CaRM8Kg6h/em/SmGCHpdyxUGZPJimQtjmQtimSyWsCCWGcYqAXsasAcfQBe0rzVIgdLuH42eV9NneeC7o54ZandW08IXw6lz7LnsuozoHOtaPaPkOn1/+NHxXUhAwSIoFlBg4IkoIDIl/AJU3MAFLMWXYMgYx8kaYbIm02I8EiIGVCyEKtYUIXvZklDZuhCK1j5ZWF7GNbt5zBMZYFShneW0YhdqZyDkCA6ZQMwRHKGS1gVf8DkES/gcgR7TltEqzSbSPjv1XC6sUvij2zpt0tbOI3O3tWPRxxWLAKEBEDKtiiUGa8GeoQagUogGXlS6pdOBhOgGbBXYmrAlfFtAGoXMgjibFKS0mbAhaZvQhcpsBG7TTNmYmTit2EUxEWfehqRtQhelRJz53PL5lOf4bN7KZ2mOz+aGzcvGC04Wxyshg0VFJZEZElki+4F9m5+i9V260nJbC6Mb+4q1h8SqtAElz1pDRsluYF+ZddFqOBYxzDrCxmILJKy/DAXjcKmzLhFSXXKvULG+kqJ1SeSx51y4E3Tf5mXFCUgp+lXQVlL2hhyRRLb4LP8QSLwSU9ggg8nxYX1JeJ3lUPtvEWZXx1n8kOHg7lAvPNstS9/Wty1995+O8LOSPZSHSn6V5KFJeutA/US5TSvfz7o9m6ceSc7VRE3wmUuopyDEikVV2TIc7ikrnb+5hbjYCvxVuXm2C2E1wiOwlhl2MzU254vWN8IKWogy43H5Ln6ni5CBFGcg8fQ6S9yz546Oh/0uoTDbUBY+BFgNYC1+Bodnjn8+YQbFXAmzKQWSciB55QLoM/3yHMp0lwI0+wSAAEZ+Xbubxl+7/ptxz+S8oI27Nf5ysVco/QwyFYz/AhdFoiU=
     - SCTX:
         - Begin A1V6_ApparatusCont_2_sc
         - ""
@@ -20252,7 +20252,7 @@
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
         - "\tset tempFloat to A1V6_ApparatusAngle"
-        - "\tset tempFloat to ( tempFloat / 57.29578 )"
+        - "\tset tempFloat to ( ( tempFloat + 40 ) / 57.29578 )"
         - "\tsetx aCos to xCos tempFloat"
         - "\tsetx aSin to xSin tempFloat"
         - "\tset tempFloat to ( 30 * aCos )"
@@ -20375,7 +20375,7 @@
           shorts: 8
           longs: 7
           floats: 13
-        data_size: 2348
+        data_size: 2353
         var_table_size: 230
     - SCVR:
         - doOnce
@@ -20406,7 +20406,7 @@
         - calcinatorY
         - retortX
         - retortY
-    - SCDT: eJytVctu00AUnbE9dpykikuKmipCmkUkSkvBdhrqSi4Q8Yi6BYHSbiI3OCXCaaPEPPoLfARLNuzgI/iBrgD1TxDc8diO7TgtCxQpnjn3eWbuvSNjotKpgOh9auoyFlXa/aXRvT1qENypto2X93rt8diZOP7b6ZMPfq8pUP3LMkYNrMJPxsLM+qfWCCCxEEL6uVZLe3jqvHH3T44n7isBEQxaXNWgm43IWxT+hxYoCNRgghqEURATmBBgjXaWA8ePHK/f9vqv3dFZK0p6XgIpEzxamcN70/4UQwS9ruUKAzJ5scyFscwFsUwWS1gQywxjlYA9DdiDD6AL2hcapEBp97dGT1fSZ7nvu6NeM9TurKaFj4dT58hz2XUZ0TnWtXpGyXX6/vCd47uQgIJFUCygwMATUUBkSvgFqLiBC1iKL8GQMY6TNcJkTabFeCREDKhaCFWtKUJ2xZJQ2ToTitZDsrC8jAt285gnMsCoSjuVtGIXamcg5AgOmEDMERyiktYFX/A5AEv4HIIe05bRKs0m0j459lwurFD4o62dO+Zua8eid6sWAS4D4GJaVUsM1oI9Qw1ApRANHKi0qdOBhOgGbBXYmrAlfFtAGoWkghBbFKR0M2FD0jahC5XZCNxmM2VjZuK0YhfFRJx5G5K2CV2UEnHmc8vnU57js3Uln6U5PlsbNq8YLzhZHK+EDBbV0x9phkSWyL5lX+WnaH2TzrXcrsLo0pZinSGxAm1AtbOukFGyEdhXZg20Gk5EDGOOsInYAglrLUPBOFzqrEGEVIMsF6rWJ1K0PhN57Dln7gTdsHlZcQJSin4FtJWU/W05Iols8UH+IZB4JaawQQaT48P6mPA6y6H23yLMro6z+C7DwV2jXni2TUvf1rctffefjvC9kj2Um0p+leShSXrrQL2nXKWV72fdno1SjyRHaqIm+Lgl1FMQYsWiqmwZzvWUlc6f20JcbAX+oFw+1oWwGmH+r2Xm3EyNjfii9ZWwghaizHhcvouf6CJkIMUZSDy9zhL37Lmjo2G/SyjMNpSFDwBWA1iLX8DhieOfTphBMVfCbEqBpBxInrkA+ky/PIcy3aUAzU5/EMC0r2vX0/hz138x7jU5L2jjbo0/WuwBSr+ATAXjvz6VohE=
+    - SCDT: eJytVU1u00AUnrE9dpymqksCTRUhzSKL0lCwnYa6kguKoETdgkBpN5GbOiXCaaPEICpxBw7BsgeAQ7DsClBvgsQbj+3YjtOyQJHime/9fjPvvZExUelUQPQpNXUZiyrt/tbo3h41CO6U28bbJ732eOxMHP/DdP+T32sKVL9cxaiOVfjJWJhZ/9LqASQWQki/0qppDy+d9+7B2enEPREQwaDFVQ3aqEfeovA/tUBBoAYTVCGMgpjAhADrtLMaOH7ueP2213/nji5aUdLzEkiZ4FFlDu9N+1MMEfSalisMyOTFMhfGMhfEMlksYUEsM4y1BOxpwB58AF3QvtYgBUq7fzR6Xkmf5YHvjnrNULuzlha+GE6dY89l12VE51jTahkl1+n7w4+O70ICChZBsYACA09EAZEp4Reg4jouYCm+BEPGOE7WCJM1mRbjkRAxoGwhVLamCNkrloRK1oVQtPbJwvIyrtnNY57IAKMy7aykFbtQOwMhR3DIBGKO4AgtaV3wBZ9DsITPEegxbRmt0Wwi7bNTz+XCCoU/uq3TBm3tPDJ3WzsWfVy2CBAaACHTKltisBbsGWoAKoVo4EWlTZ0OJEQ3YavA1oQt4dsC0ihkFsTZoiCljYQNSduELlRmI3CbRsrGzMRpxS6KiTjzNiRtE7pYSsSZzy2fT2mOz9atfJbn+Gxt2rxsvOBkcbwSMlhUVBKZIZElsh/Yt/kpWt+lKy23tTC6sa9Ye0isSutQ8qw1ZJTsBvaVWRethWMRw6wjbCy2QML6y1AwDpc66xIh1SX3CmXrKylal0Qee86FO0H3bV5WnICUol8BbSVlb8gRSWSLz/IPgcQrMYUNMpgcH9aXhNdZDtX/FmF2dZzFDxkO7g71wrNtWvq2vm3pu/90hJ+V7KE8VPKrJA9N0tsA6ifKbVr5fjbs2Tz1SHKuJmqCz1xCPQUhViyqypbhcE9Z6fzNLcTFVuCvys2zXQirER6B9cywm6mxOV+0vhFW0EKUGY/Ld/E7XYQMpDgDiafXWeaePXd0POx3CYXZhrLwIcBqAGvxMzg8c/zzCTMo5kqYzVIgKQWSVy6APtMvzaFMdzlAs08ACGDk17S7afy1678Z95qcF7Rxt8pfLvYKpZ9BpoLxXz3noiw=
     - SCTX:
         - Begin A1V6_ApparatusCont_3_sc
         - ""
@@ -20511,7 +20511,7 @@
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
         - "\tset tempFloat to A1V6_ApparatusAngle"
-        - "\tset tempFloat to ( tempFloat / 57.29578 )"
+        - "\tset tempFloat to ( ( tempFloat + 40 ) / 57.29578 )"
         - "\tsetx aCos to xCos tempFloat"
         - "\tsetx aSin to xSin tempFloat"
         - "\tset tempFloat to ( 30 * aCos )"
