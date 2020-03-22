@@ -814,75 +814,50 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
 
     if ingrs_set == 'eva':
         ingrs.update({ i.name: i for i in load_ingredients('ingredients/EVA.ESP.yaml') })
-    
-    ingrs_ext = ingrs.copy()
-    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/AlterationPrecise_1C.esp.yaml') })
-    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Ash_Grasses_20RU.esp.yaml') })
-    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Bones11RU.esp.yaml') })
-    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Cobwebs3.4RU.esp.yaml') })
-    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Ferns_10_unscriptedRU.esp.yaml') })
-    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Grasses_10RU.esp.yaml') })
-    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Lilypads11RU.esp.yaml') })
-    ingrs_ext.update({ i.name: i for i in load_ingredients('ingredients/Clean Swamp_Scums_20_unscriptedRU.esp.yaml') })
+
+    extra_ingrs_esp = []
+    extra_ingr_files = [
+        'AlterationPrecise_1C.esp.yaml',
+        'Clean Ash_Grasses_20RU.esp.yaml',
+        'Clean Bones11RU.esp.yaml',
+        'Clean Cobwebs3.4RU.esp.yaml',
+        'Clean Ferns_10_unscriptedRU.esp.yaml',
+        'Clean Grasses_10RU.esp.yaml',
+        'Clean Lilypads11RU.esp.yaml',
+        'Clean Swamp_Scums_20_unscriptedRU.esp.yaml',
+    ]
+    for e in extra_ingr_files:
+        ingrs.update({ i.name: i for i in load_ingredients('ingredients/' + e) })
+        with open('ingredients/' + e, 'r', encoding='utf-8') as f:
+            extra_ingrs_esp.extend(yaml.load(f, Loader=yaml.FullLoader))
 
     ingrs = list(ingrs.values())
     ingrs.sort(key=lambda x: x.name)
     ingrs.sort(key=lambda x: len(x.name))
-    ingrs_ext = list(ingrs_ext.values())
-    ingrs_ext.sort(key=lambda x: x.name)
-    ingrs_ext.sort(key=lambda x: len(x.name))
 
     add_items = []
-    add_items_ext = []
     add_scripts = []
-    add_scripts_ext = []
     check_scripts = []
-    check_scripts_ext = []
     del_scripts = []
-    del_scripts_ext = []
     next_useful_kind = None
-    next_useful_kind_ext = None
     for (i, kind) in reversed(list(enumerate(kinds))):
         index = i + 1
         is_useful = False
-        is_useful_ext = False
-        override_ext = False
-        override_ext_del = False
         for level in reversed([15, 30, 45, 60]):
             level_ingrs = filter_and_group_ingredients(ingrs, kind, level)
-            level_ingrs_ext = filter_and_group_ingredients(ingrs_ext, kind, level)
             if not ingrs_empty(level_ingrs):
                 is_useful = True
                 add_items.append(gen_add_item(kind, index, level))
                 add_scripts.append(gen_add_script(kind, level_ingrs, level, index))
-            elif not ingrs_empty(level_ingrs_ext):
-                override_ext_del = True
-                add_items_ext.append(gen_add_item(kind, index, level))
-            if not ingrs_empty(level_ingrs_ext):
-                is_useful_ext = True
-                if not ingrs_equals(level_ingrs, level_ingrs_ext):
-                    override_ext = True
-                    add_scripts_ext.append(gen_add_script(kind, level_ingrs_ext, level, index))
         if is_useful:
             check_scripts.append(gen_check_script(kind, ingrs, index, next_useful_kind))
             del_scripts.append(gen_del_script(kind, ingrs, index, next_useful_kind))
-        override_base = is_useful_ext and (next_useful_kind is None and next_useful_kind_ext is not None or next_useful_kind is not None and next_useful_kind_ext is None or next_useful_kind is not None and next_useful_kind_ext is not None and next_useful_kind[0] != next_useful_kind_ext[0])
-        if override_ext or override_base:
-            check_scripts_ext.append(gen_check_script(kind, ingrs_ext, index, next_useful_kind_ext))
-        if override_ext_del or override_base:
-            del_scripts_ext.append(gen_del_script(kind, ingrs_ext, index, next_useful_kind_ext))
         if is_useful:
             next_useful_kind = (index, kind)
-        if is_useful_ext:
-            next_useful_kind_ext = (index, kind)
     add_items.reverse()
-    add_items_ext.reverse()
     add_scripts.reverse()
-    add_scripts_ext.reverse()
     check_scripts.reverse()
-    check_scripts_ext.reverse()
     del_scripts.reverse()
-    del_scripts_ext.reverse()
 
     level_books = []
     for level in range(0, 100):
@@ -897,21 +872,12 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
 
     with open(mfr + 'alchemy_' + ingrs_set + '.esp.yaml', 'w', encoding='utf-8') as esp:
         yaml.dump(esp_header, esp, allow_unicode=True)
+        yaml.dump(extra_ingrs_esp, esp, allow_unicode=True)
         yaml.dump(add_items, esp, allow_unicode=True)
         yaml.dump(add_scripts, esp, allow_unicode=True)
         yaml.dump(check_scripts, esp, allow_unicode=True)
         yaml.dump(del_scripts, esp, allow_unicode=True)
         yaml.dump(level_books, esp, allow_unicode=True)
-
-    with open('A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '_Ext.esp.yaml', 'w', encoding='utf-8') as esp:
-        if add_items_ext:
-            yaml.dump(add_items_ext, esp, allow_unicode=True)
-        if add_scripts_ext:
-            yaml.dump(add_scripts_ext, esp, allow_unicode=True)
-        if check_scripts_ext:
-            yaml.dump(check_scripts_ext, esp, allow_unicode=True)
-        if del_scripts_ext:
-            yaml.dump(del_scripts_ext, esp, allow_unicode=True)
 
     assembly_plugin(mfr + 'alchemy_' + ingrs_set + '.esp', year, month, day, hour, minute, second)
 
