@@ -1,0 +1,10 @@
+/target/
+/.idea/
+**/*.rs.bk
+/test_data/*
+!/test_data/Saves/
+*.test.*
+*.esp
+*.esm
+*.test
+*.geany
