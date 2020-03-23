@@ -467,7 +467,7 @@ def gen_add_script(kind, ingrs, level, index):
     if type(kind.potion) == Potion2:
         s.append('if ( A1V6_AlchemyRes == 5 )')
         s.append('	player->AddItem ' + kind.potion.id_1 + ', 1')
-        s.append('else')
+        s.append('elseif ( A1V6_AlchemyRes == 6 )')
         s.append('	player->AddItem ' + kind.potion.id_1 + ', 2')
         s.append('endif')
     else:
@@ -479,7 +479,7 @@ def gen_add_script(kind, ingrs, level, index):
         s.append('	player->AddItem ' + kind.potion.id_standard_1 + ', 1')
         s.append('elseif ( A1V6_AlchemyRes == 8 )')
         s.append('	player->AddItem ' + kind.potion.id_qualitative_1 + ', 1')
-        s.append('else')
+        s.append('elseif ( A1V6_AlchemyRes == 9 )')
         s.append('	player->AddItem ' + kind.potion.id_exclusive_1 + ', 1')
         s.append('endif')
     s.append('')
