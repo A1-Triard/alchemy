@@ -57,7 +57,7 @@ kinds = [
     Kind('RestoreMagic', 'RestoreSpellPoints', Potion5('p_restore_magicka_b', 'p_restore_magicka_c', 'p_restore_magicka_s', 'p_restore_magicka_q', 'p_restore_magicka_e', 'restore_magicka')),
     Kind('WaterWalk', 'WaterWalking', Potion5('p_water_walking_b', 'p_water_walking_c', 'p_water_walking_s', 'p_water_walking_q', 'p_water_walking_e', 'water_walking')),
     Kind('WaterBrf', 'WaterBreathing', Potion5('p_water_breathing_b', 'p_water_breathing_c', 'p_water_breathing_s', 'p_water_breathing_q', 'p_water_breathing_e', 'water_breathing')),
-    Kind('Levitate', 'Levitate', Potion5('p_levitation_b', 'p_levitation_c', 'p_levitation_s', 'p_levitation_q', 'p_levitation_e', 'levitation')),
+    Kind('Levitate', 'Levitate', Potion5('p_levitation_b', 'p_levitation_c', 'p_levitation_s', 'P_Levitation_Q', 'p_levitation_e', 'levitation')),
     Kind('Tele', 'Telekinesis', Potion5('p_telekinesis_b', 'p_telekinesis_c', 'p_telekinesis_s', 'p_telekinesis_q', 'p_telekinesis_e', 'telekinesis')),
     Kind('Blight', 'CureBlightDisease', Potion2('p_cure_blight_s', 'cure_blight', 200)),
     Kind('Cure', 'CureCommonDisease', Potion2('p_cure_common_s', 'cure_common', 400)),

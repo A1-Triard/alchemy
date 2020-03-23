@@ -339,7 +339,7 @@
     - FNAM: Излечить моровую болезнь
     - ALDT:
         weight: 0.5
-        value: 130
+        value: 80
         auto_calculate_value: false
     - ENAM:
         index: CureBlightDisease
@@ -361,10 +361,142 @@
     - FNAM: Возврат
     - ALDT:
         weight: 0.5
-        value: 200
+        value: 175
         auto_calculate_value: false
     - ENAM:
         index: Recall
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_levitation_b
+    - MODL: "m\\Misc_Potion_Bargain_01.nif"
+    - MODL: "m\\K_Bargain_Crush.nif"
+    - TEXT: "m\\K_Bargain_Crush.tga"
+    - TEXT: "m\\Tx_potion_bargain_01.tga"
+    - TEXT: "m\\Pm_Bar_Lev.dds"
+    - FNAM: Уцененное зелье левитации
+    - FNAM: Левитация уцененное
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: Levitate
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_almsivi_intervention_s
+    - MODL: "m\\Misc_Potion_Fresh_01.nif"
+    - MODL: "m\\K_Fresh_Grape.nif"
+    - TEXT: "m\\K_Fresh_Grape.dds"
+    - TEXT: "m\\Tx_potion_fresh_01.tga"
+    - TEXT: "m\\Pm_Fre_Alm_Int.dds"
+    - FNAM: Зелье дурацкого счастья
+    - FNAM: Зелье дурацкого счастья
+    - ALDT:
+        weight: 0.5
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: AlmsiviIntervention
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_cure_common_s
+    - MODL: "m\\Misc_Potion_Fresh_01.nif"
+    - MODL: "m\\K_Fresh_Aqua.nif"
+    - TEXT: "m\\K_Fresh_Aqua.dds"
+    - TEXT: "m\\Tx_potion_fresh_01.tga"
+    - TEXT: "m\\Pm_Fre_Com.dds"
+    - FNAM: Зелье лечения обычных недугов
+    - FNAM: Излечить обычную болезнь
+    - ALDT:
+        weight: 0.5
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: CureCommonDisease
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_cure_paralyzation_s
+    - MODL: "m\\Misc_Potion_Fresh_01.nif"
+    - MODL: "m\\K_Fresh_Aqua.nif"
+    - TEXT: "m\\K_Fresh_Aqua.dds"
+    - TEXT: "m\\Tx_potion_fresh_01.tga"
+    - TEXT: "m\\Pm_Fre_Par.dds"
+    - FNAM: Зелье лечения парализации
+    - FNAM: Излечить паралич
+    - ALDT:
+        weight: 0.5
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: CureParalyzation
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_cure_poison_s
+    - MODL: "m\\Misc_Potion_Fresh_01.nif"
+    - MODL: "m\\K_Fresh_Aqua.nif"
+    - TEXT: "m\\K_Fresh_Aqua.dds"
+    - TEXT: "m\\Tx_potion_fresh_01.tga"
+    - TEXT: "m\\Pm_Fre_Poi.dds"
+    - FNAM: Зелье лечения отравлений
+    - FNAM: Противоядие
+    - ALDT:
+        weight: 0.5
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: CurePoison
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_mark_s
+    - MODL: "m\\Misc_Potion_Fresh_01.nif"
+    - MODL: "m\\K_Fresh_Grape.nif"
+    - TEXT: "m\\K_Fresh_Grape.dds"
+    - TEXT: "m\\Tx_potion_fresh_01.tga"
+    - TEXT: "m\\Pm_Fre_Mar.dds"
+    - FNAM: Зелье пометки
+    - FNAM: Пометка
+    - ALDT:
+        weight: 0.5
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: Mark
         skill: ~
         attribute: ~
         range: Self
@@ -1610,7 +1742,7 @@
     - MODL: "m\\K_Bargain_Crush.nif"
     - TEXT: "m\\K_Bargain_Crush.dds"
     - TEXT: "m\\tx_potion_bargain_01.dds"
-    - TEXT: "m\\Pm_Bar_Sum_Sph.dds"
+    - TEXT: "m\\Pm_Bar_Sum_Cln.dds"
     - FNAM: Уцен. з. выз. Сферы-центуриона
     - FNAM: Вызов Сферы-центуриона уценен.
     - ALDT:
@@ -1632,7 +1764,7 @@
     - MODL: "m\\K_Cheap_Crush.nif"
     - TEXT: "m\\K_Cheap_Crush.dds"
     - TEXT: "m\\tx_potion_cheap_01.dds"
-    - TEXT: "m\\Pm_Che_Sum_Sph.dds"
+    - TEXT: "m\\Pm_Che_Sum_Cln.dds"
     - FNAM: Дешев. з. выз. Сферы-центуриона
     - FNAM: Вызов Сферы-центуриона дешевое
     - ALDT:
@@ -1654,7 +1786,7 @@
     - MODL: "m\\K_Exclusive_Crush.nif"
     - TEXT: "m\\K_Exclusive_Crush.dds"
     - TEXT: "m\\tx_potion_exclusive_01.dds"
-    - TEXT: "m\\Pm_Exc_Sum_Sph.dds"
+    - TEXT: "m\\Pm_Exc_Sum_Cln.dds"
     - FNAM: Экскл. з. выз. Сферы-центуриона
     - FNAM: Вызов Сферы-центуриона экскл.
     - ALDT:
@@ -1676,7 +1808,7 @@
     - MODL: "m\\K_Quality_Crush.nif"
     - TEXT: "m\\K_Quality_Crush.dds"
     - TEXT: "m\\tx_potion_quality_01.dds"
-    - TEXT: "m\\Pm_Qua_Sum_Sph.dds"
+    - TEXT: "m\\Pm_Qua_Sum_Cln.dds"
     - FNAM: Кач. з. выз. Сферы-центуриона
     - FNAM: Вызов Сферы-центуриона качеств.
     - ALDT:
@@ -1698,7 +1830,7 @@
     - MODL: "m\\K_Fresh_Crush.nif"
     - TEXT: "m\\K_Fresh_Crush.dds"
     - TEXT: "m\\tx_potion_standard_01.dds"
-    - TEXT: "m\\Pm_Sta_Sum_Sph.dds"
+    - TEXT: "m\\Pm_Sta_Sum_Cln.dds"
     - FNAM: Станд. з. выз. Сферы-центуриона
     - FNAM: Вызов Сферы-центуриона станд.
     - ALDT:
