@@ -19,7 +19,7 @@
   - NAME: p_burden_s
   - MODL: m\Misc_Potion_Standard_01.NIF
   - TEXT: m\Tx_potion_standard_01.tga
-  - FNAM: Станд. зелье даэдра
+  - FNAM: Стандартное зелье даэдра
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -73,7 +73,7 @@
   - NAME: p_burden_c
   - MODL: m\Misc_Potion_Cheap_01.nif
   - TEXT: m\Tx_potion_cheap_01.tga
-  - FNAM: Деш. зелье даэдра
+  - FNAM: Дешевое зелье даэдра
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -91,7 +91,7 @@
   - NAME: p_burden_b
   - MODL: m\Misc_Potion_Bargain_01.nif
   - TEXT: m\Tx_potion_bargain_01.tga
-  - FNAM: Уцен. зелье даэдра
+  - FNAM: Уцененное зелье даэдра
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -109,7 +109,7 @@
   - NAME: p_burden_q
   - MODL: m\Misc_Potion_Quality_01.nif
   - TEXT: m\Tx_potion_quality_01.tga
-  - FNAM: Качеств. зелье даэдра
+  - FNAM: Качественное зелье даэдра
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -127,7 +127,7 @@
   - NAME: p_burden_e
   - MODL: m\Misc_Potion_Exclusive_01.nif
   - TEXT: m\Tx_potion_exclusive_01.tga
-  - FNAM: Экскл. зелье даэдра
+  - FNAM: Эксклюзивное зелье даэдра
   - ALDT:
       auto_calculate_value: false
       value: 175
