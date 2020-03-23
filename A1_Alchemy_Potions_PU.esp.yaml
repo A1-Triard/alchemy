@@ -6,7 +6,7 @@
         плагин для A1_Alchemy_V6_Apparatus.esp
       - ''
       - Версия для Potion Upgrade
-      records: 78
+      records: 84
       type: ESP
       version: 1067869798
   - MAST: Morrowind.esm
@@ -292,7 +292,7 @@
   - FNAM: Излечить моровую болезнь
   - ALDT:
       auto_calculate_value: false
-      value: 130
+      value: 80
       weight: 0.5
   - ENAM:
       area: 0
@@ -310,13 +310,121 @@
   - FNAM: Возврат
   - ALDT:
       auto_calculate_value: false
-      value: 200
+      value: 175
       weight: 0.5
   - ENAM:
       area: 0
       attribute: ~
       duration: 1
       index: Recall
+      magnitude_max: 1
+      magnitude_min: 1
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_levitation_b
+  - MODL: m\K_Bargain_Crush.nif
+  - TEXT: m\K_Bargain_Crush.tga
+  - FNAM: Левитация уцененное
+  - ALDT:
+      auto_calculate_value: false
+      value: 5
+      weight: 1.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 8
+      index: Levitate
+      magnitude_max: 5
+      magnitude_min: 5
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_almsivi_intervention_s
+  - MODL: m\K_Fresh_Grape.nif
+  - TEXT: m\K_Fresh_Grape.dds
+  - FNAM: Зелье дурацкого счастья
+  - ALDT:
+      auto_calculate_value: false
+      value: 175
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 1
+      index: AlmsiviIntervention
+      magnitude_max: 1
+      magnitude_min: 1
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_cure_common_s
+  - MODL: m\K_Fresh_Aqua.nif
+  - TEXT: m\K_Fresh_Aqua.dds
+  - FNAM: Излечить обычную болезнь
+  - ALDT:
+      auto_calculate_value: false
+      value: 35
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 1
+      index: CureCommonDisease
+      magnitude_max: 1
+      magnitude_min: 1
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_cure_paralyzation_s
+  - MODL: m\K_Fresh_Aqua.nif
+  - TEXT: m\K_Fresh_Aqua.dds
+  - FNAM: Излечить паралич
+  - ALDT:
+      auto_calculate_value: false
+      value: 35
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 1
+      index: CureParalyzation
+      magnitude_max: 1
+      magnitude_min: 1
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_cure_poison_s
+  - MODL: m\K_Fresh_Aqua.nif
+  - TEXT: m\K_Fresh_Aqua.dds
+  - FNAM: Противоядие
+  - ALDT:
+      auto_calculate_value: false
+      value: 35
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 1
+      index: CurePoison
+      magnitude_max: 1
+      magnitude_min: 1
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_mark_s
+  - MODL: m\K_Fresh_Grape.nif
+  - TEXT: m\K_Fresh_Grape.dds
+  - FNAM: Пометка
+  - ALDT:
+      auto_calculate_value: false
+      value: 35
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 1
+      index: Mark
       magnitude_max: 1
       magnitude_min: 1
       range: Self

@@ -6,7 +6,7 @@
         плагин для A1_Alchemy_V6_Apparatus.esp
       - ''
       - Версия для MagicMarker
-      records: 78
+      records: 84
       type: ESP
       version: 1067869798
   - MAST: Morrowind.esm
@@ -292,7 +292,7 @@
   - FNAM: Зелье лечения моровых болезней
   - ALDT:
       auto_calculate_value: false
-      value: 130
+      value: 80
       weight: 0.5
   - ENAM:
       area: 0
@@ -310,13 +310,121 @@
   - FNAM: Зелье воспоминания
   - ALDT:
       auto_calculate_value: false
-      value: 200
+      value: 175
       weight: 0.5
   - ENAM:
       area: 0
       attribute: ~
       duration: 1
       index: Recall
+      magnitude_max: 1
+      magnitude_min: 1
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_levitation_b
+  - MODL: m\Misc_Potion_Bargain_01.nif
+  - TEXT: m\Pm_Bar_Lev.dds
+  - FNAM: Уцененное зелье левитации
+  - ALDT:
+      auto_calculate_value: false
+      value: 5
+      weight: 1.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 8
+      index: Levitate
+      magnitude_max: 5
+      magnitude_min: 5
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_almsivi_intervention_s
+  - MODL: m\Misc_Potion_Fresh_01.nif
+  - TEXT: m\Pm_Fre_Alm_Int.dds
+  - FNAM: Зелье дурацкого счастья
+  - ALDT:
+      auto_calculate_value: false
+      value: 175
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 1
+      index: AlmsiviIntervention
+      magnitude_max: 1
+      magnitude_min: 1
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_cure_common_s
+  - MODL: m\Misc_Potion_Fresh_01.nif
+  - TEXT: m\Pm_Fre_Com.dds
+  - FNAM: Зелье лечения обычных недугов
+  - ALDT:
+      auto_calculate_value: false
+      value: 35
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 1
+      index: CureCommonDisease
+      magnitude_max: 1
+      magnitude_min: 1
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_cure_paralyzation_s
+  - MODL: m\Misc_Potion_Fresh_01.nif
+  - TEXT: m\Pm_Fre_Par.dds
+  - FNAM: Зелье лечения парализации
+  - ALDT:
+      auto_calculate_value: false
+      value: 35
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 1
+      index: CureParalyzation
+      magnitude_max: 1
+      magnitude_min: 1
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_cure_poison_s
+  - MODL: m\Misc_Potion_Fresh_01.nif
+  - TEXT: m\Pm_Fre_Poi.dds
+  - FNAM: Зелье лечения отравлений
+  - ALDT:
+      auto_calculate_value: false
+      value: 35
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 1
+      index: CurePoison
+      magnitude_max: 1
+      magnitude_min: 1
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_mark_s
+  - MODL: m\Misc_Potion_Fresh_01.nif
+  - TEXT: m\Pm_Fre_Mar.dds
+  - FNAM: Зелье пометки
+  - ALDT:
+      auto_calculate_value: false
+      value: 35
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 1
+      index: Mark
       magnitude_max: 1
       magnitude_min: 1
       range: Self
@@ -1332,7 +1440,7 @@
 - ALCH:
   - NAME: p_summon_centurion_sphere_b
   - MODL: m\misc_potion_bargain_01.nif
-  - TEXT: m\Pm_Bar_Sum_Sph.dds
+  - TEXT: m\Pm_Bar_Sum_Cln.dds
   - FNAM: Уцен. з. выз. Сферы-центуриона
   - ALDT:
       auto_calculate_value: false
@@ -1350,7 +1458,7 @@
 - ALCH:
   - NAME: p_summon_centurion_sphere_c
   - MODL: m\misc_potion_cheap_01.nif
-  - TEXT: m\Pm_Che_Sum_Sph.dds
+  - TEXT: m\Pm_Che_Sum_Cln.dds
   - FNAM: Дешев. з. выз. Сферы-центуриона
   - ALDT:
       auto_calculate_value: false
@@ -1368,7 +1476,7 @@
 - ALCH:
   - NAME: p_summon_centurion_sphere_e
   - MODL: m\misc_potion_exclusive_01.nif
-  - TEXT: m\Pm_Exc_Sum_Sph.dds
+  - TEXT: m\Pm_Exc_Sum_Cln.dds
   - FNAM: Экскл. з. выз. Сферы-центуриона
   - ALDT:
       auto_calculate_value: false
@@ -1386,7 +1494,7 @@
 - ALCH:
   - NAME: p_summon_centurion_sphere_q
   - MODL: m\misc_potion_quality_01.nif
-  - TEXT: m\Pm_Qua_Sum_Sph.dds
+  - TEXT: m\Pm_Qua_Sum_Cln.dds
   - FNAM: Кач. з. выз. Сферы-центуриона
   - ALDT:
       auto_calculate_value: false
@@ -1404,7 +1512,7 @@
 - ALCH:
   - NAME: p_summon_centurion_sphere_s
   - MODL: m\misc_potion_standard_01.nif
-  - TEXT: m\Pm_Sta_Sum_Sph.dds
+  - TEXT: m\Pm_Sta_Sum_Cln.dds
   - FNAM: Станд. з. выз. Сферы-центуриона
   - ALDT:
       auto_calculate_value: false
