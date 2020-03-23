@@ -821,9 +821,6 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
     ingrs.update({ i.name: i for i in load_ingredients('ingredients/Tribunal.esm.yaml') })
     ingrs.update({ i.name: i for i in load_ingredients('ingredients/Bloodmoon.esm.yaml') })
 
-    if ingrs_set == 'eva':
-        ingrs.update({ i.name: i for i in load_ingredients('ingredients/EVA.ESP.yaml') })
-
     extra_ingrs_esp = []
     extra_ingr_files = [
         'AlterationPrecise_1C.esp.yaml',
@@ -839,6 +836,9 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
         ingrs.update({ i.name: i for i in load_ingredients('ingredients/' + e) })
         with open('ingredients/' + e, 'r', encoding='utf-8') as f:
             extra_ingrs_esp.extend(yaml.load(f, Loader=yaml.FullLoader))
+
+    if ingrs_set == 'eva':
+        ingrs.update({ i.name: i for i in load_ingredients('ingredients/EVA.ESP.yaml') })
 
     ingrs = list(ingrs.values())
     ingrs.sort(key=lambda x: x.name)
