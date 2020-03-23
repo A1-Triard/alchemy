@@ -338,6 +338,7 @@ def gen_add_script(kind, ingrs, level, index):
     if groups:
         s.append('set in to 0')
         n_in = 0;
+        max_in = 0;
         for g in range(0, len(groups)):
             if g == 1 and g == len(groups) - 1:
                 s.append('if ( in > 0 )')
@@ -351,9 +352,11 @@ def gen_add_script(kind, ingrs, level, index):
                 if g == 0 and i == 0:
                     s.append('if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
                     s.append('	set in to 1')
+                    max_in = 1
                 elif g == 0:
                     s.append('elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
                     s.append('	set in to ' + str(n_in) + '')
+                    max_in = n_in
                 elif g == 1 and i == 0 and g == len(groups) - 1:
                     s.append('	if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
                     s.append('		set add to 1')
@@ -370,6 +373,7 @@ def gen_add_script(kind, ingrs, level, index):
                     s.append('	else')
                     s.append('		set in to ' + str(n_in) + '')
                     s.append('	endif')
+                    max_in = n_in
                 elif g == 1:
                     s.append('elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
                     s.append('	if ( in > 0 )')
@@ -378,6 +382,7 @@ def gen_add_script(kind, ingrs, level, index):
                     s.append('	else')
                     s.append('		set in to ' + str(n_in) + '')
                     s.append('	endif')
+                    max_in = n_in
                 elif i == 0 and g == len(groups) - 1:
                     s.append('		if ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
                     s.append('			set add to 1')
@@ -390,6 +395,7 @@ def gen_add_script(kind, ingrs, level, index):
                     s.append('		else')
                     s.append('			set in to ' + str(n_in) + '')
                     s.append('		endif')
+                    max_in = n_in
                 elif g == len(groups) - 1:
                     s.append('		elseif ( player->GetItemCount "' + groups[g][i].name + '" > 0 )')
                     s.append('			set add to 1')
@@ -402,6 +408,7 @@ def gen_add_script(kind, ingrs, level, index):
                     s.append('		else')
                     s.append('			set in to ' + str(n_in) + '')
                     s.append('		endif')
+                    max_in = n_in
             if g == 1 and g == len(groups) - 1:
                 s.append('	endif')
             elif g == len(groups) - 1:
@@ -411,22 +418,24 @@ def gen_add_script(kind, ingrs, level, index):
                 s.append('	endif')
             s.append('endif')
         s.append('if ( add == 1 )')
-        max_in = n_in
-        n_in = 0
-        if max_in == 2:
+        if max_in == 0:
             s.append('	player->RemoveItem "' + groups[1][0].name + '", 1')
+        elif max_in == 1:
+            print('pair error')
+            sys.exit(12)
         else:
-            for g in range(0, len(groups)):
-                for i in range(0, len(groups[g])):
+            n_in = 0
+            for g in groups:
+                for i in g:
                     n_in += 1
                     if n_in == 1:
                         s.append('	if ( in == 1 )')
-                    elif n_in == max_in - 1:
-                        s.append('	else')
-                    elif n_in != max_in:
+                    elif n_in < max_in:
                         s.append('	elseif ( in == ' + str(n_in) + ' )')
-                    if n_in != max_in:
-                        s.append('		player->RemoveItem "' + groups[g][i].name + '", 1')
+                    elif n_in == max_in:
+                        s.append('	else')
+                    if n_in <= max_in:
+                        s.append('		player->RemoveItem "' + i.name + '", 1')
             s.append('	endif')
         s.append('endif')
     n_pair = 0
