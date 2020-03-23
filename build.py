@@ -724,9 +724,13 @@ def gen_add_item(kind, index, level):
             gen_effect_prop(irdt, kind.effect[1], '_skill', level)
         else:
             gen_effect_prop(irdt, kind.effect[1], '_attribute', level)
+    name = 'A1V6_L' + str(level) + '_' + kind.potion.id_base
+    if len(name) > 31:
+        print('too long name')
+        sys.exit(31)
     return {
         'INGR': [
-            {'NAME': 'A1V6_L' + str(level) + '_' + kind.potion.id_base},
+            {'NAME': name},
             {'MODL': 'm\\misc_com_bottle_05.nif'},
             {'FNAM': ' Создать'},
             {'IRDT': irdt},
