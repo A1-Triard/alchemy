@@ -5,8 +5,8 @@
     - TEXT: "m\\K_Fresh_Aqua.dds"
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - TEXT: "m\\Pm_Sta_Res_Now.dds"
-    - FNAM: Станд. зелье даэдра
-    - FNAM: Даэдра стандартное
+    - FNAM: Стандартное зелье даэдра
+    - FNAM: Сопротивление обыч. оружию ст.
     - ALDT:
         weight: 0.75
         value: 35
@@ -71,8 +71,8 @@
     - TEXT: "m\\K_Cheap_Aqua.dds"
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - TEXT: "m\\Pm_Che_Res_Now.dds"
-    - FNAM: Деш. зелье даэдра
-    - FNAM: Даэдра дешевое
+    - FNAM: Дешевое зелье даэдра
+    - FNAM: Сопротивление обыч. оружию деш.
     - ALDT:
         weight: 1.0
         value: 15
@@ -93,8 +93,8 @@
     - TEXT: "m\\K_Bargain_Aqua.dds"
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - TEXT: "m\\Pm_Bar_Res_Now.dds"
-    - FNAM: Уцен. зелье даэдра
-    - FNAM: Даэдра уцененное
+    - FNAM: Уцененное зелье даэдра
+    - FNAM: Сопротивление обыч. оружию уц.
     - ALDT:
         weight: 1.5
         value: 5
@@ -115,8 +115,8 @@
     - TEXT: "m\\K_Quality_Aqua.dds"
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - TEXT: "m\\Pm_Qua_Res_Now.dds"
-    - FNAM: Качеств. зелье даэдра
-    - FNAM: Даэдра качественное
+    - FNAM: Качественное зелье даэдра
+    - FNAM: Сопротивление обыч. оружию кач.
     - ALDT:
         weight: 0.5
         value: 80
@@ -137,8 +137,8 @@
     - TEXT: "m\\K_Exclusive_Aqua.dds"
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - TEXT: "m\\Pm_Exc_Res_Now.dds"
-    - FNAM: Экскл. зелье даэдра
-    - FNAM: Даэдра эксклюзивное
+    - FNAM: Эксклюзивное зелье даэдра
+    - FNAM: Сопротивление обыч. оружию экс.
     - ALDT:
         weight: 0.25
         value: 175
