@@ -7,6 +7,7 @@ use winapi::shared::windef::*;
 use winapi::um::winuser::*;
 use winapi::um::libloaderapi::*;
 use winapi::um::errhandlingapi::*;
+use winapi::shared::basetsd::*;
 use std::os::raw::c_int;
 
 pub struct Window<'a> {
@@ -33,6 +34,8 @@ pub struct WmDestroy {
 pub trait WindowProc {
     fn wm_close(&mut self, _window: Window) { }
     fn wm_destroy(&mut self, _wm: &mut WmDestroy) { }
+    fn wm_init_dialog(&mut self, __window: Window) { }
+    fn wm_command(&mut self, __window: Window, _command_id: u16) { }
 }
 
 impl<'a> Window<'a> {
@@ -103,6 +106,11 @@ impl<'a> Window<'a> {
     pub fn destroy(mut self) {
         self.destroy_on_drop = true;
     }
+    
+    pub fn end_dialog(self, result: INT_PTR) {
+        let ok = unsafe { EndDialog(self.h_wnd.as_ptr(), result) != 0 };
+        debug_assert!(ok);
+    }
 }
 
 pub struct WindowClass {
@@ -134,15 +142,17 @@ impl WindowClass {
                 (*window_proc).wm_destroy(&mut wm);
                 if wm.post_quit_message {
                     PostQuitMessage(0);
-                    Some(0)
-                } else {
-                    None
                 }
+                Some(0)
             } else {
                 let window = Window { h_wnd: NonNull::new_unchecked(h_wnd), destroy_on_drop: false, phantom: PhantomData };
                 match msg {
                     WM_CLOSE => {
                         (*window_proc).wm_close(window);
+                        Some(0)
+                    },
+                    WM_COMMAND => {
+                        (*window_proc).wm_command(window, (w_param & 0xFFFF) as u16);
                         Some(0)
                     },
                     _ => None
@@ -188,4 +198,44 @@ pub fn message_box(message: &str, caption: &str, u_type: UINT) {
         caption.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr(),
         u_type
     ); }
+}
+
+pub fn dialog_box(id: u16, window_proc: &mut dyn WindowProc) -> INT_PTR {
+    unsafe extern "system" fn dlgproc(h_wnd: HWND, msg: UINT, w_param: WPARAM, l_param: LPARAM) -> INT_PTR {
+        if msg == WM_INITDIALOG {
+            SetWindowLongPtrW(h_wnd, GWLP_USERDATA, l_param);
+        }
+        let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc;
+        let res = if window_proc.is_null() {
+            FALSE
+        } else if msg == WM_DESTROY {
+            let mut wm = WmDestroy { post_quit_message: false };
+            (*window_proc).wm_destroy(&mut wm);
+            if wm.post_quit_message {
+                PostQuitMessage(0);
+            }
+            TRUE
+        } else {
+            let window = Window { h_wnd: NonNull::new_unchecked(h_wnd), destroy_on_drop: false, phantom: PhantomData };
+            match msg {
+                WM_INITDIALOG => {
+                    (*window_proc).wm_init_dialog(window);
+                    TRUE
+                },
+                WM_COMMAND => {
+                    (*window_proc).wm_command(window, (w_param & 0xFFFF) as u16);
+                     TRUE
+                },
+                _ => FALSE
+            }
+        };
+        if msg == WM_DESTROY {
+            Box::from_raw(window_proc);
+            SetWindowLongPtrW(h_wnd, GWLP_USERDATA, 0);
+        }
+        res as INT_PTR
+    }
+    unsafe {
+        DialogBoxParamW(null_mut(), id as usize as *const _, null_mut(), Some(dlgproc), Box::into_raw(Box::new(window_proc)) as LPARAM)
+    }
 }

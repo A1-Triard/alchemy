@@ -6,3 +6,7 @@ edition = "2018"
 
 [dependencies]
 winapi = { version = "0.3.8", features = ["winuser", "libloaderapi", "errhandlingapi"] }
+
+[build-dependencies]
+windres = "0.2.1"
+find-winsdk = "0.2.0"
