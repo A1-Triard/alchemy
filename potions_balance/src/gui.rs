@@ -26,7 +26,14 @@ impl<'a> Drop for Window<'a> {
     }
 }
 
-pub trait WindowProc = for<'b> FnMut(Window<'b>, UINT, WPARAM, LPARAM, ) -> Option<LRESULT>;
+pub struct WmDestroy {
+    pub post_quit_message: bool
+}
+
+pub trait WindowProc {
+    fn wm_close(&mut self, _window: Window) { }
+    fn wm_destroy(&mut self, _wm: &mut WmDestroy) { }
+}
 
 impl<'a> Window<'a> {
     pub fn new(class: &'a WindowClass, name: &str, width: c_int, height: c_int, window_proc: &'a mut dyn WindowProc) -> Result<Window<'a>, ()> {
@@ -122,10 +129,24 @@ impl WindowClass {
             let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc;
             let res = if window_proc.is_null() {
                 None
+            } else if msg == WM_DESTROY {
+                let mut wm = WmDestroy { post_quit_message: false };
+                (*window_proc).wm_destroy(&mut wm);
+                if wm.post_quit_message {
+                    PostQuitMessage(0);
+                    Some(0)
+                } else {
+                    None
+                }
             } else {
                 let window = Window { h_wnd: NonNull::new_unchecked(h_wnd), destroy_on_drop: false, phantom: PhantomData };
-                let res = (*window_proc)(window, msg, w_param, l_param);
-                res
+                match msg {
+                    WM_CLOSE => {
+                        (*window_proc).wm_close(window);
+                        Some(0)
+                    },
+                    _ => None
+                }
             }.unwrap_or_else(|| DefWindowProcW(h_wnd, msg, w_param, l_param));
             if msg == WM_DESTROY {
                 Box::from_raw(window_proc);
