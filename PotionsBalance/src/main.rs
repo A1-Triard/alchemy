@@ -19,7 +19,7 @@ static STANDARD: &'static [u16] = &[
     8, 15, 30, 45, 60,
     5, 8, 10, 15, 20,
     1, 2, 10, 20, 40,
-    5
+    5, 15, 10, 15, 10
 ];
 
 static RECOMMEND: &'static [u16] = &[
@@ -29,7 +29,7 @@ static RECOMMEND: &'static [u16] = &[
     20, 40, 80, 160, 320,
     10, 25, 45, 70, 100,
     5, 10, 17, 25, 40,
-    5
+    5, 80, 45, 80, 45
 ];
 
 struct MainWindowProc;
