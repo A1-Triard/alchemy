@@ -47,6 +47,12 @@ impl WindowProc for MainWindowProc {
                 window.set_dialog_item_text(182, "10");
                 window.set_dialog_item_text(183, "15");
                 window.set_dialog_item_text(184, "20");
+                window.set_dialog_item_text(190, "1");
+                window.set_dialog_item_text(191, "2");
+                window.set_dialog_item_text(192, "10");
+                window.set_dialog_item_text(193, "20");
+                window.set_dialog_item_text(194, "40");
+                window.set_dialog_item_text(195, "5");
             },
             130 => {
                 window.set_dialog_item_text(150, "20");
@@ -74,6 +80,12 @@ impl WindowProc for MainWindowProc {
                 window.set_dialog_item_text(182, "45");
                 window.set_dialog_item_text(183, "70");
                 window.set_dialog_item_text(184, "100");
+                window.set_dialog_item_text(190, "5");
+                window.set_dialog_item_text(191, "10");
+                window.set_dialog_item_text(192, "17");
+                window.set_dialog_item_text(193, "25");
+                window.set_dialog_item_text(194, "40");
+                window.set_dialog_item_text(195, "5");
             }
             _ => { }
         }
