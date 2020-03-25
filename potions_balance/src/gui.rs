@@ -127,6 +127,34 @@ impl Drop for WindowClass {
     }
 }
 
+unsafe fn window_message(window_proc: &mut dyn WindowProc, h_wnd: HWND, msg: UINT, w_param: WPARAM, _l_param: LPARAM) -> bool {
+    if msg == WM_DESTROY {
+        let mut wm = WmDestroy { post_quit_message: false };
+        window_proc.wm_destroy(&mut wm);
+        if wm.post_quit_message {
+            PostQuitMessage(0);
+        }
+        true
+    } else {
+        let window = Window { h_wnd: NonNull::new_unchecked(h_wnd), destroy_on_drop: false, phantom: PhantomData };
+        match msg {
+            WM_CLOSE => {
+                window_proc.wm_close(window);
+                true
+            },
+            WM_COMMAND => {
+                window_proc.wm_command(window, (w_param & 0xFFFF) as u16);
+                true
+            },
+            WM_INITDIALOG => {
+                window_proc.wm_init_dialog(window);
+                true
+            },
+            _ => false
+        }
+    }
+}
+
 impl WindowClass {
     pub fn new(name: &str) -> Result<WindowClass, ()> {
         unsafe extern "system" fn wndproc(h_wnd: HWND, msg: UINT, w_param: WPARAM, l_param: LPARAM) -> LRESULT {
@@ -135,29 +163,11 @@ impl WindowClass {
                 SetWindowLongPtrW(h_wnd, GWLP_USERDATA, (*create_struct).lpCreateParams as isize);
             }
             let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc;
-            let res = if window_proc.is_null() {
-                None
-            } else if msg == WM_DESTROY {
-                let mut wm = WmDestroy { post_quit_message: false };
-                (*window_proc).wm_destroy(&mut wm);
-                if wm.post_quit_message {
-                    PostQuitMessage(0);
-                }
-                Some(0)
+            let res = if !window_proc.is_null() && window_message(*window_proc, h_wnd, msg, w_param, l_param) { 
+                0
             } else {
-                let window = Window { h_wnd: NonNull::new_unchecked(h_wnd), destroy_on_drop: false, phantom: PhantomData };
-                match msg {
-                    WM_CLOSE => {
-                        (*window_proc).wm_close(window);
-                        Some(0)
-                    },
-                    WM_COMMAND => {
-                        (*window_proc).wm_command(window, (w_param & 0xFFFF) as u16);
-                        Some(0)
-                    },
-                    _ => None
-                }
-            }.unwrap_or_else(|| DefWindowProcW(h_wnd, msg, w_param, l_param));
+                DefWindowProcW(h_wnd, msg, w_param, l_param)
+            };
             if msg == WM_DESTROY {
                 Box::from_raw(window_proc);
                 SetWindowLongPtrW(h_wnd, GWLP_USERDATA, 0);
@@ -206,28 +216,10 @@ pub fn dialog_box(id: u16, window_proc: &mut dyn WindowProc) -> INT_PTR {
             SetWindowLongPtrW(h_wnd, GWLP_USERDATA, l_param);
         }
         let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc;
-        let res = if window_proc.is_null() {
-            FALSE
-        } else if msg == WM_DESTROY {
-            let mut wm = WmDestroy { post_quit_message: false };
-            (*window_proc).wm_destroy(&mut wm);
-            if wm.post_quit_message {
-                PostQuitMessage(0);
-            }
+        let res = if !window_proc.is_null() && window_message(*window_proc, h_wnd, msg, w_param, l_param) { 
             TRUE
         } else {
-            let window = Window { h_wnd: NonNull::new_unchecked(h_wnd), destroy_on_drop: false, phantom: PhantomData };
-            match msg {
-                WM_INITDIALOG => {
-                    (*window_proc).wm_init_dialog(window);
-                    TRUE
-                },
-                WM_COMMAND => {
-                    (*window_proc).wm_command(window, (w_param & 0xFFFF) as u16);
-                     TRUE
-                },
-                _ => FALSE
-            }
+            FALSE
         };
         if msg == WM_DESTROY {
             Box::from_raw(window_proc);
