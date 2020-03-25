@@ -116,15 +116,38 @@ impl<'a> Window<'a> {
         debug_assert!(ok);
     }
 
-    pub fn set_dialog_item_text(&self, item_id: u16, text: &str) {
+    pub fn get_dialog_item(&self, item_id: u16) -> Option<impl AsRef<Window>> {
+        let h_wnd = NonNull::new(unsafe { GetDlgItem(self.h_wnd.as_ptr(), item_id as c_int) });
+        h_wnd.map(|h_wnd| WindowAsRef(Window { h_wnd, destroy_on_drop: false, phantom: PhantomData }))
+    }
+
+    pub fn set_dialog_item_text_s(&self, item_id: u16, text: &str) {
         let os_string = OsString::from_wide(&text.encode_utf16().collect::<Vec<_>>());
-        self.set_dialog_item_text_os(item_id, &os_string);
+        self.set_dialog_item_text(item_id, &os_string);
     }
     
-    pub fn set_dialog_item_text_os(&self, item_id: u16, text: &OsStr) {
+    pub fn set_dialog_item_text(&self, item_id: u16, text: &OsStr) {
         let text = text.encode_wide().chain(once(0)).collect::<Vec<_>>().as_ptr();
         unsafe { SetDlgItemTextW(self.h_wnd.as_ptr(), item_id as c_int, text); }
     }
+    
+    pub fn get_dialog_item_text(&self, item_id: u16, max_len: u16) -> OsString {
+        let mut text = Vec::with_capacity(max_len as usize);
+        text.resize(max_len as usize, 0);
+        let res = unsafe { GetDlgItemTextW(self.h_wnd.as_ptr(), item_id as c_int, text.as_mut_ptr(), text.len() as i32) };
+        OsString::from_wide(&text[..res as usize])
+    }
+
+    pub fn set_dialog_item_limit_text(&self, item_id: u16, limit: u16) {
+        unsafe { SendDlgItemMessageW(self.h_wnd.as_ptr(), item_id as c_int, EM_LIMITTEXT as u32, limit as usize, 0); }
+    }
+
+}
+
+struct WindowAsRef<'a>(Window<'a>);
+
+impl<'a> AsRef<Window<'a>> for WindowAsRef<'a> {
+    fn as_ref(&self) -> &Window<'a> { &self.0 }
 }
 
 pub struct WindowClass {

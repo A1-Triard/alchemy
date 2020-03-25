@@ -6,7 +6,7 @@ STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Баланс зелий"
 FONT 8, "MS Sans Serif"
 BEGIN
-    DEFPUSHBUTTON "Сгенерировать &плагин", 127, 242, 150, 92, 14
+    DEFPUSHBUTTON "Сгенерировать плагин", 127, 242, 150, 92, 14
     LTEXT "Расположение Morrowind:", IDC_STATIC, 9, 10, 100, 12
     EDITTEXT 132, 100, 8, 218, 12
     PUSHBUTTON "...", 133, 320, 8, 12, 12
@@ -60,6 +60,7 @@ BEGIN
     EDITTEXT 177, 298, 92, 32, 12, ES_RIGHT | ES_NUMBER | WS_BORDER | WS_TABSTOP
     EDITTEXT 178, 298, 108, 32, 12, ES_RIGHT | ES_NUMBER | WS_BORDER | WS_TABSTOP
     EDITTEXT 179, 298, 124, 32, 12, ES_RIGHT | ES_NUMBER | WS_BORDER | WS_TABSTOP
-    PUSHBUTTON "&Стандартные", 129, 8, 150, 68, 14
-    PUSHBUTTON "&Рекомендуемые", 130, 80, 150, 68, 14
+    PUSHBUTTON "Стандартные", 129, 8, 150, 68, 14
+    PUSHBUTTON "Рекомендуемые", 130, 80, 150, 68, 14
+    PUSHBUTTON "Текущие", 135, 152, 150, 68, 14
 END
