@@ -111,6 +111,11 @@ impl<'a> Window<'a> {
         let ok = unsafe { EndDialog(self.h_wnd.as_ptr(), result) != 0 };
         debug_assert!(ok);
     }
+    
+    pub fn set_dialog_item_text(&self, item_id: u16, text: &str) {
+        let text = text.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr();
+        unsafe { SetDlgItemTextW(self.h_wnd.as_ptr(), item_id as c_int, text); }
+    }
 }
 
 pub struct WindowClass {
