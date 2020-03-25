@@ -34,8 +34,8 @@ pub struct WmDestroy {
 pub trait WindowProc {
     fn wm_close(&mut self, _window: Window) { }
     fn wm_destroy(&mut self, _wm: &mut WmDestroy) { }
-    fn wm_init_dialog(&mut self, __window: Window) { }
-    fn wm_command(&mut self, __window: Window, _command_id: u16) { }
+    fn wm_init_dialog(&mut self, _window: Window) { }
+    fn wm_command(&mut self, _window: Window, _command_id: u16) { }
 }
 
 impl<'a> Window<'a> {

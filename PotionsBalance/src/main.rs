@@ -12,6 +12,26 @@ fn main() {
     dialog_box(1, main_dialog_proc);
 }
 
+static STANDARD: &'static [u16] = &[
+    5, 15, 35, 80, 175,
+    8, 15, 30, 45, 60,
+    5, 8, 10, 15, 20,
+    8, 15, 30, 45, 60,
+    5, 8, 10, 15, 20,
+    1, 2, 10, 20, 40,
+    5
+];
+
+static RECOMMEND: &'static [u16] = &[
+    20, 40, 80, 160, 320,
+    20, 40, 80, 160, 320,
+    10, 25, 45, 70, 100,
+    20, 40, 80, 160, 320,
+    10, 25, 45, 70, 100,
+    5, 10, 17, 25, 40,
+    5
+];
+
 struct MainWindowProc;
 
 impl WindowProc for MainWindowProc {
@@ -19,73 +39,23 @@ impl WindowProc for MainWindowProc {
         window.destroy();
     }
 
+    fn wm_init_dialog(&mut self, window: Window) {
+        window.set_dialog_item_text(134, "PotionsBalance");
+        for (i, v) in STANDARD.iter().enumerate() {
+            window.set_dialog_item_text(150 + i as u16, &v.to_string());
+        }
+    }
     fn wm_command(&mut self, window: Window, command_id: u16) {
         match command_id {
             129 => {
-                window.set_dialog_item_text(150, "5");
-                window.set_dialog_item_text(151, "15");
-                window.set_dialog_item_text(152, "35");
-                window.set_dialog_item_text(153, "80");
-                window.set_dialog_item_text(154, "175");
-                window.set_dialog_item_text(160, "8");
-                window.set_dialog_item_text(165, "5");
-                window.set_dialog_item_text(161, "15");
-                window.set_dialog_item_text(166, "8");
-                window.set_dialog_item_text(162, "30");
-                window.set_dialog_item_text(167, "10");
-                window.set_dialog_item_text(163, "45");
-                window.set_dialog_item_text(168, "15");
-                window.set_dialog_item_text(164, "60");
-                window.set_dialog_item_text(169, "20");
-                window.set_dialog_item_text(170, "8");
-                window.set_dialog_item_text(171, "15");
-                window.set_dialog_item_text(172, "30");
-                window.set_dialog_item_text(173, "45");
-                window.set_dialog_item_text(174, "60");
-                window.set_dialog_item_text(180, "5");
-                window.set_dialog_item_text(181, "8");
-                window.set_dialog_item_text(182, "10");
-                window.set_dialog_item_text(183, "15");
-                window.set_dialog_item_text(184, "20");
-                window.set_dialog_item_text(190, "1");
-                window.set_dialog_item_text(191, "2");
-                window.set_dialog_item_text(192, "10");
-                window.set_dialog_item_text(193, "20");
-                window.set_dialog_item_text(194, "40");
-                window.set_dialog_item_text(195, "5");
+                for (i, v) in STANDARD.iter().enumerate() {
+                    window.set_dialog_item_text(150 + i as u16, &v.to_string());
+                }
             },
             130 => {
-                window.set_dialog_item_text(150, "20");
-                window.set_dialog_item_text(151, "40");
-                window.set_dialog_item_text(152, "80");
-                window.set_dialog_item_text(153, "160");
-                window.set_dialog_item_text(154, "320");
-                window.set_dialog_item_text(160, "20");
-                window.set_dialog_item_text(165, "10");
-                window.set_dialog_item_text(161, "40");
-                window.set_dialog_item_text(166, "25");
-                window.set_dialog_item_text(162, "80");
-                window.set_dialog_item_text(167, "45");
-                window.set_dialog_item_text(163, "160");
-                window.set_dialog_item_text(168, "70");
-                window.set_dialog_item_text(164, "320");
-                window.set_dialog_item_text(169, "100");
-                window.set_dialog_item_text(170, "20");
-                window.set_dialog_item_text(171, "40");
-                window.set_dialog_item_text(172, "80");
-                window.set_dialog_item_text(173, "160");
-                window.set_dialog_item_text(174, "320");
-                window.set_dialog_item_text(180, "10");
-                window.set_dialog_item_text(181, "25");
-                window.set_dialog_item_text(182, "45");
-                window.set_dialog_item_text(183, "70");
-                window.set_dialog_item_text(184, "100");
-                window.set_dialog_item_text(190, "5");
-                window.set_dialog_item_text(191, "10");
-                window.set_dialog_item_text(192, "17");
-                window.set_dialog_item_text(193, "25");
-                window.set_dialog_item_text(194, "40");
-                window.set_dialog_item_text(195, "5");
+                for (i, v) in RECOMMEND.iter().enumerate() {
+                    window.set_dialog_item_text(150 + i as u16, &v.to_string());
+                }
             }
             _ => { }
         }
