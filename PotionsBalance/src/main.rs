@@ -3,9 +3,8 @@
 
 mod gui;
 
-use winapi::shared::basetsd::INT_PTR;
-use winapi::um::winuser::*;
 use gui::*;
+use std::iter::once;
 
 fn main() {
     let main_dialog_proc = &mut MainWindowProc;
@@ -40,7 +39,7 @@ impl WindowProc for MainWindowProc {
     }
 
     fn wm_init_dialog(&mut self, window: Window) {
-        window.set_dialog_item_text(134, "PotionsBalance");
+        window.set_dialog_item_text(134, "PotionsBalance".into());
         for (i, v) in STANDARD.iter().enumerate() {
             window.set_dialog_item_text(150 + i as u16, &v.to_string());
         }
@@ -56,7 +55,12 @@ impl WindowProc for MainWindowProc {
                 for (i, v) in RECOMMEND.iter().enumerate() {
                     window.set_dialog_item_text(150 + i as u16, &v.to_string());
                 }
-            }
+            },
+            133 => {
+                if let Some(file) = get_open_file_name(Some(&window), Some("Morrowind.ini"), once(("Morrowind.ini", "Morrowind.ini"))) {
+                    window.set_dialog_item_text_os(132, &file.parent().unwrap().as_os_str());
+                }
+            },
             _ => { }
         }
     }

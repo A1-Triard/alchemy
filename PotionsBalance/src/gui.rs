@@ -7,8 +7,12 @@ use winapi::shared::windef::*;
 use winapi::um::winuser::*;
 use winapi::um::libloaderapi::*;
 use winapi::um::errhandlingapi::*;
+use winapi::um::commdlg::*;
 use winapi::shared::basetsd::*;
 use std::os::raw::c_int;
+use std::path::PathBuf;
+use std::os::windows::ffi::{OsStringExt, OsStrExt};
+use std::ffi::{OsStr, OsString};
 
 pub struct Window<'a> {
     h_wnd: NonNull<HWND__>,
@@ -111,9 +115,14 @@ impl<'a> Window<'a> {
         let ok = unsafe { EndDialog(self.h_wnd.as_ptr(), result) != 0 };
         debug_assert!(ok);
     }
-    
+
     pub fn set_dialog_item_text(&self, item_id: u16, text: &str) {
-        let text = text.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr();
+        let os_string = OsString::from_wide(&text.encode_utf16().collect::<Vec<_>>());
+        self.set_dialog_item_text_os(item_id, &os_string);
+    }
+    
+    pub fn set_dialog_item_text_os(&self, item_id: u16, text: &OsStr) {
+        let text = text.encode_wide().chain(once(0)).collect::<Vec<_>>().as_ptr();
         unsafe { SetDlgItemTextW(self.h_wnd.as_ptr(), item_id as c_int, text); }
     }
 }
@@ -234,5 +243,46 @@ pub fn dialog_box(id: u16, window_proc: &mut dyn WindowProc) -> INT_PTR {
     }
     unsafe {
         DialogBoxParamW(null_mut(), id as usize as *const _, null_mut(), Some(dlgproc), Box::into_raw(Box::new(window_proc)) as LPARAM)
+    }
+}
+
+pub fn get_open_file_name<'a, 'b>(owner: Option<&Window>, title: Option<&str>, filter: impl Iterator<Item=(&'a str, &'b str)>) -> Option<PathBuf> {
+    let filter = filter
+        .flat_map(|(x, y)| once(x).chain(once(y)))
+        .flat_map(|x| x.encode_utf16().map(|x| { assert_ne!(x, 0); x }).chain(once(0)))
+        .chain(once(0))
+        .collect::<Vec<_>>();
+    let mut file = Vec::with_capacity(256);
+    file.resize(256, 0);
+    let mut args = OPENFILENAMEW {
+        lStructSize: size_of::<OPENFILENAMEW>() as u32,
+        hwndOwner: owner.map_or(null_mut(), |x| x.h_wnd.as_ptr()),
+        hInstance: null_mut(),
+        lpstrFilter: filter.as_ptr(),
+        lpstrCustomFilter: null_mut(),
+        nMaxCustFilter: 0,
+        nFilterIndex: 0,
+        lpstrFile: file.as_mut_ptr(),
+        nMaxFile: file.len() as u32,
+        lpstrFileTitle: null_mut(),
+        nMaxFileTitle: 0,
+        lpstrInitialDir: null(),
+        lpstrTitle: title.map_or(null(), |x| x.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr()),
+        Flags: OFN_DONTADDTORECENT | OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST | OFN_LONGNAMES,
+        nFileOffset: 0,
+        nFileExtension: 0,
+        lpstrDefExt: null(),
+        lCustData: 0,
+        lpfnHook: None,
+        lpTemplateName: null(),
+        pvReserved: null_mut(),
+        dwReserved: 0,
+        FlagsEx: 0
+    };
+    let selected = unsafe { GetOpenFileNameW(&mut args as *mut _) != 0 };
+    if selected {
+        Some(OsString::from_wide(&file).into())
+    } else {
+        None
     }
 }
