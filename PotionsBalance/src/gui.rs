@@ -39,7 +39,7 @@ pub trait WindowProc {
     fn wm_close(&mut self, _window: Window) { }
     fn wm_destroy(&mut self, _wm: &mut WmDestroy) { }
     fn wm_init_dialog(&mut self, _window: Window) { }
-    fn wm_command(&mut self, _window: Window, _command_id: u16) { }
+    fn wm_command(&mut self, _window: Window, _command_id: u16, _notification_code: u16) { }
 }
 
 impl<'a> Window<'a> {
@@ -121,7 +121,7 @@ impl<'a> Window<'a> {
         h_wnd.map(|h_wnd| WindowAsRef(Window { h_wnd, destroy_on_drop: false, phantom: PhantomData }))
     }
 
-    pub fn set_dialog_item_text_s(&self, item_id: u16, text: &str) {
+    pub fn set_dialog_item_text_str(&self, item_id: u16, text: &str) {
         let os_string = OsString::from_wide(&text.encode_utf16().collect::<Vec<_>>());
         self.set_dialog_item_text(item_id, &os_string);
     }
@@ -180,7 +180,7 @@ unsafe fn window_message(window_proc: &mut dyn WindowProc, h_wnd: HWND, msg: UIN
                 true
             },
             WM_COMMAND => {
-                window_proc.wm_command(window, (w_param & 0xFFFF) as u16);
+                window_proc.wm_command(window, (w_param & 0xFFFF) as u16,  ((w_param >> 16) & 0xFFFF) as u16);
                 true
             },
             WM_INITDIALOG => {
