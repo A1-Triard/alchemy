@@ -16,10 +16,11 @@ use std::io::Read;
 use encoding::all::WINDOWS_1251;
 use encoding::Encoding;
 use encoding::DecoderTrap;
-use esl::{ALCH};
+use esl::{ALCH, Record, ENAM, NAME, Field};
 use esl::read::{Records, RecordReadMode};
 use esl::code::CodePage;
 use either::{Right, Left};
+use std::collections::{HashSet, HashMap};
 
 fn main() {
     let main_dialog_proc = &mut MainWindowProc { edit_original_value: None };
@@ -117,7 +118,55 @@ impl WindowProc for MainWindowProc {
     }
 }
 
+#[derive(Debug, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Hash)]
+enum PotionLevel {
+    Bargain,
+    Cheap,
+    Standard,
+    Quality,
+    Exclusive
+}
+
+fn potion_level_kind(id: &str, record: &Record) -> Option<(PotionLevel,  String)> {
+    let mut effects = record.fields.iter().filter(|(tag, _)| *tag == ENAM);
+    let effect = if let Some((_, effect)) = effects.next() {
+        effect
+    } else {
+        return None;
+    };
+    if effects.next().is_some() { return None; }
+    if id.starts_with("P_") {
+        if id.ends_with("_B") {
+            Some((PotionLevel::Bargain, id[2 .. id.len() - 2].replace(' ', "_")))
+        } else if id.ends_with("_C") {
+            Some((PotionLevel::Cheap, id[2 .. id.len() - 2].replace(' ', "_")))
+        } else if id.ends_with("_S") {
+            Some((PotionLevel::Standard, id[2 .. id.len() - 2].replace(' ', "_")))
+        } else if id.ends_with("_Q") {
+            Some((PotionLevel::Quality, id[2 .. id.len() - 2].replace(' ', "_")))
+        } else if id.ends_with("_E") {
+            Some((PotionLevel::Exclusive, id[2 .. id.len() - 2].replace(' ', "_")))
+        } else {
+            None
+        }
+    } else {
+        None
+    }
+}
+
 fn generate_plugin(mw_path: &Path, esp_name: &OsString, values: &[u16]) -> Result<(), String> {
+    let potions = collect_potions(mw_path)?;
+    let mut normalized_ids = HashMap::new();
+    for (id, potion) in potions.iter() {
+        let normalized_id = id.replace(' ', "_");
+        if let Some((existing_id, _)) = normalized_ids.insert(normalized_id, (id, potion)) {
+            return Err(format!("Зелье \"{}\" конфликтует с зельем \"{}\".", id, existing_id));
+        }
+    }
+    Ok(())
+}
+
+fn collect_potions(mw_path: &Path) -> Result<HashMap<String, Record>, String> {
     let mut ini = Vec::new();
     File::open(mw_path.join("Morrowind.ini").as_path()).and_then(|mut x| x.read_to_end(&mut ini)).map_err(|x| x.to_string())?;
     let ini = WINDOWS_1251.decode(&ini, DecoderTrap::Strict).map_err(|x| x.to_string())?;
@@ -131,6 +180,7 @@ fn generate_plugin(mw_path: &Path, esp_name: &OsString, values: &[u16]) -> Resul
         game_files.push((name, path, time));
     }
     game_files.sort_by_key(|x| x.2);
+    let mut potions = HashMap::new();
     for (game_file_name, game_file_path, _) in game_files.into_iter() {
         for record in Records::new(CodePage::Russian, RecordReadMode::Lenient, 0, &mut File::open(game_file_path).map_err(|x| x.to_string())?) {
             let record = match record {
@@ -144,7 +194,15 @@ fn generate_plugin(mw_path: &Path, esp_name: &OsString, values: &[u16]) -> Resul
                 },
                 Ok(record) => record
             };
+            if record.tag != ALCH { continue; }
+            let id = if let Field::StringZ(ref id) = record.fields.iter().filter(|(tag, _)| *tag == NAME).nth(0)
+                .ok_or(format!("{}: alchemy record does not have an ID.", game_file_name))?.1 {
+                id.string.to_uppercase()
+            } else {
+                panic!()
+            };
+            potions.insert(id, record);
         }
     }
-    Ok(())
+    Ok(potions)
 }
