@@ -62,7 +62,7 @@ impl<'a> Window<'a> {
             Ok(Window { h_wnd, phantom: PhantomData, destroy_on_drop: true })
         } else {
             let error_code = unsafe { GetLastError() };
-            message_box(&format!("Cannot create window ({}).", error_code), "Error", MB_ICONEXCLAMATION | MB_OK);
+            message_box(None, &format!("Cannot create window ({}).", error_code), "Error", MB_ICONEXCLAMATION | MB_OK);
             Err(())
         }
     }
@@ -75,7 +75,7 @@ impl<'a> Window<'a> {
         if unsafe { UpdateWindow(self.h_wnd.as_ptr()) != 0 } {
             Ok(())
         } else {
-            message_box("Cannot update window.", "Error", MB_ICONEXCLAMATION | MB_OK);
+            message_box(None, "Cannot update window.", "Error", MB_ICONEXCLAMATION | MB_OK);
             Err(())
         }
     }
@@ -97,7 +97,7 @@ impl<'a> Window<'a> {
                 if res == 0 { break }
                 if res < 0 {
                     let error_code = GetLastError();
-                    message_box(&format!("Application error ({}).", error_code), "Error", MB_ICONEXCLAMATION | MB_OK);
+                    message_box(None, &format!("Application error ({}).", error_code), "Error", MB_ICONEXCLAMATION | MB_OK);
                     break;
                 }
                 TranslateMessage(&msg as *const _);
@@ -142,6 +142,10 @@ impl<'a> Window<'a> {
         unsafe { SendDlgItemMessageW(self.h_wnd.as_ptr(), item_id as c_int, EM_LIMITTEXT as u32, limit as usize, 0); }
     }
 
+    pub fn set_focus(&self) {
+        let ok = unsafe { !SetFocus(self.h_wnd.as_ptr()).is_null() };
+        debug_assert!(ok);
+    }
 }
 
 struct WindowAsRef<'a>(Window<'a>);
@@ -230,7 +234,7 @@ impl WindowClass {
             };
             let atom = RegisterClassExW(&w as *const _);
             if atom == 0 {
-                message_box("Cannot register window class.", "Error", MB_ICONEXCLAMATION | MB_OK);
+                message_box(None, "Cannot register window class.", "Error", MB_ICONEXCLAMATION | MB_OK);
                 return Err(());
             }
             Ok(WindowClass { atom, h_instance })
@@ -238,9 +242,9 @@ impl WindowClass {
     }
 }
 
-pub fn message_box(message: &str, caption: &str, u_type: UINT) {
+pub fn message_box(owner: Option<&Window>, message: &str, caption: &str, u_type: UINT) {
     unsafe { MessageBoxW(
-        null_mut(),
+        owner.map_or(null_mut(), |x| x.h_wnd.as_ptr()),
         message.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr(),
         caption.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr(),
         u_type

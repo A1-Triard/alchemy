@@ -976,7 +976,7 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
 
 def check_espa_version():
   espa = subprocess.run('espa -V', stdout=PIPE, check=True, universal_newlines=True)
-  if espa.stdout != '0.1.5\n':
+  if espa.stdout != '0.2.0\n':
     print('wrong espa version')
     sys.exit(1)
 
