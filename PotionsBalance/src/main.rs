@@ -16,7 +16,7 @@ use std::io::{Read, BufWriter};
 use encoding::all::WINDOWS_1251;
 use encoding::Encoding;
 use encoding::DecoderTrap;
-use esl::{ALCH, Record, ENAM, NAME, Field, ALDT, FileMetadata, RecordFlags, FileType, TES3, HEDR};
+use esl::{ALCH, Record, ENAM, NAME, Field, ALDT, FileMetadata, RecordFlags, FileType, TES3, HEDR, EffectIndex};
 use esl::read::{Records, RecordReadMode};
 use esl::code::{self, CodePage};
 use either::{Right, Left};
@@ -163,6 +163,15 @@ fn potion_value(record: &Record) -> Result<u32, String> {
     }
 }
 
+fn potion_effect(record: &Record) -> Result<EffectIndex, String> {
+    let data = record.fields.iter().filter(|(tag, _)| *tag == ENAM).nth(0).unwrap();
+    if let Field::Effect(data) = &data.1 {
+        data.index.right().ok_or_else(|| "Невалидное зелье.".into())
+    } else {
+        panic!()
+    }
+}
+
 fn generate_plugin(mw_path: &Path, esp_name: &OsString, values: &[u16]) -> Result<(), String> {
     let (potions, file_time) = collect_potions(mw_path)?;
     let (potions_by_kind, standard_only_potions, _) = classify_potions(potions)?;
@@ -175,20 +184,20 @@ fn generate_plugin(mw_path: &Path, esp_name: &OsString, values: &[u16]) -> Resul
             (HEDR, Field::FileMetadata(FileMetadata {
                 version: 1067869798,
                 file_type: FileType::ESP,
-                author: "Баланс зелий".to_string(),
-                description: vec!["Баланс зелий".to_string()],
+                author: "PotionsBalance.exe".to_string(),
+                description: vec!["Баланс зелий.".to_string(), format!("{:?}", values)],
                 records: 0
             }))
         ]
     });
     for (_, mut potion) in standard_only_potions.into_iter() {
-        if set_potion_value(&mut potion, &level_values, values)? {
+        if set_potion(&mut potion, &level_values, values, None)? {
             records.push(potion);
         }
     }
     for (_, potions) in potions_by_kind.into_iter() {
-        for (_, mut potion) in potions.to_vec().into_iter().filter_map(|x| x) {
-            if set_potion_value(&mut potion, &level_values, values)? {
+        for (level, (_, mut potion)) in potions.to_vec().into_iter().enumerate().filter_map(|(i, x)| x.map(|u| (i, u))) {
+            if set_potion(&mut potion, &level_values, values, Some(level as u8))? {
                 records.push(potion);
             }
         }
@@ -201,6 +210,138 @@ fn generate_plugin(mw_path: &Path, esp_name: &OsString, values: &[u16]) -> Resul
     }
     let mut esp = BufWriter::new(File::create(mw_path.join("Data Files").join(esp_name).with_extension("esp")).map_err(|e| e.to_string())?);
     code::serialize_into(&records, &mut esp, CodePage::Russian, true).map_err(|e| e.to_string())
+}
+
+#[derive(Debug, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Hash)]
+enum EffectAttributes {
+    None,
+    Duration,
+    Magnitude,
+    DurationAndMagnitude,
+    CommonDurationAndMagnitude,
+}
+
+fn effect_attributes(effect: EffectIndex) -> EffectAttributes {
+    match effect {
+        EffectIndex::WaterBreathing => EffectAttributes::Duration,
+        EffectIndex::WaterWalking => EffectAttributes::Duration,
+        EffectIndex::Invisibility => EffectAttributes::Duration,
+        EffectIndex::Paralyze => EffectAttributes::Duration,
+        EffectIndex::Silence => EffectAttributes::Duration,
+        EffectIndex::Dispel => EffectAttributes::Magnitude,
+        EffectIndex::Mark => EffectAttributes::None,
+        EffectIndex::Recall => EffectAttributes::None,
+        EffectIndex::DivineIntervention => EffectAttributes::None,
+        EffectIndex::AlmsiviIntervention => EffectAttributes::None,
+        EffectIndex::CureCommonDisease => EffectAttributes::None,
+        EffectIndex::CureBlightDisease => EffectAttributes::None,
+        EffectIndex::CureCorprusDisease => EffectAttributes::None,
+        EffectIndex::CurePoison => EffectAttributes::None,
+        EffectIndex::CureParalyzation => EffectAttributes::None,
+        EffectIndex::RestoreAttribute => EffectAttributes::Magnitude,
+        EffectIndex::RestoreSkill => EffectAttributes::Magnitude,
+        EffectIndex::SummonScamp => EffectAttributes::Duration,
+        EffectIndex::SummonClannfear => EffectAttributes::Duration,
+        EffectIndex::SummonDaedroth => EffectAttributes::Duration,
+        EffectIndex::SummonDremora => EffectAttributes::Duration,
+        EffectIndex::SummonAncestralGhost => EffectAttributes::Duration,
+        EffectIndex::SummonSkeletalMinion => EffectAttributes::Duration,
+        EffectIndex::SummonLeastBonewalker => EffectAttributes::Duration,
+        EffectIndex::SummonGreaterBonewalker => EffectAttributes::Duration,
+        EffectIndex::SummonBonelord => EffectAttributes::Duration,
+        EffectIndex::SummonWingedTwilight => EffectAttributes::Duration,
+        EffectIndex::SummonHunger => EffectAttributes::Duration,
+        EffectIndex::SummonGoldensaint => EffectAttributes::Duration,
+        EffectIndex::SummonFlameAtronach => EffectAttributes::Duration,
+        EffectIndex::SummonFrostAtronach => EffectAttributes::Duration,
+        EffectIndex::SummonStormAtronach => EffectAttributes::Duration,
+        EffectIndex::BoundDagger => EffectAttributes::Duration,
+        EffectIndex::BoundLongsword => EffectAttributes::Duration,
+        EffectIndex::BoundMace => EffectAttributes::Duration,
+        EffectIndex::BoundBattleAxe => EffectAttributes::Duration,
+        EffectIndex::BoundSpear => EffectAttributes::Duration,
+        EffectIndex::BoundLongbow => EffectAttributes::Duration,
+        EffectIndex::BoundCuirass => EffectAttributes::Duration,
+        EffectIndex::BoundHelm => EffectAttributes::Duration,
+        EffectIndex::BoundBoots => EffectAttributes::Duration,
+        EffectIndex::BoundShield => EffectAttributes::Duration,
+        EffectIndex::BoundGloves => EffectAttributes::Duration,
+        EffectIndex::Corpus => EffectAttributes::Duration,
+        EffectIndex::Vampirism => EffectAttributes::None,
+        EffectIndex::SummonCenturionSphere => EffectAttributes::Duration,
+        EffectIndex::SummonFabricant => EffectAttributes::Duration,
+        EffectIndex::SummonCreature01 => EffectAttributes::Duration,
+        EffectIndex::SummonCreature02 => EffectAttributes::Duration,
+        EffectIndex::SummonCreature03 => EffectAttributes::Duration,
+        EffectIndex::SummonCreature04 => EffectAttributes::Duration,
+        EffectIndex::SummonCreature05 => EffectAttributes::Duration,
+        EffectIndex::StuntedMagicka => EffectAttributes::Duration,
+        EffectIndex::RestoreHealth => EffectAttributes::CommonDurationAndMagnitude,
+        EffectIndex::RestoreSpellPoints => EffectAttributes::CommonDurationAndMagnitude,
+        EffectIndex::RestoreFatigue => EffectAttributes::CommonDurationAndMagnitude,
+        _ => EffectAttributes::DurationAndMagnitude
+    }
+}
+
+fn set_potion(record: &mut Record, level_values: &[u32], values: &[u16], level: Option<u8>) -> Result<bool, String> {
+    let mut changed = false;
+    changed |= set_potion_value(record, level_values, values)?;
+    let effect = potion_effect(record)?;
+    match effect_attributes(effect) {
+        EffectAttributes::None => { },
+        EffectAttributes::Duration => {
+            if let Some(level) = level {
+                set_potion_duration(record, values[15 + level as usize]);
+            } else {
+                set_potion_duration(record, values[33]);
+            }
+        },
+        EffectAttributes::Magnitude => {
+            if let Some(level) = level {
+                set_potion_magnitude(record, values[20 + level as usize]);
+            } else {
+                set_potion_magnitude(record, values[34]);
+            }
+        },
+        EffectAttributes::DurationAndMagnitude => {
+            if let Some(level) = level {
+                set_potion_duration(record, values[5 + level as usize]);
+                set_potion_magnitude(record, values[10 + level as usize]);
+            } else {
+                set_potion_duration(record, values[31]);
+                set_potion_magnitude(record, values[32]);
+            }
+        },
+        EffectAttributes::CommonDurationAndMagnitude => {
+            if let Some(level) = level {
+                set_potion_duration(record, values[30]);
+                set_potion_magnitude(record, values[25 + level as usize]);
+            } else {
+                set_potion_duration(record, values[31]);
+                set_potion_magnitude(record, values[32]);
+            }
+        }
+    }
+    Ok(changed)
+}
+
+fn set_potion_duration(record: &mut Record, duration: u16) {
+    let data = record.fields.iter_mut().filter(|(tag, _)| *tag == ENAM).nth(0).unwrap();
+    if let Field::Effect(data) = &mut data.1 {
+        data.duration = duration as i32;
+    } else {
+        panic!()
+    }
+}
+
+fn set_potion_magnitude(record: &mut Record, magnitude: u16) {
+    let data = record.fields.iter_mut().filter(|(tag, _)| *tag == ENAM).nth(0).unwrap();
+    if let Field::Effect(data) = &mut data.1 {
+        data.magnitude_min = magnitude as i32;
+        data.magnitude_max = data.magnitude_min;
+    } else {
+        panic!()
+    }
 }
 
 fn set_potion_value(record: &mut Record, level_values: &[u32], values: &[u16]) -> Result<bool, String> {
