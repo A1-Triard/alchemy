@@ -120,11 +120,11 @@ impl WindowProc for MainWindowProc {
 
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Hash)]
 enum PotionLevel {
-    Bargain,
-    Cheap,
-    Standard,
-    Quality,
-    Exclusive
+    Bargain = 0,
+    Cheap = 1,
+    Standard = 2,
+    Quality = 3,
+    Exclusive = 4
 }
 
 fn potion_level_kind(id: &str, record: &Record) -> Option<(PotionLevel,  String)> {
@@ -155,18 +155,46 @@ fn potion_level_kind(id: &str, record: &Record) -> Option<(PotionLevel,  String)
 }
 
 fn generate_plugin(mw_path: &Path, esp_name: &OsString, values: &[u16]) -> Result<(), String> {
-    let potions = collect_potions(mw_path)?;
-    let mut normalized_ids = HashMap::new();
-    for (id, potion) in potions.iter() {
-        let normalized_id = id.replace(' ', "_");
-        if let Some((existing_id, _)) = normalized_ids.insert(normalized_id, (id, potion)) {
-            return Err(format!("Зелье \"{}\" конфликтует с зельем \"{}\".", id, existing_id));
-        }
-    }
+    let (potions, file_time) = collect_potions(mw_path)?;
+    let (potions_by_kind, standard_only_potions, _) = classify_potions(potions)?;
     Ok(())
 }
 
-fn collect_potions(mw_path: &Path) -> Result<HashMap<String, Record>, String> {
+fn classify_potions(potions: HashMap<String, Record>)
+    -> Result<(HashMap<String, [Option<(String, Record)>; 5]>, Vec<(String, Record)>, Vec<(String, Record)>), String> {
+
+    let mut potions_by_normalized_id = HashMap::new();
+    for (id, record) in potions.into_iter() {
+        let normalized_id = id.replace(' ', "_");
+        if let Some((existing_id, _)) = potions_by_normalized_id.insert(normalized_id, (id.clone(), record)) {
+            return Err(format!("Зелье \"{}\" конфликтует с зельем \"{}\".", id, existing_id));
+        }
+    }
+    let mut potions_by_kind = HashMap::new();
+    let mut other_potions = Vec::new();
+    for (normalized_id, (id, record)) in potions_by_normalized_id.into_iter() {
+        if let Some((level, kind)) = potion_level_kind(&normalized_id, &record) {
+            let entry = potions_by_kind.entry(kind).or_insert_with(|| [None, None, None, None, None]);
+            entry[level as usize] = Some((id, record));
+        } else {
+            other_potions.push((id, record));
+        }
+    }
+    let mut standard_only_potions_ids = Vec::new();
+    let mut standard_only_potions = Vec::new();
+    for (normalized_id, levels) in potions_by_kind.iter_mut() {
+        if levels[0].is_none() && levels[1].is_none() && levels[3].is_none() && levels[4].is_none() {
+            standard_only_potions_ids.push(normalized_id.clone());
+            standard_only_potions.push(levels[2].take().unwrap());
+        }
+    }
+    for normalized_id in standard_only_potions_ids {
+        potions_by_kind.remove(&normalized_id);
+    }
+    Ok((potions_by_kind, standard_only_potions, other_potions))
+}
+
+fn collect_potions(mw_path: &Path) -> Result<(HashMap<String, Record>, FileTime), String> {
     let mut ini = Vec::new();
     File::open(mw_path.join("Morrowind.ini").as_path()).and_then(|mut x| x.read_to_end(&mut ini)).map_err(|x| x.to_string())?;
     let ini = WINDOWS_1251.decode(&ini, DecoderTrap::Strict).map_err(|x| x.to_string())?;
@@ -180,8 +208,11 @@ fn collect_potions(mw_path: &Path) -> Result<HashMap<String, Record>, String> {
         game_files.push((name, path, time));
     }
     game_files.sort_by_key(|x| x.2);
+    game_files.sort_by_key(|x| x.1.extension().and_then(|e| e.to_str()).map(|e| e.to_uppercase()));
+    let mut file_time = None;
     let mut potions = HashMap::new();
-    for (game_file_name, game_file_path, _) in game_files.into_iter() {
+    for (game_file_name, game_file_path, game_file_time) in game_files.into_iter() {
+        let mut has_potions = false;
         for record in Records::new(CodePage::Russian, RecordReadMode::Lenient, 0, &mut File::open(game_file_path).map_err(|x| x.to_string())?) {
             let record = match record {
                 Err(error) => match error.source() {
@@ -202,7 +233,15 @@ fn collect_potions(mw_path: &Path) -> Result<HashMap<String, Record>, String> {
                 panic!()
             };
             potions.insert(id, record);
+            has_potions = true;
+        }
+        if has_potions {
+            file_time = Some(game_file_time);
         }
     }
-    Ok(potions)
+    if let Some(file_time) = file_time {
+        Ok((potions, file_time))
+    } else {
+        Err("Зелья не найдены.".into())
+    }
 }
