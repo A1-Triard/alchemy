@@ -523,7 +523,7 @@
         attribute: ~
         range: Self
         area: 0
-        duration: 15
+        duration: 30
         magnitude_min: 10
         magnitude_max: 10
 - ALCH:
@@ -545,7 +545,7 @@
         attribute: ~
         range: Self
         area: 0
-        duration: 15
+        duration: 30
         magnitude_min: 10
         magnitude_max: 10
 - ALCH:
@@ -589,7 +589,7 @@
         attribute: ~
         range: Self
         area: 0
-        duration: 15
+        duration: 30
         magnitude_min: 10
         magnitude_max: 10
 - ALCH:
@@ -611,7 +611,7 @@
         attribute: ~
         range: Self
         area: 0
-        duration: 15
+        duration: 30
         magnitude_min: 1
         magnitude_max: 1
 - ALCH:
@@ -633,7 +633,7 @@
         attribute: ~
         range: Self
         area: 0
-        duration: 15
+        duration: 30
         magnitude_min: 1
         magnitude_max: 1
 - ALCH:
@@ -1846,3 +1846,25 @@
         duration: 15
         magnitude_min: 1
         magnitude_max: 1
+- ALCH:
+    - NAME: p_swift_swim_b
+    - MODL: "m\\Misc_Potion_Bargain_01.nif"
+    - MODL: "m\\K_Bargain_Crush.nif"
+    - TEXT: "m\\K_Bargain_Crush.dds"
+    - TEXT: "m\\Tx_potion_bargain_01.tga"
+    - TEXT: "m\\Pm_Bar_Swi.dds"
+    - FNAM: Уцененное зелье быстроплавания
+    - FNAM: Быстрое плавание уцененное
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: SwiftSwim
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5

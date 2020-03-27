@@ -12,13 +12,13 @@ use std::path::{Path, PathBuf};
 use ini::Ini;
 use std::fs::{self, File};
 use filetime::FileTime;
-use std::io::Read;
+use std::io::{Read, BufWriter};
 use encoding::all::WINDOWS_1251;
 use encoding::Encoding;
 use encoding::DecoderTrap;
-use esl::{ALCH, Record, ENAM, NAME, Field};
+use esl::{ALCH, Record, ENAM, NAME, Field, ALDT, FileMetadata, RecordFlags, FileType, TES3, HEDR};
 use esl::read::{Records, RecordReadMode};
-use esl::code::CodePage;
+use esl::code::{self, CodePage};
 use either::{Right, Left};
 use std::collections::{HashSet, HashMap};
 
@@ -154,10 +154,94 @@ fn potion_level_kind(id: &str, record: &Record) -> Option<(PotionLevel,  String)
     }
 }
 
+fn potion_value(record: &Record) -> Result<u32, String> {
+    let data = record.fields.iter().filter(|(tag, _)| *tag == ALDT).nth(0).ok_or_else(|| "Невалидное зелье.")?;
+    if let Field::Potion(data) = &data.1 {
+        Ok(data.value)
+    } else {
+        panic!()
+    }
+}
+
 fn generate_plugin(mw_path: &Path, esp_name: &OsString, values: &[u16]) -> Result<(), String> {
     let (potions, file_time) = collect_potions(mw_path)?;
     let (potions_by_kind, standard_only_potions, _) = classify_potions(potions)?;
-    Ok(())
+    let level_values = find_level_values(&potions_by_kind)?;
+    let mut records = Vec::new();
+    records.push(Record {
+        tag: TES3,
+        flags: RecordFlags::empty(),
+        fields: vec![
+            (HEDR, Field::FileMetadata(FileMetadata {
+                version: 1067869798,
+                file_type: FileType::ESP,
+                author: "Баланс зелий".to_string(),
+                description: vec!["Баланс зелий".to_string()],
+                records: 0
+            }))
+        ]
+    });
+    for (_, mut potion) in standard_only_potions.into_iter() {
+        if set_potion_value(&mut potion, &level_values, values)? {
+            records.push(potion);
+        }
+    }
+    for (_, potions) in potions_by_kind.into_iter() {
+        for (_, mut potion) in potions.to_vec().into_iter().filter_map(|x| x) {
+            if set_potion_value(&mut potion, &level_values, values)? {
+                records.push(potion);
+            }
+        }
+    }
+    let records_count = (records.len() - 1) as u32;
+    if let Field::FileMetadata(f) = &mut records[0].fields[0].1 {
+        f.records = records_count;
+    } else {
+        panic!()
+    }
+    let mut esp = BufWriter::new(File::create(mw_path.join("Data Files").join(esp_name).with_extension("esp")).map_err(|e| e.to_string())?);
+    code::serialize_into(&records, &mut esp, CodePage::Russian, true).map_err(|e| e.to_string())
+}
+
+fn set_potion_value(record: &mut Record, level_values: &[u32], values: &[u16]) -> Result<bool, String> {
+    let mut values = values[.. 5].to_vec();
+    values.sort_unstable();
+    let old_value = potion_value(record)?;
+    let new_value = match level_values.binary_search(&old_value) {
+        Ok(i) => values[i] as u32,
+        Err(i) => if i == 0 {
+            (old_value as f64 * values[0] as f64 / level_values[0] as f64).round() as u32
+        } else if i == 5 {
+            (values[4] as f64 + (values[4] - values[3]) as f64 * (1.0 + (old_value - level_values[4]) as f64 / (level_values[4] - level_values[3]) as f64)).round() as u32
+        } else {
+            (values[i - 1] as f64 + (values[i] - values[i - 1]) as f64 * (old_value - level_values[i - 1]) as f64 / (level_values[i] - level_values[i - 1]) as f64).round() as u32 
+        }
+    };
+    if new_value == old_value { return Ok(false); }
+    let data = record.fields.iter_mut().filter(|(tag, _)| *tag == ALDT).nth(0).unwrap();
+    if let Field::Potion(data) = &mut data.1 {
+        data.value = new_value;
+    } else {
+        panic!()
+    }
+    Ok(true)
+}
+
+fn find_level_values(potions: &HashMap<String, [Option<(String, Record)>; 5]>) -> Result<[u32; 5], String> {
+    let mut level_values = [0; 5];
+    for level in 0 .. 5 {
+        let mut values = Vec::new();
+        for potion in potions.iter().filter_map(|x| x.1[level].as_ref()) {
+            values.push(potion_value(&potion.1)?);
+        }
+        values.sort_unstable();
+        if values.is_empty() {
+            return Err("Слишком мало зелий.".into());
+        }
+        level_values[level] = values[values.len() / 2];
+    }
+    level_values.sort_unstable();
+    Ok(level_values)
 }
 
 fn classify_potions(potions: HashMap<String, Record>)
