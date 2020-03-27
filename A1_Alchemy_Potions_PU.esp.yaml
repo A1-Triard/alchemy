@@ -6,7 +6,7 @@
         плагин для A1_Alchemy_V6_Apparatus.esp
       - ''
       - Версия для Potion Upgrade
-      records: 84
+      records: 85
       type: ESP
       version: 1067869798
   - MAST: Morrowind.esm
@@ -441,7 +441,7 @@
   - ENAM:
       area: 0
       attribute: ~
-      duration: 15
+      duration: 30
       index: DetectAnimal
       magnitude_max: 10
       magnitude_min: 10
@@ -459,7 +459,7 @@
   - ENAM:
       area: 0
       attribute: ~
-      duration: 15
+      duration: 30
       index: DetectKey
       magnitude_max: 10
       magnitude_min: 10
@@ -495,7 +495,7 @@
   - ENAM:
       area: 0
       attribute: ~
-      duration: 15
+      duration: 30
       index: Telekinesis
       magnitude_max: 10
       magnitude_min: 10
@@ -513,7 +513,7 @@
   - ENAM:
       area: 0
       attribute: ~
-      duration: 15
+      duration: 30
       index: WaterBreathing
       magnitude_max: 1
       magnitude_min: 1
@@ -531,7 +531,7 @@
   - ENAM:
       area: 0
       attribute: ~
-      duration: 15
+      duration: 30
       index: WaterWalking
       magnitude_max: 1
       magnitude_min: 1
@@ -1525,5 +1525,23 @@
       index: SummonCenturionSphere
       magnitude_max: 1
       magnitude_min: 1
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_swift_swim_b
+  - MODL: m\K_Bargain_Crush.nif
+  - TEXT: m\K_Bargain_Crush.dds
+  - FNAM: Быстрое плавание уцененное
+  - ALDT:
+      auto_calculate_value: false
+      value: 5
+      weight: 1.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 8
+      index: SwiftSwim
+      magnitude_max: 5
+      magnitude_min: 5
       range: Self
       skill: ~
