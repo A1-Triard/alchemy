@@ -11,7 +11,7 @@ use std::ffi::OsString;
 use std::path::{Path, PathBuf};
 use ini::Ini;
 use std::fs::{self, File};
-use filetime::FileTime;
+use filetime::{FileTime, set_file_mtime};
 use std::io::{Read, BufWriter};
 use encoding::all::WINDOWS_1251;
 use encoding::Encoding;
@@ -208,8 +208,11 @@ fn generate_plugin(mw_path: &Path, esp_name: &OsString, values: &[u16]) -> Resul
     } else {
         panic!()
     }
-    let mut esp = BufWriter::new(File::create(mw_path.join("Data Files").join(esp_name).with_extension("esp")).map_err(|e| e.to_string())?);
-    code::serialize_into(&records, &mut esp, CodePage::Russian, true).map_err(|e| e.to_string())
+    let esp_path = mw_path.join("Data Files").join(esp_name).with_extension("esp");
+    let mut esp = BufWriter::new(File::create(&esp_path).map_err(|e| e.to_string())?);
+    code::serialize_into(&records, &mut esp, CodePage::Russian, true).map_err(|e| e.to_string())?;
+    set_file_mtime(&esp_path, FileTime::from_unix_time(file_time.unix_seconds() + 120, 0));
+    Ok(())
 }
 
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Hash)]
