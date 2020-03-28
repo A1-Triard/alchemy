@@ -209,9 +209,11 @@ fn generate_plugin(mw_path: &Path, esp_name: &OsString, values: &[u16]) -> Resul
         panic!()
     }
     let esp_path = mw_path.join("Data Files").join(esp_name).with_extension("esp");
-    let mut esp = BufWriter::new(File::create(&esp_path).map_err(|e| e.to_string())?);
-    code::serialize_into(&records, &mut esp, CodePage::Russian, true).map_err(|e| e.to_string())?;
-    set_file_mtime(&esp_path, FileTime::from_unix_time(file_time.unix_seconds() + 120, 0));
+    {
+        let mut esp = BufWriter::new(File::create(&esp_path).map_err(|e| e.to_string())?);
+        code::serialize_into(&records, &mut esp, CodePage::Russian, true).map_err(|e| e.to_string())?;
+    }
+    set_file_mtime(&esp_path, FileTime::from_unix_time(file_time.unix_seconds() + 120, 0)).map_err(|e| e.to_string())?;
     Ok(())
 }
 
