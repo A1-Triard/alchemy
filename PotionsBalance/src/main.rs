@@ -443,7 +443,16 @@ fn collect_potions(mw_path: &Path) -> Result<(HashMap<String, Record>, FileTime)
     let mut potions = HashMap::new();
     for (game_file_name, game_file_path, game_file_time) in game_files.into_iter() {
         let mut has_potions = false;
-        for record in Records::new(CodePage::Russian, RecordReadMode::Lenient, 0, &mut File::open(game_file_path).map_err(|x| x.to_string())?) {
+        let mut game_file = File::open(game_file_path).map_err(|x| x.to_string())?;
+        let mut records = Records::new(CodePage::Russian, RecordReadMode::Lenient, 0, &mut game_file);
+        let file_header = records.next().ok_or_else(|| "Невалидный файл.".to_string())?.map_err(|e| e.to_string())?;
+        let (_, file_header) = file_header.fields.first().ok_or_else(|| "Невалидный файл.".to_string())?;
+        if let Field::FileMetadata(file_header) = file_header {
+            if file_header.author == "PotionsBalance.exe" { continue; }
+        } else {
+            return Err("Невалидный файл.".into());
+        }
+        for record in records {
             let record = match record {
                 Err(error) => match error.source() {
                     Right(error) => return Err(format!("{}: {}", game_file_name, error)),
