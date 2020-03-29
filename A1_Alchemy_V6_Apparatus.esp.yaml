@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования без EVA.esp
-        records: 583
+        records: 580
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -18327,9 +18327,9 @@
           shorts: 0
           longs: 0
           floats: 0
-        data_size: 2588
+        data_size: 2582
         var_table_size: 0
-    - SCDT: eJyd0zFLw0AUB/C7CsWCww1WqYo9pR+gWdwq1MldlG7hWYLk6LMhjUM/pzoKpUIGwYLdBRujNfHuJZfO/3f8f7m8q3PekAMpZK8nnQ5v8B1eD0Yw9cI63zqRg08hx3sQBBBC9DBx71wYeXjrD92uI89ldz39LIgpzp7oKBaHfefmzDXl3ipn7PKCsXXJtomEViSkSVhCwsokZUVSNEmVkFRlEliRgCZBCQlKSKcpaT97YhL4gedGE38K/0zUWIKis1i0NVVmgJC1U9mufkq7KuNMYiKCWLQI0B8l/+Q6KaaVfRFDGA39e4jGoS6iBxNWURqLY+3tZUbMd6Xz0JaHhTws5+EmPGXLU4U8Vc5Tm/DAlgeFPCjngZmX3z6ZApvZnQi91YlIx5mHEhiVxOJA27if2HxfOgdtOEhysJiDVTnKhqNIjirmqKocsOEAyYFiDuic3PbUTNuDqwMQlmzPekjbnkyS+fSaaTEsmpBsQvsmZdOkyCZl3wQ2TUA25ZIGZ0Kwx4/l7H0xf5vJ18VyMZ8x9iKORPP7R/d/D1550XXgOpx/Af/YUos=
+    - SCDT: eJyd0zFLw0AUB/C7CsWCww1WqYqe0g/QLm4V6uQuSrfwLEFy9NmQxqGfUx2FUiGDYMHugo3Rknj3cpfO///xfrm8q3PekAMpZK8nu23e4Du8Ho5g6kd1vnUqB19CjvcgDCGC+HHi3Xsw8vEuGHqdrryQnXX7RRAtzp7pKBGH/e7tuWfK/VXO2NUlY+sh2yYSOpGQJqGFhJVJyomkaJKykFRlEjiRgCaBhQQW0llG2s+fmIRB6HvxJJjCPxNVS1F0loiWpsoKZtNJZtrV+9olGTuphghcKMXH1s4wrfxbGMJoGDxAPI50EV1MWWVpIo61V5ermO9K56ErD0t5aOfhJjzlylOlPGXnqU144MqDUh7YeWDmFbdPZsBmficif3Ui1nHmUgqjkkQcaBv3G5vvS+egCwdJDpZzsCpHuXAUyVHlHFWVAy4cIDlQzgGdU9iemml7cHUAIsv2rEva9uSS3KfXTIvhMAnJSeg+SblMUuQk5T4JXCYBOamQNDgTgj19Lmcfi/n7TL4tlov5jLFXcSSaPz+6/3fw2o9vQq/L+TfvlE/8
     - SCTX:
         - Begin A1V6_ApparatusSetUp_1
         - ""
@@ -18356,7 +18356,7 @@
         - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
         - "\tAddItem apparatus_a_spipe_tsiya, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_tsiya_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e1, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
         - "\tAddItem apparatus_a_spipe_01, 1"
@@ -18426,9 +18426,9 @@
           shorts: 0
           longs: 0
           floats: 0
-        data_size: 2588
+        data_size: 2582
         var_table_size: 0
-    - SCDT: eJyd0zFLw0AUB/C7CsWCww1WqYo9pR+g7eBWoU7uonQLzxIkR58NaRz6OdVRKBUyCBbsLtgYrYl3L7l0fv/j/8vlXZXzmhxIIXs92WnxGt/hVX8EUzeo8q0TOfgUcrwHvg8BhA8T586BkYu33tBpd+S5bK/Tz4JIcfZEjyJx2O/cnDmmudvljLHLC8bWJdsmElqRkCZhAQlLk5QVSdEkVUBSpUlgRQKaBAUkKCCdJqT99ImJ7/muE068KfwzUbEYRc8i0dRUqQAhayayXf2UdlXGTGwiBpFoEKA/SvbJtRJMI/0ihjAaevcQjgNdRAdjVt40Esfa20tFzHel89CWh7k8LObhJjxly1O5PFXMU5vwwJYHuTwo5oGZl90+mQDr6Z0I3NWJUMeZQzGMmkTiQNu4n7H5vnQO2nCQ5GA+B8tylA1HkRyVz1FlOWDDAZID+RzQOZntqZi2B1cHICjYnnVI257UJPXpFdNiWDQh2YT2TcqmSZFNyr4JbJqAbMpMapwJwR4/lrP3xfxtJl8Xy8V8xtiLOBL17x/d/z145YbXvtPl/AtPkVKa
+    - SCDT: eJyd0zFLw0AUB/C7CsWCww1WqYqe0g/QdnCrUCd3UbqFZwnSo8+GNA79nOoolAoZBAt2F2yMlsS7l7t0fv/j/8vlXZXzmuxLIbtd2W7yGt/h1WAEUz+s8q1T2f8ScrwHQQAhRI8T796DkY93w4HXassL2VqnXwSR4uyZHsXisNe+PfdMc7/DGWNXl4ytS7ZNJHQiIU1CCwlLk5QTSdEkZSGp0iRwIgFNAgsJLKSzlLSfPTEJhoHvRZPhFP6ZqFiComexaGiqNGA2naSmXT2vXZIxk2iIgQsl/9iaKaaRfQsDGA2GDxCNQ11EBxNW0TQWx9qry0TMd6Xz0JWHhTy083ATnnLlqUKesvPUJjxw5UEhD+w8MPPy2ydTYD27E6G/OhHpOHMogVGTWBxoG/c7Nt+XzkEXDpIcLOZgWY5y4SiSo4o5qiwHXDhAcqCYAzontz0V0/bg6gCElu1Zh7TtyUwyn14xLYZDE5JN6N6kXJoU2aTcm8ClCcim3KTGmRDs6XM5+1jM32fybbFczGeMvYojUf/50b2/g9d+dBN4Hc6/AT81UAs=
     - SCTX:
         - Begin A1V6_ApparatusSetUp_2
         - ""
@@ -18455,7 +18455,7 @@
         - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
         - "\tAddItem apparatus_a_spipe_tsiya, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_tsiya_e2, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e2, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
         - "\tAddItem apparatus_a_spipe_01, 1"
@@ -18525,9 +18525,9 @@
           shorts: 0
           longs: 0
           floats: 0
-        data_size: 2588
+        data_size: 2582
         var_table_size: 0
-    - SCDT: eJyd0zFLw0AUB/C7CsWCww1WqYo9pR+gpeBWoU7uonQLzxIkR58NaRz6OdVRKBUyCBbsLtgYrYl3L7l0fv/j/8vlXZXzmhxIIXs92WnxGt/hVX8EUzeo8q0TOfgUcrwHvg8BhA8T586BkYu33tBpd+S5bK/Tz4JIcfZEjyJx2O/cnDmmudvljLHLC8bWJdsmElqRkCZhAQlLk5QVSdEkVUBSpUlgRQKaBAUkKCCdJqT99ImJ7/muE068KfwzUbEYRc8i0dRUqQAhayayXf2UdlXGTGwiBpFoEKA/SvbJtRJMI/0ihjAaevcQjgNdRAdjVt40Esfa20tFzHel89CWh7k8LObhJjxly1O5PFXMU5vwwJYHuTwo5oGZl90+mQDr6Z0I3NWJUMeZQzGMmkTiQNu4n7H5vnQO2nCQ5GA+B8tylA1HkRyVz1FlOWDDAZID+RzQOZntqZi2B1cHICjYnnVI257UJPXpFdNiWDQh2YT2TcqmSZFNyr4JbJqAbMpMapwJwR4/lrP3xfxtJl8Xy8V8xtiLOBL17x/d/z145YbXvtPl/AufO1Kp
+    - SCDT: eJyd00FLwzAUB/BkwnDgIQenTEWj7ANsDLxNmCfvouxWnqPIwp4rXT3sc6pHYUzoQXDg7oKr1dGavCbd+f3D/9f0pcp5TfalkN2ubDd5je/wajCCqR9W+dap7H8JOd6DIIAQoseJd+/ByMe74cBrteWFbK3TL4JIcfZMj2Jx2Gvfnnumud/hjLGrS8bWJdsmEjqRkCahhYSlScqJpGiSspBUaRI4kYAmgYUEFtJZStrPnpgEw8D3oslwCv9MVCxB0bNYNDRVGjCbTlLTrp7XLsmYSTTEwIWSf2zNFNPIvoUBjAbDB4jGoS6igwmraBqLY+3VZSLmu9J56MrDQh7aebgJT7nyVCFP2XlqEx648qCQB3YemHn57ZMpsJ7didBfnYh0nDmUwKhJLA60jfsdm+9L56ALB0kOFnOwLEe5cBTJUcUcVZYDLhwgOVDMAZ2T256KaXtwdQBCy/asQ9r2ZCaZT6+YFsOhCckmdG9SLk2KbFLuTeDSBGRTblLjTAj29LmcfSzm7zP5tlgu5jPGXsWRqP/86N7fwWs/ugm8DuffjsdQGg==
     - SCTX:
         - Begin A1V6_ApparatusSetUp_3
         - ""
@@ -18554,7 +18554,7 @@
         - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
         - "\tAddItem apparatus_a_spipe_tsiya, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_tsiya_e3, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e3, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
         - "\tAddItem apparatus_a_spipe_01, 1"
@@ -19409,468 +19409,201 @@
         effect_4_attribute: ~
     - SCRI: A1V6_AlchemyActivator_sc
     - ITEX: "n\\a1_alchemy_act.dds"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_alembic_e3
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: Перегонный куб ученика
+    - FNAM: ""
     - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 0.5
-        weight: 10.0
-        value: 50
-    - ITEX: "m\\Tx_alembic_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_calcinator_e3
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор ученика
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_3_sc
-    - AADT:
-        type: Calcinator
-        quality: 0.5
-        weight: 25.0
-        value: 10
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_retort_e3
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: Реторта ученика
+    - FNAM: ""
     - SCRI: A1V6_Retort_3_sc
-    - AADT:
-        type: Retort
-        quality: 0.5
-        weight: 8.0
-        value: 20
-    - ITEX: "m\\Tx_retort_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_spipe_e3
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Хорошая трубка скуума
+    - FNAM: ""
     - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 50
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
-    - NAME: A1V6_apparatus_a_spipe_tsiya_e3
-    - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Трубка скуума Ции
-    - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 30
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_alembic_e3
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: Перегонный куб грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 1.5
-        weight: 3.0
-        value: 4000
-    - ITEX: "m\\Tx_alembic_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_calcinator_e3
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: Кальцинатор грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_3_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.5
-        weight: 8.0
-        value: 4000
-    - ITEX: "m\\Tx_calcinator_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_retort_e3
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: Реторта грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_3_sc
-    - AADT:
-        type: Retort
-        quality: 1.5
-        weight: 3.0
-        value: 1600
-    - ITEX: "m\\Tx_retort_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_alembic_e3
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: Перегонный куб подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 1.0
-        weight: 7.0
-        value: 200
-    - ITEX: "m\\Tx_alembic_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_calcinator_e3
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_3_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.0
-        weight: 18.0
-        value: 40
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_retort_e3
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: Реторта подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Retort_3_sc
-    - AADT:
-        type: Retort
-        quality: 1.0
-        weight: 6.0
-        value: 80
-    - ITEX: "m\\Tx_retort_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_alembic_e3
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: Перегонный куб мастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 1.2
-        weight: 5.0
-        value: 1200
-    - ITEX: "m\\Tx_alembic_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_calcinator_e3
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: Кальцинатор мастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_3_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.2
-        weight: 13.0
-        value: 240
-    - ITEX: "m\\Tx_calcinator_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_retort_e3
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: Реторта мастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_3_sc
-    - AADT:
-        type: Retort
-        quality: 1.2
-        weight: 4.0
-        value: 480
-    - ITEX: "m\\Tx_retort_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_alembic_e2
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: Перегонный куб ученика
+    - FNAM: ""
     - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 0.5
-        weight: 10.0
-        value: 50
-    - ITEX: "m\\Tx_alembic_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_alembic_e1
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: Перегонный куб ученика
+    - FNAM: ""
     - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 0.5
-        weight: 10.0
-        value: 50
-    - ITEX: "m\\Tx_alembic_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_calcinator_e2
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор ученика
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_2_sc
-    - AADT:
-        type: Calcinator
-        quality: 0.5
-        weight: 25.0
-        value: 10
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_calcinator_e1
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор ученика
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_1_sc
-    - AADT:
-        type: Calcinator
-        quality: 0.5
-        weight: 25.0
-        value: 10
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_retort_e2
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: Реторта ученика
+    - FNAM: ""
     - SCRI: A1V6_Retort_2_sc
-    - AADT:
-        type: Retort
-        quality: 0.5
-        weight: 8.0
-        value: 20
-    - ITEX: "m\\Tx_retort_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_retort_e1
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: Реторта ученика
+    - FNAM: ""
     - SCRI: A1V6_Retort_1_sc
-    - AADT:
-        type: Retort
-        quality: 0.5
-        weight: 8.0
-        value: 20
-    - ITEX: "m\\Tx_retort_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_spipe_e2
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Хорошая трубка скуума
+    - FNAM: ""
     - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 50
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_spipe_e1
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Хорошая трубка скуума
+    - FNAM: ""
     - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 50
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
-    - NAME: A1V6_apparatus_a_spipe_tsiya_e2
-    - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Трубка скуума Ции
-    - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 30
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
-    - NAME: A1V6_apparatus_a_spipe_tsiya_e1
-    - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Трубка скуума Ции
-    - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 30
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_alembic_e2
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: Перегонный куб грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 1.5
-        weight: 3.0
-        value: 4000
-    - ITEX: "m\\Tx_alembic_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_alembic_e1
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: Перегонный куб грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 1.5
-        weight: 3.0
-        value: 4000
-    - ITEX: "m\\Tx_alembic_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_calcinator_e2
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: Кальцинатор грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_2_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.5
-        weight: 8.0
-        value: 4000
-    - ITEX: "m\\Tx_calcinator_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_calcinator_e1
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: Кальцинатор грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_1_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.5
-        weight: 8.0
-        value: 4000
-    - ITEX: "m\\Tx_calcinator_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_retort_e2
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: Реторта грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_2_sc
-    - AADT:
-        type: Retort
-        quality: 1.5
-        weight: 3.0
-        value: 1600
-    - ITEX: "m\\Tx_retort_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_retort_e1
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: Реторта грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_1_sc
-    - AADT:
-        type: Retort
-        quality: 1.5
-        weight: 3.0
-        value: 1600
-    - ITEX: "m\\Tx_retort_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_alembic_e2
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: Перегонный куб подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 1.0
-        weight: 7.0
-        value: 200
-    - ITEX: "m\\Tx_alembic_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_alembic_e1
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: Перегонный куб подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 1.0
-        weight: 7.0
-        value: 200
-    - ITEX: "m\\Tx_alembic_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_calcinator_e2
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_2_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.0
-        weight: 18.0
-        value: 40
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_calcinator_e1
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_1_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.0
-        weight: 18.0
-        value: 40
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_retort_e2
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: Реторта подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Retort_2_sc
-    - AADT:
-        type: Retort
-        quality: 1.0
-        weight: 6.0
-        value: 80
-    - ITEX: "m\\Tx_retort_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_retort_e1
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: Реторта подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Retort_1_sc
-    - AADT:
-        type: Retort
-        quality: 1.0
-        weight: 6.0
-        value: 80
-    - ITEX: "m\\Tx_retort_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_alembic_e2
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: Перегонный куб мастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 1.2
-        weight: 5.0
-        value: 1200
-    - ITEX: "m\\Tx_alembic_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_alembic_e1
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: Перегонный куб мастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 1.2
-        weight: 5.0
-        value: 1200
-    - ITEX: "m\\Tx_alembic_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_calcinator_e2
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: Кальцинатор мастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_2_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.2
-        weight: 13.0
-        value: 240
-    - ITEX: "m\\Tx_calcinator_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_calcinator_e1
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: Кальцинатор мастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_1_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.2
-        weight: 13.0
-        value: 240
-    - ITEX: "m\\Tx_calcinator_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_retort_e2
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: Реторта мастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_2_sc
-    - AADT:
-        type: Retort
-        quality: 1.2
-        weight: 4.0
-        value: 480
-    - ITEX: "m\\Tx_retort_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_retort_e1
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: Реторта мастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_1_sc
-    - AADT:
-        type: Retort
-        quality: 1.2
-        weight: 4.0
-        value: 480
-    - ITEX: "m\\Tx_retort_03.tga"
 - CONT:
     - NAME: A1V6_Appara_a_Cont_1
     - MODL: "m\\Misc_mortarpestle_01.NIF"

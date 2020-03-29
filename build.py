@@ -732,7 +732,7 @@ def gen_add_item(kind, index, level):
         'INGR': [
             {'NAME': name},
             {'MODL': 'm\\misc_com_bottle_05.nif'},
-            {'FNAM': ' Создать'},
+            {'FNAM': ' Создать '},
             {'IRDT': irdt},
             {'SCRI': add_name},
             {'ITEX': 'k\\magic_alchemy.dds'},

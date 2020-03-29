@@ -1411,7 +1411,7 @@
         - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
         - "\tAddItem apparatus_a_spipe_tsiya, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_tsiya_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e1, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
         - "\tAddItem apparatus_a_spipe_01, 1"
@@ -1509,7 +1509,7 @@
         - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
         - "\tAddItem apparatus_a_spipe_tsiya, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_tsiya_e2, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e2, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
         - "\tAddItem apparatus_a_spipe_01, 1"
@@ -1607,7 +1607,7 @@
         - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
         - "\tAddItem apparatus_a_spipe_tsiya, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_tsiya_e3, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e3, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
         - "\tAddItem apparatus_a_spipe_01, 1"
@@ -2375,7 +2375,7 @@
 - INGR:
     - NAME: A1V6_AlchemyActivator
     - MODL: "m\\misc_com_plate_03.nif"
-    - FNAM: " Обновить"
+    - FNAM: " Обновить "
     - IRDT:
         weight: 0.0
         value: 0
@@ -2393,468 +2393,201 @@
         effect_4_attribute: ~
     - SCRI: A1V6_AlchemyActivator_sc
     - ITEX: "n\\a1_alchemy_act.dds"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_alembic_e3
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: Перегонный куб ученика
+    - FNAM: ""
     - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 0.5
-        weight: 10.0
-        value: 50
-    - ITEX: "m\\Tx_alembic_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_calcinator_e3
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор ученика
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_3_sc
-    - AADT:
-        type: Calcinator
-        quality: 0.5
-        weight: 25.0
-        value: 10
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_retort_e3
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: Реторта ученика
+    - FNAM: ""
     - SCRI: A1V6_Retort_3_sc
-    - AADT:
-        type: Retort
-        quality: 0.5
-        weight: 8.0
-        value: 20
-    - ITEX: "m\\Tx_retort_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_spipe_e3
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Хорошая трубка скуума
+    - FNAM: ""
     - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 50
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
-    - NAME: A1V6_apparatus_a_spipe_tsiya_e3
-    - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Трубка скуума Ции
-    - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 30
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_alembic_e3
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: Перегонный куб грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 1.5
-        weight: 3.0
-        value: 4000
-    - ITEX: "m\\Tx_alembic_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_calcinator_e3
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: Кальцинатор грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_3_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.5
-        weight: 8.0
-        value: 4000
-    - ITEX: "m\\Tx_calcinator_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_retort_e3
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: Реторта грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_3_sc
-    - AADT:
-        type: Retort
-        quality: 1.5
-        weight: 3.0
-        value: 1600
-    - ITEX: "m\\Tx_retort_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_alembic_e3
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: Перегонный куб подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 1.0
-        weight: 7.0
-        value: 200
-    - ITEX: "m\\Tx_alembic_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_calcinator_e3
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_3_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.0
-        weight: 18.0
-        value: 40
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_retort_e3
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: Реторта подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Retort_3_sc
-    - AADT:
-        type: Retort
-        quality: 1.0
-        weight: 6.0
-        value: 80
-    - ITEX: "m\\Tx_retort_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_alembic_e3
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: Перегонный куб мастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_3_sc
-    - AADT:
-        type: Alembic
-        quality: 1.2
-        weight: 5.0
-        value: 1200
-    - ITEX: "m\\Tx_alembic_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_calcinator_e3
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: Кальцинатор мастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_3_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.2
-        weight: 13.0
-        value: 240
-    - ITEX: "m\\Tx_calcinator_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_retort_e3
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: Реторта мастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_3_sc
-    - AADT:
-        type: Retort
-        quality: 1.2
-        weight: 4.0
-        value: 480
-    - ITEX: "m\\Tx_retort_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_alembic_e2
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: Перегонный куб ученика
+    - FNAM: ""
     - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 0.5
-        weight: 10.0
-        value: 50
-    - ITEX: "m\\Tx_alembic_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_alembic_e1
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: Перегонный куб ученика
+    - FNAM: ""
     - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 0.5
-        weight: 10.0
-        value: 50
-    - ITEX: "m\\Tx_alembic_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_calcinator_e2
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор ученика
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_2_sc
-    - AADT:
-        type: Calcinator
-        quality: 0.5
-        weight: 25.0
-        value: 10
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_calcinator_e1
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор ученика
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_1_sc
-    - AADT:
-        type: Calcinator
-        quality: 0.5
-        weight: 25.0
-        value: 10
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_retort_e2
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: Реторта ученика
+    - FNAM: ""
     - SCRI: A1V6_Retort_2_sc
-    - AADT:
-        type: Retort
-        quality: 0.5
-        weight: 8.0
-        value: 20
-    - ITEX: "m\\Tx_retort_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_retort_e1
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: Реторта ученика
+    - FNAM: ""
     - SCRI: A1V6_Retort_1_sc
-    - AADT:
-        type: Retort
-        quality: 0.5
-        weight: 8.0
-        value: 20
-    - ITEX: "m\\Tx_retort_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_spipe_e2
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Хорошая трубка скуума
+    - FNAM: ""
     - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 50
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_a_spipe_e1
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Хорошая трубка скуума
+    - FNAM: ""
     - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 50
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
-    - NAME: A1V6_apparatus_a_spipe_tsiya_e2
-    - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Трубка скуума Ции
-    - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 30
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
-    - NAME: A1V6_apparatus_a_spipe_tsiya_e1
-    - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Трубка скуума Ции
-    - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 0.15
-        weight: 2.0
-        value: 30
-    - ITEX: "m\\Tx_Spipe_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_alembic_e2
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: Перегонный куб грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 1.5
-        weight: 3.0
-        value: 4000
-    - ITEX: "m\\Tx_alembic_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_alembic_e1
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: Перегонный куб грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 1.5
-        weight: 3.0
-        value: 4000
-    - ITEX: "m\\Tx_alembic_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_calcinator_e2
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: Кальцинатор грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_2_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.5
-        weight: 8.0
-        value: 4000
-    - ITEX: "m\\Tx_calcinator_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_calcinator_e1
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: Кальцинатор грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_1_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.5
-        weight: 8.0
-        value: 4000
-    - ITEX: "m\\Tx_calcinator_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_retort_e2
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: Реторта грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_2_sc
-    - AADT:
-        type: Retort
-        quality: 1.5
-        weight: 3.0
-        value: 1600
-    - ITEX: "m\\Tx_retort_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_g_retort_e1
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: Реторта грандмастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_1_sc
-    - AADT:
-        type: Retort
-        quality: 1.5
-        weight: 3.0
-        value: 1600
-    - ITEX: "m\\Tx_retort_04.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_alembic_e2
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: Перегонный куб подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 1.0
-        weight: 7.0
-        value: 200
-    - ITEX: "m\\Tx_alembic_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_alembic_e1
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: Перегонный куб подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 1.0
-        weight: 7.0
-        value: 200
-    - ITEX: "m\\Tx_alembic_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_calcinator_e2
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_2_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.0
-        weight: 18.0
-        value: 40
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_calcinator_e1
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_1_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.0
-        weight: 18.0
-        value: 40
-    - ITEX: "m\\Tx_calcinator_01.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_retort_e2
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: Реторта подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Retort_2_sc
-    - AADT:
-        type: Retort
-        quality: 1.0
-        weight: 6.0
-        value: 80
-    - ITEX: "m\\Tx_retort_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_j_retort_e1
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: Реторта подмастерья
+    - FNAM: ""
     - SCRI: A1V6_Retort_1_sc
-    - AADT:
-        type: Retort
-        quality: 1.0
-        weight: 6.0
-        value: 80
-    - ITEX: "m\\Tx_retort_02.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_alembic_e2
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: Перегонный куб мастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_2_sc
-    - AADT:
-        type: Alembic
-        quality: 1.2
-        weight: 5.0
-        value: 1200
-    - ITEX: "m\\Tx_alembic_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_alembic_e1
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: Перегонный куб мастера
+    - FNAM: ""
     - SCRI: A1V6_Alembic_1_sc
-    - AADT:
-        type: Alembic
-        quality: 1.2
-        weight: 5.0
-        value: 1200
-    - ITEX: "m\\Tx_alembic_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_calcinator_e2
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: Кальцинатор мастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_2_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.2
-        weight: 13.0
-        value: 240
-    - ITEX: "m\\Tx_calcinator_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_calcinator_e1
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: Кальцинатор мастера
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_1_sc
-    - AADT:
-        type: Calcinator
-        quality: 1.2
-        weight: 13.0
-        value: 240
-    - ITEX: "m\\Tx_calcinator_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_retort_e2
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: Реторта мастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_2_sc
-    - AADT:
-        type: Retort
-        quality: 1.2
-        weight: 4.0
-        value: 480
-    - ITEX: "m\\Tx_retort_03.tga"
-- APPA:
+- ACTI:
     - NAME: A1V6_apparatus_m_retort_e1
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: Реторта мастера
+    - FNAM: ""
     - SCRI: A1V6_Retort_1_sc
-    - AADT:
-        type: Retort
-        quality: 1.2
-        weight: 4.0
-        value: 480
-    - ITEX: "m\\Tx_retort_03.tga"
 - CONT:
     - NAME: A1V6_Appara_a_Cont_1
     - MODL: "m\\Misc_mortarpestle_01.NIF"
