@@ -19391,7 +19391,7 @@
 - INGR:
     - NAME: A1V6_AlchemyActivator
     - MODL: "m\\misc_com_plate_03.nif"
-    - FNAM: " Обновить"
+    - FNAM: " Обновить "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20260,7 +20260,7 @@
 - INGR:
     - NAME: A1V6_L15_restore_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20281,7 +20281,7 @@
 - INGR:
     - NAME: A1V6_L30_restore_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20302,7 +20302,7 @@
 - INGR:
     - NAME: A1V6_L45_restore_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20323,7 +20323,7 @@
 - INGR:
     - NAME: A1V6_L60_restore_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20344,7 +20344,7 @@
 - INGR:
     - NAME: A1V6_L15_restore_fatigue
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20365,7 +20365,7 @@
 - INGR:
     - NAME: A1V6_L30_restore_fatigue
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20386,7 +20386,7 @@
 - INGR:
     - NAME: A1V6_L45_restore_fatigue
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20407,7 +20407,7 @@
 - INGR:
     - NAME: A1V6_L15_restore_magicka
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20428,7 +20428,7 @@
 - INGR:
     - NAME: A1V6_L30_restore_magicka
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20449,7 +20449,7 @@
 - INGR:
     - NAME: A1V6_L45_restore_magicka
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20470,7 +20470,7 @@
 - INGR:
     - NAME: A1V6_L60_restore_magicka
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20491,7 +20491,7 @@
 - INGR:
     - NAME: A1V6_L15_water_walking
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20512,7 +20512,7 @@
 - INGR:
     - NAME: A1V6_L30_water_walking
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20533,7 +20533,7 @@
 - INGR:
     - NAME: A1V6_L45_water_walking
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20554,7 +20554,7 @@
 - INGR:
     - NAME: A1V6_L45_water_breathing
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20575,7 +20575,7 @@
 - INGR:
     - NAME: A1V6_L60_water_breathing
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20596,7 +20596,7 @@
 - INGR:
     - NAME: A1V6_L30_levitation
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20617,7 +20617,7 @@
 - INGR:
     - NAME: A1V6_L60_levitation
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20638,7 +20638,7 @@
 - INGR:
     - NAME: A1V6_L30_telekinesis
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20659,7 +20659,7 @@
 - INGR:
     - NAME: A1V6_L45_telekinesis
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20680,7 +20680,7 @@
 - INGR:
     - NAME: A1V6_L60_telekinesis
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20701,7 +20701,7 @@
 - INGR:
     - NAME: A1V6_L45_cure_blight
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20722,7 +20722,7 @@
 - INGR:
     - NAME: A1V6_L60_cure_blight
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20743,7 +20743,7 @@
 - INGR:
     - NAME: A1V6_L30_cure_common
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20764,7 +20764,7 @@
 - INGR:
     - NAME: A1V6_L45_cure_common
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20785,7 +20785,7 @@
 - INGR:
     - NAME: A1V6_L60_cure_common
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20806,7 +20806,7 @@
 - INGR:
     - NAME: A1V6_L45_detect_key
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20827,7 +20827,7 @@
 - INGR:
     - NAME: A1V6_L60_detect_key
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20848,7 +20848,7 @@
 - INGR:
     - NAME: A1V6_L30_cure_poison
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20869,7 +20869,7 @@
 - INGR:
     - NAME: A1V6_L45_cure_poison
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20890,7 +20890,7 @@
 - INGR:
     - NAME: A1V6_L60_cure_poison
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20911,7 +20911,7 @@
 - INGR:
     - NAME: A1V6_L30_feather
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20932,7 +20932,7 @@
 - INGR:
     - NAME: A1V6_L45_feather
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20953,7 +20953,7 @@
 - INGR:
     - NAME: A1V6_L30_fire_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20974,7 +20974,7 @@
 - INGR:
     - NAME: A1V6_L60_fire_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -20995,7 +20995,7 @@
 - INGR:
     - NAME: A1V6_L45_restore_personality
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21016,7 +21016,7 @@
 - INGR:
     - NAME: A1V6_L30_fortify_magicka
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21037,7 +21037,7 @@
 - INGR:
     - NAME: A1V6_L45_fortify_magicka
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21058,7 +21058,7 @@
 - INGR:
     - NAME: A1V6_L60_night-eye
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21079,7 +21079,7 @@
 - INGR:
     - NAME: A1V6_L30_detect_creatures
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21100,7 +21100,7 @@
 - INGR:
     - NAME: A1V6_L45_detect_creatures
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21121,7 +21121,7 @@
 - INGR:
     - NAME: A1V6_L60_detect_creatures
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21142,7 +21142,7 @@
 - INGR:
     - NAME: A1V6_L30_cure_paralyzation
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21163,7 +21163,7 @@
 - INGR:
     - NAME: A1V6_L60_cure_paralyzation
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21184,7 +21184,7 @@
 - INGR:
     - NAME: A1V6_L60_detect_enchantment
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21205,7 +21205,7 @@
 - INGR:
     - NAME: A1V6_L30_dispel
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21226,7 +21226,7 @@
 - INGR:
     - NAME: A1V6_L45_dispel
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21247,7 +21247,7 @@
 - INGR:
     - NAME: A1V6_L60_dispel
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21268,7 +21268,7 @@
 - INGR:
     - NAME: A1V6_L45_fire_shield
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21289,7 +21289,7 @@
 - INGR:
     - NAME: A1V6_L60_fire_shield
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21310,7 +21310,7 @@
 - INGR:
     - NAME: A1V6_L15_fortify_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21331,7 +21331,7 @@
 - INGR:
     - NAME: A1V6_L30_fortify_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21352,7 +21352,7 @@
 - INGR:
     - NAME: A1V6_L60_fortify_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21373,7 +21373,7 @@
 - INGR:
     - NAME: A1V6_L45_fortify_attack
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21394,7 +21394,7 @@
 - INGR:
     - NAME: A1V6_L60_fortify_attack
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21415,7 +21415,7 @@
 - INGR:
     - NAME: A1V6_L30_fortify_endurance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21436,7 +21436,7 @@
 - INGR:
     - NAME: A1V6_L30_fortify_fatigue
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21457,7 +21457,7 @@
 - INGR:
     - NAME: A1V6_L45_fortify_fatigue
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21478,7 +21478,7 @@
 - INGR:
     - NAME: A1V6_L15_fortify_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21499,7 +21499,7 @@
 - INGR:
     - NAME: A1V6_L30_fortify_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21520,7 +21520,7 @@
 - INGR:
     - NAME: A1V6_L60_fortify_health
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21541,7 +21541,7 @@
 - INGR:
     - NAME: A1V6_L60_fortify_luck
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21562,7 +21562,7 @@
 - INGR:
     - NAME: A1V6_L30_fortify_personality
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21583,7 +21583,7 @@
 - INGR:
     - NAME: A1V6_L60_fortify_personality
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21604,7 +21604,7 @@
 - INGR:
     - NAME: A1V6_L15_fortify_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21625,7 +21625,7 @@
 - INGR:
     - NAME: A1V6_L30_fortify_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21646,7 +21646,7 @@
 - INGR:
     - NAME: A1V6_L60_fortify_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21667,7 +21667,7 @@
 - INGR:
     - NAME: A1V6_L15_fortify_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21688,7 +21688,7 @@
 - INGR:
     - NAME: A1V6_L30_fortify_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21709,7 +21709,7 @@
 - INGR:
     - NAME: A1V6_L60_fortify_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21730,7 +21730,7 @@
 - INGR:
     - NAME: A1V6_L30_fortify_willpower
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21751,7 +21751,7 @@
 - INGR:
     - NAME: A1V6_L45_fortify_willpower
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21772,7 +21772,7 @@
 - INGR:
     - NAME: A1V6_L15_frost_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21793,7 +21793,7 @@
 - INGR:
     - NAME: A1V6_L30_frost_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21814,7 +21814,7 @@
 - INGR:
     - NAME: A1V6_L45_frost_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21835,7 +21835,7 @@
 - INGR:
     - NAME: A1V6_L30_frost_shield
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21856,7 +21856,7 @@
 - INGR:
     - NAME: A1V6_L45_frost_shield
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21877,7 +21877,7 @@
 - INGR:
     - NAME: A1V6_L30_invisibility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21898,7 +21898,7 @@
 - INGR:
     - NAME: A1V6_L60_invisibility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21919,7 +21919,7 @@
 - INGR:
     - NAME: A1V6_L45_lightning_shield
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21940,7 +21940,7 @@
 - INGR:
     - NAME: A1V6_L30_magicka_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21961,7 +21961,7 @@
 - INGR:
     - NAME: A1V6_L30_poison_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -21982,7 +21982,7 @@
 - INGR:
     - NAME: A1V6_L60_poison_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22003,7 +22003,7 @@
 - INGR:
     - NAME: A1V6_L45_reflection
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22024,7 +22024,7 @@
 - INGR:
     - NAME: A1V6_L60_reflection
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22045,7 +22045,7 @@
 - INGR:
     - NAME: A1V6_L15_restore_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22066,7 +22066,7 @@
 - INGR:
     - NAME: A1V6_L30_restore_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22087,7 +22087,7 @@
 - INGR:
     - NAME: A1V6_L45_restore_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22108,7 +22108,7 @@
 - INGR:
     - NAME: A1V6_L60_restore_agility
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22129,7 +22129,7 @@
 - INGR:
     - NAME: A1V6_L60_restore_endurance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22150,7 +22150,7 @@
 - INGR:
     - NAME: A1V6_L60_restore_luck
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22171,7 +22171,7 @@
 - INGR:
     - NAME: A1V6_L45_restore_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22192,7 +22192,7 @@
 - INGR:
     - NAME: A1V6_L60_restore_speed
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22213,7 +22213,7 @@
 - INGR:
     - NAME: A1V6_L45_restore_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22234,7 +22234,7 @@
 - INGR:
     - NAME: A1V6_L60_restore_strength
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22255,7 +22255,7 @@
 - INGR:
     - NAME: A1V6_L60_restore_willpower
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22276,7 +22276,7 @@
 - INGR:
     - NAME: A1V6_L30_spell_absorption
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22297,7 +22297,7 @@
 - INGR:
     - NAME: A1V6_L45_spell_absorption
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22318,7 +22318,7 @@
 - INGR:
     - NAME: A1V6_L60_swift_swim
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22339,7 +22339,7 @@
 - INGR:
     - NAME: A1V6_L60_recall
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22360,7 +22360,7 @@
 - INGR:
     - NAME: A1V6_L30_disease_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22381,7 +22381,7 @@
 - INGR:
     - NAME: A1V6_L45_disease_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22402,7 +22402,7 @@
 - INGR:
     - NAME: A1V6_L60_disease_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22423,7 +22423,7 @@
 - INGR:
     - NAME: A1V6_L45_silence
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22444,7 +22444,7 @@
 - INGR:
     - NAME: A1V6_L30_chameleon
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22465,7 +22465,7 @@
 - INGR:
     - NAME: A1V6_L60_light
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22486,7 +22486,7 @@
 - INGR:
     - NAME: A1V6_L30_sanctuary
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22507,7 +22507,7 @@
 - INGR:
     - NAME: A1V6_L45_sanctuary
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22528,7 +22528,7 @@
 - INGR:
     - NAME: A1V6_L45_shock_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22549,7 +22549,7 @@
 - INGR:
     - NAME: A1V6_L30_blight_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22570,7 +22570,7 @@
 - INGR:
     - NAME: A1V6_L45_blight_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22591,7 +22591,7 @@
 - INGR:
     - NAME: A1V6_L60_blight_resistance
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22612,7 +22612,7 @@
 - INGR:
     - NAME: A1V6_L15_paralyze
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22633,7 +22633,7 @@
 - INGR:
     - NAME: A1V6_L30_paralyze
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22654,7 +22654,7 @@
 - INGR:
     - NAME: A1V6_L45_paralyze
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
@@ -22675,7 +22675,7 @@
 - INGR:
     - NAME: A1V6_L60_smn_centurion_sphere
     - MODL: "m\\misc_com_bottle_05.nif"
-    - FNAM: " Создать"
+    - FNAM: " Создать "
     - IRDT:
         weight: 0.0
         value: 0
