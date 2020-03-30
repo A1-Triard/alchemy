@@ -1006,7 +1006,7 @@ def main():
     copyfile('A1_Alchemy_Potions.esp.yaml', mfr + 'alchemy_potions.esp.yaml')
     assembly_plugin(mfr + 'alchemy_potions.esp', 2014, 8, 3, 18, 53, 0)
     chdir('PotionsBalance')
-    subprocess.run('cargo build --release --out-dir .. -Z unstable-options', stdout=stdout, stderr=stderr, check=True)
+    subprocess.run('cargo build --target i686-pc-windows-msvc --release --out-dir .. -Z unstable-options', stdout=stdout, stderr=stderr, check=True)
     chdir('..')
     copyfile('PotionsBalance.exe', 'ar/PotionsBalance.exe')
     gen_apparatus('eva', mfr, 2097, 9, 1, 18, 53, 0)

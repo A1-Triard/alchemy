@@ -201,7 +201,7 @@ impl WindowClass {
         unsafe extern "system" fn wndproc(h_wnd: HWND, msg: UINT, w_param: WPARAM, l_param: LPARAM) -> LRESULT {
             if msg == WM_CREATE {
                 let create_struct = l_param as *const CREATESTRUCTW;
-                SetWindowLongPtrW(h_wnd, GWLP_USERDATA, (*create_struct).lpCreateParams as isize);
+                SetWindowLongPtrW(h_wnd, GWLP_USERDATA, (*create_struct).lpCreateParams as _);
             }
             let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc;
             let res = if !window_proc.is_null() && window_message(*window_proc, h_wnd, msg, w_param, l_param) { 
@@ -254,7 +254,7 @@ pub fn message_box(owner: Option<&Window>, message: &str, caption: &str, u_type:
 pub fn dialog_box(id: u16, window_proc: &mut dyn WindowProc) -> INT_PTR {
     unsafe extern "system" fn dlgproc(h_wnd: HWND, msg: UINT, w_param: WPARAM, l_param: LPARAM) -> INT_PTR {
         if msg == WM_INITDIALOG {
-            SetWindowLongPtrW(h_wnd, GWLP_USERDATA, l_param);
+            SetWindowLongPtrW(h_wnd, GWLP_USERDATA, l_param as _);
         }
         let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc;
         let res = if !window_proc.is_null() && window_message(*window_proc, h_wnd, msg, w_param, l_param) { 
