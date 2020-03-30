@@ -34,7 +34,8 @@ static STANDARD: &'static [u16] = &[
     8, 15, 30, 45, 60,
     5, 8, 10, 15, 20,
     1, 2, 10, 20, 40,
-    5, 15, 10, 15, 10
+    5, 15, 10, 15, 10,
+    200, 1, 1
 ];
 
 static RECOMMEND: &'static [u16] = &[
@@ -44,7 +45,8 @@ static RECOMMEND: &'static [u16] = &[
     20, 40, 80, 160, 320,
     10, 25, 45, 70, 100,
     5, 10, 17, 25, 40,
-    5, 80, 45, 80, 45
+    5, 80, 45, 80, 45,
+    125, 4, 5
 ];
 
 struct MainWindowProc {
@@ -76,7 +78,7 @@ impl WindowProc for MainWindowProc {
                 let edit_original_value = self.edit_original_value.take().unwrap();
                 let edit_value = window.get_dialog_item_text(command_id, 4);
                 let edit_value = edit_value.to_str().unwrap();
-                if edit_value.is_empty() || u16::from_str(edit_value).unwrap() == 0 {
+                if edit_value.is_empty() || command_id != 185 && command_id != 186 && u16::from_str(edit_value).unwrap() == 0 {
                     window.set_dialog_item_text(command_id, &edit_original_value);
                 }
             },
