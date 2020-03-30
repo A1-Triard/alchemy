@@ -784,24 +784,24 @@ def gen_potions(icon, model, name, suffix, description):
     
     for potion in potions:
         icons = [i for i, x in enumerate(potion['ALCH']) if 'TEXT' in x]
-        if len(icons) != 3:
-            print('Error in potions.esp.yaml')
-            sys.exit(1)
-        for i in filter(lambda x: x != icon, range(2, -1, -1)):
+        #if len(icons) != 3:
+        #    print('Error in potions.esp.yaml')
+        #    sys.exit(1)
+        for i in filter(lambda x: x != icon, range(len(icons) - 1, -1, -1)):
             del potion['ALCH'][icons[i]]
 
         models = [i for i, x in enumerate(potion['ALCH']) if 'MODL' in x]
-        if len(models) != 2:
-            print('Error in potions.esp.yaml')
-            sys.exit(1)
-        for i in filter(lambda x: x != model, range(1, -1, -1)):
+        #if len(models) != 2:
+        #    print('Error in potions.esp.yaml')
+        #    sys.exit(1)
+        for i in filter(lambda x: x != model, range(len(models) - 1, -1, -1)):
             del potion['ALCH'][models[i]]
 
         names = [i for i, x in enumerate(potion['ALCH']) if 'FNAM' in x]
-        if len(names) != 2:
-            print('Error in potions.esp.yaml')
-            sys.exit(1)
-        for i in filter(lambda x: x != name, range(1, -1, -1)):
+        #if len(names) != 2:
+        #    print('Error in potions.esp.yaml')
+        #    sys.exit(1)
+        for i in filter(lambda x: x != name, range(len(names) - 1, -1, -1)):
             del potion['ALCH'][names[i]]
 
     with open('potions_header.esp.yaml', 'r', encoding='utf-8') as f:
@@ -1005,7 +1005,7 @@ def main():
     prepare_text('Readme', 'ar/')
     prepare_text('Versions', 'ar/')
     copytree('Screenshots', 'ar/Screenshots')
-    gen_potions(1, 0, 0, '', 'Стандартная версия')
+    gen_potions(0, 0, 0, '', 'Стандартная версия')
     copyfile('A1_Alchemy_Potions.esp.yaml', mfr + 'alchemy_potions.esp.yaml')
     assembly_plugin(mfr + 'alchemy_potions.esp', 2014, 8, 3, 18, 53, 0)
     chdir('PotionsBalance')
@@ -1015,8 +1015,8 @@ def main():
     gen_apparatus('eva', mfr, 2097, 9, 1, 18, 53, 0)
     gen_apparatus('std', mfr, 2014, 8, 10, 18, 53, 0)
     remove(mfr + 'alchemy_potions.esp')
-    gen_potions(2, 0, 0, '_MM', 'Версия для MagicMarker')
-    gen_potions(0, 1, 1, '_PU', 'Версия для Potion Upgrade')
+    gen_potions(1, 0, 0, '_MM', 'Версия для MagicMarker')
+    gen_potions(2, 1, 1, '_PU', 'Версия для Potion Upgrade')
     copyfile('A1_Alchemy_Potions.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions.esp.yaml')
     copyfile('A1_Alchemy_Potions_MM.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions_MM.esp.yaml')
     copyfile('A1_Alchemy_Potions_PU.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions_PU.esp.yaml')

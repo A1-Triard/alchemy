@@ -19,7 +19,7 @@
   - NAME: p_burden_s
   - MODL: m\Misc_Potion_Standard_01.NIF
   - TEXT: m\Pm_Sta_Res_Nor.dds
-  - FNAM: Стандартное зелье даэдра
+  - FNAM: Стандартное зелье Даэдра
   - ALDT:
       auto_calculate_value: false
       value: 35
