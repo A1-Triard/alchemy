@@ -293,7 +293,7 @@ fn effect_attributes(effect: EffectIndex) -> EffectAttributes {
 fn set_potion(record: &mut Record, level_values: &[u32], values: &[u16], level: Option<u8>) -> Result<bool, String> {
     let mut changed = false;
     changed |= set_potion_value(record, level_values, values)?;
-    changed |= set_potion_weight(record)?;
+    changed |= set_potion_weight(record, values)?;
     let effect = potion_effect(record)?;
     match effect_attributes(effect) {
         EffectAttributes::None => { },
@@ -376,10 +376,10 @@ fn set_potion_value(record: &mut Record, level_values: &[u32], values: &[u16]) -
     Ok(true)
 }
 
-fn set_potion_weight(record: &mut Record) -> Result<bool, String> {
+fn set_potion_weight(record: &mut Record, values: &[u16]) -> Result<bool, String> {
     let data = record.fields.iter_mut().filter(|(tag, _)| *tag == ALDT).nth(0).unwrap();
     if let Field::Potion(data) = &mut data.1 {
-        let new_weight = data.weight.min(1.25) * 0.8;
+        let new_weight = ((data.weight as f64).min(values[35] as f64 * 0.01) * values[36] as f64 / values[37] as f64) as f32;
         if new_weight == data.weight { return Ok(false) };
         data.weight = new_weight;
     } else {
