@@ -8,8 +8,8 @@ FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON "Сгенерировать плагин", 127, 416, 150, 92, 14
     LTEXT "Расположение Morrowind:", IDC_STATIC, 9, 10, 100, 12
-    EDITTEXT 132, 100, 8, 218, 12
-    PUSHBUTTON "...", 133, 320, 8, 12, 12
+    EDITTEXT 132, 100, 8, 219, 12
+    PUSHBUTTON "...", 133, 321, 8, 12, 12
     LTEXT "Название плагина:", IDC_STATIC, 9, 26, 100, 12
     EDITTEXT 134, 100, 24, 234, 12
     LTEXT "Ограничить вес до:", IDC_STATIC, 398, 10, 100, 12
