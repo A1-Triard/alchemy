@@ -146,6 +146,11 @@ impl<'a> Window<'a> {
         let ok = unsafe { !SetFocus(self.h_wnd.as_ptr()).is_null() };
         debug_assert!(ok);
     }
+    
+    pub fn post_wm_command(&self, command_id: u16, notification_code: u16) {
+        let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_COMMAND, (command_id as WPARAM) | ((notification_code as WPARAM) << 16), 0) != 0 };
+        assert!(ok);
+    }
 }
 
 struct WindowAsRef<'a>(Window<'a>);

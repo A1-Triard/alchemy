@@ -64,8 +64,8 @@ impl WindowProc for MainWindowProc {
         window.set_dialog_item_text_str(134, "PotionsBalance");
         for (i, v) in STANDARD.iter().enumerate() {
             window.set_dialog_item_limit_text(150 + i as u16, 3);
-            window.set_dialog_item_text_str(150 + i as u16, &v.to_string());
         }
+        window.post_wm_command(129, 0);
     }
     
     fn wm_command(&mut self, window: Window, command_id: u16, notification_code: u16) {
