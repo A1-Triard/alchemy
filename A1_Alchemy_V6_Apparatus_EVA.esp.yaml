@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования с EVA.esp
-        records: 662
+        records: 661
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -104,6 +104,14 @@
     - FLTV: 0.0
 - GLOB:
     - NAME: A1V6_ApparatusExt_3
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusDes
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
+    - NAME: A1V6_ApparatusAct
     - FNAM: s
     - FLTV: 0.0
 - SCPT:
@@ -21827,9 +21835,9 @@
           shorts: 0
           longs: 0
           floats: 0
-        data_size: 628
+        data_size: 647
         var_table_size: 0
-    - SCDT: eJyNkE1LAkEYgGeMLEly8GIfCu+121ohdTCQiC51KYhug6zjB+m67Cjl37Nzt7ovtZuL647seijQqNVVKkLpNIf3eeZ5Z6I4rFbzLaaFMd6B6w8C9VQufZWhZxmJ8ppCZaY0mlqlrlCulpnGIJuFdHRmPZHFNEYRHP1OLG0FiVhFKWmsQEtannMqpeEIpB8YTgVYfIoVmabQwi2rMe0X+fiPegQnSWJC5Y7LTL45PKCXkyHlsl9KwGksmFblMqu1Lhgfv1BCJIzuhSeeBUKrc7E0IhvowTSE6+meeHMEdEWvLxzT8c1F4i4im6it98AZvDpDcL1Bv6uDBX3T9azuInNvnGwPX+xPw/LAta13P+mfwr+nNxZDc8T9EFlT6w3/d6CYr1QRSQYLmDAwdFu4I3BFx9C9EXRMe2QitIKXQmR9qvCmLDPOESF+PCBta0Zuk/gkeF4vTJsnd2oEL+M/i4RAwvgL6w/uaw==
+    - SCDT: eJyNkM1LAkEYxmeULElq8GIfCu+121ohdTCQiC4FURDdBlnHD9Jd2VHKf8/O3eq+lJuL647seijQqNW1LELpNIf393ufZ94IDlXL2QbTQhhvwdU7ATWRSV6m6ElKoryiUJkptbpWUhXKq0WmMUinIRn5sh7JfBqjMI5MI4IbfsRqSSloLEcLWpZzKiXhAKQfGE74WHSC5Zmm0NwNqzDtF/nwj/QwjpPYmMocFpl8vb9HL8ZDymUvKQbHq/60LBdZpXHO+OiHEiIhdCdc8SQQWpqJJRFZQ/dGSziu7opXW0BHdHvCNmzPnCduI7KOmnoX7P6LPQDH7fc6OpjQMxzX7Mwzd0aRzcGz9dEyXXAs882L9F7h7emOxOAMcTdAlqtqzbsO5LOlMiJxv4AB/ZZuCWcIjmi3dHcIbcMaGghtEvK95kxTC97BFnEwQFYmW3hdlhnniBCvjy9b5lSOjuVTNTepcXRbDeMF/KdbACSMPwF/vvRJ
     - SCTX:
         - Begin A1V6_ACheck98_Sphere_sc
         - ""
@@ -21851,10 +21859,10 @@
         - "\tMessageBox \"Вам нужны ступка и пестик\""
         - elseif ( A1V6_AlchemyRes == 3 )
         - "\tMessageBox \"Выглядит слишком сложным\""
-        - "\t;Journal A1_Calcinator 10"
         - elseif ( A1V6_AlchemyRes == 4 )
         - "\tPlaySound \"potion fail\""
         - "\tMessageBox \"Вам не удалось создать зелье\""
+        - "\tStartScript A1V6_AlchProg_sc"
         - else
         - "\tPlaySound \"potion success\""
         - "\tMessageBox \"Вы создали зелье\""
@@ -23509,6 +23517,19 @@
         - End
 - SCPT:
     - SCHD:
+        name: A1V6_AlchProg_sc
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 2
+        var_table_size: 0
+    - SCDT: eJxjZAQAAAUAAw==
+    - SCTX:
+        - Begin A1V6_AlchProg_sc
+        - End
+- SCPT:
+    - SCHD:
         name: A1V6_Alembic_1_sc
         vars:
           shorts: 1
@@ -24991,11 +25012,11 @@
     - SCHD:
         name: A1V6_CalcAlchemy2_sc
         vars:
-          shorts: 8
+          shorts: 9
           longs: 0
           floats: 3
-        data_size: 1902
-        var_table_size: 84
+        data_size: 2041
+        var_table_size: 89
     - SCVR:
         - Difficulty
         - state
@@ -25005,10 +25026,11 @@
         - alembic
         - alchemy
         - temp
+        - appa
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNVE1v00AQ3bVjJy6hWKgUFYGYoopDo7S7zrdEIkUceuLSA8otMqmBhJhGcXrIf4SfhMrMrh07ZFN6icZv3ny8mdm4/I0HicWg34fA5Rw/XAYfoCEcnlSYDbJdydGWRi3oFsBOBjYLYC8DgzLnqSk9slx2AAlngBBcOvwrZw7FMDQtVgUpxIUARMl55Q/l5/Z4OJ98j+L1p7v5ygFkMZdbT1ShQZ8C0vytLDs6EIV6XrqpSpdZBUan/g0TAqVihjK1qosjraJ6klAj8tWzYunrKHHIS0QL84nX/pHyfwznk5QTjJPJGfe4y+ubkcoqdxfzcB0tU6WjHz4rYhZh3W3MJuy9z1TIsZqFuJAkHNAHNTiHmlLjkA+HUaqkUqShbwsaj2qaV3WSPiSO0unQYsqM4VZPYPTbh5unQ6kSX0er2+WK6olf/jZ4wO7vPZ6OM591VY12sMntYju9Mvc3axhAUlIeUkWmSmKzQ8AfxajhZur6Qm3SGvQUwUYja18fBIK6hKNMbP+Vbv8w7XQ4j+Iv00na/z9oJgCnrWvjPajMdbWOjSj19VwthxZznh7uZeEGyVej3uzsVUhhXFDzPwvSd0yMwON6W83NidF4AUZ/fLh9ES4W4TJc3SXjb+MYtxEux0LibOmFlFgJpBQVEzs2sG18w0byzEjumMmhkdwSZW4bRxE8fKMmoUt1eHkBh4SKfUJ32Q8INZG7+4SayB2hd0d2WygJZzr0pChhgmKnP0OMz8PVaVOt3YB4b4BsGQNm+wPMFcI9AfgnqwWRqfWc6uDjop5Qv6U80s2mvMuOzeyOmT0zs1tmdmhmN4j9VrOPiuxkMV1EBu47zX25y10l03W4RdfzcdVsvezdSrpfzv8ChpqZnA==
+    - SCDT: eJyNVEuPEkEQ7p5hXkoUze4aE421ZuMBwtLNm2Qh2WjCyYsHw42MOCrIuIRhD/x4E6u657WhYb31VH31+L6qGpe/DSCxGIzH0HY5xw+XwQ10hMMTn9kg+35h7WmrBcOScZAZuyXjKDO2Pc7Tpwzo5bInkHAGaIKWw39w5lAMw6fFqiCFuBaAVnJOa7fya39+u178iuL95/v1zgFEMZdbT1WhyZgC0vy9LDs60ArNonRXlfaYD7PL2ncmBFLFDB61qosjzFc9SWgQePq8XPpLlDjkJaCF+cSb2pnyfwzXixTTnieLKx5wlw9zSWWVu5t1uI+2KdPZ7xor2yyyDR/abLJ9qDEVcqG0ENeSiAP6oAF1aCg2DvlQjIqfUpGGvi3o/FfTvKqTjCFxFE+HBuMx5nFfyXMO0xc692YTbsPdffIpSggYpMoNaWRaxyD7Ctgz9aX9dWji6LT/Bron0xqsWRkcUMDTUsU8q8o7yft3kfLI42f5qCeQVJSHlKOnSmJThygrIRo4/aa+Aps6bI8UwMZHJpFeOjTqEo56etx5TKJAddfvQgvzlBQwBOTQlCcOXreIq6kaaKrNyLmrr5dqT2hH6ukNtUrnQL4GUbCzA5XCuCvdR3ZFnxQh2gHXi9PNt52mADD7W4O78zAjNP85j++2u3A7FxJHQMdaYRWQUvgmdGxA2/g7MYJXRvDADA6N4J7wuG2Uon36XExEt9EOSxQFHCIqjhE9RJ8gagIPjxE1gQdCz47efaEoXOnQ12UKCyS7/BNifBGuLoBqHQbERwNkzxiwOh5grhAeCcD/vSZET83nUgdflPmE6yj+tlwUkW6m8iE6NqMHZvTKjO6Z0aEZ3SH0O40+K6OTzXITGbDvNfbVIXaXLPfhA7jWx1XaBtndStpfzv8By0irKg==
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
@@ -25023,6 +25045,7 @@
         - float tempf2
         - float tempf3
         - short temp
+        - short appa
         - ""
         - if ( state == 2 )
         - "\tif ( alembic < 30 )"
@@ -25070,8 +25093,15 @@
         - "\tendif"
         - "\tif ( alchemy <= retort )"
         - "\t\tset retort to alchemy"
-        - "\telseif ( GetJournalIndex A1_AlchRetort < 10 )"
-        - "\t\tJournal A1_AlchRetort 10"
+        - "\telse"
+        - "\t\tset temp to A1V6_ApparatusDes"
+        - "\t\tset appa to ( temp / 8 )"
+        - "\t\tset temp to ( appa / 8 )"
+        - "\t\tset appa to ( appa - temp * 8 )"
+        - "\t\tif ( appa < 4 )"
+        - "\t\t\tset temp to A1V6_ApparatusDes"
+        - "\t\t\tset A1V6_ApparatusDes to (temp + 8)"
+        - "\t\tendif"
         - "\tendif"
         - "\tset temp to ( Random 100 )"
         - "\tif ( temp >= retort )"
@@ -25086,8 +25116,12 @@
         - "\t\tendif"
         - "\t\tif ( alembic >= calcinator )"
         - "\t\t\tset alembic to calcinator"
-        - "\t\telseif ( GetJournalIndex A1_AlchAlembic < 10 )"
-        - "\t\t\tJournal A1_AlchAlembic 10"
+        - "\t\telse"
+        - "\t\t\tset temp to A1V6_ApparatusDes"
+        - "\t\t\tset appa to ( temp / 64 )"
+        - "\t\t\tif ( appa < 4 )"
+        - "\t\t\t\tset A1V6_ApparatusDes to (temp + 64)"
+        - "\t\t\tendif"
         - "\t\tendif"
         - "\t\tset tempf2 to ( calcinator + 1 - alembic )"
         - "\t\tset tempf1 to ( Random 100 )"
@@ -25169,11 +25203,11 @@
     - SCHD:
         name: A1V6_CalcAlchemy5_sc
         vars:
-          shorts: 7
+          shorts: 8
           longs: 0
           floats: 3
-        data_size: 1758
-        var_table_size: 73
+        data_size: 1897
+        var_table_size: 78
     - SCVR:
         - state
         - calcinator
@@ -25182,10 +25216,11 @@
         - alembic
         - alchemy
         - temp
+        - appa
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNVE1v00AQ3bFjJy6lWKgUFSExRRWHRgm7SZ0PiVSKOPTEpQeUW7SkLiTENIrTQ/4j/CRUZnfjxCHrthdrPPPezLyZsX0IA0yBYa+HDR+AXjyGn7DJPUjLzMGosnFGmbOVc7YzZzvn7GbOThlgZXYDsi7DvvjaGvanox9xsvxyN12UUNQJffkiH7iKUw+JxYgLxOVvw0Md/yynoxUmGqajUwjAh9pagtgHfzaVy3juwQ0wDwc/Q5b3OcrX2fa5yvchZJpyhPRAXhdIWKQYVvEMq9SHTzCKMR9KFaQ3kiksfTvYfFLTsG+S9DAtaZ0lyk8eRmM8xsGfEK+f94VOfBUvbucLVY//Drede+z+PjATruDgJLxmnJvcZYYX69yemn8ZQgo902UvMHV1RKlSpk7isAOkh0ZUUWDNXISjtDa6GuCSkbXvmRLOqoSnTWr/jWn/YNVpfxon38ajVf//eTMBN1ltQZVV5ppex1qUfnupl6MWc0a5eJ3jR115TzNUrKp6c7MzFNy6oPNHFmRuViEaAZhtna9PTI0XcfA3xNtXcjaTc7m4S4ffhwltQ86HXNBs1fW7jC5b8IoNnVjQLn00VvDECm7bwdIKjngZXOsoGg/fqE3oXB/epkBJCeVFQnfRDwi1gTtFQm3gNje7U3aLawmnhnqclzAiseNfkvgbuj5tVWuXkBQSRGQlTIoJ9gqygED/XyNImUbPiSEf5fVI8y1tmF425V10Yke37eiJHR3Z0dKObir0O4M+zKPT2XgWW7DvDfb1LnaRjpdyC27m4+nZBtl3K9T9AvwD0zeIrQ==
+    - SCDT: eJyNld9v2kAMx88JCclWbdlEO02aNHeq9gAqveM3UqlUbRJPe9nDxBvKWLrByIoIfeCPnzT7jkAqDroXdGd/fPbXsYUPUYgZCBwMsOED0MUTeI1N6UFWFg62g52xnRs7BWM3N3YLxn5u7JUBNsd+SKdhdKu+dca388mvJF1/eZivSqjqRA9fFh1fk8xDihIUCxQr30UV7f8Uzycbpj3OJhcQgg+9rQR1Av5iHq+TpQd3IDwc/Y5E0eawrffY5rLtYyR0yBnSD8q6QmKRfFjDKtaoDp8w8gkfSgHSjWQqS90ONv+raDgxjwwwK2mdJXqfLKIMge7YKQ5fmbcXi3gZrx6yz0nGYCAC7g328EqDdAvyWyBe6JvxV/HSB8f4r7F19FmLNU9TCyGETarRefRDSGnqJ+/Ntn6Pv3EZKuR6rqXdYOZqD3eOj/oRhyuk1jJRQ8UV8tg4XGGjrwGXDnmLPJPC2aTw9LEM3lMtCnV1nRZe0TuFDlgCtuhG511eoqICuYBLPRlb7fr2Ws8Jz0gVlZR1qdvviWc6gn01luDmG6GkdVZaT8yKWR8mGiGYwWltp52/AuLob4T3p3EuaPxznN4vV/FyLBV9Al5EV9CSKRnY6NRCu7S/Vnhmhbt2OLbCbVkG19qKxvF1sQldJitKsUtQYqHykNB9+ohQG9w7JNQGd6X5dnzuSC3hwoS+LUqYkNjpn5jid+F6AzjXfkB6MEC1rQGzwwH2DPGBAPorMIL4aPScm+Czop54nqTfp5NdpJd3eZ9O7XTXTs/sdNtOx3a6yfR7Q1eKdLaYLhIL+8Gwb/bZVTZdx49w0x9P9zbM91bx/AL8A6UYmis=
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -25199,6 +25234,7 @@
         - float tempf2
         - float tempf3
         - short temp
+        - short appa
         - ""
         - if ( state == 2 )
         - "\tif ( alembic < 30 )"
@@ -25233,8 +25269,15 @@
         - "\tendif"
         - "\tif ( alchemy <= retort )"
         - "\t\tset retort to alchemy"
-        - "\telseif ( GetJournalIndex A1_AlchRetort < 10 )"
-        - "\t\tJournal A1_AlchRetort 10"
+        - "\telse"
+        - "\t\tset temp to A1V6_ApparatusDes"
+        - "\t\tset appa to ( temp / 8 )"
+        - "\t\tset temp to ( appa / 8 )"
+        - "\t\tset appa to ( appa - temp * 8 )"
+        - "\t\tif ( appa < 4 )"
+        - "\t\t\tset temp to A1V6_ApparatusDes"
+        - "\t\t\tset A1V6_ApparatusDes to (temp + 8)"
+        - "\t\tendif"
         - "\tendif"
         - "\tset temp to ( Random 100 )"
         - "\tif ( temp >= retort )"
@@ -25249,8 +25292,12 @@
         - "\t\tendif"
         - "\t\tif ( alembic >= calcinator )"
         - "\t\t\tset alembic to calcinator"
-        - "\t\telseif ( GetJournalIndex A1_AlchAlembic < 10 )"
-        - "\t\t\tJournal A1_AlchAlembic 10"
+        - "\t\telse"
+        - "\t\t\tset temp to A1V6_ApparatusDes"
+        - "\t\t\tset appa to ( temp / 64 )"
+        - "\t\t\tif ( appa < 4 )"
+        - "\t\t\t\tset A1V6_ApparatusDes to (temp + 64)"
+        - "\t\t\tendif"
         - "\t\tendif"
         - "\t\tset tempf2 to ( calcinator + 1 - alembic )"
         - "\t\tset tempf1 to ( Random 100 )"
@@ -25520,13 +25567,13 @@
           shorts: 0
           longs: 0
           floats: 3
-        data_size: 510
+        data_size: 532
         var_table_size: 22
     - SCVR:
         - alchemy
         - tempf1
         - tempf2
-    - SCDT: eJxtUUtLw0AQ3klJNLXQpT6gqDgXPbRQNzmIh6ZSVIKHQk/iLYSa0tJtLUkr9uZv85eE4iH4KHoQhF7MbkSr6XG/1+w3kwNtyN2J56vQBqLiVY+S3AKmCOz4L5YR2AElkt7C2IesYmD8wJjDMpawrAGsSqSKptQpaOogzRto07pxeeTUeavj9SeNMR8lWQU0GaswmVKS7kPpWEc7v+g4vxsSSWSlVAjLKqQ0qmCJBvli2o81Cw3GlrgUZBqou2hv2i4PHOe04/pn3q3T9L3AG4zQsoQgk5W9qyIk7lr816nJx0FCbtNkwMWg9c3poMMKaD8b7VNC7k9SS48PoYGyJtvVxDCi0GzQ63Luu93AI3SPPISf+BpO508YPn9EL1GE0/nb7B0fZ7hfYW0RRMQ0HXZoQf6icXP92xTgC7pwed4=
+    - SCDT: eJxtUUtLAlEUvmdkpsYEL/YAsehsaqFgVxfRQg2pGFoIrqLdMExjitcHMxq567f1SwZpMfSQWgSBm+beibTG5f1e537npEAbcmviuCq0gKh43aUktYQpAjv5iyUEdkiJpHcw9CErljB8YMhhAfNY0ADWJVLBstQpWNZBmrfQoPXS1bFZ53bb6U0aYz6KsjJYZqzIZEpeuo+kYxON9LLj4n5IJJGUUiEsqBDTqIIlGqSzcT/WqlhibIVLQaaBuofGtmFxzzTP2pZ77tyZTdfxnP4Iq1UhSCRl74oICbtm/3Vq8rEXkTkaDbjs2z+cDjqsgfa70R4l5OE0tvTwEBooG7JdTQwjCk163Q7nrtXxHEL3yaP/hW/+dP6M/stn8BoEOJ2/zz7waYYHRdYSQSSaBjm6+F/THdyanq3DLs1IsDG4WfQH+AZkdX/E
     - SCTX:
         - Begin A1V6_ModAlchemyExp
         - ""
@@ -25562,6 +25609,8 @@
         - "\t\t\tMessageBox \"Ваш навык алхимии вырос до %.0f\", tempf1"
         - "\t\tendif"
         - "\tendif"
+        - else
+        - "\tStartScript A1V6_AlchProg_sc"
         - endif
         - ""
         - StopScript A1V6_ModAlchemyExp
@@ -31240,33 +31289,3 @@
     - TEXT:
         - "<DIV ALIGN=\"LEFT\"><FONT COLOR=\"000000\" SIZE=\"3\" FACE=\"Magic Cards\"><BR>Ваш навык алхимии вырос.<BR>"
         - ""
-- DIAL:
-    - NAME: A1_AlchAlembic
-    - DATA: Journal
-- INFO:
-    - INAM: "171836544114738525"
-    - PNAM: ""
-    - NNAM: ""
-    - DATA:
-        dialog_type: Journal
-        disp_index: 10
-        rank: ~
-        sex: ~
-        pc_rank: ~
-        padding: 0
-    - NAME: "Сегодня я понял, что мне нужен перегонный куб."
-- DIAL:
-    - NAME: A1_AlchRetort
-    - DATA: Journal
-- INFO:
-    - INAM: "2091323223566931083"
-    - PNAM: ""
-    - NNAM: ""
-    - DATA:
-        dialog_type: Journal
-        disp_index: 10
-        rank: ~
-        sex: ~
-        pc_rank: ~
-        padding: 0
-    - NAME: "Сегодня я понял, что мне нужна реторта."
