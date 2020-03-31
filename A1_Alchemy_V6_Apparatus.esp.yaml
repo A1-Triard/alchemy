@@ -7,9 +7,13 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования без EVA.esp/MFR_EVA.esm
-        records: 545
+        records: 544
     - MAST: Morrowind.esm
     - DATA: 79764287
+    - MAST: Tribunal.esm
+    - DATA: 6616539
+    - MAST: Bloodmoon.esm
+    - DATA: 11799703
 - GLOB:
     - NAME: Gals__CharDev_Present
     - FNAM: s
@@ -18961,62 +18965,62 @@
 - ACTI:
     - NAME: A1V6_apparatus_a_alembic
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Alembic_sc
 - ACTI:
     - NAME: A1V6_apparatus_a_calcinator
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_sc
 - ACTI:
     - NAME: A1V6_apparatus_a_retort
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Retort_sc
 - ACTI:
     - NAME: A1V6_apparatus_a_spipe
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Alembic_sc
 - ACTI:
     - NAME: A1V6_apparatus_g_alembic
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Alembic_sc
 - ACTI:
     - NAME: A1V6_apparatus_g_calcinator
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_sc
 - ACTI:
     - NAME: A1V6_apparatus_g_retort
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Retort_sc
 - ACTI:
     - NAME: A1V6_apparatus_j_alembic
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Alembic_sc
 - ACTI:
     - NAME: A1V6_apparatus_j_calcinator
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_sc
 - ACTI:
     - NAME: A1V6_apparatus_j_retort
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Retort_sc
 - ACTI:
     - NAME: A1V6_apparatus_m_alembic
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Alembic_sc
 - ACTI:
     - NAME: A1V6_apparatus_m_calcinator
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: "\u0000"
+    - FNAM: ""
     - SCRI: A1V6_Calcinator_sc
 - MISC:
     - NAME: A1V6_apparatus_m_retort
