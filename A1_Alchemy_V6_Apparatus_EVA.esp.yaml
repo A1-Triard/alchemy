@@ -25101,26 +25101,42 @@
     - SCHD:
         name: A1V6_Calcinator_sc
         vars:
-          shorts: 2
+          shorts: 5
           longs: 0
           floats: 3
-        data_size: 232
-        var_table_size: 22
+        data_size: 334
+        var_table_size: 43
     - SCVR:
         - doOnce
         - index
+        - OnPCAdd
+        - OnPCDrop
+        - inv
         - cx
         - cy
         - cz
-    - SCDT: eJxtjjEKwkAURP9EDCwWrkSx/YUHMI1diqCweAFJ0siqEQIhhiSCd/JIehj/GpuA1XzmzR/GBxQnrDmKOFxBwYcnxrs3njNQbyrFLciZ6zHk8jgU9WjJJojDw+YY17VtbHdv99Ulf9AYV9Ccjf7CrS3PRWW7W5M44v0jqSMjCthMh4UZTXQibSKpvIpkkvvtArNZDPO7orWnMndbZSC9tALwAVtGMKI=
+    - SCDT: eJxtkE0KwjAQhTPpDwQXVqq4nYUHsBt3XRSF4gUk7UaiViiUWtoK3skj6WGcJEUsuHpJvvceM/GBC+xchnGMkQd04rgm9bQK8A12vtj5wZHGIFBiYPAKBr9824fnDJh9FFQCpkSHQYdJOVtiGibRYXNMmka1qr93+/pSPJgHV2BzTAMDt6o6l7Xqb63UhP8jmSYOCzGdjgtzNgkktZFkFCXJyTfM5dJc3M5lVqG9zOUVCLAOQEwX48Zd2alTVWgjhZlZxHwWwAdOdjtH
     - SCTX:
         - Begin A1V6_Calcinator_sc
         - ""
         - short doOnce
         - short index
+        - short OnPCAdd
+        - short OnPCDrop
+        - short inv
         - float cx
         - float cy
         - float cz
+        - ""
+        - if ( OnPCDrop == 1 )
+        - "\tset OnPCDrop to 0"
+        - "\tset inv to 0"
+        - endif
+        - ""
+        - if ( OnPCAdd == 1 )
+        - "\tset OnPCAdd to 0"
+        - "\tset inv to 1"
+        - endif
         - ""
         - if ( MenuMode == 1 )
         - "\treturn"
@@ -25143,8 +25159,15 @@
         - "\treturn"
         - endif
         - ""
+        - if ( index == 0 )
+        - "\tif ( inv == 0 )"
+        - "\t\tDisable"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
         - if ( A1V6_ApparatusDisable == index )
-        - "\tDisable"
+        - "\tset index to 0"
         - endif
         - ""
         - End
@@ -25240,26 +25263,42 @@
     - SCHD:
         name: A1V6_Retort_sc
         vars:
-          shorts: 2
+          shorts: 5
           longs: 0
           floats: 3
-        data_size: 224
-        var_table_size: 22
+        data_size: 326
+        var_table_size: 43
     - SCVR:
         - doOnce
         - index
+        - OnPCAdd
+        - OnPCDrop
+        - inv
         - cx
         - cy
         - cz
-    - SCDT: eJxdjrEKwkAQRHdOEjgUPAliu4UfYBq7FAHhsLWQJI1EjCCIhuQE/8lP0o9xz9gk1SxvZ4YJAc0ZG04SjpfQCKEEfDrwmoE6qDW3IA9XAeRSHIsqWrCN0ni/PqR1XTale7Tb26l6UoAzyLCd/J67yt0bl3mqhjT3dEQR22m/qKCxyaRFJJeYSCG+/x4w23nfv7m05fFa+Y0yjN5GA/gCVYwtkg==
+    - SCDT: eJxdUL0KwjAQzqU/EBSsFHG9wQewi1uHghBcHSTtIhUrCKKlreA7+Uj6MF4uRazTl3x/3F0IUmHrC0xTTAKgl8QlYWBRQciy95W9HzmxMig0GLG8gN5v3o54TkE4UlEJcIkNgw0TSjFHHWfJbrXP6rpsyu7ebq7H6iECOIGIUI9Z3FbdremMZeU/m1vWEzHqybCoEKPIUAtBTjGCgnz9PD7NI908vALtw59XpMA5AFHPho3rc1seLpU1UljwAnwkgA+aZTg3
     - SCTX:
         - Begin A1V6_Retort_sc
         - ""
         - short doOnce
         - short index
+        - short OnPCAdd
+        - short OnPCDrop
+        - short inv
         - float cx
         - float cy
         - float cz
+        - ""
+        - if ( OnPCDrop == 1 )
+        - "\tset OnPCDrop to 0"
+        - "\tset inv to 0"
+        - endif
+        - ""
+        - if ( OnPCAdd == 1 )
+        - "\tset OnPCAdd to 0"
+        - "\tset inv to 1"
+        - endif
         - ""
         - if ( MenuMode == 1 )
         - "\treturn"
@@ -25282,8 +25321,15 @@
         - "\treturn"
         - endif
         - ""
+        - if ( index == 0 )
+        - "\tif ( inv == 0 )"
+        - "\t\tDisable"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
         - if ( A1V6_ApparatusDisable == index )
-        - "\tDisable"
+        - "\tset index to 0"
         - endif
         - ""
         - End
