@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования без EVA.esp/MFR_EVA.esm
-        records: 544
+        records: 543
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -18250,7 +18250,7 @@
           floats: 0
         data_size: 2538
         var_table_size: 0
-    - SCDT: eJyV0zFLw0AUB/C7CsWCw4HaKgqe0g/QLm4V6uQuSrfwLEFy9NmQxqGfUx2FUiGDYMHugk2DNendy13m90/eL5f/1TlvyIEUsteT3TZv8D1eD0cw9aM63zmXgx8hx00IQ4ggfp54jx6MfHwIhl6nK69kZ5N+E0SKs1d6lIijfvf+0jPMOWPs5pqxzYZdkwedPEh70OLBah7l5FG0R1k8qpoHnDxAe8DigTLPReZp5eOTMAh9L54EU9gCUbFURM8S0dRI64AJdJaBDvS3acdjzKQUYmB1FK9WO5Mc55s/hNEweIJ4HOkcOpiayqaJONHu2H/EdEq6DV1tWGpDuw0r25SrTZXalN2mKtvA1QalNrDbwGArNk5musN8DyJ/FY91mTmUqqhJIlpay7Kx6aR0C7pYkLRguQUrWZSLRZEWVW5RlSzgYgHSAuUW2LIUGlMzNQZXaYgsjdmEtMbkJrnvrpn64LAJyU3ovkm5bFLkJuW+CVw2AbmpMGlwJgR7+V7Ovhbzz5n8WCwX8xlj7+JU7K//cv/vwVs/vgs5/wU9FUHa
+    - SCDT: eJyd0zFLw0AUB/A7hWLB4UBtFQVP6QdoF7cKdXIXpVt4liA5+mxI49DPqY5CqZBBsGB3wabBmvTuXS7O75+8Xy7/q3Fel30pZLcrOy1e57u8Fg5h4kc1vn0m+99CjhoQhhBB/DT2HjwY+ngfDLx2R17K9jr9KogUZy/0KBGHvc7dhWeYc8bY9RVj6w07Jg86eZD2YIkHq3mUk0fRHlXiUdU84OQB2gMlHrB5zjNPMx8fh0Hoe/E4mMAGiIqlInqWiIZGWgVMoNMMtK+/TTseYyalEINSR/FqtTLJUb75AxgOgkeIR5HOoYOpyTZNxLF2x/4iplPSbehqQ6sNy21Y2aZcbcpqU+U2qGwDVxtYbfA/W7FxMtMd5HsQ+ct4rMvMoVRFTRLR1FqWjU0npVvQxYKkBe0WrGRRLhZFWpTdoipZwMUCpAXsFtiwFBqzZWoMLtMQlTRmHdIak5vkvnvL1AeHTUhuQvdNymWTIjcp903gsgnITYVJnTMh2PPXYvo5n31M5ft8MZ9NGXsTJ2Jv9Zd7vw/e+PFtyPkPEmdB0Q==
     - SCTX:
         - Begin A1V6_ApparatusSetUp
         - ""
@@ -18295,7 +18295,7 @@
         - elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_j_calcinator_01, 1"
         - "\tAddItem apparatus_j_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_calcinator, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_calcinator, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_calcinator_01, 1"
         - "\tAddItem apparatus_a_calcinator_01, 1"
@@ -18962,66 +18962,116 @@
         effect_4_attribute: ~
     - SCRI: A1V6_AlchemyActivator_sc
     - ITEX: "n\\a1_alchemy_act.dds"
-- ACTI:
+- MISC:
     - NAME: A1V6_apparatus_a_alembic
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: ""
+    - FNAM: Алх. уст. - Перегонный куб
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Alembic_sc
-- ACTI:
+    - ITEX: "m\\Tx_alembic_01.tga"
+- MISC:
     - NAME: A1V6_apparatus_a_calcinator
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: ""
+    - FNAM: Алх. уст. - Кальцинатор
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Calcinator_sc
-- ACTI:
+    - ITEX: "m\\Tx_calcinator_01.tga"
+- MISC:
     - NAME: A1V6_apparatus_a_retort
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: ""
+    - FNAM: Алх. уст. - Реторта
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Retort_sc
-- ACTI:
+    - ITEX: "m\\Tx_retort_01.tga"
+- MISC:
     - NAME: A1V6_apparatus_a_spipe
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: ""
+    - FNAM: Алх. уст. - Трубка скуума
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Alembic_sc
-- ACTI:
+    - ITEX: "m\\Tx_Spipe_01.tga"
+- MISC:
     - NAME: A1V6_apparatus_g_alembic
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: ""
+    - FNAM: Алх. уст. - Перегонный куб
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Alembic_sc
-- ACTI:
+    - ITEX: "m\\Tx_alembic_04.tga"
+- MISC:
     - NAME: A1V6_apparatus_g_calcinator
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: ""
+    - FNAM: Алх. уст. - Кальцинатор
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Calcinator_sc
-- ACTI:
+    - ITEX: "m\\Tx_calcinator_04.tga"
+- MISC:
     - NAME: A1V6_apparatus_g_retort
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: ""
+    - FNAM: Алх. уст. - Реторта
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Retort_sc
-- ACTI:
+    - ITEX: "m\\Tx_retort_04.tga"
+- MISC:
     - NAME: A1V6_apparatus_j_alembic
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: ""
+    - FNAM: Алх. уст. - Перегонный куб
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Alembic_sc
-- ACTI:
-    - NAME: A1V6_apparatus_j_calcinator
-    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: ""
-    - SCRI: A1V6_Calcinator_sc
-- ACTI:
+    - ITEX: "m\\Tx_alembic_02.tga"
+- MISC:
     - NAME: A1V6_apparatus_j_retort
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: ""
+    - FNAM: Алх. уст. - Реторта
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Retort_sc
-- ACTI:
+    - ITEX: "m\\Tx_retort_02.tga"
+- MISC:
     - NAME: A1V6_apparatus_m_alembic
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: ""
+    - FNAM: Алх. уст. - Перегонный куб
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Alembic_sc
-- ACTI:
+    - ITEX: "m\\Tx_alembic_03.tga"
+- MISC:
     - NAME: A1V6_apparatus_m_calcinator
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: ""
+    - FNAM: Алх. уст. - Кальцинатор
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Calcinator_sc
+    - ITEX: "m\\Tx_calcinator_03.tga"
 - MISC:
     - NAME: A1V6_apparatus_m_retort
     - MODL: "m\\Apparatus_M_Retort_01.nif"
