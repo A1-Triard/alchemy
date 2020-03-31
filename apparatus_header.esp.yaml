@@ -49,6 +49,10 @@
     - FNAM: f
     - FLTV: 0.0
 - GLOB:
+    - NAME: A1V6_ApparatusIndex
+    - FNAM: s
+    - FLTV: 0.0
+- GLOB:
     - NAME: A1V6_RetortX
     - FNAM: f
     - FLTV: 0.0
@@ -77,15 +81,7 @@
     - FNAM: f
     - FLTV: 0.0
 - GLOB:
-    - NAME: A1V6_ApparatusDisable_3
-    - FNAM: s
-    - FLTV: 0.0
-- GLOB:
-    - NAME: A1V6_ApparatusDisable_2
-    - FNAM: s
-    - FLTV: 0.0
-- GLOB:
-    - NAME: A1V6_ApparatusDisable_1
+    - NAME: A1V6_ApparatusDisable
     - FNAM: s
     - FLTV: 0.0
 - GLOB:
@@ -236,7 +232,7 @@
         - End
 - SCPT:
     - SCHD:
-        name: A1V6_Alembic_1_sc
+        name: A1V6_Alembic_sc
         vars:
           shorts: 0
           longs: 0
@@ -244,9 +240,10 @@
         data_size: 0
         var_table_size: 0
     - SCTX:
-        - Begin A1V6_Alembic_1_sc
+        - Begin A1V6_Alembic_sc
         - ""
         - short doOnce
+        - short index
         - float cx
         - float cy
         - float cz
@@ -260,7 +257,7 @@
         - "\treturn"
         - endif
         - ""
-        - if ( A1V6_ApparatusDisable_1 == 1 )
+        - if ( A1V6_ApparatusDisable == index )
         - "\tDisable"
         - endif
         - ""
@@ -270,6 +267,7 @@
         - ""
         - if ( doOnce == 0 )
         - "\tset doOnce to 1"
+        - "\tset index to A1V6_ApparatusIndex"
         - "\tset cx to A1V6_AlembicX"
         - "\tset cy to A1V6_AlembicY"
         - "\tset cz to A1V6_ApparatusZ"
@@ -281,7 +279,7 @@
         - End
 - SCPT:
     - SCHD:
-        name: A1V6_Alembic_2_sc
+        name: A1V6_Calcinator_sc
         vars:
           shorts: 0
           longs: 0
@@ -289,9 +287,10 @@
         data_size: 0
         var_table_size: 0
     - SCTX:
-        - Begin A1V6_Alembic_2_sc
+        - Begin A1V6_Calcinator_sc
         - ""
         - short doOnce
+        - short index
         - float cx
         - float cy
         - float cz
@@ -305,7 +304,7 @@
         - "\treturn"
         - endif
         - ""
-        - if ( A1V6_ApparatusDisable_2 == 1 )
+        - if ( A1V6_ApparatusDisable == index )
         - "\tDisable"
         - endif
         - ""
@@ -315,8 +314,9 @@
         - ""
         - if ( doOnce == 0 )
         - "\tset doOnce to 1"
-        - "\tset cx to A1V6_AlembicX"
-        - "\tset cy to A1V6_AlembicY"
+        - "\tset index to A1V6_ApparatusIndex"
+        - "\tset cx to A1V6_CalcinatorX"
+        - "\tset cy to A1V6_CalcinatorY"
         - "\tset cz to A1V6_ApparatusZ"
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
@@ -326,7 +326,7 @@
         - End
 - SCPT:
     - SCHD:
-        name: A1V6_Alembic_3_sc
+        name: A1V6_Retort_sc
         vars:
           shorts: 0
           longs: 0
@@ -334,9 +334,10 @@
         data_size: 0
         var_table_size: 0
     - SCTX:
-        - Begin A1V6_Alembic_3_sc
+        - Begin A1V6_Retort_sc
         - ""
         - short doOnce
+        - short index
         - float cx
         - float cy
         - float cz
@@ -350,7 +351,7 @@
         - "\treturn"
         - endif
         - ""
-        - if ( A1V6_ApparatusDisable_3 == 1 )
+        - if ( A1V6_ApparatusDisable == index )
         - "\tDisable"
         - endif
         - ""
@@ -360,8 +361,9 @@
         - ""
         - if ( doOnce == 0 )
         - "\tset doOnce to 1"
-        - "\tset cx to A1V6_AlembicX"
-        - "\tset cy to A1V6_AlembicY"
+        - "\tset index to A1V6_ApparatusIndex"
+        - "\tset cx to A1V6_RetortX"
+        - "\tset cy to A1V6_RetortY"
         - "\tset cz to A1V6_ApparatusZ"
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
@@ -501,7 +503,7 @@
         - "\t\tset waitActivate to 0"
         - "\t\tDisablePlayerControls"
         - "\t\tif ( GetItemCount \"A1V6_ApparatusItem_1\" == 0 )"
-        - "\t\t\tset A1V6_ApparatusDisable_1 to 1"
+        - "\t\t\tset A1V6_ApparatusDisable to 1"
         - "\t\t\tset doDisable to 1"
         - "\t\t\tStartScript A1V6_ApparatusDeactivate_sc"
         - "\t\telse"
@@ -561,7 +563,7 @@
         - "\t\tsetx invItem,invCount,invRef to xInventory"
         - "\tendwhile"
         - "\tAddItem \"A1V6_ApparatusItem_1\", 1"
-        - "\tset A1V6_ApparatusDisable_1 to 0"
+        - "\tset A1V6_ApparatusDisable to 0"
         - "\tset doSetUp to 1"
         - "\treturn"
         - endif
@@ -638,7 +640,8 @@
         - "\tset A1V6_RetortX to retortX"
         - "\tset A1V6_RetortY to retortY"
         - "\tset A1V6_ApparatusZ to cz"
-        - "\tStartScript A1V6_ApparatusSetUp_1"
+        - "\tset A1V6_ApparatusIndex to 1"
+        - "\tStartScript A1V6_ApparatusSetUp"
         - "\treturn"
         - endif
         - ""
@@ -760,7 +763,7 @@
         - "\t\tset waitActivate to 0"
         - "\t\tDisablePlayerControls"
         - "\t\tif ( GetItemCount \"A1V6_ApparatusItem_2\" == 0 )"
-        - "\t\t\tset A1V6_ApparatusDisable_2 to 1"
+        - "\t\t\tset A1V6_ApparatusDisable to 2"
         - "\t\t\tset doDisable to 1"
         - "\t\t\tStartScript A1V6_ApparatusDeactivate_sc"
         - "\t\telse"
@@ -820,7 +823,7 @@
         - "\t\tsetx invItem,invCount,invRef to xInventory"
         - "\tendwhile"
         - "\tAddItem \"A1V6_ApparatusItem_2\", 1"
-        - "\tset A1V6_ApparatusDisable_2 to 0"
+        - "\tset A1V6_ApparatusDisable to 0"
         - "\tset doSetUp to 1"
         - "\treturn"
         - endif
@@ -897,7 +900,8 @@
         - "\tset A1V6_RetortX to retortX"
         - "\tset A1V6_RetortY to retortY"
         - "\tset A1V6_ApparatusZ to cz"
-        - "\tStartScript A1V6_ApparatusSetUp_2"
+        - "\tset A1V6_ApparatusIndex to 2"
+        - "\tStartScript A1V6_ApparatusSetUp"
         - "\treturn"
         - endif
         - ""
@@ -1019,7 +1023,7 @@
         - "\t\tset waitActivate to 0"
         - "\t\tDisablePlayerControls"
         - "\t\tif ( GetItemCount \"A1V6_ApparatusItem_3\" == 0 )"
-        - "\t\t\tset A1V6_ApparatusDisable_3 to 1"
+        - "\t\t\tset A1V6_ApparatusDisable to 3"
         - "\t\t\tset doDisable to 1"
         - "\t\t\tStartScript A1V6_ApparatusDeactivate_sc"
         - "\t\telse"
@@ -1079,7 +1083,7 @@
         - "\t\tsetx invItem,invCount,invRef to xInventory"
         - "\tendwhile"
         - "\tAddItem \"A1V6_ApparatusItem_3\", 1"
-        - "\tset A1V6_ApparatusDisable_3 to 0"
+        - "\tset A1V6_ApparatusDisable to 0"
         - "\tset doSetUp to 1"
         - "\treturn"
         - endif
@@ -1156,7 +1160,8 @@
         - "\tset A1V6_RetortX to retortX"
         - "\tset A1V6_RetortY to retortY"
         - "\tset A1V6_ApparatusZ to cz"
-        - "\tStartScript A1V6_ApparatusSetUp_3"
+        - "\tset A1V6_ApparatusIndex to 3"
+        - "\tStartScript A1V6_ApparatusSetUp"
         - "\treturn"
         - endif
         - ""
@@ -1386,7 +1391,7 @@
         - End
 - SCPT:
     - SCHD:
-        name: A1V6_ApparatusSetUp_1
+        name: A1V6_ApparatusSetUp
         vars:
           shorts: 0
           longs: 0
@@ -1394,7 +1399,7 @@
         data_size: 0
         var_table_size: 0
     - SCTX:
-        - Begin A1V6_ApparatusSetUp_1
+        - Begin A1V6_ApparatusSetUp
         - ""
         - if ( MenuMode == 1 )
         - "\treturn"
@@ -1403,63 +1408,63 @@
         - if ( player->GetItemCount apparatus_g_alembic_01 > 0 )
         - "\tplayer->RemoveItem apparatus_g_alembic_01, 1"
         - "\tAddItem apparatus_g_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_alembic_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_g_alembic, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_m_alembic_01 > 0 )
         - "\tplayer->RemoveItem apparatus_m_alembic_01, 1"
         - "\tAddItem apparatus_m_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_alembic_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_m_alembic, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_j_alembic_01 > 0 )
         - "\tplayer->RemoveItem apparatus_j_alembic_01, 1"
         - "\tAddItem apparatus_j_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_alembic_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_j_alembic, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_alembic_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_alembic_01, 1"
         - "\tAddItem apparatus_a_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_alembic_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_alembic, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
         - "\tAddItem apparatus_a_spipe_tsiya, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
         - "\tAddItem apparatus_a_spipe_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_spipe, 1, 50, 0"
         - endif
         - ""
         - if ( player->GetItemCount apparatus_g_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_g_calcinator_01, 1"
         - "\tAddItem apparatus_g_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_calcinator_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_g_calcinator, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_m_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_m_calcinator_01, 1"
         - "\tAddItem apparatus_m_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_calcinator_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_m_calcinator, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_j_calcinator_01, 1"
         - "\tAddItem apparatus_j_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_calcinator_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_j_calcinator, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_calcinator_01, 1"
         - "\tAddItem apparatus_a_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_calcinator_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_calcinator, 1, 50, 0"
         - endif
         - ""
         - if ( player->GetItemCount apparatus_g_retort_01 > 0 )
         - "\tplayer->RemoveItem apparatus_g_retort_01, 1"
         - "\tAddItem apparatus_g_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_retort_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_g_retort, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_m_retort_01 > 0 )
         - "\tplayer->RemoveItem apparatus_m_retort_01, 1"
         - "\tAddItem apparatus_m_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_retort_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_m_retort, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_j_retort_01 > 0 )
         - "\tplayer->RemoveItem apparatus_j_retort_01, 1"
         - "\tAddItem apparatus_j_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_retort_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_j_retort, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_retort_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_retort_01, 1"
         - "\tAddItem apparatus_a_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_retort_e1, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_retort, 1, 50, 0"
         - endif
         - ""
         - if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
@@ -1479,203 +1484,7 @@
         - "MessageBox \"Установка готова\""
         - EnablePlayerControls
         - ""
-        - StopScript A1V6_ApparatusSetUp_1
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1V6_ApparatusSetUp_2
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 0
-        var_table_size: 0
-    - SCTX:
-        - Begin A1V6_ApparatusSetUp_2
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( player->GetItemCount apparatus_g_alembic_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_g_alembic_01, 1"
-        - "\tAddItem apparatus_g_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_alembic_e2, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_m_alembic_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_m_alembic_01, 1"
-        - "\tAddItem apparatus_m_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_alembic_e2, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_j_alembic_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_j_alembic_01, 1"
-        - "\tAddItem apparatus_j_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_alembic_e2, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_a_alembic_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_a_alembic_01, 1"
-        - "\tAddItem apparatus_a_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_alembic_e2, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
-        - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
-        - "\tAddItem apparatus_a_spipe_tsiya, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e2, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
-        - "\tAddItem apparatus_a_spipe_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e2, 1, 50, 0"
-        - endif
-        - ""
-        - if ( player->GetItemCount apparatus_g_calcinator_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_g_calcinator_01, 1"
-        - "\tAddItem apparatus_g_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_calcinator_e2, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_m_calcinator_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_m_calcinator_01, 1"
-        - "\tAddItem apparatus_m_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_calcinator_e2, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_j_calcinator_01, 1"
-        - "\tAddItem apparatus_j_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_calcinator_e2, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_a_calcinator_01, 1"
-        - "\tAddItem apparatus_a_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_calcinator_e2, 1, 50, 0"
-        - endif
-        - ""
-        - if ( player->GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_g_retort_01, 1"
-        - "\tAddItem apparatus_g_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_retort_e2, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_m_retort_01, 1"
-        - "\tAddItem apparatus_m_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_retort_e2, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_j_retort_01, 1"
-        - "\tAddItem apparatus_j_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_retort_e2, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_a_retort_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_a_retort_01, 1"
-        - "\tAddItem apparatus_a_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_retort_e2, 1, 50, 0"
-        - endif
-        - ""
-        - if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_g_mortar_01, 1"
-        - "\tAddItem apparatus_g_mortar_01, 1"
-        - elseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_m_mortar_01, 1"
-        - "\tAddItem apparatus_m_mortar_01, 1"
-        - elseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_j_mortar_01, 1"
-        - "\tAddItem apparatus_j_mortar_01, 1"
-        - elseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_a_mortar_01, 1"
-        - "\tAddItem apparatus_a_mortar_01, 1"
-        - endif
-        - ""
-        - "MessageBox \"Установка готова\""
-        - EnablePlayerControls
-        - ""
-        - StopScript A1V6_ApparatusSetUp_2
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1V6_ApparatusSetUp_3
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 0
-        var_table_size: 0
-    - SCTX:
-        - Begin A1V6_ApparatusSetUp_3
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( player->GetItemCount apparatus_g_alembic_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_g_alembic_01, 1"
-        - "\tAddItem apparatus_g_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_alembic_e3, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_m_alembic_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_m_alembic_01, 1"
-        - "\tAddItem apparatus_m_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_alembic_e3, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_j_alembic_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_j_alembic_01, 1"
-        - "\tAddItem apparatus_j_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_alembic_e3, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_a_alembic_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_a_alembic_01, 1"
-        - "\tAddItem apparatus_a_alembic_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_alembic_e3, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_a_spipe_tsiya > 0 )
-        - "\tplayer->RemoveItem apparatus_a_spipe_tsiya, 1"
-        - "\tAddItem apparatus_a_spipe_tsiya, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e3, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_a_spipe_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_a_spipe_01, 1"
-        - "\tAddItem apparatus_a_spipe_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_spipe_e3, 1, 50, 0"
-        - endif
-        - ""
-        - if ( player->GetItemCount apparatus_g_calcinator_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_g_calcinator_01, 1"
-        - "\tAddItem apparatus_g_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_calcinator_e3, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_m_calcinator_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_m_calcinator_01, 1"
-        - "\tAddItem apparatus_m_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_calcinator_e3, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_j_calcinator_01, 1"
-        - "\tAddItem apparatus_j_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_calcinator_e3, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_a_calcinator_01, 1"
-        - "\tAddItem apparatus_a_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_calcinator_e3, 1, 50, 0"
-        - endif
-        - ""
-        - if ( player->GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_g_retort_01, 1"
-        - "\tAddItem apparatus_g_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_g_retort_e3, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_m_retort_01, 1"
-        - "\tAddItem apparatus_m_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_m_retort_e3, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_j_retort_01, 1"
-        - "\tAddItem apparatus_j_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_retort_e3, 1, 50, 0"
-        - elseif ( player->GetItemCount apparatus_a_retort_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_a_retort_01, 1"
-        - "\tAddItem apparatus_a_retort_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_retort_e3, 1, 50, 0"
-        - endif
-        - ""
-        - if ( player->GetItemCount apparatus_g_mortar_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_g_mortar_01, 1"
-        - "\tAddItem apparatus_g_mortar_01, 1"
-        - elseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_m_mortar_01, 1"
-        - "\tAddItem apparatus_m_mortar_01, 1"
-        - elseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_j_mortar_01, 1"
-        - "\tAddItem apparatus_j_mortar_01, 1"
-        - elseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )
-        - "\tplayer->RemoveItem apparatus_a_mortar_01, 1"
-        - "\tAddItem apparatus_a_mortar_01, 1"
-        - endif
-        - ""
-        - "MessageBox \"Установка готова\""
-        - EnablePlayerControls
-        - ""
-        - StopScript A1V6_ApparatusSetUp_3
+        - StopScript A1V6_ApparatusSetUp
         - ""
         - End
 - SCPT:
@@ -2020,141 +1829,6 @@
         - End
 - SCPT:
     - SCHD:
-        name: A1V6_Calcinator_1_sc
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 0
-        var_table_size: 0
-    - SCTX:
-        - Begin A1V6_Calcinator_1_sc
-        - ""
-        - short doOnce
-        - float cx
-        - float cy
-        - float cz
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( GetDisabled == 1 )
-        - "\tSetDelete 1"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( A1V6_ApparatusDisable_1 == 1 )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tset cx to A1V6_CalcinatorX"
-        - "\tset cy to A1V6_CalcinatorY"
-        - "\tset cz to A1V6_ApparatusZ"
-        - "\tSetPos X cx"
-        - "\tSetPos Y cy"
-        - "\tSetPos Z cz"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1V6_Calcinator_2_sc
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 0
-        var_table_size: 0
-    - SCTX:
-        - Begin A1V6_Calcinator_2_sc
-        - ""
-        - short doOnce
-        - float cx
-        - float cy
-        - float cz
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( GetDisabled == 1 )
-        - "\tSetDelete 1"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( A1V6_ApparatusDisable_2 == 1 )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tset cx to A1V6_CalcinatorX"
-        - "\tset cy to A1V6_CalcinatorY"
-        - "\tset cz to A1V6_ApparatusZ"
-        - "\tSetPos X cx"
-        - "\tSetPos Y cy"
-        - "\tSetPos Z cz"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1V6_Calcinator_3_sc
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 0
-        var_table_size: 0
-    - SCTX:
-        - Begin A1V6_Calcinator_3_sc
-        - ""
-        - short doOnce
-        - float cx
-        - float cy
-        - float cz
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( GetDisabled == 1 )
-        - "\tSetDelete 1"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( A1V6_ApparatusDisable_3 == 1 )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tset cx to A1V6_CalcinatorX"
-        - "\tset cy to A1V6_CalcinatorY"
-        - "\tset cz to A1V6_ApparatusZ"
-        - "\tSetPos X cx"
-        - "\tSetPos Y cy"
-        - "\tSetPos Z cz"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
         name: A1V6_IncAlchemy
         vars:
           shorts: 1
@@ -2250,141 +1924,6 @@
         - End
 - SCPT:
     - SCHD:
-        name: A1V6_Retort_1_sc
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 0
-        var_table_size: 0
-    - SCTX:
-        - Begin A1V6_Retort_1_sc
-        - ""
-        - short doOnce
-        - float cx
-        - float cy
-        - float cz
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( GetDisabled == 1 )
-        - "\tSetDelete 1"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( A1V6_ApparatusDisable_1 == 1 )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tset cx to A1V6_RetortX"
-        - "\tset cy to A1V6_RetortY"
-        - "\tset cz to A1V6_ApparatusZ"
-        - "\tSetPos X cx"
-        - "\tSetPos Y cy"
-        - "\tSetPos Z cz"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1V6_Retort_2_sc
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 0
-        var_table_size: 0
-    - SCTX:
-        - Begin A1V6_Retort_2_sc
-        - ""
-        - short doOnce
-        - float cx
-        - float cy
-        - float cz
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( GetDisabled == 1 )
-        - "\tSetDelete 1"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( A1V6_ApparatusDisable_2 == 1 )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tset cx to A1V6_RetortX"
-        - "\tset cy to A1V6_RetortY"
-        - "\tset cz to A1V6_ApparatusZ"
-        - "\tSetPos X cx"
-        - "\tSetPos Y cy"
-        - "\tSetPos Z cz"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1V6_Retort_3_sc
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 0
-        var_table_size: 0
-    - SCTX:
-        - Begin A1V6_Retort_3_sc
-        - ""
-        - short doOnce
-        - float cx
-        - float cy
-        - float cz
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( GetDisabled == 1 )
-        - "\tSetDelete 1"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( A1V6_ApparatusDisable_3 == 1 )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tset cx to A1V6_RetortX"
-        - "\tset cy to A1V6_RetortY"
-        - "\tset cz to A1V6_ApparatusZ"
-        - "\tSetPos X cx"
-        - "\tSetPos Y cy"
-        - "\tSetPos Z cz"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
         name: A1V6_StartAlchemy
         vars:
           shorts: 0
@@ -2440,200 +1979,75 @@
     - SCRI: A1V6_AlchemyActivator_sc
     - ITEX: "n\\a1_alchemy_act.dds"
 - ACTI:
-    - NAME: A1V6_apparatus_a_alembic_e3
+    - NAME: A1V6_apparatus_a_alembic
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
     - FNAM: ""
-    - SCRI: A1V6_Alembic_3_sc
+    - SCRI: A1V6_Alembic_sc
 - ACTI:
-    - NAME: A1V6_apparatus_a_calcinator_e3
+    - NAME: A1V6_apparatus_a_calcinator
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
     - FNAM: ""
-    - SCRI: A1V6_Calcinator_3_sc
+    - SCRI: A1V6_Calcinator_sc
 - ACTI:
-    - NAME: A1V6_apparatus_a_retort_e3
+    - NAME: A1V6_apparatus_a_retort
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
     - FNAM: ""
-    - SCRI: A1V6_Retort_3_sc
+    - SCRI: A1V6_Retort_sc
 - ACTI:
-    - NAME: A1V6_apparatus_a_spipe_e3
+    - NAME: A1V6_apparatus_a_spipe
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
     - FNAM: ""
-    - SCRI: A1V6_Alembic_3_sc
+    - SCRI: A1V6_Alembic_sc
 - ACTI:
-    - NAME: A1V6_apparatus_g_alembic_e3
+    - NAME: A1V6_apparatus_g_alembic
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
     - FNAM: ""
-    - SCRI: A1V6_Alembic_3_sc
+    - SCRI: A1V6_Alembic_sc
 - ACTI:
-    - NAME: A1V6_apparatus_g_calcinator_e3
+    - NAME: A1V6_apparatus_g_calcinator
     - MODL: "m\\App_G_Calcinator_01.nif"
     - FNAM: ""
-    - SCRI: A1V6_Calcinator_3_sc
+    - SCRI: A1V6_Calcinator_sc
 - ACTI:
-    - NAME: A1V6_apparatus_g_retort_e3
+    - NAME: A1V6_apparatus_g_retort
     - MODL: "m\\Apparatus_G_Retort_01.nif"
     - FNAM: ""
-    - SCRI: A1V6_Retort_3_sc
+    - SCRI: A1V6_Retort_sc
 - ACTI:
-    - NAME: A1V6_apparatus_j_alembic_e3
+    - NAME: A1V6_apparatus_j_alembic
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
     - FNAM: ""
-    - SCRI: A1V6_Alembic_3_sc
+    - SCRI: A1V6_Alembic_sc
 - ACTI:
-    - NAME: A1V6_apparatus_j_calcinator_e3
+    - NAME: A1V6_apparatus_j_calcinator
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
     - FNAM: ""
-    - SCRI: A1V6_Calcinator_3_sc
+    - SCRI: A1V6_Calcinator_sc
 - ACTI:
-    - NAME: A1V6_apparatus_j_retort_e3
+    - NAME: A1V6_apparatus_j_retort
     - MODL: "m\\Apparatus_J_Retort_01.nif"
     - FNAM: ""
-    - SCRI: A1V6_Retort_3_sc
+    - SCRI: A1V6_Retort_sc
 - ACTI:
-    - NAME: A1V6_apparatus_m_alembic_e3
+    - NAME: A1V6_apparatus_m_alembic
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
     - FNAM: ""
-    - SCRI: A1V6_Alembic_3_sc
+    - SCRI: A1V6_Alembic_sc
 - ACTI:
-    - NAME: A1V6_apparatus_m_calcinator_e3
+    - NAME: A1V6_apparatus_m_calcinator
     - MODL: "m\\App_M_Calcinator_01.nif"
     - FNAM: ""
-    - SCRI: A1V6_Calcinator_3_sc
-- ACTI:
-    - NAME: A1V6_apparatus_m_retort_e3
+    - SCRI: A1V6_Calcinator_sc
+- MISC:
+    - NAME: A1V6_apparatus_m_retort
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Retort_3_sc
-- ACTI:
-    - NAME: A1V6_apparatus_a_alembic_e2
-    - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: ""
-    - SCRI: A1V6_Alembic_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_a_alembic_e1
-    - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: ""
-    - SCRI: A1V6_Alembic_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_a_calcinator_e2
-    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: ""
-    - SCRI: A1V6_Calcinator_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_a_calcinator_e1
-    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: ""
-    - SCRI: A1V6_Calcinator_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_a_retort_e2
-    - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: ""
-    - SCRI: A1V6_Retort_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_a_retort_e1
-    - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: ""
-    - SCRI: A1V6_Retort_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_a_spipe_e2
-    - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Alembic_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_a_spipe_e1
-    - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Alembic_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_g_alembic_e2
-    - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Alembic_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_g_alembic_e1
-    - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Alembic_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_g_calcinator_e2
-    - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Calcinator_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_g_calcinator_e1
-    - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Calcinator_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_g_retort_e2
-    - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Retort_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_g_retort_e1
-    - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Retort_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_j_alembic_e2
-    - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Alembic_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_j_alembic_e1
-    - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Alembic_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_j_calcinator_e2
-    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: ""
-    - SCRI: A1V6_Calcinator_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_j_calcinator_e1
-    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: ""
-    - SCRI: A1V6_Calcinator_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_j_retort_e2
-    - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Retort_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_j_retort_e1
-    - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Retort_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_m_alembic_e2
-    - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Alembic_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_m_alembic_e1
-    - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Alembic_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_m_calcinator_e2
-    - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Calcinator_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_m_calcinator_e1
-    - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Calcinator_1_sc
-- ACTI:
-    - NAME: A1V6_apparatus_m_retort_e2
-    - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Retort_2_sc
-- ACTI:
-    - NAME: A1V6_apparatus_m_retort_e1
-    - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: ""
-    - SCRI: A1V6_Retort_1_sc
+    - FNAM: "Алх. уст. - Реторта"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
+    - SCRI: A1V6_Retort_sc
+    - ITEX: "m\\Tx_retort_03.tga"
 - CONT:
     - NAME: A1V6_Appara_a_Cont_1
     - MODL: "m\\Misc_mortarpestle_01.NIF"
