@@ -10,7 +10,7 @@ import subprocess
 from subprocess import PIPE
 import winreg
 from winreg import HKEY_LOCAL_MACHINE, HKEY_CLASSES_ROOT
-from shutil import copyfile, move, make_archive, rmtree, copytree
+from shutil import copyfile, move, rmtree, copytree
 
 negative_effects = [
     'Burden',
@@ -992,6 +992,11 @@ def prepare_text(path, d):
         with open(d + path + '.txt', 'w', encoding='cp1251') as cp1251:
             cp1251.write(utf8.read())
 
+def make_archive(name, dir):
+    chdir(dir)
+    subprocess.run('7za a ../' + name + '.7z .', stdout=stdout, stderr=stderr, check=True)
+    chdir('..')
+
 def represent_none(self, _):
     return self.represent_scalar('tag:yaml.org,2002:null', '~')
 
@@ -1035,7 +1040,7 @@ def main():
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_PU.esp', 2026, 10, 5, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_PR.esp', 2014, 8, 3, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_DaeCursed.esp', 2014, 8, 2, 18, 53, 0)
-    make_archive('A1_Alchemy_1.0', 'zip', 'ar')
+    make_archive('A1_Alchemy_1.0', 'ar')
     rmtree('ar')    
 
 if __name__ == "__main__":
