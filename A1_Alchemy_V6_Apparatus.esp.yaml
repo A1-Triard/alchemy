@@ -17161,7 +17161,7 @@
           shorts: 2
           longs: 0
           floats: 3
-        data_size: 241
+        data_size: 226
         var_table_size: 22
     - SCVR:
         - doOnce
@@ -17169,7 +17169,7 @@
         - cx
         - cy
         - cz
-    - SCDT: eJxljDEKwkAQReevGFxETAii5RQewDR2KQLC4gUkSSOJRghECa6Cd/JIehhnTWOw+sOb/58HaE7Z5zjmaAkND0rAuwPPANRBMJtZEu3W+6Rti2txu9tNbYuyqVzRKqKX/+3JePFrG2m2IAdWQ8ilOJJUNGcT9n3by7F60BAnUMBm0j2b6lzWh9Rh9YczhwcUspn2VTmN/VQ8EpnsJHLpkQbwAbSDL5U=
+    - SCDT: eJxljjEKwkAURP+sJLCImBDE9hcewDR2KQLC4gUkSSOJRghECa6Cd/JIehj/sjbBaj7vzwwTApoLjjjLOF1BI4QS8PHgFYM81JotyMF1ALkUp6KKlmySPN1vDvkw1Lf6/rC766l9UoAzKGYz88++vTTdsXBY/eHS4QklbObjqoqmUSE9IqXkRCrx/RaB2SzG/m1n66Zv3UqZRu9IA/gCqWst8A==
     - SCTX:
         - Begin A1V6_Alembic_sc
         - ""
@@ -17188,14 +17188,6 @@
         - "\treturn"
         - endif
         - ""
-        - if ( A1V6_ApparatusDisable == index )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
         - if ( doOnce == 0 )
         - "\tset doOnce to 1"
         - "\tset index to A1V6_ApparatusIndex"
@@ -17205,6 +17197,11 @@
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable == index )
+        - "\tDisable"
         - endif
         - ""
         - End
@@ -18714,7 +18711,7 @@
           shorts: 2
           longs: 0
           floats: 3
-        data_size: 247
+        data_size: 232
         var_table_size: 22
     - SCVR:
         - doOnce
@@ -18722,7 +18719,7 @@
         - cx
         - cy
         - cz
-    - SCDT: eJxtjDEKwkAQRWdWElwsXImi5RQewDR2KYLC4gUkSSOrRgiEGLIRvJNH0sM4mzQGrP7w35/nI0pKSFEUUbhGiT4KLj598Zoh9CUS6UUcHrenuK5NY9qH3RfWnMvcDa0AeKtux8+rX9tYkkVwxcZDvgSFnAKWpIOh71Bd8yd4eEOYk1Yd3JnyUlSmvTeJI+IfSR0ZQUB6OhRmMFEJ2zhSfuXIeAcSEb8/IjJH
+    - SCDT: eJxtjjEKwkAURP9EDCwWrkSx/YUHMI1diqCweAFJ0siqEQIhhiSCd/JIehj/GpuA1XzmzR/GBxQnrDmKOFxBwYcnxrs3njNQbyrFLciZ6zHk8jgU9WjJJojDw+YY17VtbHdv99Ulf9AYV9Ccjf7CrS3PRWW7W5M44v0jqSMjCthMh4UZTXQibSKpvIpkkvvtArNZDPO7orWnMndbZSC9tALwAVtGMKI=
     - SCTX:
         - Begin A1V6_Calcinator_sc
         - ""
@@ -18741,14 +18738,6 @@
         - "\treturn"
         - endif
         - ""
-        - if ( A1V6_ApparatusDisable == index )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
         - if ( doOnce == 0 )
         - "\tset doOnce to 1"
         - "\tset index to A1V6_ApparatusIndex"
@@ -18758,6 +18747,11 @@
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable == index )
+        - "\tDisable"
         - endif
         - ""
         - End
@@ -18856,7 +18850,7 @@
           shorts: 2
           longs: 0
           floats: 3
-        data_size: 239
+        data_size: 224
         var_table_size: 22
     - SCVR:
         - doOnce
@@ -18864,7 +18858,7 @@
         - cx
         - cy
         - cz
-    - SCDT: eJxdjDEKwkAQReevJBgUXAmi5RQewDR2KQLCYmshSRqJGEEQDdkI3skj6WGcTRpj9Yc3/z8fCDhlzXHM0RIBfCgBnw68pqAOgtnMkmi/PiRVVdRF87Cbiy2O19IVrSJ667Yn48WvbRiwBTmw8iCX4khS0ZxN2Pdtb6fySR7OIM1m3D53ZXOvm9RR9U8zRwcUspn0RTmNdCoWiUxmErn0KADwBVdoLzc=
+    - SCDT: eJxdjrEKwkAQRHdOEjgUPAliu4UfYBq7FAHhsLWQJI1EjCCIhuQE/8lP0o9xz9gk1SxvZ4YJAc0ZG04SjpfQCKEEfDrwmoE6qDW3IA9XAeRSHIsqWrCN0ni/PqR1XTale7Tb26l6UoAzyLCd/J67yt0bl3mqhjT3dEQR22m/qKCxyaRFJJeYSCG+/x4w23nfv7m05fFa+Y0yjN5GA/gCVYwtkg==
     - SCTX:
         - Begin A1V6_Retort_sc
         - ""
@@ -18883,14 +18877,6 @@
         - "\treturn"
         - endif
         - ""
-        - if ( A1V6_ApparatusDisable == index )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
         - if ( doOnce == 0 )
         - "\tset doOnce to 1"
         - "\tset index to A1V6_ApparatusIndex"
@@ -18900,6 +18886,11 @@
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable == index )
+        - "\tDisable"
         - endif
         - ""
         - End
