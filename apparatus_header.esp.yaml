@@ -257,14 +257,6 @@
         - "\treturn"
         - endif
         - ""
-        - if ( A1V6_ApparatusDisable == index )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
         - if ( doOnce == 0 )
         - "\tset doOnce to 1"
         - "\tset index to A1V6_ApparatusIndex"
@@ -274,6 +266,11 @@
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable == index )
+        - "\tDisable"
         - endif
         - ""
         - End
@@ -304,14 +301,6 @@
         - "\treturn"
         - endif
         - ""
-        - if ( A1V6_ApparatusDisable == index )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
         - if ( doOnce == 0 )
         - "\tset doOnce to 1"
         - "\tset index to A1V6_ApparatusIndex"
@@ -321,6 +310,11 @@
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable == index )
+        - "\tDisable"
         - endif
         - ""
         - End
@@ -351,14 +345,6 @@
         - "\treturn"
         - endif
         - ""
-        - if ( A1V6_ApparatusDisable == index )
-        - "\tDisable"
-        - endif
-        - ""
-        - if ( OnActivate == 1 )
-        - "\treturn"
-        - endif
-        - ""
         - if ( doOnce == 0 )
         - "\tset doOnce to 1"
         - "\tset index to A1V6_ApparatusIndex"
@@ -368,6 +354,11 @@
         - "\tSetPos X cx"
         - "\tSetPos Y cy"
         - "\tSetPos Z cz"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable == index )
+        - "\tDisable"
         - endif
         - ""
         - End
