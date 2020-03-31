@@ -451,7 +451,7 @@
   - NAME: p_detect_key_s
   - MODL: m\misc_potion_standard_01.nif
   - TEXT: m\Pm_Sta_Det_Key.dds
-  - FNAM: Стандартное зелье обнаруж. ключа
+  - FNAM: Стандартное зелье обнар. ключа
   - ALDT:
       auto_calculate_value: false
       value: 35

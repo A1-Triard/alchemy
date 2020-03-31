@@ -801,6 +801,10 @@ def gen_potions(icon, model, name, suffix, description):
         if len(names) != 3:
             print('Error in potions.esp.yaml')
             sys.exit(1)
+        for n in names:
+            if len(potion['ALCH'][n]['FNAM']) > 31:
+                print('Too long potion name:', potion['ALCH'][0]['NAME'])
+                sys.exit(1)
         for i in filter(lambda x: x != name, range(len(names) - 1, -1, -1)):
             del potion['ALCH'][names[i]]
 
