@@ -1442,7 +1442,7 @@
         - elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_j_calcinator_01, 1"
         - "\tAddItem apparatus_j_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_j_calcinator, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_a_calcinator, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_calcinator_01, 1"
         - "\tAddItem apparatus_a_calcinator_01, 1"
@@ -1978,66 +1978,116 @@
         effect_4_attribute: ~
     - SCRI: A1V6_AlchemyActivator_sc
     - ITEX: "n\\a1_alchemy_act.dds"
-- ACTI:
+- MISC:
     - NAME: A1V6_apparatus_a_alembic
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: ""
+    - FNAM: "Алх. уст. - Перегонный куб"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Alembic_sc
-- ACTI:
+    - ITEX: "m\\Tx_alembic_01.tga"
+- MISC:
     - NAME: A1V6_apparatus_a_calcinator
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: ""
+    - FNAM: "Алх. уст. - Кальцинатор"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Calcinator_sc
-- ACTI:
+    - ITEX: "m\\Tx_calcinator_01.tga"
+- MISC:
     - NAME: A1V6_apparatus_a_retort
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: ""
+    - FNAM: "Алх. уст. - Реторта"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Retort_sc
-- ACTI:
+    - ITEX: "m\\Tx_retort_01.tga"
+- MISC:
     - NAME: A1V6_apparatus_a_spipe
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: ""
+    - FNAM: "Алх. уст. - Трубка скуума"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Alembic_sc
-- ACTI:
+    - ITEX: "m\\Tx_Spipe_01.tga"
+- MISC:
     - NAME: A1V6_apparatus_g_alembic
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: ""
+    - FNAM: "Алх. уст. - Перегонный куб"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Alembic_sc
-- ACTI:
+    - ITEX: "m\\Tx_alembic_04.tga"
+- MISC:
     - NAME: A1V6_apparatus_g_calcinator
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: ""
+    - FNAM: "Алх. уст. - Кальцинатор"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Calcinator_sc
-- ACTI:
+    - ITEX: "m\\Tx_calcinator_04.tga"
+- MISC:
     - NAME: A1V6_apparatus_g_retort
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: ""
+    - FNAM: "Алх. уст. - Реторта"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Retort_sc
-- ACTI:
+    - ITEX: "m\\Tx_retort_04.tga"
+- MISC:
     - NAME: A1V6_apparatus_j_alembic
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: ""
+    - FNAM: "Алх. уст. - Перегонный куб"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Alembic_sc
-- ACTI:
-    - NAME: A1V6_apparatus_j_calcinator
-    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: ""
-    - SCRI: A1V6_Calcinator_sc
-- ACTI:
+    - ITEX: "m\\Tx_alembic_02.tga"
+- MISC:
     - NAME: A1V6_apparatus_j_retort
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: ""
+    - FNAM: "Алх. уст. - Реторта"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Retort_sc
-- ACTI:
+    - ITEX: "m\\Tx_retort_02.tga"
+- MISC:
     - NAME: A1V6_apparatus_m_alembic
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: ""
+    - FNAM: "Алх. уст. - Перегонный куб"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Alembic_sc
-- ACTI:
+    - ITEX: "m\\Tx_alembic_03.tga"
+- MISC:
     - NAME: A1V6_apparatus_m_calcinator
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: ""
+    - FNAM: "Алх. уст. - Кальцинатор"
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
     - SCRI: A1V6_Calcinator_sc
+    - ITEX: "m\\Tx_calcinator_03.tga"
 - MISC:
     - NAME: A1V6_apparatus_m_retort
     - MODL: "m\\Apparatus_M_Retort_01.nif"
