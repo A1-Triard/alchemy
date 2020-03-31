@@ -784,23 +784,23 @@ def gen_potions(icon, model, name, suffix, description):
     
     for potion in potions:
         icons = [i for i, x in enumerate(potion['ALCH']) if 'TEXT' in x]
-        #if len(icons) != 3:
-        #    print('Error in potions.esp.yaml')
-        #    sys.exit(1)
+        if len(icons) != 4:
+            print('Error in potions.esp.yaml')
+            sys.exit(1)
         for i in filter(lambda x: x != icon, range(len(icons) - 1, -1, -1)):
             del potion['ALCH'][icons[i]]
 
         models = [i for i, x in enumerate(potion['ALCH']) if 'MODL' in x]
-        #if len(models) != 2:
-        #    print('Error in potions.esp.yaml')
-        #    sys.exit(1)
+        if len(models) != 3:
+            print('Error in potions.esp.yaml')
+            sys.exit(1)
         for i in filter(lambda x: x != model, range(len(models) - 1, -1, -1)):
             del potion['ALCH'][models[i]]
 
         names = [i for i, x in enumerate(potion['ALCH']) if 'FNAM' in x]
-        #if len(names) != 2:
-        #    print('Error in potions.esp.yaml')
-        #    sys.exit(1)
+        if len(names) != 3:
+            print('Error in potions.esp.yaml')
+            sys.exit(1)
         for i in filter(lambda x: x != name, range(len(names) - 1, -1, -1)):
             del potion['ALCH'][names[i]]
 

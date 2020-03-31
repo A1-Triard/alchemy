@@ -2,11 +2,11 @@
     - NAME: p_burden_s
     - MODL: "m\\Misc_Potion_Standard_01.NIF"
     - MODL: "m\\K_Fresh_Aqua.nif"
-    - MODL: "m\\AOF_Potion_st_alt_y.NIF"
+    - MODL: "m\\AOF_Potion_st_amb_res.NIF"
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - TEXT: "m\\Pm_Sta_Res_Nor.dds"
     - TEXT: "m\\K_Fresh_Aqua.dds"
-    - TEXT: "_aof\\alt_st.dds"
+    - TEXT: "_aof\\res_st.dds"
     - FNAM: Стандартное зелье Даэдра
     - FNAM: Сопротивление норм. оружию ст.
     - FNAM: Зелье Даэдра (станд.)
@@ -27,11 +27,14 @@
     - NAME: p_paralyze_s
     - MODL: "m\\Misc_Potion_Standard_01.nif"
     - MODL: "m\\K_Fresh_Aqua.nif"
+    - MODL: "m\\AOF_Potion_st_amb_res.NIF"
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - TEXT: "m\\Pm_Sta_Res_Par.dds"
     - TEXT: "m\\K_Fresh_Aqua.dds"
+    - TEXT: "_aof\\res_st.dds"
     - FNAM: Станд. сопротивление параличу
     - FNAM: Сопротивление параличу станд.
+    - FNAM: Сопротивление параличу (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -49,11 +52,14 @@
     - NAME: p_silence_s
     - MODL: "m\\Misc_Potion_Standard_01.nif"
     - MODL: "m\\K_Fresh_Crush.nif"
+    - MODL: "M\\AOF_Potion_st_yellow.NIF"
     - TEXT: "m\\Tx_potion_standard_01.tga"
     - TEXT: "m\\Pm_Sta_Shi.dds"
     - TEXT: "m\\K_Fresh_Crush.dds"
+    - TEXT: "_aof\\yellow_st.dds"
     - FNAM: Стандартное зелье щита
     - FNAM: Щит стандартное
+    - FNAM: Зелье щита (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -71,11 +77,14 @@
     - NAME: p_burden_c
     - MODL: "m\\Misc_Potion_Cheap_01.nif"
     - MODL: "m\\K_Cheap_Aqua.nif"
+    - MODL: "m\\AOF_Potion_chp_amb_res.NIF"
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - TEXT: "m\\Pm_Che_Res_Nor.dds"
     - TEXT: "m\\K_Cheap_Aqua.dds"
+    - TEXT: "_aof\\res_chp.dds"
     - FNAM: Дешевое зелье Даэдра
     - FNAM: Сопротивление норм. оружию деш.
+    - FNAM: Зелье Даэдра (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -93,11 +102,14 @@
     - NAME: p_burden_b
     - MODL: "m\\Misc_Potion_Bargain_01.nif"
     - MODL: "m\\K_Bargain_Aqua.nif"
+    - MODL: "m\\AOF_Potion_barg_amb_res.NIF"
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - TEXT: "m\\Pm_Bar_Res_Nor.dds"
     - TEXT: "m\\K_Bargain_Aqua.dds"
+    - TEXT: "_aof\\res_barg.dds"
     - FNAM: Уцененное зелье Даэдра
     - FNAM: Сопротивление норм. оружию уц.
+    - FNAM: Зелье Даэдра (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -115,11 +127,14 @@
     - NAME: p_burden_q
     - MODL: "m\\Misc_Potion_Quality_01.nif"
     - MODL: "m\\K_Quality_Aqua.nif"
+    - MODL: "m\\AOF_Potion_qu_amb_res.NIF"
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - TEXT: "m\\Pm_Qua_Res_Nor.dds"
     - TEXT: "m\\K_Quality_Aqua.dds"
+    - TEXT: "_aof\\res_qu.dds"
     - FNAM: Качественное зелье Даэдра
     - FNAM: Сопротивление норм. оружию кач.
+    - FNAM: Зелье Даэдра (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -137,11 +152,14 @@
     - NAME: p_burden_e
     - MODL: "m\\Misc_Potion_Exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Aqua.nif"
+    - MODL: "m\\AOF_Potion_exc_amb_res.NIF"
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - TEXT: "m\\Pm_Exc_Res_Nor.dds"
     - TEXT: "m\\K_Exclusive_Aqua.dds"
+    - TEXT: "_aof\\res_exc.dds"
     - FNAM: Эксклюзивное зелье Даэдра
     - FNAM: Сопротивление норм. оружию экс.
+    - FNAM: Зелье Даэдра (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -159,11 +177,14 @@
     - NAME: p_paralyze_c
     - MODL: "m\\Misc_Potion_Cheap_01.nif"
     - MODL: "m\\K_Cheap_Aqua.nif"
+    - MODL: "m\\AOF_Potion_chp_amb_res.NIF"
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - TEXT: "m\\Pm_Che_Res_Par.dds"
     - TEXT: "m\\K_Cheap_Aqua.dds"
+    - TEXT: "_aof\\res_chp.dds"
     - FNAM: Дешевое сопротивление параличу
     - FNAM: Cопротивление параличу дешевое
+    - FNAM: Cопротивление параличу (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -181,11 +202,14 @@
     - NAME: p_paralyze_b
     - MODL: "m\\Misc_Potion_Bargain_01.nif"
     - MODL: "m\\K_Bargain_Aqua.nif"
+    - MODL: "m\\AOF_Potion_barg_amb_res.NIF"
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - TEXT: "m\\Pm_Bar_Res_Par.dds"
     - TEXT: "m\\K_Bargain_Aqua.dds"
+    - TEXT: "_aof\\res_barg.dds"
     - FNAM: Уцененное сопротивл. параличу
     - FNAM: Сопротивление параличу уценен.
+    - FNAM: Сопротивление параличу (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -203,11 +227,14 @@
     - NAME: p_paralyze_e
     - MODL: "m\\Misc_Potion_Exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Aqua.nif"
+    - MODL: "m\\AOF_Potion_exc_amb_res.NIF"
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - TEXT: "m\\Pm_Exc_Res_Par.dds"
     - TEXT: "m\\K_Exclusive_Aqua.dds"
+    - TEXT: "_aof\\res_exc.dds"
     - FNAM: Экскл. сопротивление параличу
     - FNAM: Сопротивление параличу экскл.
+    - FNAM: Сопротивление параличу (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -225,11 +252,14 @@
     - NAME: p_paralyze_q
     - MODL: "m\\Misc_Potion_Quality_01.nif"
     - MODL: "m\\K_Quality_Aqua.nif"
+    - MODL: "m\\AOF_Potion_qu_amb_res.NIF"
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - TEXT: "m\\Pm_Qua_Res_Par.dds"
     - TEXT: "m\\K_Quality_Aqua.dds"
+    - TEXT: "_aof\\res_qu.dds"
     - FNAM: Качественное сопрот. параличу
     - FNAM: Сопротивление параличу качест.
+    - FNAM: Сопротивление параличу (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -247,11 +277,14 @@
     - NAME: p_silence_c
     - MODL: "m\\Misc_Potion_Cheap_01.nif"
     - MODL: "m\\K_Cheap_Crush.nif"
+    - MODL: "M\\AOF_Potion_chp_yellow.NIF"
     - TEXT: "m\\Tx_potion_cheap_01.tga"
     - TEXT: "m\\Pm_Che_Shi.dds"
     - TEXT: "m\\K_Cheap_Crush.dds"
+    - TEXT: "_aof\\yellow_chp.dds"
     - FNAM: Дешевое зелье щита
     - FNAM: Щит дешевое
+    - FNAM: Зелье щита (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -269,11 +302,14 @@
     - NAME: p_silence_b
     - MODL: "m\\Misc_Potion_Bargain_01.nif"
     - MODL: "m\\K_Bargain_Crush.nif"
+    - MODL: "M\\AOF_Potion_barg_yellow.nif"
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - TEXT: "m\\Pm_Bar_Shi.dds"
     - TEXT: "m\\K_Bargain_Crush.tga"
+    - TEXT: "_aof\\yellow_barg.dds"
     - FNAM: Уцененное зелье щита
     - FNAM: Щит уцененное
+    - FNAM: Зелье щита (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -291,11 +327,14 @@
     - NAME: p_silence_q
     - MODL: "m\\Misc_Potion_Quality_01.nif"
     - MODL: "m\\K_Quality_Crush.nif"
+    - MODL: "M\\AOF_Potion_qu_yellow.NIF"
     - TEXT: "m\\Tx_potion_quality_01.tga"
     - TEXT: "m\\Pm_Qua_Shi.dds"
     - TEXT: "m\\K_Quality_Crush.dds"
+    - TEXT: "_aof\\yellow_qu.dds"
     - FNAM: Качественное зелье щита
     - FNAM: Щит качественное
+    - FNAM: Зелье щита (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -313,11 +352,14 @@
     - NAME: p_silence_e
     - MODL: "m\\Misc_Potion_Exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Crush.nif"
+    - MODL: "M\\AOF_Potion_exc_yellow.NIF"
     - TEXT: "m\\Tx_potion_exclusive_01.tga"
     - TEXT: "m\\Pm_Exc_Shi.dds"
     - TEXT: "m\\K_Exclusive_Crush.dds"
+    - TEXT: "_aof\\yellow_exc.dds"
     - FNAM: Эксклюзивное зелье щита
     - FNAM: Щит эксклюзивное
+    - FNAM: Зелье щита (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -335,11 +377,14 @@
     - NAME: p_cure_blight_s
     - MODL: "m\\misc_potion_fresh_01.nif"
     - MODL: "m\\K_Fresh_Aqua.nif"
+    - MODL: "M\\AOF_Potion_healing_b.NIF"
     - TEXT: "m\\tx_potion_fresh_01.dds"
     - TEXT: "m\\Pm_Fre_Bli.dds"
     - TEXT: "m\\K_Fresh_Aqua.dds"
+    - TEXT: "_aof\\cure_b.dds"
     - FNAM: Зелье лечения моровых болезней
     - FNAM: Излечить моровую болезнь
+    - FNAM: Зелье лечения моровых болезней
     - ALDT:
         weight: 0.5
         value: 80
@@ -357,11 +402,14 @@
     - NAME: p_recall_s
     - MODL: "m\\Misc_Potion_Fresh_01.nif"
     - MODL: "m\\K_Fresh_Grape.nif"
+    - MODL: "m\\AOF_Potion_st_blu_mys.NIF"
     - TEXT: "m\\Tx_potion_fresh_01.tga"
     - TEXT: "m\\Pm_Fre_Rec.dds"
     - TEXT: "m\\K_Fresh_Grape.dds"
+    - TEXT: "_aof\\myst_st.dds"
     - FNAM: Зелье воспоминания
     - FNAM: Возврат
+    - FNAM: Зелье воспоминания
     - ALDT:
         weight: 0.5
         value: 175
@@ -379,11 +427,14 @@
     - NAME: p_levitation_b
     - MODL: "m\\Misc_Potion_Bargain_01.nif"
     - MODL: "m\\K_Bargain_Crush.nif"
+    - MODL: "m\\AOF_Potion_barg_alt_y.NIF"
     - TEXT: "m\\Tx_potion_bargain_01.tga"
     - TEXT: "m\\Pm_Bar_Lev.dds"
     - TEXT: "m\\K_Bargain_Crush.tga"
+    - TEXT: "_aof\\alt_barg.tga"
     - FNAM: Уцененное зелье левитации
     - FNAM: Левитация уцененное
+    - FNAM: Зелье левитации (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -401,9 +452,12 @@
     - NAME: p_almsivi_intervention_s
     - MODL: "m\\Misc_Potion_Fresh_01.nif"
     - MODL: "m\\K_Fresh_Grape.nif"
+    - MODL: "M\\AOF_Potion_st_blu_mys.NIF"
     - TEXT: "m\\Tx_potion_fresh_01.tga"
     - TEXT: "m\\Pm_Fre_Alm_Int.dds"
     - TEXT: "m\\K_Fresh_Grape.dds"
+    - TEXT: "_aof\\myst_st.dds"
+    - FNAM: Зелье дурацкого счастья
     - FNAM: Зелье дурацкого счастья
     - FNAM: Зелье дурацкого счастья
     - ALDT:
@@ -423,11 +477,14 @@
     - NAME: p_cure_common_s
     - MODL: "m\\Misc_Potion_Fresh_01.nif"
     - MODL: "m\\K_Fresh_Aqua.nif"
+    - MODL: "m\\AOF_Potion_healing_d.NIF"
     - TEXT: "m\\Tx_potion_fresh_01.tga"
     - TEXT: "m\\Pm_Fre_Com.dds"
     - TEXT: "m\\K_Fresh_Aqua.dds"
+    - TEXT: "_aof\\cure_d.dds"
     - FNAM: Зелье лечения обычных недугов
     - FNAM: Излечить обычную болезнь
+    - FNAM: Зелье лечения обычных недугов
     - ALDT:
         weight: 0.5
         value: 35
@@ -445,11 +502,14 @@
     - NAME: p_cure_paralyzation_s
     - MODL: "m\\Misc_Potion_Fresh_01.nif"
     - MODL: "m\\K_Fresh_Aqua.nif"
+    - MODL: "m\\AOF_Potion_healing_pl.NIF"
     - TEXT: "m\\Tx_potion_fresh_01.tga"
     - TEXT: "m\\Pm_Fre_Par.dds"
     - TEXT: "m\\K_Fresh_Aqua.dds"
+    - TEXT: "_aof\\cure_pl.dds"
     - FNAM: Зелье лечения парализации
     - FNAM: Излечить паралич
+    - FNAM: Зелье лечения парализации
     - ALDT:
         weight: 0.5
         value: 35
@@ -467,11 +527,14 @@
     - NAME: p_cure_poison_s
     - MODL: "m\\Misc_Potion_Fresh_01.nif"
     - MODL: "m\\K_Fresh_Aqua.nif"
+    - MODL: "m\\AOF_Potion_healing_p.NIF"
     - TEXT: "m\\Tx_potion_fresh_01.tga"
     - TEXT: "m\\Pm_Fre_Poi.dds"
     - TEXT: "m\\K_Fresh_Aqua.dds"
+    - TEXT: "_aof\\cure_p.dds"
     - FNAM: Зелье лечения отравлений
     - FNAM: Противоядие
+    - FNAM: Зелье лечения отравлений
     - ALDT:
         weight: 0.5
         value: 35
@@ -489,11 +552,14 @@
     - NAME: p_mark_s
     - MODL: "m\\Misc_Potion_Fresh_01.nif"
     - MODL: "m\\K_Fresh_Grape.nif"
+    - MODL: "m\\AOF_Potion_st_blu_mys.NIF"
     - TEXT: "m\\Tx_potion_fresh_01.tga"
     - TEXT: "m\\Pm_Fre_Mar.dds"
     - TEXT: "m\\K_Fresh_Grape.dds"
+    - TEXT: "_aof\\myst_st.dds"
     - FNAM: Зелье пометки
     - FNAM: Пометка
+    - FNAM: Зелье пометки
     - ALDT:
         weight: 0.5
         value: 35
@@ -511,11 +577,14 @@
     - NAME: p_detect_creatures_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Grape.nif"
+    - MODL: "m\\AOF_Potion_st_blu_mys.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Det_Ani.dds"
     - TEXT: "m\\K_Fresh_Grape.dds"
+    - TEXT: "_aof\\myst_st.dds"
     - FNAM: Станд. зелье обнаруж. существ
     - FNAM: Обнаружить сущность стандартное
+    - FNAM: Зелье обнаруж. существ (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -533,11 +602,14 @@
     - NAME: p_detect_key_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Grape.nif"
+    - MODL: "m\\AOF_Potion_st_blu_mys.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Det_Key.dds"
     - TEXT: "m\\K_Fresh_Grape.dds"
-    - FNAM: Стандартное зелье обнар. ключа
+    - TEXT: "_aof\\myst_st.dds"
+    - FNAM: Стандартное зелье обнаруж. ключа
     - FNAM: Найти ключ стандартное
+    - FNAM: Зелье обнаружения ключа (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -555,11 +627,14 @@
     - NAME: p_dispel_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Grape.nif"
+    - MODL: "M\\AOF_Potion_st_blu_mys.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Dis.dds"
     - TEXT: "m\\K_Fresh_Grape.dds"
+    - TEXT: "_aof\\myst_st.dds"
     - FNAM: Стандартное зелье развеивания
     - FNAM: Развеять стандартное
+    - FNAM: Зелье развеивания (станд.)
     - ALDT:
         weight: 1.0
         value: 35
@@ -577,11 +652,14 @@
     - NAME: p_telekinesis_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_7up.nif"
+    - MODL: "m\\AOF_Potion_st_green_i.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Tel.dds"
     - TEXT: "m\\K_Fresh_7up.dds"
+    - TEXT: "_aof\\illu_st.dds"
     - FNAM: Стандартное зелье телекинеза
     - FNAM: Телекинез стандартное
+    - FNAM: Зелье телекинеза (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -599,11 +677,14 @@
     - NAME: p_water_breathing_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Crush.nif"
+    - MODL: "M\\AOF_Potion_st_alt_y.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Wab.dds"
     - TEXT: "m\\K_Fresh_Crush.dds"
+    - TEXT: "_aof\\alt_st.dds"
     - FNAM: Стандарт. зелье водного дыхания
     - FNAM: Водное дыхание стандартное
+    - FNAM: Зелье водного дыхания (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -621,11 +702,14 @@
     - NAME: p_water_walking_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Crush.nif"
+    - MODL: "M\\AOF_Potion_st_alt_y.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Waw.dds"
     - TEXT: "m\\K_Fresh_Crush.dds"
+    - TEXT: "_aof\\alt_st.dds"
     - FNAM: Станд. зелье хождения по воде
     - FNAM: Хождение по воде стандартное
+    - FNAM: Зелье хождения по воде (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -643,11 +727,14 @@
     - NAME: p_detect_enchantment_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Grape.nif"
+    - MODL: "m\\AOF_Potion_st_blu_mys.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Det_Enc.dds"
     - TEXT: "m\\K_Fresh_Grape.dds"
+    - TEXT: "_aof\\myst_st.dds"
     - FNAM: Стандартное зелье обнаруж. чар
     - FNAM: Обнаружить чары стандартное
+    - FNAM: Зелье обнаружения чар (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -665,11 +752,14 @@
     - NAME: p_detect_creatures_b
     - MODL: "m\\misc_potion_bargain_01.nif"
     - MODL: "m\\K_Bargain_Grape.nif"
+    - MODL: "m\\AOF_Potion_barg_blu_mys.NIF"
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - TEXT: "m\\Pm_Bar_Det_Ani.dds"
     - TEXT: "m\\K_Bargain_Grape.dds"
+    - TEXT: "_aof\\myst_barg.dds"
     - FNAM: Уцененн. зелье обнаруж. существ
     - FNAM: Обнаружить сущность уцененное
+    - FNAM: Зелье обнаруж. существ (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -687,11 +777,14 @@
     - NAME: p_detect_creatures_c
     - MODL: "m\\misc_potion_cheap_01.nif"
     - MODL: "m\\K_Cheap_Grape.nif"
+    - MODL: "m\\AOF_Potion_chp_blu_mys.NIF"
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - TEXT: "m\\Pm_Che_Det_Ani.dds"
     - TEXT: "m\\K_Cheap_Grape.dds"
+    - TEXT: "_aof\\myst_chp.dds"
     - FNAM: Дешевое зелье обнаруж. существ
     - FNAM: Обнаружить сущность дешевое
+    - FNAM: Зелье обнаруж. существ (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -709,11 +802,14 @@
     - NAME: p_detect_creatures_e
     - MODL: "m\\misc_potion_exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Grape.nif"
+    - MODL: "m\\AOF_Potion_exc_blu_mys.NIF"
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - TEXT: "m\\Pm_Exc_Det_Ani.dds"
     - TEXT: "m\\K_Exclusive_Grape.dds"
+    - TEXT: "_aof\\myst_exc.dds"
     - FNAM: Эксклюз. зелье обнаруж. существ
     - FNAM: Обнаружить сущность эксклюзив.
+    - FNAM: Зелье обнаруж. существ (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -731,11 +827,14 @@
     - NAME: p_detect_creatures_q
     - MODL: "m\\misc_potion_quality_01.nif"
     - MODL: "m\\K_Quality_Grape.nif"
+    - MODL: "m\\AOF_Potion_qu_blu_mys.NIF"
     - TEXT: "m\\tx_potion_quality_01.dds"
     - TEXT: "m\\Pm_Qua_Det_Ani.dds"
     - TEXT: "m\\K_Quality_Grape.dds"
+    - TEXT: "_aof\\myst_qu.dds"
     - FNAM: Качеств. зелье обнаруж. существ
     - FNAM: Обнаружить сущность качествен.
+    - FNAM: Зелье обнаруж. существ (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -753,11 +852,14 @@
     - NAME: p_detect_enchantment_b
     - MODL: "m\\misc_potion_bargain_01.nif"
     - MODL: "m\\K_Bargain_Grape.nif"
+    - MODL: "m\\AOF_Potion_barg_blu_mys.NIF"
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - TEXT: "m\\Pm_Bar_Det_Enc.dds"
     - TEXT: "m\\K_Bargain_Grape.dds"
+    - TEXT: "_aof\\myst_barg.dds"
     - FNAM: Уцененное зелье обнаружения чар
     - FNAM: Обнаружить чары уцененное
+    - FNAM: Зелье обнаружения чар (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -775,11 +877,14 @@
     - NAME: p_detect_enchantment_c
     - MODL: "m\\misc_potion_cheap_01.nif"
     - MODL: "m\\K_Cheap_Grape.nif"
+    - MODL: "m\\AOF_Potion_chp_blu_mys.NIF"
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - TEXT: "m\\Pm_Che_Det_Enc.dds"
     - TEXT: "m\\K_Cheap_Grape.dds"
+    - TEXT: "_aof\\myst_chp.dds"
     - FNAM: Дешевое зелье обнаружения чар
     - FNAM: Обнаружить чары дешевое
+    - FNAM: Зелье обнаружения чар (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -797,11 +902,14 @@
     - NAME: p_detect_enchantment_e
     - MODL: "m\\misc_potion_exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Grape.nif"
+    - MODL: "m\\AOF_Potion_exc_blu_mys.NIF"
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - TEXT: "m\\Pm_Exc_Det_Enc.dds"
     - TEXT: "m\\K_Exclusive_Grape.dds"
+    - TEXT: "_aof\\myst_exc.dds"
     - FNAM: Эксклюзивное зелье обнаруж. чар
     - FNAM: Обнаружить чары эксклюзивное
+    - FNAM: Зелье обнаружения чар (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -819,11 +927,14 @@
     - NAME: p_detect_enchantment_q
     - MODL: "m\\misc_potion_quality_01.nif"
     - MODL: "m\\K_Quality_Grape.nif"
+    - MODL: "m\\AOF_Potion_qu_blu_mys.NIF"
     - TEXT: "m\\tx_potion_quality_01.dds"
     - TEXT: "m\\Pm_Qua_Det_Enc.dds"
     - TEXT: "m\\K_Quality_Grape.dds"
+    - TEXT: "_aof\\myst_qu.dds"
     - FNAM: Качественное зелье обнаруж. чар
     - FNAM: Обнаружить чары качественное
+    - FNAM: Зелье обнаружения чар (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -841,11 +952,14 @@
     - NAME: p_detect_key_b
     - MODL: "m\\misc_potion_bargain_01.nif"
     - MODL: "m\\K_Bargain_Grape.nif"
+    - MODL: "m\\AOF_Potion_barg_blu_mys.NIF"
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - TEXT: "m\\Pm_Bar_Det_Key.dds"
     - TEXT: "m\\K_Bargain_Grape.dds"
+    - TEXT: "_aof\\myst_barg.dds"
     - FNAM: Уцененное зелье обнаруж. ключа
     - FNAM: Найти ключ уцененное
+    - FNAM: Зелье обнаружения ключа (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -863,11 +977,14 @@
     - NAME: p_detect_key_c
     - MODL: "m\\misc_potion_cheap_01.nif"
     - MODL: "m\\K_Cheap_Grape.nif"
+    - MODL: "m\\AOF_Potion_chp_blu_mys.NIF"
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - TEXT: "m\\Pm_Che_Det_Key.dds"
     - TEXT: "m\\K_Cheap_Grape.dds"
+    - TEXT: "_aof\\myst_chp.dds"
     - FNAM: Дешевое зелье обнаружения ключа
     - FNAM: Найти ключ дешевое
+    - FNAM: Зелье обнаружения ключа (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -885,11 +1002,14 @@
     - NAME: p_detect_key_e
     - MODL: "m\\misc_potion_exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Grape.nif"
+    - MODL: "m\\AOF_Potion_exc_blu_mys.NIF"
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - TEXT: "m\\Pm_Exc_Det_Key.dds"
     - TEXT: "m\\K_Exclusive_Grape.dds"
+    - TEXT: "_aof\\myst_exc.dds"
     - FNAM: Эксклюзивное зелье обнар. ключа
     - FNAM: Найти ключ эксклюзивное
+    - FNAM: Зелье обнаружения ключа (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -907,11 +1027,14 @@
     - NAME: p_detect_key_q
     - MODL: "m\\misc_potion_quality_01.nif"
     - MODL: "m\\K_Quality_Grape.nif"
+    - MODL: "m\\AOF_Potion_qu_blu_mys.NIF"
     - TEXT: "m\\tx_potion_quality_01.dds"
     - TEXT: "m\\Pm_Qua_Det_Key.dds"
     - TEXT: "m\\K_Quality_Grape.dds"
+    - TEXT: "_aof\\myst_qu.dds"
     - FNAM: Качественное зелье обнар. ключа
     - FNAM: Найти ключ качественное
+    - FNAM: Зелье обнаружения ключа (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -929,11 +1052,14 @@
     - NAME: p_dispel_q
     - MODL: "m\\misc_potion_quality_01.nif"
     - MODL: "m\\K_Quality_Grape.nif"
+    - MODL: "m\\AOF_Potion_qu_blu_mys.NIF"
     - TEXT: "m\\tx_potion_quality_01.dds"
     - TEXT: "m\\Pm_Qua_Dis.dds"
     - TEXT: "m\\K_Quality_Grape.dds"
+    - TEXT: "_aof\\myst_qu.dds"
     - FNAM: Качественное зелье развеивания
     - FNAM: Развеять качественное
+    - FNAM: Зелье развеивания (кач.)
     - ALDT:
         weight: 0.75
         value: 80
@@ -951,11 +1077,14 @@
     - NAME: p_dispel_e
     - MODL: "m\\misc_potion_exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Grape.nif"
+    - MODL: "m\\AOF_Potion_exc_blu_mys.NIF"
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - TEXT: "m\\Pm_Exc_Dis.dds"
     - TEXT: "m\\K_Exclusive_Grape.dds"
+    - TEXT: "_aof\\myst_exc.dds"
     - FNAM: Эксклюзивное зелье развеивания
     - FNAM: Развеять эксклюзивное
+    - FNAM: Зелье развеивания (экскл.)
     - ALDT:
         weight: 0.5
         value: 175
@@ -973,11 +1102,14 @@
     - NAME: p_dispel_c
     - MODL: "m\\misc_potion_cheap_01.nif"
     - MODL: "m\\K_Cheap_Grape.nif"
+    - MODL: "m\\AOF_Potion_chp_blu_mys.NIF"
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - TEXT: "m\\Pm_Che_Dis.dds"
     - TEXT: "m\\K_Cheap_Grape.dds"
+    - TEXT: "_aof\\myst_chp.dds"
     - FNAM: Дешевое зелье развеивания
     - FNAM: Развеять дешевое
+    - FNAM: Зелье развеивания (деш.)
     - ALDT:
         weight: 1.5
         value: 15
@@ -995,11 +1127,14 @@
     - NAME: p_dispel_b
     - MODL: "m\\misc_potion_bargain_01.nif"
     - MODL: "m\\K_Bargain_Grape.nif"
+    - MODL: "m\\AOF_Potion_barg_blu_mys.NIF"
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - TEXT: "m\\Pm_Bar_Dis.dds"
     - TEXT: "m\\K_Bargain_Grape.dds"
+    - TEXT: "_aof\\myst_barg.dds"
     - FNAM: Уцененное зелье развеивания
     - FNAM: Развеять уцененное
+    - FNAM: Зелье развеивания (уцен.)
     - ALDT:
         weight: 2.0
         value: 5
@@ -1017,11 +1152,14 @@
     - NAME: p_feather_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Crush.nif"
+    - MODL: "M\\AOF_Potion_st_alt_y.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Fea.dds"
     - TEXT: "m\\K_Fresh_Crush.dds"
+    - TEXT: "_aof\\alt_st.dds"
     - FNAM: Стандартное зелье пера
     - FNAM: Перо стандартное
+    - FNAM: Зелье пера (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -1039,11 +1177,14 @@
     - NAME: p_fortify_attack_b
     - MODL: "m\\misc_potion_bargain_01.nif"
     - MODL: "m\\K_Bargain_Aqua.nif"
+    - MODL: "m\\AOF_Potion_barg_amb_res.NIF"
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - TEXT: "m\\Pm_Bar_For_Ata.dds"
     - TEXT: "m\\K_Bargain_Aqua.tga"
+    - TEXT: "_aof\\res_barg.dds"
     - FNAM: Уцененное улучшение атаки
     - FNAM: Увеличить атаку уцененное
+    - FNAM: Улучшение атаки (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -1061,11 +1202,14 @@
     - NAME: p_fortify_attack_c
     - MODL: "m\\misc_potion_cheap_01.nif"
     - MODL: "m\\K_Cheap_Aqua.nif"
+    - MODL: "m\\AOF_Potion_chp_amb_res.NIF"
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - TEXT: "m\\Pm_Che_For_Ata.dds"
     - TEXT: "m\\K_Cheap_Aqua.tga"
+    - TEXT: "_aof\\res_chp.dds"
     - FNAM: Дешевое улучшение атаки
     - FNAM: Увеличить атаку дешевое
+    - FNAM: Улучшение атаки (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -1083,11 +1227,14 @@
     - NAME: p_fortify_attack_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Aqua.nif"
+    - MODL: "m\\AOF_Potion_st_amb_res.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_For_Ata.dds"
     - TEXT: "m\\K_Fresh_Aqua.tga"
+    - TEXT: "_aof\\res_st.dds"
     - FNAM: Стандартное улучшение атаки
     - FNAM: Увеличить атаку стандартное
+    - FNAM: Улучшение атаки (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -1105,11 +1252,14 @@
     - NAME: p_fortify_attack_q
     - MODL: "m\\misc_potion_quality_01.nif"
     - MODL: "m\\K_Quality_Aqua.nif"
+    - MODL: "m\\AOF_Potion_qu_amb_res.NIF"
     - TEXT: "m\\tx_potion_quality_01.dds"
     - TEXT: "m\\Pm_Qua_For_Ata.dds"
     - TEXT: "m\\K_Quality_Aqua.tga"
+    - TEXT: "_aof\\res_qu.dds"
     - FNAM: Качественное улучшение атаки
     - FNAM: Увеличить атаку качественное
+    - FNAM: Улучшение атаки (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -1127,11 +1277,14 @@
     - NAME: p_swift_swim_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Crush.nif"
+    - MODL: "m\\AOF_Potion_st_alt_y.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Swi.dds"
     - TEXT: "m\\K_Fresh_Crush.dds"
+    - TEXT: "_aof\\alt_st.dds"
     - FNAM: Стандарт. зелье быстроплавания
     - FNAM: Быстрое плавание стандартное
+    - FNAM: Зелье быстроплавания (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -1146,14 +1299,42 @@
         magnitude_min: 10
         magnitude_max: 10
 - ALCH:
+    - NAME: p_swift_swim_b
+    - MODL: "m\\Misc_Potion_Bargain_01.nif"
+    - MODL: "m\\K_Bargain_Crush.nif"
+    - MODL: "m\\AOF_Potion_barg_alt_y.NIF"
+    - TEXT: "m\\Tx_potion_bargain_01.tga"
+    - TEXT: "m\\Pm_Bar_Swi.dds"
+    - TEXT: "m\\K_Bargain_Crush.dds"
+    - TEXT: "_aof\\alt_barg.dds"
+    - FNAM: Уцененное зелье быстроплавания
+    - FNAM: Быстрое плавание уцененное
+    - FNAM: Зелье быстроплавания (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: SwiftSwim
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
     - NAME: p_telekinesis_c
     - MODL: "m\\misc_potion_cheap_01.nif"
     - MODL: "m\\K_Cheap_7up.nif"
+    - MODL: "m\\AOF_Potion_chp_green_i.NIF"
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - TEXT: "m\\Pm_Che_Tel.dds"
     - TEXT: "m\\K_Cheap_7up.dds"
+    - TEXT: "_aof\\illu_chp.dds"
     - FNAM: Дешевое зелье телекинеза
     - FNAM: Телекинез дешевое
+    - FNAM: Зелье телекинеза (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -1171,11 +1352,14 @@
     - NAME: p_telekinesis_b
     - MODL: "m\\misc_potion_bargain_01.nif"
     - MODL: "m\\K_Bargain_7up.nif"
+    - MODL: "m\\AOF_Potion_barg_green_i.NIF"
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - TEXT: "m\\Pm_Bar_Tel.dds"
     - TEXT: "m\\K_Bargain_7up.dds"
+    - TEXT: "_aof\\illu_barg.dds"
     - FNAM: Уцененное зелье телекинеза
     - FNAM: Телекинез уцененное
+    - FNAM: Зелье телекинеза (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -1193,11 +1377,14 @@
     - NAME: p_telekinesis_q
     - MODL: "m\\misc_potion_quality_01.nif"
     - MODL: "m\\K_Quality_7up.nif"
+    - MODL: "m\\AOF_Potion_qu_green_i.NIF"
     - TEXT: "m\\tx_potion_quality_01.dds"
     - TEXT: "m\\Pm_Qua_Tel.dds"
     - TEXT: "m\\K_Quality_7up.dds"
+    - TEXT: "_aof\\illu_qu.dds"
     - FNAM: Качественное зелье телекинеза
     - FNAM: Телекинез качественное
+    - FNAM: Зелье телекинеза (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -1215,11 +1402,14 @@
     - NAME: p_telekinesis_e
     - MODL: "m\\misc_potion_exclusive_01.nif"
     - MODL: "m\\K_Exclusive_7up.nif"
+    - MODL: "m\\AOF_Potion_exc_green_i.NIF"
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - TEXT: "m\\Pm_Exc_Tel.dds"
     - TEXT: "m\\K_Exclusive_7up.dds"
+    - TEXT: "_aof\\illu_exc.dds"
     - FNAM: Эксклюзивное зелье телекинеза
     - FNAM: Телекинез эксклюзивное
+    - FNAM: Зелье телекинеза (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -1237,11 +1427,14 @@
     - NAME: p_water_breathing_q
     - MODL: "m\\misc_potion_quality_01.nif"
     - MODL: "m\\K_Quality_Crush.nif"
+    - MODL: "M\\AOF_Potion_qu_alt_y.NIF"
     - TEXT: "m\\tx_potion_quality_01.dds"
     - TEXT: "m\\Pm_Qua_Wab.dds"
     - TEXT: "m\\K_Quality_Crush.dds"
+    - TEXT: "_aof\\alt_qu.dds"
     - FNAM: Качеств. зелье водного дыхания
     - FNAM: Водное дыхание качественное
+    - FNAM: Зелье водного дыхания (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -1259,11 +1452,14 @@
     - NAME: p_water_breathing_e
     - MODL: "m\\misc_potion_exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Crush.nif"
+    - MODL: "M\\AOF_Potion_exc_alt_y.NIF"
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - TEXT: "m\\Pm_Exc_Wab.dds"
     - TEXT: "m\\K_Exclusive_Crush.dds"
+    - TEXT: "_aof\\alt_exc.dds"
     - FNAM: Экскл. зелье водного дыхания
     - FNAM: Водное дыхание эксклюзивное
+    - FNAM: Зелье водного дыхания (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -1281,11 +1477,14 @@
     - NAME: p_water_breathing_c
     - MODL: "m\\misc_potion_cheap_01.nif"
     - MODL: "m\\K_Cheap_Crush.nif"
+    - MODL: "M\\AOF_Potion_chp_alt_y.NIF"
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - TEXT: "m\\Pm_Che_Wab.dds"
     - TEXT: "m\\K_Cheap_Crush.dds"
+    - TEXT: "_aof\\alt_chp.dds"
     - FNAM: Дешевое зелье водного дыхания
     - FNAM: Водное дыхание дешевое
+    - FNAM: Зелье водного дыхания (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -1303,11 +1502,14 @@
     - NAME: p_water_breathing_b
     - MODL: "m\\misc_potion_bargain_01.nif"
     - MODL: "m\\K_Bargain_Crush.nif"
+    - MODL: "M\\AOF_Potion_barg_alt_y.NIF"
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - TEXT: "m\\Pm_Bar_Wab.dds"
     - TEXT: "m\\K_Bargain_Crush.dds"
+    - TEXT: "_aof\\alt_barg.dds"
     - FNAM: Уцененное зелье водного дыхания
     - FNAM: Водное дыхание уцененное
+    - FNAM: Зелье водного дыхания (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -1325,11 +1527,14 @@
     - NAME: p_water_walking_b
     - MODL: "m\\misc_potion_bargain_01.nif"
     - MODL: "m\\K_Bargain_Crush.nif"
+    - MODL: "M\\AOF_Potion_barg_alt_y.NIF"
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - TEXT: "m\\Pm_Bar_Waw.dds"
     - TEXT: "m\\K_Bargain_Crush.dds"
+    - TEXT: "_aof\\alt_barg.dds"
     - FNAM: Уцен. зелье хождения по воде
     - FNAM: Хождение по воде уцененное
+    - FNAM: Зелье хождения по воде (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -1347,11 +1552,14 @@
     - NAME: p_water_walking_c
     - MODL: "m\\misc_potion_cheap_01.nif"
     - MODL: "m\\K_Cheap_Crush.nif"
+    - MODL: "M\\AOF_Potion_chp_alt_y.NIF"
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - TEXT: "m\\Pm_Che_Waw.dds"
     - TEXT: "m\\K_Cheap_Crush.dds"
+    - TEXT: "_aof\\alt_chp.dds"
     - FNAM: Дешевое зелье хождения по воде
     - FNAM: Хождение по воде дешевое
+    - FNAM: Зелье хождения по воде (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -1369,11 +1577,14 @@
     - NAME: p_water_walking_e
     - MODL: "m\\misc_potion_exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Crush.nif"
+    - MODL: "M\\AOF_Potion_exc_alt_y.NIF"
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - TEXT: "m\\Pm_Exc_Waw.dds"
     - TEXT: "m\\K_Exclusive_Crush.dds"
+    - TEXT: "_aof\\alt_exc.dds"
     - FNAM: Экскл. зелье хождения по воде
     - FNAM: Хождение по воде эксклюзивное
+    - FNAM: Зелье хождения по воде (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -1391,11 +1602,14 @@
     - NAME: p_water_walking_q
     - MODL: "m\\misc_potion_quality_01.nif"
     - MODL: "m\\K_Quality_Crush.nif"
+    - MODL: "M\\AOF_Potion_qu_alt_y.NIF"
     - TEXT: "m\\tx_potion_quality_01.dds"
     - TEXT: "m\\Pm_Qua_Waw.dds"
     - TEXT: "m\\K_Quality_Crush.dds"
+    - TEXT: "_aof\\alt_qu.dds"
     - FNAM: Качеств. зелье хождения по воде
     - FNAM: Хождение по воде качественное
+    - FNAM: Зелье хождения по воде (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -1413,11 +1627,14 @@
     - NAME: p_blight_resistance_b
     - MODL: "m\\misc_potion_bargain_01.nif"
     - MODL: "m\\K_Bargain_Aqua.nif"
+    - MODL: "m\\AOF_Potion_barg_amb_res.NIF"
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - TEXT: "m\\Pm_Bar_Res_Bli.dds"
     - TEXT: "m\\K_Bargain_Aqua.dds"
+    - TEXT: "_aof\\res_barg.dds"
     - FNAM: Уцененное сопротивление мору
     - FNAM: Сопротивление мору уцененное
+    - FNAM: Сопротивление мору (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -1435,11 +1652,14 @@
     - NAME: p_blight_resistance_c
     - MODL: "m\\misc_potion_cheap_01.nif"
     - MODL: "m\\K_Cheap_Aqua.nif"
+    - MODL: "m\\AOF_Potion_chp_amb_res.NIF"
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - TEXT: "m\\Pm_Che_Res_Bli.dds"
     - TEXT: "m\\K_Cheap_Aqua.dds"
+    - TEXT: "_aof\\res_chp.dds"
     - FNAM: Дешевое сопротивление мору
     - FNAM: Сопротивление мору дешевое
+    - FNAM: Сопротивление мору (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -1457,11 +1677,14 @@
     - NAME: p_blight_resistance_e
     - MODL: "m\\misc_potion_exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Aqua.nif"
+    - MODL: "m\\AOF_Potion_exc_amb_res.NIF"
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - TEXT: "m\\Pm_Exc_Res_Bli.dds"
     - TEXT: "m\\K_Exclusive_Aqua.dds"
+    - TEXT: "_aof\\res_exc.dds"
     - FNAM: Эксклюзивное сопротивление мору
     - FNAM: Сопротивление мору эксклюзивное
+    - FNAM: Сопротивление мору (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -1479,11 +1702,14 @@
     - NAME: p_blight_resistance_q
     - MODL: "m\\misc_potion_quality_01.nif"
     - MODL: "m\\K_Quality_Aqua.nif"
+    - MODL: "m\\AOF_Potion_qu_amb_res.NIF"
     - TEXT: "m\\tx_potion_quality_01.dds"
     - TEXT: "m\\Pm_Qua_Res_Bli.dds"
     - TEXT: "m\\K_Quality_Aqua.dds"
+    - TEXT: "_aof\\res_qu.dds"
     - FNAM: Качественное сопротивление мору
     - FNAM: Сопротивление мору качественное
+    - FNAM: Сопротивление мору (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -1501,11 +1727,14 @@
     - NAME: p_blight_resistance_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Aqua.nif"
+    - MODL: "m\\AOF_Potion_st_amb_res.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Res_Bli.dds"
     - TEXT: "m\\K_Fresh_Aqua.dds"
+    - TEXT: "_aof\\res_st.dds"
     - FNAM: Стандартное сопротивление мору
     - FNAM: Сопротивление мору стандартное
+    - FNAM: Сопротивление мору (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -1520,124 +1749,17 @@
         magnitude_min: 10
         magnitude_max: 10
 - ALCH:
-    - NAME: p_sanctuary_b
-    - MODL: "m\\misc_potion_bargain_01.nif"
-    - MODL: "m\\K_Bargain_Crush.nif"
-    - TEXT: "m\\tx_potion_bargain_01.dds"
-    - TEXT: "m\\Pm_Bar_San.dds"
-    - TEXT: "m\\K_Bargain_Crush.dds"
-    - FNAM: Уцененное зелье светоча
-    - FNAM: Светоч уцененное
-    - ALDT:
-        weight: 1.5
-        value: 5
-        auto_calculate_value: false
-    - ENAM:
-        index: Sanctuary
-        skill: ~
-        attribute: ~
-        range: Self
-        area: 0
-        duration: 8
-        magnitude_min: 5
-        magnitude_max: 5
-- ALCH:
-    - NAME: p_sanctuary_c
-    - MODL: "m\\misc_potion_cheap_01.nif"
-    - MODL: "m\\K_Cheap_Crush.nif"
-    - TEXT: "m\\tx_potion_cheap_01.dds"
-    - TEXT: "m\\Pm_Che_San.dds"
-    - TEXT: "m\\K_Cheap_Crush.dds"
-    - FNAM: Дешевое зелье светоча
-    - FNAM: Светоч дешевое
-    - ALDT:
-        weight: 1.0
-        value: 15
-        auto_calculate_value: false
-    - ENAM:
-        index: Sanctuary
-        skill: ~
-        attribute: ~
-        range: Self
-        area: 0
-        duration: 15
-        magnitude_min: 8
-        magnitude_max: 8
-- ALCH:
-    - NAME: p_sanctuary_e
-    - MODL: "m\\misc_potion_exclusive_01.nif"
-    - MODL: "m\\K_Exclusive_Crush.nif"
-    - TEXT: "m\\tx_potion_exclusive_01.dds"
-    - TEXT: "m\\Pm_Exc_San.dds"
-    - TEXT: "m\\K_Exclusive_Crush.dds"
-    - FNAM: Эксклюзивное зелье светоча
-    - FNAM: Светоч эксклюзивное
-    - ALDT:
-        weight: 0.25
-        value: 175
-        auto_calculate_value: false
-    - ENAM:
-        index: Sanctuary
-        skill: ~
-        attribute: ~
-        range: Self
-        area: 0
-        duration: 60
-        magnitude_min: 20
-        magnitude_max: 20
-- ALCH:
-    - NAME: p_sanctuary_q
-    - MODL: "m\\misc_potion_quality_01.nif"
-    - MODL: "m\\K_Quality_Crush.nif"
-    - TEXT: "m\\tx_potion_quality_01.dds"
-    - TEXT: "m\\Pm_Qua_San.dds"
-    - TEXT: "m\\K_Quality_Crush.dds"
-    - FNAM: Качественное зелье светоча
-    - FNAM: Светоч качественное
-    - ALDT:
-        weight: 0.5
-        value: 80
-        auto_calculate_value: false
-    - ENAM:
-        index: Sanctuary
-        skill: ~
-        attribute: ~
-        range: Self
-        area: 0
-        duration: 45
-        magnitude_min: 15
-        magnitude_max: 15
-- ALCH:
-    - NAME: p_sanctuary_s
-    - MODL: "m\\misc_potion_standard_01.nif"
-    - MODL: "m\\K_Fresh_Crush.nif"
-    - TEXT: "m\\tx_potion_standard_01.dds"
-    - TEXT: "m\\Pm_Sta_San.dds"
-    - TEXT: "m\\K_Fresh_Crush.dds"
-    - FNAM: Стандартное зелье светоча
-    - FNAM: Светоч стандартное
-    - ALDT:
-        weight: 0.75
-        value: 35
-        auto_calculate_value: false
-    - ENAM:
-        index: Sanctuary
-        skill: ~
-        attribute: ~
-        range: Self
-        area: 0
-        duration: 30
-        magnitude_min: 10
-        magnitude_max: 10
-- ALCH:
     - NAME: p_slowfall_b
     - MODL: "m\\misc_potion_bargain_01.nif"
     - MODL: "m\\K_Bargain_Crush.nif"
+    - MODL: "M\\AOF_Potion_barg_yellow.nif"
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - TEXT: "m\\Pm_Bar_Slo.dds"
     - TEXT: "m\\K_Bargain_Crush.dds"
+    - TEXT: "_aof\\yellow_barg.dds"
     - FNAM: Уцененное зелье медлен. падения
     - FNAM: Замедление падения уцененное
+    - FNAM: Зелье медленн. падения (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -1655,11 +1777,14 @@
     - NAME: p_slowfall_c
     - MODL: "m\\misc_potion_cheap_01.nif"
     - MODL: "m\\K_Cheap_Crush.nif"
+    - MODL: "M\\AOF_Potion_chp_yellow.nif"
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - TEXT: "m\\Pm_Che_Slo.dds"
     - TEXT: "m\\K_Cheap_Crush.dds"
+    - TEXT: "_aof\\yellow_chp.dds"
     - FNAM: Дешев. зелье медленного падения
     - FNAM: Замедление падения дешевое
+    - FNAM: Зелье медленн. падения (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -1677,11 +1802,14 @@
     - NAME: p_slowfall_e
     - MODL: "m\\misc_potion_exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Crush.nif"
+    - MODL: "M\\AOF_Potion_exc_yellow.nif"
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - TEXT: "m\\Pm_Exc_Slo.dds"
     - TEXT: "m\\K_Exclusive_Crush.dds"
+    - TEXT: "_aof\\yellow_exc.dds"
     - FNAM: Экскл. зелье медленного падения
     - FNAM: Замедление падения эксклюзивное
+    - FNAM: Зелье медленн. падения (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -1699,11 +1827,14 @@
     - NAME: p_slowfall_q
     - MODL: "m\\misc_potion_quality_01.nif"
     - MODL: "m\\K_Quality_Crush.nif"
+    - MODL: "M\\AOF_Potion_qu_yellow.nif"
     - TEXT: "m\\tx_potion_quality_01.dds"
     - TEXT: "m\\Pm_Qua_Slo.dds"
     - TEXT: "m\\K_Quality_Crush.dds"
+    - TEXT: "_aof\\yellow_qu.dds"
     - FNAM: Кач. зелье медленного падения
     - FNAM: Замедление падения качественное
+    - FNAM: Зелье медленн. падения (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -1721,11 +1852,14 @@
     - NAME: p_slowfall_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Crush.nif"
+    - MODL: "M\\AOF_Potion_st_yellow.nif"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Slo.dds"
     - TEXT: "m\\K_Fresh_Crush.dds"
+    - TEXT: "_aof\\yellow_st.dds"
     - FNAM: Станд. зелье медленного падения
     - FNAM: Замедление падения стандартное
+    - FNAM: Зелье медленн. падения (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -1740,14 +1874,142 @@
         magnitude_min: 10
         magnitude_max: 10
 - ALCH:
+    - NAME: p_sanctuary_b
+    - MODL: "m\\misc_potion_bargain_01.nif"
+    - MODL: "m\\K_Bargain_Crush.nif"
+    - MODL: "m\\AOF_Potion_barg_green_i.NIF"
+    - TEXT: "m\\tx_potion_bargain_01.dds"
+    - TEXT: "m\\Pm_Bar_San.dds"
+    - TEXT: "m\\K_Bargain_Crush.dds"
+    - TEXT: "_aof\\illu_barg.dds"
+    - FNAM: Уцененное зелье светоча
+    - FNAM: Светоч уцененное
+    - FNAM: Зелье светоча (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: Sanctuary
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_sanctuary_c
+    - MODL: "m\\misc_potion_cheap_01.nif"
+    - MODL: "m\\K_Cheap_Crush.nif"
+    - MODL: "m\\AOF_Potion_chp_green_i.NIF"
+    - TEXT: "m\\tx_potion_cheap_01.dds"
+    - TEXT: "m\\Pm_Che_San.dds"
+    - TEXT: "m\\K_Cheap_Crush.dds"
+    - TEXT: "_aof\\illu_chp.dds"
+    - FNAM: Дешевое зелье светоча
+    - FNAM: Светоч дешевое
+    - FNAM: Зелье светоча (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: Sanctuary
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_sanctuary_e
+    - MODL: "m\\misc_potion_exclusive_01.nif"
+    - MODL: "m\\K_Exclusive_Crush.nif"
+    - MODL: "m\\AOF_Potion_exc_green_i.NIF"
+    - TEXT: "m\\tx_potion_exclusive_01.dds"
+    - TEXT: "m\\Pm_Exc_San.dds"
+    - TEXT: "m\\K_Exclusive_Crush.dds"
+    - TEXT: "_aof\\illu_exc.dds"
+    - FNAM: Эксклюзивное зелье светоча
+    - FNAM: Светоч эксклюзивное
+    - FNAM: Зелье светоча (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: Sanctuary
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 60
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_sanctuary_q
+    - MODL: "m\\misc_potion_quality_01.nif"
+    - MODL: "m\\K_Quality_Crush.nif"
+    - MODL: "m\\AOF_Potion_qu_green_i.NIF"
+    - TEXT: "m\\tx_potion_quality_01.dds"
+    - TEXT: "m\\Pm_Qua_San.dds"
+    - TEXT: "m\\K_Quality_Crush.dds"
+    - TEXT: "_aof\\illu_qu.dds"
+    - FNAM: Качественное зелье светоча
+    - FNAM: Светоч качественное
+    - FNAM: Зелье светоча (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: Sanctuary
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_sanctuary_s
+    - MODL: "m\\misc_potion_standard_01.nif"
+    - MODL: "m\\K_Fresh_Crush.nif"
+    - MODL: "m\\AOF_Potion_st_green_i.NIF"
+    - TEXT: "m\\tx_potion_standard_01.dds"
+    - TEXT: "m\\Pm_Sta_San.dds"
+    - TEXT: "m\\K_Fresh_Crush.dds"
+    - TEXT: "_aof\\illu_st.dds"
+    - FNAM: Стандартное зелье светоча
+    - FNAM: Светоч стандартное
+    - FNAM: Зелье светоча (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: Sanctuary
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
     - NAME: p_summon_centurion_sphere_b
     - MODL: "m\\misc_potion_bargain_01.nif"
     - MODL: "m\\K_Bargain_Crush.nif"
+    - MODL: "m\\AOF_Potion_barg_yellow.NIF"
     - TEXT: "m\\tx_potion_bargain_01.dds"
     - TEXT: "m\\Pm_Bar_Sum_Cla.dds"
     - TEXT: "m\\K_Bargain_Crush.dds"
+    - TEXT: "_aof\\yellow_barg.dds"
     - FNAM: Уцен. з. выз. Сферы-центуриона
     - FNAM: Вызов Сферы-центуриона уценен.
+    - FNAM: Зелье. выз. Сферы-цент. (уцен.)
     - ALDT:
         weight: 1.5
         value: 5
@@ -1765,11 +2027,14 @@
     - NAME: p_summon_centurion_sphere_c
     - MODL: "m\\misc_potion_cheap_01.nif"
     - MODL: "m\\K_Cheap_Crush.nif"
+    - MODL: "m\\AOF_Potion_chp_yellow.NIF"
     - TEXT: "m\\tx_potion_cheap_01.dds"
     - TEXT: "m\\Pm_Che_Sum_Cla.dds"
     - TEXT: "m\\K_Cheap_Crush.dds"
+    - TEXT: "_aof\\yellow_chp.dds"
     - FNAM: Дешев. з. выз. Сферы-центуриона
     - FNAM: Вызов Сферы-центуриона дешевое
+    - FNAM: Зелье. выз. Сферы-цент. (деш.)
     - ALDT:
         weight: 1.0
         value: 15
@@ -1787,11 +2052,14 @@
     - NAME: p_summon_centurion_sphere_e
     - MODL: "m\\misc_potion_exclusive_01.nif"
     - MODL: "m\\K_Exclusive_Crush.nif"
+    - MODL: "m\\AOF_Potion_exc_yellow.NIF"
     - TEXT: "m\\tx_potion_exclusive_01.dds"
     - TEXT: "m\\Pm_Exc_Sum_Cla.dds"
     - TEXT: "m\\K_Exclusive_Crush.dds"
+    - TEXT: "_aof\\yellow_exc.dds"
     - FNAM: Экскл. з. выз. Сферы-центуриона
     - FNAM: Вызов Сферы-центуриона экскл.
+    - FNAM: Зелье. выз. Сферы-цент. (экскл.)
     - ALDT:
         weight: 0.25
         value: 175
@@ -1809,11 +2077,14 @@
     - NAME: p_summon_centurion_sphere_q
     - MODL: "m\\misc_potion_quality_01.nif"
     - MODL: "m\\K_Quality_Crush.nif"
+    - MODL: "m\\AOF_Potion_qu_yellow.NIF"
     - TEXT: "m\\tx_potion_quality_01.dds"
     - TEXT: "m\\Pm_Qua_Sum_Cla.dds"
     - TEXT: "m\\K_Quality_Crush.dds"
+    - TEXT: "_aof\\yellow_qu.dds"
     - FNAM: Кач. з. выз. Сферы-центуриона
     - FNAM: Вызов Сферы-центуриона качеств.
+    - FNAM: Зелье. выз. Сферы-цент. (кач.)
     - ALDT:
         weight: 0.5
         value: 80
@@ -1831,11 +2102,14 @@
     - NAME: p_summon_centurion_sphere_s
     - MODL: "m\\misc_potion_standard_01.nif"
     - MODL: "m\\K_Fresh_Crush.nif"
+    - MODL: "m\\AOF_Potion_st_yellow.NIF"
     - TEXT: "m\\tx_potion_standard_01.dds"
     - TEXT: "m\\Pm_Sta_Sum_Cla.dds"
     - TEXT: "m\\K_Fresh_Crush.dds"
+    - TEXT: "_aof\\yellow_st.dds"
     - FNAM: Станд. з. выз. Сферы-центуриона
     - FNAM: Вызов Сферы-центуриона станд.
+    - FNAM: Зелье. выз. Сферы-цент. (станд.)
     - ALDT:
         weight: 0.75
         value: 35
@@ -1849,25 +2123,3 @@
         duration: 15
         magnitude_min: 1
         magnitude_max: 1
-- ALCH:
-    - NAME: p_swift_swim_b
-    - MODL: "m\\Misc_Potion_Bargain_01.nif"
-    - MODL: "m\\K_Bargain_Crush.nif"
-    - TEXT: "m\\Tx_potion_bargain_01.tga"
-    - TEXT: "m\\Pm_Bar_Swi.dds"
-    - TEXT: "m\\K_Bargain_Crush.dds"
-    - FNAM: Уцененное зелье быстроплавания
-    - FNAM: Быстрое плавание уцененное
-    - ALDT:
-        weight: 1.5
-        value: 5
-        auto_calculate_value: false
-    - ENAM:
-        index: SwiftSwim
-        skill: ~
-        attribute: ~
-        range: Self
-        area: 0
-        duration: 8
-        magnitude_min: 5
-        magnitude_max: 5

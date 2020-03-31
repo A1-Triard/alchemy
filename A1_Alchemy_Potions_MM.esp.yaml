@@ -73,7 +73,7 @@
   - NAME: p_burden_c
   - MODL: m\Misc_Potion_Cheap_01.nif
   - TEXT: m\Pm_Che_Res_Nor.dds
-  - FNAM: Дешевое зелье даэдра
+  - FNAM: Дешевое зелье Даэдра
   - ALDT:
       auto_calculate_value: false
       value: 15
@@ -91,7 +91,7 @@
   - NAME: p_burden_b
   - MODL: m\Misc_Potion_Bargain_01.nif
   - TEXT: m\Pm_Bar_Res_Nor.dds
-  - FNAM: Уцененное зелье даэдра
+  - FNAM: Уцененное зелье Даэдра
   - ALDT:
       auto_calculate_value: false
       value: 5
@@ -109,7 +109,7 @@
   - NAME: p_burden_q
   - MODL: m\Misc_Potion_Quality_01.nif
   - TEXT: m\Pm_Qua_Res_Nor.dds
-  - FNAM: Качественное зелье даэдра
+  - FNAM: Качественное зелье Даэдра
   - ALDT:
       auto_calculate_value: false
       value: 80
@@ -127,7 +127,7 @@
   - NAME: p_burden_e
   - MODL: m\Misc_Potion_Exclusive_01.nif
   - TEXT: m\Pm_Exc_Res_Nor.dds
-  - FNAM: Эксклюзивное зелье даэдра
+  - FNAM: Эксклюзивное зелье Даэдра
   - ALDT:
       auto_calculate_value: false
       value: 175
@@ -451,7 +451,7 @@
   - NAME: p_detect_key_s
   - MODL: m\misc_potion_standard_01.nif
   - TEXT: m\Pm_Sta_Det_Key.dds
-  - FNAM: Стандартное зелье обнар. ключа
+  - FNAM: Стандартное зелье обнаруж. ключа
   - ALDT:
       auto_calculate_value: false
       value: 35
@@ -952,6 +952,24 @@
       range: Self
       skill: ~
 - ALCH:
+  - NAME: p_swift_swim_b
+  - MODL: m\Misc_Potion_Bargain_01.nif
+  - TEXT: m\Pm_Bar_Swi.dds
+  - FNAM: Уцененное зелье быстроплавания
+  - ALDT:
+      auto_calculate_value: false
+      value: 5
+      weight: 1.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 8
+      index: SwiftSwim
+      magnitude_max: 5
+      magnitude_min: 5
+      range: Self
+      skill: ~
+- ALCH:
   - NAME: p_telekinesis_c
   - MODL: m\misc_potion_cheap_01.nif
   - TEXT: m\Pm_Che_Tel.dds
@@ -1258,96 +1276,6 @@
       range: Self
       skill: ~
 - ALCH:
-  - NAME: p_sanctuary_b
-  - MODL: m\misc_potion_bargain_01.nif
-  - TEXT: m\Pm_Bar_San.dds
-  - FNAM: Уцененное зелье светоча
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: Sanctuary
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_c
-  - MODL: m\misc_potion_cheap_01.nif
-  - TEXT: m\Pm_Che_San.dds
-  - FNAM: Дешевое зелье светоча
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 15
-      index: Sanctuary
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_e
-  - MODL: m\misc_potion_exclusive_01.nif
-  - TEXT: m\Pm_Exc_San.dds
-  - FNAM: Эксклюзивное зелье светоча
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 60
-      index: Sanctuary
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_q
-  - MODL: m\misc_potion_quality_01.nif
-  - TEXT: m\Pm_Qua_San.dds
-  - FNAM: Качественное зелье светоча
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: Sanctuary
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_s
-  - MODL: m\misc_potion_standard_01.nif
-  - TEXT: m\Pm_Sta_San.dds
-  - FNAM: Стандартное зелье светоча
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: Sanctuary
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
   - NAME: p_slowfall_b
   - MODL: m\misc_potion_bargain_01.nif
   - TEXT: m\Pm_Bar_Slo.dds
@@ -1433,6 +1361,96 @@
       attribute: ~
       duration: 30
       index: SlowFall
+      magnitude_max: 10
+      magnitude_min: 10
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_sanctuary_b
+  - MODL: m\misc_potion_bargain_01.nif
+  - TEXT: m\Pm_Bar_San.dds
+  - FNAM: Уцененное зелье светоча
+  - ALDT:
+      auto_calculate_value: false
+      value: 5
+      weight: 1.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 8
+      index: Sanctuary
+      magnitude_max: 5
+      magnitude_min: 5
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_sanctuary_c
+  - MODL: m\misc_potion_cheap_01.nif
+  - TEXT: m\Pm_Che_San.dds
+  - FNAM: Дешевое зелье светоча
+  - ALDT:
+      auto_calculate_value: false
+      value: 15
+      weight: 1.0
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 15
+      index: Sanctuary
+      magnitude_max: 8
+      magnitude_min: 8
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_sanctuary_e
+  - MODL: m\misc_potion_exclusive_01.nif
+  - TEXT: m\Pm_Exc_San.dds
+  - FNAM: Эксклюзивное зелье светоча
+  - ALDT:
+      auto_calculate_value: false
+      value: 175
+      weight: 0.25
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 60
+      index: Sanctuary
+      magnitude_max: 20
+      magnitude_min: 20
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_sanctuary_q
+  - MODL: m\misc_potion_quality_01.nif
+  - TEXT: m\Pm_Qua_San.dds
+  - FNAM: Качественное зелье светоча
+  - ALDT:
+      auto_calculate_value: false
+      value: 80
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 45
+      index: Sanctuary
+      magnitude_max: 15
+      magnitude_min: 15
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_sanctuary_s
+  - MODL: m\misc_potion_standard_01.nif
+  - TEXT: m\Pm_Sta_San.dds
+  - FNAM: Стандартное зелье светоча
+  - ALDT:
+      auto_calculate_value: false
+      value: 35
+      weight: 0.75
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 30
+      index: Sanctuary
       magnitude_max: 10
       magnitude_min: 10
       range: Self
@@ -1525,23 +1543,5 @@
       index: SummonCenturionSphere
       magnitude_max: 1
       magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_swift_swim_b
-  - MODL: m\Misc_Potion_Bargain_01.nif
-  - TEXT: m\Pm_Bar_Swi.dds
-  - FNAM: Уцененное зелье быстроплавания
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: SwiftSwim
-      magnitude_max: 5
-      magnitude_min: 5
       range: Self
       skill: ~

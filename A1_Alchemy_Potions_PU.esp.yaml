@@ -952,6 +952,24 @@
       range: Self
       skill: ~
 - ALCH:
+  - NAME: p_swift_swim_b
+  - MODL: m\K_Bargain_Crush.nif
+  - TEXT: m\K_Bargain_Crush.dds
+  - FNAM: Быстрое плавание уцененное
+  - ALDT:
+      auto_calculate_value: false
+      value: 5
+      weight: 1.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 8
+      index: SwiftSwim
+      magnitude_max: 5
+      magnitude_min: 5
+      range: Self
+      skill: ~
+- ALCH:
   - NAME: p_telekinesis_c
   - MODL: m\K_Cheap_7up.nif
   - TEXT: m\K_Cheap_7up.dds
@@ -1258,96 +1276,6 @@
       range: Self
       skill: ~
 - ALCH:
-  - NAME: p_sanctuary_b
-  - MODL: m\K_Bargain_Crush.nif
-  - TEXT: m\K_Bargain_Crush.dds
-  - FNAM: Светоч уцененное
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: Sanctuary
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_c
-  - MODL: m\K_Cheap_Crush.nif
-  - TEXT: m\K_Cheap_Crush.dds
-  - FNAM: Светоч дешевое
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 15
-      index: Sanctuary
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_e
-  - MODL: m\K_Exclusive_Crush.nif
-  - TEXT: m\K_Exclusive_Crush.dds
-  - FNAM: Светоч эксклюзивное
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 60
-      index: Sanctuary
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_q
-  - MODL: m\K_Quality_Crush.nif
-  - TEXT: m\K_Quality_Crush.dds
-  - FNAM: Светоч качественное
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: Sanctuary
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_s
-  - MODL: m\K_Fresh_Crush.nif
-  - TEXT: m\K_Fresh_Crush.dds
-  - FNAM: Светоч стандартное
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: Sanctuary
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
   - NAME: p_slowfall_b
   - MODL: m\K_Bargain_Crush.nif
   - TEXT: m\K_Bargain_Crush.dds
@@ -1433,6 +1361,96 @@
       attribute: ~
       duration: 30
       index: SlowFall
+      magnitude_max: 10
+      magnitude_min: 10
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_sanctuary_b
+  - MODL: m\K_Bargain_Crush.nif
+  - TEXT: m\K_Bargain_Crush.dds
+  - FNAM: Светоч уцененное
+  - ALDT:
+      auto_calculate_value: false
+      value: 5
+      weight: 1.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 8
+      index: Sanctuary
+      magnitude_max: 5
+      magnitude_min: 5
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_sanctuary_c
+  - MODL: m\K_Cheap_Crush.nif
+  - TEXT: m\K_Cheap_Crush.dds
+  - FNAM: Светоч дешевое
+  - ALDT:
+      auto_calculate_value: false
+      value: 15
+      weight: 1.0
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 15
+      index: Sanctuary
+      magnitude_max: 8
+      magnitude_min: 8
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_sanctuary_e
+  - MODL: m\K_Exclusive_Crush.nif
+  - TEXT: m\K_Exclusive_Crush.dds
+  - FNAM: Светоч эксклюзивное
+  - ALDT:
+      auto_calculate_value: false
+      value: 175
+      weight: 0.25
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 60
+      index: Sanctuary
+      magnitude_max: 20
+      magnitude_min: 20
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_sanctuary_q
+  - MODL: m\K_Quality_Crush.nif
+  - TEXT: m\K_Quality_Crush.dds
+  - FNAM: Светоч качественное
+  - ALDT:
+      auto_calculate_value: false
+      value: 80
+      weight: 0.5
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 45
+      index: Sanctuary
+      magnitude_max: 15
+      magnitude_min: 15
+      range: Self
+      skill: ~
+- ALCH:
+  - NAME: p_sanctuary_s
+  - MODL: m\K_Fresh_Crush.nif
+  - TEXT: m\K_Fresh_Crush.dds
+  - FNAM: Светоч стандартное
+  - ALDT:
+      auto_calculate_value: false
+      value: 35
+      weight: 0.75
+  - ENAM:
+      area: 0
+      attribute: ~
+      duration: 30
+      index: Sanctuary
       magnitude_max: 10
       magnitude_min: 10
       range: Self
@@ -1525,23 +1543,5 @@
       index: SummonCenturionSphere
       magnitude_max: 1
       magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_swift_swim_b
-  - MODL: m\K_Bargain_Crush.nif
-  - TEXT: m\K_Bargain_Crush.dds
-  - FNAM: Быстрое плавание уцененное
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: SwiftSwim
-      magnitude_max: 5
-      magnitude_min: 5
       range: Self
       skill: ~
