@@ -25,12 +25,18 @@ $bl = ControlListView("Data Files", "", 0x420, "FindItem", "Bloodmoon.esm", 0)
 _GUICtrlListView_ClickItem($list, $bl, "left", False, 2)
 $pt = ControlListView("Data Files", "", 0x420, "FindItem", "alchemy_potions.esp", 0)
 _GUICtrlListView_ClickItem($list, $pt, "left", False, 2)
-If $ingrs_set == "std" Then
-    $pl = ControlListView("Data Files", "", 0x420, "FindItem", "alchemy_std.esp", 0)
-Else
+If $ingrs_set == "eva" Then
     $eva = ControlListView("Data Files", "", 0x420, "FindItem", "EVA.ESP", 0)
     _GUICtrlListView_ClickItem($list, $eva, "left", False, 2)
     $pl = ControlListView("Data Files", "", 0x420, "FindItem", "alchemy_eva.esp", 0)
+ElseIf $ingrs_set == "mfr" Then
+    $mfr = ControlListView("Data Files", "", 0x420, "FindItem", "MFR_VanillaUpgrade.esm", 0)
+    _GUICtrlListView_ClickItem($list, $mfr, "left", False, 2)
+    $mfr = ControlListView("Data Files", "", 0x420, "FindItem", "MFR_EVA.esm", 0)
+    _GUICtrlListView_ClickItem($list, $mfr, "left", False, 2)
+    $pl = ControlListView("Data Files", "", 0x420, "FindItem", "alchemy_mfr.esp", 0)
+Else
+    $pl = ControlListView("Data Files", "", 0x420, "FindItem", "alchemy_std.esp", 0)
 EndIf
 _GUICtrlListView_ClickItem($list, $pl, "left", False, 2)
 ControlListView("Data Files", "", 0x420, "SelectClear")

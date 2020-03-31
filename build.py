@@ -824,7 +824,7 @@ def run_au3(path):
     command = command[:command.index('"%1"')]
     subprocess.run(command + ' ' + path, stdout=stdout, stderr=stderr, check=True)
 
-def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
+def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second, suffix, version):
     ingrs = { i.name: i for i in load_ingredients('ingredients/Morrowind.esm.yaml') }
     ingrs.update({ i.name: i for i in load_ingredients('ingredients/Tribunal.esm.yaml') })
     ingrs.update({ i.name: i for i in load_ingredients('ingredients/Bloodmoon.esm.yaml') })
@@ -847,6 +847,8 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
 
     if ingrs_set == 'eva':
         ingrs.update({ i.name: i for i in load_ingredients('ingredients/EVA.ESP.yaml') })
+    elif ingrs_set == 'mfr':
+        ingrs.update({ i.name: i for i in load_ingredients('ingredients/MFR_EVA.esm.yaml') })
 
     ingrs = list(ingrs.values())
     ingrs.sort(key=lambda x: x.name)
@@ -884,7 +886,7 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
         esp_header = yaml.load(f, Loader=yaml.FullLoader)
 
     esp_header[0]['TES3'][0]['HEDR']['description'].append('')
-    esp_header[0]['TES3'][0]['HEDR']['description'].append('Версия для использования без EVA.esp' if ingrs_set == 'std' else 'Версия для использования с EVA.esp')
+    esp_header[0]['TES3'][0]['HEDR']['description'].append(version)
     esp_header[0]['TES3'][0]['HEDR']['records'] = len(esp_header) + len(add_items) + len(check_scripts) + len(add_scripts) + len(del_scripts) + len(level_books) - 1
 
     with open(mfr + 'alchemy_' + ingrs_set + '.esp.yaml', 'w', encoding='utf-8') as esp:
@@ -978,8 +980,8 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second):
         au3.write(au3_close)
     run_au3('alchemy_' + ingrs_set + '.au3')
     remove('alchemy_' + ingrs_set + '.au3')
-    move(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '.esp')
-    subprocess.run('espa -p ru -vd ' + 'A1_Alchemy_V6_Apparatus' + ('_EVA' if ingrs_set == 'eva' else '') + '.esp', stdout=stdout, stderr=stderr, check=True)
+    move(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V6_Apparatus' + suffix + '.esp')
+    subprocess.run('espa -p ru -vd ' + 'A1_Alchemy_V6_Apparatus' + suffix + '.esp', stdout=stdout, stderr=stderr, check=True)
 
 def check_espa_version():
   espa = subprocess.run('espa -V', stdout=PIPE, check=True, universal_newlines=True)
@@ -1021,8 +1023,9 @@ def main():
     subprocess.run('cargo build --target i686-pc-windows-msvc --release --out-dir .. -Z unstable-options', stdout=stdout, stderr=stderr, check=True)
     chdir('..')
     copyfile('PotionsBalance.exe', 'ar/PotionsBalance.exe')
-    gen_apparatus('eva', mfr, 2097, 9, 1, 18, 53, 0)
-    gen_apparatus('std', mfr, 2014, 8, 10, 18, 53, 0)
+    gen_apparatus('mfr', mfr, 2014, 8, 10, 18, 53, 0, '_MFR', 'Версия для использования с MFR_EVA.esm (M[FR] 3.x)')
+    gen_apparatus('eva', mfr, 2097, 9, 1, 18, 53, 0, '_EVA', 'Версия для использования с EVA.esp (M[FR] 2.x)')
+    gen_apparatus('std', mfr, 2014, 8, 10, 18, 53, 0, '', 'Версия для использования без EVA.esp/MFR_EVA.esm')
     remove(mfr + 'alchemy_potions.esp')
     gen_potions(1, 0, 0, '_MM', 'Версия для MagicMarker')
     gen_potions(2, 1, 1, '_PU', 'Версия для Potion Upgrade')
@@ -1033,14 +1036,16 @@ def main():
     copyfile('A1_Alchemy_Potions_PR.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions_PR.esp.yaml')
     copyfile('A1_Alchemy_V6_Apparatus.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus.esp.yaml')
     copyfile('A1_Alchemy_V6_Apparatus_EVA.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus_EVA.esp.yaml')
+    copyfile('A1_Alchemy_V6_Apparatus_MFR.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus_MFR.esp.yaml')
     assembly_plugin('ar/Data Files/A1_Alchemy_V6_Apparatus.esp', 2026, 10, 6, 18, 53, 0)
+    assembly_plugin('ar/Data Files/A1_Alchemy_V6_Apparatus_MFR.esp', 2026, 10, 6, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_V6_Apparatus_EVA.esp', 2097, 9, 1, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions.esp', 2014, 8, 3, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_MM.esp', 2014, 8, 3, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_PU.esp', 2026, 10, 5, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_PR.esp', 2014, 8, 3, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_DaeCursed.esp', 2014, 8, 2, 18, 53, 0)
-    make_archive('A1_Alchemy_1.0', 'ar')
+    make_archive('A1_Alchemy_2.0', 'ar')
     rmtree('ar')    
 
 if __name__ == "__main__":
