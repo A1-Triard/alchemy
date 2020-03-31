@@ -23528,26 +23528,42 @@
     - SCHD:
         name: A1V6_Alembic_sc
         vars:
-          shorts: 2
+          shorts: 5
           longs: 0
           floats: 3
-        data_size: 226
-        var_table_size: 22
+        data_size: 328
+        var_table_size: 43
     - SCVR:
         - doOnce
         - index
+        - OnPCAdd
+        - OnPCDrop
+        - inv
         - cx
         - cy
         - cz
-    - SCDT: eJxljjEKwkAURP+sJLCImBDE9hcewDR2KQLC4gUkSSOJRghECa6Cd/JIehj/sjbBaj7vzwwTApoLjjjLOF1BI4QS8PHgFYM81JotyMF1ALkUp6KKlmySPN1vDvkw1Lf6/rC766l9UoAzKGYz88++vTTdsXBY/eHS4QklbObjqoqmUSE9IqXkRCrx/RaB2SzG/m1n66Zv3UqZRu9IA/gCqWst8A==
+    - SCDT: eJxlUM0KgkAQnll/YIlIkeg6hx4gL908CIH0ArF6CS0DwUKyoHfqkephmt2VSDp9u98fM+OjkNS7QElCsYf8ErRi9DRK9I3sfGXnR461jJIUBUZe4uBXb0s8QwRLSi5BU6LDqMOMAhaURWm8W+/Triuv5e3eby/H+gEenhBCyqZWbOtz1RyUpsUfnWvagYiy2biqgEmguIch5xxDwb5hIpcnEnYiswRvZD6vQKJ1IFE2Hzdumr6s2lobOQxmBXMmxA8J9TiV
     - SCTX:
         - Begin A1V6_Alembic_sc
         - ""
         - short doOnce
         - short index
+        - short OnPCAdd
+        - short OnPCDrop
+        - short inv
         - float cx
         - float cy
         - float cz
+        - ""
+        - if ( OnPCDrop == 1 )
+        - "\tset OnPCDrop to 0"
+        - "\tset inv to 0"
+        - endif
+        - ""
+        - if ( OnPCAdd == 1 )
+        - "\tset OnPCAdd to 0"
+        - "\tset inv to 1"
+        - endif
         - ""
         - if ( MenuMode == 1 )
         - "\treturn"
@@ -23570,8 +23586,15 @@
         - "\treturn"
         - endif
         - ""
+        - if ( index == 0 )
+        - "\tif ( inv == 0 )"
+        - "\t\tDisable"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
         - if ( A1V6_ApparatusDisable == index )
-        - "\tDisable"
+        - "\tset index to 0"
         - endif
         - ""
         - End
