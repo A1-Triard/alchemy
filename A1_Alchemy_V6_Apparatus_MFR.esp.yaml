@@ -27187,7 +27187,7 @@
 - MISC:
     - NAME: A1V6_apparatus_a_alembic
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: Алх. уст. - Перегонный куб
+    - FNAM: Перегонный куб
     - MCDT:
         weight: 0.0
         value: 0
@@ -27197,7 +27197,7 @@
 - MISC:
     - NAME: A1V6_apparatus_a_calcinator
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Алх. уст. - Кальцинатор
+    - FNAM: Кальцинатор
     - MCDT:
         weight: 0.0
         value: 0
@@ -27207,7 +27207,7 @@
 - MISC:
     - NAME: A1V6_apparatus_a_retort
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: Алх. уст. - Реторта
+    - FNAM: Реторта
     - MCDT:
         weight: 0.0
         value: 0
@@ -27217,7 +27217,7 @@
 - MISC:
     - NAME: A1V6_apparatus_a_spipe
     - MODL: "m\\Apparatus_A_Spipe_01.nif"
-    - FNAM: Алх. уст. - Трубка скуума
+    - FNAM: Трубка скуума
     - MCDT:
         weight: 0.0
         value: 0
@@ -27227,7 +27227,7 @@
 - MISC:
     - NAME: A1V6_apparatus_g_alembic
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: Алх. уст. - Перегонный куб
+    - FNAM: Перегонный куб
     - MCDT:
         weight: 0.0
         value: 0
@@ -27237,7 +27237,7 @@
 - MISC:
     - NAME: A1V6_apparatus_g_calcinator
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: Алх. уст. - Кальцинатор
+    - FNAM: Кальцинатор
     - MCDT:
         weight: 0.0
         value: 0
@@ -27247,7 +27247,7 @@
 - MISC:
     - NAME: A1V6_apparatus_g_retort
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: Алх. уст. - Реторта
+    - FNAM: Реторта
     - MCDT:
         weight: 0.0
         value: 0
@@ -27257,7 +27257,7 @@
 - MISC:
     - NAME: A1V6_apparatus_j_alembic
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: Алх. уст. - Перегонный куб
+    - FNAM: Перегонный куб
     - MCDT:
         weight: 0.0
         value: 0
@@ -27267,7 +27267,7 @@
 - MISC:
     - NAME: A1V6_apparatus_j_retort
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: Алх. уст. - Реторта
+    - FNAM: Реторта
     - MCDT:
         weight: 0.0
         value: 0
@@ -27277,7 +27277,7 @@
 - MISC:
     - NAME: A1V6_apparatus_m_alembic
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: Алх. уст. - Перегонный куб
+    - FNAM: Перегонный куб
     - MCDT:
         weight: 0.0
         value: 0
@@ -27287,7 +27287,7 @@
 - MISC:
     - NAME: A1V6_apparatus_m_calcinator
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: Алх. уст. - Кальцинатор
+    - FNAM: Кальцинатор
     - MCDT:
         weight: 0.0
         value: 0
@@ -27297,7 +27297,7 @@
 - MISC:
     - NAME: A1V6_apparatus_m_retort
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: Алх. уст. - Реторта
+    - FNAM: Реторта
     - MCDT:
         weight: 0.0
         value: 0
