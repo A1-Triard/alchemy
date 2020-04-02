@@ -296,134 +296,6 @@
         - End
 - SCPT:
     - SCHD:
-        name: A1V6_Calcinator_sc
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 0
-        var_table_size: 0
-    - SCTX:
-        - Begin A1V6_Calcinator_sc
-        - ""
-        - short doOnce
-        - short index
-        - short OnPCAdd
-        - short OnPCDrop
-        - short inv
-        - float cx
-        - float cy
-        - float cz
-        - ""
-        - if ( OnPCDrop == 1 )
-        - "\tset OnPCDrop to 0"
-        - "\tset inv to 0"
-        - endif
-        - ""
-        - if ( OnPCAdd == 1 )
-        - "\tset OnPCAdd to 0"
-        - "\tset inv to 1"
-        - endif
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( GetDisabled == 1 )
-        - "\tSetDelete 1"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tset index to A1V6_ApparatusIndex"
-        - "\tset cx to A1V6_CalcinatorX"
-        - "\tset cy to A1V6_CalcinatorY"
-        - "\tset cz to A1V6_ApparatusZ"
-        - "\tSetPos X cx"
-        - "\tSetPos Y cy"
-        - "\tSetPos Z cz"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( index == 0 )
-        - "\tif ( inv == 0 )"
-        - "\t\tDisable"
-        - "\tendif"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( A1V6_ApparatusDisable == index )
-        - "\tset index to 0"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1V6_Retort_sc
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 0
-        var_table_size: 0
-    - SCTX:
-        - Begin A1V6_Retort_sc
-        - ""
-        - short doOnce
-        - short index
-        - short OnPCAdd
-        - short OnPCDrop
-        - short inv
-        - float cx
-        - float cy
-        - float cz
-        - ""
-        - if ( OnPCDrop == 1 )
-        - "\tset OnPCDrop to 0"
-        - "\tset inv to 0"
-        - endif
-        - ""
-        - if ( OnPCAdd == 1 )
-        - "\tset OnPCAdd to 0"
-        - "\tset inv to 1"
-        - endif
-        - ""
-        - if ( MenuMode == 1 )
-        - "\treturn"
-        - endif
-        - ""
-        - if ( GetDisabled == 1 )
-        - "\tSetDelete 1"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( doOnce == 0 )
-        - "\tset doOnce to 1"
-        - "\tset index to A1V6_ApparatusIndex"
-        - "\tset cx to A1V6_RetortX"
-        - "\tset cy to A1V6_RetortY"
-        - "\tset cz to A1V6_ApparatusZ"
-        - "\tSetPos X cx"
-        - "\tSetPos Y cy"
-        - "\tSetPos Z cz"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( index == 0 )
-        - "\tif ( inv == 0 )"
-        - "\t\tDisable"
-        - "\tendif"
-        - "\treturn"
-        - endif
-        - ""
-        - if ( A1V6_ApparatusDisable == index )
-        - "\tset index to 0"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
         name: A1V6_ApparatusActivate_sc
         vars:
           shorts: 0
@@ -1610,7 +1482,7 @@
         - "\tset temp to 0"
         - "\tif ( mortar < 30 )"
         - "\t\tset temp to 1"
-        - "\telseif ( retort == 0 )"
+        - "\telseif ( retort < 1 )"
         - "\t\tset temp to 1"
         - "\tendif"
         - "\tif ( temp == 1 )"
@@ -1637,61 +1509,66 @@
         - "\treturn"
         - endif
         - ""
-        - "if ( GetItemCount apparatus_g_mortar_01 > 0 )"
+        - if ( GetItemCount apparatus_g_mortar_01 > 0 )
         - "\tset mortar to 119"
-        - "elseif ( GetItemCount apparatus_m_mortar_01 > 0 )"
+        - elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
         - "\tset mortar to 99"
-        - "elseif ( GetItemCount apparatus_j_mortar_01 > 0 )"
+        - elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
         - "\tset mortar to 79"
-        - "elseif ( GetItemCount apparatus_a_mortar_01 > 0 )"
+        - elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
         - "\tset mortar to 59"
-        - "else"
+        - else
         - "\tset A1V6_AlchemyRes to 2"
         - "\tStopScript A1V6_CalcAlchemy2_sc"
         - "\treturn"
-        - "endif"
+        - endif
         - ""
-        - "if ( GetItemCount apparatus_g_retort_01 > 0 )"
+        - if ( GetItemCount apparatus_g_retort_01 > 0 )
         - "\tset retort to 100"
-        - "elseif ( GetItemCount apparatus_m_retort_01 > 0 )"
+        - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
         - "\tset retort to 88"
-        - "elseif ( GetItemCount apparatus_j_retort_01 > 0 )"
+        - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
         - "\tset retort to 77"
-        - "elseif ( GetItemCount apparatus_a_retort_01 > 0 )"
+        - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
         - "\tset retort to 66"
-        - "else"
+        - else
         - "\tset retort to 55"
-        - "endif"
+        - endif
         - ""
-        - "if ( GetItemCount apparatus_g_calcinator_01 > 0 )"
+        - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 4"
         - "\tset calcinator to 20"
-        - "elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )"
+        - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 3"
         - "\tset calcinator to 15"
-        - "elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )"
+        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 2"
         - "\tset calcinator to 10"
-        - "elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )"
+        - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 1"
         - "\tset calcinator to 5"
-        - "else"
+        - else
+        - "\tset A1V6_Calcinator to 0"
         - "\tset calcinator to 0"
-        - "endif"
+        - endif
         - ""
-        - "if ( GetItemCount apparatus_g_alembic_01 > 0 )"
+        - if ( GetItemCount apparatus_g_alembic_01 > 0 )
         - "\tset alembic to 100"
-        - "elseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
+        - elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
         - "\tset alembic to 80"
-        - "elseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
+        - elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
         - "\tset alembic to 60"
-        - "elseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
+        - elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
         - "\tset alembic to 40"
-        - "elseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
+        - elseif ( GetItemCount apparatus_a_spipe_01 > 0 )
         - "\tset alembic to 40"
-        - "elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
+        - elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
         - "\tset alembic to 40"
-        - "else"
+        - else
         - "\tset alembic to 30"
-        - "endif"
+        - endif
         - ""
-        - "set state to 1"
+        - set state to 1
         - ""
         - End
 - SCPT:
@@ -1752,20 +1629,20 @@
         - "\tset temp to 0"
         - "\tif ( mortar < 30 )"
         - "\t\tset temp to 1"
-        - "\telseif ( retort == 0 )"
+        - "\telseif ( retort < 1 )"
         - "\t\tset temp to 1"
         - "\tendif"
         - "\tif ( temp == 1 )"
         - "\t\tset A1V6_AlchemyRes to 3"
         - "\t\tset state to 0"
-        - "\t\tStopScript A1V6_CalcAlchemy2_sc"
+        - "\t\tStopScript A1V6_CalcAlchemy5_sc"
         - "\t\treturn"
         - "\tendif"
         - "\tset temp to ( Random 100 )"
         - "\tif ( temp >= retort )"
         - "\t\tset A1V6_AlchemyRes to 4"
         - "\t\tset state to 0"
-        - "\t\tStopScript A1V6_CalcAlchemy2_sc"
+        - "\t\tStopScript A1V6_CalcAlchemy5_sc"
         - "\t\treturn"
         - "\tendif"
         - "\tif ( alembic > calcinator )"
@@ -1779,61 +1656,130 @@
         - "\treturn"
         - endif
         - ""
-        - "if ( GetItemCount apparatus_g_mortar_01 > 0 )"
+        - if ( GetItemCount apparatus_g_mortar_01 > 0 )
         - "\tset mortar to 119"
-        - "elseif ( GetItemCount apparatus_m_mortar_01 > 0 )"
+        - elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
         - "\tset mortar to 99"
-        - "elseif ( GetItemCount apparatus_j_mortar_01 > 0 )"
+        - elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
         - "\tset mortar to 79"
-        - "elseif ( GetItemCount apparatus_a_mortar_01 > 0 )"
+        - elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
         - "\tset mortar to 59"
-        - "else"
+        - else
         - "\tset A1V6_AlchemyRes to 2"
-        - "\tStopScript A1V6_CalcAlchemy2_sc"
+        - "\tStopScript A1V6_CalcAlchemy5_sc"
         - "\treturn"
-        - "endif"
+        - endif
         - ""
-        - "if ( GetItemCount apparatus_g_retort_01 > 0 )"
+        - if ( GetItemCount apparatus_g_retort_01 > 0 )
         - "\tset retort to 100"
-        - "elseif ( GetItemCount apparatus_m_retort_01 > 0 )"
+        - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
         - "\tset retort to 88"
-        - "elseif ( GetItemCount apparatus_j_retort_01 > 0 )"
+        - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
         - "\tset retort to 77"
-        - "elseif ( GetItemCount apparatus_a_retort_01 > 0 )"
+        - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
         - "\tset retort to 66"
-        - "else"
+        - else
         - "\tset retort to 55"
-        - "endif"
+        - endif
         - ""
-        - "if ( GetItemCount apparatus_g_calcinator_01 > 0 )"
+        - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 4"
         - "\tset calcinator to 20"
-        - "elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )"
+        - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 3"
         - "\tset calcinator to 15"
-        - "elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )"
+        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 2"
         - "\tset calcinator to 10"
-        - "elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )"
+        - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 1"
         - "\tset calcinator to 5"
-        - "else"
+        - else
+        - "\tset A1V6_Calcinator to 0"
         - "\tset calcinator to 0"
-        - "endif"
+        - endif
         - ""
-        - "if ( GetItemCount apparatus_g_alembic_01 > 0 )"
+        - if ( GetItemCount apparatus_g_alembic_01 > 0 )
         - "\tset alembic to 100"
-        - "elseif ( GetItemCount apparatus_m_alembic_01 > 0 )"
+        - elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
         - "\tset alembic to 80"
-        - "elseif ( GetItemCount apparatus_j_alembic_01 > 0 )"
+        - elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
         - "\tset alembic to 60"
-        - "elseif ( GetItemCount apparatus_a_alembic_01 > 0 )"
+        - elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
         - "\tset alembic to 40"
-        - "elseif ( GetItemCount apparatus_a_spipe_01 > 0 )"
+        - elseif ( GetItemCount apparatus_a_spipe_01 > 0 )
         - "\tset alembic to 40"
-        - "elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )"
+        - elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
         - "\tset alembic to 40"
-        - "else"
+        - else
         - "\tset alembic to 30"
-        - "endif"
+        - endif
         - ""
-        - "set state to 1"
+        - set state to 1
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: A1V6_Calcinator_sc
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 0
+        var_table_size: 0
+    - SCTX:
+        - Begin A1V6_Calcinator_sc
+        - ""
+        - short doOnce
+        - short index
+        - short OnPCAdd
+        - short OnPCDrop
+        - short inv
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( OnPCDrop == 1 )
+        - "\tset OnPCDrop to 0"
+        - "\tset inv to 0"
+        - endif
+        - ""
+        - if ( OnPCAdd == 1 )
+        - "\tset OnPCAdd to 0"
+        - "\tset inv to 1"
+        - endif
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset index to A1V6_ApparatusIndex"
+        - "\tset cx to A1V6_CalcinatorX"
+        - "\tset cy to A1V6_CalcinatorY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( index == 0 )
+        - "\tif ( inv == 0 )"
+        - "\t\tDisable"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable == index )
+        - "\tset index to 0"
+        - endif
         - ""
         - End
 - SCPT:
@@ -1919,6 +1865,70 @@
         - End
 - SCPT:
     - SCHD:
+        name: A1V6_Retort_sc
+        vars:
+          shorts: 0
+          longs: 0
+          floats: 0
+        data_size: 0
+        var_table_size: 0
+    - SCTX:
+        - Begin A1V6_Retort_sc
+        - ""
+        - short doOnce
+        - short index
+        - short OnPCAdd
+        - short OnPCDrop
+        - short inv
+        - float cx
+        - float cy
+        - float cz
+        - ""
+        - if ( OnPCDrop == 1 )
+        - "\tset OnPCDrop to 0"
+        - "\tset inv to 0"
+        - endif
+        - ""
+        - if ( OnPCAdd == 1 )
+        - "\tset OnPCAdd to 0"
+        - "\tset inv to 1"
+        - endif
+        - ""
+        - if ( MenuMode == 1 )
+        - "\treturn"
+        - endif
+        - ""
+        - if ( GetDisabled == 1 )
+        - "\tSetDelete 1"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( doOnce == 0 )
+        - "\tset doOnce to 1"
+        - "\tset index to A1V6_ApparatusIndex"
+        - "\tset cx to A1V6_RetortX"
+        - "\tset cy to A1V6_RetortY"
+        - "\tset cz to A1V6_ApparatusZ"
+        - "\tSetPos X cx"
+        - "\tSetPos Y cy"
+        - "\tSetPos Z cz"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( index == 0 )
+        - "\tif ( inv == 0 )"
+        - "\t\tDisable"
+        - "\tendif"
+        - "\treturn"
+        - endif
+        - ""
+        - if ( A1V6_ApparatusDisable == index )
+        - "\tset index to 0"
+        - endif
+        - ""
+        - End
+- SCPT:
+    - SCHD:
         name: A1V6_StartAlchemy
         vars:
           shorts: 0
@@ -1946,33 +1956,12 @@
         - if ( player->GetItemCount A1V6_ApparatusItem_3 > 0 )
         - "\treturn"
         - endif
-        - player->AddItem A1V6_ApparatusItem_1, 1
+        - "player->AddItem A1V6_ApparatusItem_1, 1"
         - ""
         - End
 - SSCR:
     - DATA: "2118625382187888739"
     - NAME: A1V6_StartAlchemy
-- INGR:
-    - NAME: A1V6_AlchemyActivator
-    - MODL: "m\\misc_com_plate_03.nif"
-    - FNAM: " Обновить "
-    - IRDT:
-        weight: 0.0
-        value: 0
-        effect_1_index: ~
-        effect_2_index: ~
-        effect_3_index: ~
-        effect_4_index: ~
-        effect_1_skill: ~
-        effect_2_skill: ~
-        effect_3_skill: ~
-        effect_4_skill: ~
-        effect_1_attribute: ~
-        effect_2_attribute: ~
-        effect_3_attribute: ~
-        effect_4_attribute: ~
-    - SCRI: A1V6_AlchemyActivator_sc
-    - ITEX: "n\\a1_alchemy_act.dds"
 - APPA:
     - NAME: apparatus_a_calcinator_01
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
@@ -2113,6 +2102,27 @@
         weight: 3.0
         value: 1600
     - ITEX: "m\\Tx_retort_04.tga"
+- INGR:
+    - NAME: A1V6_AlchemyActivator
+    - MODL: "m\\misc_com_plate_03.nif"
+    - FNAM: " Обновить "
+    - IRDT:
+        weight: 0.0
+        value: 0
+        effect_1_index: ~
+        effect_2_index: ~
+        effect_3_index: ~
+        effect_4_index: ~
+        effect_1_skill: ~
+        effect_2_skill: ~
+        effect_3_skill: ~
+        effect_4_skill: ~
+        effect_1_attribute: ~
+        effect_2_attribute: ~
+        effect_3_attribute: ~
+        effect_4_attribute: ~
+    - SCRI: A1V6_AlchemyActivator_sc
+    - ITEX: "n\\a1_alchemy_act.dds"
 - MISC:
     - NAME: A1V6_apparatus_a_alembic
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
