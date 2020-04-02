@@ -26515,7 +26515,7 @@
           shorts: 8
           longs: 0
           floats: 3
-        data_size: 1783
+        data_size: 1892
         var_table_size: 84
     - SCVR:
         - Difficulty
@@ -26529,7 +26529,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNVE1v00AQ3fVXkhKBhUoREogpqhBq1HbXSZxEIpUqDj1x4YByi0wwkBDTKE4P+fFIzMw6sausUW/rN+/t7Huz3kC+aUHuCBiPIQqkxI+GgI/QU77Mm8IFHTdLNDaoA8MKONyBPQSPClCrHRo1pCyWukWrhkCSFIAQXPnyhxQ+iQQuHdEm5aUCRKl4G97or/H0Zjn7lWbbz/fLjQ/IEoF0nnCn63GlVX+3OxYQhYuydY9bB6IJk9Pwu1AKveIOAZ3VNEdak8+koUPk22fV1l/S3KcqER3cT70Oj7n+KVnOCk40zWdnsiUD+WGfqW7LYLVMtum6cDr5HYoq5hA2fIi5hL0PBUtOOAt1qck4YA06cA4dtupTTRgrHHvu8wn9IlI6S1nzuObta/xxRDjktG0RlTLXwCNNdxetNgP32ZQq5xlIr8WpkVdLaA50H5FYkf5+NF6b98ThGkOWbXuPGkQx42syKPgC+LyklhjnUzaOA2fWBee9PwZ/Pef0Kfnz4mZe7S4ZKqjWKQ4SFR0BJn9DuHuRrFbJOtnc59Of0+xuvUnWU6XxJIpj90DrUdPGzixsF0Z28sJKHtjJiZXcHzWka404+n+0NqPrdIMtygY+GVWqxugh24XhsMaojTwY1Bi1kePYPAe07vfZwpmRvqpamKHZ+Z8E9aXcRUlELg4FWa1A962CRb3A3iGpEeB7ZwzRUrGfUyM+qfpJlmn2bT4rlcF+Jof0zEbHodjZCzs7trMTO7tH7LeGfVxl56v5KrVw3xnuy0PuJp9vkwd0ExCtu4qfGfpTtZT/AJAleMw=
+    - SCDT: eJyNVE1v00AQ3XVsxykRWKgUIYGYogqhRm13ncRJJFKp6qEnLhxQbpEJBhJiGsXpIT8eiZnd9UeVTZXbeubNm3lvRvb5uxbkDoPxGCKfc/xoMvgMPeHxPGANkHFQRWMddWBYCw6LYA+DRyYoRRGNmpybp2zRq8kQxBlgCK48/pMzj4oYPh3WpspLARil5F14I7/F05vl7Heabb88LDceIIr53HmmOl2Pa636BTsmMAoXVeueau2zACan4Q8mBGpFBp9m1c0RFqiZJHQIfPei3vprmnuUJaCDfOJteKzyt8lyZjDRNJ+d8Rb3+afSU9nm/mqZbNO1UTr5E7J6zKHY8HGsQbGPIVMlJ8oLcSlJOGAOOnAOHSXVoxzTUpTtuacm9IylNEuVc1XOLXPq44jikBOtsUroM3CppltYK3G3AdHTbqt1+txtKdNIqsUzB7oHGGbMLzfjthUn7lbrsdD2DtqDWfE16WNq/556Ukt087nSjftWqAtldzmG+nqpzCfjz81hXhU3hhWU65hBItMRYPIvhPtXyWqVrJPNQz79Nc3u15tkPRUSJxHKdRekHAU2dGZBN2BkBy+s4IEdnFjB/VGTN6wWR09baxO6TjfYomrgkVAh9gjdRTdgONwj1AYeDPYItYHjWP8N6N3vkwTnTJe+qUuYodj53wTry3LjzW2Z0efXQKIItVlosgNpuoZG9q00iwNpooLGPk1yII1UNPgbbXLHChAGINQBnOpGJ3X3kmWafZ/PKuf98gJ24ZkNjidgRy/s6NiOTuzoHqHfa/RxHZ2v5qvUgv2gsa93sZt8vk0ewfV90bsr1E+N/guS8//CgZbU
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
@@ -26593,7 +26593,7 @@
         - "\tset temp to 0"
         - "\tif ( mortar < 30 )"
         - "\t\tset temp to 1"
-        - "\telseif ( retort == 0 )"
+        - "\telseif ( retort < 1 )"
         - "\t\tset temp to 1"
         - "\tendif"
         - "\tif ( temp == 1 )"
@@ -26647,14 +26647,19 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 4"
         - "\tset calcinator to 20"
         - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 3"
         - "\tset calcinator to 15"
         - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 2"
         - "\tset calcinator to 10"
         - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 1"
         - "\tset calcinator to 5"
         - else
+        - "\tset A1V6_Calcinator to 0"
         - "\tset calcinator to 0"
         - endif
         - ""
@@ -26684,7 +26689,7 @@
           shorts: 7
           longs: 0
           floats: 3
-        data_size: 1639
+        data_size: 1748
         var_table_size: 73
     - SCVR:
         - state
@@ -26697,7 +26702,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNlMtv00AQxr3xIw8qsFApQkJiiiqEGhF2k9hJJIJUceiJCweUW7QEAwk2tWz3kD8eqTO7ju0q66oXaz3z+2b3+/zwmN+HnFmwXMLYYwxvPAs+wZS7LO9aHQh6dTE8FMNGcX4ozrA4KIuCH6rzLmPlctHH1bV/Jb6H66t48ydK9l9v48IBMUL6+lmz8S3KXUCVhVqGWv7aP1X9LzLelEywzjcXrM889r7yIE6Yl8ZyH2Uu+8UsF1Z/fatZ61Btfr9mU+2dbynJGeAF+EgAsoA9GMIlDPEcHmLYszCmJ6XP3FEndLCDBYvOUvds1bOrnroZUB1yHD0sY+E6dps0k0NsQifsKFNVkeY7fcpFeTWE1oHJA4mNy8TUvB6szv2fFsf9nRM18/OyNGQYO33EWG3exUFkkMy7ZL6jzWOcT5VxgYkS9UHlXR1D3T1X6VPyl/QSjTh8VMkPlIJ6w/Ig43JHgNV/H25eyDSVmSxu8/XvdXKTFTJbc4En4Sp2fMnEomeiEwNtw8IM74zwzAxLIxwsusw2Rjx+OFqT0SwqcIt6A4eMct5i9Ji2YT5vMWqCZ7MWoyY4DPWnT+sgUBYutPRV08IGzW7/SdTX8g5KxuTiWJC0CkRgFOzaBeYdZIsA/4XaEC258nOuxWdNPzKOkh/bTa10q2dyjCcmHB+Kmd6Z6dBMSzM9JfqNpk+bdJ5u08jAvtXsy2O2yLd7eQ/XAdF6wtVvhr5UwdgdZTdn0A==
+    - SCDT: eJyNlM+P0kAUxzv9Bawbbcy6xsTEt2ZjzBJxBmiBREw2e9iTFw+GGxmxKkhdQtkDf7yJ702npRseGy5k+t7nfWe+X6YNRdSCXDgwHkM3FAIfQgc+QV8GIm84LsTNXTEpi0mtOCyLAyye2KKSZXXYEMIuRy1c3UbX6lsyvV7OfqfZ9sv9cuOD6iB9+6ze+JrmAeCUg7MCZ+Xr6Mz0b/RyZpl4ms8uRUuE4n3lQZ2KcLXU23QdiJ/CCWDyJ3LqNZdqw4c1j2rvIseMnAP+gOwoQBawB224gjaeI0QMew7G9MT6zH1zQh87WHDoLLueZ3pe1TMPJ1SHHKXbNhZZxO7RTK+MTWGYTZKnMMsayfstisVYZTJzoXdEYEavCZOL6IcjcXv/1Gh+Hls/jGz/qP+BvAcoRP7Ie0De3cI7pvnU+FYYKFEfTNzVMczTcxM+BX9Fd6gj4aMJ/sRMUK9tD9K1OwJM/kVw90KvVnqtN/f59Nc0u1tv9HoqFZ5EmtTxjqlRk6MzhvZgxMMLFh7wsGbheNQQHhtx9/FoOaPrdINb7DbwyaiUB4zu0x4MhweMcvBgcMAoBydJ8ebTOo7JgntZjL6qW5ih2flfjfPVuM3mpuoU189FoS56Y2SyI2V6VkbFrMziSJluKcOfRh8po4wMfmIbwmUBaQFpLsBFsdF5PT29TLPv89ku+aC6Aft4xuF4BXh6wdMJT2ue7hP9pqDP6nS+mq9Shn1bsC/32U0+3+oHeHG/aN2T5qNG3wUlxH+GdoXh
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -26747,20 +26752,20 @@
         - "\tset temp to 0"
         - "\tif ( mortar < 30 )"
         - "\t\tset temp to 1"
-        - "\telseif ( retort == 0 )"
+        - "\telseif ( retort < 1 )"
         - "\t\tset temp to 1"
         - "\tendif"
         - "\tif ( temp == 1 )"
         - "\t\tset A1V6_AlchemyRes to 3"
         - "\t\tset state to 0"
-        - "\t\tStopScript A1V6_CalcAlchemy2_sc"
+        - "\t\tStopScript A1V6_CalcAlchemy5_sc"
         - "\t\treturn"
         - "\tendif"
         - "\tset temp to ( Random 100 )"
         - "\tif ( temp >= retort )"
         - "\t\tset A1V6_AlchemyRes to 4"
         - "\t\tset state to 0"
-        - "\t\tStopScript A1V6_CalcAlchemy2_sc"
+        - "\t\tStopScript A1V6_CalcAlchemy5_sc"
         - "\t\treturn"
         - "\tendif"
         - "\tif ( alembic > calcinator )"
@@ -26784,7 +26789,7 @@
         - "\tset mortar to 59"
         - else
         - "\tset A1V6_AlchemyRes to 2"
-        - "\tStopScript A1V6_CalcAlchemy2_sc"
+        - "\tStopScript A1V6_CalcAlchemy5_sc"
         - "\treturn"
         - endif
         - ""
@@ -26801,14 +26806,19 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 4"
         - "\tset calcinator to 20"
         - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 3"
         - "\tset calcinator to 15"
         - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 2"
         - "\tset calcinator to 10"
         - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
+        - "\tset A1V6_Calcinator to 1"
         - "\tset calcinator to 5"
         - else
+        - "\tset A1V6_Calcinator to 0"
         - "\tset calcinator to 0"
         - endif
         - ""
