@@ -14,8 +14,6 @@
     - DATA: 6616539
     - MAST: Bloodmoon.esm
     - DATA: 11799703
-    - MAST: Trib_BM_patch_1C.esm
-    - DATA: 23382
 - GLOB:
     - NAME: Gals__CharDev_Present
     - FNAM: s
@@ -24670,14 +24668,83 @@
           shorts: 0
           longs: 0
           floats: 0
-        data_size: 144
+        data_size: 1765
         var_table_size: 0
-    - SCDT: eJxty6EKgDAQgGGvCIJhxaThHkGLURgYzAaxjWMcKEwc2xR8UB9HUBCb+fv/FGJr6GAXAyCOl8A1k9VQK2n0xMshdZh3CqvDBsv0i0/xH0GUQCHy16wlR2HzLdPrrLzOP23ZVKpn/1zcMZkwPQpwA2enLV0=
+    - SCDT: eJyd1cFqg0AQgOHuJVDwYA89JYV9hHrpLQUhh557KL3JVBbjsBNl3QbyoH2cQiVWMdF1hlz152NYxjVSq9rCybiVUlp//sa6ekyTj5cstfne0CnNfXkEXzn9qp+jPv6J5yN1d6+ikbjpxPgcHzJn2sZn1VFvtzoZaZNgEQIOAiGEHIRCiDiIhFDRd+VhHhoFsolCEAkh5CAUQsBBEIaeOujhf03AGvoq85nTnhaLFLAUSClkKZRSxFIkpYohnJ76tBBOdcNKBY4qNBRKhwKWggXqaj+pnR3cwq0yBMwXw0AohIiDSAgVfRe+VYZANlF4BWQQchBeQpt4fX6c1jU48N/NzkD30zFZk6/7tztjk+zdNO0WmjcD1u/bt0r9AYNBB98=
     - SCTX:
         - Begin A1V6_ApparatusDeactivate_sc
         - ""
         - if ( player->GetItemCount A1V6_AlchemyActivator > 0 )
         - "\tplayer->RemoveItem A1V6_AlchemyActivator, 1"
+        - endif
+        - ""
+        - if ( player->GetItemCount A1V6_n_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_n_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_a_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_j_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_m_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_g_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_g_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_m_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_j_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_a_retort_in, 1"
+        - endif
+        - ""
+        - if ( player->GetItemCount A1V6_n_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_n_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_a_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_j_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_m_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_g_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_g_alembic_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_m_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_j_alembic_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_a_alembic_in, 1"
+        - endif
+        - ""
+        - if ( player->GetItemCount A1V6_a_mortar_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_a_mortar_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_mortar_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_j_mortar_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_mortar_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_m_mortar_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_g_mortar_in == 1 )
+        - "\tplayer->RemoveItem A1V6_g_mortar_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_mortar_in == 1 )
+        - "\tplayer->RemoveItem A1V6_m_mortar_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_mortar_in == 1 )
+        - "\tplayer->RemoveItem A1V6_j_mortar_in, 1"
         - endif
         - ""
         - StopScript A1V6_ApparatusDeactivate_sc

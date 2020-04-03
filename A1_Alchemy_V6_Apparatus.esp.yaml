@@ -17126,14 +17126,14 @@
           shorts: 2
           longs: 0
           floats: 2
-        data_size: 1072
+        data_size: 4898
         var_table_size: 33
     - SCVR:
         - alchemy
         - calcinator
         - tempf1
         - tempf2
-    - SCDT: eJyN0ktLw0AQAODdSl/Swx6qIiqOIh4UJBH6EEQoXjx7kN7CGFabNNuGJAr9n/4dwcnDJnETyW139pvZzGQHvON7uJFBm79x1ob5VLBBIdaKY5eCJUsBxo0J5IA2cA1Xg7/Zy0RytpurNg/jI9qzDu8DzL8FrPfQ9zHA6CO03q1ARusgsgwTHsDocEKUAfcwGm/rfwkxM1/G1uoXrz856+V0PNEo1tDJVKNuDZ3eaVQVaZ/3yGkdqXJHlcZtYLBsuvGFNJ6LFB4WR2ijZzsrJJ1hmnqL7cAtVa5IULUJ5qgywa1PqL4BaxJaMOpyni2NuB9W9SQUtY3Bf8NRDYzbwGDZZENmZyncL34UelK9OnZeTUeqCXKbINTRaYqGRRT6ji9zcp6SA51EobPBbYfHYpg855lnL6TaPC6kvbRC+0icpOEkYFrPMqT/J58ketGCzjn/AbpaKMc=
+    - SCDT: eJzNlk2P0zAQhuOitknpIUgLCLErDEIcQEIJUrutRFdaceHMAe2tGqLQ1lu3URKQ+j/h5yDh5juxHZutuvSWxK+fzDu2xzNEvWANOz/sIXSOb/7YeGtfu1/H88089ONtGM+3P/Fsht1hLvxtcwJkWGgoA4EKBJogogIRTRBVgagmaJHrVhsxqCLQi0gGopogogIRTRCoQCAHXaSgR9k2gbVPv608QbZ5RSsKlCjQRREliuiiqBJFdVGLQshnnVdoRnWHLSVJlSwoohsUKFHQgmrsT8pih7ClqhQCxYlRgIgmiKpAVBO0yHXyqlII9CKSbwE9EFGBiATURd+R0cU3E9uofuvsv72xjeTRxs57FzMdZi/4HX7Lzb5NlMgYlKouivZD7N3oIQunwT6GIIAQ4h9RWXgdF19hhxmyMJuBP+LRuOD/Et1kZikdX3JSkEgvJ5yUSKSTKSdt3DemyBHlHA0S4NVMRKxdPOb/di+xRA6yVGgFf6fHty/xBPfmqdAKIiV39G+hPrJOJOZCKwi60XxYiMX8Ol2LZ9Ui4MHaW22ASbP1YHWjYzzAHxxTNIFKJ7gj4QQinyD+A0gmdPCoj1D26FgoqW9pBqKs3iUjrNi9TKFPqj7zS5Ovdk4ld6J2q3qKeS3ItFNeS5raQaZ1XV7cbIlMkS/K+3qYbwoRtN4cmSeQBYkxcqix4mxM21J7zCzsnSHeGTScZfvWZeIXqfisKo6CVeDz0lep9CkvjaPVDqrqtF4dMXtleWtbbK5mteWvLFqWlRzvfU91Qi60N0xqoi9qv7J+kCtIY0dQzCt9ceX3E0dwR9SlRYlxHMHdU2u3TVGclIuzXAMBstZ4m0cxJQmUHBZoeZ+35OkfTUkihfuLtOwmWpKaH7Zz+ywZuF57S5/uPi1973Yeec/ti/Rz8sGdf/EjdjX7n31Yx0s2jtBf/S8sjw==
     - SCTX:
         - Begin A1V6_AlchemyCheck_sc
         - ""
@@ -17142,12 +17142,81 @@
         - short alchemy
         - short calcinator
         - ""
-        - "\tset tempf1 to ( player->GetLuck )"
-        - "\tset tempf2 to ( player->GetIntelligence )"
-        - "\tset tempf2 to ( 0.1 * ( tempf1 + tempf2 ) )"
-        - "\tset tempf1 to ( player->GetAlchemy )"
-        - "\tset tempf1 to ( tempf1 + tempf2 )"
-        - "\tset alchemy to tempf1"
+        - if ( player->GetItemCount A1V6_n_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_n_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_a_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_j_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_m_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_g_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_g_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_m_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_j_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_a_retort_in, 1"
+        - endif
+        - ""
+        - if ( player->GetItemCount A1V6_n_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_n_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_a_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_j_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_m_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_g_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_g_alembic_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_m_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_j_alembic_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_a_alembic_in, 1"
+        - endif
+        - ""
+        - if ( player->GetItemCount A1V6_a_mortar_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_a_mortar_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_mortar_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_j_mortar_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_mortar_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_m_mortar_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_g_mortar_in == 1 )
+        - "\tplayer->RemoveItem A1V6_g_mortar_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_mortar_in == 1 )
+        - "\tplayer->RemoveItem A1V6_m_mortar_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_mortar_in == 1 )
+        - "\tplayer->RemoveItem A1V6_j_mortar_in, 1"
+        - endif
+        - ""
+        - set tempf1 to ( player->GetLuck )
+        - set tempf2 to ( player->GetIntelligence )
+        - set tempf2 to ( 0.1 * ( tempf1 + tempf2 ) )
+        - set tempf1 to ( player->GetAlchemy )
+        - set tempf1 to ( tempf1 + tempf2 )
+        - set alchemy to tempf1
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
         - "\tif ( alchemy < 56 )"
@@ -17160,9 +17229,45 @@
         - "\t\tplayer->AddItem A1V6_m_retort_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
+        - "\tif ( alchemy >= 89 )"
+        - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
+        - "\telseif ( alchemy < 56 )"
+        - "\t\tplayer->AddItem A1V6_n_retort_ov, 1"
+        - "\telseif ( alchemy < 67 )"
+        - "\t\tplayer->AddItem A1V6_a_retort_ov, 1"
+        - "\telseif ( alchemy < 78 )"
+        - "\t\tplayer->AddItem A1V6_j_retort_ov, 1"
+        - "\tendif"
         - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
+        - "\tif ( alchemy >= 89 )"
+        - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
+        - "\telseif ( alchemy >= 78 )"
+        - "\t\tplayer->AddItem A1V6_m_retort_in, 1"
+        - "\telseif ( alchemy < 56 )"
+        - "\t\tplayer->AddItem A1V6_n_retort_ov, 1"
+        - "\telseif ( alchemy < 67 )"
+        - "\t\tplayer->AddItem A1V6_a_retort_ov, 1"
+        - "\tendif"
         - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
+        - "\tif ( alchemy >= 89 )"
+        - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
+        - "\telseif ( alchemy >= 78 )"
+        - "\t\tplayer->AddItem A1V6_m_retort_in, 1"
+        - "\telseif ( alchemy >= 67 )"
+        - "\t\tplayer->AddItem A1V6_j_retort_in, 1"
+        - "\telseif ( alchemy < 56 )"
+        - "\t\tplayer->AddItem A1V6_n_retort_ov, 1"
+        - "\tendif"
         - else
+        - "\tif ( alchemy >= 89 )"
+        - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
+        - "\telseif ( alchemy >= 78 )"
+        - "\t\tplayer->AddItem A1V6_m_retort_in, 1"
+        - "\telseif ( alchemy >= 67 )"
+        - "\t\tplayer->AddItem A1V6_j_retort_in, 1"
+        - "\telseif ( alchemy >= 56 )"
+        - "\t\tplayer->AddItem A1V6_a_retort_in, 1"
+        - "\tendif"
         - endif
         - ""
         - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
@@ -17177,20 +17282,101 @@
         - "\tset calcinator to 0"
         - endif
         - ""
-        - if ( GetItemCount apparatus_g_mortar_01 > 0 )
-        - elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
-        - elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
-        - elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
+        - set alchemy to ( alchemy + calcinator )
+        - ""
+        - set calcinator to 0
+        - if ( GetItemCount apparatus_g_alembic_01 > 0 )
+        - "\tif ( alchemy < 50 )"
+        - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
+        - "\telseif ( alchemy < 70 )"
+        - "\t\tplayer->AddItem A1V6_a_alembic_ov, 1"
+        - "\telseif ( alchemy < 90 )"
+        - "\t\tplayer->AddItem A1V6_j_alembic_ov, 1"
+        - "\telseif ( alchemy < 110 )"
+        - "\t\tplayer->AddItem A1V6_m_alembic_ov, 1"
+        - "\tendif"
+        - elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
+        - "\tif ( alchemy >= 110 )"
+        - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
+        - "\telseif ( alchemy < 50 )"
+        - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
+        - "\telseif ( alchemy < 70 )"
+        - "\t\tplayer->AddItem A1V6_a_alembic_ov, 1"
+        - "\telseif ( alchemy < 90 )"
+        - "\t\tplayer->AddItem A1V6_j_alembic_ov, 1"
+        - "\tendif"
+        - elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
+        - "\tif ( alchemy >= 110 )"
+        - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
+        - "\telseif ( alchemy >= 90 )"
+        - "\t\tplayer->AddItem A1V6_m_alembic_in, 1"
+        - "\telseif ( alchemy < 50 )"
+        - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
+        - "\telseif ( alchemy < 70 )"
+        - "\t\tplayer->AddItem A1V6_a_alembic_ov, 1"
+        - "\tendif"
+        - elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
+        - "\tset calcinator to 1"
+        - elseif ( GetItemCount apparatus_a_spipe_01 > 0 )
+        - "\tset calcinator to 1"
+        - elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
+        - "\tset calcinator to 1"
         - else
+        - "\tif ( alchemy >= 110 )"
+        - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
+        - "\telseif ( alchemy >= 90 )"
+        - "\t\tplayer->AddItem A1V6_m_alembic_in, 1"
+        - "\telseif ( alchemy >= 70 )"
+        - "\t\tplayer->AddItem A1V6_j_alembic_in, 1"
+        - "\telseif ( alchemy >= 50 )"
+        - "\t\tplayer->AddItem A1V6_a_alembic_in, 1"
+        - "\tendif"
         - endif
         - ""
-        - if ( GetItemCount apparatus_g_alembic_01 > 0 )
-        - elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
-        - elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
-        - elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
-        - elseif ( GetItemCount apparatus_a_spipe_01 > 0 )
-        - elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
-        - else
+        - if ( calcinator == 1 )
+        - "\tif ( alchemy >= 110 )"
+        - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
+        - "\telseif ( alchemy >= 90 )"
+        - "\t\tplayer->AddItem A1V6_m_alembic_in, 1"
+        - "\telseif ( alchemy >= 70 )"
+        - "\t\tplayer->AddItem A1V6_j_alembic_in, 1"
+        - "\telseif ( alchemy < 50 )"
+        - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
+        - "\tendif"
+        - endif
+        - ""
+        - if ( GetItemCount apparatus_g_mortar_01 > 0 )
+        - "\tif ( alchemy < 60 )"
+        - "\t\tplayer->AddItem A1V6_a_mortar_ov, 1"
+        - "\telseif ( alchemy < 80 )"
+        - "\t\tplayer->AddItem A1V6_j_mortar_ov, 1"
+        - "\telseif ( alchemy < 100 )"
+        - "\t\tplayer->AddItem A1V6_m_mortar_ov, 1"
+        - "\tendif"
+        - elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
+        - "\tif ( alchemy >= 100 )"
+        - "\t\tplayer->AddItem A1V6_g_mortar_in, 1"
+        - "\telseif ( alchemy < 60 )"
+        - "\t\tplayer->AddItem A1V6_a_mortar_ov, 1"
+        - "\telseif ( alchemy < 80 )"
+        - "\t\tplayer->AddItem A1V6_j_mortar_ov, 1"
+        - "\tendif"
+        - elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
+        - "\tif ( alchemy >= 100 )"
+        - "\t\tplayer->AddItem A1V6_g_mortar_in, 1"
+        - "\telseif ( alchemy >= 80 )"
+        - "\t\tplayer->AddItem A1V6_m_mortar_in, 1"
+        - "\telseif ( alchemy < 60 )"
+        - "\t\tplayer->AddItem A1V6_a_mortar_ov, 1"
+        - "\tendif"
+        - elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
+        - "\tif ( alchemy >= 100 )"
+        - "\t\tplayer->AddItem A1V6_g_mortar_in, 1"
+        - "\telseif ( alchemy >= 80 )"
+        - "\t\tplayer->AddItem A1V6_m_mortar_in, 1"
+        - "\telseif ( alchemy >= 60 )"
+        - "\t\tplayer->AddItem A1V6_j_mortar_in, 1"
+        - "\tendif"
         - endif
         - ""
         - StopScript A1V6_AlchemyCheck_sc
@@ -18112,14 +18298,83 @@
           shorts: 0
           longs: 0
           floats: 0
-        data_size: 144
+        data_size: 1765
         var_table_size: 0
-    - SCDT: eJxty6EKgDAQgGGvCIJhxaThHkGLURgYzAaxjWMcKEwc2xR8UB9HUBCb+fv/FGJr6GAXAyCOl8A1k9VQK2n0xMshdZh3CqvDBsv0i0/xH0GUQCHy16wlR2HzLdPrrLzOP23ZVKpn/1zcMZkwPQpwA2enLV0=
+    - SCDT: eJyd1cFqg0AQgOHuJVDwYA89JYV9hHrpLQUhh557KL3JVBbjsBNl3QbyoH2cQiVWMdF1hlz152NYxjVSq9rCybiVUlp//sa6ekyTj5cstfne0CnNfXkEXzn9qp+jPv6J5yN1d6+ikbjpxPgcHzJn2sZn1VFvtzoZaZNgEQIOAiGEHIRCiDiIhFDRd+VhHhoFsolCEAkh5CAUQsBBEIaeOujhf03AGvoq85nTnhaLFLAUSClkKZRSxFIkpYohnJ76tBBOdcNKBY4qNBRKhwKWggXqaj+pnR3cwq0yBMwXw0AohIiDSAgVfRe+VYZANlF4BWQQchBeQpt4fX6c1jU48N/NzkD30zFZk6/7tztjk+zdNO0WmjcD1u/bt0r9AYNBB98=
     - SCTX:
         - Begin A1V6_ApparatusDeactivate_sc
         - ""
         - if ( player->GetItemCount A1V6_AlchemyActivator > 0 )
         - "\tplayer->RemoveItem A1V6_AlchemyActivator, 1"
+        - endif
+        - ""
+        - if ( player->GetItemCount A1V6_n_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_n_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_a_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_j_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_retort_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_m_retort_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_g_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_g_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_m_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_j_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_retort_in == 1 )
+        - "\tplayer->RemoveItem A1V6_a_retort_in, 1"
+        - endif
+        - ""
+        - if ( player->GetItemCount A1V6_n_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_n_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_a_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_j_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_alembic_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_m_alembic_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_g_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_g_alembic_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_m_retort_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_j_alembic_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_a_alembic_in == 1 )
+        - "\tplayer->RemoveItem A1V6_a_alembic_in, 1"
+        - endif
+        - ""
+        - if ( player->GetItemCount A1V6_a_mortar_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_a_mortar_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_mortar_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_j_mortar_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_mortar_ov == 1 )
+        - "\tplayer->RemoveItem A1V6_m_mortar_ov, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_g_mortar_in == 1 )
+        - "\tplayer->RemoveItem A1V6_g_mortar_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_m_mortar_in == 1 )
+        - "\tplayer->RemoveItem A1V6_m_mortar_in, 1"
+        - endif
+        - if ( player->GetItemCount A1V6_j_mortar_in == 1 )
+        - "\tplayer->RemoveItem A1V6_j_mortar_in, 1"
         - endif
         - ""
         - StopScript A1V6_ApparatusDeactivate_sc
@@ -19339,7 +19594,7 @@
     - SCRI: A1V6_AppaInfo_sc
     - ITEX: "m\\Tx_alembic_03.tga"
 - INGR:
-    - NAME: A1V6_g_alembic_01
+    - NAME: A1V6_g_alembic_in
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
     - FNAM: "Реком.: Перегонный куб грандм."
     - IRDT:
