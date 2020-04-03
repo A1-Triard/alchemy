@@ -19781,7 +19781,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_alembic_01.tga"
+    - ITEX: "m\\a1_alembic_n_ov.dds"
 - INGR:
     - NAME: A1V6_a_alembic_ov
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
