@@ -28027,7 +28027,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_mortarpestle_A_01.tga"
+    - ITEX: "m\\a1_mortarpestle_a_ov.dds"
 - INGR:
     - NAME: A1V6_j_mortar_ov
     - MODL: "m\\Misc_mortarpestle_01.NIF"
