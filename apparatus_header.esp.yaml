@@ -312,7 +312,7 @@
         - set tempf2 to ( player->GetIntelligence )
         - set tempf2 to ( 0.1 * ( tempf1 + tempf2 ) )
         - set tempf1 to ( player->GetAlchemy )
-        - set tempf1 to ( tempf1 + tempf2 )
+        - set tempf1 to ( 10 + tempf1 + tempf2 )
         - set alchemy to tempf1
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
@@ -1800,7 +1800,7 @@
         - "\tset tempf1 to ( player->GetAlchemy )"
         - "\tset tempf2 to ( player->GetLuck )"
         - "\tset tempf3 to ( player->GetIntelligence )"
-        - "\tset tempf1 to ( tempf1 + 0.1 * ( tempf2 + tempf3 ) )"
+        - "\tset tempf1 to ( 10 + tempf1 + 0.1 * ( tempf2 + tempf3 ) )"
         - "\tset alchemy to tempf1"
         - "\tif ( alchemy < retort )"
         - "\t\tset retort to alchemy"
@@ -1942,7 +1942,7 @@
         - "\tset tempf1 to ( player->GetAlchemy )"
         - "\tset tempf2 to ( player->GetLuck )"
         - "\tset tempf3 to ( player->GetIntelligence )"
-        - "\tset tempf1 to ( tempf1 + 0.1 * ( tempf2 + tempf3 ) )"
+        - "\tset tempf1 to ( 10 + tempf1 + 0.1 * ( tempf2 + tempf3 ) )"
         - "\tset alchemy to tempf1"
         - "\tif ( alchemy < retort )"
         - "\t\tset retort to alchemy"
@@ -2153,7 +2153,7 @@
         - set alchemy to ( player->GetAlchemy )
         - set tempf1 to ( player->GetLuck )
         - set tempf2 to ( player->GetIntelligence )
-        - set tempf1 to ( alchemy + 0.1 * ( tempf1 + tempf2 ) )
+        - set tempf1 to ( 10 + alchemy + 0.1 * ( tempf1 + tempf2 ) )
         - if ( tempf1 < 2 )
         - "\tset tempf1 to 2"
         - endif
