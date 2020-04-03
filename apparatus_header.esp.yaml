@@ -2463,7 +2463,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_retort_01.tga"
+    - ITEX: "m\\a1_retort_a_in.dds"
 - INGR:
     - NAME: A1V6_j_retort_in
     - MODL: "m\\Apparatus_J_Retort_01.nif"
@@ -2484,7 +2484,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_retort_02.tga"
+    - ITEX: "m\\a1_retort_j_in.dds"
 - INGR:
     - NAME: A1V6_m_retort_in
     - MODL: "m\\Apparatus_M_Retort_01.nif"
@@ -2505,7 +2505,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_retort_03.tga"
+    - ITEX: "m\\a1_retort_m_in.dds"
 - INGR:
     - NAME: A1V6_g_retort_in
     - MODL: "m\\Apparatus_G_Retort_01.nif"
@@ -2526,7 +2526,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_retort_04.tga"
+    - ITEX: "m\\a1_retort_g_in.dds"
 - INGR:
     - NAME: A1V6_a_alembic_in
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
@@ -2547,7 +2547,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_alembic_01.tga"
+    - ITEX: "m\\a1_alembic_a_in.dds"
 - INGR:
     - NAME: A1V6_j_alembic_in
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
@@ -2568,7 +2568,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_alembic_02.tga"
+    - ITEX: "m\\a1_alembic_j_in.dds"
 - INGR:
     - NAME: A1V6_m_alembic_in
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
@@ -2589,7 +2589,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_alembic_03.tga"
+    - ITEX: "m\\a1_alembic_m_in.dds"
 - INGR:
     - NAME: A1V6_g_alembic_in
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
@@ -2610,7 +2610,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_alembic_04.tga"
+    - ITEX: "m\\a1_alembic_g_in.dds"
 - INGR:
     - NAME: A1V6_j_mortar_in
     - MODL: "m\\Misc_mortarpestle_01.NIF"
@@ -2631,7 +2631,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
+    - ITEX: "m\\a1_mortarpestle_j_in.dds"
 - INGR:
     - NAME: A1V6_m_mortar_in
     - MODL: "m\\Misc_mortarpestle_M_01.nif"
@@ -2652,7 +2652,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_mortarpestle_M_01.tga"
+    - ITEX: "m\\a1_mortarpestle_m_in.dds"
 - INGR:
     - NAME: A1V6_g_mortar_in
     - MODL: "m\\Misc_mortarpestle_G_01.nif"
@@ -2673,7 +2673,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_mortarpestle_G_01.tga"
+    - ITEX: "m\\a1_mortarpestle_g_in.dds"
 - INGR:
     - NAME: A1V6_n_retort_ov
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
@@ -2715,7 +2715,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_retort_01.tga"
+    - ITEX: "m\\a1_retort_a_ov.dds"
 - INGR:
     - NAME: A1V6_j_retort_ov
     - MODL: "m\\Apparatus_J_Retort_01.nif"
@@ -2736,7 +2736,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_retort_02.tga"
+    - ITEX: "m\\a1_retort_j_ov.dds"
 - INGR:
     - NAME: A1V6_m_retort_ov
     - MODL: "m\\Apparatus_M_Retort_01.nif"
@@ -2757,7 +2757,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_retort_03.tga"
+    - ITEX: "m\\a1_retort_m_ov.dds"
 - INGR:
     - NAME: A1V6_n_alembic_ov
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
@@ -2799,7 +2799,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_alembic_01.tga"
+    - ITEX: "m\\a1_alembic_a_ov.dds"
 - INGR:
     - NAME: A1V6_j_alembic_ov
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
@@ -2820,7 +2820,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_alembic_02.tga"
+    - ITEX: "m\\a1_alembic_j_ov.dds"
 - INGR:
     - NAME: A1V6_m_alembic_ov
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
@@ -2841,7 +2841,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_alembic_03.tga"
+    - ITEX: "m\\a1_alembic_m_ov.dds"
 - INGR:
     - NAME: A1V6_a_mortar_ov
     - MODL: "m\\Misc_mortarpestle_A_01.NIF"
@@ -2883,7 +2883,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
+    - ITEX: "m\\a1_mortarpestle_j_ov.dds"
 - INGR:
     - NAME: A1V6_m_mortar_ov
     - MODL: "m\\Misc_mortarpestle_M_01.nif"
@@ -2904,7 +2904,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_mortarpestle_M_01.tga"
+    - ITEX: "m\\a1_mortarpestle_m_ov.dds"
 - MISC:
     - NAME: A1V6_apparatus_a_alembic
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
