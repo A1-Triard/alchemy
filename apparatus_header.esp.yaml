@@ -1490,7 +1490,7 @@
         - "\telseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_m_Cont_1\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )"
-        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_1\" 1, 50, 0"
+        - "\t\tPlaceAtPC \"A1V6_Appara_j_Cont_1\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_1\" 1, 50, 0"
         - "\telse"
@@ -1555,7 +1555,7 @@
         - "\telseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_m_Cont_2\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )"
-        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_2\" 1, 50, 0"
+        - "\t\tPlaceAtPC \"A1V6_Appara_j_Cont_2\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_2\" 1, 50, 0"
         - "\telse"
@@ -1620,7 +1620,7 @@
         - "\telseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_m_Cont_3\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )"
-        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_3\" 1, 50, 0"
+        - "\t\tPlaceAtPC \"A1V6_Appara_j_Cont_3\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_3\" 1, 50, 0"
         - "\telse"
@@ -1695,7 +1695,7 @@
         - elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_j_calcinator_01, 1"
         - "\tAddItem apparatus_j_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_calcinator, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_j_calcinator, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_calcinator_01, 1"
         - "\tAddItem apparatus_a_calcinator_01, 1"
@@ -2283,6 +2283,16 @@
     - DATA: "2118625382187888739"
     - NAME: A1V6_StartAlchemy
 - APPA:
+    - NAME: apparatus_a_alembic_01
+    - MODL: "m\\Apparatus_A_Alembic_01.NIF"
+    - FNAM: Перегонный куб ученика
+    - AADT:
+        type: Alembic
+        quality: 0.5
+        weight: 5.0
+        value: 50
+    - ITEX: "m\\Tx_alembic_01.tga"
+- APPA:
     - NAME: apparatus_a_calcinator_01
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
     - FNAM: Кальцинатор ученика
@@ -2292,6 +2302,16 @@
         weight: 15.0
         value: 10
     - ITEX: "m\\Tx_calcinator_01.tga"
+- APPA:
+    - NAME: apparatus_a_mortar_01
+    - MODL: "m\\Misc_mortarpestle_A_01.NIF"
+    - FNAM: Ступка и пестик ученика
+    - AADT:
+        type: MortarPestle
+        quality: 0.5
+        weight: 2.0
+        value: 100
+    - ITEX: "m\\Tx_mortarpestle_A_01.tga"
 - APPA:
     - NAME: apparatus_a_retort_01
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
@@ -2303,25 +2323,25 @@
         value: 20
     - ITEX: "m\\Tx_retort_01.tga"
 - APPA:
-    - NAME: apparatus_a_alembic_01
-    - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: Перегонный куб ученика
+    - NAME: apparatus_j_alembic_01
+    - MODL: "m\\Apparatus_J_Alembic_01.nif"
+    - FNAM: Перегонный куб подмастерья
     - AADT:
         type: Alembic
-        quality: 0.5
+        quality: 1.0
         weight: 5.0
-        value: 50
-    - ITEX: "m\\Tx_alembic_01.tga"
+        value: 200
+    - ITEX: "m\\Tx_alembic_02.tga"
 - APPA:
-    - NAME: apparatus_a_mortar_01
-    - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: Ступка и пестик ученика
+    - NAME: apparatus_j_calcinator_01
+    - MODL: "m\\Apparatus_J_Calcinator_01.NIF"
+    - FNAM: Кальцинатор подмастерья
     - AADT:
-        type: MortarPestle
-        quality: 0.5
-        weight: 2.0
-        value: 100
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
+        type: Calcinator
+        quality: 1.0
+        weight: 15.0
+        value: 40
+    - ITEX: "m\\Tx_calcinator_02.tga"
 - APPA:
     - NAME: apparatus_j_mortar_01
     - MODL: "m\\Misc_mortarpestle_01.NIF"
@@ -2333,45 +2353,15 @@
         value: 400
     - ITEX: "m\\Tx_mortarpestle_01.tga"
 - APPA:
-    - NAME: apparatus_m_mortar_01
-    - MODL: "m\\Misc_mortarpestle_M_01.nif"
-    - FNAM: Ступка и пестик мастера
+    - NAME: apparatus_j_retort_01
+    - MODL: "m\\Apparatus_J_Retort_01.nif"
+    - FNAM: Реторта подмастерья
     - AADT:
-        type: MortarPestle
-        quality: 1.2
-        weight: 2.0
-        value: 2400
-    - ITEX: "m\\Tx_mortarpestle_M_01.tga"
-- APPA:
-    - NAME: apparatus_j_alembic_01
-    - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: Перегонный куб подмастерья
-    - AADT:
-        type: Alembic
+        type: Retort
         quality: 1.0
-        weight: 5.0
-        value: 200
-    - ITEX: "m\\Tx_alembic_02.tga"
-- APPA:
-    - NAME: apparatus_g_alembic_01
-    - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: Перегонный куб грандмастера
-    - AADT:
-        type: Alembic
-        quality: 1.5
-        weight: 5.0
-        value: 4000
-    - ITEX: "m\\Tx_alembic_04.tga"
-- APPA:
-    - NAME: apparatus_j_calcinator_01
-    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор подмастерья
-    - AADT:
-        type: Calcinator
-        quality: 1.0
-        weight: 15.0
-        value: 40
-    - ITEX: "m\\Tx_calcinator_01.tga"
+        weight: 3.0
+        value: 80
+    - ITEX: "m\\Tx_retort_02.tga"
 - APPA:
     - NAME: apparatus_m_calcinator_01
     - MODL: "m\\App_M_Calcinator_01.nif"
@@ -2383,25 +2373,15 @@
         value: 240
     - ITEX: "m\\Tx_calcinator_03.tga"
 - APPA:
-    - NAME: apparatus_g_calcinator_01
-    - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: Кальцинатор грандмастера
+    - NAME: apparatus_m_mortar_01
+    - MODL: "m\\Misc_mortarpestle_M_01.nif"
+    - FNAM: Ступка и пестик мастера
     - AADT:
-        type: Calcinator
-        quality: 1.5
-        weight: 15.0
-        value: 4000
-    - ITEX: "m\\Tx_calcinator_04.tga"
-- APPA:
-    - NAME: apparatus_j_retort_01
-    - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: Реторта подмастерья
-    - AADT:
-        type: Retort
-        quality: 1.0
-        weight: 3.0
-        value: 80
-    - ITEX: "m\\Tx_retort_02.tga"
+        type: MortarPestle
+        quality: 1.2
+        weight: 2.0
+        value: 2400
+    - ITEX: "m\\Tx_mortarpestle_M_01.tga"
 - APPA:
     - NAME: apparatus_m_retort_01
     - MODL: "m\\Apparatus_M_Retort_01.nif"
@@ -2412,6 +2392,26 @@
         weight: 3.0
         value: 480
     - ITEX: "m\\Tx_retort_03.tga"
+- APPA:
+    - NAME: apparatus_g_alembic_01
+    - MODL: "m\\Apparatus_G_Alembic_01.nif"
+    - FNAM: Перегонный куб грандмастера
+    - AADT:
+        type: Alembic
+        quality: 1.5
+        weight: 5.0
+        value: 4000
+    - ITEX: "m\\Tx_alembic_04.tga"
+- APPA:
+    - NAME: apparatus_g_calcinator_01
+    - MODL: "m\\App_G_Calcinator_01.nif"
+    - FNAM: Кальцинатор грандмастера
+    - AADT:
+        type: Calcinator
+        quality: 1.5
+        weight: 15.0
+        value: 4000
+    - ITEX: "m\\Tx_calcinator_04.tga"
 - APPA:
     - NAME: apparatus_g_retort_01
     - MODL: "m\\Apparatus_G_Retort_01.nif"
@@ -2844,7 +2844,7 @@
     - ITEX: "m\\Tx_alembic_03.tga"
 - INGR:
     - NAME: A1V6_a_mortar_ov
-    - MODL: "m\\Misc_mortarpestle_01.NIF"
+    - MODL: "m\\Misc_mortarpestle_A_01.NIF"
     - FNAM: "реком.: Ступка и пестик ученика"
     - IRDT:
         weight: 0.0
@@ -2862,7 +2862,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
+    - ITEX: "m\\Tx_mortarpestle_A_01.tga"
 - INGR:
     - NAME: A1V6_j_mortar_ov
     - MODL: "m\\Misc_mortarpestle_01.NIF"
@@ -2986,6 +2986,16 @@
     - SCRI: A1V6_Alembic_sc
     - ITEX: "m\\Tx_alembic_02.tga"
 - MISC:
+    - NAME: A1V6_apparatus_j_calcinator
+    - MODL: "m\\Apparatus_J_Calcinator_01.nif"
+    - FNAM: Кальцинатор
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
+    - SCRI: A1V6_Calcinator_sc
+    - ITEX: "m\\Tx_calcinator_02.tga"
+- MISC:
     - NAME: A1V6_apparatus_j_retort
     - MODL: "m\\Apparatus_J_Retort_01.nif"
     - FNAM: Реторта
@@ -3027,6 +3037,13 @@
     - ITEX: "m\\Tx_retort_03.tga"
 - CONT:
     - NAME: A1V6_Appara_a_Cont_1
+    - MODL: "m\\Misc_mortarpestle_A_01.NIF"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_1_sc
+- CONT:
+    - NAME: A1V6_Appara_j_Cont_1
     - MODL: "m\\Misc_mortarpestle_01.NIF"
     - FNAM: Алхимическая установка
     - CNDT: 10000.0
@@ -3048,6 +3065,13 @@
     - SCRI: A1V6_ApparatusCont_1_sc
 - CONT:
     - NAME: A1V6_Appara_a_Cont_2
+    - MODL: "m\\Misc_mortarpestle_A_01.NIF"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_2_sc
+- CONT:
+    - NAME: A1V6_Appara_j_Cont_2
     - MODL: "m\\Misc_mortarpestle_01.NIF"
     - FNAM: Алхимическая установка
     - CNDT: 10000.0
@@ -3069,6 +3093,13 @@
     - SCRI: A1V6_ApparatusCont_2_sc
 - CONT:
     - NAME: A1V6_Appara_a_Cont_3
+    - MODL: "m\\Misc_mortarpestle_A_01.NIF"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_3_sc
+- CONT:
+    - NAME: A1V6_Appara_j_Cont_3
     - MODL: "m\\Misc_mortarpestle_01.NIF"
     - FNAM: Алхимическая установка
     - CNDT: 10000.0
