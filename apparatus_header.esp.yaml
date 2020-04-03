@@ -2446,7 +2446,7 @@
 - INGR:
     - NAME: A1V6_a_retort_in
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: "Реком.: Реторта ученика"
+    - FNAM: "реком.: Реторта ученика"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2467,7 +2467,7 @@
 - INGR:
     - NAME: A1V6_j_retort_in
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: "Реком.: Реторта подмастерья"
+    - FNAM: "реком.: Реторта подмастерья"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2488,7 +2488,7 @@
 - INGR:
     - NAME: A1V6_m_retort_in
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: "Реком.: Реторта мастера"
+    - FNAM: "реком.: Реторта мастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2509,7 +2509,7 @@
 - INGR:
     - NAME: A1V6_g_retort_in
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: "Реком.: Реторта грандмастера"
+    - FNAM: "реком.: Реторта грандмастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2530,7 +2530,7 @@
 - INGR:
     - NAME: A1V6_a_alembic_in
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: "Реком.: Перегонный куб ученика"
+    - FNAM: "реком.: Перегонный куб ученика"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2551,7 +2551,7 @@
 - INGR:
     - NAME: A1V6_j_alembic_in
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: "Реком.: Перегонный куб подмаст."
+    - FNAM: "реком.: Перегонный куб подмаст."
     - IRDT:
         weight: 0.0
         value: 0
@@ -2572,7 +2572,7 @@
 - INGR:
     - NAME: A1V6_m_alembic_in
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: "Реком.: Перегонный куб мастера"
+    - FNAM: "реком.: Перегонный куб мастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2593,7 +2593,7 @@
 - INGR:
     - NAME: A1V6_g_alembic_in
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: "Реком.: Перегонный куб грандм."
+    - FNAM: "реком.: Перегонный куб грандм."
     - IRDT:
         weight: 0.0
         value: 0
@@ -2614,7 +2614,7 @@
 - INGR:
     - NAME: A1V6_j_mortar_in
     - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: "Реком.: Ступка и пестик подмас."
+    - FNAM: "реком.: Ступка и пестик подмас."
     - IRDT:
         weight: 0.0
         value: 0
@@ -2635,7 +2635,7 @@
 - INGR:
     - NAME: A1V6_m_mortar_in
     - MODL: "m\\Misc_mortarpestle_M_01.nif"
-    - FNAM: "Реком.: Ступка и пестик мастера"
+    - FNAM: "реком.: Ступка и пестик мастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2656,7 +2656,7 @@
 - INGR:
     - NAME: A1V6_g_mortar_in
     - MODL: "m\\Misc_mortarpestle_G_01.nif"
-    - FNAM: "Реком.: Ступка и пестик грандм."
+    - FNAM: "реком.: Ступка и пестик грандм."
     - IRDT:
         weight: 0.0
         value: 0
@@ -2677,7 +2677,7 @@
 - INGR:
     - NAME: A1V6_n_retort_ov
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: "Реком.: Без реторты"
+    - FNAM: "реком.: Без реторты"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2698,7 +2698,7 @@
 - INGR:
     - NAME: A1V6_a_retort_ov
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: "Реком.: Реторта ученика"
+    - FNAM: "реком.: Реторта ученика"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2719,7 +2719,7 @@
 - INGR:
     - NAME: A1V6_j_retort_ov
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: "Реком.: Реторта подмастерья"
+    - FNAM: "реком.: Реторта подмастерья"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2740,7 +2740,7 @@
 - INGR:
     - NAME: A1V6_m_retort_ov
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: "Реком.: Реторта мастера"
+    - FNAM: "реком.: Реторта мастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2761,7 +2761,7 @@
 - INGR:
     - NAME: A1V6_n_alembic_ov
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: "Реком.: Без перегонного куба"
+    - FNAM: "реком.: Без перегонного куба"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2782,7 +2782,7 @@
 - INGR:
     - NAME: A1V6_a_alembic_ov
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: "Реком.: Перегонный куб ученика"
+    - FNAM: "реком.: Перегонный куб ученика"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2803,7 +2803,7 @@
 - INGR:
     - NAME: A1V6_j_alembic_ov
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: "Реком.: Перегонный куб подмаст."
+    - FNAM: "реком.: Перегонный куб подмаст."
     - IRDT:
         weight: 0.0
         value: 0
@@ -2824,7 +2824,7 @@
 - INGR:
     - NAME: A1V6_m_alembic_ov
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: "Реком.: Перегонный куб мастера"
+    - FNAM: "реком.: Перегонный куб мастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2845,7 +2845,7 @@
 - INGR:
     - NAME: A1V6_a_mortar_ov
     - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: "Реком.: Ступка и пестик ученика"
+    - FNAM: "реком.: Ступка и пестик ученика"
     - IRDT:
         weight: 0.0
         value: 0
@@ -2866,7 +2866,7 @@
 - INGR:
     - NAME: A1V6_j_mortar_ov
     - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: "Реком.: Ступка и пестик подмас."
+    - FNAM: "реком.: Ступка и пестик подмас."
     - IRDT:
         weight: 0.0
         value: 0
@@ -2887,7 +2887,7 @@
 - INGR:
     - NAME: A1V6_m_mortar_ov
     - MODL: "m\\Misc_mortarpestle_M_01.nif"
-    - FNAM: "Реком.: Ступка и пестик мастера"
+    - FNAM: "реком.: Ступка и пестик мастера"
     - IRDT:
         weight: 0.0
         value: 0
