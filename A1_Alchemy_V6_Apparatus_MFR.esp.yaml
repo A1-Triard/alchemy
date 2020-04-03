@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - "Версия для использования с MFR_EVA.esm (M[FR] 3.x)"
-        records: 704
+        records: 702
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -104,14 +104,6 @@
     - FLTV: 0.0
 - GLOB:
     - NAME: A1V6_ApparatusExt_3
-    - FNAM: s
-    - FLTV: 0.0
-- GLOB:
-    - NAME: A1V6_Calcinator
-    - FNAM: s
-    - FLTV: 0.0
-- GLOB:
-    - NAME: A1V6_CalcinatorPrev
     - FNAM: s
     - FLTV: 0.0
 - SCPT:
@@ -26515,7 +26507,7 @@
           shorts: 8
           longs: 0
           floats: 3
-        data_size: 1892
+        data_size: 1782
         var_table_size: 84
     - SCVR:
         - Difficulty
@@ -26529,7 +26521,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNVE1v00AQ3XVsxykRWKgUIYGYogqhRm13ncRJJFKp6qEnLhxQbpEJBhJiGsXpIT8eiZnd9UeVTZXbeubNm3lvRvb5uxbkDoPxGCKfc/xoMvgMPeHxPGANkHFQRWMddWBYCw6LYA+DRyYoRRGNmpybp2zRq8kQxBlgCK48/pMzj4oYPh3WpspLARil5F14I7/F05vl7Heabb88LDceIIr53HmmOl2Pa636BTsmMAoXVeueau2zACan4Q8mBGpFBp9m1c0RFqiZJHQIfPei3vprmnuUJaCDfOJteKzyt8lyZjDRNJ+d8Rb3+afSU9nm/mqZbNO1UTr5E7J6zKHY8HGsQbGPIVMlJ8oLcSlJOGAOOnAOHSXVoxzTUpTtuacm9IylNEuVc1XOLXPq44jikBOtsUroM3CppltYK3G3AdHTbqt1+txtKdNIqsUzB7oHGGbMLzfjthUn7lbrsdD2DtqDWfE16WNq/556Ukt087nSjftWqAtldzmG+nqpzCfjz81hXhU3hhWU65hBItMRYPIvhPtXyWqVrJPNQz79Nc3u15tkPRUSJxHKdRekHAU2dGZBN2BkBy+s4IEdnFjB/VGTN6wWR09baxO6TjfYomrgkVAh9gjdRTdgONwj1AYeDPYItYHjWP8N6N3vkwTnTJe+qUuYodj53wTry3LjzW2Z0efXQKIItVlosgNpuoZG9q00iwNpooLGPk1yII1UNPgbbXLHChAGINQBnOpGJ3X3kmWafZ/PKuf98gJ24ZkNjidgRy/s6NiOTuzoHqHfa/RxHZ2v5qvUgv2gsa93sZt8vk0ewfV90bsr1E+N/guS8//CgZbU
+    - SCDT: eJyNVMFu00AQ3XVsxykRWKgUIYGYogqhRm13ncRJJFKp4tATFw4ot8gEAwkxjeL0kI9HYmbWiV1ljXpbv3lvZ94b275804LcETAeQ+RLiQ9NAR+hpzyZB6IBOg5KNDaoA8MKONyBPQSPClCrHRo1pSyOukWnpkCSFIAQXHnyhxQeiQQeHdEm5aUCRKl4G97or/H0Zjn7lWbbz/fLjQfIEr50nnCn63GlVX93OxYQhYuydY9b+yKAyWn4XSiFXvEGn2Y1zZEW8EwaOkS+fVZt/SXNPaoS0cH71OvwmOufkuWs4ETTfHYmW9KXH/aZ6rb0V8tkm64Lp5PfoahiDmHDh1iDsPehYMkJZ6EuNRkHrEEHzqHDVj2qCWOFY889ntArIqVZyprLNXdf44cjwiGna4uolHkNXNJ0d9Fq3G1A19Nuy3X60m1xaGTVkpkD3UcEVoS/34zb5jtxt8aP5dreo/ZQrPia/Anev8dHaolpPmXfuG9mXXDc+zH46TmHT8GfFy/m1e4dQwXVOsUgUdERYPI3hLsXyWqVrJPNfT79Oc3u1ptkPVUaJ1GcugtajwIbO7OwGzCykxdW8sBOTqzk/qgpG9aIo/9HazO6TjfYomzgkVGlaoweshswHNYYtZEHgxqjNnIcm78Bnft9tnBmpK+qFmZodv4nQX0pb6AkIheHgqxWoPtWwaJeYO+Q1Ajwd2cM0VGxn1MjPqn6SZZp9m0+K5X+fieH9MxGx6XY2Qs7O7azEzu7R+y3hn1cZeer+Sq1cN8Z7stD7iafb5MHdBMQnbuKfzP0pWop/wEYZHiO
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
@@ -26647,19 +26639,14 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
-        - "\tset A1V6_Calcinator to 4"
         - "\tset calcinator to 20"
         - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
-        - "\tset A1V6_Calcinator to 3"
         - "\tset calcinator to 15"
         - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
-        - "\tset A1V6_Calcinator to 2"
         - "\tset calcinator to 10"
         - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
-        - "\tset A1V6_Calcinator to 1"
         - "\tset calcinator to 5"
         - else
-        - "\tset A1V6_Calcinator to 0"
         - "\tset calcinator to 0"
         - endif
         - ""
@@ -26689,7 +26676,7 @@
           shorts: 7
           longs: 0
           floats: 3
-        data_size: 1748
+        data_size: 1638
         var_table_size: 73
     - SCVR:
         - state
@@ -26702,7 +26689,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNlM+P0kAUxzv9Bawbbcy6xsTEt2ZjzBJxBmiBREw2e9iTFw+GGxmxKkhdQtkDf7yJ702npRseGy5k+t7nfWe+X6YNRdSCXDgwHkM3FAIfQgc+QV8GIm84LsTNXTEpi0mtOCyLAyye2KKSZXXYEMIuRy1c3UbX6lsyvV7OfqfZ9sv9cuOD6iB9+6ze+JrmAeCUg7MCZ+Xr6Mz0b/RyZpl4ms8uRUuE4n3lQZ2KcLXU23QdiJ/CCWDyJ3LqNZdqw4c1j2rvIseMnAP+gOwoQBawB224gjaeI0QMew7G9MT6zH1zQh87WHDoLLueZ3pe1TMPJ1SHHKXbNhZZxO7RTK+MTWGYTZKnMMsayfstisVYZTJzoXdEYEavCZOL6IcjcXv/1Gh+Hls/jGz/qP+BvAcoRP7Ie0De3cI7pvnU+FYYKFEfTNzVMczTcxM+BX9Fd6gj4aMJ/sRMUK9tD9K1OwJM/kVw90KvVnqtN/f59Nc0u1tv9HoqFZ5EmtTxjqlRk6MzhvZgxMMLFh7wsGbheNQQHhtx9/FoOaPrdINb7DbwyaiUB4zu0x4MhweMcvBgcMAoBydJ8ebTOo7JgntZjL6qW5ih2flfjfPVuM3mpuoU189FoS56Y2SyI2V6VkbFrMziSJluKcOfRh8po4wMfmIbwmUBaQFpLsBFsdF5PT29TLPv89ku+aC6Aft4xuF4BXh6wdMJT2ue7hP9pqDP6nS+mq9Shn1bsC/32U0+3+oHeHG/aN2T5qNG3wUlxH+GdoXh
+    - SCDT: eJyNlMtv00AQxr3xIw8qsFApQkJiiiqEGhF2k9hJJIJUceiJCweUm7UYAwk2tWz3kD8eqTNrO3aVddWLtZ75fbP7fX44zB1CzgxYr2HqMIY3jgGfYM5tlveNHniDpujXRb9VXNbFBRZHVVHwurrsM1YtV0NcXbtX4rsfXMXhnyjZf72NCwvEBOnrZ+3Gtyi3AVUGahlq+Wv3VPW/yDisGC/Iwws2ZA57f/AgTpiTxnIfZTb7xQwbNn9do13rUW15v2ZS7Z1rKMkZ4AX4RACygD0YwyWM8RwOYtgzMKYnlc/cUie0sIMFg87S9EzVMw89dTOiOuQ4elzFwsvYTdLM6tgEhjmg8RRmXaPx1pBiUVY1mfVg9ojA1LwBbM7dnwbH7a0TNfPzuvKjGTt/1HMg7zYOIn/k3SbvvdI7pvlU+RYYKFEfVNyHY6i75yp8Cv6S3qEJh48q+JFSUG9cHWRa7Qiw+e/CzQuZpjKTxW0e/A6Sm6yQWcAFnoSr1PEdE6uBjk40tAkrPbzTwgs9LLWwt+ozUxvx9OFodUazqMAtmg0sMsp5h9Fj2oTlssOoDl4sOozqYN8vv3xae56ycFFKX7UthGh2+0+ivpH3UDIlF8eCpFMgPK1g1y3Q7yA7BPgrLA3Rkis/56X4rO1HxlHyYxs2SvvwTI7xRIfjQ9HTOz3t62mpp+dEvynp0zadp9s00rBvS/blMVvk2728h5cB0XrG1W+GvlTB2B0gcmeb
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -26806,19 +26793,14 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
-        - "\tset A1V6_Calcinator to 4"
         - "\tset calcinator to 20"
         - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
-        - "\tset A1V6_Calcinator to 3"
         - "\tset calcinator to 15"
         - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
-        - "\tset A1V6_Calcinator to 2"
         - "\tset calcinator to 10"
         - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
-        - "\tset A1V6_Calcinator to 1"
         - "\tset calcinator to 5"
         - else
-        - "\tset A1V6_Calcinator to 0"
         - "\tset calcinator to 0"
         - endif
         - ""
