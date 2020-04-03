@@ -27859,7 +27859,7 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_retort_01.tga"
+    - ITEX: "m\\a1_retort_n_ov.dds"
 - INGR:
     - NAME: A1V6_a_retort_ov
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
