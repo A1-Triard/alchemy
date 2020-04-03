@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - "Версия для использования с MFR_EVA.esm (M[FR] 3.x)"
-        records: 726
+        records: 730
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -26556,7 +26556,7 @@
         - OnPCAdd
         - OnPCDrop
         - rollback
-    - SCDT: eJyVk8FKw0AQhmdSmrhSMKIeRJA5+ACJAW8Vooj6ApL2EvYQCtI0IY2gz+Rb+Az1pIdeLKVYStujCG5CjaZN2uS27Pzzzb+7/8ooMbLeVarXSX/eRThBhjIqjLoI8WYVxUoirYay3+ZPTiAjElnfKnn7pn53Zpu+zwMePnRvQ8e1T+OmRPyqZooQGBYEGkWARgSMjB8L41JiXIqMV/F6J91iyWRtqxasVhpxpZFRacaVJiRGhGQvLTE7rbYjZDUhE8MrObd2wH8b7JbtekHIA1vT6Zy0QepsonrpdUJbRwC4uYC/0VtZLHctyy3Ful/L4qVYvBRLQWlxdTqoh/DS/6TxfDD+oulsPhn1aUiTj+lsOIJ0gNimRP5/CGVT2jTxWCJHFUhHr5cZPWFdnPuIltNw9Rguj+7lfYZcgFEEsAg/wzeVIeIP2KoUUA==
+    - SCDT: eJyVk8FKw0AQhmdSmrpSMKIeRJA5+ACJAW8Vooj6ApL2EvYQCqVpQhpBn8m38BnqSQ+9WEqxlLZHEdyEGk1M0vS27Pzzzb+7/8ooMTLfFGo0SHvaRThBhjLWGPURos0qipVEah1lr8sfbV9GJDK/FHL3De3uzDI8j/s8uO/fBrZjnUZNsfhFyRQhMCwJ1MsA9RAYGj8WxqXYuBQar+L1TrLFlMncVkz4X2lGlWZGpRVVWhAbEZK9pMTotbu2kNWFTAyv5NzaAf9psNqW4/oB9y1Vo3NSR4mzieql2wssDQHg5gJ+R29lsZxClrMRq1PI6mzE4oUsnmLVUFpdnQbKITwPP2i6HE0/ab5YziZDGtPsfb4YTyAZILYukX8forYubap4LJGjCiSjN8iMnrAuzn1E6TRcPQTp0YO8z5AL0MsAVuFn+KowRPwG50EUWQ==
     - SCTX:
         - Begin A1V6_ApparatusItem_1_sc
         - ""
@@ -26591,7 +26591,7 @@
         - "\telseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_m_Cont_1\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )"
-        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_1\" 1, 50, 0"
+        - "\t\tPlaceAtPC \"A1V6_Appara_j_Cont_1\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_1\" 1, 50, 0"
         - "\telse"
@@ -26626,7 +26626,7 @@
         - OnPCAdd
         - OnPCDrop
         - rollback
-    - SCDT: eJyVk8FKw0AQhmdSmrhSMKIeRJA5+ACJAW8Vooj6ApL2EvYQCtI0IY2gz+Rb+Az1pIdeLKVYStujCG5CjaZN2uS27Pzzzb+7/8ooMbLeVarXSX/eRThBhjIqjLoI8WYVxUoirYay3+ZPTiAjElnfKnn7pn53Zpu+zwMePnRvQ8e19bgpEb+qmSIEhgWBRhGgEQEj48fCuJQYlyLjVbzeSbdYMlnbqgWrlUZcaWRUmnGlCYkRIdlLS8xOq+0IWU3IxPBKzq0d8N8Gu2W7XhDywNZ0OidtkDqbqF56ndA+RQC4uYC/0VtZLHctyy3Ful/L4qVYvBRLQWlxdTqoh/DS/6TxfDD+oulsPhn1aUiTj+lsOIJ0gNimRP5/CGVT2jTxWCJHFUhHr5cZPWFdnPuIltNw9Rguj+7lfYZcgFEEsAg/wzeVIeIP158UUA==
+    - SCDT: eJyVk8FKw0AQhmdSmrpSMKIeRJA5+ACJAW8Vooj6ApL2EvYQCqVpQhpBn8m38BnqSQ+9WEqxlLZHEdyEGk1M0vS27Pzzzb+7/8ooMTLfFGo0SHvaRThBhjLWGPURos0qipVEah1lr8sfbV9GJDK/FHL3De3uzDI8j/s8uO/fBrZjaVFTLH5RMkUIDEsC9TJAPQSGxo+FcSk2LoXGq3i9k2wxZTK3FRP+V5pRpZlRaUWVFsRGhGQvKTF67a4tZHUhE8MrObd2wH8arLbluH7AfUvV6JzUUeJsonrp9gLrFAHg5gJ+R29lsZxClrMRq1PI6mzE4oUsnmLVUFpdnQbKITwPP2i6HE0/ab5YziZDGtPsfb4YTyAZILYukX8forYubap4LJGjCiSjN8iMnrAuzn1E6TRcPQTp0YO8z5AL0MsAVuFn+KowRPwG5jYUWQ==
     - SCTX:
         - Begin A1V6_ApparatusItem_2_sc
         - ""
@@ -26661,7 +26661,7 @@
         - "\telseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_m_Cont_2\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )"
-        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_2\" 1, 50, 0"
+        - "\t\tPlaceAtPC \"A1V6_Appara_j_Cont_2\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_2\" 1, 50, 0"
         - "\telse"
@@ -26696,7 +26696,7 @@
         - OnPCAdd
         - OnPCDrop
         - rollback
-    - SCDT: eJyVk8FKw0AQhmdSmrhSMKIeRJA5+ABJBG8Vooj6ApL2EvYQCtI0IY2gz+Rb+Az1pIdeLKVYStujCG5CjaZN2uS27Pzzzb+7/8ooMbLeVarXSX/eRThBhjIqjLoI8WYVxUoirYay3+ZPTiAjElnfKnn7pn53Zpu+zwMePnRvQ8e19bgpEb+qmSIEhgWBRhGgEQEj48fCuJQYlyLjVbzeSbdYMlnbqgWrlUZcaWRUmnGlCYkRIdlLS8xOq+0IWU3IxPBKzq0d8N8Gu2W7XhDywNZ0OidtkDqbqF56ndA+RQC4uYC/0VtZLHctyy3Ful/L4qVYvBRLQWlxdTqoh/DS/6TxfDD+oulsPhn1aUiTj+lsOIJ0gNimRP5/CGVT2jTxWCJHFUhHr5cZPWFdnPuIltNw9Rguj+7lfYZcgFEEsAg/wzeVIeIP1+UUUA==
+    - SCDT: eJyVk8FKw0AQhmdSmrpSMKIeRJA5+ABJBG8Vooj6ApL2EvYQCqVpQhpBn8m38BnqSQ+9WEqxlLZHEdyEGk1M0vS27Pzzzb+7/8ooMTLfFGo0SHvaRThBhjLWGPURos0qipVEah1lr8sfbV9GJDK/FHL3De3uzDI8j/s8uO/fBrZjaVFTLH5RMkUIDEsC9TJAPQSGxo+FcSk2LoXGq3i9k2wxZTK3FRP+V5pRpZlRaUWVFsRGhGQvKTF67a4tZHUhE8MrObd2wH8arLbluH7AfUvV6JzUUeJsonrp9gLrFAHg5gJ+R29lsZxClrMRq1PI6mzE4oUsnmLVUFpdnQbKITwPP2i6HE0/ab5YziZDGtPsfb4YTyAZILYukX8forYubap4LJGjCiSjN8iMnrAuzn1E6TRcPQTp0YO8z5AL0MsAVuFn+KowRPwG5nwUWQ==
     - SCTX:
         - Begin A1V6_ApparatusItem_3_sc
         - ""
@@ -26731,7 +26731,7 @@
         - "\telseif ( player->GetItemCount apparatus_m_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_m_Cont_3\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_j_mortar_01 > 0 )"
-        - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_3\" 1, 50, 0"
+        - "\t\tPlaceAtPC \"A1V6_Appara_j_Cont_3\" 1, 50, 0"
         - "\telseif ( player->GetItemCount apparatus_a_mortar_01 > 0 )"
         - "\t\tPlaceAtPC \"A1V6_Appara_a_Cont_3\" 1, 50, 0"
         - "\telse"
@@ -26762,7 +26762,7 @@
           floats: 0
         data_size: 2538
         var_table_size: 0
-    - SCDT: eJyd0zFLw0AUB/A7hWLB4UBtFQVP6QdoF7cKdXIXpVt4liA5+mxI49DPqY5CqZBBsGB3wabBmvTuXS7O75+8Xy7/q3Fel30pZLcrOy1e57u8Fg5h4kc1vn0m+99CjhoQhhBB/DT2HjwY+ngfDLx2R17K9jr9KogUZy/0KBGHvc7dhWeYc8bY9RVj6w07Jg86eZD2YIkHq3mUk0fRHlXiUdU84OQB2gMlHrB5zjNPMx8fh0Hoe/E4mMAGiIqlInqWiIZGWgVMoNMMtK+/TTseYyalEINSR/FqtTLJUb75AxgOgkeIR5HOoYOpyTZNxLF2x/4iplPSbehqQ6sNy21Y2aZcbcpqU+U2qGwDVxtYbfA/W7FxMtMd5HsQ+ct4rMvMoVRFTRLR1FqWjU0npVvQxYKkBe0WrGRRLhZFWpTdoipZwMUCpAXsFtiwFBqzZWoMLtMQlTRmHdIak5vkvnvL1AeHTUhuQvdNymWTIjcp903gsgnITYVJnTMh2PPXYvo5n31M5ft8MZ9NGXsTJ2Jv9Zd7vw/e+PFtyPkPEmdB0Q==
+    - SCDT: eJyV0zFLw0AUB/C7CsWCw4HaKgqe0g/QLm4V6uQuSrfwLEFy9NmQxqGfUx2FUiGDYMHugk2DNendy13m90/eL5f/1TlvyIEUsteT3TZv8D1eD0cw9aM63zmXgx8hx00IQ4ggfp54jx6MfHwIhl6nK69kZ5N+E0SKs1d6lIijfvf+0jPMOWPs5pqxzYZdkwedPEh70OLBah7l5FG0R1k8qpoHnDxAe8DigTLPReZp5eOTMAh9L54EU9gCUbFURM8S0dRI64AJdJaBDvS3acdjzKQUYmB1FK9WO5Mc55s/hNEweIJ4HOkcOpiayqaJONHu2H/EdEq6DV1tWGpDuw0r25SrTZXalN2mKtvA1QalNrDbwGArNk5musN8DyJ/FY91mTmUqqhJIlpay7Kx6aR0C7pYkLRguQUrWZSLRZEWVW5RlSzgYgHSAuUW2LIUGlMzNQZXaYgsjdmEtMbkJrnvrpn64LAJyU3ovkm5bFLkJuW+CVw2AbmpMGlwJgR7+V7Ovhbzz5n8WCwX8xlj7+JU7K//cv/vwVs/vgs5/wU9FUHa
     - SCTX:
         - Begin A1V6_ApparatusSetUp
         - ""
@@ -26807,7 +26807,7 @@
         - elseif ( player->GetItemCount apparatus_j_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_j_calcinator_01, 1"
         - "\tAddItem apparatus_j_calcinator_01, 1"
-        - "\tPlaceAtPC A1V6_apparatus_a_calcinator, 1, 50, 0"
+        - "\tPlaceAtPC A1V6_apparatus_j_calcinator, 1, 50, 0"
         - elseif ( player->GetItemCount apparatus_a_calcinator_01 > 0 )
         - "\tplayer->RemoveItem apparatus_a_calcinator_01, 1"
         - "\tAddItem apparatus_a_calcinator_01, 1"
@@ -27479,14 +27479,14 @@
     - ITEX: "m\\Tx_alembic_01.tga"
 - APPA:
     - NAME: apparatus_a_mortar_01
-    - MODL: "m\\Misc_mortarpestle_01.NIF"
+    - MODL: "m\\Misc_mortarpestle_A_01.NIF"
     - FNAM: Ступка и пестик ученика
     - AADT:
         type: MortarPestle
         quality: 0.5
         weight: 2.0
         value: 100
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
+    - ITEX: "m\\Tx_mortarpestle_A_01.tga"
 - APPA:
     - NAME: apparatus_j_mortar_01
     - MODL: "m\\Misc_mortarpestle_01.NIF"
@@ -27529,14 +27529,14 @@
     - ITEX: "m\\Tx_alembic_04.tga"
 - APPA:
     - NAME: apparatus_j_calcinator_01
-    - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
+    - MODL: "m\\Apparatus_J_Calcinator_01.NIF"
     - FNAM: Кальцинатор подмастерья
     - AADT:
         type: Calcinator
         quality: 1.0
         weight: 15.0
         value: 40
-    - ITEX: "m\\Tx_calcinator_01.tga"
+    - ITEX: "m\\Tx_calcinator_02.tga"
 - APPA:
     - NAME: apparatus_m_calcinator_01
     - MODL: "m\\App_M_Calcinator_01.nif"
@@ -27611,7 +27611,7 @@
 - INGR:
     - NAME: A1V6_a_retort_in
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: "Реком.: Реторта ученика"
+    - FNAM: "реком.: Реторта ученика"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27632,7 +27632,7 @@
 - INGR:
     - NAME: A1V6_j_retort_in
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: "Реком.: Реторта подмастерья"
+    - FNAM: "реком.: Реторта подмастерья"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27653,7 +27653,7 @@
 - INGR:
     - NAME: A1V6_m_retort_in
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: "Реком.: Реторта мастера"
+    - FNAM: "реком.: Реторта мастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27674,7 +27674,7 @@
 - INGR:
     - NAME: A1V6_g_retort_in
     - MODL: "m\\Apparatus_G_Retort_01.nif"
-    - FNAM: "Реком.: Реторта грандмастера"
+    - FNAM: "реком.: Реторта грандмастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27695,7 +27695,7 @@
 - INGR:
     - NAME: A1V6_a_alembic_in
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: "Реком.: Перегонный куб ученика"
+    - FNAM: "реком.: Перегонный куб ученика"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27716,7 +27716,7 @@
 - INGR:
     - NAME: A1V6_j_alembic_in
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: "Реком.: Перегонный куб подмаст."
+    - FNAM: "реком.: Перегонный куб подмаст."
     - IRDT:
         weight: 0.0
         value: 0
@@ -27737,7 +27737,7 @@
 - INGR:
     - NAME: A1V6_m_alembic_in
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: "Реком.: Перегонный куб мастера"
+    - FNAM: "реком.: Перегонный куб мастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27758,7 +27758,7 @@
 - INGR:
     - NAME: A1V6_g_alembic_in
     - MODL: "m\\Apparatus_G_Alembic_01.nif"
-    - FNAM: "Реком.: Перегонный куб грандм."
+    - FNAM: "реком.: Перегонный куб грандм."
     - IRDT:
         weight: 0.0
         value: 0
@@ -27779,7 +27779,7 @@
 - INGR:
     - NAME: A1V6_j_mortar_in
     - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: "Реком.: Ступка и пестик подмас."
+    - FNAM: "реком.: Ступка и пестик подмас."
     - IRDT:
         weight: 0.0
         value: 0
@@ -27800,7 +27800,7 @@
 - INGR:
     - NAME: A1V6_m_mortar_in
     - MODL: "m\\Misc_mortarpestle_M_01.nif"
-    - FNAM: "Реком.: Ступка и пестик мастера"
+    - FNAM: "реком.: Ступка и пестик мастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27821,7 +27821,7 @@
 - INGR:
     - NAME: A1V6_g_mortar_in
     - MODL: "m\\Misc_mortarpestle_G_01.nif"
-    - FNAM: "Реком.: Ступка и пестик грандм."
+    - FNAM: "реком.: Ступка и пестик грандм."
     - IRDT:
         weight: 0.0
         value: 0
@@ -27842,7 +27842,7 @@
 - INGR:
     - NAME: A1V6_n_retort_ov
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: "Реком.: Без реторты"
+    - FNAM: "реком.: Без реторты"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27863,7 +27863,7 @@
 - INGR:
     - NAME: A1V6_a_retort_ov
     - MODL: "m\\Apparatus_A_Retort_01.NIF"
-    - FNAM: "Реком.: Реторта ученика"
+    - FNAM: "реком.: Реторта ученика"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27884,7 +27884,7 @@
 - INGR:
     - NAME: A1V6_j_retort_ov
     - MODL: "m\\Apparatus_J_Retort_01.nif"
-    - FNAM: "Реком.: Реторта подмастерья"
+    - FNAM: "реком.: Реторта подмастерья"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27905,7 +27905,7 @@
 - INGR:
     - NAME: A1V6_m_retort_ov
     - MODL: "m\\Apparatus_M_Retort_01.nif"
-    - FNAM: "Реком.: Реторта мастера"
+    - FNAM: "реком.: Реторта мастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27926,7 +27926,7 @@
 - INGR:
     - NAME: A1V6_n_alembic_ov
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: "Реком.: Без перегонного куба"
+    - FNAM: "реком.: Без перегонного куба"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27947,7 +27947,7 @@
 - INGR:
     - NAME: A1V6_a_alembic_ov
     - MODL: "m\\Apparatus_A_Alembic_01.NIF"
-    - FNAM: "Реком.: Перегонный куб ученика"
+    - FNAM: "реком.: Перегонный куб ученика"
     - IRDT:
         weight: 0.0
         value: 0
@@ -27968,7 +27968,7 @@
 - INGR:
     - NAME: A1V6_j_alembic_ov
     - MODL: "m\\Apparatus_J_Alembic_01.nif"
-    - FNAM: "Реком.: Перегонный куб подмаст."
+    - FNAM: "реком.: Перегонный куб подмаст."
     - IRDT:
         weight: 0.0
         value: 0
@@ -27989,7 +27989,7 @@
 - INGR:
     - NAME: A1V6_m_alembic_ov
     - MODL: "m\\Apparatus_M_Alembic_01.nif"
-    - FNAM: "Реком.: Перегонный куб мастера"
+    - FNAM: "реком.: Перегонный куб мастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28009,8 +28009,8 @@
     - ITEX: "m\\Tx_alembic_03.tga"
 - INGR:
     - NAME: A1V6_a_mortar_ov
-    - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: "Реком.: Ступка и пестик ученика"
+    - MODL: "m\\Misc_mortarpestle_A_01.NIF"
+    - FNAM: "реком.: Ступка и пестик ученика"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28027,11 +28027,11 @@
         effect_3_attribute: ~
         effect_4_attribute: ~
     - SCRI: A1V6_AppaInfo_sc
-    - ITEX: "m\\Tx_mortarpestle_01.tga"
+    - ITEX: "m\\Tx_mortarpestle_A_01.tga"
 - INGR:
     - NAME: A1V6_j_mortar_ov
     - MODL: "m\\Misc_mortarpestle_01.NIF"
-    - FNAM: "Реком.: Ступка и пестик подмас."
+    - FNAM: "реком.: Ступка и пестик подмас."
     - IRDT:
         weight: 0.0
         value: 0
@@ -28052,7 +28052,7 @@
 - INGR:
     - NAME: A1V6_m_mortar_ov
     - MODL: "m\\Misc_mortarpestle_M_01.nif"
-    - FNAM: "Реком.: Ступка и пестик мастера"
+    - FNAM: "реком.: Ступка и пестик мастера"
     - IRDT:
         weight: 0.0
         value: 0
@@ -28151,6 +28151,16 @@
     - SCRI: A1V6_Alembic_sc
     - ITEX: "m\\Tx_alembic_02.tga"
 - MISC:
+    - NAME: A1V6_apparatus_j_calcinator
+    - MODL: "m\\Apparatus_J_Calcinator_01.nif"
+    - FNAM: Кальцинатор
+    - MCDT:
+        weight: 0.0
+        value: 0
+        is_key: false
+    - SCRI: A1V6_Calcinator_sc
+    - ITEX: "m\\Tx_calcinator_02.tga"
+- MISC:
     - NAME: A1V6_apparatus_j_retort
     - MODL: "m\\Apparatus_J_Retort_01.nif"
     - FNAM: Реторта
@@ -28192,6 +28202,13 @@
     - ITEX: "m\\Tx_retort_03.tga"
 - CONT:
     - NAME: A1V6_Appara_a_Cont_1
+    - MODL: "m\\Misc_mortarpestle_A_01.NIF"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_1_sc
+- CONT:
+    - NAME: A1V6_Appara_j_Cont_1
     - MODL: "m\\Misc_mortarpestle_01.NIF"
     - FNAM: Алхимическая установка
     - CNDT: 10000.0
@@ -28213,6 +28230,13 @@
     - SCRI: A1V6_ApparatusCont_1_sc
 - CONT:
     - NAME: A1V6_Appara_a_Cont_2
+    - MODL: "m\\Misc_mortarpestle_A_01.NIF"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_2_sc
+- CONT:
+    - NAME: A1V6_Appara_j_Cont_2
     - MODL: "m\\Misc_mortarpestle_01.NIF"
     - FNAM: Алхимическая установка
     - CNDT: 10000.0
@@ -28234,6 +28258,13 @@
     - SCRI: A1V6_ApparatusCont_2_sc
 - CONT:
     - NAME: A1V6_Appara_a_Cont_3
+    - MODL: "m\\Misc_mortarpestle_A_01.NIF"
+    - FNAM: Алхимическая установка
+    - CNDT: 10000.0
+    - FLAG: ""
+    - SCRI: A1V6_ApparatusCont_3_sc
+- CONT:
+    - NAME: A1V6_Appara_j_Cont_3
     - MODL: "m\\Misc_mortarpestle_01.NIF"
     - FNAM: Алхимическая установка
     - CNDT: 10000.0
