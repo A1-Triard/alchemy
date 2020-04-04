@@ -312,57 +312,57 @@
         - set tempf2 to ( player->GetIntelligence )
         - set tempf2 to ( 0.1 * ( tempf1 + tempf2 ) )
         - set tempf1 to ( player->GetAlchemy )
-        - set tempf1 to ( 10 + tempf1 + tempf2 )
+        - set tempf1 to ( tempf1 + tempf2 )
         - set alchemy to tempf1
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tif ( alchemy < 56 )"
+        - "\tif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_n_retort_ov, 1"
-        - "\telseif ( alchemy < 67 )"
+        - "\telseif ( alchemy < 63 )"
         - "\t\tplayer->AddItem A1V6_a_retort_ov, 1"
-        - "\telseif ( alchemy < 78 )"
+        - "\telseif ( alchemy < 76 )"
         - "\t\tplayer->AddItem A1V6_j_retort_ov, 1"
-        - "\telseif ( alchemy < 89 )"
+        - "\telseif ( alchemy < 88 )"
         - "\t\tplayer->AddItem A1V6_m_retort_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tif ( alchemy >= 89 )"
+        - "\tif ( alchemy >= 88 )"
         - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
-        - "\telseif ( alchemy < 56 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_n_retort_ov, 1"
-        - "\telseif ( alchemy < 67 )"
+        - "\telseif ( alchemy < 63 )"
         - "\t\tplayer->AddItem A1V6_a_retort_ov, 1"
-        - "\telseif ( alchemy < 78 )"
+        - "\telseif ( alchemy < 76 )"
         - "\t\tplayer->AddItem A1V6_j_retort_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tif ( alchemy >= 89 )"
+        - "\tif ( alchemy >= 88 )"
         - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
-        - "\telseif ( alchemy >= 78 )"
+        - "\telseif ( alchemy >= 76 )"
         - "\t\tplayer->AddItem A1V6_m_retort_in, 1"
-        - "\telseif ( alchemy < 56 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_n_retort_ov, 1"
-        - "\telseif ( alchemy < 67 )"
+        - "\telseif ( alchemy < 63 )"
         - "\t\tplayer->AddItem A1V6_a_retort_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
-        - "\tif ( alchemy >= 89 )"
+        - "\tif ( alchemy >= 88 )"
         - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
-        - "\telseif ( alchemy >= 78 )"
+        - "\telseif ( alchemy >= 76 )"
         - "\t\tplayer->AddItem A1V6_m_retort_in, 1"
-        - "\telseif ( alchemy >= 67 )"
+        - "\telseif ( alchemy >= 63 )"
         - "\t\tplayer->AddItem A1V6_j_retort_in, 1"
-        - "\telseif ( alchemy < 56 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_n_retort_ov, 1"
         - "\tendif"
         - else
-        - "\tif ( alchemy >= 89 )"
+        - "\tif ( alchemy >= 88 )"
         - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
-        - "\telseif ( alchemy >= 78 )"
+        - "\telseif ( alchemy >= 76 )"
         - "\t\tplayer->AddItem A1V6_m_retort_in, 1"
-        - "\telseif ( alchemy >= 67 )"
+        - "\telseif ( alchemy >= 63 )"
         - "\t\tplayer->AddItem A1V6_j_retort_in, 1"
-        - "\telseif ( alchemy >= 56 )"
+        - "\telseif ( alchemy >= 51 )"
         - "\t\tplayer->AddItem A1V6_a_retort_in, 1"
         - "\tendif"
         - endif
@@ -370,11 +370,11 @@
         - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
         - "\tset calcinator to 20"
         - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
-        - "\tset calcinator to 15"
-        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
         - "\tset calcinator to 10"
+        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tset calcinator to 6"
         - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
-        - "\tset calcinator to 5"
+        - "\tset calcinator to 3"
         - else
         - "\tset calcinator to 0"
         - endif
@@ -383,33 +383,33 @@
         - ""
         - set calcinator to 0
         - if ( GetItemCount apparatus_g_alembic_01 > 0 )
-        - "\tif ( alchemy < 50 )"
+        - "\tif ( alchemy < 42 )"
         - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
-        - "\telseif ( alchemy < 70 )"
+        - "\telseif ( alchemy < 60 )"
         - "\t\tplayer->AddItem A1V6_a_alembic_ov, 1"
-        - "\telseif ( alchemy < 90 )"
+        - "\telseif ( alchemy < 78 )"
         - "\t\tplayer->AddItem A1V6_j_alembic_ov, 1"
-        - "\telseif ( alchemy < 110 )"
+        - "\telseif ( alchemy < 96 )"
         - "\t\tplayer->AddItem A1V6_m_alembic_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
-        - "\tif ( alchemy >= 110 )"
+        - "\tif ( alchemy >= 96 )"
         - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
-        - "\telseif ( alchemy < 50 )"
+        - "\telseif ( alchemy < 42 )"
         - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
-        - "\telseif ( alchemy < 70 )"
+        - "\telseif ( alchemy < 60 )"
         - "\t\tplayer->AddItem A1V6_a_alembic_ov, 1"
-        - "\telseif ( alchemy < 90 )"
+        - "\telseif ( alchemy < 78 )"
         - "\t\tplayer->AddItem A1V6_j_alembic_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
-        - "\tif ( alchemy >= 110 )"
+        - "\tif ( alchemy >= 96 )"
         - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
-        - "\telseif ( alchemy >= 90 )"
+        - "\telseif ( alchemy >= 78 )"
         - "\t\tplayer->AddItem A1V6_m_alembic_in, 1"
-        - "\telseif ( alchemy < 50 )"
+        - "\telseif ( alchemy < 42 )"
         - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
-        - "\telseif ( alchemy < 70 )"
+        - "\telseif ( alchemy < 60 )"
         - "\t\tplayer->AddItem A1V6_a_alembic_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
@@ -419,59 +419,59 @@
         - elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
         - "\tset calcinator to 1"
         - else
-        - "\tif ( alchemy >= 110 )"
+        - "\tif ( alchemy >= 96 )"
         - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
-        - "\telseif ( alchemy >= 90 )"
+        - "\telseif ( alchemy >= 78 )"
         - "\t\tplayer->AddItem A1V6_m_alembic_in, 1"
-        - "\telseif ( alchemy >= 70 )"
+        - "\telseif ( alchemy >= 60 )"
         - "\t\tplayer->AddItem A1V6_j_alembic_in, 1"
-        - "\telseif ( alchemy >= 50 )"
+        - "\telseif ( alchemy >= 42 )"
         - "\t\tplayer->AddItem A1V6_a_alembic_in, 1"
         - "\tendif"
         - endif
         - ""
         - if ( calcinator == 1 )
-        - "\tif ( alchemy >= 110 )"
+        - "\tif ( alchemy >= 96 )"
         - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
-        - "\telseif ( alchemy >= 90 )"
+        - "\telseif ( alchemy >= 78 )"
         - "\t\tplayer->AddItem A1V6_m_alembic_in, 1"
-        - "\telseif ( alchemy >= 70 )"
+        - "\telseif ( alchemy >= 60 )"
         - "\t\tplayer->AddItem A1V6_j_alembic_in, 1"
-        - "\telseif ( alchemy < 50 )"
+        - "\telseif ( alchemy < 42 )"
         - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
         - "\tendif"
         - endif
         - ""
         - if ( GetItemCount apparatus_g_mortar_01 > 0 )
-        - "\tif ( alchemy < 60 )"
+        - "\tif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_a_mortar_ov, 1"
-        - "\telseif ( alchemy < 80 )"
+        - "\telseif ( alchemy < 69 )"
         - "\t\tplayer->AddItem A1V6_j_mortar_ov, 1"
-        - "\telseif ( alchemy < 100 )"
+        - "\telseif ( alchemy < 87 )"
         - "\t\tplayer->AddItem A1V6_m_mortar_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
-        - "\tif ( alchemy >= 100 )"
+        - "\tif ( alchemy >= 87 )"
         - "\t\tplayer->AddItem A1V6_g_mortar_in, 1"
-        - "\telseif ( alchemy < 60 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_a_mortar_ov, 1"
-        - "\telseif ( alchemy < 80 )"
+        - "\telseif ( alchemy < 69 )"
         - "\t\tplayer->AddItem A1V6_j_mortar_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
-        - "\tif ( alchemy >= 100 )"
+        - "\tif ( alchemy >= 87 )"
         - "\t\tplayer->AddItem A1V6_g_mortar_in, 1"
-        - "\telseif ( alchemy >= 80 )"
+        - "\telseif ( alchemy >= 69 )"
         - "\t\tplayer->AddItem A1V6_m_mortar_in, 1"
-        - "\telseif ( alchemy < 60 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_a_mortar_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
-        - "\tif ( alchemy >= 100 )"
+        - "\tif ( alchemy >= 87 )"
         - "\t\tplayer->AddItem A1V6_g_mortar_in, 1"
-        - "\telseif ( alchemy >= 80 )"
+        - "\telseif ( alchemy >= 69 )"
         - "\t\tplayer->AddItem A1V6_m_mortar_in, 1"
-        - "\telseif ( alchemy >= 60 )"
+        - "\telseif ( alchemy >= 51 )"
         - "\t\tplayer->AddItem A1V6_j_mortar_in, 1"
         - "\tendif"
         - endif
@@ -1765,13 +1765,13 @@
         - short temp
         - ""
         - if ( state == 2 )
-        - "\tif ( alchemy < 40 )"
+        - "\tif ( alchemy < 33 )"
         - "\t\tset temp to 16"
-        - "\telseif ( alchemy < 60 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tset temp to 8"
-        - "\telseif ( alchemy < 80 )"
+        - "\telseif ( alchemy < 69 )"
         - "\t\tset temp to 4"
-        - "\telseif ( alchemy < 100 )"
+        - "\telseif ( alchemy < 87 )"
         - "\t\tset temp to 2"
         - "\telse"
         - "\t\tset temp to 1"
@@ -1800,7 +1800,7 @@
         - "\tset tempf1 to ( player->GetAlchemy )"
         - "\tset tempf2 to ( player->GetLuck )"
         - "\tset tempf3 to ( player->GetIntelligence )"
-        - "\tset tempf1 to ( 10 + tempf1 + 0.1 * ( tempf2 + tempf3 ) )"
+        - "\tset tempf1 to ( tempf1 + 0.1 * ( tempf2 + tempf3 ) )"
         - "\tset alchemy to tempf1"
         - "\tif ( alchemy < retort )"
         - "\t\tset retort to alchemy"
@@ -1809,8 +1809,15 @@
         - "\t\tset mortar to alchemy"
         - "\tendif"
         - "\tset mortar to ( mortar + calcinator )"
+        - "\tif ( alchemy < alembic )"
+        - "\t\tset alembic to alchemy"
+        - "\tendif"
+        - "\tset alembic to ( alembic + calcinator - 9 )"
+        - "\tif ( alembic > mortar )"
+        - "\t\tset alembic to mortar"
+        - "\tendif"
         - "\tset temp to 0"
-        - "\tif ( mortar < 30 )"
+        - "\tif ( alembic < 15 )"
         - "\t\tset temp to 1"
         - "\telseif ( retort < 1 )"
         - "\t\tset temp to 1"
@@ -1828,10 +1835,7 @@
         - "\t\tStopScript A1V6_CalcAlchemy2_sc"
         - "\t\treturn"
         - "\tendif"
-        - "\tif ( alembic > calcinator )"
-        - "\t\tset alembic to calcinator"
-        - "\tendif"
-        - "\tset tempf2 to ( calcinator + 1 - alembic )"
+        - "\tset tempf2 to ( mortar + 1 - alembic )"
         - "\tset tempf1 to ( Random 100 )"
         - "\tset tempf1 to ( tempf1 * tempf2 / 100.0 )"
         - "\tset alchemy to ( alembic + tempf1 )"
@@ -1840,13 +1844,13 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_mortar_01 > 0 )
-        - "\tset mortar to 119"
+        - "\tset mortar to 104"
         - elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
-        - "\tset mortar to 99"
+        - "\tset mortar to 86"
         - elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
-        - "\tset mortar to 79"
+        - "\tset mortar to 68"
         - elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
-        - "\tset mortar to 59"
+        - "\tset mortar to 50"
         - else
         - "\tset A1V6_AlchemyRes to 2"
         - "\tStopScript A1V6_CalcAlchemy2_sc"
@@ -1854,43 +1858,43 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tset retort to 100"
+        - "\tset retort to 98"
         - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tset retort to 88"
+        - "\tset retort to 86"
         - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tset retort to 77"
+        - "\tset retort to 74"
         - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
-        - "\tset retort to 66"
+        - "\tset retort to 62"
         - else
-        - "\tset retort to 55"
+        - "\tset retort to 50"
         - endif
         - ""
         - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
         - "\tset calcinator to 20"
         - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
-        - "\tset calcinator to 15"
-        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
         - "\tset calcinator to 10"
+        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tset calcinator to 6"
         - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
-        - "\tset calcinator to 5"
+        - "\tset calcinator to 3"
         - else
         - "\tset calcinator to 0"
         - endif
         - ""
         - if ( GetItemCount apparatus_g_alembic_01 > 0 )
-        - "\tset alembic to 100"
+        - "\tset alembic to 113"
         - elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
-        - "\tset alembic to 80"
+        - "\tset alembic to 95"
         - elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
-        - "\tset alembic to 60"
+        - "\tset alembic to 77"
         - elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - elseif ( GetItemCount apparatus_a_spipe_01 > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - else
-        - "\tset alembic to 30"
+        - "\tset alembic to 41"
         - endif
         - ""
         - set state to 1
@@ -1920,13 +1924,13 @@
         - short temp
         - ""
         - if ( state == 2 )
-        - "\tif ( alchemy < 40 )"
+        - "\tif ( alchemy < 33 )"
         - "\t\tset temp to 5"
-        - "\telseif ( alchemy < 60 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tset temp to 6"
-        - "\telseif ( alchemy < 80 )"
+        - "\telseif ( alchemy < 69 )"
         - "\t\tset temp to 7"
-        - "\telseif ( alchemy < 100 )"
+        - "\telseif ( alchemy < 87 )"
         - "\t\tset temp to 8"
         - "\telse"
         - "\t\tset temp to 9"
@@ -1942,7 +1946,7 @@
         - "\tset tempf1 to ( player->GetAlchemy )"
         - "\tset tempf2 to ( player->GetLuck )"
         - "\tset tempf3 to ( player->GetIntelligence )"
-        - "\tset tempf1 to ( 10 + tempf1 + 0.1 * ( tempf2 + tempf3 ) )"
+        - "\tset tempf1 to ( tempf1 + 0.1 * ( tempf2 + tempf3 ) )"
         - "\tset alchemy to tempf1"
         - "\tif ( alchemy < retort )"
         - "\t\tset retort to alchemy"
@@ -1951,8 +1955,15 @@
         - "\t\tset mortar to alchemy"
         - "\tendif"
         - "\tset mortar to ( mortar + calcinator )"
+        - "\tif ( alchemy < alembic )"
+        - "\t\tset alembic to alchemy"
+        - "\tendif"
+        - "\tset alembic to ( alembic + calcinator - 9 )"
+        - "\tif ( alembic > mortar )"
+        - "\t\tset alembic to mortar"
+        - "\tendif"
         - "\tset temp to 0"
-        - "\tif ( mortar < 30 )"
+        - "\tif ( alembic < 15 )"
         - "\t\tset temp to 1"
         - "\telseif ( retort < 1 )"
         - "\t\tset temp to 1"
@@ -1970,10 +1981,7 @@
         - "\t\tStopScript A1V6_CalcAlchemy5_sc"
         - "\t\treturn"
         - "\tendif"
-        - "\tif ( alembic > calcinator )"
-        - "\t\tset alembic to calcinator"
-        - "\tendif"
-        - "\tset tempf2 to ( calcinator + 1 - alembic )"
+        - "\tset tempf2 to ( mortar + 1 - alembic )"
         - "\tset tempf1 to ( Random 100 )"
         - "\tset tempf1 to ( tempf1 * tempf2 / 100.0 )"
         - "\tset alchemy to ( alembic + tempf1 )"
@@ -1982,13 +1990,13 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_mortar_01 > 0 )
-        - "\tset mortar to 119"
+        - "\tset mortar to 104"
         - elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
-        - "\tset mortar to 99"
+        - "\tset mortar to 86"
         - elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
-        - "\tset mortar to 79"
+        - "\tset mortar to 68"
         - elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
-        - "\tset mortar to 59"
+        - "\tset mortar to 50"
         - else
         - "\tset A1V6_AlchemyRes to 2"
         - "\tStopScript A1V6_CalcAlchemy5_sc"
@@ -1996,43 +2004,43 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tset retort to 100"
+        - "\tset retort to 98"
         - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tset retort to 88"
+        - "\tset retort to 86"
         - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tset retort to 77"
+        - "\tset retort to 74"
         - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
-        - "\tset retort to 66"
+        - "\tset retort to 62"
         - else
-        - "\tset retort to 55"
+        - "\tset retort to 50"
         - endif
         - ""
         - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
         - "\tset calcinator to 20"
         - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
-        - "\tset calcinator to 15"
-        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
         - "\tset calcinator to 10"
+        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tset calcinator to 6"
         - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
-        - "\tset calcinator to 5"
+        - "\tset calcinator to 3"
         - else
         - "\tset calcinator to 0"
         - endif
         - ""
         - if ( GetItemCount apparatus_g_alembic_01 > 0 )
-        - "\tset alembic to 100"
+        - "\tset alembic to 113"
         - elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
-        - "\tset alembic to 80"
+        - "\tset alembic to 95"
         - elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
-        - "\tset alembic to 60"
+        - "\tset alembic to 77"
         - elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - elseif ( GetItemCount apparatus_a_spipe_01 > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - else
-        - "\tset alembic to 30"
+        - "\tset alembic to 41"
         - endif
         - ""
         - set state to 1
@@ -2153,7 +2161,7 @@
         - set alchemy to ( player->GetAlchemy )
         - set tempf1 to ( player->GetLuck )
         - set tempf2 to ( player->GetIntelligence )
-        - set tempf1 to ( 10 + alchemy + 0.1 * ( tempf1 + tempf2 ) )
+        - set tempf1 to ( alchemy + 0.1 * ( tempf1 + tempf2 ) )
         - if ( tempf1 < 2 )
         - "\tset tempf1 to 2"
         - endif
