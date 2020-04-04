@@ -25067,7 +25067,7 @@
           shorts: 8
           longs: 0
           floats: 3
-        data_size: 1822
+        data_size: 1771
         var_table_size: 84
     - SCVR:
         - Difficulty
@@ -25081,7 +25081,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNlU1v00AQhnf9FQcqsFApQgIxRRWHhrReJ3YSiVSqOPTEhQPKLVqCgYSYRnF6yI9HYmZ3E7vKuuptPfPMjN93x0nA37ahdBiMx5AEnONDi8En6PV8XobMBZGFVTQVKurAsBbMRibYrwWHAxNMWpybo2jTqcWeQMkZYAguff6TM59qGB4ddgQiji9iwCglb6Jr8S2bXi9nv/Ni++VuufEBKRZw56kadDWmAtM/3XXHBEahW43uq9EBC2FyGv1gcYxSsUNAr6qHIxaqdxLQIfjmeX3017z0KUugg/3iN9Gxyn+Wy5lhkmk5O+NtHvCPe0vFEQ9WS7nN10bp5E/E6jGHYsP7MZdiHyKmSk6UF/GFIOGAOejAOXSUVJ9yTEtRrpe+ekPfWFr5jdmSSuusp1hvz9ZzgcoF9T5kHhk2gu7evKtdF0V6hiTDY71LymCR7hYAFySkl6RgtRQB99rKejLM4rwDvUfYbq5wf7/ekeqJG6JdsbTtP6ot+v6MxNFmKEVddTH7UerphbomuqJzs8KXO++xgnIdMyzRO8IBJv8iuH0pVyu5lpu7cvprWtyuN3I9jQU6G6vL8bAbfVeHdGGhXRhmVnhhhbOhFZZWOI1b3LXamDz4MViFrvMNjqgG+Epo3CD0kEahgwahNniQNgi1wZn5yfKVaCXhTJe+rkuYodj5X4n1VbmLJQmpOCwoGguEvWDRUOBAZuVlI9/Teuio5Zzq4pO6HLnMi+/zWVUZ0JWIXmjDCxvuwii10gs7PRhYaWmn0xHS7zR9XKfL1XyVW9j3mn11yG7K+Vbew7VBdO7rPyn6UAXn/wFOr3z0
+    - SCDT: eJyNlU1v2kAQhnf9BbSotao0VaVWnVRRDkEkXoMNSCVS1ENOvfRQcUNb6rZQ3CBMDvz4SJnZXbAj1lFu65lnZvZ9x4aAf2xB4TAYjyEOOMeHBoMv0Ov5vGgyF0TaLKOJUFEHhpVgOjLBfiU4HJhg3ODcHEWLTg32AgrOAENw6fPfnPlUw/DosDaIKLqIAKOUvAmvxY90er2c/c3y7be75cYHpFjAnZdq0NWYCkz/ZNcdExiFbjm6r0YHrAmTk/AXiyKUih0CuqoejlhT3UlAh+Cb19XR37PCpyyBDvaLPoRHKv9VLmeGiafF7JS3eMDP9paKNg9WS7nN1kbp5F/IqjGHYsPHMZdiZyFTJcfKi+hCkHDAHHTgHDpKqk85pqUo1wtf3dA3lpZ+Y7ag0irrKdbbs9VcoHJBtQ+ZR4aNoLs372rXRZGe7uK1jLEisdjoQO8ZHpp97JfltdVucN1aoqVt/1lt0cRXdFNas7pmV7m8H6We3ijPye9z8z5e7ozECsp1zLBYL5wDTO5DuH0rVyu5lpu7Yvpnmt+uN3I9jQTaFCmnPexGH8khnVtoF4apFV5Y4XRohaUVTqIGd602xk++2Vah62yDI8oBvhIa1Qg9pFHooEaoDR4kNUJtcGp+f3wlWkk41aXvqxJmKHb+X2J9We5iSUwqDgvy2gJhL1jUFDiQWnlZy/e0HjpqOSe6+LgqRy6z/Od8VlYGtBLRa9rw3Ia7MEqs9MJODwZWWtrpZIT0J00fVeliNV9lFvazZt8dsptivpWPcG0Qnfv6H4c+VMH5A/Ugd3s=
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
@@ -25149,13 +25149,7 @@
         - "\tif ( alembic > mortar )"
         - "\t\tset alembic to mortar"
         - "\tendif"
-        - "\tset temp to 0"
         - "\tif ( alembic < 15 )"
-        - "\t\tset temp to 1"
-        - "\telseif ( retort < 1 )"
-        - "\t\tset temp to 1"
-        - "\tendif"
-        - "\tif ( temp == 1 )"
         - "\t\tset A1V6_AlchemyRes to 3"
         - "\t\tset state to 0"
         - "\t\tStopScript A1V6_CalcAlchemy2_sc"
@@ -25240,7 +25234,7 @@
           shorts: 7
           longs: 0
           floats: 3
-        data_size: 1678
+        data_size: 1627
         var_table_size: 73
     - SCVR:
         - state
@@ -25253,7 +25247,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNlM9v0zAUx+3mR1OYIEJjCAmJNzRxWFmx2yZpJDpp4sCJCwfUW2RCgJaERUl26B+PxLOdtpnqoF1a5/s+Xzvf95K41B9BTQkslzB1KcULl8AHmM0cWg/JAALvIAa8FcOOGMatGHXERdSKiyGl7TIe4eqTf8O/hslNnv7Kiu3nu7yxgU8YFp52C1+y2gF0EfRS9LJX/qmqfxR52jJBUqcXdERd+m4fgZ9Qt8zFNqsc+oMSB1a/fdLVBlJb3Ncsqb31ibKcAf4Am3BAFrAGY7iEMd6HixjWCHbpcRuzttUd2lhBgciA+P9IVWu0j7uspVhrz3Zrjqo53X0c4kkdYrjSJK6vd7so0mpJ2VymZ+fI3XjQihwn4smblOJOkwfbI9lc1TBD5wcwe0Db1X4erM7974Th8faJ2vN62XbFsO38Qdti35/IcMCx9TLRlRrM/ih19UyNSY7oEjhjEwbvd71Hh6yN28Om+hmhAKu/Ptw+F2UpKtHc1cnPpLitGlEljGNnmRoOPo1s7pnowkBbsAiN8MYIhwsjLIxwwIbUMrZx+t+XwRi0yho84nCArYKynqDHNAaNeoKa4CjoCWqCw6n+RtgqtIpwoa0vuxFSDLv+I9B/sA/QMpUpjg1Fr4GbDZseg/7aHfOil5/pPHKp45xr81k3jsiz4ts6PTgdORI+80x4YcItiAMjvTHTUWSkhZkOYqRfa/q0S9fluswM7BvNvjhmm3q9Ffdw3SC5nnP1JZEvKqf0H5MUa/s=
+    - SCDT: eJyNlEtv00AUhWfiRxKowEKlCAmJW1R10ahhJolfUlOpYsGKDQuUnTUYAwk2tWx3kR+PxJ0ZN3GVcdVNMr73O3fmHD9c6o2hpgSWS5i5lOKFS+AK5nOH1kMyAH+0L/q8LQadYhC3xbBTjMK2GA0pbZfxGFefvRv+LUhu8vR3Vmy/3OWNDXzKsPGy2/ia1Q6giqCWopa9845V/5PI05bxkzo9o2Pq0vOdBX5E3TIX26xy6E9KHFj98Ui3NpC16GHNkrVzjyjJCeAPsCkHZAF7MIELmOA5XMSwRzCl563N2lYntLGDBSIN4v8z1a1RPumylmKtHdvtOarndOc4ZCTrEMOlJnF9fT9FkZaeYo9V7wq4b4hxAPMnZKhu0QhWp94PwhjOPJLpw/WytWgYu3jSWAzxhTwpcMxRHvNSpbzbSl29UpnLvC+AMzZl8PE+SFTI3qTdbKZvOAVY/fPg9rUoS1GJ5q5OfiXFbdWIKmEcY2IqaXy02GJkogsDbUEUGOGNEQ4iIyyMsM+G1DLGOHv0yTYarbIGt9hvYCujrMfoIY1Gwx6jJjj0e4ya4GCmX3hbmVYWzrT0bddCimbXfwXq9/IBSmbSxaGg6BVws2DTI9CfrkNe9PJz7UcutZ1TLT7p2hF5Vnxfp3ulI28Jn49MeGHCLYh9I70x02FopIWZ9mOk32v6uEvX5brMDOwHzb45ZJt6vRUPcB2QXC+4+pLIF5VT+h+tHmaH
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -25307,13 +25301,7 @@
         - "\tif ( alembic > mortar )"
         - "\t\tset alembic to mortar"
         - "\tendif"
-        - "\tset temp to 0"
         - "\tif ( alembic < 15 )"
-        - "\t\tset temp to 1"
-        - "\telseif ( retort < 1 )"
-        - "\t\tset temp to 1"
-        - "\tendif"
-        - "\tif ( temp == 1 )"
         - "\t\tset A1V6_AlchemyRes to 3"
         - "\t\tset state to 0"
         - "\t\tStopScript A1V6_CalcAlchemy5_sc"
