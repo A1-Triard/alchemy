@@ -1858,11 +1858,11 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tset retort to 98"
+        - "\tset retort to 100"
         - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tset retort to 86"
+        - "\tset retort to 87"
         - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tset retort to 74"
+        - "\tset retort to 75"
         - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
         - "\tset retort to 62"
         - else
@@ -2004,11 +2004,11 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tset retort to 98"
+        - "\tset retort to 100"
         - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tset retort to 86"
+        - "\tset retort to 87"
         - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tset retort to 74"
+        - "\tset retort to 75"
         - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
         - "\tset retort to 62"
         - else
