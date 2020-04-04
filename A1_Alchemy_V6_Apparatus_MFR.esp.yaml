@@ -27537,7 +27537,7 @@
     - ITEX: "m\\Tx_alembic_04.tga"
 - APPA:
     - NAME: apparatus_j_calcinator_01
-    - MODL: "m\\Apparatus_J_Calcinator_01.NIF"
+    - MODL: "m\\App_J_Calcinator_01.NIF"
     - FNAM: Кальцинатор подмастерья
     - AADT:
         type: Calcinator
