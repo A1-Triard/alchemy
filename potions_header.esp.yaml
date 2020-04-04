@@ -4,7 +4,7 @@
         type: ESP
         author: A1
         description:
-          - Модифицирует некоторые существующие и добавляет новые зелья. Вспомогательный плагин для A1_Alchemy_V6_Apparatus.esp
+          - Модифицирует некоторые существующие и добавляет новые зелья. Вспомогательный плагин для A1_Alchemy_V6_Apparatus.
         records: 0
     - MAST: Morrowind.esm
     - DATA: 79764287

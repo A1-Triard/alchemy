@@ -4,8 +4,8 @@
         type: ESP
         author: A1
         description:
-          - "Изменяет скрипт на драгоценностях в даэдрических святилищах, чтобы вместо заскриптованных версий ингредиентов в инвентарь игрока попадали обычные. Вспомогательный плагин для A1_Alchemy_V6_Apparatus.esp"
-        records: 12
+          - "Изменяет скрипт на драгоценностях в даэдрических святилищах, чтобы вместо заскриптованных версий ингредиентов в инвентарь игрока попадали обычные. Вспомогательный плагин для A1_Alchemy_V6_Apparatus."
+        records: 1
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -14,253 +14,47 @@
     - DATA: 11799703
 - SCPT:
     - SCHD:
-        name: A1_DaedrSumm_diamond
+        name: BILL_MarksDaedraSummon
         vars:
-          shorts: 0
-          longs: 0
+          shorts: 1
+          longs: 1
           floats: 0
-        data_size: 73
-        var_table_size: 0
-    - SCDT: eJwBSQC2/wYBAwkgWBgQID09IDHmEAxEcmVtb3JhX2xvcmQBAAAAAEMBAAwBBnBsYXllctQQEWluZ3JlZF9kaWFtb25kXzAxAQDbEAkBAQGOsBLB
+        data_size: 391
+        var_table_size: 9
+    - SCVR:
+        - match
+        - id
+    - SCDT: eJyVkL1Kw2AUht8TjUMaMJLBDh3iIMRFFBzO8GEHOwgObuJkDDZoIVr5goMX4E14AV6Co3egg6uLirE/tPRnKnTpV9rwlXbqgQOHw8P7wGtSQjC987wDl6E2AcQ6r8LmJ/p37JKMbqsyDOKqLBPUHBEKYoLGMNR1DIsvsekXKzsXlbtrGZWDUhgFVw8yUWdGQtwcZgJDzKteoTmXn1XiC3LTsO19TnJFbbT4jFx+U8wn3FnrUkafZo02WZwnbTxYMMIp4GNQ/2l+b3nvab32m/b67WHD63TTv1ba3wWtnJ7ApJhgeHs6O6tyg8ft6b9Na/dx+BhJX3w5RCOAnlnN
     - SCTX:
-        - begin A1_DaedrSumm_diamond
+        - begin BILL_MarksDaedraSummon
+        - ; Summon an Daedra when an item is removed from altar
+        - ;
+        - "; script location: should be placed upon an object on a Daedric Altar "
         - ""
-        - if ( OnActivate == 1 )
+        - long id
+        - short match
+        - ""
+        - set match to OnActivate
+        - ifx ( match )
         - "\tPlaceAtPC \"Dremora_lord\" 1 128 1"
         - "\t;1 of them, 256 units away, in back (1) of the player"
-        - "\tplayer->AddItem ingred_diamond_01, 1"
-        - "\tDisable"
+        - "\tsetx id to xRefID"
+        - "\tsetx match to xStringMatch id \"(?i)^ingred_Dae_cursed_\""
+        - "\tifx ( match )"
+        - "\t\tsetx id to xStringBuild \"ingred_%18s\" id"
+        - "\telse"
+        - "\t\tsetx match to xStringMatch id \"(?i)^ingred_cursed_\""
+        - "\t\tifx ( match )"
+        - "\t\t\tsetx id to xStringBuild \"ingred_%14s\" id"
+        - "\t\telse"
+        - "\t\t\tMessageBox \"Ошибка! Неизвестный предмет.\" \"OK\""
+        - "\t\t\tset id to 0"
+        - "\t\tendif"
+        - "\tendif"
+        - "\tifx ( id )"
+        - "\t\tplayer->xAddItem id, 1"
+        - "\t\tDisable"
+        - "\tendif"
         - endif
         - ""
         - End
-- SCPT:
-    - SCHD:
-        name: A1_DaedrSumm_ebony
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 75
-        var_table_size: 0
-    - SCDT: eJwBSwC0/wYBAwkgWBgQID09IDHmEAxEcmVtb3JhX2xvcmQBAAAAAEMBAAwBBnBsYXllctQQE2luZ3JlZF9yYXdfZWJvbnlfMDEBANsQCQEBAbygE60=
-    - SCTX:
-        - begin A1_DaedrSumm_ebony
-        - ""
-        - if ( OnActivate == 1 )
-        - "\tPlaceAtPC \"Dremora_lord\" 1 128 1"
-        - "\t;1 of them, 256 units away, in back (1) of the player"
-        - "\tplayer->AddItem ingred_raw_ebony_01, 1"
-        - "\tDisable"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1_DaedrSumm_emerald
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 73
-        var_table_size: 0
-    - SCDT: eJwBSQC2/wYBAwkgWBgQID09IDHmEAxEcmVtb3JhX2xvcmQBAAAAAEMBAAwBBnBsYXllctQQEWluZ3JlZF9lbWVyYWxkXzAxAQDbEAkBAQGOsxK/
-    - SCTX:
-        - begin A1_DaedrSumm_emerald
-        - ""
-        - if ( OnActivate == 1 )
-        - "\tPlaceAtPC \"Dremora_lord\" 1 128 1"
-        - "\t;1 of them, 256 units away, in back (1) of the player"
-        - "\tplayer->AddItem ingred_emerald_01, 1"
-        - "\tDisable"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1_DaedrSumm_heart
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 79
-        var_table_size: 0
-    - SCDT: eJwBTwCw/wYBAwkgWBgQID09IDHmEAxEcmVtb3JhX2xvcmQBAAAAAEMBAAwBBnBsYXllctQQF2luZ3JlZF9kYWVkcmFzX2hlYXJ0XzAxAQDbEAkBAQEYLRUy
-    - SCTX:
-        - begin A1_DaedrSumm_heart
-        - ""
-        - if ( OnActivate == 1 )
-        - "\tPlaceAtPC \"Dremora_lord\" 1 128 1"
-        - "\t;1 of them, 256 units away, in back (1) of the player"
-        - "\tplayer->AddItem ingred_daedras_heart_01, 1"
-        - "\tDisable"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1_DaedrSumm_pearl
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 71
-        var_table_size: 0
-    - SCDT: eJwBRwC4/wYBAwkgWBgQID09IDHmEAxEcmVtb3JhX2xvcmQBAAAAAEMBAAwBBnBsYXllctQQD2luZ3JlZF9wZWFybF8wMQEA2xAJAQEBZG0R9w==
-    - SCTX:
-        - begin A1_DaedrSumm_pearl
-        - ""
-        - if ( OnActivate == 1 )
-        - "\tPlaceAtPC \"Dremora_lord\" 1 128 1"
-        - "\t;1 of them, 256 units away, in back (1) of the player"
-        - "\tplayer->AddItem ingred_pearl_01, 1"
-        - "\tDisable"
-        - endif
-        - ""
-        - End
-- SCPT:
-    - SCHD:
-        name: A1_DaedrSumm_ruby
-        vars:
-          shorts: 0
-          longs: 0
-          floats: 0
-        data_size: 70
-        var_table_size: 0
-    - SCDT: eJwBRgC5/wYBAwkgWBgQID09IDHmEAxEcmVtb3JhX2xvcmQBAAAAAEMBAAwBBnBsYXllctQQDmluZ3JlZF9ydWJ5XzAxAQDbEAkBAQFQ0hGk
-    - SCTX:
-        - begin A1_DaedrSumm_ruby
-        - ""
-        - if ( OnActivate == 1 )
-        - "\tPlaceAtPC \"Dremora_lord\" 1 128 1"
-        - "\t;1 of them, 256 units away, in back (1) of the player"
-        - "\tplayer->AddItem ingred_ruby_01, 1"
-        - "\tDisable"
-        - endif
-        - ""
-        - End
-- INGR:
-    - NAME: ingred_Dae_cursed_emerald_01
-    - MODL: "n\\Ingred_emerald_01.NIF"
-    - FNAM: Изумруд
-    - IRDT:
-        weight: 0.2
-        value: 150
-        effect_1_index: FortifySpellpoints
-        effect_2_index: RestoreHealth
-        effect_3_index: DrainAttribute
-        effect_4_index: DrainAttribute
-        effect_1_skill: ~
-        effect_2_skill: ~
-        effect_3_skill: Block
-        effect_4_skill: Block
-        effect_1_attribute: ~
-        effect_2_attribute: ~
-        effect_3_attribute: Agility
-        effect_4_attribute: Endurance
-    - SCRI: A1_DaedrSumm_emerald
-    - ITEX: "n\\Tx_emerald.tga"
-- INGR:
-    - NAME: ingred_Dae_cursed_pearl_01
-    - MODL: "n\\Ingred_pearl_01.NIF"
-    - FNAM: Жемчужина
-    - IRDT:
-        weight: 0.2
-        value: 100
-        effect_1_index: DrainAttribute
-        effect_2_index: Dispel
-        effect_3_index: WaterBreathing
-        effect_4_index: ResistCommonDisease
-        effect_1_skill: Block
-        effect_2_skill: ~
-        effect_3_skill: ~
-        effect_4_skill: ~
-        effect_1_attribute: Agility
-        effect_2_attribute: ~
-        effect_3_attribute: ~
-        effect_4_attribute: ~
-    - SCRI: A1_DaedrSumm_pearl
-    - ITEX: "n\\Tx_pearl.tga"
-- INGR:
-    - NAME: ingred_cursed_daedras_heart_01
-    - MODL: "n\\Ingred_Daedra_heart_01.NIF"
-    - FNAM: Сердце даэдры
-    - IRDT:
-        weight: 1.0
-        value: 200
-        effect_1_index: RestoreSpellPoints
-        effect_2_index: FortifyAttribute
-        effect_3_index: DrainAttribute
-        effect_4_index: NightEye
-        effect_1_skill: ~
-        effect_2_skill: Block
-        effect_3_skill: Block
-        effect_4_skill: ~
-        effect_1_attribute: ~
-        effect_2_attribute: Endurance
-        effect_3_attribute: Agility
-        effect_4_attribute: ~
-    - SCRI: A1_DaedrSumm_heart
-    - ITEX: "n\\Tx_daedra_heart_01.tga"
-- INGR:
-    - NAME: ingred_Dae_cursed_diamond_01
-    - MODL: "n\\Ingred_diamond_01.NIF"
-    - FNAM: Бриллиант
-    - IRDT:
-        weight: 0.2
-        value: 250
-        effect_1_index: DrainAttribute
-        effect_2_index: Invisibility
-        effect_3_index: Reflect
-        effect_4_index: DetectKey
-        effect_1_skill: Block
-        effect_2_skill: ~
-        effect_3_skill: ~
-        effect_4_skill: ~
-        effect_1_attribute: Agility
-        effect_2_attribute: ~
-        effect_3_attribute: ~
-        effect_4_attribute: ~
-    - SCRI: A1_DaedrSumm_diamond
-    - ITEX: "n\\Tx_diamond.tga"
-- INGR:
-    - NAME: ingred_Dae_cursed_ruby_01
-    - MODL: "n\\Ingred_ruby_01.NIF"
-    - FNAM: Рубин
-    - IRDT:
-        weight: 0.2
-        value: 200
-        effect_1_index: DrainHealth
-        effect_2_index: Feather
-        effect_3_index: RestoreAttribute
-        effect_4_index: DrainAttribute
-        effect_1_skill: ~
-        effect_2_skill: ~
-        effect_3_skill: Block
-        effect_4_skill: Block
-        effect_1_attribute: ~
-        effect_2_attribute: ~
-        effect_3_attribute: Intelligence
-        effect_4_attribute: Agility
-    - SCRI: A1_DaedrSumm_ruby
-    - ITEX: "n\\Tx_ruby.tga"
-- INGR:
-    - NAME: ingred_Dae_cursed_raw_ebony_01
-    - MODL: "n\\Ingred_RawEbony_01.NIF"
-    - FNAM: Эбонит-сырец
-    - IRDT:
-        weight: 10.0
-        value: 200
-        effect_1_index: DrainAttribute
-        effect_2_index: CurePoison
-        effect_3_index: FrostShield
-        effect_4_index: RestoreAttribute
-        effect_1_skill: Block
-        effect_2_skill: ~
-        effect_3_skill: ~
-        effect_4_skill: Block
-        effect_1_attribute: Agility
-        effect_2_attribute: ~
-        effect_3_attribute: ~
-        effect_4_attribute: Speed
-    - SCRI: A1_DaedrSumm_ebony
-    - ITEX: "n\\Tx_RawEbony.tga"
