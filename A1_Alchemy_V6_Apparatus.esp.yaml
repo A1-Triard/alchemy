@@ -17126,14 +17126,14 @@
           shorts: 2
           longs: 0
           floats: 2
-        data_size: 4898
+        data_size: 4888
         var_table_size: 33
     - SCVR:
         - alchemy
         - calcinator
         - tempf1
         - tempf2
-    - SCDT: eJzNlk2P0zAQhuOitknpIUgLCLErDEIcQEIJUrutRFdaceHMAe2tGqLQ1lu3URKQ+j/h5yDh5juxHZutuvSWxK+fzDu2xzNEvWANOz/sIXSOb/7YeGtfu1/H88089ONtGM+3P/Fsht1hLvxtcwJkWGgoA4EKBJogogIRTRBVgagmaJHrVhsxqCLQi0gGopogogIRTRCoQCAHXaSgR9k2gbVPv608QbZ5RSsKlCjQRREliuiiqBJFdVGLQshnnVdoRnWHLSVJlSwoohsUKFHQgmrsT8pih7ClqhQCxYlRgIgmiKpAVBO0yHXyqlII9CKSbwE9EFGBiATURd+R0cU3E9uofuvsv72xjeTRxs57FzMdZi/4HX7Lzb5NlMgYlKouivZD7N3oIQunwT6GIIAQ4h9RWXgdF19hhxmyMJuBP+LRuOD/Et1kZikdX3JSkEgvJ5yUSKSTKSdt3DemyBHlHA0S4NVMRKxdPOb/di+xRA6yVGgFf6fHty/xBPfmqdAKIiV39G+hPrJOJOZCKwi60XxYiMX8Ol2LZ9Ui4MHaW22ASbP1YHWjYzzAHxxTNIFKJ7gj4QQinyD+A0gmdPCoj1D26FgoqW9pBqKs3iUjrNi9TKFPqj7zS5Ovdk4ld6J2q3qKeS3ItFNeS5raQaZ1XV7cbIlMkS/K+3qYbwoRtN4cmSeQBYkxcqix4mxM21J7zCzsnSHeGTScZfvWZeIXqfisKo6CVeDz0lep9CkvjaPVDqrqtF4dMXtleWtbbK5mteWvLFqWlRzvfU91Qi60N0xqoi9qv7J+kCtIY0dQzCt9ceX3E0dwR9SlRYlxHMHdU2u3TVGclIuzXAMBstZ4m0cxJQmUHBZoeZ+35OkfTUkihfuLtOwmWpKaH7Zz+ywZuF57S5/uPi1973Yeec/ti/Rz8sGdf/EjdjX7n31Yx0s2jtBf/S8sjw==
+    - SCDT: eJzNl8GP0kAUxjtrgHbDoSarxrgbR2M8aGLaXYWSyCYbL549mL2RZ1OBWQYIRRP+T/1zTBza0pbOvM64yC43aH/z8X2v0zePNmnOJ7CKFk1CTun1H5fO3Cv/a2cwHSyi5WyxHMx+0n6f+u0N+NuVAGI5pI0JgU4IDIWYTogZCnGdEDcUGm648VQtVALMHGFC3FCI6YSYoRDohAAXOkuFHmbbBCYR/zYOFdWWiVop0EqBqRTTSjFTKa6V4qZSwxyUqy4Thq5usaWQUmGmmKkp0EpBjVRlf3LhHRY1XSUHNG+MRogZCnGdEDcUGm44vKvkgJkjfAuYCTGdEEOEGuQ7sRr0OnCt8rWj9bXXrpV8dKn3zqeCo+ILfUvfSKtvEpJYxwXVIPH6lvhuNYlDU7OPYD6HBSx/xEXj9Xx6ST0RyKFiBf1IPxTuf6lOMrtAOxcSCgja7UgoQ9AgkNDKeWOrEnEp0XEieNlXKW4dPPZ9p0cisZ0i5azi1/n+4yOZ4M4y5azCKbtlfoe0iHMgnnNWYboyfDhEeH6VPoun5SYQwiQcT0Gg2fMQfePIekDPPVu1gKMLfPUChiw4oh0lDyh/0SIk++g5JGlvaQHirN0ld0Sve5GKPi7H3JyZUrN7f14qnWraKm94T2IBY7uBxDKM7XUktjoQ2apYXI6VbwmF5vZkZB9ADZBcbMdcxfsW1BR2n0VYByNyMKgEyzatL+DnKXxShuP5eB7J6MsUfSKjy3i8gjJd6VX/vXhFt/JqHnUVVpS6OtWu+5XjJK/2epw6nBDG2yXN0FINXtkkaDJ4bc3o5R3YU5wOajToKg6drTnbVtnkks3iyJMVtwZuey+REJ9sJ5/Fs+/hVfrHTIhRuDOjdXNB5X+IQ07dk+TG1SQcRXz1aRSFN4M4fOaepZeTC/7gSxSLEzn6HMFkORL3CfkLRwwrGg==
     - SCTX:
         - Begin A1V6_AlchemyCheck_sc
         - ""
@@ -17219,53 +17219,53 @@
         - set alchemy to tempf1
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tif ( alchemy < 56 )"
+        - "\tif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_n_retort_ov, 1"
-        - "\telseif ( alchemy < 67 )"
+        - "\telseif ( alchemy < 63 )"
         - "\t\tplayer->AddItem A1V6_a_retort_ov, 1"
-        - "\telseif ( alchemy < 78 )"
+        - "\telseif ( alchemy < 76 )"
         - "\t\tplayer->AddItem A1V6_j_retort_ov, 1"
-        - "\telseif ( alchemy < 89 )"
+        - "\telseif ( alchemy < 88 )"
         - "\t\tplayer->AddItem A1V6_m_retort_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tif ( alchemy >= 89 )"
+        - "\tif ( alchemy >= 88 )"
         - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
-        - "\telseif ( alchemy < 56 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_n_retort_ov, 1"
-        - "\telseif ( alchemy < 67 )"
+        - "\telseif ( alchemy < 63 )"
         - "\t\tplayer->AddItem A1V6_a_retort_ov, 1"
-        - "\telseif ( alchemy < 78 )"
+        - "\telseif ( alchemy < 76 )"
         - "\t\tplayer->AddItem A1V6_j_retort_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tif ( alchemy >= 89 )"
+        - "\tif ( alchemy >= 88 )"
         - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
-        - "\telseif ( alchemy >= 78 )"
+        - "\telseif ( alchemy >= 76 )"
         - "\t\tplayer->AddItem A1V6_m_retort_in, 1"
-        - "\telseif ( alchemy < 56 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_n_retort_ov, 1"
-        - "\telseif ( alchemy < 67 )"
+        - "\telseif ( alchemy < 63 )"
         - "\t\tplayer->AddItem A1V6_a_retort_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
-        - "\tif ( alchemy >= 89 )"
+        - "\tif ( alchemy >= 88 )"
         - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
-        - "\telseif ( alchemy >= 78 )"
+        - "\telseif ( alchemy >= 76 )"
         - "\t\tplayer->AddItem A1V6_m_retort_in, 1"
-        - "\telseif ( alchemy >= 67 )"
+        - "\telseif ( alchemy >= 63 )"
         - "\t\tplayer->AddItem A1V6_j_retort_in, 1"
-        - "\telseif ( alchemy < 56 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_n_retort_ov, 1"
         - "\tendif"
         - else
-        - "\tif ( alchemy >= 89 )"
+        - "\tif ( alchemy >= 88 )"
         - "\t\tplayer->AddItem A1V6_g_retort_in, 1"
-        - "\telseif ( alchemy >= 78 )"
+        - "\telseif ( alchemy >= 76 )"
         - "\t\tplayer->AddItem A1V6_m_retort_in, 1"
-        - "\telseif ( alchemy >= 67 )"
+        - "\telseif ( alchemy >= 63 )"
         - "\t\tplayer->AddItem A1V6_j_retort_in, 1"
-        - "\telseif ( alchemy >= 56 )"
+        - "\telseif ( alchemy >= 51 )"
         - "\t\tplayer->AddItem A1V6_a_retort_in, 1"
         - "\tendif"
         - endif
@@ -17273,11 +17273,11 @@
         - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
         - "\tset calcinator to 20"
         - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
-        - "\tset calcinator to 15"
-        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
         - "\tset calcinator to 10"
+        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tset calcinator to 6"
         - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
-        - "\tset calcinator to 5"
+        - "\tset calcinator to 3"
         - else
         - "\tset calcinator to 0"
         - endif
@@ -17286,33 +17286,33 @@
         - ""
         - set calcinator to 0
         - if ( GetItemCount apparatus_g_alembic_01 > 0 )
-        - "\tif ( alchemy < 50 )"
+        - "\tif ( alchemy < 42 )"
         - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
-        - "\telseif ( alchemy < 70 )"
+        - "\telseif ( alchemy < 60 )"
         - "\t\tplayer->AddItem A1V6_a_alembic_ov, 1"
-        - "\telseif ( alchemy < 90 )"
+        - "\telseif ( alchemy < 78 )"
         - "\t\tplayer->AddItem A1V6_j_alembic_ov, 1"
-        - "\telseif ( alchemy < 110 )"
+        - "\telseif ( alchemy < 96 )"
         - "\t\tplayer->AddItem A1V6_m_alembic_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
-        - "\tif ( alchemy >= 110 )"
+        - "\tif ( alchemy >= 96 )"
         - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
-        - "\telseif ( alchemy < 50 )"
+        - "\telseif ( alchemy < 42 )"
         - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
-        - "\telseif ( alchemy < 70 )"
+        - "\telseif ( alchemy < 60 )"
         - "\t\tplayer->AddItem A1V6_a_alembic_ov, 1"
-        - "\telseif ( alchemy < 90 )"
+        - "\telseif ( alchemy < 78 )"
         - "\t\tplayer->AddItem A1V6_j_alembic_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
-        - "\tif ( alchemy >= 110 )"
+        - "\tif ( alchemy >= 96 )"
         - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
-        - "\telseif ( alchemy >= 90 )"
+        - "\telseif ( alchemy >= 78 )"
         - "\t\tplayer->AddItem A1V6_m_alembic_in, 1"
-        - "\telseif ( alchemy < 50 )"
+        - "\telseif ( alchemy < 42 )"
         - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
-        - "\telseif ( alchemy < 70 )"
+        - "\telseif ( alchemy < 60 )"
         - "\t\tplayer->AddItem A1V6_a_alembic_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
@@ -17322,59 +17322,59 @@
         - elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
         - "\tset calcinator to 1"
         - else
-        - "\tif ( alchemy >= 110 )"
+        - "\tif ( alchemy >= 96 )"
         - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
-        - "\telseif ( alchemy >= 90 )"
+        - "\telseif ( alchemy >= 78 )"
         - "\t\tplayer->AddItem A1V6_m_alembic_in, 1"
-        - "\telseif ( alchemy >= 70 )"
+        - "\telseif ( alchemy >= 60 )"
         - "\t\tplayer->AddItem A1V6_j_alembic_in, 1"
-        - "\telseif ( alchemy >= 50 )"
+        - "\telseif ( alchemy >= 42 )"
         - "\t\tplayer->AddItem A1V6_a_alembic_in, 1"
         - "\tendif"
         - endif
         - ""
         - if ( calcinator == 1 )
-        - "\tif ( alchemy >= 110 )"
+        - "\tif ( alchemy >= 96 )"
         - "\t\tplayer->AddItem A1V6_g_alembic_in, 1"
-        - "\telseif ( alchemy >= 90 )"
+        - "\telseif ( alchemy >= 78 )"
         - "\t\tplayer->AddItem A1V6_m_alembic_in, 1"
-        - "\telseif ( alchemy >= 70 )"
+        - "\telseif ( alchemy >= 60 )"
         - "\t\tplayer->AddItem A1V6_j_alembic_in, 1"
-        - "\telseif ( alchemy < 50 )"
+        - "\telseif ( alchemy < 42 )"
         - "\t\tplayer->AddItem A1V6_n_alembic_ov, 1"
         - "\tendif"
         - endif
         - ""
         - if ( GetItemCount apparatus_g_mortar_01 > 0 )
-        - "\tif ( alchemy < 60 )"
+        - "\tif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_a_mortar_ov, 1"
-        - "\telseif ( alchemy < 80 )"
+        - "\telseif ( alchemy < 69 )"
         - "\t\tplayer->AddItem A1V6_j_mortar_ov, 1"
-        - "\telseif ( alchemy < 100 )"
+        - "\telseif ( alchemy < 87 )"
         - "\t\tplayer->AddItem A1V6_m_mortar_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
-        - "\tif ( alchemy >= 100 )"
+        - "\tif ( alchemy >= 87 )"
         - "\t\tplayer->AddItem A1V6_g_mortar_in, 1"
-        - "\telseif ( alchemy < 60 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_a_mortar_ov, 1"
-        - "\telseif ( alchemy < 80 )"
+        - "\telseif ( alchemy < 69 )"
         - "\t\tplayer->AddItem A1V6_j_mortar_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
-        - "\tif ( alchemy >= 100 )"
+        - "\tif ( alchemy >= 87 )"
         - "\t\tplayer->AddItem A1V6_g_mortar_in, 1"
-        - "\telseif ( alchemy >= 80 )"
+        - "\telseif ( alchemy >= 69 )"
         - "\t\tplayer->AddItem A1V6_m_mortar_in, 1"
-        - "\telseif ( alchemy < 60 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tplayer->AddItem A1V6_a_mortar_ov, 1"
         - "\tendif"
         - elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
-        - "\tif ( alchemy >= 100 )"
+        - "\tif ( alchemy >= 87 )"
         - "\t\tplayer->AddItem A1V6_g_mortar_in, 1"
-        - "\telseif ( alchemy >= 80 )"
+        - "\telseif ( alchemy >= 69 )"
         - "\t\tplayer->AddItem A1V6_m_mortar_in, 1"
-        - "\telseif ( alchemy >= 60 )"
+        - "\telseif ( alchemy >= 51 )"
         - "\t\tplayer->AddItem A1V6_j_mortar_in, 1"
         - "\tendif"
         - endif
@@ -18697,7 +18697,7 @@
           shorts: 8
           longs: 0
           floats: 3
-        data_size: 1782
+        data_size: 1821
         var_table_size: 84
     - SCVR:
         - Difficulty
@@ -18711,7 +18711,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNVMFu00AQ3XVsxykRWKgUIYGYogqhRm13ncRJJFKp4tATFw4ot8gEAwkxjeL0kI9HYmbWiV1ljXpbv3lvZ94b275804LcETAeQ+RLiQ9NAR+hpzyZB6IBOg5KNDaoA8MKONyBPQSPClCrHRo1pSyOukWnpkCSFIAQXHnyhxQeiQQeHdEm5aUCRKl4G97or/H0Zjn7lWbbz/fLjQfIEr50nnCn63GlVX93OxYQhYuydY9b+yKAyWn4XSiFXvEGn2Y1zZEW8EwaOkS+fVZt/SXNPaoS0cH71OvwmOufkuWs4ETTfHYmW9KXH/aZ6rb0V8tkm64Lp5PfoahiDmHDh1iDsPehYMkJZ6EuNRkHrEEHzqHDVj2qCWOFY889ntArIqVZyprLNXdf44cjwiGna4uolHkNXNJ0d9Fq3G1A19Nuy3X60m1xaGTVkpkD3UcEVoS/34zb5jtxt8aP5dreo/ZQrPia/Anev8dHaolpPmXfuG9mXXDc+zH46TmHT8GfFy/m1e4dQwXVOsUgUdERYPI3hLsXyWqVrJPNfT79Oc3u1ptkPVUaJ1GcugtajwIbO7OwGzCykxdW8sBOTqzk/qgpG9aIo/9HazO6TjfYomzgkVGlaoweshswHNYYtZEHgxqjNnIcm78Bnft9tnBmpK+qFmZodv4nQX0pb6AkIheHgqxWoPtWwaJeYO+Q1Ajwd2cM0VGxn1MjPqn6SZZp9m0+K5X+fieH9MxGx6XY2Qs7O7azEzu7R+y3hn1cZeer+Sq1cN8Z7stD7iafb5MHdBMQnbuKfzP0pWop/wEYZHiO
+    - SCDT: eJyNlUFv00AQhXcd23EgAguVIiQQU1RxaEjrdWLHkUilikNPXDig3KIlGEiIaRSnh/x4JGZ2N7Grrqve1jPfzPi9HSc+f9uB0mEwmUDsc44PbQafYDDweBmwFog0qKKJUFEHslowHZvgsBbMRiYYtzk3R9GhU5s9gZIzwBBcePwnZx7VMDw6rAsiis4jwCglr8Mr8S2dXa3mv/Ni9+V2tfUAKeZz56kadDmhAtM/2XfHBEahX40eqtE+C2B6Ev5gUYRSsYNPr6qHIxaodxLQI/j6eX3017z0KEugg/2iN+GRyn+Wq7lh4lk5P+Ud7vOPB0tFl/vrldzlG6N0+idk9ZhDsexurEWxDyFTJcfKi+hckHDAHPTgDHpKqkc5pqUo10tPvaFnLK38xmxJpXXWVax7YOs5X+X8eh8yjwwbQ/9g3uW+iyJdQ5Lhkd4lZbBI9guACxLQS1KwWgqfux1lPRlmcd6BwSNsN1d4uF+3q3rihmhXLG2Hj2qLvj8jcbQZSlFfXcxhlHp6oa6JrujMrPDF3nusoFzPDIv1jnCA6b8Qbl7K9Vpu5Pa2nP2aFTebrdzMIoHORupyXOxG39V9urDQLchSK7y0wmlmhaUVTqI2b1ltjB/8GKxCN/kWR1QDPBwwzhp02uBGnTZ4NGzQaYNT84vlKc1KwakufV1XMEeti78S66vyFpbEUWArKBoLhL1g2VDgQGrlZSM/0HroqOWc6OLjuhy5yovvi3lV6dPqiUFgwwsbjheYWOmlnR6NrLS008kY6XeaPqrT5Xqxzi3se82+us9uy8VO3sG1QXQe6v8o+k4F5/8BJOl80Q==
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
@@ -18728,13 +18728,13 @@
         - short temp
         - ""
         - if ( state == 2 )
-        - "\tif ( alchemy < 40 )"
+        - "\tif ( alchemy < 33 )"
         - "\t\tset temp to 16"
-        - "\telseif ( alchemy < 60 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tset temp to 8"
-        - "\telseif ( alchemy < 80 )"
+        - "\telseif ( alchemy < 69 )"
         - "\t\tset temp to 4"
-        - "\telseif ( alchemy < 100 )"
+        - "\telseif ( alchemy < 87 )"
         - "\t\tset temp to 2"
         - "\telse"
         - "\t\tset temp to 1"
@@ -18768,12 +18768,19 @@
         - "\tif ( alchemy < retort )"
         - "\t\tset retort to alchemy"
         - "\tendif"
+        - "\tset alchemy to ( alchemy + calcinator )"
         - "\tif ( alchemy < mortar )"
         - "\t\tset mortar to alchemy"
         - "\tendif"
-        - "\tset mortar to ( mortar + calcinator )"
+        - "\tif ( alchemy < alembic )"
+        - "\t\tset alembic to alchemy"
+        - "\tendif"
+        - "\tset alembic to ( alembic - 9 )"
+        - "\tif ( alembic > mortar )"
+        - "\t\tset alembic to mortar"
+        - "\tendif"
         - "\tset temp to 0"
-        - "\tif ( mortar < 30 )"
+        - "\tif ( alembic < 15 )"
         - "\t\tset temp to 1"
         - "\telseif ( retort < 1 )"
         - "\t\tset temp to 1"
@@ -18791,10 +18798,7 @@
         - "\t\tStopScript A1V6_CalcAlchemy2_sc"
         - "\t\treturn"
         - "\tendif"
-        - "\tif ( alembic > calcinator )"
-        - "\t\tset alembic to calcinator"
-        - "\tendif"
-        - "\tset tempf2 to ( calcinator + 1 - alembic )"
+        - "\tset tempf2 to ( mortar + 1 - alembic )"
         - "\tset tempf1 to ( Random 100 )"
         - "\tset tempf1 to ( tempf1 * tempf2 / 100.0 )"
         - "\tset alchemy to ( alembic + tempf1 )"
@@ -18803,13 +18807,13 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_mortar_01 > 0 )
-        - "\tset mortar to 119"
+        - "\tset mortar to 104"
         - elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
-        - "\tset mortar to 99"
+        - "\tset mortar to 86"
         - elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
-        - "\tset mortar to 79"
+        - "\tset mortar to 68"
         - elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
-        - "\tset mortar to 59"
+        - "\tset mortar to 50"
         - else
         - "\tset A1V6_AlchemyRes to 2"
         - "\tStopScript A1V6_CalcAlchemy2_sc"
@@ -18817,43 +18821,43 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tset retort to 100"
+        - "\tset retort to 98"
         - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tset retort to 88"
+        - "\tset retort to 86"
         - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tset retort to 77"
+        - "\tset retort to 74"
         - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
-        - "\tset retort to 66"
+        - "\tset retort to 62"
         - else
-        - "\tset retort to 55"
+        - "\tset retort to 50"
         - endif
         - ""
         - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
         - "\tset calcinator to 20"
         - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
-        - "\tset calcinator to 15"
-        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
         - "\tset calcinator to 10"
+        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tset calcinator to 6"
         - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
-        - "\tset calcinator to 5"
+        - "\tset calcinator to 3"
         - else
         - "\tset calcinator to 0"
         - endif
         - ""
         - if ( GetItemCount apparatus_g_alembic_01 > 0 )
-        - "\tset alembic to 100"
+        - "\tset alembic to 113"
         - elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
-        - "\tset alembic to 80"
+        - "\tset alembic to 95"
         - elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
-        - "\tset alembic to 60"
+        - "\tset alembic to 77"
         - elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - elseif ( GetItemCount apparatus_a_spipe_01 > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - else
-        - "\tset alembic to 30"
+        - "\tset alembic to 41"
         - endif
         - ""
         - set state to 1
@@ -18866,7 +18870,7 @@
           shorts: 7
           longs: 0
           floats: 3
-        data_size: 1638
+        data_size: 1677
         var_table_size: 73
     - SCVR:
         - state
@@ -18879,7 +18883,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNlMtv00AQxr3xIw8qsFApQkJiiiqEGhF2k9hJJIJUceiJCweUm7UYAwk2tWz3kD8eqTNrO3aVddWLtZ75fbP7fX44zB1CzgxYr2HqMIY3jgGfYM5tlveNHniDpujXRb9VXNbFBRZHVVHwurrsM1YtV0NcXbtX4rsfXMXhnyjZf72NCwvEBOnrZ+3Gtyi3AVUGahlq+Wv3VPW/yDisGC/Iwws2ZA57f/AgTpiTxnIfZTb7xQwbNn9do13rUW15v2ZS7Z1rKMkZ4AX4RACygD0YwyWM8RwOYtgzMKYnlc/cUie0sIMFg87S9EzVMw89dTOiOuQ4elzFwsvYTdLM6tgEhjmg8RRmXaPx1pBiUVY1mfVg9ojA1LwBbM7dnwbH7a0TNfPzuvKjGTt/1HMg7zYOIn/k3SbvvdI7pvlU+RYYKFEfVNyHY6i75yp8Cv6S3qEJh48q+JFSUG9cHWRa7Qiw+e/CzQuZpjKTxW0e/A6Sm6yQWcAFnoSr1PEdE6uBjk40tAkrPbzTwgs9LLWwt+ozUxvx9OFodUazqMAtmg0sMsp5h9Fj2oTlssOoDl4sOozqYN8vv3xae56ycFFKX7UthGh2+0+ivpH3UDIlF8eCpFMgPK1g1y3Q7yA7BPgrLA3Rkis/56X4rO1HxlHyYxs2SvvwTI7xRIfjQ9HTOz3t62mpp+dEvynp0zadp9s00rBvS/blMVvk2728h5cB0XrG1W+GvlTB2B0gcmeb
+    - SCDT: eJyNlE9v00AQxXfjP3GgAguVIiQkpqji0NCwm8SOI5FKFQdOXDig3KIlGEiIqWW7h3x4pM7uOomrjqtekvWb39v1m7Ht87AHJWcwm8HQ5xwvfAafYDTyeNllHYiCgxjJWowbYjytxUlDTCa1mHQ5r5fTHq6+hFfye7y42iz/pNn2682mckEOBBaeNwvf0tIDdDH0cvSKN+GxqX9Wm2XNRItyecZ73Ocf9hHkEffzjdqmhcd/cebB/G/ImlpHa8ldzdHa+5AZywngD4iBBGQBa9CHc+jjffiIYY1hl57WMUvX3KGLFRSYDoj/T0y1RHu/yTqGdfZss+aZmtfcx2OB1mEKF5bE9eVuF0M6NambK+zsPL2bjGpR4kQCfZNa3Gn6YLenm2saRnS+A6NHtN3sF8D8NPzJBB7vHpk9L2d1V4htx4/aFvv+TIcDia3XiS7MYPZHmasXZkx6ROcghRgI+LjrPTp0rV8fNrTPCAeY/w/h+qXKc1Wo6qZc/F5k10WlioWQ2FlhhoNPoxgHFJ0RtANJTMJrEo4TElYkHIkud8g2Dh98GcigRVrhEYcDXDxgmrTkpODWnBQ8GbfkpOB4aD8RrslsEpxZ6+tmgiVmXf1T6D/YO2gZioAyZK0GSRvWLQb7sbvPq1Z+ZPPopY1zas0nzThqk2Y/VsuD09OPnhwFFJ5ROA4wIuk1TU8mJK1oOpoi/dbSx026zFd5SrDvLPvqPluVq626g9sG6fVYmg+Jfk8l57d6NmvY
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -18895,13 +18899,13 @@
         - short temp
         - ""
         - if ( state == 2 )
-        - "\tif ( alchemy < 40 )"
+        - "\tif ( alchemy < 33 )"
         - "\t\tset temp to 5"
-        - "\telseif ( alchemy < 60 )"
+        - "\telseif ( alchemy < 51 )"
         - "\t\tset temp to 6"
-        - "\telseif ( alchemy < 80 )"
+        - "\telseif ( alchemy < 69 )"
         - "\t\tset temp to 7"
-        - "\telseif ( alchemy < 100 )"
+        - "\telseif ( alchemy < 87 )"
         - "\t\tset temp to 8"
         - "\telse"
         - "\t\tset temp to 9"
@@ -18922,12 +18926,19 @@
         - "\tif ( alchemy < retort )"
         - "\t\tset retort to alchemy"
         - "\tendif"
+        - "\tset alchemy to ( alchemy + calcinator )"
         - "\tif ( alchemy < mortar )"
         - "\t\tset mortar to alchemy"
         - "\tendif"
-        - "\tset mortar to ( mortar + calcinator )"
+        - "\tif ( alchemy < alembic )"
+        - "\t\tset alembic to alchemy"
+        - "\tendif"
+        - "\tset alembic to ( alembic - 9 )"
+        - "\tif ( alembic > mortar )"
+        - "\t\tset alembic to mortar"
+        - "\tendif"
         - "\tset temp to 0"
-        - "\tif ( mortar < 30 )"
+        - "\tif ( alembic < 15 )"
         - "\t\tset temp to 1"
         - "\telseif ( retort < 1 )"
         - "\t\tset temp to 1"
@@ -18945,10 +18956,7 @@
         - "\t\tStopScript A1V6_CalcAlchemy5_sc"
         - "\t\treturn"
         - "\tendif"
-        - "\tif ( alembic > calcinator )"
-        - "\t\tset alembic to calcinator"
-        - "\tendif"
-        - "\tset tempf2 to ( calcinator + 1 - alembic )"
+        - "\tset tempf2 to ( mortar + 1 - alembic )"
         - "\tset tempf1 to ( Random 100 )"
         - "\tset tempf1 to ( tempf1 * tempf2 / 100.0 )"
         - "\tset alchemy to ( alembic + tempf1 )"
@@ -18957,13 +18965,13 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_mortar_01 > 0 )
-        - "\tset mortar to 119"
+        - "\tset mortar to 104"
         - elseif ( GetItemCount apparatus_m_mortar_01 > 0 )
-        - "\tset mortar to 99"
+        - "\tset mortar to 86"
         - elseif ( GetItemCount apparatus_j_mortar_01 > 0 )
-        - "\tset mortar to 79"
+        - "\tset mortar to 68"
         - elseif ( GetItemCount apparatus_a_mortar_01 > 0 )
-        - "\tset mortar to 59"
+        - "\tset mortar to 50"
         - else
         - "\tset A1V6_AlchemyRes to 2"
         - "\tStopScript A1V6_CalcAlchemy5_sc"
@@ -18971,43 +18979,43 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tset retort to 100"
+        - "\tset retort to 98"
         - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tset retort to 88"
+        - "\tset retort to 86"
         - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tset retort to 77"
+        - "\tset retort to 74"
         - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
-        - "\tset retort to 66"
+        - "\tset retort to 62"
         - else
-        - "\tset retort to 55"
+        - "\tset retort to 50"
         - endif
         - ""
         - if ( GetItemCount apparatus_g_calcinator_01 > 0 )
         - "\tset calcinator to 20"
         - elseif ( GetItemCount apparatus_m_calcinator_01 > 0 )
-        - "\tset calcinator to 15"
-        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
         - "\tset calcinator to 10"
+        - elseif ( GetItemCount apparatus_j_calcinator_01 > 0 )
+        - "\tset calcinator to 6"
         - elseif ( GetItemCount apparatus_a_calcinator_01 > 0 )
-        - "\tset calcinator to 5"
+        - "\tset calcinator to 3"
         - else
         - "\tset calcinator to 0"
         - endif
         - ""
         - if ( GetItemCount apparatus_g_alembic_01 > 0 )
-        - "\tset alembic to 100"
+        - "\tset alembic to 113"
         - elseif ( GetItemCount apparatus_m_alembic_01 > 0 )
-        - "\tset alembic to 80"
+        - "\tset alembic to 95"
         - elseif ( GetItemCount apparatus_j_alembic_01 > 0 )
-        - "\tset alembic to 60"
+        - "\tset alembic to 77"
         - elseif ( GetItemCount apparatus_a_alembic_01 > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - elseif ( GetItemCount apparatus_a_spipe_01 > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - elseif ( GetItemCount apparatus_a_spipe_tsiya > 0 )
-        - "\tset alembic to 40"
+        - "\tset alembic to 59"
         - else
-        - "\tset alembic to 30"
+        - "\tset alembic to 41"
         - endif
         - ""
         - set state to 1
