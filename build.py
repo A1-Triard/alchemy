@@ -980,6 +980,8 @@ def prepare_text(path, d):
 
 def make_archive(name, dir):
     chdir(dir)
+    if path.exists(name + '.7z'):
+        remove(name + '.7z')
     subprocess.run('7za a ../' + name + '.7z .', stdout=stdout, stderr=stderr, check=True)
     chdir('..')
 
