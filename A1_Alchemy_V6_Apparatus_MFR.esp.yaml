@@ -26859,7 +26859,7 @@
           shorts: 8
           longs: 0
           floats: 3
-        data_size: 1821
+        data_size: 1822
         var_table_size: 84
     - SCVR:
         - Difficulty
@@ -26873,7 +26873,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNlUFv00AQhXcd23EgAguVIiQQU1RxaEjrdWLHkUilikNPXDig3KIlGEiIaRSnh/x4JGZ2N7Grrqve1jPfzPi9HSc+f9uB0mEwmUDsc44PbQafYDDweBmwFog0qKKJUFEHslowHZvgsBbMRiYYtzk3R9GhU5s9gZIzwBBcePwnZx7VMDw6rAsiis4jwCglr8Mr8S2dXa3mv/Ni9+V2tfUAKeZz56kadDmhAtM/2XfHBEahX40eqtE+C2B6Ev5gUYRSsYNPr6qHIxaodxLQI/j6eX3017z0KEugg/2iN+GRyn+Wq7lh4lk5P+Ud7vOPB0tFl/vrldzlG6N0+idk9ZhDsexurEWxDyFTJcfKi+hckHDAHPTgDHpKqkc5pqUo10tPvaFnLK38xmxJpXXWVax7YOs5X+X8eh8yjwwbQ/9g3uW+iyJdQ5Lhkd4lZbBI9guACxLQS1KwWgqfux1lPRlmcd6BwSNsN1d4uF+3q3rihmhXLG2Hj2qLvj8jcbQZSlFfXcxhlHp6oa6JrujMrPDF3nusoFzPDIv1jnCA6b8Qbl7K9Vpu5Pa2nP2aFTebrdzMIoHORupyXOxG39V9urDQLchSK7y0wmlmhaUVTqI2b1ltjB/8GKxCN/kWR1QDPBwwzhp02uBGnTZ4NGzQaYNT84vlKc1KwakufV1XMEeti78S66vyFpbEUWArKBoLhL1g2VDgQGrlZSM/0HroqOWc6OLjuhy5yovvi3lV6dPqiUFgwwsbjheYWOmlnR6NrLS008kY6XeaPqrT5Xqxzi3se82+us9uy8VO3sG1QXQe6v8o+k4F5/8BJOl80Q==
+    - SCDT: eJyNlU1v00AQhnf9FQcqsFApQgIxRRWHhrReJ3YSiVSqOPTEhQPKLVqCgYSYRnF6yI9HYmZ3E7vKuuptPfPMjN93x0nA37ahdBiMx5AEnONDi8En6PV8XobMBZGFVTQVKurAsBbMRibYrwWHAxNMWpybo2jTqcWeQMkZYAguff6TM59qGB4ddgQiji9iwCglb6Jr8S2bXi9nv/Ni++VuufEBKRZw56kadDWmAtM/3XXHBEahW43uq9EBC2FyGv1gcYxSsUNAr6qHIxaqdxLQIfjmeX3017z0KUugg/3iN9Gxyn+Wy5lhkmk5O+NtHvCPe0vFEQ9WS7nN10bp5E/E6jGHYsP7MZdiHyKmSk6UF/GFIOGAOejAOXSUVJ9yTEtRrpe+ekPfWFr5jdmSSuusp1hvz9ZzgcoF9T5kHhk2gu7evKtdF0V6hiTDY71LymCR7hYAFySkl6RgtRQB99rKejLM4rwDvUfYbq5wf7/ekeqJG6JdsbTtP6ot+v6MxNFmKEVddTH7UerphbomuqJzs8KXO++xgnIdMyzRO8IBJv8iuH0pVyu5lpu7cvprWtyuN3I9jQU6G6vL8bAbfVeHdGGhXRhmVnhhhbOhFZZWOI1b3LXamDz4MViFrvMNjqgG+Epo3CD0kEahgwahNniQNgi1wZn5yfKVaCXhTJe+rkuYodj5X4n1VbmLJQmpOCwoGguEvWDRUOBAZuVlI9/Teuio5Zzq4pO6HLnMi+/zWVUZ0JWIXmjDCxvuwii10gs7PRhYaWmn0xHS7zR9XKfL1XyVW9j3mn11yG7K+Vbew7VBdO7rPyn6UAXn/wFOr3z0
     - SCTX:
         - Begin A1V6_CalcAlchemy2_sc
         - ""
@@ -26983,11 +26983,11 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tset retort to 98"
+        - "\tset retort to 100"
         - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tset retort to 86"
+        - "\tset retort to 87"
         - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tset retort to 74"
+        - "\tset retort to 75"
         - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
         - "\tset retort to 62"
         - else
@@ -27032,7 +27032,7 @@
           shorts: 7
           longs: 0
           floats: 3
-        data_size: 1677
+        data_size: 1678
         var_table_size: 73
     - SCVR:
         - state
@@ -27045,7 +27045,7 @@
         - tempf1
         - tempf2
         - tempf3
-    - SCDT: eJyNlE9v00AQxXfjP3GgAguVIiQkpqji0NCwm8SOI5FKFQdOXDig3KIlGEiIqWW7h3x4pM7uOomrjqtekvWb39v1m7Ht87AHJWcwm8HQ5xwvfAafYDTyeNllHYiCgxjJWowbYjytxUlDTCa1mHQ5r5fTHq6+hFfye7y42iz/pNn2682mckEOBBaeNwvf0tIDdDH0cvSKN+GxqX9Wm2XNRItyecZ73Ocf9hHkEffzjdqmhcd/cebB/G/ImlpHa8ldzdHa+5AZywngD4iBBGQBa9CHc+jjffiIYY1hl57WMUvX3KGLFRSYDoj/T0y1RHu/yTqGdfZss+aZmtfcx2OB1mEKF5bE9eVuF0M6NambK+zsPL2bjGpR4kQCfZNa3Gn6YLenm2saRnS+A6NHtN3sF8D8NPzJBB7vHpk9L2d1V4htx4/aFvv+TIcDia3XiS7MYPZHmasXZkx6ROcghRgI+LjrPTp0rV8fNrTPCAeY/w/h+qXKc1Wo6qZc/F5k10WlioWQ2FlhhoNPoxgHFJ0RtANJTMJrEo4TElYkHIkud8g2Dh98GcigRVrhEYcDXDxgmrTkpODWnBQ8GbfkpOB4aD8RrslsEpxZ6+tmgiVmXf1T6D/YO2gZioAyZK0GSRvWLQb7sbvPq1Z+ZPPopY1zas0nzThqk2Y/VsuD09OPnhwFFJ5ROA4wIuk1TU8mJK1oOpoi/dbSx026zFd5SrDvLPvqPluVq626g9sG6fVYmg+Jfk8l57d6NmvY
+    - SCDT: eJyNlM9v0zAUx+3mR1OYIEJjCAmJNzRxWFmx2yZpJDpp4sCJCwfUW2RCgJaERUl26B+PxLOdtpnqoF1a5/s+Xzvf95K41B9BTQkslzB1KcULl8AHmM0cWg/JAALvIAa8FcOOGMatGHXERdSKiyGl7TIe4eqTf8O/hslNnv7Kiu3nu7yxgU8YFp52C1+y2gF0EfRS9LJX/qmqfxR52jJBUqcXdERd+m4fgZ9Qt8zFNqsc+oMSB1a/fdLVBlJb3Ncsqb31ibKcAf4Am3BAFrAGY7iEMd6HixjWCHbpcRuzttUd2lhBgciA+P9IVWu0j7uspVhrz3Zrjqo53X0c4kkdYrjSJK6vd7so0mpJ2VymZ+fI3XjQihwn4smblOJOkwfbI9lc1TBD5wcwe0Db1X4erM7974Th8faJ2vN62XbFsO38Qdti35/IcMCx9TLRlRrM/ih19UyNSY7oEjhjEwbvd71Hh6yN28Om+hmhAKu/Ptw+F2UpKtHc1cnPpLitGlEljGNnmRoOPo1s7pnowkBbsAiN8MYIhwsjLIxwwIbUMrZx+t+XwRi0yho84nCArYKynqDHNAaNeoKa4CjoCWqCw6n+RtgqtIpwoa0vuxFSDLv+I9B/sA/QMpUpjg1Fr4GbDZseg/7aHfOil5/pPHKp45xr81k3jsiz4ts6PTgdORI+80x4YcItiAMjvTHTUWSkhZkOYqRfa/q0S9fluswM7BvNvjhmm3q9Ffdw3SC5nnP1JZEvKqf0H5MUa/s=
     - SCTX:
         - Begin A1V6_CalcAlchemy5_sc
         - ""
@@ -27141,11 +27141,11 @@
         - endif
         - ""
         - if ( GetItemCount apparatus_g_retort_01 > 0 )
-        - "\tset retort to 98"
+        - "\tset retort to 100"
         - elseif ( GetItemCount apparatus_m_retort_01 > 0 )
-        - "\tset retort to 86"
+        - "\tset retort to 87"
         - elseif ( GetItemCount apparatus_j_retort_01 > 0 )
-        - "\tset retort to 74"
+        - "\tset retort to 75"
         - elseif ( GetItemCount apparatus_a_retort_01 > 0 )
         - "\tset retort to 62"
         - else
