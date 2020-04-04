@@ -1,0 +1,73 @@
+- TES3:
+    - HEDR:
+        version: 1067869798
+        type: ESP
+        author: A1
+        description:
+          - "Измененные некоторые существующие и добавляет новые диалоги для соответствия новой системе алхимии. Вспомогательный плагин для A1_Alchemy_V6_Apparatus."
+        records: 4
+    - MAST: Morrowind.esm
+    - DATA: 79764287
+    - MAST: Tribunal.esm
+    - DATA: 6616539
+    - MAST: Bloodmoon.esm
+    - DATA: 11799703
+- DIAL:
+    - NAME: Исцеление Мора
+    - DATA: Topic
+- INFO:
+    - INAM: "2272717869240894064"
+    - PNAM: "20977197453234215883"
+    - NNAM: "2423845191747229639"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 0
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - ONAM: galos mathendis
+    - NAME: "Андил сообщил мне, что доволен привезенным вами @зельем#. Пожалуйста, примите эти 500 дрейков в знак благодарности от моего @покровителя#, @Господина Ариона#."
+    - SCVR: 34JX3HT_CureBlight
+    - INTV: 50
+    - BNAM:
+        - Journal HT_CureBlight 100
+        - Player->AddItem Gold_001 500
+        - "ModPCFacRep 5 \"Telvanni\""
+        - ModDisposition 5
+- INFO:
+    - INAM: "2423845191747229639"
+    - PNAM: "2272717869240894064"
+    - NNAM: "2523050488600675"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 0
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - ONAM: galos mathendis
+    - NAME: "Вы должны поговорить с аптекарем Андилом в @Тель Восе#. Достаньте три склянки @зелья# @Исцеления Мора# и доставьте их Андилу. Вы можете купить их у одного из поставщиков или @изготовить сами#."
+    - SCVR: "01272"
+    - INTV: 55
+    - SCVR: 34JX3HT_FyrMessage
+    - INTV: 100
+    - BNAM:
+        - Journal HT_CureBlight 10
+- INFO:
+    - INAM: "2523050488600675"
+    - PNAM: "2423845191747229639"
+    - NNAM: "1845116731929925941"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 0
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - ONAM: galos mathendis
+    - NAME: "Вы должны поговорить с аптекарем Андилом в @Тель Восе#. Достаньте три склянки @зелья# @Исцеления Мора# и доставьте их Андилу. Вам придется купить их у одного из поставщиков: вряд ли вы сможете @изготовить их сами#."
+    - SCVR: 34JX3HT_FyrMessage
+    - INTV: 100
+    - BNAM:
+        - Journal HT_CureBlight 10

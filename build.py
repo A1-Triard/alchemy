@@ -999,6 +999,7 @@ def main():
     mkdir('ar')
     copytree('Data Files', 'ar/Data Files')
     copyfile('A1_Alchemy_DaeCursed.esp.yaml', 'ar/Data Files/A1_Alchemy_DaeCursed.esp.yaml')
+    copyfile('A1_Alchemy_Dialogs.esp.yaml', 'ar/Data Files/A1_Alchemy_Dialogs.esp.yaml')
     prepare_text('Readme', 'ar/')
     prepare_text('Versions', 'ar/')
     copytree('Screenshots', 'ar/Screenshots')
@@ -1031,6 +1032,7 @@ def main():
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_PU.esp', 2026, 10, 5, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_PR.esp', 2014, 8, 3, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_DaeCursed.esp', 2014, 8, 2, 18, 53, 0)
+    assembly_plugin('ar/Data Files/A1_Alchemy_Dialogs.esp', 2014, 8, 2, 18, 53, 0)
     make_archive('A1_Alchemy_2.0', 'ar')
     rmtree('ar')    
 
