@@ -291,7 +291,7 @@ def gen_script(name, lines):
 
 def gen_add_script(kind, ingrs, level, index):
     (groups, pairs) = ingrs
-    add_name = 'A1V6_AAdd' + str(index) + '_' + kind.name + '_' + str(level)
+    add_name = 'A1V7_AAdd' + str(index) + '_' + kind.name + '_' + str(level)
     s = []
     s.append('Begin ' + add_name)
     s.append('')
@@ -306,8 +306,8 @@ def gen_add_script(kind, ingrs, level, index):
     s.append('set PCSkipEquip to 1')
     s.append('')
     s.append('if ( state == 1 )')
-    s.append('	if ( A1V6_AlchemyRes != 0 )')
-    s.append('		if ( ScriptRunning A1V6_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + '_sc == 0 )')
+    s.append('	if ( A1V7_AlchemyRes != 0 )')
+    s.append('		if ( ScriptRunning A1V7_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + '_sc == 0 )')
     s.append('			set state to 2')
     s.append('		endif')
     s.append('	endif')
@@ -319,17 +319,17 @@ def gen_add_script(kind, ingrs, level, index):
     s.append('		set OnPCEquip to 0')
     s.append('')
     if type(kind.potion) == Potion2:
-        s.append('		set A1V6_CalcAlchemy2_sc.Difficulty to ' + str(kind.potion.difficulty))
-    s.append('		set A1V6_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + ' to 1')
-    s.append('		set A1V6_AlchemyRes to 0')
+        s.append('		set A1V7_CalcAlchemy2_sc.Difficulty to ' + str(kind.potion.difficulty))
+    s.append('		set A1V7_CalcAlchemy' + ('2' if type(kind.potion) == Potion2 else '5') + ' to 1')
+    s.append('		set A1V7_AlchemyRes to 0')
     s.append('		set state to 1')
     s.append('	endif')
     s.append('	return')
     s.append('endif')
     s.append('')
-    s.append('set A1V6_AlchemyCheck to 1')
+    s.append('set A1V7_AlchemyCheck to 1')
     s.append('set state to 0')
-    s.append('if ( A1V6_AlchemyRes < 4 )')
+    s.append('if ( A1V7_AlchemyRes < 4 )')
     s.append('	return')
     s.append('endif')
     s.append('')
@@ -461,25 +461,25 @@ def gen_add_script(kind, ingrs, level, index):
             s.append('endif')
     s.append('')
     s.append('if ( add == 0 )')
-    s.append('	set A1V6_AlchemyRes to 1')
+    s.append('	set A1V7_AlchemyRes to 1')
     s.append('	return')
     s.append('endif')
     if type(kind.potion) == Potion2:
-        s.append('if ( A1V6_AlchemyRes == 5 )')
+        s.append('if ( A1V7_AlchemyRes == 5 )')
         s.append('	player->AddItem ' + kind.potion.id_1 + ', 1')
-        s.append('elseif ( A1V6_AlchemyRes == 6 )')
+        s.append('elseif ( A1V7_AlchemyRes == 6 )')
         s.append('	player->AddItem ' + kind.potion.id_1 + ', 2')
         s.append('endif')
     else:
-        s.append('if ( A1V6_AlchemyRes == 5 )')
+        s.append('if ( A1V7_AlchemyRes == 5 )')
         s.append('	player->AddItem ' + kind.potion.id_broken_1 + ', 1')
-        s.append('elseif ( A1V6_AlchemyRes == 6 )')
+        s.append('elseif ( A1V7_AlchemyRes == 6 )')
         s.append('	player->AddItem ' + kind.potion.id_cheap_1 + ', 1')
-        s.append('elseif ( A1V6_AlchemyRes == 7 )')
+        s.append('elseif ( A1V7_AlchemyRes == 7 )')
         s.append('	player->AddItem ' + kind.potion.id_standard_1 + ', 1')
-        s.append('elseif ( A1V6_AlchemyRes == 8 )')
+        s.append('elseif ( A1V7_AlchemyRes == 8 )')
         s.append('	player->AddItem ' + kind.potion.id_qualitative_1 + ', 1')
-        s.append('elseif ( A1V6_AlchemyRes == 9 )')
+        s.append('elseif ( A1V7_AlchemyRes == 9 )')
         s.append('	player->AddItem ' + kind.potion.id_exclusive_1 + ', 1')
         s.append('endif')
     s.append('')
@@ -502,17 +502,17 @@ def gen_check_script(kind, ingrs, index, next_kind):
     if not has_15 and not has_30 and not has_45 and not has_60:
         print(kind.name, 'has error')
         sys.exit(11)
-    check_name = 'A1V6_ACheck' + str(index) + '_' + kind.name + '_sc'
+    check_name = 'A1V7_ACheck' + str(index) + '_' + kind.name + '_sc'
     s = []
     s.append('Begin ' + check_name)
     s.append('')
     if not groups and len(pairs) == 1:
-        s.append('if ( player->GetItemCount "A1V6_L' + str(pair_level(pairs[0], kind)) + '_' + kind.potion.id_base + '" == 1 )')
-        s.append('	player->RemoveItem "A1V6_L' + str(pair_level(pairs[0], kind)) + '_' + kind.potion.id_base + '", 1')
+        s.append('if ( player->GetItemCount "A1V7_L' + str(pair_level(pairs[0], kind)) + '_' + kind.potion.id_base + '" == 1 )')
+        s.append('	player->RemoveItem "A1V7_L' + str(pair_level(pairs[0], kind)) + '_' + kind.potion.id_base + '", 1')
         s.append('endif')
         s.append('if ( player->GetItemCount "' + pairs[0][0].name + '" > 0 )')
         s.append('	if ( player->GetItemCount "' + pairs[0][1].name + '" > 0 )')
-        s.append('		player->AddItem "A1V6_L' + str(pair_level(pairs[0], kind)) + '_' + kind.potion.id_base + '", 1')
+        s.append('		player->AddItem "A1V7_L' + str(pair_level(pairs[0], kind)) + '_' + kind.potion.id_base + '", 1')
         s.append('	endif')
         s.append('endif')
     else:
@@ -527,20 +527,20 @@ def gen_check_script(kind, ingrs, index, next_kind):
         s.append('')
         line = ''
         if has_15:
-            s.append('if ( player->GetItemCount "A1V6_L15_' + kind.potion.id_base + '" == 1 )')
-            s.append('	player->RemoveItem "A1V6_L15_' + kind.potion.id_base + '", 1')
+            s.append('if ( player->GetItemCount "A1V7_L15_' + kind.potion.id_base + '" == 1 )')
+            s.append('	player->RemoveItem "A1V7_L15_' + kind.potion.id_base + '", 1')
             line = 'else' if ingrs_30 or ingrs_45 or ingrs_60 else ''
         if has_30:
-            s.append(line + 'if ( player->GetItemCount "A1V6_L30_' + kind.potion.id_base + '" == 1 )')
-            s.append('	player->RemoveItem "A1V6_L30_' + kind.potion.id_base + '", 1')
+            s.append(line + 'if ( player->GetItemCount "A1V7_L30_' + kind.potion.id_base + '" == 1 )')
+            s.append('	player->RemoveItem "A1V7_L30_' + kind.potion.id_base + '", 1')
             line = 'else' if ingrs_45 or ingrs_60 else ''
         if has_45:
-            s.append(line + 'if ( player->GetItemCount "A1V6_L45_' + kind.potion.id_base + '" == 1 )')
-            s.append('	player->RemoveItem "A1V6_L45_' + kind.potion.id_base + '", 1')
+            s.append(line + 'if ( player->GetItemCount "A1V7_L45_' + kind.potion.id_base + '" == 1 )')
+            s.append('	player->RemoveItem "A1V7_L45_' + kind.potion.id_base + '", 1')
             line = 'else' if ingrs_60 else ''
         if has_60:
-            s.append(line + 'if ( player->GetItemCount "A1V6_L60_' + kind.potion.id_base + '" == 1 )')
-            s.append('	player->RemoveItem "A1V6_L60_' + kind.potion.id_base + '", 1')
+            s.append(line + 'if ( player->GetItemCount "A1V7_L60_' + kind.potion.id_base + '" == 1 )')
+            s.append('	player->RemoveItem "A1V7_L60_' + kind.potion.id_base + '", 1')
         s.append('endif')
         s.append('')
         if has_15:
@@ -615,42 +615,42 @@ def gen_check_script(kind, ingrs, index, next_kind):
             s.append('')
         if has_15:
             s.append('if ( in15 > 1 )')
-            s.append('	player->AddItem "A1V6_L15_' + kind.potion.id_base + '", 1')
+            s.append('	player->AddItem "A1V7_L15_' + kind.potion.id_base + '", 1')
             line = 'else' if has_30 or has_45 or has_60 else ''
         if has_30:
             s.append(line + 'if ( in30 > 1 )')
-            s.append('	player->AddItem "A1V6_L30_' + kind.potion.id_base + '", 1')
+            s.append('	player->AddItem "A1V7_L30_' + kind.potion.id_base + '", 1')
             line = 'else' if has_45 or has_60 else ''
         if has_45:
             s.append(line + 'if ( in45 > 1 )')
-            s.append('	player->AddItem "A1V6_L45_' + kind.potion.id_base + '", 1')
+            s.append('	player->AddItem "A1V7_L45_' + kind.potion.id_base + '", 1')
             line = 'else' if has_60 else ''
         if has_60:
             s.append(line + 'if ( in60 > 1 )')
-            s.append('	player->AddItem "A1V6_L60_' + kind.potion.id_base + '", 1')
+            s.append('	player->AddItem "A1V7_L60_' + kind.potion.id_base + '", 1')
         s.append('endif')
     s.append('')
     s.append('StopScript ' + check_name)
     if next_kind == None:
-        s.append('if ( A1V6_AlchemyRes == 0 )')
+        s.append('if ( A1V7_AlchemyRes == 0 )')
         s.append('	MessageBox "Готово"')
-        s.append('elseif ( A1V6_AlchemyRes == 1 )')
+        s.append('elseif ( A1V7_AlchemyRes == 1 )')
         s.append('	MessageBox "Недостаточно компонентов"')
-        s.append('elseif ( A1V6_AlchemyRes == 2 )')
+        s.append('elseif ( A1V7_AlchemyRes == 2 )')
         s.append('	MessageBox "Вам нужны ступка и пестик"')
-        s.append('elseif ( A1V6_AlchemyRes == 3 )')
+        s.append('elseif ( A1V7_AlchemyRes == 3 )')
         s.append('	MessageBox "Выглядит слишком сложным"')
-        s.append('elseif ( A1V6_AlchemyRes == 4 )')
+        s.append('elseif ( A1V7_AlchemyRes == 4 )')
         s.append('	PlaySound "potion fail"')
         s.append('	MessageBox "Вам не удалось создать зелье"')
         s.append('else')
         s.append('	PlaySound "potion success"')
         s.append('	MessageBox "Вы создали зелье"')
-        s.append('	StartScript A1V6_ModAlchemyExp')
+        s.append('	StartScript A1V7_ModAlchemyExp')
         s.append('endif')
-        s.append('set A1V6_AlchemyRes to 0')
+        s.append('set A1V7_AlchemyRes to 0')
     else:
-        s.append('StartScript A1V6_ACheck' + str(next_kind[0]) + '_' + next_kind[1].name + '_sc')
+        s.append('StartScript A1V7_ACheck' + str(next_kind[0]) + '_' + next_kind[1].name + '_sc')
     s.append('')
     s.append('End')
     return gen_script(check_name, s)
@@ -660,33 +660,33 @@ def gen_del_script(kind, ingrs, index, next_kind):
     ingrs_30 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 30))
     ingrs_45 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 45))
     ingrs_60 = not ingrs_empty(filter_and_group_ingredients(ingrs, kind, 60))
-    del_name = 'A1V6_ADel' + str(index) + '_' + kind.name + '_sc'
+    del_name = 'A1V7_ADel' + str(index) + '_' + kind.name + '_sc'
     s = []
     s.append('Begin ' + del_name)
     s.append('')
     line = ''
     if ingrs_15:
-        s.append('if ( player->GetItemCount "A1V6_L15_' + kind.potion.id_base + '" == 1 )')
-        s.append('	player->RemoveItem "A1V6_L15_' + kind.potion.id_base + '", 1')
+        s.append('if ( player->GetItemCount "A1V7_L15_' + kind.potion.id_base + '" == 1 )')
+        s.append('	player->RemoveItem "A1V7_L15_' + kind.potion.id_base + '", 1')
         line = 'else' if ingrs_30 or ingrs_45 or ingrs_60 else ''
     if ingrs_30:
-        s.append(line + 'if ( player->GetItemCount "A1V6_L30_' + kind.potion.id_base + '" == 1 )')
-        s.append('	player->RemoveItem "A1V6_L30_' + kind.potion.id_base + '", 1')
+        s.append(line + 'if ( player->GetItemCount "A1V7_L30_' + kind.potion.id_base + '" == 1 )')
+        s.append('	player->RemoveItem "A1V7_L30_' + kind.potion.id_base + '", 1')
         line = 'else' if ingrs_45 or ingrs_60 else ''
     if ingrs_45:
-        s.append(line + 'if ( player->GetItemCount "A1V6_L45_' + kind.potion.id_base + '" == 1 )')
-        s.append('	player->RemoveItem "A1V6_L45_' + kind.potion.id_base + '", 1')
+        s.append(line + 'if ( player->GetItemCount "A1V7_L45_' + kind.potion.id_base + '" == 1 )')
+        s.append('	player->RemoveItem "A1V7_L45_' + kind.potion.id_base + '", 1')
         line = 'else' if ingrs_60 else ''
     if ingrs_60:
-        s.append(line + 'if ( player->GetItemCount "A1V6_L60_' + kind.potion.id_base + '" == 1 )')
-        s.append('	player->RemoveItem "A1V6_L60_' + kind.potion.id_base + '", 1')
+        s.append(line + 'if ( player->GetItemCount "A1V7_L60_' + kind.potion.id_base + '" == 1 )')
+        s.append('	player->RemoveItem "A1V7_L60_' + kind.potion.id_base + '", 1')
     s.append('endif')
     s.append('')
     s.append('StopScript ' + del_name)
     if next_kind == None:
-        s.append('StartScript A1V6_ADelPlus')
+        s.append('StartScript A1V7_ADelPlus')
     else:
-        s.append('StartScript A1V6_ADel' + str(next_kind[0]) + '_' + next_kind[1].name + '_sc')
+        s.append('StartScript A1V7_ADel' + str(next_kind[0]) + '_' + next_kind[1].name + '_sc')
     s.append('')
     s.append('End')
     return gen_script(del_name, s)
@@ -698,7 +698,7 @@ def gen_add_item(kind, index, level):
     if kind.potion is None:
         print(kind.name + ' does not have potion')
         sys.exit(1)
-    add_name = 'A1V6_AAdd' + str(index) + '_' + kind.name + '_' + str(level)
+    add_name = 'A1V7_AAdd' + str(index) + '_' + kind.name + '_' + str(level)
     irdt = {
         'weight': 0.0,
         'value': 0,
@@ -723,7 +723,7 @@ def gen_add_item(kind, index, level):
             gen_effect_prop(irdt, kind.effect[1], '_skill', level)
         else:
             gen_effect_prop(irdt, kind.effect[1], '_attribute', level)
-    name = 'A1V6_L' + str(level) + '_' + kind.potion.id_base
+    name = 'A1V7_L' + str(level) + '_' + kind.potion.id_base
     if len(name) > 31:
         print('too long name')
         sys.exit(31)
@@ -741,7 +741,7 @@ def gen_add_item(kind, index, level):
 def gen_level_book(level):
     return {
         'BOOK': [
-            {'NAME': 'A1V6_AlchemyPlus_' + str(level)},
+            {'NAME': 'A1V7_AlchemyPlus_' + str(level)},
             {'MODL': 'm\\Text_Scroll_01.NIF'},
             {'FNAM': 'Навык алхимии вырос'},
             {'BKDT': {
@@ -912,49 +912,49 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second, suffix
         au3.write('\n$ingrs_set = "' + ingrs_set +'"\n\n')
         au3.write(au3_header)
         au3.write('\n')
-        au3.write('$script = "A1V6_AppaInfo_sc"\n')
+        au3.write('$script = "A1V7_AppaInfo_sc"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_AlchemyActivator_sc"\n')
+        au3.write('$script = "A1V7_AlchemyActivator_sc"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_ApparatusDeactivate_sc"\n')
+        au3.write('$script = "A1V7_ApparatusDeactivate_sc"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_ApparatusSetUp"\n')
+        au3.write('$script = "A1V7_ApparatusSetUp"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_Calcinator_sc"\n')
+        au3.write('$script = "A1V7_Calcinator_sc"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_Alembic_sc"\n')
+        au3.write('$script = "A1V7_Alembic_sc"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_Retort_sc"\n')
+        au3.write('$script = "A1V7_Retort_sc"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_ApparatusItem_1_sc"\n')
+        au3.write('$script = "A1V7_ApparatusItem_1_sc"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_ApparatusItem_2_sc"\n')
+        au3.write('$script = "A1V7_ApparatusItem_2_sc"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_ApparatusItem_3_sc"\n')
+        au3.write('$script = "A1V7_ApparatusItem_3_sc"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_ModAlchemyExp"\n')
+        au3.write('$script = "A1V7_ModAlchemyExp"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_CalcAlchemy2_sc"\n')
+        au3.write('$script = "A1V7_CalcAlchemy2_sc"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_CalcAlchemy5_sc"\n')
+        au3.write('$script = "A1V7_CalcAlchemy5_sc"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_StartAlchemy"\n')
+        au3.write('$script = "A1V7_StartAlchemy"\n')
         au3.write(au3_script)
         au3.write('\n')
-        au3.write('$script = "A1V6_AlchemyCheck_sc"\n')
+        au3.write('$script = "A1V7_AlchemyCheck_sc"\n')
         au3.write(au3_script)
         for script in chain(check_scripts, add_scripts, del_scripts):
             script_name = script['SCPT'][0]['SCHD']['name']
@@ -964,8 +964,8 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second, suffix
         au3.write(au3_close)
     run_au3('alchemy_' + ingrs_set + '.au3')
     remove('alchemy_' + ingrs_set + '.au3')
-    move(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V6_Apparatus' + suffix + '.esp')
-    subprocess.run('espa -p ru -vd ' + 'A1_Alchemy_V6_Apparatus' + suffix + '.esp', stdout=stdout, stderr=stderr, check=True)
+    move(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V7_Apparatus' + suffix + '.esp')
+    subprocess.run('espa -p ru -vd ' + 'A1_Alchemy_V7_Apparatus' + suffix + '.esp', stdout=stdout, stderr=stderr, check=True)
 
 def check_espa_version():
   espa = subprocess.run('espa -V', stdout=PIPE, check=True, universal_newlines=True)
@@ -1020,12 +1020,12 @@ def main():
     copyfile('A1_Alchemy_Potions_MM.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions_MM.esp.yaml')
     copyfile('A1_Alchemy_Potions_PU.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions_PU.esp.yaml')
     copyfile('A1_Alchemy_Potions_PR.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions_PR.esp.yaml')
-    copyfile('A1_Alchemy_V6_Apparatus.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus.esp.yaml')
-    copyfile('A1_Alchemy_V6_Apparatus_EVA.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus_EVA.esp.yaml')
-    copyfile('A1_Alchemy_V6_Apparatus_MFR.esp.yaml', 'ar/Data Files/A1_Alchemy_V6_Apparatus_MFR.esp.yaml')
-    assembly_plugin('ar/Data Files/A1_Alchemy_V6_Apparatus.esp', 2026, 10, 6, 18, 53, 0)
-    assembly_plugin('ar/Data Files/A1_Alchemy_V6_Apparatus_MFR.esp', 2026, 10, 6, 18, 53, 0)
-    assembly_plugin('ar/Data Files/A1_Alchemy_V6_Apparatus_EVA.esp', 2097, 9, 1, 18, 53, 0)
+    copyfile('A1_Alchemy_V7_Apparatus.esp.yaml', 'ar/Data Files/A1_Alchemy_V7_Apparatus.esp.yaml')
+    copyfile('A1_Alchemy_V7_Apparatus_EVA.esp.yaml', 'ar/Data Files/A1_Alchemy_V7_Apparatus_EVA.esp.yaml')
+    copyfile('A1_Alchemy_V7_Apparatus_MFR.esp.yaml', 'ar/Data Files/A1_Alchemy_V7_Apparatus_MFR.esp.yaml')
+    assembly_plugin('ar/Data Files/A1_Alchemy_V7_Apparatus.esp', 2026, 10, 6, 18, 53, 0)
+    assembly_plugin('ar/Data Files/A1_Alchemy_V7_Apparatus_MFR.esp', 2026, 10, 6, 18, 53, 0)
+    assembly_plugin('ar/Data Files/A1_Alchemy_V7_Apparatus_EVA.esp', 2097, 9, 1, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions.esp', 2014, 8, 3, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_MM.esp', 2014, 8, 3, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_PU.esp', 2026, 10, 5, 18, 53, 0)

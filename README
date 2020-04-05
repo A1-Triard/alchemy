@@ -8,13 +8,13 @@ A1 Professional Alchemist v. 2.0
 
 A1_Alchemy_DaeCursed.esp
 A1_Alchemy_Potions.esp
-A1_Alchemy_V6_Apparatus.esp
-A1_Alchemy_V6_Apparatus_EVA.esp
-A1_Alchemy_V6_Containers.esp
+A1_Alchemy_V7_Apparatus.esp
+A1_Alchemy_V7_Apparatus_EVA.esp
+A1_Alchemy_V7_Containers.esp
 
-2. Подключить скопированные файлы. Из двух файлов A1_Alchemy_V6_Apparatus.esp и A1_Alchemy_V6_Apparatus_EVA.esp следует подключать только один, в зависимости от того, используется ли плагин EVA.esp.
+2. Подключить скопированные файлы. Из двух файлов A1_Alchemy_V7_Apparatus.esp и A1_Alchemy_V7_Apparatus_EVA.esp следует подключать только один, в зависимости от того, используется ли плагин EVA.esp.
 
-При этом если нужна только новая система алхимии и не нужны контейнеры (см. далее), то A1_Alchemy_V6_Containers.esp подключать не нужно. Наоборот, если нужны только контейнеры, а новая алхимия не нужна, то надо подключать только A1_Alchemy_V6_Containers.esp. Файл A1_Alchemy_DaeCursed.esp можно вообще не подключать, но тогда будет невозможно использовать в качестве ингредиентов драгоценности, взятые в святилищах Даэдра.
+При этом если нужна только новая система алхимии и не нужны контейнеры (см. далее), то A1_Alchemy_V7_Containers.esp подключать не нужно. Наоборот, если нужны только контейнеры, а новая алхимия не нужна, то надо подключать только A1_Alchemy_V7_Containers.esp. Файл A1_Alchemy_DaeCursed.esp можно вообще не подключать, но тогда будет невозможно использовать в качестве ингредиентов драгоценности, взятые в святилищах Даэдра.
 
 3. Загрузить игру, сохранить в новый слот.
 
