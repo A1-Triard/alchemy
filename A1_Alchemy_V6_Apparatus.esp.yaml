@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - Версия для использования без EVA.esp/MFR_EVA.esm
-        records: 582
+        records: 583
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -19276,6 +19276,52 @@
         - "\treturn"
         - endif
         - "player->AddItem A1V6_ApparatusItem_1, 1"
+        - ""
+        - End
+- SCPT:
+    - SCHD:
+        name: BILL_MarksDaedraSummon
+        vars:
+          shorts: 1
+          longs: 1
+          floats: 0
+        data_size: 391
+        var_table_size: 9
+    - SCVR:
+        - match
+        - id
+    - SCDT: eJyVkL1Kw2AUht8TjUMaMJLBDh3iIMRFFBzO8GEHOwgObuJkDDZoIVr5goMX4E14AV6Co3egg6uLirE/tPRnKnTpV9rwlXbqgQOHw8P7wGtSQjC987wDl6E2AcQ6r8LmJ/p37JKMbqsyDOKqLBPUHBEKYoLGMNR1DIsvsekXKzsXlbtrGZWDUhgFVw8yUWdGQtwcZgJDzKteoTmXn1XiC3LTsO19TnJFbbT4jFx+U8wn3FnrUkafZo02WZwnbTxYMMIp4GNQ/2l+b3nvab32m/b67WHD63TTv1ba3wWtnJ7ApJhgeHs6O6tyg8ft6b9Na/dx+BhJX3w5RCOAnlnN
+    - SCTX:
+        - begin BILL_MarksDaedraSummon
+        - ; Summon an Daedra when an item is removed from altar
+        - ;
+        - "; script location: should be placed upon an object on a Daedric Altar "
+        - ""
+        - long id
+        - short match
+        - ""
+        - set match to OnActivate
+        - ifx ( match )
+        - "\tPlaceAtPC \"Dremora_lord\" 1 128 1"
+        - "\t;1 of them, 256 units away, in back (1) of the player"
+        - "\tsetx id to xRefID"
+        - "\tsetx match to xStringMatch id \"(?i)^ingred_Dae_cursed_\""
+        - "\tifx ( match )"
+        - "\t\tsetx id to xStringBuild \"ingred_%18s\" id"
+        - "\telse"
+        - "\t\tsetx match to xStringMatch id \"(?i)^ingred_cursed_\""
+        - "\t\tifx ( match )"
+        - "\t\t\tsetx id to xStringBuild \"ingred_%14s\" id"
+        - "\t\telse"
+        - "\t\t\tMessageBox \"Ошибка! Неизвестный предмет.\" \"OK\""
+        - "\t\t\tset id to 0"
+        - "\t\tendif"
+        - "\tendif"
+        - "\tifx ( id )"
+        - "\t\tplayer->xAddItem id, 1"
+        - "\t\tDisable"
+        - "\tendif"
+        - endif
         - ""
         - End
 - SSCR:
