@@ -1,5 +1,5 @@
 [package]
-name = "PotionsBalance"
+name = "potions_balance"
 version = "0.1.0"
 authors = ["Warlock <internalmike@gmail.com>"]
 edition = "2018"
