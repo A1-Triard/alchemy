@@ -1,3 +1,5 @@
+#![deny(warnings)]
+
 use std::marker::PhantomData;
 use std::iter::once;
 use std::mem::{size_of, forget};

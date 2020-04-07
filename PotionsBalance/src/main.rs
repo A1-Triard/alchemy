@@ -1,9 +1,6 @@
 #![windows_subsystem = "windows"]
-#![feature(trait_alias)]
 
-mod gui;
-
-use gui::*;
+use winapi_gui::*;
 use std::iter::once;
 use std::str::FromStr;
 use winapi::um::winuser::*;
