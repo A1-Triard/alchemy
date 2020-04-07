@@ -967,6 +967,13 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second, suffix
     move(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V7_Apparatus' + suffix + '.esp')
     subprocess.run('espa -p ru -vd ' + 'A1_Alchemy_V7_Apparatus' + suffix + '.esp', stdout=stdout, stderr=stderr, check=True)
 
+def write_records_count(esp_path):
+    with open(esp_path, 'r', encoding='utf-8') as f:
+        esp = yaml.load(f, Loader=yaml.FullLoader)
+    esp[0]['TES3'][0]['HEDR']['records'] = len(esp) - 1
+    with open(esp_path, 'w', encoding='utf-8') as f:
+        yaml.dump(esp, f, allow_unicode=True)
+
 def check_espa_version():
   espa = subprocess.run('espa -V', stdout=PIPE, check=True, universal_newlines=True)
   if espa.stdout != '0.2.1\n':
@@ -999,6 +1006,7 @@ def main():
     mkdir('ar')
     copytree('Data Files', 'ar/Data Files')
     copyfile('A1_Alchemy_Dialogs.esp.yaml', 'ar/Data Files/A1_Alchemy_Dialogs.esp.yaml')
+    write_records_count('ar/Data Files/A1_Alchemy_Dialogs.esp.yaml')
     prepare_text('Readme', 'ar/')
     prepare_text('Versions', 'ar/')
     copytree('Screenshots', 'ar/Screenshots')
