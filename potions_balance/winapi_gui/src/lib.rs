@@ -38,10 +38,13 @@ pub struct WmDestroy {
 }
 
 pub trait WindowProc {
-    fn wm_close(&mut self, _window: Window) { }
-    fn wm_destroy(&mut self, _wm: &mut WmDestroy) { }
+    fn wm_create(&mut self, _window: Window, handled: &mut bool) { *handled = false; }
+    fn wm_close(&mut self, _window: Window, handled: &mut bool) { *handled = false; }
+    fn wm_destroy(&mut self, _wm: &mut WmDestroy, handled: &mut bool) { *handled = false; }
     fn wm_init_dialog(&mut self, _window: Window) { }
-    fn wm_command(&mut self, _window: Window, _command_id: u16, _notification_code: u16) { }
+    fn wm_command(&mut self, _window: Window, _command_id: u16, _notification_code: u16, handled: &mut bool) { *handled = false; }
+    fn wm_user(&mut self, _window: Window, _n: UINT) { }
+    fn wm_timer(&mut self, _window: Window, _id: WPARAM) { }
 }
 
 impl<'a> Window<'a> {
@@ -153,7 +156,17 @@ impl<'a> Window<'a> {
         let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_COMMAND, (command_id as WPARAM) | ((notification_code as WPARAM) << 16), 0) != 0 };
         assert!(ok);
     }
-    
+
+    pub fn post_wm_user(&self, n: UINT) {
+        let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_USER + n, 0, 0) != 0 };
+        assert!(ok);
+    }
+
+    pub fn post_wm_timer(&self, id: WPARAM) {
+        let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_TIMER, id, 0) != 0 };
+        assert!(ok);
+    }
+
     pub fn get_rect(&self) -> RECT {
         let mut rect = RECT { left: 0, top: 0, right: 0, bottom: 0 };
         let ok = unsafe { GetWindowRect(self.h_wnd.as_ptr(), &mut rect as *mut _) != 0 };
@@ -211,31 +224,29 @@ impl Drop for WindowClass {
 }
 
 unsafe fn window_message(window_proc: &mut dyn WindowProc, h_wnd: HWND, msg: UINT, w_param: WPARAM, _l_param: LPARAM) -> bool {
+    let mut handled = true;
     if msg == WM_DESTROY {
         let mut wm = WmDestroy { post_quit_message: false };
-        window_proc.wm_destroy(&mut wm);
+        window_proc.wm_destroy(&mut wm, &mut handled);
         if wm.post_quit_message {
             PostQuitMessage(0);
         }
-        true
     } else {
         let window = Window { h_wnd: NonNull::new_unchecked(h_wnd), destroy_on_drop: false, phantom: PhantomData };
-        match msg {
-            WM_CLOSE => {
-                window_proc.wm_close(window);
-                true
-            },
-            WM_COMMAND => {
-                window_proc.wm_command(window, (w_param & 0xFFFF) as u16,  ((w_param >> 16) & 0xFFFF) as u16);
-                true
-            },
-            WM_INITDIALOG => {
-                window_proc.wm_init_dialog(window);
-                true
-            },
-            _ => false
+        if msg >= WM_USER {
+            window_proc.wm_user(window, msg - WM_USER);
+        } else {
+            match msg {
+                WM_CREATE => window_proc.wm_create(window, &mut handled),
+                WM_CLOSE => window_proc.wm_close(window, &mut handled),
+                WM_COMMAND => window_proc.wm_command(window, (w_param & 0xFFFF) as u16, ((w_param >> 16) & 0xFFFF) as u16, &mut handled),
+                WM_INITDIALOG => window_proc.wm_init_dialog(window),
+                WM_TIMER => window_proc.wm_timer(window, w_param),
+                _ => handled = false,
+            }
         }
     }
+    handled
 }
 
 impl WindowClass {
@@ -293,7 +304,7 @@ pub fn message_box(owner: Option<&Window>, message: &str, caption: &str, u_type:
     ); }
 }
 
-pub fn dialog_box(id: u16, window_proc: &mut dyn WindowProc) -> INT_PTR {
+pub fn dialog_box(parent: Option<&Window>, id: u16, window_proc: &mut dyn WindowProc) -> INT_PTR {
     unsafe extern "system" fn dlgproc(h_wnd: HWND, msg: UINT, w_param: WPARAM, l_param: LPARAM) -> INT_PTR {
         if msg == WM_INITDIALOG {
             SetWindowLongPtrW(h_wnd, GWLP_USERDATA, l_param as _);
@@ -311,7 +322,7 @@ pub fn dialog_box(id: u16, window_proc: &mut dyn WindowProc) -> INT_PTR {
         res as INT_PTR
     }
     unsafe {
-        DialogBoxParamW(null_mut(), id as usize as *const _, null_mut(), Some(dlgproc), Box::into_raw(Box::new(window_proc)) as LPARAM)
+        DialogBoxParamW(null_mut(), id as usize as *const _, parent.map_or(null_mut(), |x| x.h_wnd.as_ptr()), Some(dlgproc), Box::into_raw(Box::new(window_proc)) as LPARAM)
     }
 }
 

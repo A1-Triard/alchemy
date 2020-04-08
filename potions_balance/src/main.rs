@@ -17,11 +17,12 @@ use esl::{ALCH, Record, ENAM, NAME, Field, ALDT, FileMetadata, RecordFlags, File
 use esl::read::{Records, RecordReadMode};
 use esl::code::{self, CodePage};
 use either::{Right, Left};
-use std::collections::{HashSet, HashMap};
+use std::collections::{HashMap};
+use winapi::shared::minwindef::{UINT, WPARAM};
 
 fn main() {
     let main_dialog_proc = &mut MainWindowProc { edit_original_value: None };
-    dialog_box(1, main_dialog_proc);
+    dialog_box(None, 1, main_dialog_proc);
 }
 
 static STANDARD: &'static [u16] = &[
@@ -51,20 +52,11 @@ struct MainWindowProc {
 }
 
 impl WindowProc for MainWindowProc {
-    fn wm_close(&mut self, window: Window) {
+    fn wm_close(&mut self, window: Window, handled: &mut bool) {
         window.destroy();
     }
 
     fn wm_init_dialog(&mut self, window: Window) {
-        let monitor = Monitor::from_window(&window, MONITOR_DEFAULTTONEAREST).get_info().rcWork;
-        let rect = window.get_rect();
-        window.move_(
-            (monitor.left + monitor.right - (rect.right - rect.left)) / 2,
-            (monitor.top + monitor.bottom - (rect.bottom - rect.top)) / 2,
-            rect.right - rect.left,
-            rect.bottom - rect.top,
-            true
-        );
         window.set_dialog_item_limit_text(132, 255);
         window.set_dialog_item_limit_text(134, 255);
         window.set_dialog_item_text_str(134, "PotionsBalance");
@@ -74,7 +66,7 @@ impl WindowProc for MainWindowProc {
         window.post_wm_command(129, 0);
     }
     
-    fn wm_command(&mut self, window: Window, command_id: u16, notification_code: u16) {
+    fn wm_command(&mut self, window: Window, command_id: u16, notification_code: u16, handled: &mut bool) {
         match notification_code {
             EN_SETFOCUS => {
                 debug_assert!(self.edit_original_value.is_none());
@@ -113,15 +105,37 @@ impl WindowProc for MainWindowProc {
                         let mw_path = PathBuf::from(mw_path);
                         let esp_name = window.get_dialog_item_text(134, 256);
                         let values = (0..STANDARD.len()).map(|i| u16::from_str(window.get_dialog_item_text(150 + i as u16, 4).to_str().unwrap()).unwrap()).collect::<Vec<_>>();
-                        if let Err(e) = generate_plugin(&mw_path, &esp_name, &values) {
-                            message_box(Some(&window), &e, "Ошибка", MB_ICONERROR | MB_OK);
-                        } else {
-                            message_box(Some(&window), &format!("Плагин {}.esp готов к использованию.", esp_name.to_string_lossy()), "Сделано", MB_ICONINFORMATION | MB_OK);
-                        }
+                        let mut generating = GeneratingWindowProc { mw_path: &mw_path, esp_name: &esp_name, values: &values };
+                        dialog_box(Some(&window), 2, &mut generating);
                     }
                 },
                 _ => { }
             }
+        }
+    }
+}
+
+struct GeneratingWindowProc<'a, 'b, 'c> {
+    mw_path: &'a Path,
+    esp_name: &'b OsString,
+    values: &'c [u16]
+}
+
+impl<'a, 'b, 'c> WindowProc for GeneratingWindowProc<'a, 'b, 'c> {
+    fn wm_init_dialog(&mut self, window: Window) {
+        window.post_wm_timer(1);
+    }
+
+    fn wm_timer(&mut self, window: Window, id: WPARAM) {
+        if id == 1 {
+            window.post_wm_timer(2);
+        } else if id == 2 {
+            if let Err(e) = generate_plugin(&self.mw_path, &self.esp_name, &self.values) {
+                message_box(Some(&window), &e, "Ошибка", MB_ICONERROR | MB_OK);
+            } else {
+                message_box(Some(&window), &format!("Плагин {}.esp готов к использованию.", self.esp_name.to_string_lossy()), "Сделано", MB_ICONINFORMATION | MB_OK);
+            }
+            window.end_dialog(0);
         }
     }
 }
