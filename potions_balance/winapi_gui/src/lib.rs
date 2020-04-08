@@ -153,6 +153,41 @@ impl<'a> Window<'a> {
         let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_COMMAND, (command_id as WPARAM) | ((notification_code as WPARAM) << 16), 0) != 0 };
         assert!(ok);
     }
+    
+    pub fn get_rect(&self) -> RECT {
+        let mut rect = RECT { left: 0, top: 0, right: 0, bottom: 0 };
+        let ok = unsafe { GetWindowRect(self.h_wnd.as_ptr(), &mut rect as *mut _) != 0 };
+        debug_assert!(ok);
+        rect
+    }
+
+    pub fn move_(&self, x: c_int, y: c_int, width: c_int, height: c_int, repaint: bool) {
+        let ok = unsafe { MoveWindow(self.h_wnd.as_ptr(), x, y, width, height, if repaint { TRUE } else { FALSE }) != 0 };
+        debug_assert!(ok);
+    }
+}
+
+pub struct Monitor {
+    pub h_monitor: NonNull<HMONITOR__>
+}
+
+impl Monitor {
+    pub fn from_window(window: &Window, flags: DWORD) -> Monitor {
+        let h_monitor = NonNull::new(unsafe { MonitorFromWindow(window.h_wnd.as_ptr(), flags) }).unwrap();
+        Monitor { h_monitor }
+    }
+    
+    pub fn get_info(&self) -> MONITORINFO {
+        let mut info = MONITORINFO {
+            cbSize: size_of::<MONITORINFO>() as u32,
+            rcMonitor: RECT { left: 0, top: 0, right: 0, bottom: 0 },
+            rcWork: RECT { left: 0, top: 0, right: 0, bottom: 0 },
+            dwFlags: 0
+        };
+        let ok = unsafe { GetMonitorInfoW(self.h_monitor.as_ptr(), &mut info as *mut _) != 0 };
+        assert!(ok);
+        info
+    }
 }
 
 struct WindowAsRef<'a>(Window<'a>);

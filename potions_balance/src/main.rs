@@ -56,6 +56,15 @@ impl WindowProc for MainWindowProc {
     }
 
     fn wm_init_dialog(&mut self, window: Window) {
+        let monitor = Monitor::from_window(&window, MONITOR_DEFAULTTONEAREST).get_info().rcWork;
+        let rect = window.get_rect();
+        window.move_(
+            (monitor.left + monitor.right - (rect.right - rect.left)) / 2,
+            (monitor.top + monitor.bottom - (rect.bottom - rect.top)) / 2,
+            rect.right - rect.left,
+            rect.bottom - rect.top,
+            true
+        );
         window.set_dialog_item_limit_text(132, 255);
         window.set_dialog_item_limit_text(134, 255);
         window.set_dialog_item_text_str(134, "PotionsBalance");
