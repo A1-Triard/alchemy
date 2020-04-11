@@ -2337,12 +2337,12 @@
 - APPA:
     - NAME: apparatus_a_calcinator_01
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор ученика
+    - FNAM: Дешевый кальцинатор
     - AADT:
         type: Calcinator
         quality: 0.5
-        weight: 15.0
-        value: 10
+        weight: 14.0
+        value: 70
     - ITEX: "m\\Tx_calcinator_01.tga"
 - APPA:
     - NAME: apparatus_a_mortar_01
@@ -2362,7 +2362,7 @@
         type: Retort
         quality: 0.5
         weight: 3.0
-        value: 20
+        value: 60
     - ITEX: "m\\Tx_retort_01.tga"
 - APPA:
     - NAME: apparatus_j_alembic_01
@@ -2377,12 +2377,12 @@
 - APPA:
     - NAME: apparatus_j_calcinator_01
     - MODL: "m\\App_J_Calcinator_01.NIF"
-    - FNAM: Кальцинатор подмастерья
+    - FNAM: Стандартный кальцинатор
     - AADT:
         type: Calcinator
         quality: 1.0
-        weight: 15.0
-        value: 40
+        weight: 16.0
+        value: 250
     - ITEX: "m\\Tx_calcinator_02.tga"
 - APPA:
     - NAME: apparatus_j_mortar_01
@@ -2402,17 +2402,17 @@
         type: Retort
         quality: 1.0
         weight: 3.0
-        value: 80
+        value: 240
     - ITEX: "m\\Tx_retort_02.tga"
 - APPA:
     - NAME: apparatus_m_calcinator_01
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: Кальцинатор мастера
+    - FNAM: Качественный кальцинатор
     - AADT:
         type: Calcinator
         quality: 1.2
-        weight: 15.0
-        value: 240
+        weight: 18.0
+        value: 1000
     - ITEX: "m\\Tx_calcinator_03.tga"
 - APPA:
     - NAME: apparatus_m_mortar_01
@@ -2432,7 +2432,7 @@
         type: Retort
         quality: 1.2
         weight: 3.0
-        value: 480
+        value: 1400
     - ITEX: "m\\Tx_retort_03.tga"
 - APPA:
     - NAME: apparatus_g_alembic_01
@@ -2447,11 +2447,11 @@
 - APPA:
     - NAME: apparatus_g_calcinator_01
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: Кальцинатор грандмастера
+    - FNAM: Эксклюзивный кальцинатор
     - AADT:
         type: Calcinator
         quality: 1.5
-        weight: 15.0
+        weight: 20.0
         value: 4000
     - ITEX: "m\\Tx_calcinator_04.tga"
 - APPA:
@@ -2462,7 +2462,7 @@
         type: Retort
         quality: 1.5
         weight: 3.0
-        value: 1600
+        value: 4000
     - ITEX: "m\\Tx_retort_04.tga"
 - INGR:
     - NAME: A1V7_AlchemyActivator
