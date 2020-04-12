@@ -853,7 +853,7 @@ def prepare_dialogs(path):
     topics.sort(key=lambda x: x[0])
     with open(path + '.top', 'w', encoding='utf-8') as f:
         for topic in topics:
-            f.write('{}\t{}\r\n'.format(topic[0], topic[1]))
+            f.write('{}\t{}\n'.format(topic[0], topic[1]))
 
 def reformat(path):
     subprocess.run('espa -p ru -v "' + path + '.yaml"', stdout=stdout, stderr=stderr, check=True)
