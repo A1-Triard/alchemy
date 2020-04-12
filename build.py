@@ -829,7 +829,7 @@ def prepare_dialogs(path):
             if len(name) != 1:
                 print('Error in ' + path)
                 sys.exit(1)
-            info[name[0]]['NAME'].replace('{', '@').replace('}', '#')
+            info[name[0]]['NAME'] = info[name[0]]['NAME'].replace('{', '@').replace('}', '#')
 
     with open(path, 'w', encoding='utf-8') as f:
         yaml.dump(records, f, allow_unicode=True)

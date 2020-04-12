@@ -7,7 +7,7 @@
           - "Новая система алхимии, позволяющая создавать стандартные зелья (такие же как в магазинах)."
           - ""
           - "Версия для использования с MFR_EVA.esm (M[FR] 3.x)"
-        records: 731
+        records: 743
     - MAST: Morrowind.esm
     - DATA: 79764287
     - MAST: Tribunal.esm
@@ -27492,12 +27492,12 @@
 - APPA:
     - NAME: apparatus_a_calcinator_01
     - MODL: "m\\Apparatus_A_Calcinator_01.NIF"
-    - FNAM: Кальцинатор ученика
+    - FNAM: Дешевый кальцинатор
     - AADT:
         type: Calcinator
         quality: 0.5
-        weight: 15.0
-        value: 10
+        weight: 14.0
+        value: 70
     - ITEX: "m\\Tx_calcinator_01.tga"
 - APPA:
     - NAME: apparatus_a_retort_01
@@ -27507,7 +27507,7 @@
         type: Retort
         quality: 0.5
         weight: 3.0
-        value: 20
+        value: 60
     - ITEX: "m\\Tx_retort_01.tga"
 - APPA:
     - NAME: apparatus_a_alembic_01
@@ -27572,31 +27572,31 @@
 - APPA:
     - NAME: apparatus_j_calcinator_01
     - MODL: "m\\App_J_Calcinator_01.NIF"
-    - FNAM: Кальцинатор подмастерья
+    - FNAM: Стандартный кальцинатор
     - AADT:
         type: Calcinator
         quality: 1.0
-        weight: 15.0
-        value: 40
+        weight: 16.0
+        value: 250
     - ITEX: "m\\Tx_calcinator_02.tga"
 - APPA:
     - NAME: apparatus_m_calcinator_01
     - MODL: "m\\App_M_Calcinator_01.nif"
-    - FNAM: Кальцинатор мастера
+    - FNAM: Качественный кальцинатор
     - AADT:
         type: Calcinator
         quality: 1.2
-        weight: 15.0
-        value: 240
+        weight: 18.0
+        value: 1000
     - ITEX: "m\\Tx_calcinator_03.tga"
 - APPA:
     - NAME: apparatus_g_calcinator_01
     - MODL: "m\\App_G_Calcinator_01.nif"
-    - FNAM: Кальцинатор грандмастера
+    - FNAM: Эксклюзивный кальцинатор
     - AADT:
         type: Calcinator
         quality: 1.5
-        weight: 15.0
+        weight: 20.0
         value: 4000
     - ITEX: "m\\Tx_calcinator_04.tga"
 - APPA:
@@ -27607,7 +27607,7 @@
         type: Retort
         quality: 1.0
         weight: 3.0
-        value: 80
+        value: 240
     - ITEX: "m\\Tx_retort_02.tga"
 - APPA:
     - NAME: apparatus_m_retort_01
@@ -27617,7 +27617,7 @@
         type: Retort
         quality: 1.2
         weight: 3.0
-        value: 480
+        value: 1400
     - ITEX: "m\\Tx_retort_03.tga"
 - APPA:
     - NAME: apparatus_g_retort_01
@@ -27627,7 +27627,7 @@
         type: Retort
         quality: 1.5
         weight: 3.0
-        value: 1600
+        value: 4000
     - ITEX: "m\\Tx_retort_04.tga"
 - INGR:
     - NAME: A1V7_AlchemyActivator
@@ -34103,3 +34103,166 @@
           x: -7
           y: -6
     - RGNN: Bitter Coast Region
+- DIAL:
+    - NAME: маленький секрет
+    - DATA: Topic
+- INFO:
+    - INAM: "14610155733087714119"
+    - PNAM: "48555751121988520"
+    - NNAM: "16403236042858315491"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 30
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - FNAM: Ashlanders
+    - NAME: "Кашташпи, вот название древних {Даэдрических} камней к западу от {лагеря Ахеммуза}. Туда никто не ходит. Темное и мрачное местечко."
+    - SCVR: 0CsX0nolore
+    - INTV: 0
+- INFO:
+    - INAM: "16403236042858315491"
+    - PNAM: "14610155733087714119"
+    - NNAM: "4724201062304617772"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 30
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - CNAM: Alchemist Service
+    - NAME: "Трубку скуума можно использовать вместо {перегонного куба}. Работает не хуже настоящего, уровня ученика, но значительно менее громоздко."
+    - SCVR: 0CsX0NoLore
+    - INTV: 0
+    - SCVR: "11273"
+    - INTV: 22
+    - SCVR: "21274"
+    - INTV: 60
+    - SCVR: 32sX5Random100
+    - INTV: 25
+- INFO:
+    - INAM: "4724201062304617772"
+    - PNAM: "16403236042858315491"
+    - NNAM: "960625077141739030"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 30
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - ONAM: Vedam Dren
+    - NAME: "{Орвас Дрен} - мой брат. Не знаю, что вы слышали о нем. Я не оправдываю его во всем, что он делал, но не будьте ему врагом."
+- DIAL:
+    - NAME: небольшой совет
+    - DATA: Topic
+- INFO:
+    - INAM: "23576220211423514324"
+    - PNAM: "305996678198439929"
+    - NNAM: "2592389761904428340"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 0
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - FNAM: Camonna Tong
+    - NAME: "Хотите совет, {чужеземец}? Держитесь подальше от Камонна Тонг. Мы не любим {чужеземцев}."
+    - SCVR: 0CsX0NoLore
+    - INTV: 0
+- INFO:
+    - INAM: "2592389761904428340"
+    - PNAM: "23576220211423514324"
+    - NNAM: "19139287163203512660"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 30
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - CNAM: Alchemist Service
+    - NAME: "Не спешите покупать дорогое алхимическое оборудование: только опытный алхимик сможет извлечь пользу из высокого качества аппаратов. Но к {кальцинатору} это не относится - тут чем дороже, тем лучше."
+    - SCVR: 0CsX0NoLore
+    - INTV: 0
+    - SCVR: "11274"
+    - INTV: 50
+    - SCVR: 22sX5Random100
+    - INTV: 20
+- INFO:
+    - INAM: "19139287163203512660"
+    - PNAM: "2592389761904428340"
+    - NNAM: "190453052515814369"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 0
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - ONAM: caius cosades
+    - NAME: "Как определить сложность {задания}? Учтите три пункта: место, противников и плату. Длинные прогулки по пустыне обычно даются тяжелее, чем городские задания. Чем сильнее противники, тем сложнее задание. {Даэдра}, {вампиры}, {разбойники Телванни} - вы сами поймете, кто из них опаснее. И наконец, величина {награды} прямо пропорциональна опасности."
+    - SCVR: 02sX4Random100
+    - INTV: 33
+- DIAL:
+    - NAME: Исцеление Мора
+    - DATA: Topic
+- INFO:
+    - INAM: "2272717869240894064"
+    - PNAM: "20977197453234215883"
+    - NNAM: "2423845191747229639"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 0
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - ONAM: galos mathendis
+    - NAME: "Андил сообщил мне, что доволен привезенным вами {зельем}. Пожалуйста, примите эти 500 дрейков в знак благодарности от моего {покровителя}, {Господина Ариона}."
+    - SCVR: 34JX3HT_CureBlight
+    - INTV: 50
+    - BNAM:
+        - Journal HT_CureBlight 100
+        - Player->AddItem Gold_001 500
+        - "ModPCFacRep 5 \"Telvanni\""
+        - ModDisposition 5
+- INFO:
+    - INAM: "2423845191747229639"
+    - PNAM: "2272717869240894064"
+    - NNAM: "2523050488600675"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 0
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - ONAM: galos mathendis
+    - NAME: "Вы должны поговорить с аптекарем Андилом в {Тель Восе}. Достаньте три склянки {зелья} {Исцеления Мора} и доставьте их Андилу. Вы можете купить их у одного из поставщиков или {изготовить сами}."
+    - SCVR: "01272"
+    - INTV: 55
+    - SCVR: 34JX3HT_FyrMessage
+    - INTV: 100
+    - BNAM:
+        - Journal HT_CureBlight 10
+- INFO:
+    - INAM: "2523050488600675"
+    - PNAM: "2423845191747229639"
+    - NNAM: "1845116731929925941"
+    - DATA:
+        dialog_type: Topic
+        disp_index: 0
+        rank: ~
+        sex: ~
+        pc_rank: ~
+        padding: 0
+    - ONAM: galos mathendis
+    - NAME: "Вы должны поговорить с аптекарем Андилом в {Тель Восе}. Достаньте три склянки {зелья} {Исцеления Мора} и доставьте их Андилу. Вам придется купить их у одного из поставщиков: вряд ли вы сможете {изготовить их сами}."
+    - SCVR: 34JX3HT_FyrMessage
+    - INTV: 100
+    - BNAM:
+        - Journal HT_CureBlight 10
