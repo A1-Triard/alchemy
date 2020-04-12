@@ -11,6 +11,7 @@ from subprocess import PIPE
 import winreg
 from winreg import HKEY_LOCAL_MACHINE, HKEY_CLASSES_ROOT
 from shutil import copyfile, move, rmtree, copytree
+import re
 
 negative_effects = [
     'Burden',
@@ -821,22 +822,38 @@ def gen_potions(icon, model, name, suffix, description):
     reformat('A1_Alchemy_Potions' + suffix + '.esp')
 
 def prepare_dialogs(path):
-    with open(path + '.yaml', 'r', encoding='utf-8') as f:
+    with open(path + '.esp.yaml', 'r', encoding='utf-8') as f:
         records = yaml.load(f, Loader=yaml.FullLoader)
     
+    topics = {}
     for record in records:
         info = record.get('INFO')
         if info is not None:
             name = [i for i, x in enumerate(info) if 'NAME' in x]
             if len(name) != 1:
-                print('Error in ' + path)
+                print('Error in ' + path + '.esp.yaml')
                 sys.exit(1)
-            info[name[0]]['NAME'] = info[name[0]]['NAME'].replace('{', '@').replace('}', '#')
+            value = info[name[0]]['NAME']
+            ms = list(re.compile(r'\{([^{|}]*)(\|([^{|}]*))?\}').finditer(value))
+            if not ms:
+                continue
+            ts = ['@' + m.group(1) + '#' for m in ms]
+            ps = [value[p.end() : n.start()] for (p, n) in zip(ms[:-1], ms[1:])]
+            info[name[0]]['NAME'] = value[: ms[0].start()] + ts[0] + ''.join([i + t for (i, t) in zip(ps, ts[1:])]) + value[ms[-1].end() :]
+            for m in ms:
+                if m.group(3) is not None:
+                    topics[m.group(1)] = m.group(3)
 
-    with open(path + '.yaml', 'w', encoding='utf-8') as f:
+    with open(path + '.esp.yaml', 'w', encoding='utf-8') as f:
         yaml.dump(records, f, allow_unicode=True)
 
-    reformat(path)
+    reformat(path + '.esp')
+
+    topics = list(topics.items())
+    topics.sort(key=lambda x: x[0])
+    with open(path + '.top', 'w', encoding='utf-8') as f:
+        for topic in topics:
+            f.write('{}\t{}\n'.format(topic[0], topic[1]))
 
 def reformat(path):
     subprocess.run('espa -p ru -v "' + path + '.yaml"', stdout=stdout, stderr=stderr, check=True)
@@ -990,7 +1007,7 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second, suffix
     remove('alchemy_' + ingrs_set + '.au3')
     move(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V7_Apparatus' + suffix + '.esp')
     subprocess.run('espa -p ru -vd ' + 'A1_Alchemy_V7_Apparatus' + suffix + '.esp', stdout=stdout, stderr=stderr, check=True)
-    prepare_dialogs('A1_Alchemy_V7_Apparatus' + suffix + '.esp')
+    prepare_dialogs('A1_Alchemy_V7_Apparatus' + suffix)
 
 def write_records_count(esp_path):
     with open(esp_path, 'r', encoding='utf-8') as f:
@@ -1051,6 +1068,9 @@ def main():
     copyfile('A1_Alchemy_Potions_MM.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions_MM.esp.yaml')
     copyfile('A1_Alchemy_Potions_PU.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions_PU.esp.yaml')
     copyfile('A1_Alchemy_Potions_PR.esp.yaml', 'ar/Data Files/A1_Alchemy_Potions_PR.esp.yaml')
+    copyfile('A1_Alchemy_V7_Apparatus.top', 'ar/Data Files/A1_Alchemy_V7_Apparatus.top')
+    copyfile('A1_Alchemy_V7_Apparatus_EVA.top', 'ar/Data Files/A1_Alchemy_V7_Apparatus_EVA.top')
+    copyfile('A1_Alchemy_V7_Apparatus_MFR.top', 'ar/Data Files/A1_Alchemy_V7_Apparatus_MFR.top')
     copyfile('A1_Alchemy_V7_Apparatus.esp.yaml', 'ar/Data Files/A1_Alchemy_V7_Apparatus.esp.yaml')
     copyfile('A1_Alchemy_V7_Apparatus_EVA.esp.yaml', 'ar/Data Files/A1_Alchemy_V7_Apparatus_EVA.esp.yaml')
     copyfile('A1_Alchemy_V7_Apparatus_MFR.esp.yaml', 'ar/Data Files/A1_Alchemy_V7_Apparatus_MFR.esp.yaml')
