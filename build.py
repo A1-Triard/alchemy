@@ -776,7 +776,7 @@ def find_mfr():
                         return winreg.QueryValueEx(key, 'InstallLocation')[0] + 'Data Files/'
                 except FileNotFoundError:
                     pass
-       
+
 def gen_potions(icon, model, name, suffix, description):
     with open('potions.esp.yaml', 'r', encoding='utf-8') as f:
         potions = yaml.load(f, Loader=yaml.FullLoader)
@@ -817,6 +817,22 @@ def gen_potions(icon, model, name, suffix, description):
     with open('A1_Alchemy_Potions' + suffix + '.esp.yaml', 'w', encoding='utf-8') as esp:
         yaml.dump(esp_header, esp, allow_unicode=True)
         yaml.dump(potions, esp, allow_unicode=True)
+
+def prepare_dialogs(path):
+    with open(path, 'r', encoding='utf-8') as f:
+        records = yaml.load(f, Loader=yaml.FullLoader)
+    
+    for record in records:
+        info = record.get('INFO')
+        if info is not None:
+            name = [i for i, x in enumerate(info) if 'NAME' in x]
+            if len(name) != 1:
+                print('Error in ' + path)
+                sys.exit(1)
+            info[name[0]]['NAME'].replace('{', '@').replace('}', '#')
+
+    with open(path, 'w', encoding='utf-8') as f:
+        yaml.dump(records, f, allow_unicode=True)
 
 def run_au3(path):
     command = winreg.QueryValue(HKEY_CLASSES_ROOT, 'AutoIt3XScript\\Shell\\Run\\Command')
@@ -897,6 +913,7 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second, suffix
         yaml.dump(del_scripts, esp, allow_unicode=True)
         yaml.dump(level_books, esp, allow_unicode=True)
 
+    prepare_dialogs(mfr + 'alchemy_' + ingrs_set + '.esp.yaml')
     assembly_plugin(mfr + 'alchemy_' + ingrs_set + '.esp', year, month, day, hour, minute, second)
 
     with open('00_includes.au_', 'r', encoding='utf-8') as f:
@@ -1005,8 +1022,6 @@ def main():
         rmtree('ar')
     mkdir('ar')
     copytree('Data Files', 'ar/Data Files')
-    copyfile('A1_Alchemy_Dialogs.esp.yaml', 'ar/Data Files/A1_Alchemy_Dialogs.esp.yaml')
-    write_records_count('ar/Data Files/A1_Alchemy_Dialogs.esp.yaml')
     prepare_text('Readme', 'ar/')
     prepare_text('Versions', 'ar/')
     copytree('Screenshots', 'ar/Screenshots')
@@ -1038,7 +1053,6 @@ def main():
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_MM.esp', 2014, 8, 3, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_PU.esp', 2026, 10, 5, 18, 53, 0)
     assembly_plugin('ar/Data Files/A1_Alchemy_Potions_PR.esp', 2014, 8, 3, 18, 53, 0)
-    assembly_plugin('ar/Data Files/A1_Alchemy_Dialogs.esp', 2014, 8, 2, 18, 53, 0)
     make_archive('A1_Alchemy_2.0', 'ar')
     rmtree('ar')    
 
