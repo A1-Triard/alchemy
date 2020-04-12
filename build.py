@@ -817,9 +817,11 @@ def gen_potions(icon, model, name, suffix, description):
     with open('A1_Alchemy_Potions' + suffix + '.esp.yaml', 'w', encoding='utf-8') as esp:
         yaml.dump(esp_header, esp, allow_unicode=True)
         yaml.dump(potions, esp, allow_unicode=True)
+    
+    reformat('A1_Alchemy_Potions' + suffix + '.esp')
 
 def prepare_dialogs(path):
-    with open(path, 'r', encoding='utf-8') as f:
+    with open(path + '.yaml', 'r', encoding='utf-8') as f:
         records = yaml.load(f, Loader=yaml.FullLoader)
     
     for record in records:
@@ -831,8 +833,14 @@ def prepare_dialogs(path):
                 sys.exit(1)
             info[name[0]]['NAME'] = info[name[0]]['NAME'].replace('{', '@').replace('}', '#')
 
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path + '.yaml', 'w', encoding='utf-8') as f:
         yaml.dump(records, f, allow_unicode=True)
+
+    reformat(path)
+
+def reformat(path):
+    subprocess.run('espa -p ru -v "' + path + '.yaml"', stdout=stdout, stderr=stderr, check=True)
+    subprocess.run('espa -p ru -vd ' + path, stdout=stdout, stderr=stderr, check=True)
 
 def run_au3(path):
     command = winreg.QueryValue(HKEY_CLASSES_ROOT, 'AutoIt3XScript\\Shell\\Run\\Command')
@@ -913,7 +921,6 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second, suffix
         yaml.dump(del_scripts, esp, allow_unicode=True)
         yaml.dump(level_books, esp, allow_unicode=True)
 
-    prepare_dialogs(mfr + 'alchemy_' + ingrs_set + '.esp.yaml')
     assembly_plugin(mfr + 'alchemy_' + ingrs_set + '.esp', year, month, day, hour, minute, second)
 
     with open('00_includes.au_', 'r', encoding='utf-8') as f:
@@ -983,6 +990,7 @@ def gen_apparatus(ingrs_set, mfr, year, month, day, hour, minute, second, suffix
     remove('alchemy_' + ingrs_set + '.au3')
     move(mfr + 'alchemy_' + ingrs_set + '.esp', 'A1_Alchemy_V7_Apparatus' + suffix + '.esp')
     subprocess.run('espa -p ru -vd ' + 'A1_Alchemy_V7_Apparatus' + suffix + '.esp', stdout=stdout, stderr=stderr, check=True)
+    prepare_dialogs('A1_Alchemy_V7_Apparatus' + suffix + '.esp')
 
 def write_records_count(esp_path):
     with open(esp_path, 'r', encoding='utf-8') as f:

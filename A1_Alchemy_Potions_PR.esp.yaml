@@ -1,1547 +1,1546 @@
 - TES3:
-  - HEDR:
-      author: A1
-      description:
-      - Модифицирует некоторые существующие и добавляет новые зелья. Вспомогательный
-        плагин для A1_Alchemy_V7_Apparatus.
-      - ''
-      - Версия для AOF Potions Recolored
-      records: 85
-      type: ESP
-      version: 1067869798
-  - MAST: Morrowind.esm
-  - DATA: 79764287
-  - MAST: Tribunal.esm
-  - DATA: 6616539
-  - MAST: Bloodmoon.esm
-  - DATA: 11799703
-- ALCH:
-  - NAME: p_burden_s
-  - MODL: m\AOF_Potion_st_amb_res.NIF
-  - TEXT: _aof\res_st.dds
-  - FNAM: Зелье Даэдра (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: ResistNormalWeapons
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_paralyze_s
-  - MODL: m\AOF_Potion_st_amb_res.NIF
-  - TEXT: _aof\res_st.dds
-  - FNAM: Сопротивление параличу (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: ResistParalysis
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_silence_s
-  - MODL: M\AOF_Potion_st_yellow.NIF
-  - TEXT: _aof\yellow_st.dds
-  - FNAM: Зелье щита (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: Shield
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_burden_c
-  - MODL: m\AOF_Potion_chp_amb_res.NIF
-  - TEXT: _aof\res_chp.dds
-  - FNAM: Зелье Даэдра (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 15
-      index: ResistNormalWeapons
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_burden_b
-  - MODL: m\AOF_Potion_barg_amb_res.NIF
-  - TEXT: _aof\res_barg.dds
-  - FNAM: Зелье Даэдра (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: ResistNormalWeapons
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_burden_q
-  - MODL: m\AOF_Potion_qu_amb_res.NIF
-  - TEXT: _aof\res_qu.dds
-  - FNAM: Зелье Даэдра (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: ResistNormalWeapons
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_burden_e
-  - MODL: m\AOF_Potion_exc_amb_res.NIF
-  - TEXT: _aof\res_exc.dds
-  - FNAM: Зелье Даэдра (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 60
-      index: ResistNormalWeapons
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_paralyze_c
-  - MODL: m\AOF_Potion_chp_amb_res.NIF
-  - TEXT: _aof\res_chp.dds
-  - FNAM: Cопротивление параличу (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 15
-      index: ResistParalysis
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_paralyze_b
-  - MODL: m\AOF_Potion_barg_amb_res.NIF
-  - TEXT: _aof\res_barg.dds
-  - FNAM: Сопротивление параличу (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: ResistParalysis
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_paralyze_e
-  - MODL: m\AOF_Potion_exc_amb_res.NIF
-  - TEXT: _aof\res_exc.dds
-  - FNAM: Сопротивление параличу (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 60
-      index: ResistParalysis
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_paralyze_q
-  - MODL: m\AOF_Potion_qu_amb_res.NIF
-  - TEXT: _aof\res_qu.dds
-  - FNAM: Сопротивление параличу (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: ResistParalysis
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_silence_c
-  - MODL: M\AOF_Potion_chp_yellow.NIF
-  - TEXT: _aof\yellow_chp.dds
-  - FNAM: Зелье щита (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 15
-      index: Shield
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_silence_b
-  - MODL: M\AOF_Potion_barg_yellow.nif
-  - TEXT: _aof\yellow_barg.dds
-  - FNAM: Зелье щита (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: Shield
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_silence_q
-  - MODL: M\AOF_Potion_qu_yellow.NIF
-  - TEXT: _aof\yellow_qu.dds
-  - FNAM: Зелье щита (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: Shield
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_silence_e
-  - MODL: M\AOF_Potion_exc_yellow.NIF
-  - TEXT: _aof\yellow_exc.dds
-  - FNAM: Зелье щита (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 60
-      index: Shield
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_cure_blight_s
-  - MODL: M\AOF_Potion_healing_b.NIF
-  - TEXT: _aof\cure_b.dds
-  - FNAM: Зелье лечения моровых болезней
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: CureBlightDisease
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_recall_s
-  - MODL: m\AOF_Potion_st_blu_mys.NIF
-  - TEXT: _aof\myst_st.dds
-  - FNAM: Зелье воспоминания
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: Recall
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_levitation_b
-  - MODL: m\AOF_Potion_barg_alt_y.NIF
-  - TEXT: _aof\alt_barg.tga
-  - FNAM: Зелье левитации (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: Levitate
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_almsivi_intervention_s
-  - MODL: M\AOF_Potion_st_blu_mys.NIF
-  - TEXT: _aof\myst_st.dds
-  - FNAM: Зелье дурацкого счастья
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: AlmsiviIntervention
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_cure_common_s
-  - MODL: m\AOF_Potion_healing_d.NIF
-  - TEXT: _aof\cure_d.dds
-  - FNAM: Зелье лечения обычных недугов
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: CureCommonDisease
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_cure_paralyzation_s
-  - MODL: m\AOF_Potion_healing_pl.NIF
-  - TEXT: _aof\cure_pl.dds
-  - FNAM: Зелье лечения парализации
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: CureParalyzation
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_cure_poison_s
-  - MODL: m\AOF_Potion_healing_p.NIF
-  - TEXT: _aof\cure_p.dds
-  - FNAM: Зелье лечения отравлений
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: CurePoison
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_mark_s
-  - MODL: m\AOF_Potion_st_blu_mys.NIF
-  - TEXT: _aof\myst_st.dds
-  - FNAM: Зелье пометки
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: Mark
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_creatures_s
-  - MODL: m\AOF_Potion_st_blu_mys.NIF
-  - TEXT: _aof\myst_st.dds
-  - FNAM: Зелье обнаруж. существ (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: DetectAnimal
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_key_s
-  - MODL: m\AOF_Potion_st_blu_mys.NIF
-  - TEXT: _aof\myst_st.dds
-  - FNAM: Зелье обнаруж. ключа (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: DetectKey
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_dispel_s
-  - MODL: M\AOF_Potion_st_blu_mys.NIF
-  - TEXT: _aof\myst_st.dds
-  - FNAM: Зелье развеивания (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: Dispel
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_telekinesis_s
-  - MODL: m\AOF_Potion_st_green_i.NIF
-  - TEXT: _aof\illu_st.dds
-  - FNAM: Зелье телекинеза (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: Telekinesis
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_water_breathing_s
-  - MODL: M\AOF_Potion_st_alt_y.NIF
-  - TEXT: _aof\alt_st.dds
-  - FNAM: Зелье водного дыхания (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: WaterBreathing
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_water_walking_s
-  - MODL: M\AOF_Potion_st_alt_y.NIF
-  - TEXT: _aof\alt_st.dds
-  - FNAM: Зелье хождения по воде (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: WaterWalking
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_enchantment_s
-  - MODL: m\AOF_Potion_st_blu_mys.NIF
-  - TEXT: _aof\myst_st.dds
-  - FNAM: Зелье обнаружения чар (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 15
-      index: DetectEnchantment
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_creatures_b
-  - MODL: m\AOF_Potion_barg_blu_mys.NIF
-  - TEXT: _aof\myst_barg.dds
-  - FNAM: Зелье обнаруж. существ (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: DetectAnimal
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_creatures_c
-  - MODL: m\AOF_Potion_chp_blu_mys.NIF
-  - TEXT: _aof\myst_chp.dds
-  - FNAM: Зелье обнаруж. существ (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 10
-      index: DetectAnimal
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_creatures_e
-  - MODL: m\AOF_Potion_exc_blu_mys.NIF
-  - TEXT: _aof\myst_exc.dds
-  - FNAM: Зелье обнаруж. существ (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: DetectAnimal
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_creatures_q
-  - MODL: m\AOF_Potion_qu_blu_mys.NIF
-  - TEXT: _aof\myst_qu.dds
-  - FNAM: Зелье обнаруж. существ (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: DetectAnimal
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_enchantment_b
-  - MODL: m\AOF_Potion_barg_blu_mys.NIF
-  - TEXT: _aof\myst_barg.dds
-  - FNAM: Зелье обнаружения чар (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: DetectEnchantment
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_enchantment_c
-  - MODL: m\AOF_Potion_chp_blu_mys.NIF
-  - TEXT: _aof\myst_chp.dds
-  - FNAM: Зелье обнаружения чар (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 10
-      index: DetectEnchantment
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_enchantment_e
-  - MODL: m\AOF_Potion_exc_blu_mys.NIF
-  - TEXT: _aof\myst_exc.dds
-  - FNAM: Зелье обнаружения чар (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: DetectEnchantment
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_enchantment_q
-  - MODL: m\AOF_Potion_qu_blu_mys.NIF
-  - TEXT: _aof\myst_qu.dds
-  - FNAM: Зелье обнаружения чар (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: DetectEnchantment
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_key_b
-  - MODL: m\AOF_Potion_barg_blu_mys.NIF
-  - TEXT: _aof\myst_barg.dds
-  - FNAM: Зелье обнаруж. ключа (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: DetectKey
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_key_c
-  - MODL: m\AOF_Potion_chp_blu_mys.NIF
-  - TEXT: _aof\myst_chp.dds
-  - FNAM: Зелье обнаруж. ключа (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 10
-      index: DetectKey
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_key_e
-  - MODL: m\AOF_Potion_exc_blu_mys.NIF
-  - TEXT: _aof\myst_exc.dds
-  - FNAM: Зелье обнаруж. ключа (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: DetectKey
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_detect_key_q
-  - MODL: m\AOF_Potion_qu_blu_mys.NIF
-  - TEXT: _aof\myst_qu.dds
-  - FNAM: Зелье обнаруж. ключа (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: DetectKey
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_dispel_q
-  - MODL: m\AOF_Potion_qu_blu_mys.NIF
-  - TEXT: _aof\myst_qu.dds
-  - FNAM: Зелье развеивания (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: Dispel
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_dispel_e
-  - MODL: m\AOF_Potion_exc_blu_mys.NIF
-  - TEXT: _aof\myst_exc.dds
-  - FNAM: Зелье развеивания (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: Dispel
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_dispel_c
-  - MODL: m\AOF_Potion_chp_blu_mys.NIF
-  - TEXT: _aof\myst_chp.dds
-  - FNAM: Зелье развеивания (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: Dispel
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_dispel_b
-  - MODL: m\AOF_Potion_barg_blu_mys.NIF
-  - TEXT: _aof\myst_barg.dds
-  - FNAM: Зелье развеивания (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 2.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 1
-      index: Dispel
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_feather_s
-  - MODL: M\AOF_Potion_st_alt_y.NIF
-  - TEXT: _aof\alt_st.dds
-  - FNAM: Зелье пера (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: Feather
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_fortify_attack_b
-  - MODL: m\AOF_Potion_barg_amb_res.NIF
-  - TEXT: _aof\res_barg.dds
-  - FNAM: Улучшение атаки (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: FortifyAttackBonus
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_fortify_attack_c
-  - MODL: m\AOF_Potion_chp_amb_res.NIF
-  - TEXT: _aof\res_chp.dds
-  - FNAM: Улучшение атаки (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 15
-      index: FortifyAttackBonus
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_fortify_attack_s
-  - MODL: m\AOF_Potion_st_amb_res.NIF
-  - TEXT: _aof\res_st.dds
-  - FNAM: Улучшение атаки (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: FortifyAttackBonus
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_fortify_attack_q
-  - MODL: m\AOF_Potion_qu_amb_res.NIF
-  - TEXT: _aof\res_qu.dds
-  - FNAM: Улучшение атаки (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: FortifyAttackBonus
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_swift_swim_s
-  - MODL: m\AOF_Potion_st_alt_y.NIF
-  - TEXT: _aof\alt_st.dds
-  - FNAM: Зелье быстроплавания (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: SwiftSwim
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_swift_swim_b
-  - MODL: m\AOF_Potion_barg_alt_y.NIF
-  - TEXT: _aof\alt_barg.dds
-  - FNAM: Зелье быстроплавания (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: SwiftSwim
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_telekinesis_c
-  - MODL: m\AOF_Potion_chp_green_i.NIF
-  - TEXT: _aof\illu_chp.dds
-  - FNAM: Зелье телекинеза (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 10
-      index: Telekinesis
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_telekinesis_b
-  - MODL: m\AOF_Potion_barg_green_i.NIF
-  - TEXT: _aof\illu_barg.dds
-  - FNAM: Зелье телекинеза (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: Telekinesis
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_telekinesis_q
-  - MODL: m\AOF_Potion_qu_green_i.NIF
-  - TEXT: _aof\illu_qu.dds
-  - FNAM: Зелье телекинеза (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: Telekinesis
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_telekinesis_e
-  - MODL: m\AOF_Potion_exc_green_i.NIF
-  - TEXT: _aof\illu_exc.dds
-  - FNAM: Зелье телекинеза (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: Telekinesis
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_water_breathing_q
-  - MODL: M\AOF_Potion_qu_alt_y.NIF
-  - TEXT: _aof\alt_qu.dds
-  - FNAM: Зелье водного дыхания (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: WaterBreathing
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_water_breathing_e
-  - MODL: M\AOF_Potion_exc_alt_y.NIF
-  - TEXT: _aof\alt_exc.dds
-  - FNAM: Зелье водного дыхания (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: WaterBreathing
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_water_breathing_c
-  - MODL: M\AOF_Potion_chp_alt_y.NIF
-  - TEXT: _aof\alt_chp.dds
-  - FNAM: Зелье водного дыхания (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: WaterBreathing
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_water_breathing_b
-  - MODL: M\AOF_Potion_barg_alt_y.NIF
-  - TEXT: _aof\alt_barg.dds
-  - FNAM: Зелье водного дыхания (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 5
-      index: WaterBreathing
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_water_walking_b
-  - MODL: M\AOF_Potion_barg_alt_y.NIF
-  - TEXT: _aof\alt_barg.dds
-  - FNAM: Зелье хождения по воде (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 5
-      index: WaterWalking
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_water_walking_c
-  - MODL: M\AOF_Potion_chp_alt_y.NIF
-  - TEXT: _aof\alt_chp.dds
-  - FNAM: Зелье хождения по воде (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: WaterWalking
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_water_walking_e
-  - MODL: M\AOF_Potion_exc_alt_y.NIF
-  - TEXT: _aof\alt_exc.dds
-  - FNAM: Зелье хождения по воде (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: WaterWalking
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_water_walking_q
-  - MODL: M\AOF_Potion_qu_alt_y.NIF
-  - TEXT: _aof\alt_qu.dds
-  - FNAM: Зелье хождения по воде (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: WaterWalking
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_blight_resistance_b
-  - MODL: m\AOF_Potion_barg_amb_res.NIF
-  - TEXT: _aof\res_barg.dds
-  - FNAM: Сопротивление мору (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: ResistBlightDisease
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_blight_resistance_c
-  - MODL: m\AOF_Potion_chp_amb_res.NIF
-  - TEXT: _aof\res_chp.dds
-  - FNAM: Сопротивление мору (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 15
-      index: ResistBlightDisease
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_blight_resistance_e
-  - MODL: m\AOF_Potion_exc_amb_res.NIF
-  - TEXT: _aof\res_exc.dds
-  - FNAM: Сопротивление мору (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 60
-      index: ResistBlightDisease
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_blight_resistance_q
-  - MODL: m\AOF_Potion_qu_amb_res.NIF
-  - TEXT: _aof\res_qu.dds
-  - FNAM: Сопротивление мору (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: ResistBlightDisease
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_blight_resistance_s
-  - MODL: m\AOF_Potion_st_amb_res.NIF
-  - TEXT: _aof\res_st.dds
-  - FNAM: Сопротивление мору (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: ResistBlightDisease
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_slowfall_b
-  - MODL: M\AOF_Potion_barg_yellow.nif
-  - TEXT: _aof\yellow_barg.dds
-  - FNAM: Зелье медленн. падения (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: SlowFall
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_slowfall_c
-  - MODL: M\AOF_Potion_chp_yellow.nif
-  - TEXT: _aof\yellow_chp.dds
-  - FNAM: Зелье медленн. падения (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 15
-      index: SlowFall
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_slowfall_e
-  - MODL: M\AOF_Potion_exc_yellow.nif
-  - TEXT: _aof\yellow_exc.dds
-  - FNAM: Зелье медленн. падения (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 60
-      index: SlowFall
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_slowfall_q
-  - MODL: M\AOF_Potion_qu_yellow.nif
-  - TEXT: _aof\yellow_qu.dds
-  - FNAM: Зелье медленн. падения (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: SlowFall
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_slowfall_s
-  - MODL: M\AOF_Potion_st_yellow.nif
-  - TEXT: _aof\yellow_st.dds
-  - FNAM: Зелье медленн. падения (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: SlowFall
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_b
-  - MODL: m\AOF_Potion_barg_green_i.NIF
-  - TEXT: _aof\illu_barg.dds
-  - FNAM: Зелье светоча (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: Sanctuary
-      magnitude_max: 5
-      magnitude_min: 5
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_c
-  - MODL: m\AOF_Potion_chp_green_i.NIF
-  - TEXT: _aof\illu_chp.dds
-  - FNAM: Зелье светоча (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 15
-      index: Sanctuary
-      magnitude_max: 8
-      magnitude_min: 8
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_e
-  - MODL: m\AOF_Potion_exc_green_i.NIF
-  - TEXT: _aof\illu_exc.dds
-  - FNAM: Зелье светоча (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 60
-      index: Sanctuary
-      magnitude_max: 20
-      magnitude_min: 20
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_q
-  - MODL: m\AOF_Potion_qu_green_i.NIF
-  - TEXT: _aof\illu_qu.dds
-  - FNAM: Зелье светоча (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: Sanctuary
-      magnitude_max: 15
-      magnitude_min: 15
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_sanctuary_s
-  - MODL: m\AOF_Potion_st_green_i.NIF
-  - TEXT: _aof\illu_st.dds
-  - FNAM: Зелье светоча (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: Sanctuary
-      magnitude_max: 10
-      magnitude_min: 10
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_summon_centurion_sphere_b
-  - MODL: m\AOF_Potion_barg_yellow.NIF
-  - TEXT: _aof\yellow_barg.dds
-  - FNAM: Зелье выз. Сферы-цент. (уцен.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 5
-      weight: 1.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 5
-      index: SummonCenturionSphere
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_summon_centurion_sphere_c
-  - MODL: m\AOF_Potion_chp_yellow.NIF
-  - TEXT: _aof\yellow_chp.dds
-  - FNAM: Зелье выз. Сферы-цент. (деш.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 15
-      weight: 1.0
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 8
-      index: SummonCenturionSphere
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_summon_centurion_sphere_e
-  - MODL: m\AOF_Potion_exc_yellow.NIF
-  - TEXT: _aof\yellow_exc.dds
-  - FNAM: Зелье выз. Сферы-цент. (экскл.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 175
-      weight: 0.25
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 45
-      index: SummonCenturionSphere
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_summon_centurion_sphere_q
-  - MODL: m\AOF_Potion_qu_yellow.NIF
-  - TEXT: _aof\yellow_qu.dds
-  - FNAM: Зелье выз. Сферы-цент. (кач.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 80
-      weight: 0.5
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 30
-      index: SummonCenturionSphere
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
-- ALCH:
-  - NAME: p_summon_centurion_sphere_s
-  - MODL: m\AOF_Potion_st_yellow.NIF
-  - TEXT: _aof\yellow_st.dds
-  - FNAM: Зелье выз. Сферы-цент. (станд.)
-  - ALDT:
-      auto_calculate_value: false
-      value: 35
-      weight: 0.75
-  - ENAM:
-      area: 0
-      attribute: ~
-      duration: 15
-      index: SummonCenturionSphere
-      magnitude_max: 1
-      magnitude_min: 1
-      range: Self
-      skill: ~
+    - HEDR:
+        version: 1067869798
+        type: ESP
+        author: A1
+        description:
+          - Модифицирует некоторые существующие и добавляет новые зелья. Вспомогательный плагин для A1_Alchemy_V7_Apparatus.
+          - ""
+          - Версия для AOF Potions Recolored
+        records: 85
+    - MAST: Morrowind.esm
+    - DATA: 79764287
+    - MAST: Tribunal.esm
+    - DATA: 6616539
+    - MAST: Bloodmoon.esm
+    - DATA: 11799703
+- ALCH:
+    - NAME: p_burden_s
+    - MODL: "m\\AOF_Potion_st_amb_res.NIF"
+    - TEXT: "_aof\\res_st.dds"
+    - FNAM: Зелье Даэдра (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_paralyze_s
+    - MODL: "m\\AOF_Potion_st_amb_res.NIF"
+    - TEXT: "_aof\\res_st.dds"
+    - FNAM: Сопротивление параличу (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_silence_s
+    - MODL: "M\\AOF_Potion_st_yellow.NIF"
+    - TEXT: "_aof\\yellow_st.dds"
+    - FNAM: Зелье щита (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_burden_c
+    - MODL: "m\\AOF_Potion_chp_amb_res.NIF"
+    - TEXT: "_aof\\res_chp.dds"
+    - FNAM: Зелье Даэдра (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_burden_b
+    - MODL: "m\\AOF_Potion_barg_amb_res.NIF"
+    - TEXT: "_aof\\res_barg.dds"
+    - FNAM: Зелье Даэдра (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_burden_q
+    - MODL: "m\\AOF_Potion_qu_amb_res.NIF"
+    - TEXT: "_aof\\res_qu.dds"
+    - FNAM: Зелье Даэдра (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_burden_e
+    - MODL: "m\\AOF_Potion_exc_amb_res.NIF"
+    - TEXT: "_aof\\res_exc.dds"
+    - FNAM: Зелье Даэдра (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistNormalWeapons
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 60
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_paralyze_c
+    - MODL: "m\\AOF_Potion_chp_amb_res.NIF"
+    - TEXT: "_aof\\res_chp.dds"
+    - FNAM: Cопротивление параличу (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_paralyze_b
+    - MODL: "m\\AOF_Potion_barg_amb_res.NIF"
+    - TEXT: "_aof\\res_barg.dds"
+    - FNAM: Сопротивление параличу (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_paralyze_e
+    - MODL: "m\\AOF_Potion_exc_amb_res.NIF"
+    - TEXT: "_aof\\res_exc.dds"
+    - FNAM: Сопротивление параличу (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 60
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_paralyze_q
+    - MODL: "m\\AOF_Potion_qu_amb_res.NIF"
+    - TEXT: "_aof\\res_qu.dds"
+    - FNAM: Сопротивление параличу (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistParalysis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_silence_c
+    - MODL: "M\\AOF_Potion_chp_yellow.NIF"
+    - TEXT: "_aof\\yellow_chp.dds"
+    - FNAM: Зелье щита (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_silence_b
+    - MODL: "M\\AOF_Potion_barg_yellow.nif"
+    - TEXT: "_aof\\yellow_barg.dds"
+    - FNAM: Зелье щита (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_silence_q
+    - MODL: "M\\AOF_Potion_qu_yellow.NIF"
+    - TEXT: "_aof\\yellow_qu.dds"
+    - FNAM: Зелье щита (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_silence_e
+    - MODL: "M\\AOF_Potion_exc_yellow.NIF"
+    - TEXT: "_aof\\yellow_exc.dds"
+    - FNAM: Зелье щита (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: Shield
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 60
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_cure_blight_s
+    - MODL: "M\\AOF_Potion_healing_b.NIF"
+    - TEXT: "_aof\\cure_b.dds"
+    - FNAM: Зелье лечения моровых болезней
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: CureBlightDisease
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_recall_s
+    - MODL: "m\\AOF_Potion_st_blu_mys.NIF"
+    - TEXT: "_aof\\myst_st.dds"
+    - FNAM: Зелье воспоминания
+    - ALDT:
+        weight: 0.5
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: Recall
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_levitation_b
+    - MODL: "m\\AOF_Potion_barg_alt_y.NIF"
+    - TEXT: "_aof\\alt_barg.tga"
+    - FNAM: Зелье левитации (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: Levitate
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_almsivi_intervention_s
+    - MODL: "M\\AOF_Potion_st_blu_mys.NIF"
+    - TEXT: "_aof\\myst_st.dds"
+    - FNAM: Зелье дурацкого счастья
+    - ALDT:
+        weight: 0.5
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: AlmsiviIntervention
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_cure_common_s
+    - MODL: "m\\AOF_Potion_healing_d.NIF"
+    - TEXT: "_aof\\cure_d.dds"
+    - FNAM: Зелье лечения обычных недугов
+    - ALDT:
+        weight: 0.5
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: CureCommonDisease
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_cure_paralyzation_s
+    - MODL: "m\\AOF_Potion_healing_pl.NIF"
+    - TEXT: "_aof\\cure_pl.dds"
+    - FNAM: Зелье лечения парализации
+    - ALDT:
+        weight: 0.5
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: CureParalyzation
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_cure_poison_s
+    - MODL: "m\\AOF_Potion_healing_p.NIF"
+    - TEXT: "_aof\\cure_p.dds"
+    - FNAM: Зелье лечения отравлений
+    - ALDT:
+        weight: 0.5
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: CurePoison
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_mark_s
+    - MODL: "m\\AOF_Potion_st_blu_mys.NIF"
+    - TEXT: "_aof\\myst_st.dds"
+    - FNAM: Зелье пометки
+    - ALDT:
+        weight: 0.5
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: Mark
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_detect_creatures_s
+    - MODL: "m\\AOF_Potion_st_blu_mys.NIF"
+    - TEXT: "_aof\\myst_st.dds"
+    - FNAM: Зелье обнаруж. существ (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectAnimal
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_detect_key_s
+    - MODL: "m\\AOF_Potion_st_blu_mys.NIF"
+    - TEXT: "_aof\\myst_st.dds"
+    - FNAM: Зелье обнаруж. ключа (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectKey
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_dispel_s
+    - MODL: "M\\AOF_Potion_st_blu_mys.NIF"
+    - TEXT: "_aof\\myst_st.dds"
+    - FNAM: Зелье развеивания (станд.)
+    - ALDT:
+        weight: 1.0
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: Dispel
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_telekinesis_s
+    - MODL: "m\\AOF_Potion_st_green_i.NIF"
+    - TEXT: "_aof\\illu_st.dds"
+    - FNAM: Зелье телекинеза (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: Telekinesis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_water_breathing_s
+    - MODL: "M\\AOF_Potion_st_alt_y.NIF"
+    - TEXT: "_aof\\alt_st.dds"
+    - FNAM: Зелье водного дыхания (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: WaterBreathing
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_water_walking_s
+    - MODL: "M\\AOF_Potion_st_alt_y.NIF"
+    - TEXT: "_aof\\alt_st.dds"
+    - FNAM: Зелье хождения по воде (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: WaterWalking
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_detect_enchantment_s
+    - MODL: "m\\AOF_Potion_st_blu_mys.NIF"
+    - TEXT: "_aof\\myst_st.dds"
+    - FNAM: Зелье обнаружения чар (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectEnchantment
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_detect_creatures_b
+    - MODL: "m\\AOF_Potion_barg_blu_mys.NIF"
+    - TEXT: "_aof\\myst_barg.dds"
+    - FNAM: Зелье обнаруж. существ (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectAnimal
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_detect_creatures_c
+    - MODL: "m\\AOF_Potion_chp_blu_mys.NIF"
+    - TEXT: "_aof\\myst_chp.dds"
+    - FNAM: Зелье обнаруж. существ (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectAnimal
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 10
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_detect_creatures_e
+    - MODL: "m\\AOF_Potion_exc_blu_mys.NIF"
+    - TEXT: "_aof\\myst_exc.dds"
+    - FNAM: Зелье обнаруж. существ (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectAnimal
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_detect_creatures_q
+    - MODL: "m\\AOF_Potion_qu_blu_mys.NIF"
+    - TEXT: "_aof\\myst_qu.dds"
+    - FNAM: Зелье обнаруж. существ (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectAnimal
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_detect_enchantment_b
+    - MODL: "m\\AOF_Potion_barg_blu_mys.NIF"
+    - TEXT: "_aof\\myst_barg.dds"
+    - FNAM: Зелье обнаружения чар (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectEnchantment
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_detect_enchantment_c
+    - MODL: "m\\AOF_Potion_chp_blu_mys.NIF"
+    - TEXT: "_aof\\myst_chp.dds"
+    - FNAM: Зелье обнаружения чар (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectEnchantment
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 10
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_detect_enchantment_e
+    - MODL: "m\\AOF_Potion_exc_blu_mys.NIF"
+    - TEXT: "_aof\\myst_exc.dds"
+    - FNAM: Зелье обнаружения чар (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectEnchantment
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_detect_enchantment_q
+    - MODL: "m\\AOF_Potion_qu_blu_mys.NIF"
+    - TEXT: "_aof\\myst_qu.dds"
+    - FNAM: Зелье обнаружения чар (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectEnchantment
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_detect_key_b
+    - MODL: "m\\AOF_Potion_barg_blu_mys.NIF"
+    - TEXT: "_aof\\myst_barg.dds"
+    - FNAM: Зелье обнаруж. ключа (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectKey
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_detect_key_c
+    - MODL: "m\\AOF_Potion_chp_blu_mys.NIF"
+    - TEXT: "_aof\\myst_chp.dds"
+    - FNAM: Зелье обнаруж. ключа (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectKey
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 10
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_detect_key_e
+    - MODL: "m\\AOF_Potion_exc_blu_mys.NIF"
+    - TEXT: "_aof\\myst_exc.dds"
+    - FNAM: Зелье обнаруж. ключа (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectKey
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_detect_key_q
+    - MODL: "m\\AOF_Potion_qu_blu_mys.NIF"
+    - TEXT: "_aof\\myst_qu.dds"
+    - FNAM: Зелье обнаруж. ключа (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: DetectKey
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_dispel_q
+    - MODL: "m\\AOF_Potion_qu_blu_mys.NIF"
+    - TEXT: "_aof\\myst_qu.dds"
+    - FNAM: Зелье развеивания (кач.)
+    - ALDT:
+        weight: 0.75
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: Dispel
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_dispel_e
+    - MODL: "m\\AOF_Potion_exc_blu_mys.NIF"
+    - TEXT: "_aof\\myst_exc.dds"
+    - FNAM: Зелье развеивания (экскл.)
+    - ALDT:
+        weight: 0.5
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: Dispel
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_dispel_c
+    - MODL: "m\\AOF_Potion_chp_blu_mys.NIF"
+    - TEXT: "_aof\\myst_chp.dds"
+    - FNAM: Зелье развеивания (деш.)
+    - ALDT:
+        weight: 1.5
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: Dispel
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_dispel_b
+    - MODL: "m\\AOF_Potion_barg_blu_mys.NIF"
+    - TEXT: "_aof\\myst_barg.dds"
+    - FNAM: Зелье развеивания (уцен.)
+    - ALDT:
+        weight: 2.0
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: Dispel
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 1
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_feather_s
+    - MODL: "M\\AOF_Potion_st_alt_y.NIF"
+    - TEXT: "_aof\\alt_st.dds"
+    - FNAM: Зелье пера (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: Feather
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_fortify_attack_b
+    - MODL: "m\\AOF_Potion_barg_amb_res.NIF"
+    - TEXT: "_aof\\res_barg.dds"
+    - FNAM: Улучшение атаки (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: FortifyAttackBonus
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_fortify_attack_c
+    - MODL: "m\\AOF_Potion_chp_amb_res.NIF"
+    - TEXT: "_aof\\res_chp.dds"
+    - FNAM: Улучшение атаки (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: FortifyAttackBonus
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_fortify_attack_s
+    - MODL: "m\\AOF_Potion_st_amb_res.NIF"
+    - TEXT: "_aof\\res_st.dds"
+    - FNAM: Улучшение атаки (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: FortifyAttackBonus
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_fortify_attack_q
+    - MODL: "m\\AOF_Potion_qu_amb_res.NIF"
+    - TEXT: "_aof\\res_qu.dds"
+    - FNAM: Улучшение атаки (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: FortifyAttackBonus
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_swift_swim_s
+    - MODL: "m\\AOF_Potion_st_alt_y.NIF"
+    - TEXT: "_aof\\alt_st.dds"
+    - FNAM: Зелье быстроплавания (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: SwiftSwim
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_swift_swim_b
+    - MODL: "m\\AOF_Potion_barg_alt_y.NIF"
+    - TEXT: "_aof\\alt_barg.dds"
+    - FNAM: Зелье быстроплавания (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: SwiftSwim
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_telekinesis_c
+    - MODL: "m\\AOF_Potion_chp_green_i.NIF"
+    - TEXT: "_aof\\illu_chp.dds"
+    - FNAM: Зелье телекинеза (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: Telekinesis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 10
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_telekinesis_b
+    - MODL: "m\\AOF_Potion_barg_green_i.NIF"
+    - TEXT: "_aof\\illu_barg.dds"
+    - FNAM: Зелье телекинеза (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: Telekinesis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_telekinesis_q
+    - MODL: "m\\AOF_Potion_qu_green_i.NIF"
+    - TEXT: "_aof\\illu_qu.dds"
+    - FNAM: Зелье телекинеза (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: Telekinesis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_telekinesis_e
+    - MODL: "m\\AOF_Potion_exc_green_i.NIF"
+    - TEXT: "_aof\\illu_exc.dds"
+    - FNAM: Зелье телекинеза (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: Telekinesis
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_water_breathing_q
+    - MODL: "M\\AOF_Potion_qu_alt_y.NIF"
+    - TEXT: "_aof\\alt_qu.dds"
+    - FNAM: Зелье водного дыхания (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: WaterBreathing
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_water_breathing_e
+    - MODL: "M\\AOF_Potion_exc_alt_y.NIF"
+    - TEXT: "_aof\\alt_exc.dds"
+    - FNAM: Зелье водного дыхания (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: WaterBreathing
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_water_breathing_c
+    - MODL: "M\\AOF_Potion_chp_alt_y.NIF"
+    - TEXT: "_aof\\alt_chp.dds"
+    - FNAM: Зелье водного дыхания (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: WaterBreathing
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_water_breathing_b
+    - MODL: "M\\AOF_Potion_barg_alt_y.NIF"
+    - TEXT: "_aof\\alt_barg.dds"
+    - FNAM: Зелье водного дыхания (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: WaterBreathing
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 5
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_water_walking_b
+    - MODL: "M\\AOF_Potion_barg_alt_y.NIF"
+    - TEXT: "_aof\\alt_barg.dds"
+    - FNAM: Зелье хождения по воде (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: WaterWalking
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 5
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_water_walking_c
+    - MODL: "M\\AOF_Potion_chp_alt_y.NIF"
+    - TEXT: "_aof\\alt_chp.dds"
+    - FNAM: Зелье хождения по воде (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: WaterWalking
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_water_walking_e
+    - MODL: "M\\AOF_Potion_exc_alt_y.NIF"
+    - TEXT: "_aof\\alt_exc.dds"
+    - FNAM: Зелье хождения по воде (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: WaterWalking
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_water_walking_q
+    - MODL: "M\\AOF_Potion_qu_alt_y.NIF"
+    - TEXT: "_aof\\alt_qu.dds"
+    - FNAM: Зелье хождения по воде (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: WaterWalking
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_blight_resistance_b
+    - MODL: "m\\AOF_Potion_barg_amb_res.NIF"
+    - TEXT: "_aof\\res_barg.dds"
+    - FNAM: Сопротивление мору (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistBlightDisease
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_blight_resistance_c
+    - MODL: "m\\AOF_Potion_chp_amb_res.NIF"
+    - TEXT: "_aof\\res_chp.dds"
+    - FNAM: Сопротивление мору (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistBlightDisease
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_blight_resistance_e
+    - MODL: "m\\AOF_Potion_exc_amb_res.NIF"
+    - TEXT: "_aof\\res_exc.dds"
+    - FNAM: Сопротивление мору (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistBlightDisease
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 60
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_blight_resistance_q
+    - MODL: "m\\AOF_Potion_qu_amb_res.NIF"
+    - TEXT: "_aof\\res_qu.dds"
+    - FNAM: Сопротивление мору (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistBlightDisease
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_blight_resistance_s
+    - MODL: "m\\AOF_Potion_st_amb_res.NIF"
+    - TEXT: "_aof\\res_st.dds"
+    - FNAM: Сопротивление мору (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: ResistBlightDisease
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_slowfall_b
+    - MODL: "M\\AOF_Potion_barg_yellow.nif"
+    - TEXT: "_aof\\yellow_barg.dds"
+    - FNAM: Зелье медленн. падения (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: SlowFall
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_slowfall_c
+    - MODL: "M\\AOF_Potion_chp_yellow.nif"
+    - TEXT: "_aof\\yellow_chp.dds"
+    - FNAM: Зелье медленн. падения (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: SlowFall
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_slowfall_e
+    - MODL: "M\\AOF_Potion_exc_yellow.nif"
+    - TEXT: "_aof\\yellow_exc.dds"
+    - FNAM: Зелье медленн. падения (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: SlowFall
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 60
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_slowfall_q
+    - MODL: "M\\AOF_Potion_qu_yellow.nif"
+    - TEXT: "_aof\\yellow_qu.dds"
+    - FNAM: Зелье медленн. падения (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: SlowFall
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_slowfall_s
+    - MODL: "M\\AOF_Potion_st_yellow.nif"
+    - TEXT: "_aof\\yellow_st.dds"
+    - FNAM: Зелье медленн. падения (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: SlowFall
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_sanctuary_b
+    - MODL: "m\\AOF_Potion_barg_green_i.NIF"
+    - TEXT: "_aof\\illu_barg.dds"
+    - FNAM: Зелье светоча (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: Sanctuary
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 5
+        magnitude_max: 5
+- ALCH:
+    - NAME: p_sanctuary_c
+    - MODL: "m\\AOF_Potion_chp_green_i.NIF"
+    - TEXT: "_aof\\illu_chp.dds"
+    - FNAM: Зелье светоча (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: Sanctuary
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 8
+        magnitude_max: 8
+- ALCH:
+    - NAME: p_sanctuary_e
+    - MODL: "m\\AOF_Potion_exc_green_i.NIF"
+    - TEXT: "_aof\\illu_exc.dds"
+    - FNAM: Зелье светоча (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: Sanctuary
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 60
+        magnitude_min: 20
+        magnitude_max: 20
+- ALCH:
+    - NAME: p_sanctuary_q
+    - MODL: "m\\AOF_Potion_qu_green_i.NIF"
+    - TEXT: "_aof\\illu_qu.dds"
+    - FNAM: Зелье светоча (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: Sanctuary
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 15
+        magnitude_max: 15
+- ALCH:
+    - NAME: p_sanctuary_s
+    - MODL: "m\\AOF_Potion_st_green_i.NIF"
+    - TEXT: "_aof\\illu_st.dds"
+    - FNAM: Зелье светоча (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: Sanctuary
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 10
+        magnitude_max: 10
+- ALCH:
+    - NAME: p_summon_centurion_sphere_b
+    - MODL: "m\\AOF_Potion_barg_yellow.NIF"
+    - TEXT: "_aof\\yellow_barg.dds"
+    - FNAM: Зелье выз. Сферы-цент. (уцен.)
+    - ALDT:
+        weight: 1.5
+        value: 5
+        auto_calculate_value: false
+    - ENAM:
+        index: SummonCenturionSphere
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 5
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_summon_centurion_sphere_c
+    - MODL: "m\\AOF_Potion_chp_yellow.NIF"
+    - TEXT: "_aof\\yellow_chp.dds"
+    - FNAM: Зелье выз. Сферы-цент. (деш.)
+    - ALDT:
+        weight: 1.0
+        value: 15
+        auto_calculate_value: false
+    - ENAM:
+        index: SummonCenturionSphere
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 8
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_summon_centurion_sphere_e
+    - MODL: "m\\AOF_Potion_exc_yellow.NIF"
+    - TEXT: "_aof\\yellow_exc.dds"
+    - FNAM: Зелье выз. Сферы-цент. (экскл.)
+    - ALDT:
+        weight: 0.25
+        value: 175
+        auto_calculate_value: false
+    - ENAM:
+        index: SummonCenturionSphere
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 45
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_summon_centurion_sphere_q
+    - MODL: "m\\AOF_Potion_qu_yellow.NIF"
+    - TEXT: "_aof\\yellow_qu.dds"
+    - FNAM: Зелье выз. Сферы-цент. (кач.)
+    - ALDT:
+        weight: 0.5
+        value: 80
+        auto_calculate_value: false
+    - ENAM:
+        index: SummonCenturionSphere
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 30
+        magnitude_min: 1
+        magnitude_max: 1
+- ALCH:
+    - NAME: p_summon_centurion_sphere_s
+    - MODL: "m\\AOF_Potion_st_yellow.NIF"
+    - TEXT: "_aof\\yellow_st.dds"
+    - FNAM: Зелье выз. Сферы-цент. (станд.)
+    - ALDT:
+        weight: 0.75
+        value: 35
+        auto_calculate_value: false
+    - ENAM:
+        index: SummonCenturionSphere
+        skill: ~
+        attribute: ~
+        range: Self
+        area: 0
+        duration: 15
+        magnitude_min: 1
+        magnitude_max: 1
