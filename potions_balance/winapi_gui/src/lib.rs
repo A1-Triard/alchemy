@@ -15,14 +15,29 @@ use std::os::raw::c_int;
 use std::path::PathBuf;
 use std::os::windows::ffi::{OsStringExt, OsStrExt};
 use std::ffi::{OsStr, OsString};
+use void::Void;
+use std::fmt::{self, Display};
+#[macro_use]
+extern crate macro_attr;
+#[macro_use]
+extern crate enum_derive;
+use either::{Either, Left, Right};
 
-pub struct Window<'a> {
+pub trait IsWindow {
+    fn get_h_wnd(&self) -> NonNull<HWND__>;
+}
+
+pub struct Window<'a, DialogOk, DialogError> {
     h_wnd: NonNull<HWND__>,
-    phantom: PhantomData<&'a ()>,
+    phantom: PhantomData<&'a (DialogOk, DialogError)>,
     destroy_on_drop: bool,
 }
 
-impl<'a> Drop for Window<'a> {
+impl<'a, DialogOk, DialogError> IsWindow for Window<'a, DialogOk, DialogError> {
+    fn get_h_wnd(&self) -> NonNull<HWND__> { self.h_wnd }
+}
+
+impl<'a, DialogOk, DialogError> Drop for Window<'a, DialogOk, DialogError> {
     fn drop(&mut self) {
         if self.destroy_on_drop {
             unsafe {
@@ -33,22 +48,58 @@ impl<'a> Drop for Window<'a> {
     }
 }
 
+pub struct Wm {
+    pub handled: bool
+}
+
 pub struct WmDestroy {
+    pub handled: bool,
     pub post_quit_message: bool
 }
 
-pub trait WindowProc {
-    fn wm_create(&mut self, _window: Window, handled: &mut bool) { *handled = false; }
-    fn wm_close(&mut self, _window: Window, handled: &mut bool) { *handled = false; }
-    fn wm_destroy(&mut self, _wm: &mut WmDestroy, handled: &mut bool) { *handled = false; }
-    fn wm_init_dialog(&mut self, _window: Window) { }
-    fn wm_command(&mut self, _window: Window, _command_id: u16, _notification_code: u16, handled: &mut bool) { *handled = false; }
-    fn wm_user(&mut self, _window: Window, _n: UINT) { }
-    fn wm_timer(&mut self, _window: Window, _id: WPARAM) { }
+pub struct WmInitDialog {
+    pub set_keyboard_focus: bool
 }
 
-impl<'a> Window<'a> {
-    pub fn new(class: &'a WindowClass, name: &str, width: c_int, height: c_int, window_proc: &'a mut dyn WindowProc) -> Result<Window<'a>, ()> {
+pub trait WindowProc {
+    type DialogOk;
+    type DialogError;
+    fn wm_create(&mut self, _window: Window<Self::DialogOk, Self::DialogError>, wm: &mut Wm) -> Result<(), Self::DialogError> { wm.handled = false; Ok(()) }
+    fn wm_close(&mut self, _window: Window<Self::DialogOk, Self::DialogError>, wm: &mut Wm) { wm.handled = false; }
+    fn wm_destroy(&mut self, wm: &mut WmDestroy) { wm.handled = false; }
+    fn wm_init_dialog(&mut self, _window: Window<Self::DialogOk, Self::DialogError>, _wm: &mut WmInitDialog) -> Result<(), Self::DialogError> { Ok(()) }
+    fn wm_command(&mut self, _window: Window<Self::DialogOk, Self::DialogError>, _command_id: u16, _notification_code: u16, wm: &mut Wm) -> Result<(), Self::DialogError> { wm.handled = false; Ok(()) }
+    fn wm_timer(&mut self, _window: Window<Self::DialogOk, Self::DialogError>, _id: WPARAM) -> Result<(), Self::DialogError> { Ok(()) }
+}
+
+macro_attr! {
+    #[derive(Ord, PartialOrd, Eq, PartialEq, Hash, Copy, Clone)]
+    #[derive(Debug, EnumDisplay!)]
+    pub enum WindowsCall {
+        CreateWindowExW,
+        GetMessageW,
+        SetDlgItemTextW,
+        SetFocus,
+        PostMessageW,
+        GetWindowRect,
+        MoveWindow,
+        RegisterClassExW,
+    }
+}
+
+pub struct WindowsError {
+    pub error_code: DWORD,
+    pub call: WindowsCall,
+}
+
+impl Display for WindowsError {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}: {}", self.call, self.error_code)
+    }
+}
+
+impl<'a> Window<'a, Void, Void> {
+    pub fn new(class: &'a WindowClass, name: &str, width: c_int, height: c_int, window_proc: &'a mut dyn WindowProc<DialogOk=Void, DialogError=Void>) -> Result<Window<'a, Void, Void>, WindowsError> {
         let h_wnd = NonNull::new(unsafe {
             CreateWindowExW(
                 WS_EX_CLIENTEDGE,
@@ -66,26 +117,26 @@ impl<'a> Window<'a> {
         if let Some(h_wnd) = h_wnd {
             Ok(Window { h_wnd, phantom: PhantomData, destroy_on_drop: true })
         } else {
-            let error_code = unsafe { GetLastError() };
-            message_box(None, &format!("Cannot create window ({}).", error_code), "Error", MB_ICONEXCLAMATION | MB_OK);
-            Err(())
+            Err(WindowsError { call: WindowsCall::CreateWindowExW, error_code: unsafe { GetLastError() } })
         }
     }
 
+    pub fn destroy(mut self) {
+        self.destroy_on_drop = true;
+    }
+}
+
+impl<'a, DialogOk, DialogError> Window<'a, DialogOk, DialogError> {
     pub fn show(&self, n_cmd_show: c_int) -> bool {
         unsafe { ShowWindow(self.h_wnd.as_ptr(), n_cmd_show) != 0 }
     }
 
-    pub fn update(&self) -> Result<(), ()> {
-        if unsafe { UpdateWindow(self.h_wnd.as_ptr()) != 0 } {
-            Ok(())
-        } else {
-            message_box(None, "Cannot update window.", "Error", MB_ICONEXCLAMATION | MB_OK);
-            Err(())
-        }
+    pub fn update(&self) {
+        let ok = unsafe { UpdateWindow(self.h_wnd.as_ptr()) != 0 };
+        debug_assert!(ok);
     }
 
-    pub fn run(self) -> WPARAM {
+    pub fn run(self) -> Result<WPARAM, WindowsError> {
         let h_wnd = self.h_wnd;
         forget(self);
         let mut msg = MSG {
@@ -100,40 +151,33 @@ impl<'a> Window<'a> {
             loop {
                 let res = GetMessageW(&mut msg as *mut _, h_wnd.as_ptr(), 0, 0);
                 if res == 0 { break }
-                if res < 0 {
-                    let error_code = GetLastError();
-                    message_box(None, &format!("Application error ({}).", error_code), "Error", MB_ICONEXCLAMATION | MB_OK);
-                    break;
-                }
+                if res < 0 { return Err(WindowsError { call: WindowsCall::GetMessageW, error_code: GetLastError() }); }
                 TranslateMessage(&msg as *const _);
                 DispatchMessageW(&msg as *const _);
             }
         }
-        msg.wParam
+        Ok(msg.wParam)
     }
 
-    pub fn destroy(mut self) {
-        self.destroy_on_drop = true;
-    }
-    
-    pub fn end_dialog(self, result: INT_PTR) {
-        let ok = unsafe { EndDialog(self.h_wnd.as_ptr(), result) != 0 };
-        debug_assert!(ok);
+    pub fn end_dialog(self, result: Result<DialogOk, DialogError>) {
+        let ok = unsafe { EndDialog(self.h_wnd.as_ptr(), Box::into_raw(Box::new(result)) as INT_PTR) != 0 };
+        assert!(ok);
     }
 
-    pub fn get_dialog_item(&self, item_id: u16) -> Option<impl AsRef<Window>> {
+    pub fn get_dialog_item(&self, item_id: u16) -> Option<impl AsRef<Window<Void, Void>>> {
         let h_wnd = NonNull::new(unsafe { GetDlgItem(self.h_wnd.as_ptr(), item_id as c_int) });
-        h_wnd.map(|h_wnd| WindowAsRef(Window { h_wnd, destroy_on_drop: false, phantom: PhantomData }))
+        h_wnd.map(|h_wnd| WindowAsRef(Window::<Void, Void> { h_wnd, destroy_on_drop: false, phantom: PhantomData }))
     }
 
-    pub fn set_dialog_item_text_str(&self, item_id: u16, text: &str) {
+    pub fn set_dialog_item_text_str(&self, item_id: u16, text: &str) -> Result<(), WindowsError> {
         let os_string = OsString::from_wide(&text.encode_utf16().collect::<Vec<_>>());
-        self.set_dialog_item_text(item_id, &os_string);
+        self.set_dialog_item_text(item_id, &os_string)
     }
     
-    pub fn set_dialog_item_text(&self, item_id: u16, text: &OsStr) {
+    pub fn set_dialog_item_text(&self, item_id: u16, text: &OsStr) -> Result<(), WindowsError> {
         let text = text.encode_wide().chain(once(0)).collect::<Vec<_>>().as_ptr();
-        unsafe { SetDlgItemTextW(self.h_wnd.as_ptr(), item_id as c_int, text); }
+        let ok = unsafe { SetDlgItemTextW(self.h_wnd.as_ptr(), item_id as c_int, text) != 0 };
+        if ok { Ok(()) } else { Err(WindowsError { call: WindowsCall::SetDlgItemTextW, error_code: unsafe { GetLastError() } }) }
     }
     
     pub fn get_dialog_item_text(&self, item_id: u16, max_len: u16) -> OsString {
@@ -147,36 +191,35 @@ impl<'a> Window<'a> {
         unsafe { SendDlgItemMessageW(self.h_wnd.as_ptr(), item_id as c_int, EM_LIMITTEXT as u32, limit as usize, 0); }
     }
 
-    pub fn set_focus(&self) {
+    pub fn set_focus(&self) -> Result<(), WindowsError> {
         let ok = unsafe { !SetFocus(self.h_wnd.as_ptr()).is_null() };
-        debug_assert!(ok);
+        if ok { Ok(()) } else { Err(WindowsError { call: WindowsCall::SetFocus, error_code: unsafe { GetLastError() } }) }
     }
     
-    pub fn post_wm_command(&self, command_id: u16, notification_code: u16) {
+    pub fn post_wm_command(&self, command_id: u16, notification_code: u16) -> Result<(), WindowsError> {
         let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_COMMAND, (command_id as WPARAM) | ((notification_code as WPARAM) << 16), 0) != 0 };
-        assert!(ok);
+        if ok { Ok(()) } else { Err(WindowsError { call: WindowsCall::PostMessageW, error_code: unsafe { GetLastError() } }) }
     }
 
-    pub fn post_wm_user(&self, n: UINT) {
+    pub fn post_wm_user(&self, n: UINT) -> Result<(), WindowsError> {
         let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_USER + n, 0, 0) != 0 };
-        assert!(ok);
+        if ok { Ok(()) } else { Err(WindowsError { call: WindowsCall::PostMessageW, error_code: unsafe { GetLastError() } }) }
     }
 
-    pub fn post_wm_timer(&self, id: WPARAM) {
+    pub fn post_wm_timer(&self, id: WPARAM) -> Result<(), WindowsError> {
         let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_TIMER, id, 0) != 0 };
-        assert!(ok);
+        if ok { Ok(()) } else { Err(WindowsError { call: WindowsCall::PostMessageW, error_code: unsafe { GetLastError() } }) }
     }
 
-    pub fn get_rect(&self) -> RECT {
+    pub fn get_rect(&self) -> Result<RECT, WindowsError> {
         let mut rect = RECT { left: 0, top: 0, right: 0, bottom: 0 };
         let ok = unsafe { GetWindowRect(self.h_wnd.as_ptr(), &mut rect as *mut _) != 0 };
-        debug_assert!(ok);
-        rect
+        if ok { Ok(rect) } else { Err(WindowsError { call: WindowsCall::GetWindowRect, error_code: unsafe { GetLastError() } }) }
     }
 
-    pub fn move_(&self, x: c_int, y: c_int, width: c_int, height: c_int, repaint: bool) {
+    pub fn move_(&self, x: c_int, y: c_int, width: c_int, height: c_int, repaint: bool) -> Result<(), WindowsError> {
         let ok = unsafe { MoveWindow(self.h_wnd.as_ptr(), x, y, width, height, if repaint { TRUE } else { FALSE }) != 0 };
-        debug_assert!(ok);
+        if ok { Ok(()) } else { Err(WindowsError { call: WindowsCall::MoveWindow, error_code: unsafe { GetLastError() } }) }
     }
 }
 
@@ -185,8 +228,8 @@ pub struct Monitor {
 }
 
 impl Monitor {
-    pub fn from_window(window: &Window, flags: DWORD) -> Monitor {
-        let h_monitor = NonNull::new(unsafe { MonitorFromWindow(window.h_wnd.as_ptr(), flags) }).unwrap();
+    pub fn from_window(window: &dyn IsWindow, flags: DWORD) -> Monitor {
+        let h_monitor = NonNull::new(unsafe { MonitorFromWindow(window.get_h_wnd().as_ptr(), flags) }).unwrap();
         Monitor { h_monitor }
     }
     
@@ -203,10 +246,10 @@ impl Monitor {
     }
 }
 
-struct WindowAsRef<'a>(Window<'a>);
+struct WindowAsRef<'a, DialogOk, DialogError>(Window<'a, DialogOk, DialogError>);
 
-impl<'a> AsRef<Window<'a>> for WindowAsRef<'a> {
-    fn as_ref(&self) -> &Window<'a> { &self.0 }
+impl<'a, DialogOk, DialogError> AsRef<Window<'a, DialogOk, DialogError>> for WindowAsRef<'a, DialogOk, DialogError> {
+    fn as_ref(&self) -> &Window<'a, DialogOk, DialogError> { &self.0 }
 }
 
 pub struct WindowClass {
@@ -223,50 +266,58 @@ impl Drop for WindowClass {
     }
 }
 
-unsafe fn window_message(window_proc: &mut dyn WindowProc, h_wnd: HWND, msg: UINT, w_param: WPARAM, _l_param: LPARAM) -> bool {
-    let mut handled = true;
+unsafe fn window_message<DialogOk, DialogError>(window_proc: &mut dyn WindowProc<DialogOk=DialogOk, DialogError=DialogError>, h_wnd: HWND, msg: UINT, w_param: WPARAM, _l_param: LPARAM) -> Either<bool, Option<LRESULT>> {
     if msg == WM_DESTROY {
-        let mut wm = WmDestroy { post_quit_message: false };
-        window_proc.wm_destroy(&mut wm, &mut handled);
+        let mut wm = WmDestroy { post_quit_message: false, handled: true };
+        window_proc.wm_destroy(&mut wm);
         if wm.post_quit_message {
             PostQuitMessage(0);
         }
+        if wm.handled { Right(Some(0)) } else { Right(None) }
     } else {
         let window = Window { h_wnd: NonNull::new_unchecked(h_wnd), destroy_on_drop: false, phantom: PhantomData };
-        if msg >= WM_USER {
-            window_proc.wm_user(window, msg - WM_USER);
+        let (result, dialog_error) = if msg == WM_INITDIALOG {
+            let mut wm = WmInitDialog { set_keyboard_focus: true };
+            let dialog_error = window_proc.wm_init_dialog(window, &mut wm).err();
+            (Left(wm.set_keyboard_focus), dialog_error)
         } else {
-            match msg {
-                WM_CREATE => window_proc.wm_create(window, &mut handled),
-                WM_CLOSE => window_proc.wm_close(window, &mut handled),
-                WM_COMMAND => window_proc.wm_command(window, (w_param & 0xFFFF) as u16, ((w_param >> 16) & 0xFFFF) as u16, &mut handled),
-                WM_INITDIALOG => window_proc.wm_init_dialog(window),
-                WM_TIMER => window_proc.wm_timer(window, w_param),
-                _ => handled = false,
-            }
+            let mut wm = Wm { handled: true };
+            let (result, dialog_error) = match msg {
+                WM_CREATE => window_proc.wm_create(window, &mut wm).err().map_or((Right(0), None), |d| (Right(-1), Some(d))),
+                WM_CLOSE => { window_proc.wm_close(window, &mut wm); (Right(0), None) },
+                WM_COMMAND => (Right(0), window_proc.wm_command(window, (w_param & 0xFFFF) as u16, ((w_param >> 16) & 0xFFFF) as u16, &mut wm).err()),
+                WM_TIMER => (Right(0), window_proc.wm_timer(window, w_param).err()),
+                _ => { wm.handled = false; (Right(0), None) }
+            };
+            (if wm.handled { result.map_right(Some) } else { Right(None) }, dialog_error)
+        };
+        if let Some(dialog_error) = dialog_error {
+            let window: Window<DialogOk, DialogError> = Window { h_wnd: NonNull::new_unchecked(h_wnd), destroy_on_drop: false, phantom: PhantomData };
+            window.end_dialog(Err(dialog_error));
         }
+        result
     }
-    handled
 }
 
 impl WindowClass {
-    pub fn new(name: &str) -> Result<WindowClass, ()> {
+    pub fn new(name: &str) -> Result<WindowClass, WindowsError> {
         unsafe extern "system" fn wndproc(h_wnd: HWND, msg: UINT, w_param: WPARAM, l_param: LPARAM) -> LRESULT {
             if msg == WM_CREATE {
                 let create_struct = l_param as *const CREATESTRUCTW;
                 SetWindowLongPtrW(h_wnd, GWLP_USERDATA, (*create_struct).lpCreateParams as _);
             }
-            let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc;
-            let res = if !window_proc.is_null() && window_message(*window_proc, h_wnd, msg, w_param, l_param) { 
-                0
+            let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc<DialogOk=Void, DialogError=Void>;
+            let result = if !window_proc.is_null() {
+                window_message(*window_proc, h_wnd, msg, w_param, l_param).right_or_else(|x| Some(if x { TRUE } else { FALSE } as LRESULT))
             } else {
-                DefWindowProcW(h_wnd, msg, w_param, l_param)
+                None
             };
+            let result = result.unwrap_or_else(|| DefWindowProcW(h_wnd, msg, w_param, l_param));
             if msg == WM_DESTROY {
                 Box::from_raw(window_proc);
                 SetWindowLongPtrW(h_wnd, GWLP_USERDATA, 0);
             }
-            res
+            result
         }
 
         unsafe {
@@ -286,47 +337,42 @@ impl WindowClass {
                 lpfnWndProc: Some(wndproc),
             };
             let atom = RegisterClassExW(&w as *const _);
-            if atom == 0 {
-                message_box(None, "Cannot register window class.", "Error", MB_ICONEXCLAMATION | MB_OK);
-                return Err(());
-            }
+            if atom == 0 { return Err(WindowsError { call: WindowsCall::RegisterClassExW, error_code: GetLastError() }) }
             Ok(WindowClass { atom, h_instance })
         }
     }
 }
 
-pub fn message_box(owner: Option<&Window>, message: &str, caption: &str, u_type: UINT) {
+pub fn message_box(owner: Option<&dyn IsWindow>, message: &str, caption: &str, u_type: UINT) {
     unsafe { MessageBoxW(
-        owner.map_or(null_mut(), |x| x.h_wnd.as_ptr()),
+        owner.map_or(null_mut(), |x| x.get_h_wnd().as_ptr()),
         message.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr(),
         caption.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr(),
         u_type
     ); }
 }
 
-pub fn dialog_box(parent: Option<&Window>, id: u16, window_proc: &mut dyn WindowProc) -> INT_PTR {
-    unsafe extern "system" fn dlgproc(h_wnd: HWND, msg: UINT, w_param: WPARAM, l_param: LPARAM) -> INT_PTR {
+pub fn dialog_box<DialogOk, DialogError>(parent: Option<&dyn IsWindow>, id: u16, window_proc: &mut dyn WindowProc<DialogOk=DialogOk, DialogError=DialogError>) -> Result<DialogOk, DialogError> {
+    unsafe extern "system" fn dlgproc<DialogOk, DialogError>(h_wnd: HWND, msg: UINT, w_param: WPARAM, l_param: LPARAM) -> INT_PTR {
         if msg == WM_INITDIALOG {
             SetWindowLongPtrW(h_wnd, GWLP_USERDATA, l_param as _);
         }
-        let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc;
-        let res = if !window_proc.is_null() && window_message(*window_proc, h_wnd, msg, w_param, l_param) { 
-            TRUE
-        } else {
-            FALSE
-        };
+        let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc<DialogOk=DialogOk, DialogError=DialogError>;
+        let result = !window_proc.is_null() &&
+            window_message(*window_proc, h_wnd, msg, w_param, l_param).left_or_else(|x| x.is_some());
         if msg == WM_DESTROY {
             Box::from_raw(window_proc);
             SetWindowLongPtrW(h_wnd, GWLP_USERDATA, 0);
         }
-        res as INT_PTR
+        (if result { TRUE } else { FALSE }) as INT_PTR
     }
+    
     unsafe {
-        DialogBoxParamW(null_mut(), id as usize as *const _, parent.map_or(null_mut(), |x| x.h_wnd.as_ptr()), Some(dlgproc), Box::into_raw(Box::new(window_proc)) as LPARAM)
+        *Box::from_raw(DialogBoxParamW(null_mut(), id as usize as *const _, parent.map_or(null_mut(), |x| x.get_h_wnd().as_ptr()), Some(dlgproc::<DialogOk, DialogError>), Box::into_raw(Box::new(window_proc)) as LPARAM) as *mut _)
     }
 }
 
-pub fn get_open_file_name<'a, 'b>(owner: Option<&Window>, title: Option<&str>, filter: impl Iterator<Item=(&'a str, &'b str)>) -> Option<PathBuf> {
+pub fn get_open_file_name<'a, 'b>(owner: Option<&dyn IsWindow>, title: Option<&str>, filter: impl Iterator<Item=(&'a str, &'b str)>) -> Option<PathBuf> {
     let filter = filter
         .flat_map(|(x, y)| once(x).chain(once(y)))
         .flat_map(|x| x.encode_utf16().map(|x| { assert_ne!(x, 0); x }).chain(once(0)))
@@ -336,7 +382,7 @@ pub fn get_open_file_name<'a, 'b>(owner: Option<&Window>, title: Option<&str>, f
     file.resize(256, 0);
     let mut args = OPENFILENAMEW {
         lStructSize: size_of::<OPENFILENAMEW>() as u32,
-        hwndOwner: owner.map_or(null_mut(), |x| x.h_wnd.as_ptr()),
+        hwndOwner: owner.map_or(null_mut(), |x| x.get_h_wnd().as_ptr()),
         hInstance: null_mut(),
         lpstrFilter: filter.as_ptr(),
         lpstrCustomFilter: null_mut(),

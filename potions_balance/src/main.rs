@@ -1,4 +1,5 @@
 #![windows_subsystem = "windows"]
+#![deny(warnings)]
 
 use winapi_gui::*;
 use std::iter::once;
@@ -18,11 +19,13 @@ use esl::read::{Records, RecordReadMode};
 use esl::code::{self, CodePage};
 use either::{Right, Left};
 use std::collections::{HashMap};
-use winapi::shared::minwindef::{UINT, WPARAM};
+use winapi::shared::minwindef::{WPARAM};
 
 fn main() {
     let main_dialog_proc = &mut MainWindowProc { edit_original_value: None };
-    dialog_box(None, 1, main_dialog_proc);
+    if let Err(e) = dialog_box(None, 1, main_dialog_proc) {
+        message_box(None, &format!("{}", e), "Error", MB_ICONEXCLAMATION | MB_OK);
+    }
 }
 
 static STANDARD: &'static [u16] = &[
@@ -52,21 +55,25 @@ struct MainWindowProc {
 }
 
 impl WindowProc for MainWindowProc {
-    fn wm_close(&mut self, window: Window, handled: &mut bool) {
-        window.destroy();
+    type DialogOk = ();
+    type DialogError = WindowsError;
+
+    fn wm_close(&mut self, window: Window<Self::DialogOk, Self::DialogError>, _wm: &mut Wm) {
+        window.end_dialog(Ok(()))
     }
 
-    fn wm_init_dialog(&mut self, window: Window) {
+    fn wm_init_dialog(&mut self, window: Window<Self::DialogOk, Self::DialogError>, _wm: &mut WmInitDialog) -> Result<(), Self::DialogError> {
         window.set_dialog_item_limit_text(132, 255);
         window.set_dialog_item_limit_text(134, 255);
-        window.set_dialog_item_text_str(134, "PotionsBalance");
-        for (i, v) in STANDARD.iter().enumerate() {
+        window.set_dialog_item_text_str(134, "PotionsBalance")?;
+        for (i, _) in STANDARD.iter().enumerate() {
             window.set_dialog_item_limit_text(150 + i as u16, 3);
         }
-        window.post_wm_command(129, 0);
+        window.post_wm_command(129, 0)?;
+        Ok(())
     }
-    
-    fn wm_command(&mut self, window: Window, command_id: u16, notification_code: u16, handled: &mut bool) {
+
+    fn wm_command(&mut self, window: Window<Self::DialogOk, Self::DialogError>, command_id: u16, notification_code: u16, _wm: &mut Wm) -> Result<(), Self::DialogError> {
         match notification_code {
             EN_SETFOCUS => {
                 debug_assert!(self.edit_original_value.is_none());
@@ -77,41 +84,42 @@ impl WindowProc for MainWindowProc {
                 let edit_value = window.get_dialog_item_text(command_id, 4);
                 let edit_value = edit_value.to_str().unwrap();
                 if edit_value.is_empty() || command_id != 185 && command_id != 186 && u16::from_str(edit_value).unwrap() == 0 {
-                    window.set_dialog_item_text(command_id, &edit_original_value);
+                    window.set_dialog_item_text(command_id, &edit_original_value)?;
                 }
             },
             _ => match command_id {
                 129 => {
                     for (i, v) in STANDARD.iter().enumerate() {
-                        window.set_dialog_item_text_str(150 + i as u16, &v.to_string());
+                        window.set_dialog_item_text_str(150 + i as u16, &v.to_string())?;
                     }
                 },
                 130 => {
                     for (i, v) in RECOMMEND.iter().enumerate() {
-                        window.set_dialog_item_text_str(150 + i as u16, &v.to_string());
+                        window.set_dialog_item_text_str(150 + i as u16, &v.to_string())?;
                     }
                 },
                 133 => {
                     if let Some(file) = get_open_file_name(Some(&window), Some("Morrowind.ini"), once(("Morrowind.ini", "Morrowind.ini"))) {
-                        window.set_dialog_item_text(132, &file.parent().unwrap().as_os_str());
+                        window.set_dialog_item_text(132, &file.parent().unwrap().as_os_str())?;
                     }
                 },
                 127 => {
                     let mw_path = window.get_dialog_item_text(132, 256);
                     if mw_path.is_empty() {
                         message_box(Some(&window), "Необходимо указать расположение папки с игрой.", "Ошибка", MB_ICONWARNING | MB_OK);
-                        window.get_dialog_item(132).unwrap().as_ref().set_focus();
+                        window.get_dialog_item(132).unwrap().as_ref().set_focus()?;
                     } else {
                         let mw_path = PathBuf::from(mw_path);
                         let esp_name = window.get_dialog_item_text(134, 256);
                         let values = (0..STANDARD.len()).map(|i| u16::from_str(window.get_dialog_item_text(150 + i as u16, 4).to_str().unwrap()).unwrap()).collect::<Vec<_>>();
                         let mut generating = GeneratingWindowProc { mw_path: &mw_path, esp_name: &esp_name, values: &values };
-                        dialog_box(Some(&window), 2, &mut generating);
+                        dialog_box(Some(&window), 2, &mut generating)?;
                     }
                 },
                 _ => { }
             }
         }
+        Ok(())
     }
 }
 
@@ -122,21 +130,25 @@ struct GeneratingWindowProc<'a, 'b, 'c> {
 }
 
 impl<'a, 'b, 'c> WindowProc for GeneratingWindowProc<'a, 'b, 'c> {
-    fn wm_init_dialog(&mut self, window: Window) {
-        window.post_wm_timer(1);
+    type DialogOk = ();
+    type DialogError = WindowsError;
+    
+    fn wm_init_dialog(&mut self, window: Window<Self::DialogOk, Self::DialogError>,_wm: &mut WmInitDialog) -> Result<(), Self::DialogError> {
+        window.post_wm_timer(1)
     }
 
-    fn wm_timer(&mut self, window: Window, id: WPARAM) {
+    fn wm_timer(&mut self, window: Window<Self::DialogOk, Self::DialogError>, id: WPARAM) -> Result<(), Self::DialogError> {
         if id == 1 {
-            window.post_wm_timer(2);
+            window.post_wm_timer(2)?;
         } else if id == 2 {
             if let Err(e) = generate_plugin(&self.mw_path, &self.esp_name, &self.values) {
                 message_box(Some(&window), &e, "Ошибка", MB_ICONERROR | MB_OK);
             } else {
                 message_box(Some(&window), &format!("Плагин {}.esp готов к использованию.", self.esp_name.to_string_lossy()), "Сделано", MB_ICONINFORMATION | MB_OK);
             }
-            window.end_dialog(0);
+            window.end_dialog(Ok(()));
         }
+        Ok(())
     }
 }
 
@@ -151,11 +163,7 @@ enum PotionLevel {
 
 fn potion_level_kind(id: &str, record: &Record) -> Option<(PotionLevel,  String)> {
     let mut effects = record.fields.iter().filter(|(tag, _)| *tag == ENAM);
-    let effect = if let Some((_, effect)) = effects.next() {
-        effect
-    } else {
-        return None;
-    };
+    if effects.next().is_none() { return None; }
     if effects.next().is_some() { return None; }
     if id.starts_with("P_") {
         if id.ends_with("_B") {
