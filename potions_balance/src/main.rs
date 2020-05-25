@@ -55,14 +55,13 @@ struct MainWindowProc {
 }
 
 impl WindowProc for MainWindowProc {
-    type DialogOk = ();
-    type DialogError = WindowsError;
+    type DialogResult = Result<(), WindowsError>;
 
-    fn wm_close(&mut self, window: Window<Self::DialogOk, Self::DialogError>, _wm: &mut Wm) {
+    fn wm_close(&mut self, window: Window<Self::DialogResult>, _wm: &mut Wm) {
         window.end_dialog(Ok(()))
     }
 
-    fn wm_init_dialog(&mut self, window: Window<Self::DialogOk, Self::DialogError>, _wm: &mut WmInitDialog) -> Result<(), Self::DialogError> {
+    fn wm_init_dialog(&mut self, window: Window<Self::DialogResult>, _wm: &mut WmInitDialog) -> Result<(), WindowsError> {
         window.set_dialog_item_limit_text(132, 255);
         window.set_dialog_item_limit_text(134, 255);
         window.set_dialog_item_text_str(134, "PotionsBalance")?;
@@ -73,7 +72,7 @@ impl WindowProc for MainWindowProc {
         Ok(())
     }
 
-    fn wm_command(&mut self, window: Window<Self::DialogOk, Self::DialogError>, command_id: u16, notification_code: u16, _wm: &mut Wm) -> Result<(), Self::DialogError> {
+    fn wm_command(&mut self, window: Window<Self::DialogResult>, command_id: u16, notification_code: u16, _wm: &mut Wm) -> Result<(), WindowsError> {
         match notification_code {
             EN_SETFOCUS => {
                 debug_assert!(self.edit_original_value.is_none());
@@ -130,14 +129,13 @@ struct GeneratingWindowProc<'a, 'b, 'c> {
 }
 
 impl<'a, 'b, 'c> WindowProc for GeneratingWindowProc<'a, 'b, 'c> {
-    type DialogOk = ();
-    type DialogError = WindowsError;
+    type DialogResult = Result<(), WindowsError>;
     
-    fn wm_init_dialog(&mut self, window: Window<Self::DialogOk, Self::DialogError>,_wm: &mut WmInitDialog) -> Result<(), Self::DialogError> {
+    fn wm_init_dialog(&mut self, window: Window<Self::DialogResult>,_wm: &mut WmInitDialog) -> Result<(), WindowsError> {
         window.post_wm_timer(1)
     }
 
-    fn wm_timer(&mut self, window: Window<Self::DialogOk, Self::DialogError>, id: WPARAM) -> Result<(), Self::DialogError> {
+    fn wm_timer(&mut self, window: Window<Self::DialogResult>, id: WPARAM) -> Result<(), WindowsError> {
         if id == 1 {
             window.post_wm_timer(2)?;
         } else if id == 2 {
