@@ -214,11 +214,6 @@ impl<'a, DialogResult> Window<'a, DialogResult> {
         if ok { Ok(()) } else { Err(WindowsError { call: WindowsCall::PostMessageW, error_code: unsafe { GetLastError() } }) }
     }
 
-    pub fn post_wm_user(&self, n: UINT) -> Result<(), WindowsError> {
-        let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_USER + n, 0, 0) != 0 };
-        if ok { Ok(()) } else { Err(WindowsError { call: WindowsCall::PostMessageW, error_code: unsafe { GetLastError() } }) }
-    }
-
     pub fn post_wm_timer(&self, id: WPARAM) -> Result<(), WindowsError> {
         let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_TIMER, id, 0) != 0 };
         if ok { Ok(()) } else { Err(WindowsError { call: WindowsCall::PostMessageW, error_code: unsafe { GetLastError() } }) }
