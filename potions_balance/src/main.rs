@@ -20,6 +20,8 @@ use esl::code::{self, CodePage};
 use either::{Right, Left};
 use std::collections::{HashMap};
 use winapi::shared::minwindef::{WPARAM};
+use winreg::RegKey;
+use winreg::enums::{HKEY_LOCAL_MACHINE, KEY_READ, KEY_WOW64_32KEY};
 
 fn main() {
     let main_dialog_proc = &mut MainWindowProc { edit_original_value: None };
@@ -50,18 +52,40 @@ static RECOMMEND: &'static [u16] = &[
     125, 4, 5
 ];
 
+fn find_morrowind() -> Result<Option<String>, i32> {
+    let programs = RegKey::predef(HKEY_LOCAL_MACHINE).open_subkey_with_flags(r#"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"#, KEY_READ | KEY_WOW64_32KEY).map_err(|x| x.raw_os_error().unwrap())?;
+    programs.enum_keys().filter_map(|x| x.ok()).find_map(|x| morrowind_path(&programs, &x)).transpose()
+}
+
+fn morrowind_path(programs: &RegKey, program: &str) -> Option<Result<String, i32>> {
+    let program = programs.open_subkey_with_flags(program, KEY_READ | KEY_WOW64_32KEY).ok()?;
+    let id: String = program.get_value("HelpLink").ok()?;
+    if &id != "http://www.fullrest.ru/forum/forum/300-morrowind-fullrest-repack-i-drugie-proekty-ot-ela/"
+        && &id != "http://www.fullrest.ru/forum/topic/36164-morrowind-fullrest-repack/" {
+        return None;
+    }
+    Some(program.get_value("InstallLocation").map_err(|x| x.raw_os_error().unwrap()))
+}
+
 struct MainWindowProc {
     edit_original_value: Option<OsString>,
 }
 
 impl WindowProc for MainWindowProc {
-    type DialogResult = Result<(), WindowsError>;
+    type DialogResult = Result<(), i32>;
 
     fn wm_close(&mut self, window: Window<Self::DialogResult>, _wm: &mut Wm) {
         window.end_dialog(Ok(()))
     }
 
-    fn wm_init_dialog(&mut self, window: Window<Self::DialogResult>, _wm: &mut WmInitDialog) -> Result<(), WindowsError> {
+    fn wm_init_dialog(&mut self, window: Window<Self::DialogResult>, _wm: &mut WmInitDialog) -> Result<(), i32> {
+        let morrowind_path = find_morrowind().unwrap_or_else(|error| {
+            message_box(None, &format!("Cannon read Morrowind location: {}.", error), "Error", MB_ICONWARNING | MB_OK);
+            None
+        });
+        if let Some(morrowind_path) = morrowind_path {
+            window.set_dialog_item_text_str(132, &morrowind_path)?;
+        }
         window.set_dialog_item_limit_text(132, 255);
         window.set_dialog_item_limit_text(134, 255);
         window.set_dialog_item_text_str(134, "PotionsBalance")?;
@@ -72,7 +96,7 @@ impl WindowProc for MainWindowProc {
         Ok(())
     }
 
-    fn wm_command(&mut self, window: Window<Self::DialogResult>, command_id: u16, notification_code: u16, _wm: &mut Wm) -> Result<(), WindowsError> {
+    fn wm_command(&mut self, window: Window<Self::DialogResult>, command_id: u16, notification_code: u16, _wm: &mut Wm) -> Result<(), i32> {
         match notification_code {
             EN_SETFOCUS => {
                 debug_assert!(self.edit_original_value.is_none());
@@ -129,13 +153,13 @@ struct GeneratingWindowProc<'a, 'b, 'c> {
 }
 
 impl<'a, 'b, 'c> WindowProc for GeneratingWindowProc<'a, 'b, 'c> {
-    type DialogResult = Result<(), WindowsError>;
+    type DialogResult = Result<(), i32>;
     
-    fn wm_init_dialog(&mut self, window: Window<Self::DialogResult>,_wm: &mut WmInitDialog) -> Result<(), WindowsError> {
+    fn wm_init_dialog(&mut self, window: Window<Self::DialogResult>,_wm: &mut WmInitDialog) -> Result<(), i32> {
         window.post_wm_timer(1)
     }
 
-    fn wm_timer(&mut self, window: Window<Self::DialogResult>, id: WPARAM) -> Result<(), WindowsError> {
+    fn wm_timer(&mut self, window: Window<Self::DialogResult>, id: WPARAM) -> Result<(), i32> {
         if id == 1 {
             window.post_wm_timer(2)?;
         } else if id == 2 {

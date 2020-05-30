@@ -219,7 +219,7 @@ checksum = "a8cbf17b871570c1f8612b763bac3e86290602bcf5dc3c5ce657e0e1e9071d9e"
 dependencies = [
  "serde",
  "serde_derive",
- "winreg",
+ "winreg 0.5.1",
 ]
 
 [[package]]
@@ -365,6 +365,7 @@ dependencies = [
  "winapi",
  "winapi_gui",
  "windres",
+ "winreg 0.7.0",
 ]
 
 [[package]]
@@ -633,8 +634,6 @@ name = "winapi_gui"
 version = "0.1.0"
 dependencies = [
  "either",
- "enum_derive",
- "macro-attr",
  "void",
  "winapi",
 ]
@@ -656,5 +655,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a27a759395c1195c4cc5cda607ef6f8f6498f64e78f7900f5de0a127a424704a"
 dependencies = [
  "serde",
+ "winapi",
+]
+
+[[package]]
+name = "winreg"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0120db82e8a1e0b9fb3345a539c478767c0048d842860994d96113d5b667bd69"
+dependencies = [
  "winapi",
 ]

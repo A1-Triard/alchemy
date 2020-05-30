@@ -7,6 +7,4 @@ edition = "2018"
 [dependencies]
 winapi = { version = "0.3.8", features = ["winuser", "libloaderapi", "errhandlingapi", "commdlg"] }
 void = "1.0.2"
-macro-attr = "0.2.0"
-enum_derive = "0.1.7"
 either = "1.5.3"

@@ -15,6 +15,7 @@ filetime = "0.2.8"
 esl = "0.3.1"
 encoding = "0.2.33"
 either = "1.5.3"
+winreg = "0.7.0"
 
 [build-dependencies]
 windres = "0.2.1"
