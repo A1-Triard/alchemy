@@ -27,7 +27,7 @@ use std::mem::transmute;
 fn main() {
     let main_dialog_proc = &mut MainWindowProc { edit_original_value: None };
     if let Err(e) = dialog_box(None, 1, main_dialog_proc) {
-        message_box(None, &format!("{}", e), "Error", MB_ICONEXCLAMATION | MB_OK);
+        message_box(None, &format!("{}.", io::Error::from_raw_os_error(e)), "Error", MB_ICONEXCLAMATION | MB_OK);
     }
 }
 
@@ -55,10 +55,17 @@ static RECOMMEND: &'static [u16] = &[
 
 fn find_morrowind() -> io::Result<Option<PathBuf>> {
     let programs = RegKey::predef(HKEY_LOCAL_MACHINE).open_subkey_with_flags(r#"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"#, KEY_READ | KEY_WOW64_32KEY)?;
-    programs.enum_keys().filter_map(|x| x.ok()).find_map(|x| morrowind_path(&programs, &x)).transpose()
+    programs.enum_keys().filter_map(|x| x.ok()).find_map(|x| mfr_path(&programs, &x))
+        .or_else(morrowind_path)
+        .transpose()
 }
 
-fn morrowind_path(programs: &RegKey, program: &str) -> Option<io::Result<PathBuf>> {
+fn morrowind_path() -> Option<io::Result<PathBuf>> {
+    let key = RegKey::predef(HKEY_LOCAL_MACHINE).open_subkey_with_flags(r#"SOFTWARE\Bethesda Softworks\Morrowind"#, KEY_READ | KEY_WOW64_32KEY).ok()?;
+    Some(get_folder(&key, "Installed Path"))
+}
+
+fn mfr_path(programs: &RegKey, program: &str) -> Option<io::Result<PathBuf>> {
     let program = programs.open_subkey_with_flags(program, KEY_READ | KEY_WOW64_32KEY).ok()?;
     let id: String = program.get_value("HelpLink").ok()?;
     if &id != "http://www.fullrest.ru/forum/forum/300-morrowind-fullrest-repack-i-drugie-proekty-ot-ela/"
@@ -93,7 +100,7 @@ impl WindowProc for MainWindowProc {
 
     fn wm_init_dialog(&mut self, window: Window<Self::DialogResult>, _wm: &mut WmInitDialog) -> Result<(), i32> {
         let morrowind_path = find_morrowind().unwrap_or_else(|error| {
-            message_box(None, &format!("Cannon read Morrowind location: {}.", error), "Error", MB_ICONWARNING | MB_OK);
+            message_box(None, &format!("Автоматический поиск расположения Morrowind вызвал ошибку. {}.", error), "Error", MB_ICONWARNING | MB_OK);
             None
         });
         if let Some(morrowind_path) = morrowind_path {
