@@ -62,7 +62,11 @@ fn find_morrowind() -> io::Result<Option<PathBuf>> {
 
 fn morrowind_path() -> Option<io::Result<PathBuf>> {
     let key = RegKey::predef(HKEY_LOCAL_MACHINE).open_subkey_with_flags(r#"SOFTWARE\Bethesda Softworks\Morrowind"#, KEY_READ | KEY_WOW64_32KEY).ok()?;
-    Some(get_folder(&key, "Installed Path"))
+    if key.get_raw_value("Installed Path").is_ok() {
+        Some(get_folder(&key, "Installed Path"))
+    } else {
+        None
+    }
 }
 
 fn mfr_path(programs: &RegKey, program: &str) -> Option<io::Result<PathBuf>> {
