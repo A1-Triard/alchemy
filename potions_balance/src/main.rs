@@ -10,7 +10,7 @@ use std::path::{Path, PathBuf};
 use ini::Ini;
 use std::fs::{self, File};
 use filetime::{FileTime, set_file_mtime};
-use std::io::{Read, BufWriter};
+use std::io::{self, Read, BufWriter};
 use encoding::all::WINDOWS_1251;
 use encoding::Encoding;
 use encoding::DecoderTrap;
@@ -22,6 +22,7 @@ use std::collections::{HashMap};
 use winapi::shared::minwindef::{WPARAM};
 use winreg::RegKey;
 use winreg::enums::{HKEY_LOCAL_MACHINE, KEY_READ, KEY_WOW64_32KEY};
+use std::mem::transmute;
 
 fn main() {
     let main_dialog_proc = &mut MainWindowProc { edit_original_value: None };
@@ -52,19 +53,31 @@ static RECOMMEND: &'static [u16] = &[
     125, 4, 5
 ];
 
-fn find_morrowind() -> Result<Option<String>, i32> {
-    let programs = RegKey::predef(HKEY_LOCAL_MACHINE).open_subkey_with_flags(r#"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"#, KEY_READ | KEY_WOW64_32KEY).map_err(|x| x.raw_os_error().unwrap())?;
+fn find_morrowind() -> io::Result<Option<PathBuf>> {
+    let programs = RegKey::predef(HKEY_LOCAL_MACHINE).open_subkey_with_flags(r#"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"#, KEY_READ | KEY_WOW64_32KEY)?;
     programs.enum_keys().filter_map(|x| x.ok()).find_map(|x| morrowind_path(&programs, &x)).transpose()
 }
 
-fn morrowind_path(programs: &RegKey, program: &str) -> Option<Result<String, i32>> {
+fn morrowind_path(programs: &RegKey, program: &str) -> Option<io::Result<PathBuf>> {
     let program = programs.open_subkey_with_flags(program, KEY_READ | KEY_WOW64_32KEY).ok()?;
     let id: String = program.get_value("HelpLink").ok()?;
     if &id != "http://www.fullrest.ru/forum/forum/300-morrowind-fullrest-repack-i-drugie-proekty-ot-ela/"
         && &id != "http://www.fullrest.ru/forum/topic/36164-morrowind-fullrest-repack/" {
         return None;
     }
-    Some(program.get_value("InstallLocation").map_err(|x| x.raw_os_error().unwrap()))
+    Some(get_folder(&program, "InstallLocation"))
+}
+
+fn get_folder(key: &RegKey, name: &str) -> io::Result<PathBuf> {
+    let folder: OsString = key.get_value(name)?;
+    let mut folder: Vec<u8> = unsafe { transmute(folder) };
+    let trim_at = folder.iter().position(|&x| x == 0).unwrap_or_else(|| folder.len());
+    folder.truncate(trim_at);
+    let folder: OsString = unsafe { transmute(folder) };
+    let mut folder = PathBuf::from(folder);
+    folder.push("1");
+    folder.pop();
+    Ok(folder)
 }
 
 struct MainWindowProc {
@@ -84,7 +97,7 @@ impl WindowProc for MainWindowProc {
             None
         });
         if let Some(morrowind_path) = morrowind_path {
-            window.set_dialog_item_text_str(132, &morrowind_path)?;
+            window.set_dialog_item_text(132, morrowind_path.as_os_str())?;
         }
         window.set_dialog_item_limit_text(132, 255);
         window.set_dialog_item_limit_text(134, 255);
