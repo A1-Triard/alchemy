@@ -23,11 +23,38 @@ use winapi::shared::minwindef::{WPARAM};
 use winreg::RegKey;
 use winreg::enums::{HKEY_LOCAL_MACHINE, KEY_READ, KEY_WOW64_32KEY};
 use std::mem::transmute;
+use std::fmt::Display;
+
+fn format<'a, T: Display + 'a>(f: impl AsRef<str>, args: impl IntoIterator<Item=&'a T>) -> String {
+    let f = f.as_ref();
+    let mut args = args.into_iter();
+    let mut result = Vec::with_capacity(f.len());
+    let mut subst = false;
+    for b in f.bytes() {
+        if subst {
+            subst = false;
+            if b == '}' as u8 {
+                if let Some(arg) = args.next() {
+                    result.extend_from_slice(format!("{}", arg).as_bytes());
+                }
+            } else {
+                result.push(b);
+            }
+        } else {
+            if b == '{' as u8 {
+                subst = true;
+            } else {
+                result.push(b);
+            }
+        }
+    }
+    unsafe { String::from_utf8_unchecked(result) }
+}
 
 fn main() {
     let main_dialog_proc = &mut MainWindowProc { edit_original_value: None };
     if let Err(e) = dialog_box(None, 1, main_dialog_proc) {
-        message_box(None, &format!("{}.", io::Error::from_raw_os_error(e)), "Error", MB_ICONEXCLAMATION | MB_OK);
+        message_box(None, format!("{}.", e), load_string(3).unwrap(), MB_ICONERROR | MB_OK);
     }
 }
 
@@ -96,15 +123,15 @@ struct MainWindowProc {
 }
 
 impl WindowProc for MainWindowProc {
-    type DialogResult = Result<(), i32>;
+    type DialogResult = io::Result<()>;
 
     fn wm_close(&mut self, window: Window<Self::DialogResult>, _wm: &mut Wm) {
         window.end_dialog(Ok(()))
     }
 
-    fn wm_init_dialog(&mut self, window: Window<Self::DialogResult>, _wm: &mut WmInitDialog) -> Result<(), i32> {
+    fn wm_init_dialog(&mut self, window: Window<Self::DialogResult>, _wm: &mut WmInitDialog) -> io::Result<()> {
         let morrowind_path = find_morrowind().unwrap_or_else(|error| {
-            message_box(None, &format!("Автоматический поиск расположения Morrowind вызвал ошибку. {}.", error), "Error", MB_ICONWARNING | MB_OK);
+            message_box(None, format!("{}. {}.", load_string(5).unwrap(), error), load_string(4).unwrap(), MB_ICONINFORMATION | MB_OK);
             None
         });
         if let Some(morrowind_path) = morrowind_path {
@@ -120,18 +147,22 @@ impl WindowProc for MainWindowProc {
         Ok(())
     }
 
-    fn wm_command(&mut self, window: Window<Self::DialogResult>, command_id: u16, notification_code: u16, _wm: &mut Wm) -> Result<(), i32> {
+    fn wm_command(&mut self, window: Window<Self::DialogResult>, command_id: u16, notification_code: u16, _wm: &mut Wm) -> io::Result<()> {
         match notification_code {
             EN_SETFOCUS => {
-                debug_assert!(self.edit_original_value.is_none());
-                self.edit_original_value = Some(window.get_dialog_item_text(command_id, 4));
+                if command_id != 132 && command_id != 134 {
+                    debug_assert!(self.edit_original_value.is_none());
+                    self.edit_original_value = Some(window.get_dialog_item_text(command_id, 4));
+                }
             },
             EN_KILLFOCUS => {
-                let edit_original_value = self.edit_original_value.take().unwrap();
-                let edit_value = window.get_dialog_item_text(command_id, 4);
-                let edit_value = edit_value.to_str().unwrap();
-                if edit_value.is_empty() || command_id != 185 && command_id != 186 && u16::from_str(edit_value).unwrap() == 0 {
-                    window.set_dialog_item_text(command_id, &edit_original_value)?;
+                if command_id != 132 && command_id != 134 {
+                    let edit_original_value = self.edit_original_value.take().unwrap();
+                    let edit_value = window.get_dialog_item_text(command_id, 4);
+                    let edit_value = edit_value.to_str().unwrap();
+                    if edit_value.is_empty() || command_id != 185 && command_id != 186 && u16::from_str(edit_value).unwrap() == 0 {
+                        window.set_dialog_item_text(command_id, &edit_original_value)?;
+                    }
                 }
             },
             _ => match command_id {
@@ -152,12 +183,15 @@ impl WindowProc for MainWindowProc {
                 },
                 127 => {
                     let mw_path = window.get_dialog_item_text(132, 256);
+                    let esp_name = window.get_dialog_item_text(134, 256);
                     if mw_path.is_empty() {
-                        message_box(Some(&window), "Необходимо указать расположение папки с игрой.", "Ошибка", MB_ICONWARNING | MB_OK);
+                        message_box(Some(&window), load_string(6).unwrap(), load_string(3).unwrap(), MB_ICONWARNING | MB_OK);
                         window.get_dialog_item(132).unwrap().as_ref().set_focus()?;
+                    } else if esp_name.is_empty() {
+                        message_box(Some(&window), load_string(7).unwrap(), load_string(3).unwrap(), MB_ICONWARNING | MB_OK);
+                        window.get_dialog_item(134).unwrap().as_ref().set_focus()?;
                     } else {
                         let mw_path = PathBuf::from(mw_path);
-                        let esp_name = window.get_dialog_item_text(134, 256);
                         let values = (0..STANDARD.len()).map(|i| u16::from_str(window.get_dialog_item_text(150 + i as u16, 4).to_str().unwrap()).unwrap()).collect::<Vec<_>>();
                         let mut generating = GeneratingWindowProc { mw_path: &mw_path, esp_name: &esp_name, values: &values };
                         dialog_box(Some(&window), 2, &mut generating)?;
@@ -177,20 +211,20 @@ struct GeneratingWindowProc<'a, 'b, 'c> {
 }
 
 impl<'a, 'b, 'c> WindowProc for GeneratingWindowProc<'a, 'b, 'c> {
-    type DialogResult = Result<(), i32>;
+    type DialogResult = io::Result<()>;
     
-    fn wm_init_dialog(&mut self, window: Window<Self::DialogResult>,_wm: &mut WmInitDialog) -> Result<(), i32> {
+    fn wm_init_dialog(&mut self, window: Window<Self::DialogResult>,_wm: &mut WmInitDialog) -> io::Result<()> {
         window.post_wm_timer(1)
     }
 
-    fn wm_timer(&mut self, window: Window<Self::DialogResult>, id: WPARAM) -> Result<(), i32> {
+    fn wm_timer(&mut self, window: Window<Self::DialogResult>, id: WPARAM) -> io::Result<()> {
         if id == 1 {
             window.post_wm_timer(2)?;
         } else if id == 2 {
             if let Err(e) = generate_plugin(&self.mw_path, &self.esp_name, &self.values) {
-                message_box(Some(&window), &e, "Ошибка", MB_ICONERROR | MB_OK);
+                message_box(Some(&window), e, load_string(3).unwrap(), MB_ICONERROR | MB_OK);
             } else {
-                message_box(Some(&window), &format!("Плагин {}.esp готов к использованию.", self.esp_name.to_string_lossy()), "Сделано", MB_ICONINFORMATION | MB_OK);
+                message_box(Some(&window), format(load_string(8).unwrap(), &[self.esp_name.to_string_lossy()]), load_string(9).unwrap(), MB_ICONINFORMATION | MB_OK);
             }
             window.end_dialog(Ok(()));
         }
@@ -231,7 +265,7 @@ fn potion_level_kind(id: &str, record: &Record) -> Option<(PotionLevel,  String)
 }
 
 fn potion_value(record: &Record) -> Result<u32, String> {
-    let data = record.fields.iter().filter(|(tag, _)| *tag == ALDT).nth(0).ok_or_else(|| "Невалидное зелье.")?;
+    let data = record.fields.iter().filter(|(tag, _)| *tag == ALDT).nth(0).ok_or_else(|| load_string(10).unwrap())?;
     if let Field::Potion(data) = &data.1 {
         Ok(data.value)
     } else {
@@ -242,7 +276,7 @@ fn potion_value(record: &Record) -> Result<u32, String> {
 fn potion_effect(record: &Record) -> Result<EffectIndex, String> {
     let data = record.fields.iter().filter(|(tag, _)| *tag == ENAM).nth(0).unwrap();
     if let Field::Effect(data) = &data.1 {
-        data.index.right().ok_or_else(|| "Невалидное зелье.".into())
+        data.index.right().ok_or_else(|| load_string(10).unwrap())
     } else {
         panic!()
     }
@@ -261,7 +295,7 @@ fn generate_plugin(mw_path: &Path, esp_name: &OsString, values: &[u16]) -> Resul
                 version: 1067869798,
                 file_type: FileType::ESP,
                 author: "PotionsBalance.exe".to_string(),
-                description: vec!["Баланс зелий.".to_string(), format!("{:?}", values)],
+                description: vec![load_string(11).unwrap(), format!("{:?}", values)],
                 records: 0
             }))
         ]
@@ -471,7 +505,7 @@ fn find_level_values(potions: &HashMap<String, [Option<(String, Record)>; 5]>) -
         }
         values.sort_unstable();
         if values.is_empty() {
-            return Err("Слишком мало зелий.".into());
+            return Err(load_string(12).unwrap());
         }
         level_values[level] = values[values.len() / 2];
     }
@@ -486,7 +520,7 @@ fn classify_potions(potions: HashMap<String, Record>)
     for (id, record) in potions.into_iter() {
         let normalized_id = id.replace(' ', "_");
         if let Some((existing_id, _)) = potions_by_normalized_id.insert(normalized_id, (id.clone(), record)) {
-            return Err(format!("Зелье \"{}\" конфликтует с зельем \"{}\".", id, existing_id));
+            return Err(format(load_string(13).unwrap(), &[id, existing_id]));
         }
     }
     let mut potions_by_kind = HashMap::new();
@@ -518,7 +552,7 @@ fn collect_potions(mw_path: &Path) -> Result<(HashMap<String, Record>, FileTime)
     File::open(mw_path.join("Morrowind.ini").as_path()).and_then(|mut x| x.read_to_end(&mut ini)).map_err(|x| x.to_string())?;
     let ini = WINDOWS_1251.decode(&ini, DecoderTrap::Strict).map_err(|x| x.to_string())?;
     let ini = Ini::load_from_str(&ini).map_err(|x| x.to_string())?;
-    let game_files_section = ini.section(Some("Game Files")).ok_or("В Morrowind.ini отсутствует секция [Game Files].")?;
+    let game_files_section = ini.section(Some("Game Files")).ok_or(load_string(14).unwrap())?;
     let mut game_files = Vec::with_capacity(game_files_section.len());
     for (_, name) in game_files_section.iter() {
         let path = mw_path.join("Data Files").join(name);
@@ -534,12 +568,12 @@ fn collect_potions(mw_path: &Path) -> Result<(HashMap<String, Record>, FileTime)
         let mut has_potions = false;
         let mut game_file = File::open(game_file_path).map_err(|x| x.to_string())?;
         let mut records = Records::new(CodePage::Russian, RecordReadMode::Lenient, 0, &mut game_file);
-        let file_header = records.next().ok_or_else(|| "Невалидный файл.".to_string())?.map_err(|e| e.to_string())?;
-        let (_, file_header) = file_header.fields.first().ok_or_else(|| "Невалидный файл.".to_string())?;
+        let file_header = records.next().ok_or_else(|| load_string(15).unwrap())?.map_err(|e| e.to_string())?;
+        let (_, file_header) = file_header.fields.first().ok_or_else(|| load_string(15).unwrap())?;
         if let Field::FileMetadata(file_header) = file_header {
             if file_header.author == "PotionsBalance.exe" { continue; }
         } else {
-            return Err("Невалидный файл.".into());
+            return Err(load_string(15).unwrap());
         }
         for record in records {
             let record = match record {
@@ -555,7 +589,7 @@ fn collect_potions(mw_path: &Path) -> Result<(HashMap<String, Record>, FileTime)
             };
             if record.tag != ALCH { continue; }
             let id = if let Field::StringZ(ref id) = record.fields.iter().filter(|(tag, _)| *tag == NAME).nth(0)
-                .ok_or(format!("{}: alchemy record does not have an ID.", game_file_name))?.1 {
+                .ok_or(format(load_string(16).unwrap(), &[game_file_name]))?.1 {
                 id.string.to_uppercase()
             } else {
                 panic!()
@@ -570,6 +604,6 @@ fn collect_potions(mw_path: &Path) -> Result<(HashMap<String, Record>, FileTime)
     if let Some(file_time) = file_time {
         Ok((potions, file_time))
     } else {
-        Err("Зелья не найдены.".into())
+        Err(load_string(17).unwrap())
     }
 }

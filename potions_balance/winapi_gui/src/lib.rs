@@ -8,7 +8,6 @@ use winapi::shared::minwindef::*;
 use winapi::shared::windef::*;
 use winapi::um::winuser::*;
 use winapi::um::libloaderapi::*;
-use winapi::um::errhandlingapi::*;
 use winapi::um::commdlg::*;
 use winapi::shared::basetsd::*;
 use std::os::raw::c_int;
@@ -17,6 +16,10 @@ use std::os::windows::ffi::{OsStringExt, OsStrExt};
 use std::ffi::{OsStr, OsString};
 use void::Void;
 use either::{Either, Left, Right};
+use winapi::um::libloaderapi::LoadStringW;
+use winapi::um::winnt::LPWSTR;
+use std::slice::{self};
+use std::io::{self};
 
 pub trait IsWindow {
     fn get_h_wnd(&self) -> NonNull<HWND__>;
@@ -79,12 +82,12 @@ pub trait WindowProc {
 }
 
 impl<'a> Window<'a, Void> {
-    pub fn new(class: &'a WindowClass, name: &str, width: c_int, height: c_int, window_proc: &'a mut dyn WindowProc<DialogResult=Void>) -> Result<Window<'a, Void>, i32> {
+    pub fn new(class: &'a WindowClass, name: impl AsRef<str>, width: c_int, height: c_int, window_proc: &'a mut dyn WindowProc<DialogResult=Void>) -> io::Result<Window<'a, Void>> {
         let h_wnd = NonNull::new(unsafe {
             CreateWindowExW(
                 WS_EX_CLIENTEDGE,
                 class.atom as *const _,
-                name.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr(),
+                name.as_ref().encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr(),
                 WS_OVERLAPPEDWINDOW,
                 CW_USEDEFAULT, CW_USEDEFAULT,
                 width, height,
@@ -97,7 +100,7 @@ impl<'a> Window<'a, Void> {
         if let Some(h_wnd) = h_wnd {
             Ok(Window { h_wnd, phantom: PhantomData, destroy_on_drop: true })
         } else {
-            Err(unsafe { GetLastError() } as i32)
+            Err(io::Error::last_os_error())
         }
     }
 
@@ -105,7 +108,7 @@ impl<'a> Window<'a, Void> {
         self.destroy_on_drop = true;
     }
 
-    pub fn run(self) -> Result<WPARAM, i32> {
+    pub fn run(self) -> io::Result<WPARAM> {
         let h_wnd = self.h_wnd;
         forget(self);
         let mut msg = MSG {
@@ -120,7 +123,7 @@ impl<'a> Window<'a, Void> {
             loop {
                 let res = GetMessageW(&mut msg as *mut _, h_wnd.as_ptr(), 0, 0);
                 if res == 0 { break }
-                if res < 0 { return Err(GetLastError() as i32); }
+                if res < 0 { return Err(io::Error::last_os_error()); }
                 TranslateMessage(&msg as *const _);
                 DispatchMessageW(&msg as *const _);
             }
@@ -151,15 +154,15 @@ impl<'a, DialogResult> Window<'a, DialogResult> {
         h_wnd.map(|h_wnd| WindowAsRef(Window::<Void> { h_wnd, destroy_on_drop: false, phantom: PhantomData }))
     }
 
-    pub fn set_dialog_item_text_str(&self, item_id: u16, text: &str) -> Result<(), i32> {
+    pub fn set_dialog_item_text_str(&self, item_id: u16, text: &str) -> io::Result<()> {
         let os_string = OsString::from_wide(&text.encode_utf16().collect::<Vec<_>>());
         self.set_dialog_item_text(item_id, &os_string)
     }
     
-    pub fn set_dialog_item_text(&self, item_id: u16, text: &OsStr) -> Result<(), i32> {
+    pub fn set_dialog_item_text(&self, item_id: u16, text: &OsStr) -> io::Result<()> {
         let text = text.encode_wide().chain(once(0)).collect::<Vec<_>>().as_ptr();
         let ok = unsafe { SetDlgItemTextW(self.h_wnd.as_ptr(), item_id as c_int, text) != 0 };
-        if ok { Ok(()) } else { Err(unsafe { GetLastError() } as i32) }
+        if ok { Ok(()) } else { Err(io::Error::last_os_error()) }
     }
     
     pub fn get_dialog_item_text(&self, item_id: u16, max_len: u16) -> OsString {
@@ -173,30 +176,30 @@ impl<'a, DialogResult> Window<'a, DialogResult> {
         unsafe { SendDlgItemMessageW(self.h_wnd.as_ptr(), item_id as c_int, EM_LIMITTEXT as u32, limit as usize, 0); }
     }
 
-    pub fn set_focus(&self) -> Result<(), i32> {
+    pub fn set_focus(&self) -> io::Result<()> {
         let ok = unsafe { !SetFocus(self.h_wnd.as_ptr()).is_null() };
-        if ok { Ok(()) } else { Err(unsafe { GetLastError() } as i32) }
+        if ok { Ok(()) } else { Err(io::Error::last_os_error()) }
     }
     
-    pub fn post_wm_command(&self, command_id: u16, notification_code: u16) -> Result<(), i32> {
+    pub fn post_wm_command(&self, command_id: u16, notification_code: u16) -> io::Result<()> {
         let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_COMMAND, (command_id as WPARAM) | ((notification_code as WPARAM) << 16), 0) != 0 };
-        if ok { Ok(()) } else { Err(unsafe { GetLastError() } as i32) }
+        if ok { Ok(()) } else { Err(io::Error::last_os_error()) }
     }
 
-    pub fn post_wm_timer(&self, id: WPARAM) -> Result<(), i32> {
+    pub fn post_wm_timer(&self, id: WPARAM) -> io::Result<()> {
         let ok = unsafe { PostMessageW(self.h_wnd.as_ptr(), WM_TIMER, id, 0) != 0 };
-        if ok { Ok(()) } else { Err(unsafe { GetLastError() } as i32) }
+        if ok { Ok(()) } else { Err(io::Error::last_os_error()) }
     }
 
-    pub fn get_rect(&self) -> Result<RECT, i32> {
+    pub fn get_rect(&self) -> io::Result<RECT> {
         let mut rect = RECT { left: 0, top: 0, right: 0, bottom: 0 };
         let ok = unsafe { GetWindowRect(self.h_wnd.as_ptr(), &mut rect as *mut _) != 0 };
-        if ok { Ok(rect) } else { Err(unsafe { GetLastError() } as i32) }
+        if ok { Ok(rect) } else { Err(io::Error::last_os_error()) }
     }
 
-    pub fn move_(&self, x: c_int, y: c_int, width: c_int, height: c_int, repaint: bool) -> Result<(), i32> {
+    pub fn move_(&self, x: c_int, y: c_int, width: c_int, height: c_int, repaint: bool) -> io::Result<()> {
         let ok = unsafe { MoveWindow(self.h_wnd.as_ptr(), x, y, width, height, if repaint { TRUE } else { FALSE }) != 0 };
-        if ok { Ok(()) } else { Err(unsafe { GetLastError() } as i32) }
+        if ok { Ok(()) } else { Err(io::Error::last_os_error()) }
     }
 }
 
@@ -277,7 +280,7 @@ unsafe fn window_message<DialogResult: crate::DialogResult>(window_proc: &mut dy
 }
 
 impl WindowClass {
-    pub fn new(name: &str) -> Result<WindowClass, i32> {
+    pub fn new(name: &str) -> io::Result<WindowClass> {
         unsafe extern "system" fn wndproc(h_wnd: HWND, msg: UINT, w_param: WPARAM, l_param: LPARAM) -> LRESULT {
             if msg == WM_CREATE {
                 let create_struct = l_param as *const CREATESTRUCTW;
@@ -314,17 +317,17 @@ impl WindowClass {
                 lpfnWndProc: Some(wndproc),
             };
             let atom = RegisterClassExW(&w as *const _);
-            if atom == 0 { return Err(GetLastError() as i32) }
+            if atom == 0 { return Err(io::Error::last_os_error()) }
             Ok(WindowClass { atom, h_instance })
         }
     }
 }
 
-pub fn message_box(owner: Option<&dyn IsWindow>, message: &str, caption: &str, u_type: UINT) {
+pub fn message_box(owner: Option<&dyn IsWindow>, message: impl AsRef<str>, caption: impl AsRef<str>, u_type: UINT) {
     unsafe { MessageBoxW(
         owner.map_or(null_mut(), |x| x.get_h_wnd().as_ptr()),
-        message.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr(),
-        caption.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr(),
+        message.as_ref().encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr(),
+        caption.as_ref().encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr(),
         u_type
     ); }
 }
@@ -349,7 +352,7 @@ pub fn dialog_box<DialogOk, DialogError>(parent: Option<&dyn IsWindow>, id: u16,
     }
 }
 
-pub fn get_open_file_name<'a, 'b>(owner: Option<&dyn IsWindow>, title: Option<&str>, filter: impl Iterator<Item=(&'a str, &'b str)>) -> Option<PathBuf> {
+pub fn get_open_file_name<'a, 'b, T: AsRef<str>>(owner: Option<&dyn IsWindow>, title: Option<T>, filter: impl Iterator<Item=(&'a str, &'b str)>) -> Option<PathBuf> {
     let filter = filter
         .flat_map(|(x, y)| once(x).chain(once(y)))
         .flat_map(|x| x.encode_utf16().map(|x| { assert_ne!(x, 0); x }).chain(once(0)))
@@ -370,7 +373,7 @@ pub fn get_open_file_name<'a, 'b>(owner: Option<&dyn IsWindow>, title: Option<&s
         lpstrFileTitle: null_mut(),
         nMaxFileTitle: 0,
         lpstrInitialDir: null(),
-        lpstrTitle: title.map_or(null(), |x| x.encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr()),
+        lpstrTitle: title.map_or(null(), |x| x.as_ref().encode_utf16().chain(once(0)).collect::<Vec<_>>().as_ptr()),
         Flags: OFN_DONTADDTORECENT | OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST | OFN_LONGNAMES,
         nFileOffset: 0,
         nFileExtension: 0,
@@ -382,10 +385,26 @@ pub fn get_open_file_name<'a, 'b>(owner: Option<&dyn IsWindow>, title: Option<&s
         dwReserved: 0,
         FlagsEx: 0
     };
+
     let selected = unsafe { GetOpenFileNameW(&mut args as *mut _) != 0 };
     if selected {
         Some(OsString::from_wide(&file).into())
     } else {
         None
     }
+}
+
+pub fn load_string(id: UINT) -> io::Result<String> {
+    let h_instance = unsafe { GetModuleHandleW(null()) };
+    let mut ptr: LPWSTR = null_mut();
+    let len = unsafe { LoadStringW(h_instance, id, &mut ptr as *mut _ as LPWSTR, 0) };
+    if len < 0 { return Err(io::Error::last_os_error()) }
+    if len == 0 { return Ok(String::new()) }
+    let resource = unsafe { slice::from_raw_parts(ptr, len as usize) };
+    let resource = if let Some(end) = resource.iter().position(|&x| x == 0) {
+        &resource[.. end]
+    } else {
+        resource
+    };
+    String::from_utf16(resource).map_err(|e| io::Error::new(io::ErrorKind::InvalidData, e))
 }
