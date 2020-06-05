@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 winapi_gui = { path = "winapi_gui" }
-winapi = { version = "0.3.8", features = ["winuser", "libloaderapi", "errhandlingapi", "commdlg"] }
+winapi = "0.3.8"
 rust-ini = "0.15.2"
 windres = "0.2.1"
 filetime = "0.2.10"
