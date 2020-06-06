@@ -1053,7 +1053,7 @@ def main():
     gen_potions(0, 0, 0, '', 'Стандартная версия')
     copyfile('A1_Alchemy_Potions.esp.yaml', mfr + 'alchemy_potions.esp.yaml')
     assembly_plugin(mfr + 'alchemy_potions.esp', 2014, 8, 3, 18, 53, 0)
-    chdir('potions_balance')
+    chdir('bin')
     subprocess.run('cargo build --target i686-pc-windows-msvc --release --out-dir .. -Z unstable-options', stdout=stdout, stderr=stderr, check=True)
     chdir('..')
     copyfile('potions_balance.exe', 'ar/PotionsBalance.exe')
