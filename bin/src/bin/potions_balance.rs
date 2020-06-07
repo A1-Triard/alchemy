@@ -23,33 +23,6 @@ use winapi::shared::minwindef::{WPARAM};
 use winreg::RegKey;
 use winreg::enums::{HKEY_LOCAL_MACHINE, KEY_READ, KEY_WOW64_32KEY};
 use std::mem::transmute;
-use std::fmt::Display;
-
-fn format<'a, T: Display + 'a>(f: impl AsRef<str>, args: impl IntoIterator<Item=&'a T>) -> String {
-    let f = f.as_ref();
-    let mut args = args.into_iter();
-    let mut result = Vec::with_capacity(f.len());
-    let mut subst = false;
-    for b in f.bytes() {
-        if subst {
-            subst = false;
-            if b == '}' as u8 {
-                if let Some(arg) = args.next() {
-                    result.extend_from_slice(format!("{}", arg).as_bytes());
-                }
-            } else {
-                result.push(b);
-            }
-        } else {
-            if b == '{' as u8 {
-                subst = true;
-            } else {
-                result.push(b);
-            }
-        }
-    }
-    unsafe { String::from_utf8_unchecked(result) }
-}
 
 fn main() {
     let main_dialog_proc = &mut MainWindowProc { edit_original_value: None };
@@ -224,7 +197,7 @@ impl<'a, 'b, 'c> WindowProc for GeneratingWindowProc<'a, 'b, 'c> {
             if let Err(e) = generate_plugin(&self.mw_path, &self.esp_name, &self.values) {
                 message_box(Some(&window), e, load_string(3).unwrap(), MB_ICONERROR | MB_OK);
             } else {
-                message_box(Some(&window), format(load_string(8).unwrap(), &[self.esp_name.to_string_lossy()]), load_string(9).unwrap(), MB_ICONINFORMATION | MB_OK);
+                message_box(Some(&window), format!("{}", dyn_fmt::Arguments::new(load_string(8).unwrap(), &[self.esp_name.to_string_lossy()])), load_string(9).unwrap(), MB_ICONINFORMATION | MB_OK);
             }
             window.end_dialog(Ok(()));
         }
@@ -520,7 +493,7 @@ fn classify_potions(potions: HashMap<String, Record>)
     for (id, record) in potions.into_iter() {
         let normalized_id = id.replace(' ', "_");
         if let Some((existing_id, _)) = potions_by_normalized_id.insert(normalized_id, (id.clone(), record)) {
-            return Err(format(load_string(13).unwrap(), &[id, existing_id]));
+            return Err(format!("{}", dyn_fmt::Arguments::new(load_string(13).unwrap(), &[id, existing_id])));
         }
     }
     let mut potions_by_kind = HashMap::new();
@@ -589,7 +562,7 @@ fn collect_potions(mw_path: &Path) -> Result<(HashMap<String, Record>, FileTime)
             };
             if record.tag != ALCH { continue; }
             let id = if let Field::StringZ(ref id) = record.fields.iter().filter(|(tag, _)| *tag == NAME).nth(0)
-                .ok_or(format(load_string(16).unwrap(), &[game_file_name]))?.1 {
+                .ok_or(format!("{}", dyn_fmt::Arguments::new(load_string(16).unwrap(), &[game_file_name])))?.1 {
                 id.string.to_uppercase()
             } else {
                 panic!()

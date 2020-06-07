@@ -16,6 +16,7 @@ checksum = "2f3e0bf23f51883cce372d5d5892211236856e4bb37fb942e1eb135ee0f146e3"
 name = "alchemy_bin"
 version = "0.1.0"
 dependencies = [
+ "dyn-fmt",
  "either",
  "encoding",
  "esl",
@@ -101,6 +102,12 @@ checksum = "1b391911b9a786312a10cb9d2b3d0735adfd5a8113eb3648de26a75e91b0826c"
 dependencies = [
  "rand",
 ]
+
+[[package]]
+name = "dyn-fmt"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a9a56c363fe535b0a2c3113999db2d57e87ab0a2f7d9dd62e10d31ebe3b18285"
 
 [[package]]
 name = "either"
