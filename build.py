@@ -1018,7 +1018,7 @@ def write_records_count(esp_path):
 
 def check_espa_version():
   espa = subprocess.run('espa -V', stdout=PIPE, check=True, universal_newlines=True)
-  if espa.stdout != '0.2.1\n':
+  if espa.stdout != '0.3.0\n':
     print('wrong espa version')
     sys.exit(1)
 
@@ -1054,9 +1054,10 @@ def main():
     copyfile('A1_Alchemy_Potions.esp.yaml', mfr + 'alchemy_potions.esp.yaml')
     assembly_plugin(mfr + 'alchemy_potions.esp', 2014, 8, 3, 18, 53, 0)
     chdir('bin')
-    subprocess.run('cargo build --target i686-pc-windows-msvc --release --out-dir .. -Z unstable-options', stdout=stdout, stderr=stderr, check=True)
+    subprocess.run('cargo build --workspace --target i686-pc-windows-msvc --release --out-dir .. -Z unstable-options', stdout=stdout, stderr=stderr, check=True)
     chdir('..')
     copyfile('potions_balance.exe', 'ar/PotionsBalance.exe')
+    copyfile('migrate_legacy_save.exe', 'ar/MigrateLegacySave.exe')
     gen_apparatus('mfr', mfr, 2014, 8, 10, 18, 53, 0, '_MFR', 'Версия для использования с MFR_EVA.esm (M[FR] 3.x)')
     gen_apparatus('eva', mfr, 2097, 9, 1, 18, 53, 0, '_EVA', 'Версия для использования с EVA.esp (M[FR] 2.x)')
     gen_apparatus('std', mfr, 2014, 8, 10, 18, 53, 0, '', 'Версия для использования без EVA.esp/MFR_EVA.esm')

@@ -1,4 +1,5 @@
 *.exe
+*.rlib
 *.pdb
 *.esp
 *.ESP
