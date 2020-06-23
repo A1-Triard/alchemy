@@ -1,23 +1,2 @@
-[package]
-name = "alchemy_bin"
-version = "0.1.0"
-authors = ["Warlock <internalmike@gmail.com>"]
-edition = "2018"
-
 [workspace]
-
-[dependencies]
-winapi_gui = { path = "winapi_gui" }
-winapi = "0.3.8"
-rust-ini = "0.15.2"
-windres = "0.2.1"
-filetime = "0.2.10"
-esl = "0.3.1"
-encoding = "0.2.33"
-either = "1.5.3"
-winreg = "0.7.0"
-dyn-fmt = "0.1.0"
-
-[build-dependencies]
-windres = "0.2.1"
-find-winsdk = "0.2.0"
+members = ["winapi_gui", "potions_balance", "migrate_legacy_save"]
