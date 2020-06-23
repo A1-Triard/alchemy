@@ -23,6 +23,7 @@ use winapi::shared::minwindef::{WPARAM};
 use winreg::RegKey;
 use winreg::enums::{HKEY_LOCAL_MACHINE, KEY_READ, KEY_WOW64_32KEY};
 use std::mem::transmute;
+use dyn_fmt::AsStrFormatExt;
 
 fn main() {
     let main_dialog_proc = &mut MainWindowProc { edit_original_value: None };
@@ -197,7 +198,7 @@ impl<'a, 'b, 'c> WindowProc for GeneratingWindowProc<'a, 'b, 'c> {
             if let Err(e) = generate_plugin(&self.mw_path, &self.esp_name, &self.values) {
                 message_box(Some(&window), e, load_string(3).unwrap(), MB_ICONERROR | MB_OK);
             } else {
-                message_box(Some(&window), format!("{}", dyn_fmt::Arguments::new(load_string(8).unwrap(), &[self.esp_name.to_string_lossy()])), load_string(9).unwrap(), MB_ICONINFORMATION | MB_OK);
+                message_box(Some(&window), load_string(8).unwrap().format(&[self.esp_name.to_string_lossy()]), load_string(9).unwrap(), MB_ICONINFORMATION | MB_OK);
             }
             window.end_dialog(Ok(()));
         }
@@ -493,7 +494,7 @@ fn classify_potions(potions: HashMap<String, Record>)
     for (id, record) in potions.into_iter() {
         let normalized_id = id.replace(' ', "_");
         if let Some((existing_id, _)) = potions_by_normalized_id.insert(normalized_id, (id.clone(), record)) {
-            return Err(format!("{}", dyn_fmt::Arguments::new(load_string(13).unwrap(), &[id, existing_id])));
+            return Err(load_string(13).unwrap().format(&[id, existing_id]));
         }
     }
     let mut potions_by_kind = HashMap::new();
@@ -562,7 +563,7 @@ fn collect_potions(mw_path: &Path) -> Result<(HashMap<String, Record>, FileTime)
             };
             if record.tag != ALCH { continue; }
             let id = if let Field::StringZ(ref id) = record.fields.iter().filter(|(tag, _)| *tag == NAME).nth(0)
-                .ok_or(format!("{}", dyn_fmt::Arguments::new(load_string(16).unwrap(), &[game_file_name])))?.1 {
+                .ok_or(load_string(16).unwrap().format(&[game_file_name]))?.1 {
                 id.string.to_uppercase()
             } else {
                 panic!()
