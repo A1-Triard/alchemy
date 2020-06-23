@@ -1,3 +1,4 @@
+#![feature(never_type)]
 #![deny(warnings)]
 
 use std::marker::PhantomData;
@@ -14,7 +15,6 @@ use std::os::raw::c_int;
 use std::path::PathBuf;
 use std::os::windows::ffi::{OsStringExt, OsStrExt};
 use std::ffi::{OsStr, OsString};
-use void::Void;
 use either::{Either, Left, Right};
 use winapi::um::libloaderapi::LoadStringW;
 use winapi::um::winnt::LPWSTR;
@@ -33,8 +33,8 @@ impl<DialogOk, DialogError> DialogResult for Result<DialogOk, DialogError> {
     type Error = DialogError;
 }
 
-impl DialogResult for Void {
-    type Error = Void;
+impl DialogResult for ! {
+    type Error = !;
 }
 
 pub struct Window<'a, DialogResult> {
@@ -81,8 +81,8 @@ pub trait WindowProc {
     fn wm_timer(&mut self, _window: Window<Self::DialogResult>, _id: WPARAM) -> Result<(), <Self::DialogResult as DialogResult>::Error> { Ok(()) }
 }
 
-impl<'a> Window<'a, Void> {
-    pub fn new(class: &'a WindowClass, name: impl AsRef<str>, width: c_int, height: c_int, window_proc: &'a mut dyn WindowProc<DialogResult=Void>) -> io::Result<Window<'a, Void>> {
+impl<'a> Window<'a, !> {
+    pub fn new(class: &'a WindowClass, name: impl AsRef<str>, width: c_int, height: c_int, window_proc: &'a mut dyn WindowProc<DialogResult=!>) -> io::Result<Window<'a, !>> {
         let h_wnd = NonNull::new(unsafe {
             CreateWindowExW(
                 WS_EX_CLIENTEDGE,
@@ -149,9 +149,9 @@ impl<'a, DialogResult> Window<'a, DialogResult> {
         debug_assert!(ok);
     }
 
-    pub fn get_dialog_item(&self, item_id: u16) -> Option<impl AsRef<Window<Void>>> {
+    pub fn get_dialog_item(&self, item_id: u16) -> Option<impl AsRef<Window<!>>> {
         let h_wnd = NonNull::new(unsafe { GetDlgItem(self.h_wnd.as_ptr(), item_id as c_int) });
-        h_wnd.map(|h_wnd| WindowAsRef(Window::<Void> { h_wnd, destroy_on_drop: false, phantom: PhantomData }))
+        h_wnd.map(|h_wnd| WindowAsRef(Window::<!> { h_wnd, destroy_on_drop: false, phantom: PhantomData }))
     }
 
     pub fn set_dialog_item_text_str(&self, item_id: u16, text: &str) -> io::Result<()> {
@@ -272,7 +272,7 @@ unsafe fn window_message<DialogResult: crate::DialogResult>(window_proc: &mut dy
             (if wm.handled { result.map_right(Some) } else { Right(None) }, dialog_error)
         };
         if let Some(dialog_error) = dialog_error {
-            let window: Window<Result<Void, DialogResult::Error>> = Window { h_wnd: NonNull::new_unchecked(h_wnd), destroy_on_drop: false, phantom: PhantomData };
+            let window: Window<Result<!, DialogResult::Error>> = Window { h_wnd: NonNull::new_unchecked(h_wnd), destroy_on_drop: false, phantom: PhantomData };
             window.end_dialog(Err(dialog_error));
         }
         result
@@ -286,7 +286,7 @@ impl WindowClass {
                 let create_struct = l_param as *const CREATESTRUCTW;
                 SetWindowLongPtrW(h_wnd, GWLP_USERDATA, (*create_struct).lpCreateParams as _);
             }
-            let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc<DialogResult=Void>;
+            let window_proc = GetWindowLongPtrW(h_wnd, GWLP_USERDATA) as *mut &mut dyn WindowProc<DialogResult=!>;
             let result = if !window_proc.is_null() {
                 window_message(*window_proc, h_wnd, msg, w_param, l_param).right_or_else(|x| Some(if x { TRUE } else { FALSE } as LRESULT))
             } else {
