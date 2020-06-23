@@ -1,5 +1,7 @@
 #![windows_subsystem = "windows"]
 #![deny(warnings)]
+#![allow(clippy::type_complexity)]
+#![allow(clippy::or_fun_call)]
 
 use winapi_gui::*;
 use std::iter::once;
@@ -31,7 +33,7 @@ fn main() {
     }
 }
 
-static STANDARD: &'static [u16] = &[
+static STANDARD: &[u16] = &[
     5, 15, 35, 80, 175,
     8, 15, 30, 45, 60,
     5, 8, 10, 15, 20,
@@ -42,7 +44,7 @@ static STANDARD: &'static [u16] = &[
     200, 1, 1
 ];
 
-static RECOMMEND: &'static [u16] = &[
+static RECOMMEND: &[u16] = &[
     20, 40, 80, 160, 320,
     20, 40, 80, 160, 320,
     10, 25, 45, 70, 100,
@@ -214,6 +216,7 @@ enum PotionLevel {
     Exclusive = 4
 }
 
+#[allow(clippy::question_mark)]
 fn potion_level_kind(id: &str, record: &Record) -> Option<(PotionLevel,  String)> {
     let mut effects = record.fields.iter().filter(|(tag, _)| *tag == ENAM);
     if effects.next().is_none() { return None; }
@@ -238,7 +241,7 @@ fn potion_level_kind(id: &str, record: &Record) -> Option<(PotionLevel,  String)
 }
 
 fn potion_value(record: &Record) -> Result<u32, String> {
-    let data = record.fields.iter().filter(|(tag, _)| *tag == ALDT).nth(0).ok_or_else(|| load_string(10).unwrap())?;
+    let data = record.fields.iter().find(|(tag, _)| *tag == ALDT).ok_or_else(|| load_string(10).unwrap())?;
     if let Field::Potion(data) = &data.1 {
         Ok(data.value)
     } else {
@@ -247,7 +250,7 @@ fn potion_value(record: &Record) -> Result<u32, String> {
 }
 
 fn potion_effect(record: &Record) -> Result<EffectIndex, String> {
-    let data = record.fields.iter().filter(|(tag, _)| *tag == ENAM).nth(0).unwrap();
+    let data = record.fields.iter().find(|(tag, _)| *tag == ENAM).unwrap();
     if let Field::Effect(data) = &data.1 {
         data.index.right().ok_or_else(|| load_string(10).unwrap())
     } else {
@@ -415,7 +418,7 @@ fn set_potion(record: &mut Record, level_values: &[u32], values: &[u16], level: 
 }
 
 fn set_potion_duration(record: &mut Record, duration: u16) {
-    let data = record.fields.iter_mut().filter(|(tag, _)| *tag == ENAM).nth(0).unwrap();
+    let data = record.fields.iter_mut().find(|(tag, _)| *tag == ENAM).unwrap();
     if let Field::Effect(data) = &mut data.1 {
         data.duration = duration as i32;
     } else {
@@ -424,7 +427,7 @@ fn set_potion_duration(record: &mut Record, duration: u16) {
 }
 
 fn set_potion_magnitude(record: &mut Record, magnitude: u16) {
-    let data = record.fields.iter_mut().filter(|(tag, _)| *tag == ENAM).nth(0).unwrap();
+    let data = record.fields.iter_mut().find(|(tag, _)| *tag == ENAM).unwrap();
     if let Field::Effect(data) = &mut data.1 {
         data.magnitude_min = magnitude as i32;
         data.magnitude_max = data.magnitude_min;
@@ -448,7 +451,7 @@ fn set_potion_value(record: &mut Record, level_values: &[u32], values: &[u16]) -
         }
     };
     if new_value == old_value { return Ok(false); }
-    let data = record.fields.iter_mut().filter(|(tag, _)| *tag == ALDT).nth(0).unwrap();
+    let data = record.fields.iter_mut().find(|(tag, _)| *tag == ALDT).unwrap();
     if let Field::Potion(data) = &mut data.1 {
         data.value = new_value;
     } else {
@@ -457,8 +460,9 @@ fn set_potion_value(record: &mut Record, level_values: &[u32], values: &[u16]) -
     Ok(true)
 }
 
+#[allow(clippy::float_cmp)]
 fn set_potion_weight(record: &mut Record, values: &[u16]) -> Result<bool, String> {
-    let data = record.fields.iter_mut().filter(|(tag, _)| *tag == ALDT).nth(0).unwrap();
+    let data = record.fields.iter_mut().find(|(tag, _)| *tag == ALDT).unwrap();
     if let Field::Potion(data) = &mut data.1 {
         let new_weight = ((data.weight as f64).min(values[35] as f64 * 0.01) * values[36] as f64 / values[37] as f64) as f32;
         if new_weight == data.weight { return Ok(false) };
@@ -471,7 +475,7 @@ fn set_potion_weight(record: &mut Record, values: &[u16]) -> Result<bool, String
 
 fn find_level_values(potions: &HashMap<String, [Option<(String, Record)>; 5]>) -> Result<[u32; 5], String> {
     let mut level_values = [0; 5];
-    for level in 0 .. 5 {
+    for (level, level_value) in level_values.iter_mut().enumerate() {
         let mut values = Vec::new();
         for potion in potions.iter().filter_map(|x| x.1[level].as_ref()) {
             values.push(potion_value(&potion.1)?);
@@ -480,7 +484,7 @@ fn find_level_values(potions: &HashMap<String, [Option<(String, Record)>; 5]>) -
         if values.is_empty() {
             return Err(load_string(12).unwrap());
         }
-        level_values[level] = values[values.len() / 2];
+        *level_value = values[values.len() / 2];
     }
     level_values.sort_unstable();
     Ok(level_values)
@@ -561,7 +565,7 @@ fn collect_potions(mw_path: &Path) -> Result<(HashMap<String, Record>, FileTime)
                 Ok(record) => record
             };
             if record.tag != ALCH { continue; }
-            let id = if let Field::StringZ(ref id) = record.fields.iter().filter(|(tag, _)| *tag == NAME).nth(0)
+            let id = if let Field::StringZ(ref id) = record.fields.iter().find(|(tag, _)| *tag == NAME)
                 .ok_or(format!("{}", dyn_fmt::Arguments::new(load_string(16).unwrap(), &[game_file_name])))?.1 {
                 id.string.to_uppercase()
             } else {

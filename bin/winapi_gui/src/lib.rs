@@ -166,8 +166,7 @@ impl<'a, DialogResult> Window<'a, DialogResult> {
     }
     
     pub fn get_dialog_item_text(&self, item_id: u16, max_len: u16) -> OsString {
-        let mut text = Vec::with_capacity(max_len as usize);
-        text.resize(max_len as usize, 0);
+        let mut text = vec![0; max_len as usize];
         let res = unsafe { GetDlgItemTextW(self.h_wnd.as_ptr(), item_id as c_int, text.as_mut_ptr(), text.len() as i32) };
         OsString::from_wide(&text[..res as usize])
     }
@@ -358,8 +357,7 @@ pub fn get_open_file_name<'a, 'b, T: AsRef<str>>(owner: Option<&dyn IsWindow>, t
         .flat_map(|x| x.encode_utf16().map(|x| { assert_ne!(x, 0); x }).chain(once(0)))
         .chain(once(0))
         .collect::<Vec<_>>();
-    let mut file = Vec::with_capacity(256);
-    file.resize(256, 0);
+    let mut file = vec![0; 256];
     let mut args = OPENFILENAMEW {
         lStructSize: size_of::<OPENFILENAMEW>() as u32,
         hwndOwner: owner.map_or(null_mut(), |x| x.get_h_wnd().as_ptr()),
